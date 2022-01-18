@@ -28,7 +28,8 @@ function Update-Dependencies {
         if ($Null -ne $Env:WORKING_BRANCH -and $Null -ne $updates -and $updates.Length -gt 0) {
             git add modules.json;
             git commit -m "Update $path";
-            git push --force --set-upstream origin dependencies/powershell-bump
+            git pull -r;
+            git push --force -u origin/$Env:WORKING_BRANCH;
 
             $existingBranch = @(gh pr list --base 'main' --head $Env:WORKING_BRANCH --state open --json number);
             if ($Null -eq $existingBranch -or $existingBranch.Length -eq 0) {

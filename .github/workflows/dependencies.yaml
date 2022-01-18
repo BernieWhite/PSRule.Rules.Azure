@@ -36,7 +36,7 @@ jobs:
 
       - name: Get working branch
         run: |
-          git branch ${{ env.WORKING_BRANCH }} --force
+          git checkout -B ${{ env.WORKING_BRANCH }} main --force
 
       - name: Check dependencies
         run: |

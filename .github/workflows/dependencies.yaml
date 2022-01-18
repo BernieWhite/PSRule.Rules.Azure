@@ -36,7 +36,7 @@ jobs:
 
       - name: Get working branch
         run: |
-          git checkout -b ${{ env.WORKING_BRANCH }}
+          git checkout -B ${{ env.WORKING_BRANCH }}
           git reset --hard origin/main
 
       - name: Check dependencies

@@ -30,7 +30,7 @@ function Update-Dependencies {
             git commit -m "Update $path";
             git push --force -u origin $Env:WORKING_BRANCH;
 
-            $existingBranch = @(gh pr list --base 'main' --head $Env:WORKING_BRANCH --state open --json number);
+            $existingBranch = @(gh pr list --head $Env:WORKING_BRANCH --state open --json number);
             if ($Null -eq $existingBranch -or $existingBranch.Length -eq 0) {
                 gh pr create -B 'main' -H $Env:WORKING_BRANCH -l 'dependencies' -t 'Bump PowerShell dependencies' -F 'out/updates.txt';
             }

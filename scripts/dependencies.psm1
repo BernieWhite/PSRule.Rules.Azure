@@ -30,12 +30,13 @@ function Update-Dependencies {
             git commit -m "Update $path";
             git push --set-upstream origin $Env:WORKING_BRANCH --force;
 
-            $existingBranch = @(gh pr list --label dependencies --author "@me" --head $Env:WORKING_BRANCH);
+            $existingBranch = @(gh pr list --author "@me" --base 'main' --head $Env:WORKING_BRANCH --status open --json number);
             if ($Null -eq $existingBranch -or $existingBranch.Length -eq 0) {
                 gh pr create --base 'main' --head $Env:WORKING_BRANCH --label 'dependencies' --title 'Bump PowerShell dependencies' -F 'out/updates.txt';
             }
             else {
-                gh pr edit -F 'out/updates.txt';
+                $pr = ($existingBranch | ConvertFrom-Json)[0].number
+                gh pr edit $pr -F 'out/updates.txt';
             }
         }
     }

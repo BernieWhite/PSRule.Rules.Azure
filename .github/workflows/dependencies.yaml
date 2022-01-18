@@ -33,7 +33,7 @@ jobs:
 
       - name: Get working branch
         run: |
-          git checkout -B ${{ env.WORKING_BRANCH }} --force
+          git branch ${{ env.WORKING_BRANCH }} --force
 
       - name: Check dependencies
         run: |

@@ -26,11 +26,10 @@ function Update-Dependencies {
 
         $updates = @(git status --porcelain);
         if ($Null -ne $Env:WORKING_BRANCH -and $Null -ne $updates -and $updates.Length -gt 0) {
-            git add modules.json
-            git commit -m "Update $path"
-            git push origin 
-            git push --set-upstream origin $Env:WORKING_BRANCH
-            gh pr create --base 'main' --head $Env:WORKING_BRANCH --title "Bump PowerShell dependencies" --body "" --label dependencies
+            git add modules.json;
+            git commit -m "Update $path";
+            git push --set-upstream origin $Env:WORKING_BRANCH;
+            gh pr create --base 'main' --head $Env:WORKING_BRANCH --title 'Bump PowerShell dependencies' --body '' --label 'dependencies';
         }
     }
 }

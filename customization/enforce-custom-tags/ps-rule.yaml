@@ -1,0 +1,12 @@
+#
+# PSRule configuration
+#
+
+# Configure binding options
+binding:
+  targetType:
+  - 'resourceType'
+  - 'type'
+
+configuration:
+  AZURE_PARAMETER_FILE_EXPANSION: true

@@ -1,0 +1,41 @@
+{
+    "$schema": "https://schema.management.azure.com/schemas/2015-01-01/deploymentParameters.json#",
+    "contentVersion": "1.0.0.0",
+    "metadata": {
+        "template": "templates/policy-exemption/v1/template.json"
+    },
+    "parameters": {
+        "exemptionNameSuffix": {
+            "value": "awesome-app-exemption-001"
+        },
+        "assignmentId": {
+            "value": "/subscriptions/00000000-0000-0000-0000-000000000000/providers/Microsoft.Authorization/policyAssignments/SecurityCenterBuiltIn"
+        },
+        "resourceGroup": {
+            "value": "rg-awesome-app-prod-eus-001"
+        },
+        "exemptionCategory": {
+            "value": "Waiver"
+        },
+        "description": {
+            "value": "Allow cognitive services to be public and called directly from mobile workforce. This is a temporary exemption until VPN is implemented."
+        },
+        "displayName": {
+            "value": "001: Temporary public access for Awesome App cognitive services"
+        },
+        "requestedBy": {
+            "value": "Awesome App Team"
+        },
+        "approvedBy": {
+            "value": "Security vTeam"
+        },
+        "expiresOnDate": {
+            "value": "2021-12-28T00:00:00+10:00"
+        },
+        "policyDefinitionReferenceIds": {
+            "value": [
+                "cognitiveServicesAccountsShouldEnableDataEncryptionWithACustomerManagedKeyMonitoringEffect"
+            ]
+        }
+    }
+}

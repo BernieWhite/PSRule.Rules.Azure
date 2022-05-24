@@ -1,0 +1,37 @@
+{
+  "$schema": "https://schema.management.azure.com/schemas/2019-04-01/deploymentTemplate.json#",
+  "contentVersion": "1.0.0.0",
+  "metadata": {
+    "_generator": {
+      "name": "bicep",
+      "version": "0.4.1124.51302",
+      "templateHash": "17843007109288324703"
+    }
+  },
+  "parameters": {
+    "storeName": {
+      "type": "string",
+      "metadata": {
+        "description": "The name of the App Configuration Store."
+      }
+    },
+    "location": {
+      "type": "string",
+      "defaultValue": "[resourceGroup().location]",
+      "metadata": {
+        "description": "The location resources will be deployed."
+      }
+    }
+  },
+  "resources": [
+    {
+      "type": "Microsoft.AppConfiguration/configurationStores",
+      "apiVersion": "2020-06-01",
+      "name": "[parameters('storeName')]",
+      "location": "[parameters('location')]",
+      "sku": {
+        "name": "standard"
+      }
+    }
+  ]
+}

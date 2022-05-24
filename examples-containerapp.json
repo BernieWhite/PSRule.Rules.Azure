@@ -1,0 +1,90 @@
+{
+  "$schema": "https://schema.management.azure.com/schemas/2019-04-01/deploymentTemplate.json#",
+  "contentVersion": "1.0.0.0",
+  "metadata": {
+    "_generator": {
+      "name": "bicep",
+      "version": "0.4.1272.37030",
+      "templateHash": "11720533163741448301"
+    }
+  },
+  "parameters": {
+    "envName": {
+      "type": "string",
+      "metadata": {
+        "description": "The name of the app environment."
+      }
+    },
+    "appName": {
+      "type": "string",
+      "metadata": {
+        "description": "The name of the container app."
+      }
+    },
+    "location": {
+      "type": "string",
+      "defaultValue": "[resourceGroup().location]",
+      "metadata": {
+        "description": "The location resources will be deployed."
+      }
+    },
+    "workspaceId": {
+      "type": "string",
+      "metadata": {
+        "description": "The name of a Log Analytics workspace"
+      }
+    }
+  },
+  "variables": {
+    "containers": [
+      {
+        "name": "simple-hello-world-container",
+        "image": "mcr.microsoft.com/azuredocs/containerapps-helloworld:latest",
+        "resources": {
+          "cpu": "[json('0.25')]",
+          "memory": ".5Gi"
+        }
+      }
+    ]
+  },
+  "resources": [
+    {
+      "type": "Microsoft.Web/kubeEnvironments",
+      "apiVersion": "2021-03-01",
+      "name": "[parameters('envName')]",
+      "location": "[parameters('location')]",
+      "properties": {
+        "type": "managed",
+        "internalLoadBalancerEnabled": false,
+        "appLogsConfiguration": {
+          "destination": "log-analytics",
+          "logAnalyticsConfiguration": {
+            "customerId": "[reference(resourceId('Microsoft.OperationalInsights/workspaces', parameters('workspaceId')), '2021-06-01').customerId]",
+            "sharedKey": "[listKeys(resourceId('Microsoft.OperationalInsights/workspaces', parameters('workspaceId')), '2021-06-01').primarySharedKey]"
+          }
+        }
+      }
+    },
+    {
+      "type": "Microsoft.Web/containerApps",
+      "apiVersion": "2021-03-01",
+      "name": "[parameters('appName')]",
+      "location": "[parameters('location')]",
+      "properties": {
+        "kubeEnvironmentId": "[resourceId('Microsoft.Web/kubeEnvironments', parameters('envName'))]",
+        "template": {
+          "revisionSuffix": "",
+          "containers": "[variables('containers')]"
+        },
+        "configuration": {
+          "ingress": {
+            "allowInsecure": false
+          }
+        }
+      },
+      "dependsOn": [
+        "[resourceId('Microsoft.Web/kubeEnvironments', parameters('envName'))]"
+      ]
+    }
+  ]
+}

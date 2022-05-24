@@ -1,0 +1,93 @@
+{
+  "$schema": "https://schema.management.azure.com/schemas/2019-04-01/deploymentTemplate.json#",
+  "contentVersion": "1.0.0.0",
+  "metadata": {
+    "_generator": {
+      "name": "bicep",
+      "version": "0.5.6.12127",
+      "templateHash": "6359428006480739944"
+    }
+  },
+  "parameters": {
+    "name": {
+      "type": "string",
+      "defaultValue": "firewall",
+      "metadata": {
+        "description": "The name of the resource."
+      }
+    },
+    "location": {
+      "type": "string",
+      "defaultValue": "[resourceGroup().location]",
+      "metadata": {
+        "description": "The location resources will be deployed."
+      }
+    }
+  },
+  "resources": [
+    {
+      "type": "Microsoft.Network/azureFirewalls",
+      "apiVersion": "2021-05-01",
+      "name": "[format('{0}_classic', parameters('name'))]",
+      "location": "[parameters('location')]",
+      "properties": {
+        "sku": {
+          "name": "AZFW_VNet"
+        },
+        "threatIntelMode": "Deny"
+      }
+    },
+    {
+      "type": "Microsoft.Network/firewallPolicies",
+      "apiVersion": "2021-05-01",
+      "name": "[format('{0}_policy', parameters('name'))]",
+      "properties": {
+        "threatIntelMode": "Deny"
+      }
+    },
+    {
+      "type": "Microsoft.Network/azureFirewalls",
+      "apiVersion": "2021-05-01",
+      "name": "[format('{0}_with_policy', parameters('name'))]",
+      "location": "[parameters('location')]",
+      "properties": {
+        "sku": {
+          "name": "AZFW_VNet"
+        },
+        "firewallPolicy": {
+          "id": "[resourceId('Microsoft.Network/firewallPolicies', format('{0}_policy', parameters('name')))]"
+        }
+      },
+      "dependsOn": [
+        "[resourceId('Microsoft.Network/firewallPolicies', format('{0}_policy', parameters('name')))]"
+      ]
+    },
+    {
+      "type": "Microsoft.Network/virtualHubs",
+      "apiVersion": "2021-05-01",
+      "name": "[format('{0}_hub', parameters('name'))]",
+      "location": "[parameters('location')]"
+    },
+    {
+      "type": "Microsoft.Network/azureFirewalls",
+      "apiVersion": "2021-05-01",
+      "name": "[format('{0}_with_hub', parameters('name'))]",
+      "location": "[parameters('location')]",
+      "properties": {
+        "sku": {
+          "name": "AZFW_Hub"
+        },
+        "firewallPolicy": {
+          "id": "[resourceId('Microsoft.Network/firewallPolicies', format('{0}_policy', parameters('name')))]"
+        },
+        "virtualHub": {
+          "id": "[resourceId('Microsoft.Network/virtualHubs', format('{0}_hub', parameters('name')))]"
+        }
+      },
+      "dependsOn": [
+        "[resourceId('Microsoft.Network/firewallPolicies', format('{0}_policy', parameters('name')))]",
+        "[resourceId('Microsoft.Network/virtualHubs', format('{0}_hub', parameters('name')))]"
+      ]
+    }
+  ]
+}

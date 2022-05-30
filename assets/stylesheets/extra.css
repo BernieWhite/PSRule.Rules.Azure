@@ -9,7 +9,11 @@
 
 .heart {
   animation: heart 1000ms infinite;
-  color:#e91e63;
+  color: #e91e63;
+}
+
+.experimental {
+  color: rgb(124, 77, 255)
 }
 
 :root {

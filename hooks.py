@@ -36,9 +36,14 @@ def replace_maml(markdown: str, page: mkdocs.structure.nav.Page, config: mkdocs.
 
     markdown = add_tags(markdown)
 
+    if markdown.__contains__("<!-- OBSOLETE -->"):
+        page.meta['obsolete'] = 'true'
+
     if page.canonical_url.__contains__("/baselines/"):
         page.meta['template'] = 'reference.html'
         page.meta['generated'] = 'true'
+        if page.meta.get('obsolete', 'false') == 'true':
+            markdown = markdown.replace("<!-- OBSOLETE -->", "!!! Warning\r    The baseline is obsolete.\r    Consider switching to a newer baseline.")
 
     if page.canonical_url.__contains__("/rules/"):
         page.meta['template'] = 'reference.html'
@@ -47,10 +52,13 @@ def replace_maml(markdown: str, page: mkdocs.structure.nav.Page, config: mkdocs.
         page.meta['rule'] = page.canonical_url.split("/")[-2]
         read_metadata(page)
 
-    if markdown.__contains__("<!-- OBSOLETE -->"):
-        page.meta['obsolete'] = 'true'
-
-    markdown = markdown.replace("<!-- OBSOLETE -->", ":octicons-alert-24: Obsolete")
+    if page.meta.get('rule', 'None') != 'None':
+        markdown = markdown.replace('<!-- TAGS -->', '<nav class="md-tags"><rule/><ref/></nav>\r<!-- TAGS -->')
+        markdown = markdown.replace('<rule/>', '<span class="md-tag">' + page.meta['rule'] + '</span>')
+        if page.meta.get('ref', 'None') != 'None':
+            markdown = markdown.replace('<ref/>', '<span class="md-tag">' + page.meta['ref'] + '</span>')
+        if page.meta.get('ref', 'None') == 'None':
+            markdown = markdown.replace('<ref/>', '')
 
     if page.meta.get("pillar", "None") != "None":
         markdown = markdown.replace("<!-- TAGS -->", "[:octicons-diamond-24: " + page.meta['pillar'] + "](module.md#" + page.meta['pillar'].lower().replace(" ", "") + ")\r<!-- TAGS -->")
@@ -58,17 +66,11 @@ def replace_maml(markdown: str, page: mkdocs.structure.nav.Page, config: mkdocs.
     if page.meta.get("resource", "None") != "None":
         markdown = markdown.replace("<!-- TAGS -->", " · [:octicons-container-24: " + page.meta['resource'] + "](resource.md#" + page.meta['resource'].lower().replace(" ", "") + ")\r<!-- TAGS -->")
 
-    if page.meta.get("rule", "None") != "None":
-        markdown = markdown.replace("<!-- TAGS -->", " · :octicons-file-code-24: " + page.meta['rule'] + "\r<!-- TAGS -->")
-
-    if page.meta.get('ref', 'None') != 'None':
-        markdown = markdown.replace("<!-- TAGS -->", " · :octicons-file-code-24: " + page.meta['ref'] + "\r<!-- TAGS -->")
-
-    if page.meta.get('release', 'None') != 'None':
-        markdown = markdown.replace("<!-- TAGS -->", " · :octicons-file-code-24: " + page.meta['release'] + "\r<!-- TAGS -->")
+    if page.meta.get('release', 'None') == 'preview':
+        markdown = markdown.replace("<!-- TAGS -->", " · :octicons-beaker-24: Preview\r<!-- TAGS -->")
 
     if page.meta.get('ruleSet', 'None') != 'None':
-        markdown = markdown.replace("<!-- TAGS -->", " · :octicons-file-code-24: " + page.meta['ruleSet'] + "\r<!-- TAGS -->")
+        markdown = markdown.replace("<!-- TAGS -->", " · :octicons-tag-24: " + page.meta['ruleSet'] + "\r<!-- TAGS -->")
 
     return markdown.replace("<!-- TAGS -->", "")
 
@@ -86,17 +88,22 @@ def add_tags(markdown: str) -> str:
 
 def read_metadata(page: mkdocs.structure.nav.Page):
     file: str = os.path.join(os.path.dirname(page.file.abs_src_path), 'metadata.json')
+    tags = []
     with open(file) as f:
         data = json.load(f)
         name = page.meta['rule']
+        tags.append(name)
         if page.meta.get('rule', '') != '' and data.get(name, None) != None and data[name].get('Ref', None) != None and data[name]['Ref'].get('Name', None) != None:
             page.meta['ref'] = data[name]['Ref']['Name']
+            tags.append(page.meta['ref'])
 
         if page.meta.get('rule', '') != '' and data.get(name, None) != None and data[name].get('Release', None) != None:
             page.meta['release'] = data[name]['Release']
 
         if page.meta.get('rule', '') != '' and data.get(name, None) != None and data[name].get('RuleSet', None) != None:
             page.meta['ruleSet'] = data[name]['RuleSet']
+
+    page.meta['tags'] = tags
 
 
 # Dynamically build reference nav

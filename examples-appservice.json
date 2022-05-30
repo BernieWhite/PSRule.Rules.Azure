@@ -4,8 +4,8 @@
   "metadata": {
     "_generator": {
       "name": "bicep",
-      "version": "0.6.11.53198",
-      "templateHash": "8425646821773463908"
+      "version": "0.6.18.56646",
+      "templateHash": "12759065809954852530"
     }
   },
   "parameters": {
@@ -65,7 +65,8 @@
           "ftpsState": "FtpsOnly",
           "remoteDebuggingEnabled": false,
           "http20Enabled": true,
-          "netFrameworkVersion": "v6.0"
+          "netFrameworkVersion": "v6.0",
+          "healthCheckPath": "/healthz"
         }
       },
       "tags": "[parameters('tags')]",
@@ -92,7 +93,8 @@
           "remoteDebuggingEnabled": false,
           "http20Enabled": true,
           "netFrameworkVersion": "OFF",
-          "phpVersion": "7.4"
+          "phpVersion": "7.4",
+          "healthCheckPath": "/healthz"
         }
       },
       "tags": "[parameters('tags')]",

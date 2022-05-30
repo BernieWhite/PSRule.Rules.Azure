@@ -44,6 +44,7 @@ resource webApp 'Microsoft.Web/sites@2021-03-01' = {
       remoteDebuggingEnabled: false
       http20Enabled: true
       netFrameworkVersion: 'v6.0'
+      healthCheckPath: '/healthz'
     }
   }
   tags: tags
@@ -68,6 +69,7 @@ resource webAppPHP 'Microsoft.Web/sites@2021-03-01' = {
       http20Enabled: true
       netFrameworkVersion: 'OFF'
       phpVersion: '7.4'
+      healthCheckPath: '/healthz'
     }
   }
   tags: tags

@@ -7688,16 +7688,13 @@
   </a>
 
 
-  
-
-
 
 <h1 id="changelog">Change log<a class="headerlink" href="#changelog" title="Permanent link">#</a></h1>
 <p>See <a href="../upgrade-notes/">upgrade notes</a> for helpful information when upgrading from previous versions.</p>
 <p><strong>Important notes</strong>:</p>
 <ul>
 <li>Issue #741: <code>Could not load file or assembly YamlDotNet</code>.
-See <a href="../troubleshooting/">troubleshooting guide</a> for a workaround to this issue.</li>
+  See <a href="../troubleshooting/">troubleshooting guide</a> for a workaround to this issue.</li>
 <li>The configuration option <code>Azure_AKSMinimumVersion</code> is replaced with <code>AZURE_AKS_CLUSTER_MINIMUM_VERSION</code>.
   If you have this option configured, please update it to <code>AZURE_AKS_CLUSTER_MINIMUM_VERSION</code>.
   Support for <code>Azure_AKSMinimumVersion</code> will be removed in v2.
@@ -7708,6 +7705,20 @@ See <a href="../troubleshooting/">troubleshooting guide</a> for a workaround to 
   See <a href="../upgrade-notes/">upgrade notes</a> for more information.</li>
 </ul>
 <h2 id="unreleased">Unreleased<a class="headerlink" href="#unreleased" title="Permanent link">#</a></h2>
+<p>What's changed since pre-release v1.16.0-B0017:</p>
+<ul>
+<li>Updated rules:<ul>
+<li>Public IP:<ul>
+<li>Updated <code>Azure.PublicIP.AvailabilityZone</code> to exclude IP addresses for Azure Bastion by @BernieWhite.
+  <a href="https://github.com/Azure/PSRule.Rules.Azure/issues/1442">#1442</a><ul>
+<li>Public IP addresses with the <code>resource-usage</code> tag set to <code>azure-bastion</code> are excluded.</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
 <h2 id="v1160-b0017pre-release">v1.16.0-B0017 (pre-release)<a class="headerlink" href="#v1160-b0017pre-release" title="Permanent link">#</a></h2>
 <p>What's changed since v1.15.2:</p>
 <ul>
@@ -10163,7 +10174,7 @@ See <a href="../troubleshooting/">troubleshooting guide</a> for a workaround to 
   <small>
     
       Last update:
-      2022-05-26
+      2022-05-30
     
   </small>
 </div>

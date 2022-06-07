@@ -15,7 +15,7 @@
         <link rel="canonical" href="https://azure.github.io/PSRule.Rules.Azure/troubleshooting/">
       
       <link rel="icon" href="../assets/ms_icon.png">
-      <meta name="generator" content="mkdocs-1.3.0, mkdocs-material-8.2.16">
+      <meta name="generator" content="mkdocs-1.3.0, mkdocs-material-8.3.2">
     
     
       
@@ -23,15 +23,16 @@
       
     
     
-      <link rel="stylesheet" href="../assets/stylesheets/main.1c3799f8.min.css">
+      <link rel="stylesheet" href="../assets/stylesheets/main.5d38496d.min.css">
       
         
-        <link rel="stylesheet" href="../assets/stylesheets/palette.cc9b2e1e.min.css">
+        <link rel="stylesheet" href="../assets/stylesheets/palette.cbb835fc.min.css">
         
           
           
           <meta name="theme-color" content="#000000">
         
+      
       
     
     
@@ -802,6 +803,13 @@
       Table of contents
     </label>
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#anearlierversionofazaccountsisimported" class="md-nav__link">
+    An earlier version of Az.Accounts is imported
+  </a>
+  
+</li>
       
         <li class="md-nav__item">
   <a href="#bicepcompilationtimeout" class="md-nav__link">
@@ -6100,6 +6108,13 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
+  <a href="#anearlierversionofazaccountsisimported" class="md-nav__link">
+    An earlier version of Az.Accounts is imported
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#bicepcompilationtimeout" class="md-nav__link">
     Bicep compilation timeout
   </a>
@@ -6136,6 +6151,28 @@
 
 <h1 id="troubleshooting">Troubleshooting<a class="headerlink" href="#troubleshooting" title="Permanent link">#</a></h1>
 <p>This article provides troubleshooting instructions for common errors.</p>
+<h2 id="anearlierversionofazaccountsisimported">An earlier version of Az.Accounts is imported<a class="headerlink" href="#anearlierversionofazaccountsisimported" title="Permanent link">#</a></h2>
+<p>When running PSRule for Azure in Azure DevOps within the <code>AzurePowerShell@5</code> task,
+you may see the following error.</p>
+<div class="admonition error">
+<p class="admonition-title">Error</p>
+<p>This module requires Az.Accounts version 2.8.0. An earlier version of
+Az.Accounts is imported in the current PowerShell session. Please open a new
+session before importing this module. This error could indicate that multiple
+incompatible versions of the Azure PowerShell cmdlets are installed on your
+system. Please see https://aka.ms/azps-version-error for troubleshooting
+information.</p>
+</div>
+<p>This error is raised by a chained dependency failure importing a newer version of <code>Az.Accounts</code>.
+To avoid this issue attempt to install the exact versions of <code>Az.Resources</code>.
+In the <code>AzurePowerShell@5</code> task before installing PSRule.</p>
+<div class="highlight"><pre><span></span><code><span class="nb">Install-Module</span> <span class="n">Az</span><span class="p">.</span><span class="n">Resources</span> <span class="n">-RequiredVersion</span> <span class="s1">&#39;5.6.0&#39;</span> <span class="n">-Force</span> <span class="n">-Scope</span> <span class="n">CurrentUser</span>
+</code></pre></div>
+<p>From PSRule for Azure v1.16.0, <code>Az.Accounts</code> and <code>Az.Resources</code> are no longer installed as dependencies.
+When using export commands from PSRule, you may need to install these modules.</p>
+<p>To install these modules, use the following PowerShell command:</p>
+<div class="highlight"><pre><span></span><code><span class="nb">Install-Module</span> <span class="n">Az</span><span class="p">.</span><span class="n">Resources</span> <span class="n">-Force</span> <span class="n">-Scope</span> <span class="n">CurrentUser</span>
+</code></pre></div>
 <h2 id="bicepcompilationtimeout">Bicep compilation timeout<a class="headerlink" href="#bicepcompilationtimeout" title="Permanent link">#</a></h2>
 <p>When expanding Bicep source files you may get an error similar to the following:</p>
 <div class="admonition error">
@@ -6147,7 +6184,7 @@ The default timeout is 5 seconds.</p>
 <p>You can take steps to reduce your code complexity and reduce the time a build takes by:</p>
 <ul>
 <li>Removing unnecessary nested <code>module</code> calls.</li>
-<li>Cache bicep modules restored from a registry in continious integration (CI) pipelines.</li>
+<li>Cache bicep modules restored from a registry in continuous integration (CI) pipelines.</li>
 </ul>
 <p>To increase the timeout value, set the <code>AZURE_BICEP_FILE_EXPANSION_TIMEOUT</code> configuration option.
 See <a href="../setup/configuring-expansion/#bicepcompilationtimeout">Bicep compilation timeout</a> for details on how to configure this option.</p>
@@ -6172,13 +6209,14 @@ The PSRule for Azure <strong>&lt;1.3.1</strong> uses an older version of this li
   <small>
     
       Last update:
-      2022-03-13
+      2022-06-03
     
   </small>
 </div>
 
               
             </article>
+            
           </div>
         </div>
         
@@ -6186,7 +6224,8 @@ The PSRule for Azure <strong>&lt;1.3.1</strong> uses an older version of this li
       
         <footer class="md-footer">
   
-    <nav class="md-footer__inner md-grid" aria-label="Footer">
+    
+    <nav class="md-footer__inner md-grid" aria-label="Footer" >
       
         
         <a href="../customization/enforce-codeowners/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Enforcing code ownership" rel="prev">
@@ -6254,10 +6293,10 @@ The PSRule for Azure <strong>&lt;1.3.1</strong> uses an older version of this li
     <div class="md-dialog" data-md-component="dialog">
       <div class="md-dialog__inner md-typeset"></div>
     </div>
-    <script id="__config" type="application/json">{"base": "..", "features": ["navigation.instant", "navigation.indexes", {"navigation.sections": {"level": 1}}, "navigation.tabs", "content.code.annotate"], "search": "../assets/javascripts/workers/search.2a1c317c.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version.title": "Select version"}, "version": {"provider": "mike"}}</script>
+    <script id="__config" type="application/json">{"base": "..", "features": ["navigation.instant", "navigation.indexes", {"navigation.sections": {"level": 1}}, "navigation.tabs", "content.code.annotate"], "search": "../assets/javascripts/workers/search.b028fd86.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version.title": "Select version"}, "version": {"provider": "mike"}}</script>
     
     
-      <script src="../assets/javascripts/bundle.3a4b43e5.min.js"></script>
+      <script src="../assets/javascripts/bundle.7f366e99.min.js"></script>
       
     
   </body>

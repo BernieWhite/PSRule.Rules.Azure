@@ -924,6 +924,13 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#v1160" class="md-nav__link">
+    v1.16.0
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#v1160-b0072pre-release" class="md-nav__link">
     v1.16.0-B0072 (pre-release)
   </a>
@@ -6903,6 +6910,13 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#v1160" class="md-nav__link">
+    v1.16.0
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#v1160-b0072pre-release" class="md-nav__link">
     v1.16.0-B0072 (pre-release)
   </a>
@@ -7737,6 +7751,66 @@
   See <a href="../upgrade-notes/">upgrade notes</a> for more information.</li>
 </ul>
 <h2 id="unreleased">Unreleased<a class="headerlink" href="#unreleased" title="Permanent link">#</a></h2>
+<h2 id="v1160">v1.16.0<a class="headerlink" href="#v1160" title="Permanent link">#</a></h2>
+<p>What's changed since v1.15.2:</p>
+<ul>
+<li>New rules:<ul>
+<li>App Service:<ul>
+<li>Check web apps have insecure FTP disabled by @BernieWhite.
+  <a href="https://github.com/Azure/PSRule.Rules.Azure/issues/1436">#1436</a></li>
+<li>Check web apps use a dedicated health probe by @BernieWhite.
+  <a href="https://github.com/Azure/PSRule.Rules.Azure/issues/1437">#1437</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li>Updated rules:<ul>
+<li>Public IP:<ul>
+<li>Updated <code>Azure.PublicIP.AvailabilityZone</code> to exclude IP addresses for Azure Bastion by @BernieWhite.
+  <a href="https://github.com/Azure/PSRule.Rules.Azure/issues/1442">#1442</a><ul>
+<li>Public IP addresses with the <code>resource-usage</code> tag set to <code>azure-bastion</code> are excluded.</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>General improvements:<ul>
+<li>Added support for <code>dateTimeFromEpoch</code> and <code>dateTimeToEpoch</code> ARM functions by @BernieWhite.
+  <a href="https://github.com/Azure/PSRule.Rules.Azure/issues/1451">#1451</a></li>
+</ul>
+</li>
+<li>Engineering:<ul>
+<li>Updated built documentation to include rule ref and metadata by @BernieWhite.
+  <a href="https://github.com/Azure/PSRule.Rules.Azure/issues/1432">#1432</a></li>
+<li>Added ref properties for several rules by @BernieWhite.
+  <a href="https://github.com/Azure/PSRule.Rules.Azure/issues/1430">#1430</a></li>
+<li>Updated provider data for analysis.
+  <a href="https://github.com/Azure/PSRule.Rules.Azure/pull/1453">#1453</a></li>
+<li>Bump Microsoft.NET.Test.Sdk to v17.2.0.
+  <a href="https://github.com/Azure/PSRule.Rules.Azure/pull/1410">#1410</a></li>
+<li>Update CI checks to include required ref property by @BernieWhite.
+  <a href="https://github.com/Azure/PSRule.Rules.Azure/issues/1431">#1431</a></li>
+<li>Added ref properties for rules by @BernieWhite.
+  <a href="https://github.com/Azure/PSRule.Rules.Azure/issues/1430">#1430</a></li>
+</ul>
+</li>
+<li>Bug fixes:<ul>
+<li>Fixed <code>Azure.Template.UseVariables</code> does not accept function variables names by @BernieWhite.
+  <a href="https://github.com/Azure/PSRule.Rules.Azure/issues/1427">#1427</a></li>
+<li>Fixed dependency issue within Azure Pipelines <code>AzurePowerShell</code> task by @BernieWhite.
+  <a href="https://github.com/Azure/PSRule.Rules.Azure/issues/1447">#1447</a><ul>
+<li>Removed dependency on <code>Az.Accounts</code> and <code>Az.Resources</code> from manifest.
+  Pre-install these modules to use export cmdlets.</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<p>What's changed since pre-release v1.16.0-B0072:</p>
+<ul>
+<li>No additional changes.</li>
+</ul>
 <h2 id="v1160-b0072pre-release">v1.16.0-B0072 (pre-release)<a class="headerlink" href="#v1160-b0072pre-release" title="Permanent link">#</a></h2>
 <p>What's changed since pre-release v1.16.0-B0041:</p>
 <ul>
@@ -10241,7 +10315,7 @@
   <small>
     
       Last update:
-      2022-06-08
+      2022-06-09
     
   </small>
 </div>

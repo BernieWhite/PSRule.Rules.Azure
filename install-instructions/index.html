@@ -6358,7 +6358,7 @@ The required version will automatically be installed along-side PSRule for Azure
 <p>Azure PowerShell modules are not installed automatically when installing PSRule for Azure.
 This has been changed from v1.16.0 due with <a href="../troubleshooting/#an-earlier-version-of-azaccounts-is-imported">module dependency chains in Azure DevOps</a>.
 In most cases these modules will be pre-installed on the <abbr title="continuous integration">CI</abbr> worker.
-For private <abbr title="continuous integration">CI</abbr> workers, consider pre-installing these module is a previous step.</p>
+For private <abbr title="continuous integration">CI</abbr> workers, consider pre-installing these module in a previous step.</p>
 </div>
 <h3 id="installingpowershell">Installing PowerShell<a class="headerlink" href="#installingpowershell" title="Permanent link">#</a></h3>
 <p>PowerShell 7.x can be installed on MacOS, Linux, and Windows but is not installed by default.
@@ -6399,6 +6399,29 @@ Use the following command line examples from a PowerShell terminal to install or
 <span class="nb">Install-Module</span> <span class="n">-Name</span> <span class="n">PowerShellGet</span> <span class="n">-Repository</span> <span class="n">PSGallery</span> <span class="n">-Scope</span> <span class="n">CurrentUser</span> <span class="n">-Force</span>
 </code></pre></div>
 </div>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>To install a pre-release version of <em>PSRule</em> and <em>PSRule for Azure</em>, install each in separate steps.</p>
+</div>
+<div class="tabbed-set tabbed-alternate" data-tabs="4:2"><input checked="checked" id="__tabbed_4_1" name="__tabbed_4" type="radio" /><input id="__tabbed_4_2" name="__tabbed_4" type="radio" /><div class="tabbed-labels"><label for="__tabbed_4_1">For the current user</label><label for="__tabbed_4_2">For all users</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<p>To install PSRule for Azure for the current user use:</p>
+<div class="highlight"><pre><span></span><code><span class="nb">Install-Module</span> <span class="n">-Name</span> <span class="n">PowerShellGet</span> <span class="n">-Repository</span> <span class="n">PSGallery</span> <span class="n">-Scope</span> <span class="n">CurrentUser</span> <span class="n">-Force</span>
+<span class="nb">Install-Module</span> <span class="n">-Name</span> <span class="n">PSRule</span> <span class="n">-Repository</span> <span class="n">PSGallery</span> <span class="n">-Scope</span> <span class="n">CurrentUser</span> <span class="n">-AllowPrerelease</span>
+<span class="nb">Install-Module</span> <span class="n">-Name</span> <span class="n">PSRule</span><span class="p">.</span><span class="n">Rules</span><span class="p">.</span><span class="n">Azure</span> <span class="n">-Repository</span> <span class="n">PSGallery</span> <span class="n">-Scope</span> <span class="n">CurrentUser</span> <span class="n">-AllowPrerelease</span>
+</code></pre></div>
+</div>
+<div class="tabbed-block">
+<p>Open PowerShell with <em>Run as administrator</em> on Windows or <code>sudo pwsh</code> on Linux.</p>
+<p>To install PSRule for Azure for all users (requires admin/ root permissions) use:</p>
+<div class="highlight"><pre><span></span><code><span class="nb">Install-Module</span> <span class="n">-Name</span> <span class="n">PowerShellGet</span> <span class="n">-Repository</span> <span class="n">PSGallery</span> <span class="n">-Scope</span> <span class="n">CurrentUser</span> <span class="n">-Force</span>
+<span class="nb">Install-Module</span> <span class="n">-Name</span> <span class="n">PSRule</span> <span class="n">-Repository</span> <span class="n">PSGallery</span> <span class="n">-Scope</span> <span class="n">AllUsers</span> <span class="n">-AllowPrerelease</span>
+<span class="nb">Install-Module</span> <span class="n">-Name</span> <span class="n">PSRule</span><span class="p">.</span><span class="n">Rules</span><span class="p">.</span><span class="n">Azure</span> <span class="n">-Repository</span> <span class="n">PSGallery</span> <span class="n">-Scope</span> <span class="n">AllUsers</span> <span class="n">-AllowPrerelease</span>
+</code></pre></div>
+</div>
+</div>
+</div>
 <h3 id="buildingfromsource">Building from source<a class="headerlink" href="#buildingfromsource" title="Permanent link">#</a></h3>
 <p><a href="https://github.com/Azure/PSRule.Rules.Azure.git"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path fill-rule="evenodd" d="M3 3a2 2 0 0 1 2-2h9.982a2 2 0 0 1 1.414.586l4.018 4.018A2 2 0 0 1 21 7.018V21a2 2 0 0 1-2 2H4.75a.75.75 0 0 1 0-1.5H19a.5.5 0 0 0 .5-.5V8.5h-4a2 2 0 0 1-2-2v-4H5a.5.5 0 0 0-.5.5v6.25a.75.75 0 0 1-1.5 0V3zm12-.5v4a.5.5 0 0 0 .5.5h4a.5.5 0 0 0-.146-.336l-4.018-4.018A.5.5 0 0 0 15 2.5z"/><path d="M4.53 12.24a.75.75 0 0 1-.039 1.06l-2.639 2.45 2.64 2.45a.75.75 0 1 1-1.022 1.1l-3.23-3a.75.75 0 0 1 0-1.1l3.23-3a.75.75 0 0 1 1.06.04zm3.979 1.06a.75.75 0 1 1 1.02-1.1l3.231 3a.75.75 0 0 1 0 1.1l-3.23 3a.75.75 0 1 1-1.021-1.1l2.639-2.45-2.64-2.45z"/></svg></span> Source</a></p>
 <p>PSRule for Azure is provided as open source on GitHub.
@@ -6432,7 +6455,7 @@ download the required PowerShell modules on an alternative device that has acces
 PowerShell provides the <code>Save-Module</code> cmdlet that can be run from a PowerShell terminal to do this.</p>
 <p>The following command lines can be used to download the required modules using a PowerShell terminal.
 After downloading the modules, copy the module directories to devices with restricted Internet access.</p>
-<div class="tabbed-set tabbed-alternate" data-tabs="4:2"><input checked="checked" id="__tabbed_4_1" name="__tabbed_4" type="radio" /><input id="__tabbed_4_2" name="__tabbed_4" type="radio" /><div class="tabbed-labels"><label for="__tabbed_4_1">Runtime modules</label><label for="__tabbed_4_2">Development modules</label></div>
+<div class="tabbed-set tabbed-alternate" data-tabs="5:2"><input checked="checked" id="__tabbed_5_1" name="__tabbed_5" type="radio" /><input id="__tabbed_5_2" name="__tabbed_5" type="radio" /><div class="tabbed-labels"><label for="__tabbed_5_1">Runtime modules</label><label for="__tabbed_5_2">Development modules</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
 <p>To save PSRule for Azure for offline use:</p>
@@ -6457,7 +6480,7 @@ After downloading the modules, copy the module directories to devices with restr
   <small>
     
       Last update:
-      2022-06-03
+      2022-06-23
     
   </small>
 </div>

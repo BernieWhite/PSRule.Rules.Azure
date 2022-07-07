@@ -2,1762 +2,1762 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     <url>
          <loc>https://azure.github.io/PSRule.Rules.Azure/</loc>
-         <lastmod>2022-07-06</lastmod>
+         <lastmod>2022-07-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://azure.github.io/PSRule.Rules.Azure/CHANGELOG-v0/</loc>
-         <lastmod>2022-07-06</lastmod>
+         <lastmod>2022-07-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://azure.github.io/PSRule.Rules.Azure/CHANGELOG-v1/</loc>
-         <lastmod>2022-07-06</lastmod>
+         <lastmod>2022-07-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://azure.github.io/PSRule.Rules.Azure/about/</loc>
-         <lastmod>2022-07-06</lastmod>
+         <lastmod>2022-07-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://azure.github.io/PSRule.Rules.Azure/analyzing-resources/</loc>
-         <lastmod>2022-07-06</lastmod>
+         <lastmod>2022-07-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://azure.github.io/PSRule.Rules.Azure/creating-your-pipeline/</loc>
-         <lastmod>2022-07-06</lastmod>
+         <lastmod>2022-07-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://azure.github.io/PSRule.Rules.Azure/deprecations/</loc>
-         <lastmod>2022-07-06</lastmod>
+         <lastmod>2022-07-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://azure.github.io/PSRule.Rules.Azure/expanding-source-files/</loc>
-         <lastmod>2022-07-06</lastmod>
+         <lastmod>2022-07-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://azure.github.io/PSRule.Rules.Azure/export-rule-data/</loc>
-         <lastmod>2022-07-06</lastmod>
+         <lastmod>2022-07-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://azure.github.io/PSRule.Rules.Azure/faq/</loc>
-         <lastmod>2022-07-06</lastmod>
+         <lastmod>2022-07-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://azure.github.io/PSRule.Rules.Azure/features/</loc>
-         <lastmod>2022-07-06</lastmod>
+         <lastmod>2022-07-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://azure.github.io/PSRule.Rules.Azure/install-instructions/</loc>
-         <lastmod>2022-07-06</lastmod>
+         <lastmod>2022-07-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://azure.github.io/PSRule.Rules.Azure/integrations/</loc>
-         <lastmod>2022-07-06</lastmod>
+         <lastmod>2022-07-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://azure.github.io/PSRule.Rules.Azure/license-contributing/</loc>
-         <lastmod>2022-07-06</lastmod>
+         <lastmod>2022-07-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://azure.github.io/PSRule.Rules.Azure/related-projects/</loc>
-         <lastmod>2022-07-06</lastmod>
+         <lastmod>2022-07-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://azure.github.io/PSRule.Rules.Azure/support/</loc>
-         <lastmod>2022-07-06</lastmod>
+         <lastmod>2022-07-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://azure.github.io/PSRule.Rules.Azure/troubleshooting/</loc>
-         <lastmod>2022-07-06</lastmod>
+         <lastmod>2022-07-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://azure.github.io/PSRule.Rules.Azure/upgrade-notes/</loc>
-         <lastmod>2022-07-06</lastmod>
+         <lastmod>2022-07-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://azure.github.io/PSRule.Rules.Azure/using-bicep/</loc>
-         <lastmod>2022-07-06</lastmod>
+         <lastmod>2022-07-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://azure.github.io/PSRule.Rules.Azure/using-templates/</loc>
-         <lastmod>2022-07-06</lastmod>
+         <lastmod>2022-07-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://azure.github.io/PSRule.Rules.Azure/validating-locally/</loc>
-         <lastmod>2022-07-06</lastmod>
+         <lastmod>2022-07-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://azure.github.io/PSRule.Rules.Azure/working-with-baselines/</loc>
-         <lastmod>2022-07-06</lastmod>
+         <lastmod>2022-07-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://azure.github.io/PSRule.Rules.Azure/benchmark/results-pre-1.2.0/</loc>
-         <lastmod>2022-07-06</lastmod>
+         <lastmod>2022-07-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://azure.github.io/PSRule.Rules.Azure/benchmark/results-pre-1.4.0/</loc>
-         <lastmod>2022-07-06</lastmod>
+         <lastmod>2022-07-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://azure.github.io/PSRule.Rules.Azure/benchmark/results-pre-v1.8.0/</loc>
-         <lastmod>2022-07-06</lastmod>
+         <lastmod>2022-07-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://azure.github.io/PSRule.Rules.Azure/benchmark/results-v1.10.4/</loc>
-         <lastmod>2022-07-06</lastmod>
+         <lastmod>2022-07-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://azure.github.io/PSRule.Rules.Azure/benchmark/results-v1.11.0/</loc>
-         <lastmod>2022-07-06</lastmod>
+         <lastmod>2022-07-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://azure.github.io/PSRule.Rules.Azure/benchmark/results-v1.14.3/</loc>
-         <lastmod>2022-07-06</lastmod>
+         <lastmod>2022-07-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://azure.github.io/PSRule.Rules.Azure/benchmark/results-v1.15.0/</loc>
-         <lastmod>2022-07-06</lastmod>
+         <lastmod>2022-07-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://azure.github.io/PSRule.Rules.Azure/benchmark/results-v1.8.1/</loc>
-         <lastmod>2022-07-06</lastmod>
+         <lastmod>2022-07-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://azure.github.io/PSRule.Rules.Azure/benchmark/results-v1.9.1/</loc>
-         <lastmod>2022-07-06</lastmod>
+         <lastmod>2022-07-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://azure.github.io/PSRule.Rules.Azure/commands/Export-AzPolicyAssignmentData/</loc>
-         <lastmod>2022-07-06</lastmod>
+         <lastmod>2022-07-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://azure.github.io/PSRule.Rules.Azure/commands/Export-AzPolicyAssignmentRuleData/</loc>
-         <lastmod>2022-07-06</lastmod>
+         <lastmod>2022-07-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://azure.github.io/PSRule.Rules.Azure/commands/Export-AzRuleData/</loc>
-         <lastmod>2022-07-06</lastmod>
+         <lastmod>2022-07-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://azure.github.io/PSRule.Rules.Azure/commands/Export-AzRuleTemplateData/</loc>
-         <lastmod>2022-07-06</lastmod>
+         <lastmod>2022-07-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://azure.github.io/PSRule.Rules.Azure/commands/Get-AzPolicyAssignmentDataSource/</loc>
-         <lastmod>2022-07-06</lastmod>
+         <lastmod>2022-07-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://azure.github.io/PSRule.Rules.Azure/commands/Get-AzRuleTemplateLink/</loc>
-         <lastmod>2022-07-06</lastmod>
+         <lastmod>2022-07-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://azure.github.io/PSRule.Rules.Azure/commands/PSRule.Rules.Azure/</loc>
-         <lastmod>2022-07-06</lastmod>
+         <lastmod>2022-07-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://azure.github.io/PSRule.Rules.Azure/concepts/about_PSRule_Azure_Configuration/</loc>
-         <lastmod>2022-07-06</lastmod>
+         <lastmod>2022-07-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://azure.github.io/PSRule.Rules.Azure/concepts/about_PSRule_Azure_Metadata_Link/</loc>
-         <lastmod>2022-07-06</lastmod>
+         <lastmod>2022-07-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://azure.github.io/PSRule.Rules.Azure/customization/enforce-codeowners/</loc>
-         <lastmod>2022-07-06</lastmod>
+         <lastmod>2022-07-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://azure.github.io/PSRule.Rules.Azure/customization/enforce-custom-tags/</loc>
-         <lastmod>2022-07-06</lastmod>
+         <lastmod>2022-07-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://azure.github.io/PSRule.Rules.Azure/customization/storing-custom-rules/</loc>
-         <lastmod>2022-07-06</lastmod>
+         <lastmod>2022-07-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://azure.github.io/PSRule.Rules.Azure/en/baselines/Azure.All/</loc>
-         <lastmod>2022-07-06</lastmod>
+         <lastmod>2022-07-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://azure.github.io/PSRule.Rules.Azure/en/baselines/Azure.Default/</loc>
-         <lastmod>2022-07-06</lastmod>
+         <lastmod>2022-07-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://azure.github.io/PSRule.Rules.Azure/en/baselines/Azure.GA_2020_06/</loc>
-         <lastmod>2022-07-06</lastmod>
+         <lastmod>2022-07-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://azure.github.io/PSRule.Rules.Azure/en/baselines/Azure.GA_2020_09/</loc>
-         <lastmod>2022-07-06</lastmod>
+         <lastmod>2022-07-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://azure.github.io/PSRule.Rules.Azure/en/baselines/Azure.GA_2020_12/</loc>
-         <lastmod>2022-07-06</lastmod>
+         <lastmod>2022-07-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://azure.github.io/PSRule.Rules.Azure/en/baselines/Azure.GA_2021_03/</loc>
-         <lastmod>2022-07-06</lastmod>
+         <lastmod>2022-07-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://azure.github.io/PSRule.Rules.Azure/en/baselines/Azure.GA_2021_06/</loc>
-         <lastmod>2022-07-06</lastmod>
+         <lastmod>2022-07-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://azure.github.io/PSRule.Rules.Azure/en/baselines/Azure.GA_2021_09/</loc>
-         <lastmod>2022-07-06</lastmod>
+         <lastmod>2022-07-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://azure.github.io/PSRule.Rules.Azure/en/baselines/Azure.GA_2021_12/</loc>
-         <lastmod>2022-07-06</lastmod>
+         <lastmod>2022-07-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://azure.github.io/PSRule.Rules.Azure/en/baselines/Azure.GA_2022_03/</loc>
-         <lastmod>2022-07-06</lastmod>
+         <lastmod>2022-07-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://azure.github.io/PSRule.Rules.Azure/en/baselines/Azure.GA_2022_06/</loc>
-         <lastmod>2022-07-06</lastmod>
+         <lastmod>2022-07-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://azure.github.io/PSRule.Rules.Azure/en/baselines/Azure.Preview/</loc>
-         <lastmod>2022-07-06</lastmod>
+         <lastmod>2022-07-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://azure.github.io/PSRule.Rules.Azure/en/baselines/Azure.Preview_2021_09/</loc>
-         <lastmod>2022-07-06</lastmod>
+         <lastmod>2022-07-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://azure.github.io/PSRule.Rules.Azure/en/baselines/Azure.Preview_2021_12/</loc>
-         <lastmod>2022-07-06</lastmod>
+         <lastmod>2022-07-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://azure.github.io/PSRule.Rules.Azure/en/baselines/Azure.Preview_2022_03/</loc>
-         <lastmod>2022-07-06</lastmod>
+         <lastmod>2022-07-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://azure.github.io/PSRule.Rules.Azure/en/baselines/Azure.Preview_2022_06/</loc>
-         <lastmod>2022-07-06</lastmod>
+         <lastmod>2022-07-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://azure.github.io/PSRule.Rules.Azure/en/rules/Azure.ACR.AdminUser/</loc>
-         <lastmod>2022-07-06</lastmod>
+         <lastmod>2022-07-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://azure.github.io/PSRule.Rules.Azure/en/rules/Azure.ACR.ContainerScan/</loc>
-         <lastmod>2022-07-06</lastmod>
+         <lastmod>2022-07-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://azure.github.io/PSRule.Rules.Azure/en/rules/Azure.ACR.ContentTrust/</loc>
-         <lastmod>2022-07-06</lastmod>
+         <lastmod>2022-07-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://azure.github.io/PSRule.Rules.Azure/en/rules/Azure.ACR.GeoReplica/</loc>
-         <lastmod>2022-07-06</lastmod>
+         <lastmod>2022-07-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://azure.github.io/PSRule.Rules.Azure/en/rules/Azure.ACR.ImageHealth/</loc>
-         <lastmod>2022-07-06</lastmod>
+         <lastmod>2022-07-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://azure.github.io/PSRule.Rules.Azure/en/rules/Azure.ACR.MinSku/</loc>
-         <lastmod>2022-07-06</lastmod>
+         <lastmod>2022-07-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://azure.github.io/PSRule.Rules.Azure/en/rules/Azure.ACR.Name/</loc>
-         <lastmod>2022-07-06</lastmod>
+         <lastmod>2022-07-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://azure.github.io/PSRule.Rules.Azure/en/rules/Azure.ACR.Quarantine/</loc>
-         <lastmod>2022-07-06</lastmod>
+         <lastmod>2022-07-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://azure.github.io/PSRule.Rules.Azure/en/rules/Azure.ACR.Retention/</loc>
-         <lastmod>2022-07-06</lastmod>
+         <lastmod>2022-07-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://azure.github.io/PSRule.Rules.Azure/en/rules/Azure.ACR.Usage/</loc>
-         <lastmod>2022-07-06</lastmod>
+         <lastmod>2022-07-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://azure.github.io/PSRule.Rules.Azure/en/rules/Azure.ADX.DiskEncryption/</loc>
-         <lastmod>2022-07-06</lastmod>
+         <lastmod>2022-07-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://azure.github.io/PSRule.Rules.Azure/en/rules/Azure.ADX.ManagedIdentity/</loc>
-         <lastmod>2022-07-06</lastmod>
+         <lastmod>2022-07-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://azure.github.io/PSRule.Rules.Azure/en/rules/Azure.ADX.SLA/</loc>
-         <lastmod>2022-07-06</lastmod>
+         <lastmod>2022-07-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://azure.github.io/PSRule.Rules.Azure/en/rules/Azure.ADX.Usage/</loc>
-         <lastmod>2022-07-06</lastmod>
+         <lastmod>2022-07-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://azure.github.io/PSRule.Rules.Azure/en/rules/Azure.AKS.AuditLogs/</loc>
-         <lastmod>2022-07-06</lastmod>
+         <lastmod>2022-07-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://azure.github.io/PSRule.Rules.Azure/en/rules/Azure.AKS.AuthorizedIPs/</loc>
-         <lastmod>2022-07-06</lastmod>
+         <lastmod>2022-07-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://azure.github.io/PSRule.Rules.Azure/en/rules/Azure.AKS.AutoScaling/</loc>
-         <lastmod>2022-07-06</lastmod>
+         <lastmod>2022-07-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://azure.github.io/PSRule.Rules.Azure/en/rules/Azure.AKS.AutoUpgrade/</loc>
-         <lastmod>2022-07-06</lastmod>
+         <lastmod>2022-07-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://azure.github.io/PSRule.Rules.Azure/en/rules/Azure.AKS.AvailabilityZone/</loc>
-         <lastmod>2022-07-06</lastmod>
+         <lastmod>2022-07-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://azure.github.io/PSRule.Rules.Azure/en/rules/Azure.AKS.AzurePolicyAddOn/</loc>
-         <lastmod>2022-07-06</lastmod>
+         <lastmod>2022-07-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://azure.github.io/PSRule.Rules.Azure/en/rules/Azure.AKS.AzureRBAC/</loc>
-         <lastmod>2022-07-06</lastmod>
+         <lastmod>2022-07-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://azure.github.io/PSRule.Rules.Azure/en/rules/Azure.AKS.CNISubnetSize/</loc>
-         <lastmod>2022-07-06</lastmod>
+         <lastmod>2022-07-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://azure.github.io/PSRule.Rules.Azure/en/rules/Azure.AKS.ContainerInsights/</loc>
-         <lastmod>2022-07-06</lastmod>
+         <lastmod>2022-07-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://azure.github.io/PSRule.Rules.Azure/en/rules/Azure.AKS.DNSPrefix/</loc>
-         <lastmod>2022-07-06</lastmod>
+         <lastmod>2022-07-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://azure.github.io/PSRule.Rules.Azure/en/rules/Azure.AKS.HttpAppRouting/</loc>
-         <lastmod>2022-07-06</lastmod>
+         <lastmod>2022-07-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://azure.github.io/PSRule.Rules.Azure/en/rules/Azure.AKS.LocalAccounts/</loc>
-         <lastmod>2022-07-06</lastmod>
+         <lastmod>2022-07-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://azure.github.io/PSRule.Rules.Azure/en/rules/Azure.AKS.ManagedAAD/</loc>
-         <lastmod>2022-07-06</lastmod>
+         <lastmod>2022-07-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://azure.github.io/PSRule.Rules.Azure/en/rules/Azure.AKS.ManagedIdentity/</loc>
-         <lastmod>2022-07-06</lastmod>
+         <lastmod>2022-07-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://azure.github.io/PSRule.Rules.Azure/en/rules/Azure.AKS.MinNodeCount/</loc>
-         <lastmod>2022-07-06</lastmod>
+         <lastmod>2022-07-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://azure.github.io/PSRule.Rules.Azure/en/rules/Azure.AKS.Name/</loc>
-         <lastmod>2022-07-06</lastmod>
+         <lastmod>2022-07-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://azure.github.io/PSRule.Rules.Azure/en/rules/Azure.AKS.NetworkPolicy/</loc>
-         <lastmod>2022-07-06</lastmod>
+         <lastmod>2022-07-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://azure.github.io/PSRule.Rules.Azure/en/rules/Azure.AKS.NodeMinPods/</loc>
-         <lastmod>2022-07-06</lastmod>
+         <lastmod>2022-07-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://azure.github.io/PSRule.Rules.Azure/en/rules/Azure.AKS.PlatformLogs/</loc>
-         <lastmod>2022-07-06</lastmod>
+         <lastmod>2022-07-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://azure.github.io/PSRule.Rules.Azure/en/rules/Azure.AKS.PodIdentity/</loc>
-         <lastmod>2022-07-06</lastmod>
+         <lastmod>2022-07-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://azure.github.io/PSRule.Rules.Azure/en/rules/Azure.AKS.PoolScaleSet/</loc>
-         <lastmod>2022-07-06</lastmod>
+         <lastmod>2022-07-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://azure.github.io/PSRule.Rules.Azure/en/rules/Azure.AKS.PoolVersion/</loc>
-         <lastmod>2022-07-06</lastmod>
+         <lastmod>2022-07-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://azure.github.io/PSRule.Rules.Azure/en/rules/Azure.AKS.SecretStore/</loc>
-         <lastmod>2022-07-06</lastmod>
+         <lastmod>2022-07-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://azure.github.io/PSRule.Rules.Azure/en/rules/Azure.AKS.SecretStoreRotation/</loc>
-         <lastmod>2022-07-06</lastmod>
+         <lastmod>2022-07-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://azure.github.io/PSRule.Rules.Azure/en/rules/Azure.AKS.StandardLB/</loc>
-         <lastmod>2022-07-06</lastmod>
+         <lastmod>2022-07-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://azure.github.io/PSRule.Rules.Azure/en/rules/Azure.AKS.UseRBAC/</loc>
-         <lastmod>2022-07-06</lastmod>
+         <lastmod>2022-07-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://azure.github.io/PSRule.Rules.Azure/en/rules/Azure.AKS.Version/</loc>
-         <lastmod>2022-07-06</lastmod>
+         <lastmod>2022-07-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://azure.github.io/PSRule.Rules.Azure/en/rules/Azure.APIM.APIDescriptors/</loc>
-         <lastmod>2022-07-06</lastmod>
+         <lastmod>2022-07-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://azure.github.io/PSRule.Rules.Azure/en/rules/Azure.APIM.AvailabilityZone/</loc>
-         <lastmod>2022-07-06</lastmod>
+         <lastmod>2022-07-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://azure.github.io/PSRule.Rules.Azure/en/rules/Azure.APIM.CertificateExpiry/</loc>
-         <lastmod>2022-07-06</lastmod>
+         <lastmod>2022-07-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://azure.github.io/PSRule.Rules.Azure/en/rules/Azure.APIM.Ciphers/</loc>
-         <lastmod>2022-07-06</lastmod>
+         <lastmod>2022-07-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://azure.github.io/PSRule.Rules.Azure/en/rules/Azure.APIM.EncryptValues/</loc>
-         <lastmod>2022-07-06</lastmod>
+         <lastmod>2022-07-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://azure.github.io/PSRule.Rules.Azure/en/rules/Azure.APIM.HTTPBackend/</loc>
-         <lastmod>2022-07-06</lastmod>
+         <lastmod>2022-07-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://azure.github.io/PSRule.Rules.Azure/en/rules/Azure.APIM.HTTPEndpoint/</loc>
-         <lastmod>2022-07-06</lastmod>
+         <lastmod>2022-07-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://azure.github.io/PSRule.Rules.Azure/en/rules/Azure.APIM.ManagedIdentity/</loc>
-         <lastmod>2022-07-06</lastmod>
+         <lastmod>2022-07-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://azure.github.io/PSRule.Rules.Azure/en/rules/Azure.APIM.Name/</loc>
-         <lastmod>2022-07-06</lastmod>
+         <lastmod>2022-07-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://azure.github.io/PSRule.Rules.Azure/en/rules/Azure.APIM.ProductApproval/</loc>
-         <lastmod>2022-07-06</lastmod>
+         <lastmod>2022-07-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://azure.github.io/PSRule.Rules.Azure/en/rules/Azure.APIM.ProductDescriptors/</loc>
-         <lastmod>2022-07-06</lastmod>
+         <lastmod>2022-07-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://azure.github.io/PSRule.Rules.Azure/en/rules/Azure.APIM.ProductSubscription/</loc>
-         <lastmod>2022-07-06</lastmod>
+         <lastmod>2022-07-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://azure.github.io/PSRule.Rules.Azure/en/rules/Azure.APIM.ProductTerms/</loc>
-         <lastmod>2022-07-06</lastmod>
+         <lastmod>2022-07-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://azure.github.io/PSRule.Rules.Azure/en/rules/Azure.APIM.Protocols/</loc>
-         <lastmod>2022-07-06</lastmod>
+         <lastmod>2022-07-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://azure.github.io/PSRule.Rules.Azure/en/rules/Azure.APIM.SampleProducts/</loc>
-         <lastmod>2022-07-06</lastmod>
+         <lastmod>2022-07-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://azure.github.io/PSRule.Rules.Azure/en/rules/Azure.ASG.Name/</loc>
-         <lastmod>2022-07-06</lastmod>
+         <lastmod>2022-07-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://azure.github.io/PSRule.Rules.Azure/en/rules/Azure.AppConfig.Name/</loc>
-         <lastmod>2022-07-06</lastmod>
+         <lastmod>2022-07-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://azure.github.io/PSRule.Rules.Azure/en/rules/Azure.AppConfig.SKU/</loc>
-         <lastmod>2022-07-06</lastmod>
+         <lastmod>2022-07-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://azure.github.io/PSRule.Rules.Azure/en/rules/Azure.AppGw.AvailabilityZone/</loc>
-         <lastmod>2022-07-06</lastmod>
+         <lastmod>2022-07-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://azure.github.io/PSRule.Rules.Azure/en/rules/Azure.AppGw.MinInstance/</loc>
-         <lastmod>2022-07-06</lastmod>
+         <lastmod>2022-07-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://azure.github.io/PSRule.Rules.Azure/en/rules/Azure.AppGw.MinSku/</loc>
-         <lastmod>2022-07-06</lastmod>
+         <lastmod>2022-07-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://azure.github.io/PSRule.Rules.Azure/en/rules/Azure.AppGw.OWASP/</loc>
-         <lastmod>2022-07-06</lastmod>
+         <lastmod>2022-07-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://azure.github.io/PSRule.Rules.Azure/en/rules/Azure.AppGw.Prevention/</loc>
-         <lastmod>2022-07-06</lastmod>
+         <lastmod>2022-07-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://azure.github.io/PSRule.Rules.Azure/en/rules/Azure.AppGw.SSLPolicy/</loc>
-         <lastmod>2022-07-06</lastmod>
+         <lastmod>2022-07-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://azure.github.io/PSRule.Rules.Azure/en/rules/Azure.AppGw.UseHTTPS/</loc>
-         <lastmod>2022-07-06</lastmod>
+         <lastmod>2022-07-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://azure.github.io/PSRule.Rules.Azure/en/rules/Azure.AppGw.UseWAF/</loc>
-         <lastmod>2022-07-06</lastmod>
+         <lastmod>2022-07-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://azure.github.io/PSRule.Rules.Azure/en/rules/Azure.AppGw.WAFEnabled/</loc>
-         <lastmod>2022-07-06</lastmod>
+         <lastmod>2022-07-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://azure.github.io/PSRule.Rules.Azure/en/rules/Azure.AppGw.WAFRules/</loc>
-         <lastmod>2022-07-06</lastmod>
+         <lastmod>2022-07-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://azure.github.io/PSRule.Rules.Azure/en/rules/Azure.AppInsights.Name/</loc>
-         <lastmod>2022-07-06</lastmod>
+         <lastmod>2022-07-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://azure.github.io/PSRule.Rules.Azure/en/rules/Azure.AppInsights.Workspace/</loc>
-         <lastmod>2022-07-06</lastmod>
+         <lastmod>2022-07-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://azure.github.io/PSRule.Rules.Azure/en/rules/Azure.AppService.ARRAffinity/</loc>
-         <lastmod>2022-07-06</lastmod>
+         <lastmod>2022-07-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://azure.github.io/PSRule.Rules.Azure/en/rules/Azure.AppService.AlwaysOn/</loc>
-         <lastmod>2022-07-06</lastmod>
+         <lastmod>2022-07-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://azure.github.io/PSRule.Rules.Azure/en/rules/Azure.AppService.HTTP2/</loc>
-         <lastmod>2022-07-06</lastmod>
+         <lastmod>2022-07-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://azure.github.io/PSRule.Rules.Azure/en/rules/Azure.AppService.ManagedIdentity/</loc>
-         <lastmod>2022-07-06</lastmod>
+         <lastmod>2022-07-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://azure.github.io/PSRule.Rules.Azure/en/rules/Azure.AppService.MinPlan/</loc>
-         <lastmod>2022-07-06</lastmod>
+         <lastmod>2022-07-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://azure.github.io/PSRule.Rules.Azure/en/rules/Azure.AppService.MinTLS/</loc>
-         <lastmod>2022-07-06</lastmod>
+         <lastmod>2022-07-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://azure.github.io/PSRule.Rules.Azure/en/rules/Azure.AppService.NETVersion/</loc>
-         <lastmod>2022-07-06</lastmod>
+         <lastmod>2022-07-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://azure.github.io/PSRule.Rules.Azure/en/rules/Azure.AppService.PHPVersion/</loc>
-         <lastmod>2022-07-06</lastmod>
+         <lastmod>2022-07-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://azure.github.io/PSRule.Rules.Azure/en/rules/Azure.AppService.PlanInstanceCount/</loc>
-         <lastmod>2022-07-06</lastmod>
+         <lastmod>2022-07-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://azure.github.io/PSRule.Rules.Azure/en/rules/Azure.AppService.RemoteDebug/</loc>
-         <lastmod>2022-07-06</lastmod>
+         <lastmod>2022-07-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://azure.github.io/PSRule.Rules.Azure/en/rules/Azure.AppService.UseHTTPS/</loc>
-         <lastmod>2022-07-06</lastmod>
+         <lastmod>2022-07-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://azure.github.io/PSRule.Rules.Azure/en/rules/Azure.AppService.WebProbe/</loc>
-         <lastmod>2022-07-06</lastmod>
+         <lastmod>2022-07-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://azure.github.io/PSRule.Rules.Azure/en/rules/Azure.AppService.WebProbePath/</loc>
-         <lastmod>2022-07-06</lastmod>
+         <lastmod>2022-07-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://azure.github.io/PSRule.Rules.Azure/en/rules/Azure.AppService.WebSecureFtp/</loc>
-         <lastmod>2022-07-06</lastmod>
+         <lastmod>2022-07-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://azure.github.io/PSRule.Rules.Azure/en/rules/Azure.Automation.AuditLogs/</loc>
-         <lastmod>2022-07-06</lastmod>
+         <lastmod>2022-07-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://azure.github.io/PSRule.Rules.Azure/en/rules/Azure.Automation.EncryptVariables/</loc>
-         <lastmod>2022-07-06</lastmod>
+         <lastmod>2022-07-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://azure.github.io/PSRule.Rules.Azure/en/rules/Azure.Automation.ManagedIdentity/</loc>
-         <lastmod>2022-07-06</lastmod>
+         <lastmod>2022-07-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://azure.github.io/PSRule.Rules.Azure/en/rules/Azure.Automation.PlatformLogs/</loc>
-         <lastmod>2022-07-06</lastmod>
+         <lastmod>2022-07-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://azure.github.io/PSRule.Rules.Azure/en/rules/Azure.Automation.WebHookExpiry/</loc>
-         <lastmod>2022-07-06</lastmod>
+         <lastmod>2022-07-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://azure.github.io/PSRule.Rules.Azure/en/rules/Azure.CDN.EndpointName/</loc>
-         <lastmod>2022-07-06</lastmod>
+         <lastmod>2022-07-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://azure.github.io/PSRule.Rules.Azure/en/rules/Azure.CDN.HTTP/</loc>
-         <lastmod>2022-07-06</lastmod>
+         <lastmod>2022-07-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://azure.github.io/PSRule.Rules.Azure/en/rules/Azure.CDN.MinTLS/</loc>
-         <lastmod>2022-07-06</lastmod>
+         <lastmod>2022-07-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://azure.github.io/PSRule.Rules.Azure/en/rules/Azure.ContainerApp.Insecure/</loc>
-         <lastmod>2022-07-06</lastmod>
+         <lastmod>2022-07-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://azure.github.io/PSRule.Rules.Azure/en/rules/Azure.Cosmos.AccountName/</loc>
-         <lastmod>2022-07-06</lastmod>
+         <lastmod>2022-07-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://azure.github.io/PSRule.Rules.Azure/en/rules/Azure.Cosmos.DisableMetadataWrite/</loc>
-         <lastmod>2022-07-06</lastmod>
+         <lastmod>2022-07-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://azure.github.io/PSRule.Rules.Azure/en/rules/Azure.DataFactory.Version/</loc>
-         <lastmod>2022-07-06</lastmod>
+         <lastmod>2022-07-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://azure.github.io/PSRule.Rules.Azure/en/rules/Azure.Deployment.OutputSecretValue/</loc>
-         <lastmod>2022-07-06</lastmod>
+         <lastmod>2022-07-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://azure.github.io/PSRule.Rules.Azure/en/rules/Azure.EventGrid.DisableLocalAuth/</loc>
-         <lastmod>2022-07-06</lastmod>
+         <lastmod>2022-07-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://azure.github.io/PSRule.Rules.Azure/en/rules/Azure.EventGrid.ManagedIdentity/</loc>
-         <lastmod>2022-07-06</lastmod>
+         <lastmod>2022-07-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://azure.github.io/PSRule.Rules.Azure/en/rules/Azure.EventGrid.TopicPublicAccess/</loc>
-         <lastmod>2022-07-06</lastmod>
+         <lastmod>2022-07-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://azure.github.io/PSRule.Rules.Azure/en/rules/Azure.EventHub.DisableLocalAuth/</loc>
-         <lastmod>2022-07-06</lastmod>
+         <lastmod>2022-07-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://azure.github.io/PSRule.Rules.Azure/en/rules/Azure.EventHub.Usage/</loc>
-         <lastmod>2022-07-06</lastmod>
+         <lastmod>2022-07-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://azure.github.io/PSRule.Rules.Azure/en/rules/Azure.Firewall.Mode/</loc>
-         <lastmod>2022-07-06</lastmod>
+         <lastmod>2022-07-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://azure.github.io/PSRule.Rules.Azure/en/rules/Azure.Firewall.Name/</loc>
-         <lastmod>2022-07-06</lastmod>
+         <lastmod>2022-07-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://azure.github.io/PSRule.Rules.Azure/en/rules/Azure.Firewall.PolicyName/</loc>
-         <lastmod>2022-07-06</lastmod>
+         <lastmod>2022-07-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://azure.github.io/PSRule.Rules.Azure/en/rules/Azure.FrontDoor.Logs/</loc>
-         <lastmod>2022-07-06</lastmod>
+         <lastmod>2022-07-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://azure.github.io/PSRule.Rules.Azure/en/rules/Azure.FrontDoor.MinTLS/</loc>
-         <lastmod>2022-07-06</lastmod>
+         <lastmod>2022-07-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://azure.github.io/PSRule.Rules.Azure/en/rules/Azure.FrontDoor.Name/</loc>
-         <lastmod>2022-07-06</lastmod>
+         <lastmod>2022-07-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://azure.github.io/PSRule.Rules.Azure/en/rules/Azure.FrontDoor.Probe/</loc>
-         <lastmod>2022-07-06</lastmod>
+         <lastmod>2022-07-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://azure.github.io/PSRule.Rules.Azure/en/rules/Azure.FrontDoor.ProbeMethod/</loc>
-         <lastmod>2022-07-06</lastmod>
+         <lastmod>2022-07-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://azure.github.io/PSRule.Rules.Azure/en/rules/Azure.FrontDoor.ProbePath/</loc>
-         <lastmod>2022-07-06</lastmod>
+         <lastmod>2022-07-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://azure.github.io/PSRule.Rules.Azure/en/rules/Azure.FrontDoor.State/</loc>
-         <lastmod>2022-07-06</lastmod>
+         <lastmod>2022-07-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://azure.github.io/PSRule.Rules.Azure/en/rules/Azure.FrontDoor.UseWAF/</loc>
-         <lastmod>2022-07-06</lastmod>
+         <lastmod>2022-07-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://azure.github.io/PSRule.Rules.Azure/en/rules/Azure.FrontDoor.WAF.Enabled/</loc>
-         <lastmod>2022-07-06</lastmod>
+         <lastmod>2022-07-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://azure.github.io/PSRule.Rules.Azure/en/rules/Azure.FrontDoor.WAF.Mode/</loc>
-         <lastmod>2022-07-06</lastmod>
+         <lastmod>2022-07-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://azure.github.io/PSRule.Rules.Azure/en/rules/Azure.FrontDoor.WAF.Name/</loc>
-         <lastmod>2022-07-06</lastmod>
+         <lastmod>2022-07-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://azure.github.io/PSRule.Rules.Azure/en/rules/Azure.Identity.UserAssignedName/</loc>
-         <lastmod>2022-07-06</lastmod>
+         <lastmod>2022-07-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://azure.github.io/PSRule.Rules.Azure/en/rules/Azure.KeyVault.AccessPolicy/</loc>
-         <lastmod>2022-07-06</lastmod>
+         <lastmod>2022-07-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://azure.github.io/PSRule.Rules.Azure/en/rules/Azure.KeyVault.AutoRotationPolicy/</loc>
-         <lastmod>2022-07-06</lastmod>
+         <lastmod>2022-07-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://azure.github.io/PSRule.Rules.Azure/en/rules/Azure.KeyVault.KeyName/</loc>
-         <lastmod>2022-07-06</lastmod>
+         <lastmod>2022-07-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://azure.github.io/PSRule.Rules.Azure/en/rules/Azure.KeyVault.Logs/</loc>
-         <lastmod>2022-07-06</lastmod>
+         <lastmod>2022-07-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://azure.github.io/PSRule.Rules.Azure/en/rules/Azure.KeyVault.Name/</loc>
-         <lastmod>2022-07-06</lastmod>
+         <lastmod>2022-07-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://azure.github.io/PSRule.Rules.Azure/en/rules/Azure.KeyVault.PurgeProtect/</loc>
-         <lastmod>2022-07-06</lastmod>
+         <lastmod>2022-07-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://azure.github.io/PSRule.Rules.Azure/en/rules/Azure.KeyVault.SecretName/</loc>
-         <lastmod>2022-07-06</lastmod>
+         <lastmod>2022-07-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://azure.github.io/PSRule.Rules.Azure/en/rules/Azure.KeyVault.SoftDelete/</loc>
-         <lastmod>2022-07-06</lastmod>
+         <lastmod>2022-07-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://azure.github.io/PSRule.Rules.Azure/en/rules/Azure.LB.AvailabilityZone/</loc>
-         <lastmod>2022-07-06</lastmod>
+         <lastmod>2022-07-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://azure.github.io/PSRule.Rules.Azure/en/rules/Azure.LB.Name/</loc>
-         <lastmod>2022-07-06</lastmod>
+         <lastmod>2022-07-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://azure.github.io/PSRule.Rules.Azure/en/rules/Azure.LB.Probe/</loc>
-         <lastmod>2022-07-06</lastmod>
+         <lastmod>2022-07-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://azure.github.io/PSRule.Rules.Azure/en/rules/Azure.LB.StandardSKU/</loc>
-         <lastmod>2022-07-06</lastmod>
+         <lastmod>2022-07-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://azure.github.io/PSRule.Rules.Azure/en/rules/Azure.LogicApp.LimitHTTPTrigger/</loc>
-         <lastmod>2022-07-06</lastmod>
+         <lastmod>2022-07-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://azure.github.io/PSRule.Rules.Azure/en/rules/Azure.Monitor.ServiceHealth/</loc>
-         <lastmod>2022-07-06</lastmod>
+         <lastmod>2022-07-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://azure.github.io/PSRule.Rules.Azure/en/rules/Azure.MySQL.AllowAzureAccess/</loc>
-         <lastmod>2022-07-06</lastmod>
+         <lastmod>2022-07-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://azure.github.io/PSRule.Rules.Azure/en/rules/Azure.MySQL.FirewallIPRange/</loc>
-         <lastmod>2022-07-06</lastmod>
+         <lastmod>2022-07-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://azure.github.io/PSRule.Rules.Azure/en/rules/Azure.MySQL.FirewallRuleCount/</loc>
-         <lastmod>2022-07-06</lastmod>
+         <lastmod>2022-07-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://azure.github.io/PSRule.Rules.Azure/en/rules/Azure.MySQL.MinTLS/</loc>
-         <lastmod>2022-07-06</lastmod>
+         <lastmod>2022-07-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://azure.github.io/PSRule.Rules.Azure/en/rules/Azure.MySQL.ServerName/</loc>
-         <lastmod>2022-07-06</lastmod>
+         <lastmod>2022-07-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://azure.github.io/PSRule.Rules.Azure/en/rules/Azure.MySQL.UseSSL/</loc>
-         <lastmod>2022-07-06</lastmod>
+         <lastmod>2022-07-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://azure.github.io/PSRule.Rules.Azure/en/rules/Azure.NSG.AnyInboundSource/</loc>
-         <lastmod>2022-07-06</lastmod>
+         <lastmod>2022-07-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://azure.github.io/PSRule.Rules.Azure/en/rules/Azure.NSG.Associated/</loc>
-         <lastmod>2022-07-06</lastmod>
+         <lastmod>2022-07-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://azure.github.io/PSRule.Rules.Azure/en/rules/Azure.NSG.DenyAllInbound/</loc>
-         <lastmod>2022-07-06</lastmod>
+         <lastmod>2022-07-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://azure.github.io/PSRule.Rules.Azure/en/rules/Azure.NSG.LateralTraversal/</loc>
-         <lastmod>2022-07-06</lastmod>
+         <lastmod>2022-07-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://azure.github.io/PSRule.Rules.Azure/en/rules/Azure.NSG.Name/</loc>
-         <lastmod>2022-07-06</lastmod>
+         <lastmod>2022-07-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://azure.github.io/PSRule.Rules.Azure/en/rules/Azure.Policy.AssignmentAssignedBy/</loc>
-         <lastmod>2022-07-06</lastmod>
+         <lastmod>2022-07-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://azure.github.io/PSRule.Rules.Azure/en/rules/Azure.Policy.AssignmentDescriptors/</loc>
-         <lastmod>2022-07-06</lastmod>
+         <lastmod>2022-07-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://azure.github.io/PSRule.Rules.Azure/en/rules/Azure.Policy.Descriptors/</loc>
-         <lastmod>2022-07-06</lastmod>
+         <lastmod>2022-07-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://azure.github.io/PSRule.Rules.Azure/en/rules/Azure.Policy.ExemptionDescriptors/</loc>
-         <lastmod>2022-07-06</lastmod>
+         <lastmod>2022-07-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://azure.github.io/PSRule.Rules.Azure/en/rules/Azure.Policy.WaiverExpiry/</loc>
-         <lastmod>2022-07-06</lastmod>
+         <lastmod>2022-07-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://azure.github.io/PSRule.Rules.Azure/en/rules/Azure.PostgreSQL.AllowAzureAccess/</loc>
-         <lastmod>2022-07-06</lastmod>
+         <lastmod>2022-07-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://azure.github.io/PSRule.Rules.Azure/en/rules/Azure.PostgreSQL.FirewallIPRange/</loc>
-         <lastmod>2022-07-06</lastmod>
+         <lastmod>2022-07-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://azure.github.io/PSRule.Rules.Azure/en/rules/Azure.PostgreSQL.FirewallRuleCount/</loc>
-         <lastmod>2022-07-06</lastmod>
+         <lastmod>2022-07-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://azure.github.io/PSRule.Rules.Azure/en/rules/Azure.PostgreSQL.MinTLS/</loc>
-         <lastmod>2022-07-06</lastmod>
+         <lastmod>2022-07-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://azure.github.io/PSRule.Rules.Azure/en/rules/Azure.PostgreSQL.ServerName/</loc>
-         <lastmod>2022-07-06</lastmod>
+         <lastmod>2022-07-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://azure.github.io/PSRule.Rules.Azure/en/rules/Azure.PostgreSQL.UseSSL/</loc>
-         <lastmod>2022-07-06</lastmod>
+         <lastmod>2022-07-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://azure.github.io/PSRule.Rules.Azure/en/rules/Azure.PrivateEndpoint.Name/</loc>
-         <lastmod>2022-07-06</lastmod>
+         <lastmod>2022-07-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://azure.github.io/PSRule.Rules.Azure/en/rules/Azure.PublicIP.AvailabilityZone/</loc>
-         <lastmod>2022-07-06</lastmod>
+         <lastmod>2022-07-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://azure.github.io/PSRule.Rules.Azure/en/rules/Azure.PublicIP.DNSLabel/</loc>
-         <lastmod>2022-07-06</lastmod>
+         <lastmod>2022-07-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://azure.github.io/PSRule.Rules.Azure/en/rules/Azure.PublicIP.IsAttached/</loc>
-         <lastmod>2022-07-06</lastmod>
+         <lastmod>2022-07-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://azure.github.io/PSRule.Rules.Azure/en/rules/Azure.PublicIP.Name/</loc>
-         <lastmod>2022-07-06</lastmod>
+         <lastmod>2022-07-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://azure.github.io/PSRule.Rules.Azure/en/rules/Azure.PublicIP.StandardSKU/</loc>
-         <lastmod>2022-07-06</lastmod>
+         <lastmod>2022-07-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://azure.github.io/PSRule.Rules.Azure/en/rules/Azure.RBAC.CoAdministrator/</loc>
-         <lastmod>2022-07-06</lastmod>
+         <lastmod>2022-07-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://azure.github.io/PSRule.Rules.Azure/en/rules/Azure.RBAC.LimitMGDelegation/</loc>
-         <lastmod>2022-07-06</lastmod>
+         <lastmod>2022-07-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://azure.github.io/PSRule.Rules.Azure/en/rules/Azure.RBAC.LimitOwner/</loc>
-         <lastmod>2022-07-06</lastmod>
+         <lastmod>2022-07-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://azure.github.io/PSRule.Rules.Azure/en/rules/Azure.RBAC.PIM/</loc>
-         <lastmod>2022-07-06</lastmod>
+         <lastmod>2022-07-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://azure.github.io/PSRule.Rules.Azure/en/rules/Azure.RBAC.UseGroups/</loc>
-         <lastmod>2022-07-06</lastmod>
+         <lastmod>2022-07-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://azure.github.io/PSRule.Rules.Azure/en/rules/Azure.RBAC.UseRGDelegation/</loc>
-         <lastmod>2022-07-06</lastmod>
+         <lastmod>2022-07-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://azure.github.io/PSRule.Rules.Azure/en/rules/Azure.RSV.ReplicationAlert/</loc>
-         <lastmod>2022-07-06</lastmod>
+         <lastmod>2022-07-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://azure.github.io/PSRule.Rules.Azure/en/rules/Azure.RSV.StorageType/</loc>
-         <lastmod>2022-07-06</lastmod>
+         <lastmod>2022-07-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://azure.github.io/PSRule.Rules.Azure/en/rules/Azure.Redis.AvailabilityZone/</loc>
-         <lastmod>2022-07-06</lastmod>
+         <lastmod>2022-07-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://azure.github.io/PSRule.Rules.Azure/en/rules/Azure.Redis.MaxMemoryReserved/</loc>
-         <lastmod>2022-07-06</lastmod>
+         <lastmod>2022-07-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://azure.github.io/PSRule.Rules.Azure/en/rules/Azure.Redis.MinSKU/</loc>
-         <lastmod>2022-07-06</lastmod>
+         <lastmod>2022-07-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://azure.github.io/PSRule.Rules.Azure/en/rules/Azure.Redis.MinTLS/</loc>
-         <lastmod>2022-07-06</lastmod>
+         <lastmod>2022-07-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://azure.github.io/PSRule.Rules.Azure/en/rules/Azure.Redis.NonSslPort/</loc>
-         <lastmod>2022-07-06</lastmod>
+         <lastmod>2022-07-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://azure.github.io/PSRule.Rules.Azure/en/rules/Azure.Redis.PublicNetworkAccess/</loc>
-         <lastmod>2022-07-06</lastmod>
+         <lastmod>2022-07-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://azure.github.io/PSRule.Rules.Azure/en/rules/Azure.RedisEnterprise.Zones/</loc>
-         <lastmod>2022-07-06</lastmod>
+         <lastmod>2022-07-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://azure.github.io/PSRule.Rules.Azure/en/rules/Azure.Resource.AllowedRegions/</loc>
-         <lastmod>2022-07-06</lastmod>
+         <lastmod>2022-07-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://azure.github.io/PSRule.Rules.Azure/en/rules/Azure.Resource.UseTags/</loc>
-         <lastmod>2022-07-06</lastmod>
+         <lastmod>2022-07-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://azure.github.io/PSRule.Rules.Azure/en/rules/Azure.ResourceGroup.Name/</loc>
-         <lastmod>2022-07-06</lastmod>
+         <lastmod>2022-07-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://azure.github.io/PSRule.Rules.Azure/en/rules/Azure.Route.Name/</loc>
-         <lastmod>2022-07-06</lastmod>
+         <lastmod>2022-07-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://azure.github.io/PSRule.Rules.Azure/en/rules/Azure.SQL.AAD/</loc>
-         <lastmod>2022-07-06</lastmod>
+         <lastmod>2022-07-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://azure.github.io/PSRule.Rules.Azure/en/rules/Azure.SQL.AllowAzureAccess/</loc>
-         <lastmod>2022-07-06</lastmod>
+         <lastmod>2022-07-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://azure.github.io/PSRule.Rules.Azure/en/rules/Azure.SQL.Auditing/</loc>
-         <lastmod>2022-07-06</lastmod>
+         <lastmod>2022-07-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://azure.github.io/PSRule.Rules.Azure/en/rules/Azure.SQL.DBName/</loc>
-         <lastmod>2022-07-06</lastmod>
+         <lastmod>2022-07-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://azure.github.io/PSRule.Rules.Azure/en/rules/Azure.SQL.FGName/</loc>
-         <lastmod>2022-07-06</lastmod>
+         <lastmod>2022-07-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://azure.github.io/PSRule.Rules.Azure/en/rules/Azure.SQL.FirewallIPRange/</loc>
-         <lastmod>2022-07-06</lastmod>
+         <lastmod>2022-07-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://azure.github.io/PSRule.Rules.Azure/en/rules/Azure.SQL.FirewallRuleCount/</loc>
-         <lastmod>2022-07-06</lastmod>
+         <lastmod>2022-07-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://azure.github.io/PSRule.Rules.Azure/en/rules/Azure.SQL.MinTLS/</loc>
-         <lastmod>2022-07-06</lastmod>
+         <lastmod>2022-07-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://azure.github.io/PSRule.Rules.Azure/en/rules/Azure.SQL.ServerName/</loc>
-         <lastmod>2022-07-06</lastmod>
+         <lastmod>2022-07-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://azure.github.io/PSRule.Rules.Azure/en/rules/Azure.SQL.TDE/</loc>
-         <lastmod>2022-07-06</lastmod>
+         <lastmod>2022-07-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://azure.github.io/PSRule.Rules.Azure/en/rules/Azure.SQL.ThreatDetection/</loc>
-         <lastmod>2022-07-06</lastmod>
+         <lastmod>2022-07-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://azure.github.io/PSRule.Rules.Azure/en/rules/Azure.SQLMI.Name/</loc>
-         <lastmod>2022-07-06</lastmod>
+         <lastmod>2022-07-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://azure.github.io/PSRule.Rules.Azure/en/rules/Azure.Search.IndexSLA/</loc>
-         <lastmod>2022-07-06</lastmod>
+         <lastmod>2022-07-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://azure.github.io/PSRule.Rules.Azure/en/rules/Azure.Search.ManagedIdentity/</loc>
-         <lastmod>2022-07-06</lastmod>
+         <lastmod>2022-07-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://azure.github.io/PSRule.Rules.Azure/en/rules/Azure.Search.Name/</loc>
-         <lastmod>2022-07-06</lastmod>
+         <lastmod>2022-07-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://azure.github.io/PSRule.Rules.Azure/en/rules/Azure.Search.QuerySLA/</loc>
-         <lastmod>2022-07-06</lastmod>
+         <lastmod>2022-07-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://azure.github.io/PSRule.Rules.Azure/en/rules/Azure.Search.SKU/</loc>
-         <lastmod>2022-07-06</lastmod>
+         <lastmod>2022-07-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://azure.github.io/PSRule.Rules.Azure/en/rules/Azure.SecurityCenter.Contact/</loc>
-         <lastmod>2022-07-06</lastmod>
+         <lastmod>2022-07-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://azure.github.io/PSRule.Rules.Azure/en/rules/Azure.SecurityCenter.Provisioning/</loc>
-         <lastmod>2022-07-06</lastmod>
+         <lastmod>2022-07-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://azure.github.io/PSRule.Rules.Azure/en/rules/Azure.ServiceBus.DisableLocalAuth/</loc>
-         <lastmod>2022-07-06</lastmod>
+         <lastmod>2022-07-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://azure.github.io/PSRule.Rules.Azure/en/rules/Azure.ServiceBus.Usage/</loc>
-         <lastmod>2022-07-06</lastmod>
+         <lastmod>2022-07-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://azure.github.io/PSRule.Rules.Azure/en/rules/Azure.ServiceFabric.AAD/</loc>
-         <lastmod>2022-07-06</lastmod>
+         <lastmod>2022-07-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://azure.github.io/PSRule.Rules.Azure/en/rules/Azure.SignalR.ManagedIdentity/</loc>
-         <lastmod>2022-07-06</lastmod>
+         <lastmod>2022-07-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://azure.github.io/PSRule.Rules.Azure/en/rules/Azure.SignalR.Name/</loc>
-         <lastmod>2022-07-06</lastmod>
+         <lastmod>2022-07-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://azure.github.io/PSRule.Rules.Azure/en/rules/Azure.SignalR.SLA/</loc>
-         <lastmod>2022-07-06</lastmod>
+         <lastmod>2022-07-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://azure.github.io/PSRule.Rules.Azure/en/rules/Azure.Storage.BlobAccessType/</loc>
-         <lastmod>2022-07-06</lastmod>
+         <lastmod>2022-07-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://azure.github.io/PSRule.Rules.Azure/en/rules/Azure.Storage.BlobPublicAccess/</loc>
-         <lastmod>2022-07-06</lastmod>
+         <lastmod>2022-07-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://azure.github.io/PSRule.Rules.Azure/en/rules/Azure.Storage.Firewall/</loc>
-         <lastmod>2022-07-06</lastmod>
+         <lastmod>2022-07-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://azure.github.io/PSRule.Rules.Azure/en/rules/Azure.Storage.MinTLS/</loc>
-         <lastmod>2022-07-06</lastmod>
+         <lastmod>2022-07-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://azure.github.io/PSRule.Rules.Azure/en/rules/Azure.Storage.Name/</loc>
-         <lastmod>2022-07-06</lastmod>
+         <lastmod>2022-07-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://azure.github.io/PSRule.Rules.Azure/en/rules/Azure.Storage.SecureTransfer/</loc>
-         <lastmod>2022-07-06</lastmod>
+         <lastmod>2022-07-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://azure.github.io/PSRule.Rules.Azure/en/rules/Azure.Storage.SoftDelete/</loc>
-         <lastmod>2022-07-06</lastmod>
+         <lastmod>2022-07-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://azure.github.io/PSRule.Rules.Azure/en/rules/Azure.Storage.UseReplication/</loc>
-         <lastmod>2022-07-06</lastmod>
+         <lastmod>2022-07-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://azure.github.io/PSRule.Rules.Azure/en/rules/Azure.Template.DebugDeployment/</loc>
-         <lastmod>2022-07-06</lastmod>
+         <lastmod>2022-07-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://azure.github.io/PSRule.Rules.Azure/en/rules/Azure.Template.DefineParameters/</loc>
-         <lastmod>2022-07-06</lastmod>
+         <lastmod>2022-07-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://azure.github.io/PSRule.Rules.Azure/en/rules/Azure.Template.ExpressionLength/</loc>
-         <lastmod>2022-07-06</lastmod>
+         <lastmod>2022-07-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://azure.github.io/PSRule.Rules.Azure/en/rules/Azure.Template.LocationDefault/</loc>
-         <lastmod>2022-07-06</lastmod>
+         <lastmod>2022-07-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://azure.github.io/PSRule.Rules.Azure/en/rules/Azure.Template.LocationType/</loc>
-         <lastmod>2022-07-06</lastmod>
+         <lastmod>2022-07-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://azure.github.io/PSRule.Rules.Azure/en/rules/Azure.Template.MetadataLink/</loc>
-         <lastmod>2022-07-06</lastmod>
+         <lastmod>2022-07-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://azure.github.io/PSRule.Rules.Azure/en/rules/Azure.Template.ParameterDataTypes/</loc>
-         <lastmod>2022-07-06</lastmod>
+         <lastmod>2022-07-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://azure.github.io/PSRule.Rules.Azure/en/rules/Azure.Template.ParameterFile/</loc>
-         <lastmod>2022-07-06</lastmod>
+         <lastmod>2022-07-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://azure.github.io/PSRule.Rules.Azure/en/rules/Azure.Template.ParameterMetadata/</loc>
-         <lastmod>2022-07-06</lastmod>
+         <lastmod>2022-07-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://azure.github.io/PSRule.Rules.Azure/en/rules/Azure.Template.ParameterMinMaxValue/</loc>
-         <lastmod>2022-07-06</lastmod>
+         <lastmod>2022-07-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://azure.github.io/PSRule.Rules.Azure/en/rules/Azure.Template.ParameterScheme/</loc>
-         <lastmod>2022-07-06</lastmod>
+         <lastmod>2022-07-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://azure.github.io/PSRule.Rules.Azure/en/rules/Azure.Template.ParameterStrongType/</loc>
-         <lastmod>2022-07-06</lastmod>
+         <lastmod>2022-07-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://azure.github.io/PSRule.Rules.Azure/en/rules/Azure.Template.ParameterValue/</loc>
-         <lastmod>2022-07-06</lastmod>
+         <lastmod>2022-07-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://azure.github.io/PSRule.Rules.Azure/en/rules/Azure.Template.ResourceLocation/</loc>
-         <lastmod>2022-07-06</lastmod>
+         <lastmod>2022-07-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://azure.github.io/PSRule.Rules.Azure/en/rules/Azure.Template.Resources/</loc>
-         <lastmod>2022-07-06</lastmod>
+         <lastmod>2022-07-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://azure.github.io/PSRule.Rules.Azure/en/rules/Azure.Template.TemplateFile/</loc>
-         <lastmod>2022-07-06</lastmod>
+         <lastmod>2022-07-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://azure.github.io/PSRule.Rules.Azure/en/rules/Azure.Template.TemplateSchema/</loc>
-         <lastmod>2022-07-06</lastmod>
+         <lastmod>2022-07-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://azure.github.io/PSRule.Rules.Azure/en/rules/Azure.Template.TemplateScheme/</loc>
-         <lastmod>2022-07-06</lastmod>
+         <lastmod>2022-07-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://azure.github.io/PSRule.Rules.Azure/en/rules/Azure.Template.UseComments/</loc>
-         <lastmod>2022-07-06</lastmod>
+         <lastmod>2022-07-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://azure.github.io/PSRule.Rules.Azure/en/rules/Azure.Template.UseDescriptions/</loc>
-         <lastmod>2022-07-06</lastmod>
+         <lastmod>2022-07-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://azure.github.io/PSRule.Rules.Azure/en/rules/Azure.Template.UseLocationParameter/</loc>
-         <lastmod>2022-07-06</lastmod>
+         <lastmod>2022-07-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://azure.github.io/PSRule.Rules.Azure/en/rules/Azure.Template.UseParameters/</loc>
-         <lastmod>2022-07-06</lastmod>
+         <lastmod>2022-07-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://azure.github.io/PSRule.Rules.Azure/en/rules/Azure.Template.UseVariables/</loc>
-         <lastmod>2022-07-06</lastmod>
+         <lastmod>2022-07-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://azure.github.io/PSRule.Rules.Azure/en/rules/Azure.Template.ValidSecretRef/</loc>
-         <lastmod>2022-07-06</lastmod>
+         <lastmod>2022-07-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://azure.github.io/PSRule.Rules.Azure/en/rules/Azure.TrafficManager.Endpoints/</loc>
-         <lastmod>2022-07-06</lastmod>
+         <lastmod>2022-07-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://azure.github.io/PSRule.Rules.Azure/en/rules/Azure.TrafficManager.Protocol/</loc>
-         <lastmod>2022-07-06</lastmod>
+         <lastmod>2022-07-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://azure.github.io/PSRule.Rules.Azure/en/rules/Azure.VM.ADE/</loc>
-         <lastmod>2022-07-06</lastmod>
+         <lastmod>2022-07-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://azure.github.io/PSRule.Rules.Azure/en/rules/Azure.VM.ASAlignment/</loc>
-         <lastmod>2022-07-06</lastmod>
+         <lastmod>2022-07-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://azure.github.io/PSRule.Rules.Azure/en/rules/Azure.VM.ASMinMembers/</loc>
-         <lastmod>2022-07-06</lastmod>
+         <lastmod>2022-07-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://azure.github.io/PSRule.Rules.Azure/en/rules/Azure.VM.ASName/</loc>
-         <lastmod>2022-07-06</lastmod>
+         <lastmod>2022-07-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://azure.github.io/PSRule.Rules.Azure/en/rules/Azure.VM.AcceleratedNetworking/</loc>
-         <lastmod>2022-07-06</lastmod>
+         <lastmod>2022-07-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://azure.github.io/PSRule.Rules.Azure/en/rules/Azure.VM.Agent/</loc>
-         <lastmod>2022-07-06</lastmod>
+         <lastmod>2022-07-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://azure.github.io/PSRule.Rules.Azure/en/rules/Azure.VM.BasicSku/</loc>
-         <lastmod>2022-07-06</lastmod>
+         <lastmod>2022-07-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://azure.github.io/PSRule.Rules.Azure/en/rules/Azure.VM.ComputerName/</loc>
-         <lastmod>2022-07-06</lastmod>
+         <lastmod>2022-07-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://azure.github.io/PSRule.Rules.Azure/en/rules/Azure.VM.DiskAttached/</loc>
-         <lastmod>2022-07-06</lastmod>
+         <lastmod>2022-07-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://azure.github.io/PSRule.Rules.Azure/en/rules/Azure.VM.DiskCaching/</loc>
-         <lastmod>2022-07-06</lastmod>
+         <lastmod>2022-07-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://azure.github.io/PSRule.Rules.Azure/en/rules/Azure.VM.DiskName/</loc>
-         <lastmod>2022-07-06</lastmod>
+         <lastmod>2022-07-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://azure.github.io/PSRule.Rules.Azure/en/rules/Azure.VM.DiskSizeAlignment/</loc>
-         <lastmod>2022-07-06</lastmod>
+         <lastmod>2022-07-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://azure.github.io/PSRule.Rules.Azure/en/rules/Azure.VM.NICAttached/</loc>
-         <lastmod>2022-07-06</lastmod>
+         <lastmod>2022-07-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://azure.github.io/PSRule.Rules.Azure/en/rules/Azure.VM.NICName/</loc>
-         <lastmod>2022-07-06</lastmod>
+         <lastmod>2022-07-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://azure.github.io/PSRule.Rules.Azure/en/rules/Azure.VM.Name/</loc>
-         <lastmod>2022-07-06</lastmod>
+         <lastmod>2022-07-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://azure.github.io/PSRule.Rules.Azure/en/rules/Azure.VM.PPGName/</loc>
-         <lastmod>2022-07-06</lastmod>
+         <lastmod>2022-07-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://azure.github.io/PSRule.Rules.Azure/en/rules/Azure.VM.PromoSku/</loc>
-         <lastmod>2022-07-06</lastmod>
+         <lastmod>2022-07-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://azure.github.io/PSRule.Rules.Azure/en/rules/Azure.VM.PublicKey/</loc>
-         <lastmod>2022-07-06</lastmod>
+         <lastmod>2022-07-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://azure.github.io/PSRule.Rules.Azure/en/rules/Azure.VM.Standalone/</loc>
-         <lastmod>2022-07-06</lastmod>
+         <lastmod>2022-07-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://azure.github.io/PSRule.Rules.Azure/en/rules/Azure.VM.UniqueDns/</loc>
-         <lastmod>2022-07-06</lastmod>
+         <lastmod>2022-07-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://azure.github.io/PSRule.Rules.Azure/en/rules/Azure.VM.Updates/</loc>
-         <lastmod>2022-07-06</lastmod>
+         <lastmod>2022-07-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://azure.github.io/PSRule.Rules.Azure/en/rules/Azure.VM.UseHybridUseBenefit/</loc>
-         <lastmod>2022-07-06</lastmod>
+         <lastmod>2022-07-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://azure.github.io/PSRule.Rules.Azure/en/rules/Azure.VM.UseManagedDisks/</loc>
-         <lastmod>2022-07-06</lastmod>
+         <lastmod>2022-07-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://azure.github.io/PSRule.Rules.Azure/en/rules/Azure.VMSS.ComputerName/</loc>
-         <lastmod>2022-07-06</lastmod>
+         <lastmod>2022-07-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://azure.github.io/PSRule.Rules.Azure/en/rules/Azure.VMSS.Name/</loc>
-         <lastmod>2022-07-06</lastmod>
+         <lastmod>2022-07-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://azure.github.io/PSRule.Rules.Azure/en/rules/Azure.VNET.LocalDNS/</loc>
-         <lastmod>2022-07-06</lastmod>
+         <lastmod>2022-07-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://azure.github.io/PSRule.Rules.Azure/en/rules/Azure.VNET.Name/</loc>
-         <lastmod>2022-07-06</lastmod>
+         <lastmod>2022-07-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://azure.github.io/PSRule.Rules.Azure/en/rules/Azure.VNET.PeerState/</loc>
-         <lastmod>2022-07-06</lastmod>
+         <lastmod>2022-07-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://azure.github.io/PSRule.Rules.Azure/en/rules/Azure.VNET.SingleDNS/</loc>
-         <lastmod>2022-07-06</lastmod>
+         <lastmod>2022-07-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://azure.github.io/PSRule.Rules.Azure/en/rules/Azure.VNET.SubnetName/</loc>
-         <lastmod>2022-07-06</lastmod>
+         <lastmod>2022-07-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://azure.github.io/PSRule.Rules.Azure/en/rules/Azure.VNET.UseNSGs/</loc>
-         <lastmod>2022-07-06</lastmod>
+         <lastmod>2022-07-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://azure.github.io/PSRule.Rules.Azure/en/rules/Azure.VNG.ConnectionName/</loc>
-         <lastmod>2022-07-06</lastmod>
+         <lastmod>2022-07-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://azure.github.io/PSRule.Rules.Azure/en/rules/Azure.VNG.ERAvailabilityZoneSKU/</loc>
-         <lastmod>2022-07-06</lastmod>
+         <lastmod>2022-07-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://azure.github.io/PSRule.Rules.Azure/en/rules/Azure.VNG.ERLegacySKU/</loc>
-         <lastmod>2022-07-06</lastmod>
+         <lastmod>2022-07-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://azure.github.io/PSRule.Rules.Azure/en/rules/Azure.VNG.Name/</loc>
-         <lastmod>2022-07-06</lastmod>
+         <lastmod>2022-07-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://azure.github.io/PSRule.Rules.Azure/en/rules/Azure.VNG.VPNActiveActive/</loc>
-         <lastmod>2022-07-06</lastmod>
+         <lastmod>2022-07-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://azure.github.io/PSRule.Rules.Azure/en/rules/Azure.VNG.VPNAvailabilityZoneSKU/</loc>
-         <lastmod>2022-07-06</lastmod>
+         <lastmod>2022-07-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://azure.github.io/PSRule.Rules.Azure/en/rules/Azure.VNG.VPNLegacySKU/</loc>
-         <lastmod>2022-07-06</lastmod>
+         <lastmod>2022-07-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://azure.github.io/PSRule.Rules.Azure/en/rules/Azure.WebPubSub.ManagedIdentity/</loc>
-         <lastmod>2022-07-06</lastmod>
+         <lastmod>2022-07-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://azure.github.io/PSRule.Rules.Azure/en/rules/Azure.WebPubSub.SLA/</loc>
-         <lastmod>2022-07-06</lastmod>
+         <lastmod>2022-07-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://azure.github.io/PSRule.Rules.Azure/en/rules/Azure.vWAN.Name/</loc>
-         <lastmod>2022-07-06</lastmod>
+         <lastmod>2022-07-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://azure.github.io/PSRule.Rules.Azure/en/rules/module/</loc>
-         <lastmod>2022-07-06</lastmod>
+         <lastmod>2022-07-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://azure.github.io/PSRule.Rules.Azure/en/rules/resource/</loc>
-         <lastmod>2022-07-06</lastmod>
+         <lastmod>2022-07-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://azure.github.io/PSRule.Rules.Azure/en/selectors/Azure.AppService.IsAPIApp/</loc>
-         <lastmod>2022-07-06</lastmod>
+         <lastmod>2022-07-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://azure.github.io/PSRule.Rules.Azure/en/selectors/Azure.AppService.IsFunctionApp/</loc>
-         <lastmod>2022-07-06</lastmod>
+         <lastmod>2022-07-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://azure.github.io/PSRule.Rules.Azure/en/selectors/Azure.AppService.IsLogicApp/</loc>
-         <lastmod>2022-07-06</lastmod>
+         <lastmod>2022-07-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://azure.github.io/PSRule.Rules.Azure/en/selectors/Azure.AppService.IsWebApp/</loc>
-         <lastmod>2022-07-06</lastmod>
+         <lastmod>2022-07-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://azure.github.io/PSRule.Rules.Azure/en/selectors/Azure.Resource.SupportsTags/</loc>
-         <lastmod>2022-07-06</lastmod>
+         <lastmod>2022-07-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://azure.github.io/PSRule.Rules.Azure/scenarios/azure-pipelines-ci/azure-pipelines-ci/</loc>
-         <lastmod>2022-07-06</lastmod>
+         <lastmod>2022-07-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://azure.github.io/PSRule.Rules.Azure/scenarios/azure-template-ci/azure-template-ci/</loc>
-         <lastmod>2022-07-06</lastmod>
+         <lastmod>2022-07-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://azure.github.io/PSRule.Rules.Azure/setup/configuring-expansion/</loc>
-         <lastmod>2022-07-06</lastmod>
+         <lastmod>2022-07-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://azure.github.io/PSRule.Rules.Azure/setup/configuring-options/</loc>
-         <lastmod>2022-07-06</lastmod>
+         <lastmod>2022-07-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://azure.github.io/PSRule.Rules.Azure/setup/configuring-rules/</loc>
-         <lastmod>2022-07-06</lastmod>
+         <lastmod>2022-07-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://azure.github.io/PSRule.Rules.Azure/setup/setup-azure-monitor-logs/</loc>
-         <lastmod>2022-07-06</lastmod>
+         <lastmod>2022-07-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://azure.github.io/PSRule.Rules.Azure/setup/setup-bicep/</loc>
-         <lastmod>2022-07-06</lastmod>
+         <lastmod>2022-07-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
 </urlset>

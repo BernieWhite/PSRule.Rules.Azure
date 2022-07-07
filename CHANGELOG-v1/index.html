@@ -924,6 +924,13 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#v1170" class="md-nav__link">
+    v1.17.0
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#v1170-b0064pre-release" class="md-nav__link">
     v1.17.0-B0064 (pre-release)
   </a>
@@ -6986,6 +6993,13 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#v1170" class="md-nav__link">
+    v1.17.0
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#v1170-b0064pre-release" class="md-nav__link">
     v1.17.0-B0064 (pre-release)
   </a>
@@ -7855,6 +7869,53 @@
   See <a href="../upgrade-notes/">upgrade notes</a> for more information.</li>
 </ul>
 <h2 id="unreleased">Unreleased<a class="headerlink" href="#unreleased" title="Permanent link">#</a></h2>
+<h2 id="v1170">v1.17.0<a class="headerlink" href="#v1170" title="Permanent link">#</a></h2>
+<p>What's changed since v1.16.1:</p>
+<ul>
+<li>New features:<ul>
+<li>Added more field count expression support for Azure Policy JSON rules by @ArmaanMcleod.
+  <a href="https://github.com/Azure/PSRule.Rules.Azure/issues/181">#181</a></li>
+<li>Added June 2022 baselines <code>Azure.GA_2022_06</code> and <code>Azure.Preview_2022_06</code> by @BernieWhite.
+  <a href="https://github.com/Azure/PSRule.Rules.Azure/issues/1499">#1499</a><ul>
+<li>Includes rules released before or during June 2022.</li>
+<li>Marked <code>Azure.GA_2022_03</code> and <code>Azure.Preview_2022_03</code> baselines as obsolete.</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>New rules:<ul>
+<li>Deployment:<ul>
+<li>Check for secure values in outputs by @BernieWhite.
+  <a href="https://github.com/Azure/PSRule.Rules.Azure/issues/297">#297</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li>Engineering:<ul>
+<li>Bump Newtonsoft.Json to v13.0.1.
+  <a href="https://github.com/Azure/PSRule.Rules.Azure/pull/1494">#1494</a></li>
+<li>Updated NuGet packaging metadata by @BernieWhite.
+  <a href="https://github.com/Azure/PSRule.Rules.Azure/pull/1428">#1428</a></li>
+<li>Updated provider data for analysis.
+  <a href="https://github.com/Azure/PSRule.Rules.Azure/pull/1502">#1502</a></li>
+<li>Bump PSRule to v2.2.0.
+  <a href="https://github.com/Azure/PSRule.Rules.Azure/pull/1444">#1444</a></li>
+<li>Updated NuGet packaging metadata by @BernieWhite.
+  <a href="https://github.com/Azure/PSRule.Rules.Azure/issues/1428">#1428</a></li>
+</ul>
+</li>
+<li>Bug fixes:<ul>
+<li>Fixed TDE property status to state by @Dylan-Prins.
+  <a href="https://github.com/Azure/PSRule.Rules.Azure/pull/1505">#1505</a></li>
+<li>Fixed the language expression value fails in outputs by @BernieWhite.
+  <a href="https://github.com/Azure/PSRule.Rules.Azure/issues/1485">#1485</a></li>
+</ul>
+</li>
+</ul>
+<p>What's changed since pre-release v1.17.0-B0064:</p>
+<ul>
+<li>No additional changes.</li>
+</ul>
 <h2 id="v1170-b0064pre-release">v1.17.0-B0064 (pre-release)<a class="headerlink" href="#v1170-b0064pre-release" title="Permanent link">#</a></h2>
 <p>What's changed since pre-release v1.17.0-B0035:</p>
 <ul>
@@ -7894,17 +7955,17 @@
 <h2 id="v1170-b0014pre-release">v1.17.0-B0014 (pre-release)<a class="headerlink" href="#v1170-b0014pre-release" title="Permanent link">#</a></h2>
 <p>What's changed since v1.16.1:</p>
 <ul>
+<li>New features:<ul>
+<li>Added more field count expression support for Azure Policy JSON rules by @ArmaanMcleod.
+  <a href="https://github.com/Azure/PSRule.Rules.Azure/issues/181">#181</a></li>
+</ul>
+</li>
 <li>New rules:<ul>
 <li>Deployment:<ul>
 <li>Check for secure values in outputs by @BernieWhite.
   <a href="https://github.com/Azure/PSRule.Rules.Azure/issues/297">#297</a></li>
 </ul>
 </li>
-</ul>
-</li>
-<li>New features:<ul>
-<li>Added more field count expression support for Azure Policy JSON rules by @ArmaanMcleod.
-  <a href="https://github.com/Azure/PSRule.Rules.Azure/issues/181">#181</a></li>
 </ul>
 </li>
 <li>Engineering:<ul>

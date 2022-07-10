@@ -18,10 +18,13 @@ param sku string
 
 param subnetId string
 
-// An example VM
-resource vm 'Microsoft.Compute/virtualMachines@2021-07-01' = {
+// An example basic VM
+resource vm1 'Microsoft.Compute/virtualMachines@2022-03-01' = {
   name: name
   location: location
+  zones: [
+    '1'
+  ]
   properties: {
     hardwareProfile: {
       vmSize: 'Standard_D2s_v3'
@@ -42,6 +45,9 @@ resource vm 'Microsoft.Compute/virtualMachines@2021-07-01' = {
         name: '${name}-disk0'
         caching: 'ReadWrite'
         createOption: 'FromImage'
+        managedDisk: {
+          storageAccountType: 'Premium_LRS'
+        }
       }
     }
     licenseType: 'Windows_Server'

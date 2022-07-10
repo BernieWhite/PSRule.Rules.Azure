@@ -4,8 +4,8 @@
   "metadata": {
     "_generator": {
       "name": "bicep",
-      "version": "0.4.1124.51302",
-      "templateHash": "5360360475403387360"
+      "version": "0.8.9.13224",
+      "templateHash": "16285889769326646237"
     }
   },
   "parameters": {
@@ -38,9 +38,12 @@
   "resources": [
     {
       "type": "Microsoft.Compute/virtualMachines",
-      "apiVersion": "2021-07-01",
+      "apiVersion": "2022-03-01",
       "name": "[parameters('name')]",
       "location": "[parameters('location')]",
+      "zones": [
+        "1"
+      ],
       "properties": {
         "hardwareProfile": {
           "vmSize": "Standard_D2s_v3"
@@ -60,7 +63,10 @@
           "osDisk": {
             "name": "[format('{0}-disk0', parameters('name'))]",
             "caching": "ReadWrite",
-            "createOption": "FromImage"
+            "createOption": "FromImage",
+            "managedDisk": {
+              "storageAccountType": "Premium_LRS"
+            }
           }
         },
         "licenseType": "Windows_Server",

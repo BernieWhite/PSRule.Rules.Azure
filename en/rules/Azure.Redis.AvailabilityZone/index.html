@@ -6308,14 +6308,12 @@ By spreading node pools across multiple zones, nodes in one node pool will conti
 <li>Set <code>Properties.replicasPerMaster</code> to number of zones - 1, to ensure you have at least as many nodes as zones you are replicating to.</li>
 <li>Set <code>Properties.sku.name</code> to <code>Premium</code>.</li>
 <li>Set <code>Properties.sku.family</code> to <code>P</code>. </li>
-<li>Set <code>Properties.sku.capacity</code> to one of <code>[1, 2, 3, 4, 5]</code>, depending on the SKU you picked:<ul>
+<li>Set <code>Properties.sku.capacity</code> to one of <code>[1, 2, 3, 4, 5]</code>, depending on the SKU you picked:</li>
 <li><code>P1</code> - 6 GB</li>
 <li><code>P2</code> - 13 GB</li>
 <li><code>P3</code> - 26 GB</li>
 <li><code>P4</code> - 53 GB</li>
 <li><code>P5</code> - 120 GB</li>
-</ul>
-</li>
 </ul>
 <p>For example:</p>
 <div class="highlight"><pre><span></span><code><span class="p">{</span><span class="w"></span>
@@ -6350,14 +6348,12 @@ By spreading node pools across multiple zones, nodes in one node pool will conti
 <li>Set <code>Properties.replicasPerMaster</code> to number of zones - 1, to ensure you have at least as many nodes as zones you are replicating to.</li>
 <li>Set <code>Properties.sku.name</code> to <code>Premium</code>.</li>
 <li>Set <code>Properties.sku.family</code> to <code>P</code>. </li>
-<li>Set <code>Properties.sku.capacity</code> to one of <code>[1, 2, 3, 4, 5]</code>, depending on the SKU you picked:<ul>
+<li>Set <code>Properties.sku.capacity</code> to one of <code>[1, 2, 3, 4, 5]</code>, depending on the SKU you picked:</li>
 <li><code>P1</code> - 6 GB</li>
 <li><code>P2</code> - 13 GB</li>
 <li><code>P3</code> - 26 GB</li>
 <li><code>P4</code> - 53 GB</li>
 <li><code>P5</code> - 120 GB</li>
-</ul>
-</li>
 </ul>
 <p>For example:</p>
 <div class="highlight"><pre><span></span><code>resource testrediscache &#39;Microsoft.Cache/redis@2021-06-01&#39; = {

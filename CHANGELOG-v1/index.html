@@ -7897,68 +7897,62 @@
   See <a href="../upgrade-notes/">upgrade notes</a> for more information.</li>
 </ul>
 <h2 id="unreleased">Unreleased<a class="headerlink" href="#unreleased" title="Permanent link">#</a></h2>
+<p>What's changed since pre-release v1.18.0-B0002:</p>
+<ul>
+<li>Engineering:</li>
+<li>Bump Az.Resources to v6.0.1.
+    <a href="https://github.com/Azure/PSRule.Rules.Azure/pull/1521">#1521</a></li>
+</ul>
 <h2 id="v1180-b0002pre-release">v1.18.0-B0002 (pre-release)<a class="headerlink" href="#v1180-b0002pre-release" title="Permanent link">#</a></h2>
 <p>What's changed since v1.17.1:</p>
 <ul>
-<li>Engineering:<ul>
+<li>Engineering:</li>
 <li>Added readme and tags to NuGet by @BernieWhite.
-  <a href="https://github.com/Azure/PSRule.Rules.Azure/issues/1513">#1513</a></li>
-</ul>
-</li>
+    <a href="https://github.com/Azure/PSRule.Rules.Azure/issues/1513">#1513</a></li>
 </ul>
 <h2 id="v1171">v1.17.1<a class="headerlink" href="#v1171" title="Permanent link">#</a></h2>
 <p>What's changed since v1.17.0:</p>
 <ul>
-<li>Bug fixes:<ul>
+<li>Bug fixes:</li>
 <li>Fixed union returns null when merged with built-in expansion objects by @BernieWhite.
-  <a href="https://github.com/Azure/PSRule.Rules.Azure/issues/1515">#1515</a></li>
+    <a href="https://github.com/Azure/PSRule.Rules.Azure/issues/1515">#1515</a></li>
 <li>Fixed missing zones in test for standalone VM by @BernieWhite.
-  <a href="https://github.com/Azure/PSRule.Rules.Azure/issues/1506">#1506</a></li>
-</ul>
-</li>
+    <a href="https://github.com/Azure/PSRule.Rules.Azure/issues/1506">#1506</a></li>
 </ul>
 <h2 id="v1170">v1.17.0<a class="headerlink" href="#v1170" title="Permanent link">#</a></h2>
 <p>What's changed since v1.16.1:</p>
 <ul>
-<li>New features:<ul>
+<li>New features:</li>
 <li>Added more field count expression support for Azure Policy JSON rules by @ArmaanMcleod.
-  <a href="https://github.com/Azure/PSRule.Rules.Azure/issues/181">#181</a></li>
+    <a href="https://github.com/Azure/PSRule.Rules.Azure/issues/181">#181</a></li>
 <li>Added June 2022 baselines <code>Azure.GA_2022_06</code> and <code>Azure.Preview_2022_06</code> by @BernieWhite.
-  <a href="https://github.com/Azure/PSRule.Rules.Azure/issues/1499">#1499</a><ul>
+    <a href="https://github.com/Azure/PSRule.Rules.Azure/issues/1499">#1499</a><ul>
 <li>Includes rules released before or during June 2022.</li>
 <li>Marked <code>Azure.GA_2022_03</code> and <code>Azure.Preview_2022_03</code> baselines as obsolete.</li>
 </ul>
 </li>
-</ul>
-</li>
-<li>New rules:<ul>
+<li>New rules:</li>
 <li>Deployment:<ul>
 <li>Check for secure values in outputs by @BernieWhite.
   <a href="https://github.com/Azure/PSRule.Rules.Azure/issues/297">#297</a></li>
 </ul>
 </li>
-</ul>
-</li>
-<li>Engineering:<ul>
+<li>Engineering:</li>
 <li>Bump Newtonsoft.Json to v13.0.1.
-  <a href="https://github.com/Azure/PSRule.Rules.Azure/pull/1494">#1494</a></li>
+    <a href="https://github.com/Azure/PSRule.Rules.Azure/pull/1494">#1494</a></li>
 <li>Updated NuGet packaging metadata by @BernieWhite.
-  <a href="https://github.com/Azure/PSRule.Rules.Azure/pull/1428">#1428</a></li>
+    <a href="https://github.com/Azure/PSRule.Rules.Azure/pull/1428">#1428</a></li>
 <li>Updated provider data for analysis.
-  <a href="https://github.com/Azure/PSRule.Rules.Azure/pull/1502">#1502</a></li>
+    <a href="https://github.com/Azure/PSRule.Rules.Azure/pull/1502">#1502</a></li>
 <li>Bump PSRule to v2.2.0.
-  <a href="https://github.com/Azure/PSRule.Rules.Azure/pull/1444">#1444</a></li>
+    <a href="https://github.com/Azure/PSRule.Rules.Azure/pull/1444">#1444</a></li>
 <li>Updated NuGet packaging metadata by @BernieWhite.
-  <a href="https://github.com/Azure/PSRule.Rules.Azure/issues/1428">#1428</a></li>
-</ul>
-</li>
-<li>Bug fixes:<ul>
+    <a href="https://github.com/Azure/PSRule.Rules.Azure/issues/1428">#1428</a></li>
+<li>Bug fixes:</li>
 <li>Fixed TDE property status to state by @Dylan-Prins.
-  <a href="https://github.com/Azure/PSRule.Rules.Azure/pull/1505">#1505</a></li>
+    <a href="https://github.com/Azure/PSRule.Rules.Azure/pull/1505">#1505</a></li>
 <li>Fixed the language expression value fails in outputs by @BernieWhite.
-  <a href="https://github.com/Azure/PSRule.Rules.Azure/issues/1485">#1485</a></li>
-</ul>
-</li>
+    <a href="https://github.com/Azure/PSRule.Rules.Azure/issues/1485">#1485</a></li>
 </ul>
 <p>What's changed since pre-release v1.17.0-B0064:</p>
 <ul>
@@ -7967,81 +7961,63 @@
 <h2 id="v1170-b0064pre-release">v1.17.0-B0064 (pre-release)<a class="headerlink" href="#v1170-b0064pre-release" title="Permanent link">#</a></h2>
 <p>What's changed since pre-release v1.17.0-B0035:</p>
 <ul>
-<li>Engineering:<ul>
+<li>Engineering:</li>
 <li>Updated provider data for analysis.
-  <a href="https://github.com/Azure/PSRule.Rules.Azure/pull/1502">#1502</a></li>
+    <a href="https://github.com/Azure/PSRule.Rules.Azure/pull/1502">#1502</a></li>
 <li>Bump PSRule to v2.2.0.
-  <a href="https://github.com/Azure/PSRule.Rules.Azure/pull/1444">#1444</a></li>
-</ul>
-</li>
-<li>Bug fixes:<ul>
+    <a href="https://github.com/Azure/PSRule.Rules.Azure/pull/1444">#1444</a></li>
+<li>Bug fixes:</li>
 <li>Fixed TDE property status to state by @Dylan-Prins.
-  <a href="https://github.com/Azure/PSRule.Rules.Azure/pull/1505">#1505</a></li>
-</ul>
-</li>
+    <a href="https://github.com/Azure/PSRule.Rules.Azure/pull/1505">#1505</a></li>
 </ul>
 <h2 id="v1170-b0035pre-release">v1.17.0-B0035 (pre-release)<a class="headerlink" href="#v1170-b0035pre-release" title="Permanent link">#</a></h2>
 <p>What's changed since pre-release v1.17.0-B0014:</p>
 <ul>
-<li>New features:<ul>
+<li>New features:</li>
 <li>Added June 2022 baselines <code>Azure.GA_2022_06</code> and <code>Azure.Preview_2022_06</code> by @BernieWhite.
-  <a href="https://github.com/Azure/PSRule.Rules.Azure/issues/1499">#1499</a><ul>
+    <a href="https://github.com/Azure/PSRule.Rules.Azure/issues/1499">#1499</a><ul>
 <li>Includes rules released before or during June 2022.</li>
 <li>Marked <code>Azure.GA_2022_03</code> and <code>Azure.Preview_2022_03</code> baselines as obsolete.</li>
 </ul>
 </li>
-</ul>
-</li>
-<li>Engineering:<ul>
+<li>Engineering:</li>
 <li>Bump Newtonsoft.Json to v13.0.1.
-  <a href="https://github.com/Azure/PSRule.Rules.Azure/pull/1494">#1494</a></li>
+    <a href="https://github.com/Azure/PSRule.Rules.Azure/pull/1494">#1494</a></li>
 <li>Updated NuGet packaging metadata by @BernieWhite.
-  <a href="https://github.com/Azure/PSRule.Rules.Azure/pull/1428">#1428</a></li>
-</ul>
-</li>
+    <a href="https://github.com/Azure/PSRule.Rules.Azure/pull/1428">#1428</a></li>
 </ul>
 <h2 id="v1170-b0014pre-release">v1.17.0-B0014 (pre-release)<a class="headerlink" href="#v1170-b0014pre-release" title="Permanent link">#</a></h2>
 <p>What's changed since v1.16.1:</p>
 <ul>
-<li>New features:<ul>
+<li>New features:</li>
 <li>Added more field count expression support for Azure Policy JSON rules by @ArmaanMcleod.
-  <a href="https://github.com/Azure/PSRule.Rules.Azure/issues/181">#181</a></li>
-</ul>
-</li>
-<li>New rules:<ul>
+    <a href="https://github.com/Azure/PSRule.Rules.Azure/issues/181">#181</a></li>
+<li>New rules:</li>
 <li>Deployment:<ul>
 <li>Check for secure values in outputs by @BernieWhite.
   <a href="https://github.com/Azure/PSRule.Rules.Azure/issues/297">#297</a></li>
 </ul>
 </li>
-</ul>
-</li>
-<li>Engineering:<ul>
+<li>Engineering:</li>
 <li>Updated NuGet packaging metadata by @BernieWhite.
-  <a href="https://github.com/Azure/PSRule.Rules.Azure/issues/1428">#1428</a></li>
-</ul>
-</li>
-<li>Bug fixes:<ul>
+    <a href="https://github.com/Azure/PSRule.Rules.Azure/issues/1428">#1428</a></li>
+<li>Bug fixes:</li>
 <li>Fixed the language expression value fails in outputs by @BernieWhite.
-  <a href="https://github.com/Azure/PSRule.Rules.Azure/issues/1485">#1485</a></li>
-</ul>
-</li>
+    <a href="https://github.com/Azure/PSRule.Rules.Azure/issues/1485">#1485</a></li>
 </ul>
 <h2 id="v1161">v1.16.1<a class="headerlink" href="#v1161" title="Permanent link">#</a></h2>
 <p>What's changed since v1.16.0:</p>
 <ul>
-<li>Bug fixes:<ul>
+<li>Bug fixes:</li>
 <li>Fixed TLS 1.3 support in <code>Azure.AppGw.SSLPolicy</code> by @BernieWhite.
-  <a href="https://github.com/Azure/PSRule.Rules.Azure/issues/1469">#1469</a></li>
+    <a href="https://github.com/Azure/PSRule.Rules.Azure/issues/1469">#1469</a></li>
 <li>Fixed Application Gateway referencing a WAF policy by @BernieWhite.
-  <a href="https://github.com/Azure/PSRule.Rules.Azure/issues/1466">#1466</a></li>
-</ul>
-</li>
+    <a href="https://github.com/Azure/PSRule.Rules.Azure/issues/1466">#1466</a></li>
 </ul>
 <h2 id="v1160">v1.16.0<a class="headerlink" href="#v1160" title="Permanent link">#</a></h2>
 <p>What's changed since v1.15.2:</p>
 <ul>
-<li>New rules:<ul>
+<li>New rules:</li>
 <li>App Service:<ul>
 <li>Check web apps have insecure FTP disabled by @BernieWhite.
   <a href="https://github.com/Azure/PSRule.Rules.Azure/issues/1436">#1436</a></li>
@@ -8049,48 +8025,36 @@
   <a href="https://github.com/Azure/PSRule.Rules.Azure/issues/1437">#1437</a></li>
 </ul>
 </li>
-</ul>
-</li>
-<li>Updated rules:<ul>
+<li>Updated rules:</li>
 <li>Public IP:<ul>
 <li>Updated <code>Azure.PublicIP.AvailabilityZone</code> to exclude IP addresses for Azure Bastion by @BernieWhite.
-  <a href="https://github.com/Azure/PSRule.Rules.Azure/issues/1442">#1442</a><ul>
+  <a href="https://github.com/Azure/PSRule.Rules.Azure/issues/1442">#1442</a></li>
 <li>Public IP addresses with the <code>resource-usage</code> tag set to <code>azure-bastion</code> are excluded.</li>
 </ul>
 </li>
-</ul>
-</li>
-</ul>
-</li>
-<li>General improvements:<ul>
+<li>General improvements:</li>
 <li>Added support for <code>dateTimeFromEpoch</code> and <code>dateTimeToEpoch</code> ARM functions by @BernieWhite.
-  <a href="https://github.com/Azure/PSRule.Rules.Azure/issues/1451">#1451</a></li>
-</ul>
-</li>
-<li>Engineering:<ul>
+    <a href="https://github.com/Azure/PSRule.Rules.Azure/issues/1451">#1451</a></li>
+<li>Engineering:</li>
 <li>Updated built documentation to include rule ref and metadata by @BernieWhite.
-  <a href="https://github.com/Azure/PSRule.Rules.Azure/issues/1432">#1432</a></li>
+    <a href="https://github.com/Azure/PSRule.Rules.Azure/issues/1432">#1432</a></li>
 <li>Added ref properties for several rules by @BernieWhite.
-  <a href="https://github.com/Azure/PSRule.Rules.Azure/issues/1430">#1430</a></li>
+    <a href="https://github.com/Azure/PSRule.Rules.Azure/issues/1430">#1430</a></li>
 <li>Updated provider data for analysis.
-  <a href="https://github.com/Azure/PSRule.Rules.Azure/pull/1453">#1453</a></li>
+    <a href="https://github.com/Azure/PSRule.Rules.Azure/pull/1453">#1453</a></li>
 <li>Bump Microsoft.NET.Test.Sdk to v17.2.0.
-  <a href="https://github.com/Azure/PSRule.Rules.Azure/pull/1410">#1410</a></li>
+    <a href="https://github.com/Azure/PSRule.Rules.Azure/pull/1410">#1410</a></li>
 <li>Update CI checks to include required ref property by @BernieWhite.
-  <a href="https://github.com/Azure/PSRule.Rules.Azure/issues/1431">#1431</a></li>
+    <a href="https://github.com/Azure/PSRule.Rules.Azure/issues/1431">#1431</a></li>
 <li>Added ref properties for rules by @BernieWhite.
-  <a href="https://github.com/Azure/PSRule.Rules.Azure/issues/1430">#1430</a></li>
-</ul>
-</li>
-<li>Bug fixes:<ul>
+    <a href="https://github.com/Azure/PSRule.Rules.Azure/issues/1430">#1430</a></li>
+<li>Bug fixes:</li>
 <li>Fixed <code>Azure.Template.UseVariables</code> does not accept function variables names by @BernieWhite.
-  <a href="https://github.com/Azure/PSRule.Rules.Azure/issues/1427">#1427</a></li>
+    <a href="https://github.com/Azure/PSRule.Rules.Azure/issues/1427">#1427</a></li>
 <li>Fixed dependency issue within Azure Pipelines <code>AzurePowerShell</code> task by @BernieWhite.
-  <a href="https://github.com/Azure/PSRule.Rules.Azure/issues/1447">#1447</a><ul>
+    <a href="https://github.com/Azure/PSRule.Rules.Azure/issues/1447">#1447</a><ul>
 <li>Removed dependency on <code>Az.Accounts</code> and <code>Az.Resources</code> from manifest.
   Pre-install these modules to use export cmdlets.</li>
-</ul>
-</li>
 </ul>
 </li>
 </ul>
@@ -8101,56 +8065,44 @@
 <h2 id="v1160-b0072pre-release">v1.16.0-B0072 (pre-release)<a class="headerlink" href="#v1160-b0072pre-release" title="Permanent link">#</a></h2>
 <p>What's changed since pre-release v1.16.0-B0041:</p>
 <ul>
-<li>Engineering:<ul>
+<li>Engineering:</li>
 <li>Update CI checks to include required ref property by @BernieWhite.
-  <a href="https://github.com/Azure/PSRule.Rules.Azure/issues/1431">#1431</a></li>
+    <a href="https://github.com/Azure/PSRule.Rules.Azure/issues/1431">#1431</a></li>
 <li>Added ref properties for rules by @BernieWhite.
-  <a href="https://github.com/Azure/PSRule.Rules.Azure/issues/1430">#1430</a></li>
-</ul>
-</li>
-<li>Bug fixes:<ul>
+    <a href="https://github.com/Azure/PSRule.Rules.Azure/issues/1430">#1430</a></li>
+<li>Bug fixes:</li>
 <li>Fixed dependency issue within Azure Pipelines <code>AzurePowerShell</code> task by @BernieWhite.
-  <a href="https://github.com/Azure/PSRule.Rules.Azure/issues/1447">#1447</a><ul>
+    <a href="https://github.com/Azure/PSRule.Rules.Azure/issues/1447">#1447</a><ul>
 <li>Removed dependency on <code>Az.Accounts</code> and <code>Az.Resources</code> from manifest.
   Pre-install these modules to use export cmdlets.</li>
-</ul>
-</li>
 </ul>
 </li>
 </ul>
 <h2 id="v1160-b0041pre-release">v1.16.0-B0041 (pre-release)<a class="headerlink" href="#v1160-b0041pre-release" title="Permanent link">#</a></h2>
 <p>What's changed since pre-release v1.16.0-B0017:</p>
 <ul>
-<li>Updated rules:<ul>
+<li>Updated rules:</li>
 <li>Public IP:<ul>
 <li>Updated <code>Azure.PublicIP.AvailabilityZone</code> to exclude IP addresses for Azure Bastion by @BernieWhite.
-  <a href="https://github.com/Azure/PSRule.Rules.Azure/issues/1442">#1442</a><ul>
+  <a href="https://github.com/Azure/PSRule.Rules.Azure/issues/1442">#1442</a></li>
 <li>Public IP addresses with the <code>resource-usage</code> tag set to <code>azure-bastion</code> are excluded.</li>
 </ul>
 </li>
-</ul>
-</li>
-</ul>
-</li>
-<li>General improvements:<ul>
+<li>General improvements:</li>
 <li>Added support for <code>dateTimeFromEpoch</code> and <code>dateTimeToEpoch</code> ARM functions by @BernieWhite.
-  <a href="https://github.com/Azure/PSRule.Rules.Azure/issues/1451">#1451</a></li>
-</ul>
-</li>
-<li>Engineering:<ul>
+    <a href="https://github.com/Azure/PSRule.Rules.Azure/issues/1451">#1451</a></li>
+<li>Engineering:</li>
 <li>Updated built documentation to include rule ref and metadata by @BernieWhite.
-  <a href="https://github.com/Azure/PSRule.Rules.Azure/issues/1432">#1432</a></li>
+    <a href="https://github.com/Azure/PSRule.Rules.Azure/issues/1432">#1432</a></li>
 <li>Added ref properties for several rules by @BernieWhite.
-  <a href="https://github.com/Azure/PSRule.Rules.Azure/issues/1430">#1430</a></li>
+    <a href="https://github.com/Azure/PSRule.Rules.Azure/issues/1430">#1430</a></li>
 <li>Updated provider data for analysis.
-  <a href="https://github.com/Azure/PSRule.Rules.Azure/pull/1453">#1453</a></li>
-</ul>
-</li>
+    <a href="https://github.com/Azure/PSRule.Rules.Azure/pull/1453">#1453</a></li>
 </ul>
 <h2 id="v1160-b0017pre-release">v1.16.0-B0017 (pre-release)<a class="headerlink" href="#v1160-b0017pre-release" title="Permanent link">#</a></h2>
 <p>What's changed since v1.15.2:</p>
 <ul>
-<li>New rules:<ul>
+<li>New rules:</li>
 <li>App Service:<ul>
 <li>Check web apps have insecure FTP disabled by @BernieWhite.
   <a href="https://github.com/Azure/PSRule.Rules.Azure/issues/1436">#1436</a></li>
@@ -8158,61 +8110,49 @@
   <a href="https://github.com/Azure/PSRule.Rules.Azure/issues/1437">#1437</a></li>
 </ul>
 </li>
-</ul>
-</li>
-<li>Engineering:<ul>
+<li>Engineering:</li>
 <li>Bump Microsoft.NET.Test.Sdk to v17.2.0.
-  <a href="https://github.com/Azure/PSRule.Rules.Azure/pull/1410">#1410</a></li>
-</ul>
-</li>
-<li>Bug fixes:<ul>
+    <a href="https://github.com/Azure/PSRule.Rules.Azure/pull/1410">#1410</a></li>
+<li>Bug fixes:</li>
 <li>Fixed <code>Azure.Template.UseVariables</code> does not accept function variables names by @BernieWhite.
-  <a href="https://github.com/Azure/PSRule.Rules.Azure/issues/1427">#1427</a></li>
-</ul>
-</li>
+    <a href="https://github.com/Azure/PSRule.Rules.Azure/issues/1427">#1427</a></li>
 </ul>
 <h2 id="v1152">v1.15.2<a class="headerlink" href="#v1152" title="Permanent link">#</a></h2>
 <p>What's changed since v1.15.1:</p>
 <ul>
-<li>Bug fixes:<ul>
+<li>Bug fixes:</li>
 <li>Fixed <code>Azure.AppService.ManagedIdentity</code> does not accept both system and user assigned by @BernieWhite.
-  <a href="https://github.com/Azure/PSRule.Rules.Azure/issues/1415">#1415</a><ul>
-<li>This also applies to:<ul>
+    <a href="https://github.com/Azure/PSRule.Rules.Azure/issues/1415">#1415</a><ul>
+<li>This also applies to:</li>
 <li><code>Azure.ADX.ManagedIdentity</code></li>
 <li><code>Azure.APIM.ManagedIdentity</code></li>
 <li><code>Azure.EventGrid.ManagedIdentity</code></li>
 <li><code>Azure.Automation.ManagedIdentity</code></li>
 </ul>
 </li>
-</ul>
-</li>
 <li>Fixed Web apps with .NET 6 do not meet version constraint of <code>Azure.AppService.NETVersion</code> by @BernieWhite.
-  <a href="https://github.com/Azure/PSRule.Rules.Azure/issues/1414">#1414</a><ul>
+    <a href="https://github.com/Azure/PSRule.Rules.Azure/issues/1414">#1414</a><ul>
 <li>This also applies to <code>Azure.AppService.PHPVersion</code>.</li>
-</ul>
-</li>
 </ul>
 </li>
 </ul>
 <h2 id="v1151">v1.15.1<a class="headerlink" href="#v1151" title="Permanent link">#</a></h2>
 <p>What's changed since v1.15.0:</p>
 <ul>
-<li>Bug fixes:<ul>
+<li>Bug fixes:</li>
 <li>Fixed exclusion of <code>dataCollectionRuleAssociations</code> from <code>Azure.Resource.UseTags</code> by @BernieWhite.
-  <a href="https://github.com/Azure/PSRule.Rules.Azure/issues/1400">#1400</a></li>
+    <a href="https://github.com/Azure/PSRule.Rules.Azure/issues/1400">#1400</a></li>
 <li>Fixed could not determine JSON object type for MockObject using CreateObject by @BernieWhite.
-  <a href="https://github.com/Azure/PSRule.Rules.Azure/issues/1411">#1411</a></li>
+    <a href="https://github.com/Azure/PSRule.Rules.Azure/issues/1411">#1411</a></li>
 <li>Fixed cannot bind argument to parameter 'Sku' because it is an empty string by @BernieWhite.
-  <a href="https://github.com/Azure/PSRule.Rules.Azure/issues/1407">#1407</a></li>
-</ul>
-</li>
+    <a href="https://github.com/Azure/PSRule.Rules.Azure/issues/1407">#1407</a></li>
 </ul>
 <h2 id="v1150">v1.15.0<a class="headerlink" href="#v1150" title="Permanent link">#</a></h2>
 <p>What's changed since v1.14.3:</p>
 <ul>
-<li>New features:<ul>
+<li>New features:</li>
 <li><strong>Important change</strong>: Added <code>Azure.Resource.SupportsTags</code> selector by @BernieWhite.
-  <a href="https://github.com/Azure/PSRule.Rules.Azure/issues/1339">#1339</a><ul>
+    <a href="https://github.com/Azure/PSRule.Rules.Azure/issues/1339">#1339</a><ul>
 <li>Use this selector in custom rules to filter rules to only run against resources that support tags.</li>
 <li>This selector replaces the <code>SupportsTags</code> PowerShell function.</li>
 <li>Using the <code>SupportsTag</code> function will now result in a warning.</li>
@@ -8220,57 +8160,45 @@
 <li>See <a href="../upgrade-notes/">upgrade notes</a> for more information.</li>
 </ul>
 </li>
-</ul>
-</li>
-<li>Updated rules:<ul>
+<li>Updated rules:</li>
 <li>Azure Kubernetes Service:<ul>
 <li>Updated <code>Azure.AKS.Version</code> to use latest stable version <code>1.22.6</code> by @BernieWhite.
-  <a href="https://github.com/Azure/PSRule.Rules.Azure/issues/1386">#1386</a><ul>
+  <a href="https://github.com/Azure/PSRule.Rules.Azure/issues/1386">#1386</a></li>
 <li>Use <code>AZURE_AKS_CLUSTER_MINIMUM_VERSION</code> to configure the minimum version of the cluster.</li>
 </ul>
 </li>
-</ul>
-</li>
-</ul>
-</li>
-<li>Engineering:<ul>
+<li>Engineering:</li>
 <li>Added code signing of module by @BernieWhite.
-  <a href="https://github.com/Azure/PSRule.Rules.Azure/issues/1379">#1379</a></li>
+    <a href="https://github.com/Azure/PSRule.Rules.Azure/issues/1379">#1379</a></li>
 <li>Added SBOM manifests to module by @BernieWhite.
-  <a href="https://github.com/Azure/PSRule.Rules.Azure/issues/1380">#1380</a></li>
+    <a href="https://github.com/Azure/PSRule.Rules.Azure/issues/1380">#1380</a></li>
 <li>Embedded provider and alias information as manifest resources by @BernieWhite.
-  <a href="https://github.com/Azure/PSRule.Rules.Azure/issues/1383">#1383</a><ul>
+    <a href="https://github.com/Azure/PSRule.Rules.Azure/issues/1383">#1383</a><ul>
 <li>Resources are minified and compressed to improve size and speed.</li>
 </ul>
 </li>
 <li>Added additional <code>nodeps</code> manifest that does not include dependencies for Az modules by @BernieWhite.
-  <a href="https://github.com/Azure/PSRule.Rules.Azure/issues/1392">#1392</a></li>
+    <a href="https://github.com/Azure/PSRule.Rules.Azure/issues/1392">#1392</a></li>
 <li>Bump Az.Accounts to 2.7.6. <a href="https://github.com/Azure/PSRule.Rules.Azure/pull/1338">#1338</a></li>
 <li>Bump Az.Resources to 5.6.0. <a href="https://github.com/Azure/PSRule.Rules.Azure/pull/1338">#1338</a></li>
 <li>Bump PSRule to 2.1.0. <a href="https://github.com/Azure/PSRule.Rules.Azure/pull/1338">#1338</a></li>
 <li>Bump Pester to 5.3.3. <a href="https://github.com/Azure/PSRule.Rules.Azure/pull/1338">#1338</a></li>
-</ul>
-</li>
-<li>Bug fixes:<ul>
+<li>Bug fixes:</li>
 <li>Fixed dependency chain order when dependsOn copy by @BernieWhite.
-  <a href="https://github.com/Azure/PSRule.Rules.Azure/issues/1381">#1381</a></li>
+    <a href="https://github.com/Azure/PSRule.Rules.Azure/issues/1381">#1381</a></li>
 <li>Fixed error calling SupportsTags function by @BernieWhite.
-  <a href="https://github.com/Azure/PSRule.Rules.Azure/issues/1401">#1401</a></li>
-</ul>
-</li>
+    <a href="https://github.com/Azure/PSRule.Rules.Azure/issues/1401">#1401</a></li>
 </ul>
 <p>What's changed since pre-release v1.15.0-B0053:</p>
 <ul>
-<li>Bug fixes:<ul>
+<li>Bug fixes:</li>
 <li>Fixed error calling SupportsTags function by @BernieWhite.
-  <a href="https://github.com/Azure/PSRule.Rules.Azure/issues/1401">#1401</a></li>
-</ul>
-</li>
+    <a href="https://github.com/Azure/PSRule.Rules.Azure/issues/1401">#1401</a></li>
 </ul>
 <h2 id="v1150-b0053pre-release">v1.15.0-B0053 (pre-release)<a class="headerlink" href="#v1150-b0053pre-release" title="Permanent link">#</a></h2>
 <p>What's changed since pre-release v1.15.0-B0022:</p>
 <ul>
-<li>New features:<ul>
+<li>New features:</li>
 <li><strong>Important change</strong>: Added <code>Azure.Resource.SupportsTags</code> selector. <a href="https://github.com/Azure/PSRule.Rules.Azure/issues/1339">#1339</a><ul>
 <li>Use this selector in custom rules to filter rules to only run against resources that support tags.</li>
 <li>This selector replaces the <code>SupportsTags</code> PowerShell function.</li>
@@ -8279,9 +8207,7 @@
 <li>See <a href="../upgrade-notes/">upgrade notes</a> for more information.</li>
 </ul>
 </li>
-</ul>
-</li>
-<li>Engineering:<ul>
+<li>Engineering:</li>
 <li>Embedded provider and alias information as manifest resources. <a href="https://github.com/Azure/PSRule.Rules.Azure/issues/1383">#1383</a><ul>
 <li>Resources are minified and compressed to improve size and speed.</li>
 </ul>
@@ -8292,60 +8218,44 @@
 <li>Bump PSRule to 2.1.0. <a href="https://github.com/Azure/PSRule.Rules.Azure/pull/1338">#1338</a></li>
 <li>Bump Pester to 5.3.3. <a href="https://github.com/Azure/PSRule.Rules.Azure/pull/1338">#1338</a></li>
 </ul>
-</li>
-</ul>
 <h2 id="v1150-b0022pre-release">v1.15.0-B0022 (pre-release)<a class="headerlink" href="#v1150-b0022pre-release" title="Permanent link">#</a></h2>
 <p>What's changed since v1.14.3:</p>
 <ul>
-<li>Updated rules:<ul>
+<li>Updated rules:</li>
 <li>Azure Kubernetes Service:<ul>
-<li>Updated <code>Azure.AKS.Version</code> to use latest stable version <code>1.22.6</code>. <a href="https://github.com/Azure/PSRule.Rules.Azure/issues/1386">#1386</a><ul>
+<li>Updated <code>Azure.AKS.Version</code> to use latest stable version <code>1.22.6</code>. <a href="https://github.com/Azure/PSRule.Rules.Azure/issues/1386">#1386</a></li>
 <li>Use <code>AZURE_AKS_CLUSTER_MINIMUM_VERSION</code> to configure the minimum version of the cluster.</li>
 </ul>
 </li>
-</ul>
-</li>
-</ul>
-</li>
-<li>Engineering:<ul>
+<li>Engineering:</li>
 <li>Added code signing of module. <a href="https://github.com/Azure/PSRule.Rules.Azure/issues/1379">#1379</a></li>
 <li>Added SBOM manifests to module. <a href="https://github.com/Azure/PSRule.Rules.Azure/issues/1380">#1380</a></li>
-</ul>
-</li>
-<li>Bug fixes:<ul>
+<li>Bug fixes:</li>
 <li>Fixed dependency chain order when dependsOn copy. <a href="https://github.com/Azure/PSRule.Rules.Azure/issues/1381">#1381</a></li>
-</ul>
-</li>
 </ul>
 <h2 id="v1143">v1.14.3<a class="headerlink" href="#v1143" title="Permanent link">#</a></h2>
 <p>What's changed since v1.14.2:</p>
 <ul>
-<li>Bug fixes:<ul>
+<li>Bug fixes:</li>
 <li>Fixed Azure Firewall threat intel mode reported for Secure VNET hubs. <a href="https://github.com/Azure/PSRule.Rules.Azure/issues/1365">#1365</a></li>
 <li>Fixed array function handling with mock objects. <a href="https://github.com/Azure/PSRule.Rules.Azure/issues/1367">#1367</a></li>
-</ul>
-</li>
 </ul>
 <h2 id="v1142">v1.14.2<a class="headerlink" href="#v1142" title="Permanent link">#</a></h2>
 <p>What's changed since v1.14.1:</p>
 <ul>
-<li>Bug fixes:<ul>
+<li>Bug fixes:</li>
 <li>Fixed handling of parent resources when sub resource is in a separate deployment. <a href="https://github.com/Azure/PSRule.Rules.Azure/issues/1360">#1360</a></li>
-</ul>
-</li>
 </ul>
 <h2 id="v1141">v1.14.1<a class="headerlink" href="#v1141" title="Permanent link">#</a></h2>
 <p>What's changed since v1.14.0:</p>
 <ul>
-<li>Bug fixes:<ul>
+<li>Bug fixes:</li>
 <li>Fixed unable to set parameter defaults option with type object. <a href="https://github.com/Azure/PSRule.Rules.Azure/issues/1355">#1355</a></li>
-</ul>
-</li>
 </ul>
 <h2 id="v1140">v1.14.0<a class="headerlink" href="#v1140" title="Permanent link">#</a></h2>
 <p>What's changed since v1.13.4:</p>
 <ul>
-<li>New features:<ul>
+<li>New features:</li>
 <li>Added support for referencing resources in template. <a href="https://github.com/Azure/PSRule.Rules.Azure/issues/1315">#1315</a><ul>
 <li>The <code>reference()</code> function can be used to reference resources in template.</li>
 <li>A placeholder value is still used for resources outside of the template.</li>
@@ -8364,9 +8274,7 @@
 <li>Additional information will be posted as this feature evolves <a href="https://github.com/Azure/PSRule.Rules.Azure/discussions/1345">here</a>.</li>
 </ul>
 </li>
-</ul>
-</li>
-<li>New rules:<ul>
+<li>New rules:</li>
 <li>SignalR Service:<ul>
 <li>Check services use Managed Identities. <a href="https://github.com/Azure/PSRule.Rules.Azure/issues/1306">#1306</a></li>
 <li>Check services use a SKU with an SLA. <a href="https://github.com/Azure/PSRule.Rules.Azure/issues/1307">#1307</a></li>
@@ -8377,31 +8285,21 @@
 <li>Check services use a SKU with an SLA. <a href="https://github.com/Azure/PSRule.Rules.Azure/issues/1309">#1309</a></li>
 </ul>
 </li>
-</ul>
-</li>
-<li>Updated rules:<ul>
+<li>Updated rules:</li>
 <li>Azure Kubernetes Service:<ul>
-<li>Updated <code>Azure.AKS.Version</code> to use latest stable version <code>1.21.9</code>. <a href="https://github.com/Azure/PSRule.Rules.Azure/issues/1318">#1318</a><ul>
+<li>Updated <code>Azure.AKS.Version</code> to use latest stable version <code>1.21.9</code>. <a href="https://github.com/Azure/PSRule.Rules.Azure/issues/1318">#1318</a></li>
 <li>Use <code>AZURE_AKS_CLUSTER_MINIMUM_VERSION</code> to configure the minimum version of the cluster.</li>
 </ul>
 </li>
-</ul>
-</li>
-</ul>
-</li>
-<li>Engineering:<ul>
+<li>Engineering:</li>
 <li>Cache Azure Policy Aliases. <a href="https://github.com/Azure/PSRule.Rules.Azure/issues/1277">#1277</a></li>
 <li>Cleanup of additional alias metadata. <a href="https://github.com/Azure/PSRule.Rules.Azure/pull/1351">#1351</a></li>
-</ul>
-</li>
-<li>Bug fixes:<ul>
+<li>Bug fixes:</li>
 <li>Fixed index was out of range with split on mock properties. <a href="https://github.com/Azure/PSRule.Rules.Azure/issues/1327">#1327</a></li>
 <li>Fixed mock objects with no properties. <a href="https://github.com/Azure/PSRule.Rules.Azure/issues/1347">#1347</a></li>
 <li>Fixed sub-resources nesting by scope regression. <a href="https://github.com/Azure/PSRule.Rules.Azure/issues/1348">#1348</a></li>
 <li>Fixed expand of runtime properties on reference objects. <a href="https://github.com/Azure/PSRule.Rules.Azure/issues/1324">#1324</a></li>
 <li>Fixed processing of deployment outputs. <a href="https://github.com/Azure/PSRule.Rules.Azure/issues/1316">#1316</a></li>
-</ul>
-</li>
 </ul>
 <p>What's changed since pre-release v1.14.0-B2204013:</p>
 <ul>
@@ -8410,24 +8308,20 @@
 <h2 id="v1140-b2204013pre-release">v1.14.0-B2204013 (pre-release)<a class="headerlink" href="#v1140-b2204013pre-release" title="Permanent link">#</a></h2>
 <p>What's changed since pre-release v1.14.0-B2204007:</p>
 <ul>
-<li>Engineering:<ul>
+<li>Engineering:</li>
 <li>Cleanup of additional alias metadata. <a href="https://github.com/Azure/PSRule.Rules.Azure/pull/1351">#1351</a></li>
-</ul>
-</li>
 </ul>
 <h2 id="v1140-b2204007pre-release">v1.14.0-B2204007 (pre-release)<a class="headerlink" href="#v1140-b2204007pre-release" title="Permanent link">#</a></h2>
 <p>What's changed since pre-release v1.14.0-B2203117:</p>
 <ul>
-<li>Bug fixes:<ul>
+<li>Bug fixes:</li>
 <li>Fixed mock objects with no properties. <a href="https://github.com/Azure/PSRule.Rules.Azure/issues/1347">#1347</a></li>
 <li>Fixed sub-resources nesting by scope regression. <a href="https://github.com/Azure/PSRule.Rules.Azure/issues/1348">#1348</a></li>
-</ul>
-</li>
 </ul>
 <h2 id="v1140-b2203117pre-release">v1.14.0-B2203117 (pre-release)<a class="headerlink" href="#v1140-b2203117pre-release" title="Permanent link">#</a></h2>
 <p>What's changed since pre-release v1.14.0-B2203088:</p>
 <ul>
-<li>New features:<ul>
+<li>New features:</li>
 <li><strong>Experimental</strong>: Cmdlets to validate objects with Azure policy conditions:<ul>
 <li><code>Export-AzPolicyAssignmentData</code> - Exports policy assignment data. <a href="https://github.com/Azure/PSRule.Rules.Azure/issues/1266">#1266</a></li>
 <li><code>Export-AzPolicyAssignmentRuleData</code> - Exports JSON rules from policy assignment data. <a href="https://github.com/Azure/PSRule.Rules.Azure/issues/1278">#1278</a></li>
@@ -8436,45 +8330,33 @@
 <li>Additional information will be posted as this feature evolves <a href="https://github.com/Azure/PSRule.Rules.Azure/discussions/1345">here</a>.</li>
 </ul>
 </li>
-</ul>
-</li>
-<li>Engineering:<ul>
+<li>Engineering:</li>
 <li>Cache Azure Policy Aliases. <a href="https://github.com/Azure/PSRule.Rules.Azure/issues/1277">#1277</a></li>
-</ul>
-</li>
-<li>Bug fixes:<ul>
+<li>Bug fixes:</li>
 <li>Fixed index was out of range with split on mock properties. <a href="https://github.com/Azure/PSRule.Rules.Azure/issues/1327">#1327</a></li>
-</ul>
-</li>
 </ul>
 <h2 id="v1140-b2203088pre-release">v1.14.0-B2203088 (pre-release)<a class="headerlink" href="#v1140-b2203088pre-release" title="Permanent link">#</a></h2>
 <p>What's changed since pre-release v1.14.0-B2203066:</p>
 <ul>
-<li>New features:<ul>
+<li>New features:</li>
 <li>Added March 2022 baselines <code>Azure.GA_2022_03</code> and <code>Azure.Preview_2022_03</code>. <a href="https://github.com/Azure/PSRule.Rules.Azure/issues/1334">#1334</a><ul>
 <li>Includes rules released before or during March 2022.</li>
 <li>Marked <code>Azure.GA_2021_12</code> and <code>Azure.Preview_2021_12</code> baselines as obsolete.</li>
 </ul>
 </li>
-</ul>
-</li>
-<li>Bug fixes:<ul>
+<li>Bug fixes:</li>
 <li>Fixed expand of runtime properties on reference objects. <a href="https://github.com/Azure/PSRule.Rules.Azure/issues/1324">#1324</a></li>
-</ul>
-</li>
 </ul>
 <h2 id="v1140-b2203066pre-release">v1.14.0-B2203066 (pre-release)<a class="headerlink" href="#v1140-b2203066pre-release" title="Permanent link">#</a></h2>
 <p>What's changed since v1.13.4:</p>
 <ul>
-<li>New features:<ul>
+<li>New features:</li>
 <li>Added support for referencing resources in template. <a href="https://github.com/Azure/PSRule.Rules.Azure/issues/1315">#1315</a><ul>
 <li>The <code>reference()</code> function can be used to reference resources in template.</li>
 <li>A placeholder value is still used for resources outside of the template.</li>
 </ul>
 </li>
-</ul>
-</li>
-<li>New rules:<ul>
+<li>New rules:</li>
 <li>SignalR Service:<ul>
 <li>Check services use Managed Identities. <a href="https://github.com/Azure/PSRule.Rules.Azure/issues/1306">#1306</a></li>
 <li>Check services use a SKU with an SLA. <a href="https://github.com/Azure/PSRule.Rules.Azure/issues/1307">#1307</a></li>
@@ -8485,75 +8367,55 @@
 <li>Check services use a SKU with an SLA. <a href="https://github.com/Azure/PSRule.Rules.Azure/issues/1309">#1309</a></li>
 </ul>
 </li>
-</ul>
-</li>
-<li>Updated rules:<ul>
+<li>Updated rules:</li>
 <li>Azure Kubernetes Service:<ul>
-<li>Updated <code>Azure.AKS.Version</code> to use latest stable version <code>1.21.9</code>. <a href="https://github.com/Azure/PSRule.Rules.Azure/issues/1318">#1318</a><ul>
+<li>Updated <code>Azure.AKS.Version</code> to use latest stable version <code>1.21.9</code>. <a href="https://github.com/Azure/PSRule.Rules.Azure/issues/1318">#1318</a></li>
 <li>Use <code>AZURE_AKS_CLUSTER_MINIMUM_VERSION</code> to configure the minimum version of the cluster.</li>
 </ul>
 </li>
-</ul>
-</li>
-</ul>
-</li>
-<li>Bug fixes:<ul>
+<li>Bug fixes:</li>
 <li>Fixed processing of deployment outputs. <a href="https://github.com/Azure/PSRule.Rules.Azure/issues/1316">#1316</a></li>
-</ul>
-</li>
 </ul>
 <h2 id="v1134">v1.13.4<a class="headerlink" href="#v1134" title="Permanent link">#</a></h2>
 <p>What's changed since v1.13.3:</p>
 <ul>
-<li>Bug fixes:<ul>
+<li>Bug fixes:</li>
 <li>Fixed virtual network without any subnets is invalid. <a href="https://github.com/Azure/PSRule.Rules.Azure/issues/1303">#1303</a></li>
 <li>Fixed container registry rules that require a premium tier. <a href="https://github.com/Azure/PSRule.Rules.Azure/issues/1304">#1304</a><ul>
 <li>Rules <code>Azure.ACR.Retention</code> and <code>Azure.ACR.ContentTrust</code> are now only run against premium instances.</li>
 </ul>
 </li>
 </ul>
-</li>
-</ul>
 <h2 id="v1133">v1.13.3<a class="headerlink" href="#v1133" title="Permanent link">#</a></h2>
 <p>What's changed since v1.13.2:</p>
 <ul>
-<li>Bug fixes:<ul>
+<li>Bug fixes:</li>
 <li>Fixed bicep build timeout for complex deployments. <a href="https://github.com/Azure/PSRule.Rules.Azure/issues/1299">#1299</a></li>
-</ul>
-</li>
 </ul>
 <h2 id="v1132">v1.13.2<a class="headerlink" href="#v1132" title="Permanent link">#</a></h2>
 <p>What's changed since v1.13.1:</p>
 <ul>
-<li>Engineering:<ul>
+<li>Engineering:</li>
 <li>Bump PowerShellStandard.Library to 5.1.1. <a href="https://github.com/Azure/PSRule.Rules.Azure/pull/1295">#1295</a></li>
-</ul>
-</li>
-<li>Bug fixes:<ul>
+<li>Bug fixes:</li>
 <li>Fixed nested resource loops. <a href="https://github.com/Azure/PSRule.Rules.Azure/issues/1293">#1293</a></li>
-</ul>
-</li>
 </ul>
 <h2 id="v1131">v1.13.1<a class="headerlink" href="#v1131" title="Permanent link">#</a></h2>
 <p>What's changed since v1.13.0:</p>
 <ul>
-<li>Bug fixes:<ul>
+<li>Bug fixes:</li>
 <li>Fixed parsing of nested quote pairs within JSON function. <a href="https://github.com/Azure/PSRule.Rules.Azure/issues/1288">#1288</a></li>
-</ul>
-</li>
 </ul>
 <h2 id="v1130">v1.13.0<a class="headerlink" href="#v1130" title="Permanent link">#</a></h2>
 <p>What's changed since v1.12.2:</p>
 <ul>
-<li>New features:<ul>
+<li>New features:</li>
 <li>Added support for setting defaults for required parameters. <a href="https://github.com/Azure/PSRule.Rules.Azure/issues/1065">#1065</a><ul>
 <li>When specified, the value will be used when a parameter value is not provided.</li>
 </ul>
 </li>
 <li>Added support expanding Bicep from parameter files. <a href="https://github.com/Azure/PSRule.Rules.Azure/issues/1160">#1160</a></li>
-</ul>
-</li>
-<li>New rules:<ul>
+<li>New rules:</li>
 <li>Azure Cache for Redis:<ul>
 <li>Limit public access for Azure Cache for Redis instances. <a href="https://github.com/Azure/PSRule.Rules.Azure/issues/935">#935</a></li>
 </ul>
@@ -8570,21 +8432,15 @@
 <li>Check vaults have replication alerts configured. <a href="https://github.com/Azure/PSRule.Rules.Azure/issues/7">#7</a></li>
 </ul>
 </li>
-</ul>
-</li>
-<li>Engineering:<ul>
+<li>Engineering:</li>
 <li>Automatically build baseline docs. <a href="https://github.com/Azure/PSRule.Rules.Azure/issues/1242">#1242</a></li>
 <li>Bump PSRule dependency to v1.11.1. <a href="https://github.com/Azure/PSRule.Rules.Azure/pull/1269">#1269</a></li>
-</ul>
-</li>
-<li>Bug fixes:<ul>
+<li>Bug fixes:</li>
 <li>Fixed empty value with strong type. <a href="https://github.com/Azure/PSRule.Rules.Azure/issues/1258">#1258</a></li>
 <li>Fixed error with empty logic app trigger. <a href="https://github.com/Azure/PSRule.Rules.Azure/issues/1249">#1249</a></li>
 <li>Fixed out of order parameters. <a href="https://github.com/Azure/PSRule.Rules.Azure/issues/1257">#1257</a></li>
 <li>Fixed mapping default configuration causes cast exception. <a href="https://github.com/Azure/PSRule.Rules.Azure/issues/1274">#1274</a></li>
 <li>Fixed resource id is incorrectly built for sub resource types. <a href="https://github.com/Azure/PSRule.Rules.Azure/issues/1279">#1279</a></li>
-</ul>
-</li>
 </ul>
 <p>What's changed since pre-release v1.13.0-B2202113:</p>
 <ul>
@@ -8593,62 +8449,46 @@
 <h2 id="v1130-b2202113pre-release">v1.13.0-B2202113 (pre-release)<a class="headerlink" href="#v1130-b2202113pre-release" title="Permanent link">#</a></h2>
 <p>What's changed since pre-release v1.13.0-B2202108:</p>
 <ul>
-<li>Bug fixes:<ul>
+<li>Bug fixes:</li>
 <li>Fixed resource id is incorrectly built for sub resource types. <a href="https://github.com/Azure/PSRule.Rules.Azure/issues/1279">#1279</a></li>
-</ul>
-</li>
 </ul>
 <h2 id="v1130-b2202108pre-release">v1.13.0-B2202108 (pre-release)<a class="headerlink" href="#v1130-b2202108pre-release" title="Permanent link">#</a></h2>
 <p>What's changed since pre-release v1.13.0-B2202103:</p>
 <ul>
-<li>Bug fixes:<ul>
+<li>Bug fixes:</li>
 <li>Fixed mapping default configuration causes cast exception. <a href="https://github.com/Azure/PSRule.Rules.Azure/issues/1274">#1274</a></li>
-</ul>
-</li>
 </ul>
 <h2 id="v1130-b2202103pre-release">v1.13.0-B2202103 (pre-release)<a class="headerlink" href="#v1130-b2202103pre-release" title="Permanent link">#</a></h2>
 <p>What's changed since pre-release v1.13.0-B2202090:</p>
 <ul>
-<li>Engineering:<ul>
+<li>Engineering:</li>
 <li>Bump PSRule dependency to v1.11.1. <a href="https://github.com/Azure/PSRule.Rules.Azure/pull/1269">#1269</a></li>
-</ul>
-</li>
-<li>Bug fixes:<ul>
+<li>Bug fixes:</li>
 <li>Fixed out of order parameters. <a href="https://github.com/Azure/PSRule.Rules.Azure/issues/1257">#1257</a></li>
-</ul>
-</li>
 </ul>
 <h2 id="v1130-b2202090pre-release">v1.13.0-B2202090 (pre-release)<a class="headerlink" href="#v1130-b2202090pre-release" title="Permanent link">#</a></h2>
 <p>What's changed since pre-release v1.13.0-B2202063:</p>
 <ul>
-<li>New rules:<ul>
+<li>New rules:</li>
 <li>Azure Cache for Redis:<ul>
 <li>Limit public access for Azure Cache for Redis instances. <a href="https://github.com/Azure/PSRule.Rules.Azure/issues/935">#935</a></li>
 </ul>
 </li>
-</ul>
-</li>
-<li>Engineering:<ul>
+<li>Engineering:</li>
 <li>Automatically build baseline docs. <a href="https://github.com/Azure/PSRule.Rules.Azure/issues/1242">#1242</a></li>
-</ul>
-</li>
-<li>Bug fixes:<ul>
+<li>Bug fixes:</li>
 <li>Fixed empty value with strong type. <a href="https://github.com/Azure/PSRule.Rules.Azure/issues/1258">#1258</a></li>
-</ul>
-</li>
 </ul>
 <h2 id="v1130-b2202063pre-release">v1.13.0-B2202063 (pre-release)<a class="headerlink" href="#v1130-b2202063pre-release" title="Permanent link">#</a></h2>
 <p>What's changed since v1.12.2:</p>
 <ul>
-<li>New features:<ul>
+<li>New features:</li>
 <li>Added support for setting defaults for required parameters. <a href="https://github.com/Azure/PSRule.Rules.Azure/issues/1065">#1065</a><ul>
 <li>When specified, the value will be used when a parameter value is not provided.</li>
 </ul>
 </li>
 <li>Added support expanding Bicep from parameter files. <a href="https://github.com/Azure/PSRule.Rules.Azure/issues/1160">#1160</a></li>
-</ul>
-</li>
-<li>New rules:<ul>
+<li>New rules:</li>
 <li>Container App:<ul>
 <li>Check insecure ingress is not enabled (preview). <a href="https://github.com/Azure/PSRule.Rules.Azure/issues/1252">#1252</a></li>
 </ul>
@@ -8661,33 +8501,25 @@
 <li>Check vaults have replication alerts configured. <a href="https://github.com/Azure/PSRule.Rules.Azure/issues/7">#7</a></li>
 </ul>
 </li>
-</ul>
-</li>
-<li>Bug fixes:<ul>
+<li>Bug fixes:</li>
 <li>Fixed error with empty logic app trigger. <a href="https://github.com/Azure/PSRule.Rules.Azure/issues/1249">#1249</a></li>
-</ul>
-</li>
 </ul>
 <h2 id="v1122">v1.12.2<a class="headerlink" href="#v1122" title="Permanent link">#</a></h2>
 <p>What's changed since v1.12.1:</p>
 <ul>
-<li>Bug fixes:<ul>
+<li>Bug fixes:</li>
 <li>Fixed detect strong type requirements for nested deployments. <a href="https://github.com/Azure/PSRule.Rules.Azure/issues/1235">#1235</a></li>
-</ul>
-</li>
 </ul>
 <h2 id="v1121">v1.12.1<a class="headerlink" href="#v1121" title="Permanent link">#</a></h2>
 <p>What's changed since v1.12.0:</p>
 <ul>
-<li>Bug fixes:<ul>
+<li>Bug fixes:</li>
 <li>Fixed Bicep already exists with PSRule v2. <a href="https://github.com/Azure/PSRule.Rules.Azure/issues/1232">#1232</a></li>
-</ul>
-</li>
 </ul>
 <h2 id="v1120">v1.12.0<a class="headerlink" href="#v1120" title="Permanent link">#</a></h2>
 <p>What's changed since v1.11.1:</p>
 <ul>
-<li>New rules:<ul>
+<li>New rules:</li>
 <li>Data Explorer:<ul>
 <li>Check clusters use Managed Identities. <a href="https://github.com/Azure/PSRule.Rules.Azure/issues/1207">#1207</a></li>
 <li>Check clusters use a SKU with a SLA. <a href="https://github.com/Azure/PSRule.Rules.Azure/issues/1208">#1208</a></li>
@@ -8709,30 +8541,22 @@
 <li>Check namespaces only accept identity-based authentication. <a href="https://github.com/Azure/PSRule.Rules.Azure/issues/1219">#1219</a></li>
 </ul>
 </li>
-</ul>
-</li>
-<li>Updated rules:<ul>
+<li>Updated rules:</li>
 <li>Azure Kubernetes Service:<ul>
-<li>Updated <code>Azure.AKS.Version</code> to use latest stable version <code>1.21.7</code>. <a href="https://github.com/Azure/PSRule.Rules.Azure/issues/1188">#1188</a><ul>
+<li>Updated <code>Azure.AKS.Version</code> to use latest stable version <code>1.21.7</code>. <a href="https://github.com/Azure/PSRule.Rules.Azure/issues/1188">#1188</a></li>
 <li>Pinned latest GA baseline <code>Azure.GA_2021_12</code> to previous version <code>1.20.5</code>.</li>
 <li>Use <code>AZURE_AKS_CLUSTER_MINIMUM_VERSION</code> to configure the minimum version of the cluster.</li>
-</ul>
-</li>
 </ul>
 </li>
 <li>Azure API Management:<ul>
 <li>Check service disabled insecure ciphers.
 <a href="https://github.com/Azure/PSRule.Rules.Azure/issues/1128">#1128</a></li>
-<li>Refactored the cipher and protocol rule into individual rules.<ul>
+<li>Refactored the cipher and protocol rule into individual rules.</li>
 <li><code>Azure.APIM.Protocols</code></li>
 <li><code>Azure.APIM.Ciphers</code></li>
 </ul>
 </li>
-</ul>
-</li>
-</ul>
-</li>
-<li>General improvements:<ul>
+<li>General improvements:</li>
 <li><strong>Important change:</strong> Replaced <code>Azure_AKSMinimumVersion</code> option with <code>AZURE_AKS_CLUSTER_MINIMUM_VERSION</code>. <a href="https://github.com/Azure/PSRule.Rules.Azure/issues/941">#941</a><ul>
 <li>For compatibility, if <code>Azure_AKSMinimumVersion</code> is set it will be used instead of <code>AZURE_AKS_CLUSTER_MINIMUM_VERSION</code>.</li>
 <li>If only <code>AZURE_AKS_CLUSTER_MINIMUM_VERSION</code> is set, this value will be used.</li>
@@ -8742,12 +8566,8 @@
 <li>See <a href="../upgrade-notes/">upgrade notes</a> for details.</li>
 </ul>
 </li>
-</ul>
-</li>
-<li>Bug fixes:<ul>
+<li>Bug fixes:</li>
 <li>Fixed false positive of blob container with access unspecified. <a href="https://github.com/Azure/PSRule.Rules.Azure/issues/1212">#1212</a></li>
-</ul>
-</li>
 </ul>
 <p>What's changed since pre-release v1.12.0-B2201086:</p>
 <ul>
@@ -8756,7 +8576,7 @@
 <h2 id="v1120-b2201086pre-release">v1.12.0-B2201086 (pre-release)<a class="headerlink" href="#v1120-b2201086pre-release" title="Permanent link">#</a></h2>
 <p>What's changed since pre-release v1.12.0-B2201067:</p>
 <ul>
-<li>New rules:<ul>
+<li>New rules:</li>
 <li>Data Explorer:<ul>
 <li>Check clusters are in use with databases. <a href="https://github.com/Azure/PSRule.Rules.Azure/issues/1215">#1215</a></li>
 </ul>
@@ -8776,50 +8596,38 @@
 </ul>
 </li>
 </ul>
-</li>
-</ul>
 <h2 id="v1120-b2201067pre-release">v1.12.0-B2201067 (pre-release)<a class="headerlink" href="#v1120-b2201067pre-release" title="Permanent link">#</a></h2>
 <p>What's changed since pre-release v1.12.0-B2201054:</p>
 <ul>
-<li>New rules:<ul>
+<li>New rules:</li>
 <li>Data Explorer:<ul>
 <li>Check clusters use Managed Identities. <a href="https://github.com/Azure/PSRule.Rules.Azure/issues/1207">#1207</a></li>
 <li>Check clusters use a SKU with a SLA. <a href="https://github.com/Azure/PSRule.Rules.Azure/issues/1208">#1208</a></li>
 <li>Check clusters use disk encryption. <a href="https://github.com/Azure/PSRule.Rules.Azure/issues/1209">#1209</a></li>
 </ul>
 </li>
-</ul>
-</li>
-<li>Bug fixes:<ul>
+<li>Bug fixes:</li>
 <li>Fixed false positive of blob container with access unspecified. <a href="https://github.com/Azure/PSRule.Rules.Azure/issues/1212">#1212</a></li>
-</ul>
-</li>
 </ul>
 <h2 id="v1120-b2201054pre-release">v1.12.0-B2201054 (pre-release)<a class="headerlink" href="#v1120-b2201054pre-release" title="Permanent link">#</a></h2>
 <p>What's changed since v1.11.1:</p>
 <ul>
-<li>Updated rules:<ul>
+<li>Updated rules:</li>
 <li>Azure Kubernetes Service:<ul>
-<li>Updated <code>Azure.AKS.Version</code> to use latest stable version <code>1.21.7</code>. <a href="https://github.com/Azure/PSRule.Rules.Azure/issues/1188">#1188</a><ul>
+<li>Updated <code>Azure.AKS.Version</code> to use latest stable version <code>1.21.7</code>. <a href="https://github.com/Azure/PSRule.Rules.Azure/issues/1188">#1188</a></li>
 <li>Pinned latest GA baseline <code>Azure.GA_2021_12</code> to previous version <code>1.20.5</code>.</li>
 <li>Use <code>AZURE_AKS_CLUSTER_MINIMUM_VERSION</code> to configure the minimum version of the cluster.</li>
-</ul>
-</li>
 </ul>
 </li>
 <li>Azure API Management:<ul>
 <li>Check service disabled insecure ciphers.
 <a href="https://github.com/Azure/PSRule.Rules.Azure/issues/1128">#1128</a></li>
-<li>Refactored the cipher and protocol rule into individual rules.<ul>
+<li>Refactored the cipher and protocol rule into individual rules.</li>
 <li><code>Azure.APIM.Protocols</code></li>
 <li><code>Azure.APIM.Ciphers</code></li>
 </ul>
 </li>
-</ul>
-</li>
-</ul>
-</li>
-<li>General improvements:<ul>
+<li>General improvements:</li>
 <li><strong>Important change:</strong> Replaced <code>Azure_AKSMinimumVersion</code> option with <code>AZURE_AKS_CLUSTER_MINIMUM_VERSION</code>. <a href="https://github.com/Azure/PSRule.Rules.Azure/issues/941">#941</a><ul>
 <li>For compatibility, if <code>Azure_AKSMinimumVersion</code> is set it will be used instead of <code>AZURE_AKS_CLUSTER_MINIMUM_VERSION</code>.</li>
 <li>If only <code>AZURE_AKS_CLUSTER_MINIMUM_VERSION</code> is set, this value will be used.</li>
@@ -8830,20 +8638,16 @@
 </ul>
 </li>
 </ul>
-</li>
-</ul>
 <h2 id="v1111">v1.11.1<a class="headerlink" href="#v1111" title="Permanent link">#</a></h2>
 <p>What's changed since v1.11.0:</p>
 <ul>
-<li>Bug fixes:<ul>
+<li>Bug fixes:</li>
 <li>Fixed <code>Azure.AKS.CNISubnetSize</code> rule to use CNI selector. <a href="https://github.com/Azure/PSRule.Rules.Azure/issues/1178">#1178</a></li>
-</ul>
-</li>
 </ul>
 <h2 id="v1110">v1.11.0<a class="headerlink" href="#v1110" title="Permanent link">#</a></h2>
 <p>What's changed since v1.10.4:</p>
 <ul>
-<li>New features:<ul>
+<li>New features:</li>
 <li>Added baselines containing only Azure preview features. <a href="https://github.com/Azure/PSRule.Rules.Azure/issues/1129">#1129</a><ul>
 <li>Added baseline <code>Azure.Preview_2021_09</code>.</li>
 <li>Added baseline <code>Azure.Preview_2021_12</code>.</li>
@@ -8855,9 +8659,7 @@
 </ul>
 </li>
 <li>Bicep support promoted from experimental to generally available (GA). <a href="https://github.com/Azure/PSRule.Rules.Azure/issues/1176">#1176</a></li>
-</ul>
-</li>
-<li>New rules:<ul>
+<li>New rules:</li>
 <li>All resources:<ul>
 <li>Check comments for each template resource. <a href="https://github.com/Azure/PSRule.Rules.Azure/issues/969">#969</a></li>
 </ul>
@@ -8874,11 +8676,9 @@
 </ul>
 </li>
 <li>Azure Redis Cache:<ul>
-<li>Use availability zones for Azure Cache for Redis for regions that support it. <a href="https://github.com/Azure/PSRule.Rules.Azure/issues/1078">#1078</a><ul>
+<li>Use availability zones for Azure Cache for Redis for regions that support it. <a href="https://github.com/Azure/PSRule.Rules.Azure/issues/1078">#1078</a></li>
 <li><code>Azure.Redis.AvailabilityZone</code></li>
 <li><code>Azure.RedisEnterprise.Zones</code></li>
-</ul>
-</li>
 </ul>
 </li>
 <li>Application Security Group:<ul>
@@ -8898,24 +8698,18 @@
 <li>Check Virtual WANs meet naming requirements. <a href="https://github.com/Azure/PSRule.Rules.Azure/issues/1110">#1110</a></li>
 </ul>
 </li>
-</ul>
-</li>
-<li>Updated rules:<ul>
+<li>Updated rules:</li>
 <li>Azure Kubernetes Service:<ul>
 <li>Promoted <code>Azure.AKS.AutoUpgrade</code> to GA rule set. <a href="https://github.com/Azure/PSRule.Rules.Azure/issues/1130">#1130</a></li>
 </ul>
 </li>
-</ul>
-</li>
-<li>General improvements:<ul>
+<li>General improvements:</li>
 <li>Added support for template function <code>tenant()</code>. <a href="https://github.com/Azure/PSRule.Rules.Azure/issues/1124">#1124</a></li>
 <li>Added support for template function <code>managementGroup()</code>. <a href="https://github.com/Azure/PSRule.Rules.Azure/issues/1125">#1125</a></li>
 <li>Added support for template function <code>pickZones()</code>. <a href="https://github.com/Azure/PSRule.Rules.Azure/issues/518">#518</a></li>
-</ul>
-</li>
-<li>Engineering:<ul>
+<li>Engineering:</li>
 <li>Rule refactoring of rules from PowerShell to YAML. <a href="https://github.com/Azure/PSRule.Rules.Azure/issues/1109">#1109</a><ul>
-<li>The following rules were refactored:<ul>
+<li>The following rules were refactored:</li>
 <li><code>Azure.LB.Name</code></li>
 <li><code>Azure.NSG.Name</code></li>
 <li><code>Azure.Firewall.Mode</code></li>
@@ -8943,50 +8737,36 @@
 <li><code>Azure.AKS.AzureRBAC</code></li>
 </ul>
 </li>
-</ul>
-</li>
-</ul>
-</li>
-<li>Bug fixes:<ul>
+<li>Bug fixes:</li>
 <li>Fixed output of Bicep informational and warning messages in error stream. <a href="https://github.com/Azure/PSRule.Rules.Azure/issues/1157">#1157</a></li>
-</ul>
-</li>
 </ul>
 <p>What's changed since pre-release v1.11.0-B2112112:</p>
 <ul>
-<li>New features:<ul>
+<li>New features:</li>
 <li>Bicep support promoted from experimental to generally available (GA). <a href="https://github.com/Azure/PSRule.Rules.Azure/issues/1176">#1176</a></li>
-</ul>
-</li>
 </ul>
 <h2 id="v1110-b2112112pre-release">v1.11.0-B2112112 (pre-release)<a class="headerlink" href="#v1110-b2112112pre-release" title="Permanent link">#</a></h2>
 <p>What's changed since pre-release v1.11.0-B2112104:</p>
 <ul>
-<li>New rules:<ul>
+<li>New rules:</li>
 <li>Azure Redis Cache:<ul>
-<li>Use availability zones for Azure Cache for Redis for regions that support it. <a href="https://github.com/Azure/PSRule.Rules.Azure/issues/1078">#1078</a><ul>
+<li>Use availability zones for Azure Cache for Redis for regions that support it. <a href="https://github.com/Azure/PSRule.Rules.Azure/issues/1078">#1078</a></li>
 <li><code>Azure.Redis.AvailabilityZone</code></li>
 <li><code>Azure.RedisEnterprise.Zones</code></li>
-</ul>
-</li>
-</ul>
-</li>
 </ul>
 </li>
 </ul>
 <h2 id="v1110-b2112104pre-release">v1.11.0-B2112104 (pre-release)<a class="headerlink" href="#v1110-b2112104pre-release" title="Permanent link">#</a></h2>
 <p>What's changed since pre-release v1.11.0-B2112073:</p>
 <ul>
-<li>New rules:<ul>
+<li>New rules:</li>
 <li>Azure Kubernetes Service:<ul>
 <li>Check clusters use Azure AD Pod Managed Identities (preview). <a href="https://github.com/Azure/PSRule.Rules.Azure/issues/991">#991</a></li>
 </ul>
 </li>
-</ul>
-</li>
-<li>Engineering:<ul>
+<li>Engineering:</li>
 <li>Rule refactoring of rules from PowerShell to YAML. <a href="https://github.com/Azure/PSRule.Rules.Azure/issues/1109">#1109</a><ul>
-<li>The following rules were refactored:<ul>
+<li>The following rules were refactored:</li>
 <li><code>Azure.AppConfig.SKU</code></li>
 <li><code>Azure.AppConfig.Name</code></li>
 <li><code>Azure.AppInsights.Workspace</code></li>
@@ -9007,20 +8787,14 @@
 <li><code>Azure.AKS.AzureRBAC</code></li>
 </ul>
 </li>
-</ul>
-</li>
-</ul>
-</li>
-<li>Bug fixes:<ul>
+<li>Bug fixes:</li>
 <li>Fixed output of Bicep informational and warning messages in error stream. <a href="https://github.com/Azure/PSRule.Rules.Azure/issues/1157">#1157</a></li>
 <li>Fixed obsolete flag for baseline <code>Azure.Preview_2021_12</code>. <a href="https://github.com/Azure/PSRule.Rules.Azure/issues/1166">#1166</a></li>
-</ul>
-</li>
 </ul>
 <h2 id="v1110-b2112073pre-release">v1.11.0-B2112073 (pre-release)<a class="headerlink" href="#v1110-b2112073pre-release" title="Permanent link">#</a></h2>
 <p>What's changed since pre-release v1.11.0-B2112024:</p>
 <ul>
-<li>New features:<ul>
+<li>New features:</li>
 <li>Added baselines containing only Azure preview features. <a href="https://github.com/Azure/PSRule.Rules.Azure/issues/1129">#1129</a><ul>
 <li>Added baseline <code>Azure.Preview_2021_09</code>.</li>
 <li>Added baseline <code>Azure.Preview_2021_12</code>.</li>
@@ -9031,26 +8805,20 @@
 <li>Marked baseline <code>Azure.GA_2021_09</code> as obsolete.</li>
 </ul>
 </li>
-</ul>
-</li>
-<li>New rules:<ul>
+<li>New rules:</li>
 <li>All resources:<ul>
 <li>Check comments for each template resource. <a href="https://github.com/Azure/PSRule.Rules.Azure/issues/969">#969</a></li>
 </ul>
 </li>
-</ul>
-</li>
-<li>Bug fixes:<ul>
+<li>Bug fixes:</li>
 <li>Fixed template function <code>equals</code> parameter count mismatch. <a href="https://github.com/Azure/PSRule.Rules.Azure/issues/1137">#1137</a></li>
 <li>Fixed copy loop on nested deployment parameters is not handled. <a href="https://github.com/Azure/PSRule.Rules.Azure/issues/1144">#1144</a></li>
 <li>Fixed outer copy loop of nested deployment. <a href="https://github.com/Azure/PSRule.Rules.Azure/issues/1154">#1154</a></li>
 </ul>
-</li>
-</ul>
 <h2 id="v1110-b2112024pre-release">v1.11.0-B2112024 (pre-release)<a class="headerlink" href="#v1110-b2112024pre-release" title="Permanent link">#</a></h2>
 <p>What's changed since pre-release v1.11.0-B2111014:</p>
 <ul>
-<li>New rules:<ul>
+<li>New rules:</li>
 <li>Azure Kubernetes Service:<ul>
 <li>Check clusters have the HTTP application routing add-on disabled. <a href="https://github.com/Azure/PSRule.Rules.Azure/issues/1131">#1131</a></li>
 <li>Check clusters use the Secrets Store CSI Driver add-on. <a href="https://github.com/Azure/PSRule.Rules.Azure/issues/992">#992</a></li>
@@ -9061,30 +8829,22 @@
 <li>Automation accounts should enable diagnostic logs. <a href="https://github.com/Azure/PSRule.Rules.Azure/issues/1075">#1075</a></li>
 </ul>
 </li>
-</ul>
-</li>
-<li>Updated rules:<ul>
+<li>Updated rules:</li>
 <li>Azure Kubernetes Service:<ul>
 <li>Promoted <code>Azure.AKS.AutoUpgrade</code> to GA rule set. <a href="https://github.com/Azure/PSRule.Rules.Azure/issues/1130">#1130</a></li>
 </ul>
 </li>
-</ul>
-</li>
-<li>General improvements:<ul>
+<li>General improvements:</li>
 <li>Added support for template function <code>tenant()</code>. <a href="https://github.com/Azure/PSRule.Rules.Azure/issues/1124">#1124</a></li>
 <li>Added support for template function <code>managementGroup()</code>. <a href="https://github.com/Azure/PSRule.Rules.Azure/issues/1125">#1125</a></li>
 <li>Added support for template function <code>pickZones()</code>. <a href="https://github.com/Azure/PSRule.Rules.Azure/issues/518">#518</a></li>
-</ul>
-</li>
-<li>Bug fixes:<ul>
+<li>Bug fixes:</li>
 <li>Fixed <code>Azure.Policy.WaiverExpiry</code> date conversion. <a href="https://github.com/Azure/PSRule.Rules.Azure/issues/1118">#1118</a></li>
-</ul>
-</li>
 </ul>
 <h2 id="v1110-b2111014pre-release">v1.11.0-B2111014 (pre-release)<a class="headerlink" href="#v1110-b2111014pre-release" title="Permanent link">#</a></h2>
 <p>What's changed since v1.10.0:</p>
 <ul>
-<li>New rules:<ul>
+<li>New rules:</li>
 <li>Application Security Group:<ul>
 <li>Check Application Security Groups meet naming requirements. <a href="https://github.com/Azure/PSRule.Rules.Azure/issues/1110">#1110</a></li>
 </ul>
@@ -9102,11 +8862,9 @@
 <li>Check Virtual WANs meet naming requirements. <a href="https://github.com/Azure/PSRule.Rules.Azure/issues/1110">#1110</a></li>
 </ul>
 </li>
-</ul>
-</li>
-<li>Engineering:<ul>
+<li>Engineering:</li>
 <li>Rule refactoring of rules from PowerShell to YAML. <a href="https://github.com/Azure/PSRule.Rules.Azure/issues/1109">#1109</a><ul>
-<li>The following rules were refactored:<ul>
+<li>The following rules were refactored:</li>
 <li><code>Azure.LB.Name</code></li>
 <li><code>Azure.NSG.Name</code></li>
 <li><code>Azure.Firewall.Mode</code></li>
@@ -9117,55 +8875,41 @@
 </ul>
 </li>
 </ul>
-</li>
-</ul>
-</li>
-</ul>
 <h2 id="v1104">v1.10.4<a class="headerlink" href="#v1104" title="Permanent link">#</a></h2>
 <p>What's changed since v1.10.3:</p>
 <ul>
-<li>Bug fixes:<ul>
+<li>Bug fixes:</li>
 <li>Fixed outer copy loop of nested deployment. <a href="https://github.com/Azure/PSRule.Rules.Azure/issues/1154">#1154</a></li>
-</ul>
-</li>
 </ul>
 <h2 id="v1103">v1.10.3<a class="headerlink" href="#v1103" title="Permanent link">#</a></h2>
 <p>What's changed since v1.10.2:</p>
 <ul>
-<li>Bug fixes:<ul>
+<li>Bug fixes:</li>
 <li>Fixed copy loop on nested deployment parameters is not handled. <a href="https://github.com/Azure/PSRule.Rules.Azure/issues/1144">#1144</a></li>
-</ul>
-</li>
 </ul>
 <h2 id="v1102">v1.10.2<a class="headerlink" href="#v1102" title="Permanent link">#</a></h2>
 <p>What's changed since v1.10.1:</p>
 <ul>
-<li>Bug fixes:<ul>
+<li>Bug fixes:</li>
 <li>Fixed template function <code>equals</code> parameter count mismatch. <a href="https://github.com/Azure/PSRule.Rules.Azure/issues/1137">#1137</a></li>
-</ul>
-</li>
 </ul>
 <h2 id="v1101">v1.10.1<a class="headerlink" href="#v1101" title="Permanent link">#</a></h2>
 <p>What's changed since v1.10.0:</p>
 <ul>
-<li>Bug fixes:<ul>
+<li>Bug fixes:</li>
 <li>Fixed <code>Azure.Policy.WaiverExpiry</code> date conversion. <a href="https://github.com/Azure/PSRule.Rules.Azure/issues/1118">#1118</a></li>
-</ul>
-</li>
 </ul>
 <h2 id="v1100">v1.10.0<a class="headerlink" href="#v1100" title="Permanent link">#</a></h2>
 <p>What's changed since v1.9.1:</p>
 <ul>
-<li>New features:<ul>
+<li>New features:</li>
 <li>Added support for parameter strong types. <a href="https://github.com/Azure/PSRule.Rules.Azure/issues/1083">#1083</a><ul>
 <li>The value of string parameters can be tested against the expected type.</li>
 <li>When configuring a location strong type, the parameter value must be a valid Azure location.</li>
 <li>When configuring a resource type strong type, the parameter value must be a matching resource Id.</li>
 </ul>
 </li>
-</ul>
-</li>
-<li>New rules:<ul>
+<li>New rules:</li>
 <li>All resources:<ul>
 <li>Check template expressions do not exceed a maximum length. <a href="https://github.com/Azure/PSRule.Rules.Azure/issues/1006">#1006</a></li>
 </ul>
@@ -9180,24 +8924,16 @@
 <li>Check topics and domains use identity-based authentication. <a href="https://github.com/Azure/PSRule.Rules.Azure/issues/1093">#1093</a></li>
 </ul>
 </li>
-</ul>
-</li>
-<li>General improvements:<ul>
+<li>General improvements:</li>
 <li>Updated default baseline to use module configuration. <a href="https://github.com/Azure/PSRule.Rules.Azure/issues/1089">#1089</a></li>
-</ul>
-</li>
-<li>Engineering:<ul>
+<li>Engineering:</li>
 <li>Bump PSRule dependency to v1.9.0. <a href="https://github.com/Azure/PSRule.Rules.Azure/issues/1081">#1081</a></li>
 <li>Bump Microsoft.CodeAnalysis.NetAnalyzers to v6.0.0. <a href="https://github.com/Azure/PSRule.Rules.Azure/pull/1080">#1080</a></li>
 <li>Bump Microsoft.SourceLink.GitHub to 1.1.1. <a href="https://github.com/Azure/PSRule.Rules.Azure/pull/1085">#1085</a></li>
-</ul>
-</li>
-<li>Bug fixes:<ul>
+<li>Bug fixes:</li>
 <li>Fixed expansion of secret references. <a href="https://github.com/Azure/PSRule.Rules.Azure/issues/1098">#1098</a></li>
 <li>Fixed handling of tagging for deployments. <a href="https://github.com/Azure/PSRule.Rules.Azure/issues/1099">#1099</a></li>
 <li>Fixed strong type issue flagged with empty defaultValue string. <a href="https://github.com/Azure/PSRule.Rules.Azure/issues/1100">#1100</a></li>
-</ul>
-</li>
 </ul>
 <p>What's changed since pre-release v1.10.0-B2111081:</p>
 <ul>
@@ -9206,81 +8942,65 @@
 <h2 id="v1100-b2111081pre-release">v1.10.0-B2111081 (pre-release)<a class="headerlink" href="#v1100-b2111081pre-release" title="Permanent link">#</a></h2>
 <p>What's changed since pre-release v1.10.0-B2111072:</p>
 <ul>
-<li>New rules:<ul>
+<li>New rules:</li>
 <li>Automation Service:<ul>
 <li>Automation accounts should use managed identities for authentication. <a href="https://github.com/Azure/PSRule.Rules.Azure/issues/1074">#1074</a></li>
-</ul>
-</li>
 </ul>
 </li>
 </ul>
 <h2 id="v1100-b2111072pre-release">v1.10.0-B2111072 (pre-release)<a class="headerlink" href="#v1100-b2111072pre-release" title="Permanent link">#</a></h2>
 <p>What's changed since pre-release v1.10.0-B2111058:</p>
 <ul>
-<li>New rules:<ul>
+<li>New rules:</li>
 <li>All resources:<ul>
 <li>Check template expressions do not exceed a maximum length. <a href="https://github.com/Azure/PSRule.Rules.Azure/issues/1006">#1006</a></li>
 </ul>
 </li>
-</ul>
-</li>
-<li>Bug fixes:<ul>
+<li>Bug fixes:</li>
 <li>Fixed expansion of secret references. <a href="https://github.com/Azure/PSRule.Rules.Azure/issues/1098">#1098</a></li>
 <li>Fixed handling of tagging for deployments. <a href="https://github.com/Azure/PSRule.Rules.Azure/issues/1099">#1099</a></li>
 <li>Fixed strong type issue flagged with empty defaultValue string. <a href="https://github.com/Azure/PSRule.Rules.Azure/issues/1100">#1100</a></li>
 </ul>
-</li>
-</ul>
 <h2 id="v1100-b2111058pre-release">v1.10.0-B2111058 (pre-release)<a class="headerlink" href="#v1100-b2111058pre-release" title="Permanent link">#</a></h2>
 <p>What's changed since pre-release v1.10.0-B2111040:</p>
 <ul>
-<li>New rules:<ul>
+<li>New rules:</li>
 <li>Event Grid:<ul>
 <li>Check topics and domains use managed identities. <a href="https://github.com/Azure/PSRule.Rules.Azure/issues/1091">#1091</a></li>
 <li>Check topics and domains use private endpoints. <a href="https://github.com/Azure/PSRule.Rules.Azure/issues/1092">#1092</a></li>
 <li>Check topics and domains use identity-based authentication. <a href="https://github.com/Azure/PSRule.Rules.Azure/issues/1093">#1093</a></li>
 </ul>
 </li>
-</ul>
-</li>
-<li>General improvements:<ul>
+<li>General improvements:</li>
 <li>Updated default baseline to use module configuration. <a href="https://github.com/Azure/PSRule.Rules.Azure/issues/1089">#1089</a></li>
-</ul>
-</li>
 </ul>
 <h2 id="v1100-b2111040pre-release">v1.10.0-B2111040 (pre-release)<a class="headerlink" href="#v1100-b2111040pre-release" title="Permanent link">#</a></h2>
 <p>What's changed since v1.9.1:</p>
 <ul>
-<li>New features:<ul>
+<li>New features:</li>
 <li>Added support for parameter strong types. <a href="https://github.com/Azure/PSRule.Rules.Azure/issues/1083">#1083</a><ul>
 <li>The value of string parameters can be tested against the expected type.</li>
 <li>When configuring a location strong type, the parameter value must be a valid Azure location.</li>
 <li>When configuring a resource type strong type, the parameter value must be a matching resource Id.</li>
 </ul>
 </li>
-</ul>
-</li>
-<li>Engineering:<ul>
+<li>Engineering:</li>
 <li>Bump PSRule dependency to v1.9.0. <a href="https://github.com/Azure/PSRule.Rules.Azure/issues/1081">#1081</a></li>
 <li>Bump Microsoft.CodeAnalysis.NetAnalyzers to v6.0.0. <a href="https://github.com/Azure/PSRule.Rules.Azure/pull/1080">#1080</a></li>
 <li>Bump Microsoft.SourceLink.GitHub to 1.1.1. <a href="https://github.com/Azure/PSRule.Rules.Azure/pull/1085">#1085</a></li>
 </ul>
-</li>
-</ul>
 <h2 id="v191">v1.9.1<a class="headerlink" href="#v191" title="Permanent link">#</a></h2>
 <p>What's changed since v1.9.0:</p>
 <ul>
-<li>Bug fixes:<ul>
+<li>Bug fixes:</li>
 <li>Fixed can not index into resource group tags. <a href="https://github.com/Azure/PSRule.Rules.Azure/issues/1066">#1066</a></li>
 <li>Fixed <code>Azure.VM.ASMinMembers</code> for template deployments. <a href="https://github.com/Azure/PSRule.Rules.Azure/issues/1064">#1064</a></li>
 <li>Fixed zones property not found on public IP resource. <a href="https://github.com/Azure/PSRule.Rules.Azure/issues/1070">#1070</a></li>
 </ul>
-</li>
-</ul>
 <h2 id="v190">v1.9.0<a class="headerlink" href="#v190" title="Permanent link">#</a></h2>
 <p>What's changed since v1.8.1:</p>
 <ul>
-<li>New rules:<ul>
+<li>New rules:</li>
 <li>API Management Service:<ul>
 <li>Check API management services are using availability zones when available. <a href="https://github.com/Azure/PSRule.Rules.Azure/issues/1017">#1017</a></li>
 </ul>
@@ -9298,23 +9018,17 @@
 <li>Check VPN/ExpressRoute gateways are configured with availability zone SKU. <a href="https://github.com/Azure/PSRule.Rules.Azure/issues/926">#926</a></li>
 </ul>
 </li>
-</ul>
-</li>
-<li>General improvements:<ul>
+<li>General improvements:</li>
 <li>Improved processing of AzOps generated templates. <a href="https://github.com/Azure/PSRule.Rules.Azure/issues/799">#799</a><ul>
 <li><code>Azure.Template.DefineParameters</code> is ignored for AzOps generated templates.</li>
 <li><code>Azure.Template.UseLocationParameter</code> is ignored for AzOps generated templates.</li>
 </ul>
 </li>
 <li>Bicep is now installed when using PSRule GitHub Action. <a href="https://github.com/Azure/PSRule.Rules.Azure/issues/1050">#1050</a></li>
-</ul>
-</li>
-<li>Engineering:<ul>
+<li>Engineering:</li>
 <li>Bump PSRule dependency to v1.8.0. <a href="https://github.com/Azure/PSRule.Rules.Azure/issues/1018">#1018</a></li>
 <li>Added automated PR workflow to bump <code>providers.json</code> monthly. <a href="https://github.com/Azure/PSRule.Rules.Azure/issues/1041">#1041</a></li>
-</ul>
-</li>
-<li>Bug fixes:<ul>
+<li>Bug fixes:</li>
 <li>Fixed AKS Network Policy should accept calico. <a href="https://github.com/Azure/PSRule.Rules.Azure/issues/1046">#1046</a></li>
 <li>Fixed <code>Azure.ACR.AdminUser</code> fails when <code>adminUserEnabled</code> not set. <a href="https://github.com/Azure/PSRule.Rules.Azure/issues/1014">#1014</a></li>
 <li>Fixed <code>Azure.KeyVault.Logs</code> reports cannot index into a null array. <a href="https://github.com/Azure/PSRule.Rules.Azure/issues/1024">#1024</a></li>
@@ -9324,8 +9038,6 @@
 <li>Fixed property used by <code>Azure.ACR.MinSKU</code> to work more reliably with templates. <a href="https://github.com/Azure/PSRule.Rules.Azure/issues/1034">#1034</a></li>
 <li>Fixed could not determine JSON object type for MockMember using CreateObject. <a href="https://github.com/Azure/PSRule.Rules.Azure/issues/1035">#1035</a></li>
 <li>Fixed Bicep convention ordering. <a href="https://github.com/Azure/PSRule.Rules.Azure/issues/1053">#1053</a></li>
-</ul>
-</li>
 </ul>
 <p>What's changed since pre-release v1.9.0-B2110087:</p>
 <ul>
@@ -9334,96 +9046,72 @@
 <h2 id="v190-b2110087pre-release">v1.9.0-B2110087 (pre-release)<a class="headerlink" href="#v190-b2110087pre-release" title="Permanent link">#</a></h2>
 <p>What's changed since pre-release v1.9.0-B2110082:</p>
 <ul>
-<li>Bug fixes:<ul>
+<li>Bug fixes:</li>
 <li>Fixed Bicep convention ordering. <a href="https://github.com/Azure/PSRule.Rules.Azure/issues/1053">#1053</a></li>
-</ul>
-</li>
 </ul>
 <h2 id="v190-b2110082pre-release">v1.9.0-B2110082 (pre-release)<a class="headerlink" href="#v190-b2110082pre-release" title="Permanent link">#</a></h2>
 <p>What's changed since pre-release v1.9.0-B2110059:</p>
 <ul>
-<li>General improvements:<ul>
+<li>General improvements:</li>
 <li>Bicep is now installed when using PSRule GitHub Action. <a href="https://github.com/Azure/PSRule.Rules.Azure/issues/1050">#1050</a></li>
-</ul>
-</li>
-<li>Engineering:<ul>
+<li>Engineering:</li>
 <li>Added automated PR workflow to bump <code>providers.json</code> monthly. <a href="https://github.com/Azure/PSRule.Rules.Azure/issues/1041">#1041</a></li>
-</ul>
-</li>
-<li>Bug fixes:<ul>
+<li>Bug fixes:</li>
 <li>Fixed AKS Network Policy should accept calico. <a href="https://github.com/Azure/PSRule.Rules.Azure/issues/1046">#1046</a></li>
-</ul>
-</li>
 </ul>
 <h2 id="v190-b2110059pre-release">v1.9.0-B2110059 (pre-release)<a class="headerlink" href="#v190-b2110059pre-release" title="Permanent link">#</a></h2>
 <p>What's changed since pre-release v1.9.0-B2110040:</p>
 <ul>
-<li>New rules:<ul>
+<li>New rules:</li>
 <li>API Management Service:<ul>
 <li>Check API management services are using availability zones when available. <a href="https://github.com/Azure/PSRule.Rules.Azure/issues/1017">#1017</a></li>
 </ul>
 </li>
-</ul>
-</li>
-<li>Bug fixes:<ul>
+<li>Bug fixes:</li>
 <li>Fixed property used by <code>Azure.ACR.MinSKU</code> to work more reliably with templates. <a href="https://github.com/Azure/PSRule.Rules.Azure/issues/1034">#1034</a></li>
 <li>Fixed could not determine JSON object type for MockMember using CreateObject. <a href="https://github.com/Azure/PSRule.Rules.Azure/issues/1035">#1035</a></li>
-</ul>
-</li>
 </ul>
 <h2 id="v190-b2110040pre-release">v1.9.0-B2110040 (pre-release)<a class="headerlink" href="#v190-b2110040pre-release" title="Permanent link">#</a></h2>
 <p>What's changed since pre-release v1.9.0-B2110025:</p>
 <ul>
-<li>New rules:<ul>
+<li>New rules:</li>
 <li>User Assigned Managed Identity:<ul>
 <li>Check identities meet naming requirements. <a href="https://github.com/Azure/PSRule.Rules.Azure/issues/1021">#1021</a></li>
 </ul>
 </li>
-</ul>
-</li>
-<li>Bug fixes:<ul>
+<li>Bug fixes:</li>
 <li>Fixed <code>Azure.KeyVault.Logs</code> reports cannot index into a null array. <a href="https://github.com/Azure/PSRule.Rules.Azure/issues/1024">#1024</a></li>
 <li>Fixed template function empty returns object reference not set exception. <a href="https://github.com/Azure/PSRule.Rules.Azure/issues/1025">#1025</a></li>
 <li>Fixed delayed binding of <code>and</code> template function. <a href="https://github.com/Azure/PSRule.Rules.Azure/issues/1026">#1026</a></li>
 <li>Fixed template function array nests array with array parameters. <a href="https://github.com/Azure/PSRule.Rules.Azure/issues/1027">#1027</a></li>
 </ul>
-</li>
-</ul>
 <h2 id="v190-b2110025pre-release">v1.9.0-B2110025 (pre-release)<a class="headerlink" href="#v190-b2110025pre-release" title="Permanent link">#</a></h2>
 <p>What's changed since pre-release v1.9.0-B2110014:</p>
 <ul>
-<li>Engineering:<ul>
+<li>Engineering:</li>
 <li>Bump PSRule dependency to v1.8.0. <a href="https://github.com/Azure/PSRule.Rules.Azure/issues/1018">#1018</a></li>
-</ul>
-</li>
-<li>Bug fixes:<ul>
+<li>Bug fixes:</li>
 <li>Fixed <code>Azure.ACR.AdminUser</code> fails when <code>adminUserEnabled</code> not set. <a href="https://github.com/Azure/PSRule.Rules.Azure/issues/1014">#1014</a></li>
-</ul>
-</li>
 </ul>
 <h2 id="v190-b2110014pre-release">v1.9.0-B2110014 (pre-release)<a class="headerlink" href="#v190-b2110014pre-release" title="Permanent link">#</a></h2>
 <p>What's changed since pre-release v1.9.0-B2110009:</p>
 <ul>
-<li>Bug fixes:<ul>
+<li>Bug fixes:</li>
 <li>Fixed expression out of range of valid values. <a href="https://github.com/Azure/PSRule.Rules.Azure/issues/1005">#1005</a></li>
 <li>Fixed template expand fails in nested reference expansion. <a href="https://github.com/Azure/PSRule.Rules.Azure/issues/1007">#1007</a></li>
-</ul>
-</li>
 </ul>
 <h2 id="v190-b2110009pre-release">v1.9.0-B2110009 (pre-release)<a class="headerlink" href="#v190-b2110009pre-release" title="Permanent link">#</a></h2>
 <p>What's changed since pre-release v1.9.0-B2109027:</p>
 <ul>
-<li>Bug fixes:<ul>
+<li>Bug fixes:</li>
 <li>Fixed handling of comments with template and parameter file rules. <a href="https://github.com/Azure/PSRule.Rules.Azure/issues/996">#996</a></li>
 <li>Fixed <code>Azure.Template.UseLocationParameter</code> to only apply to templates deployed as RG scope <a href="https://github.com/Azure/PSRule.Rules.Azure/issues/995">#995</a></li>
 <li>Fixed expand template fails with <code>createObject</code> when no parameters are specified. <a href="https://github.com/Azure/PSRule.Rules.Azure/issues/1000">#1000</a></li>
 </ul>
-</li>
-</ul>
 <h2 id="v190-b2109027pre-release">v1.9.0-B2109027 (pre-release)<a class="headerlink" href="#v190-b2109027pre-release" title="Permanent link">#</a></h2>
 <p>What's changed since v1.8.0:</p>
 <ul>
-<li>New rules:<ul>
+<li>New rules:</li>
 <li>Public IP Address:<ul>
 <li>Check Public IP addresses are configured with zone-redundancy. <a href="https://github.com/Azure/PSRule.Rules.Azure/issues/958">#958</a></li>
 <li>Check Public IP addresses are using Standard SKU. <a href="https://github.com/Azure/PSRule.Rules.Azure/issues/979">#979</a></li>
@@ -9433,25 +9121,19 @@
 <li>Check VPN/ExpressRoute gateways are configured with availability zone SKU. <a href="https://github.com/Azure/PSRule.Rules.Azure/issues/926">#926</a></li>
 </ul>
 </li>
-</ul>
-</li>
-<li>General improvements:<ul>
+<li>General improvements:</li>
 <li>Improved processing of AzOps generated templates. <a href="https://github.com/Azure/PSRule.Rules.Azure/issues/799">#799</a><ul>
 <li><code>Azure.Template.DefineParameters</code> is ignored for AzOps generated templates.</li>
 <li><code>Azure.Template.UseLocationParameter</code> is ignored for AzOps generated templates.</li>
 </ul>
 </li>
-</ul>
-</li>
-<li>Bug fixes:<ul>
+<li>Bug fixes:</li>
 <li>Fixed <code>ToUpper</code> fails to convert character. <a href="https://github.com/Azure/PSRule.Rules.Azure/issues/986">#986</a></li>
-</ul>
-</li>
 </ul>
 <h2 id="v181">v1.8.1<a class="headerlink" href="#v181" title="Permanent link">#</a></h2>
 <p>What's changed since v1.8.0:</p>
 <ul>
-<li>Bug fixes:<ul>
+<li>Bug fixes:</li>
 <li>Fixed handling of comments with template and parameter file rules. <a href="https://github.com/Azure/PSRule.Rules.Azure/issues/996">#996</a></li>
 <li>Fixed <code>Azure.Template.UseLocationParameter</code> to only apply to templates deployed as RG scope <a href="https://github.com/Azure/PSRule.Rules.Azure/issues/995">#995</a></li>
 <li>Fixed expand template fails with <code>createObject</code> when no parameters are specified. <a href="https://github.com/Azure/PSRule.Rules.Azure/issues/1000">#1000</a></li>
@@ -9459,20 +9141,16 @@
 <li>Fixed expression out of range of valid values. <a href="https://github.com/Azure/PSRule.Rules.Azure/issues/1005">#1005</a></li>
 <li>Fixed template expand fails in nested reference expansion. <a href="https://github.com/Azure/PSRule.Rules.Azure/issues/1007">#1007</a></li>
 </ul>
-</li>
-</ul>
 <h2 id="v180">v1.8.0<a class="headerlink" href="#v180" title="Permanent link">#</a></h2>
 <p>What's changed since v1.7.0:</p>
 <ul>
-<li>New features:<ul>
+<li>New features:</li>
 <li>Added <code>Azure.GA_2021_09</code> baseline. <a href="https://github.com/Azure/PSRule.Rules.Azure/issues/961">#961</a><ul>
 <li>Includes rules released before or during September 2021 for Azure GA features.</li>
 <li>Marked baseline <code>Azure.GA_2021_06</code> as obsolete.</li>
 </ul>
 </li>
-</ul>
-</li>
-<li>New rules:<ul>
+<li>New rules:</li>
 <li>Application Gateway:<ul>
 <li>Check App Gateways should use availability zones when available. Thanks <a href="https://github.com/ArmaanMcleod">@ArmaanMcleod</a>. <a href="https://github.com/Azure/PSRule.Rules.Azure/issues/928">#928</a></li>
 </ul>
@@ -9494,15 +9172,11 @@
 <li>Check Load Balancers are configured with zone-redundancy. Thanks <a href="https://github.com/ArmaanMcleod">@ArmaanMcleod</a>. <a href="https://github.com/Azure/PSRule.Rules.Azure/issues/927">#927</a></li>
 </ul>
 </li>
-</ul>
-</li>
-<li>Engineering:<ul>
+<li>Engineering:</li>
 <li>Bump PSRule dependency to v1.7.2. <a href="https://github.com/Azure/PSRule.Rules.Azure/issues/951">#951</a></li>
 <li>Automated update of availability zone information in providers.json. <a href="https://github.com/Azure/PSRule.Rules.Azure/issues/907">#907</a></li>
 <li>Increased test coverage of rule reasons. Thanks <a href="https://github.com/ArmaanMcleod">@ArmaanMcleod</a>. <a href="https://github.com/Azure/PSRule.Rules.Azure/issues/960">#960</a></li>
-</ul>
-</li>
-<li>Bug fixes:<ul>
+<li>Bug fixes:</li>
 <li>Fixed export of in-flight AKS related subnets for kubenet clusters. Thanks <a href="https://github.com/ArmaanMcleod">@ArmaanMcleod</a>. <a href="https://github.com/Azure/PSRule.Rules.Azure/issues/920">#920</a></li>
 <li>Fixed plan instance count is not applicable to Elastic Premium plans. <a href="https://github.com/Azure/PSRule.Rules.Azure/issues/946">#946</a></li>
 <li>Fixed minimum App Service Plan fails Elastic Premium plans. <a href="https://github.com/Azure/PSRule.Rules.Azure/issues/945">#945</a></li>
@@ -9511,8 +9185,6 @@
 <li>Fixed Bicep CLI fails with unexpected end of content. <a href="https://github.com/Azure/PSRule.Rules.Azure/issues/889">#889</a></li>
 <li>Fixed incomplete reason message for <code>Azure.Storage.MinTLS</code>. <a href="https://github.com/Azure/PSRule.Rules.Azure/issues/971">#971</a></li>
 <li>Fixed false positive of <code>Azure.Storage.UseReplication</code> with large file storage. <a href="https://github.com/Azure/PSRule.Rules.Azure/issues/965">#965</a></li>
-</ul>
-</li>
 </ul>
 <p>What's changed since pre-release v1.8.0-B2109060:</p>
 <ul>
@@ -9521,47 +9193,37 @@
 <h2 id="v180-b2109086pre-release">v1.8.0-B2109086 (pre-release)<a class="headerlink" href="#v180-b2109086pre-release" title="Permanent link">#</a></h2>
 <p>What's changed since pre-release v1.8.0-B2109060:</p>
 <ul>
-<li>New rules:<ul>
+<li>New rules:</li>
 <li>Load Balancer:<ul>
 <li>Check Load balancers are using Standard SKU. Thanks <a href="https://github.com/ArmaanMcleod">@ArmaanMcleod</a>. <a href="https://github.com/Azure/PSRule.Rules.Azure/issues/957">#957</a></li>
 </ul>
 </li>
-</ul>
-</li>
-<li>Engineering:<ul>
+<li>Engineering:</li>
 <li>Increased test coverage of rule reasons. Thanks <a href="https://github.com/ArmaanMcleod">@ArmaanMcleod</a>. <a href="https://github.com/Azure/PSRule.Rules.Azure/issues/960">#960</a></li>
-</ul>
-</li>
-<li>Bug fixes:<ul>
+<li>Bug fixes:</li>
 <li>Fixed Bicep CLI fails with unexpected end of content. <a href="https://github.com/Azure/PSRule.Rules.Azure/issues/889">#889</a></li>
 <li>Fixed incomplete reason message for <code>Azure.Storage.MinTLS</code>. <a href="https://github.com/Azure/PSRule.Rules.Azure/issues/971">#971</a></li>
 <li>Fixed false positive of <code>Azure.Storage.UseReplication</code> with large file storage. <a href="https://github.com/Azure/PSRule.Rules.Azure/issues/965">#965</a></li>
 </ul>
-</li>
-</ul>
 <h2 id="v180-b2109060pre-release">v1.8.0-B2109060 (pre-release)<a class="headerlink" href="#v180-b2109060pre-release" title="Permanent link">#</a></h2>
 <p>What's changed since pre-release v1.8.0-B2109046:</p>
 <ul>
-<li>New features:<ul>
+<li>New features:</li>
 <li>Added <code>Azure.GA_2021_09</code> baseline. <a href="https://github.com/Azure/PSRule.Rules.Azure/issues/961">#961</a><ul>
 <li>Includes rules released before or during September 2021 for Azure GA features.</li>
 <li>Marked baseline <code>Azure.GA_2021_06</code> as obsolete.</li>
 </ul>
 </li>
-</ul>
-</li>
-<li>New rules:<ul>
+<li>New rules:</li>
 <li>Load Balancer:<ul>
 <li>Check Load Balancers are configured with zone-redundancy. Thanks <a href="https://github.com/ArmaanMcleod">@ArmaanMcleod</a>. <a href="https://github.com/Azure/PSRule.Rules.Azure/issues/927">#927</a></li>
-</ul>
-</li>
 </ul>
 </li>
 </ul>
 <h2 id="v180-b2109046pre-release">v1.8.0-B2109046 (pre-release)<a class="headerlink" href="#v180-b2109046pre-release" title="Permanent link">#</a></h2>
 <p>What's changed since pre-release v1.8.0-B2109020:</p>
 <ul>
-<li>New rules:<ul>
+<li>New rules:</li>
 <li>Application Gateway:<ul>
 <li>Check App Gateways should use availability zones when available. Thanks <a href="https://github.com/ArmaanMcleod">@ArmaanMcleod</a>. <a href="https://github.com/Azure/PSRule.Rules.Azure/issues/928">#928</a></li>
 </ul>
@@ -9571,76 +9233,56 @@
 <li>Check DB accounts use Azure AD identities for resource management operations. <a href="https://github.com/Azure/PSRule.Rules.Azure/issues/953">#953</a></li>
 </ul>
 </li>
-</ul>
-</li>
-<li>Bug fixes:<ul>
+<li>Bug fixes:</li>
 <li>Fixed plan instance count is not applicable to Elastic Premium plans. <a href="https://github.com/Azure/PSRule.Rules.Azure/issues/946">#946</a></li>
 <li>Fixed minimum App Service Plan fails Elastic Premium plans. <a href="https://github.com/Azure/PSRule.Rules.Azure/issues/945">#945</a></li>
 <li>Fixed App Service Plan should include PremiumV3 plan. <a href="https://github.com/Azure/PSRule.Rules.Azure/issues/944">#944</a></li>
 <li>Fixed Azure.VM.NICAttached with private endpoints. <a href="https://github.com/Azure/PSRule.Rules.Azure/issues/932">#932</a></li>
-</ul>
-</li>
-<li>Engineering:<ul>
+<li>Engineering:</li>
 <li>Bump PSRule dependency to v1.7.2. <a href="https://github.com/Azure/PSRule.Rules.Azure/issues/951">#951</a></li>
-</ul>
-</li>
 </ul>
 <h2 id="v180-b2109020pre-release">v1.8.0-B2109020 (pre-release)<a class="headerlink" href="#v180-b2109020pre-release" title="Permanent link">#</a></h2>
 <p>What's changed since pre-release v1.8.0-B2108026:</p>
 <ul>
-<li>New rules:<ul>
+<li>New rules:</li>
 <li>Azure Kubernetes Service:<ul>
 <li>Check clusters have control plane audit logs enabled. Thanks <a href="https://github.com/ArmaanMcleod">@ArmaanMcleod</a>. <a href="https://github.com/Azure/PSRule.Rules.Azure/issues/882">#882</a></li>
 <li>Check clusters have control plane diagnostics enabled. Thanks <a href="https://github.com/ArmaanMcleod">@ArmaanMcleod</a>. <a href="https://github.com/Azure/PSRule.Rules.Azure/issues/922">#922</a></li>
 </ul>
 </li>
-</ul>
-</li>
-<li>Engineering:<ul>
+<li>Engineering:</li>
 <li>Bump PSRule dependency to v1.7.0. <a href="https://github.com/Azure/PSRule.Rules.Azure/issues/938">#938</a></li>
-</ul>
-</li>
 </ul>
 <h2 id="v180-b2108026pre-release">v1.8.0-B2108026 (pre-release)<a class="headerlink" href="#v180-b2108026pre-release" title="Permanent link">#</a></h2>
 <p>What's changed since pre-release v1.8.0-B2108013:</p>
 <ul>
-<li>New rules:<ul>
+<li>New rules:</li>
 <li>Azure Kubernetes Service:<ul>
 <li>Check clusters use Container Insights for monitoring workloads. Thanks <a href="https://github.com/ArmaanMcleod">@ArmaanMcleod</a>. <a href="https://github.com/Azure/PSRule.Rules.Azure/issues/881">#881</a></li>
 </ul>
 </li>
-</ul>
-</li>
-<li>Bug fixes:<ul>
+<li>Bug fixes:</li>
 <li>Fixed export of in-flight AKS related subnets for kubenet clusters. Thanks <a href="https://github.com/ArmaanMcleod">@ArmaanMcleod</a>. <a href="https://github.com/Azure/PSRule.Rules.Azure/issues/920">#920</a></li>
-</ul>
-</li>
 </ul>
 <h2 id="v180-b2108013pre-release">v1.8.0-B2108013 (pre-release)<a class="headerlink" href="#v180-b2108013pre-release" title="Permanent link">#</a></h2>
 <p>What's changed since v1.7.0:</p>
 <ul>
-<li>New rules:<ul>
+<li>New rules:</li>
 <li>Azure Kubernetes Service:<ul>
 <li>Check clusters use availability zones when available. Thanks <a href="https://github.com/ArmaanMcleod">@ArmaanMcleod</a>. <a href="https://github.com/Azure/PSRule.Rules.Azure/issues/880">#880</a></li>
 </ul>
 </li>
-</ul>
-</li>
-<li>Engineering:<ul>
+<li>Engineering:</li>
 <li>Bump PSRule dependency to v1.6.1. <a href="https://github.com/Azure/PSRule.Rules.Azure/issues/913">#913</a></li>
 <li>Automated update of availability zone information in providers.json. <a href="https://github.com/Azure/PSRule.Rules.Azure/issues/907">#907</a></li>
-</ul>
-</li>
 </ul>
 <h2 id="v170">v1.7.0<a class="headerlink" href="#v170" title="Permanent link">#</a></h2>
 <p>What's changed since v1.6.0:</p>
 <ul>
-<li>New rules:<ul>
+<li>New rules:</li>
 <li>All resources:<ul>
-<li>Check template parameter files use metadata links. <a href="https://github.com/Azure/PSRule.Rules.Azure/issues/846">#846</a><ul>
+<li>Check template parameter files use metadata links. <a href="https://github.com/Azure/PSRule.Rules.Azure/issues/846">#846</a></li>
 <li>Configure the <code>AZURE_PARAMETER_FILE_METADATA_LINK</code> option to enable this rule.</li>
-</ul>
-</li>
 <li>Check template files use a recent schema. <a href="https://github.com/Azure/PSRule.Rules.Azure/issues/845">#845</a></li>
 <li>Check template files use a https schema scheme. <a href="https://github.com/Azure/PSRule.Rules.Azure/issues/894">#894</a></li>
 <li>Check template parameter files use a https schema scheme. <a href="https://github.com/Azure/PSRule.Rules.Azure/issues/894">#894</a></li>
@@ -9650,39 +9292,27 @@
 </li>
 <li>Azure Kubernetes Service:<ul>
 <li>Check clusters using Azure CNI should use large subnets. Thanks <a href="https://github.com/ArmaanMcleod">@ArmaanMcleod</a>. <a href="https://github.com/Azure/PSRule.Rules.Azure/issues/273">#273</a></li>
-<li>Check clusters use auto-scale node pools. Thanks <a href="https://github.com/ArmaanMcleod">@ArmaanMcleod</a>. <a href="https://github.com/Azure/PSRule.Rules.Azure/issues/218">#218</a><ul>
+<li>Check clusters use auto-scale node pools. Thanks <a href="https://github.com/ArmaanMcleod">@ArmaanMcleod</a>. <a href="https://github.com/Azure/PSRule.Rules.Azure/issues/218">#218</a></li>
 <li>By default, a minimum of a <code>/23</code> subnet is required.</li>
 <li>Configure <code>AZURE_AKS_CNI_MINIMUM_CLUSTER_SUBNET_SIZE</code> to change the default minimum subnet size.</li>
-</ul>
-</li>
 </ul>
 </li>
 <li>Storage Account:<ul>
 <li>Check Storage Accounts only accept explicitly allowed network traffic. <a href="https://github.com/Azure/PSRule.Rules.Azure/issues/884">#884</a></li>
 </ul>
 </li>
-</ul>
-</li>
-<li>Updated rules:<ul>
+<li>Updated rules:</li>
 <li>Virtual Network:<ul>
 <li>Excluded <code>AzureFirewallManagementSubnet</code> from <code>Azure.VNET.UseNSGs</code>. <a href="https://github.com/Azure/PSRule.Rules.Azure/issues/869">#869</a></li>
 </ul>
 </li>
-</ul>
-</li>
-<li>General improvements:<ul>
+<li>General improvements:</li>
 <li>Added version information to bicep compilation exceptions. <a href="https://github.com/Azure/PSRule.Rules.Azure/issues/903">#903</a></li>
-</ul>
-</li>
-<li>Engineering:<ul>
+<li>Engineering:</li>
 <li>Bump PSRule dependency to v1.6.0. <a href="https://github.com/Azure/PSRule.Rules.Azure/issues/871">#871</a></li>
-</ul>
-</li>
-<li>Bug fixes:<ul>
+<li>Bug fixes:</li>
 <li>Fixed DateTimeAdd function and tests within timezones with DST. <a href="https://github.com/Azure/PSRule.Rules.Azure/issues/891">#891</a></li>
 <li>Fixed <code>Azure.Template.ParameterValue</code> failing on empty value. <a href="https://github.com/Azure/PSRule.Rules.Azure/issues/901">#901</a></li>
-</ul>
-</li>
 </ul>
 <p>What's changed since pre-release v1.7.0-B2108059:</p>
 <ul>
@@ -9691,19 +9321,15 @@
 <h2 id="v170-b2108059pre-release">v1.7.0-B2108059 (pre-release)<a class="headerlink" href="#v170-b2108059pre-release" title="Permanent link">#</a></h2>
 <p>What's changed since pre-release v1.7.0-B2108049:</p>
 <ul>
-<li>General improvements:<ul>
+<li>General improvements:</li>
 <li>Added version information to bicep compilation exceptions. <a href="https://github.com/Azure/PSRule.Rules.Azure/issues/903">#903</a></li>
-</ul>
-</li>
-<li>Bug fixes:<ul>
+<li>Bug fixes:</li>
 <li>Fixed <code>Azure.Template.ParameterValue</code> failing on empty value. <a href="https://github.com/Azure/PSRule.Rules.Azure/issues/901">#901</a></li>
-</ul>
-</li>
 </ul>
 <h2 id="v170-b2108049pre-release">v1.7.0-B2108049 (pre-release)<a class="headerlink" href="#v170-b2108049pre-release" title="Permanent link">#</a></h2>
 <p>What's changed since pre-release v1.7.0-B2108040:</p>
 <ul>
-<li>New rules:<ul>
+<li>New rules:</li>
 <li>All resources:<ul>
 <li>Check template files use a recent schema. <a href="https://github.com/Azure/PSRule.Rules.Azure/issues/845">#845</a></li>
 <li>Check template files use a https schema scheme. <a href="https://github.com/Azure/PSRule.Rules.Azure/issues/894">#894</a></li>
@@ -9712,30 +9338,22 @@
 <li>Check template parameters use a valid secret reference. <a href="https://github.com/Azure/PSRule.Rules.Azure/issues/897">#897</a></li>
 </ul>
 </li>
-</ul>
-</li>
-<li>Bug fixes:<ul>
+<li>Bug fixes:</li>
 <li>Fixed DateTimeAdd function and tests within timezones with DST. <a href="https://github.com/Azure/PSRule.Rules.Azure/issues/891">#891</a></li>
-</ul>
-</li>
 </ul>
 <h2 id="v170-b2108040pre-release">v1.7.0-B2108040 (pre-release)<a class="headerlink" href="#v170-b2108040pre-release" title="Permanent link">#</a></h2>
 <p>What's changed since pre-release v1.7.0-B2108020:</p>
 <ul>
-<li>New rules:<ul>
+<li>New rules:</li>
 <li>All resources:<ul>
-<li>Check template parameter files use metadata links. <a href="https://github.com/Azure/PSRule.Rules.Azure/issues/846">#846</a><ul>
+<li>Check template parameter files use metadata links. <a href="https://github.com/Azure/PSRule.Rules.Azure/issues/846">#846</a></li>
 <li>Configure the <code>AZURE_PARAMETER_FILE_METADATA_LINK</code> option to enable this rule.</li>
 </ul>
 </li>
-</ul>
-</li>
 <li>Azure Kubernetes Service:<ul>
-<li>Check clusters using Azure CNI should use large subnets. Thanks <a href="https://github.com/ArmaanMcleod">@ArmaanMcleod</a>. <a href="https://github.com/Azure/PSRule.Rules.Azure/issues/273">#273</a><ul>
+<li>Check clusters using Azure CNI should use large subnets. Thanks <a href="https://github.com/ArmaanMcleod">@ArmaanMcleod</a>. <a href="https://github.com/Azure/PSRule.Rules.Azure/issues/273">#273</a></li>
 <li>By default, a minimum of a <code>/23</code> subnet is required.</li>
 <li>Configure <code>AZURE_AKS_CNI_MINIMUM_CLUSTER_SUBNET_SIZE</code> to change the default minimum subnet size.</li>
-</ul>
-</li>
 </ul>
 </li>
 <li>Storage Account:<ul>
@@ -9743,74 +9361,56 @@
 </ul>
 </li>
 </ul>
-</li>
-</ul>
 <h2 id="v170-b2108020pre-release">v1.7.0-B2108020 (pre-release)<a class="headerlink" href="#v170-b2108020pre-release" title="Permanent link">#</a></h2>
 <p>What's changed since v1.6.0:</p>
 <ul>
-<li>New rules:<ul>
+<li>New rules:</li>
 <li>Azure Kubernetes Service:<ul>
 <li>Check clusters use auto-scale node pools. Thanks <a href="https://github.com/ArmaanMcleod">@ArmaanMcleod</a>. <a href="https://github.com/Azure/PSRule.Rules.Azure/issues/218">#218</a></li>
 </ul>
 </li>
-</ul>
-</li>
-<li>Updated rules:<ul>
+<li>Updated rules:</li>
 <li>Virtual Network:<ul>
 <li>Excluded <code>AzureFirewallManagementSubnet</code> from <code>Azure.VNET.UseNSGs</code>. <a href="https://github.com/Azure/PSRule.Rules.Azure/issues/869">#869</a></li>
 </ul>
 </li>
-</ul>
-</li>
-<li>Engineering:<ul>
+<li>Engineering:</li>
 <li>Bump PSRule dependency to v1.6.0. <a href="https://github.com/Azure/PSRule.Rules.Azure/issues/871">#871</a></li>
-</ul>
-</li>
 </ul>
 <h2 id="v160">v1.6.0<a class="headerlink" href="#v160" title="Permanent link">#</a></h2>
 <p>What's changed since v1.5.1:</p>
 <ul>
-<li>New features:<ul>
+<li>New features:</li>
 <li><strong>Experimental</strong>: Added support for expansion from Bicep source files. <a href="https://github.com/Azure/PSRule.Rules.Azure/issues/848">#848</a> <a href="https://github.com/Azure/PSRule.Rules.Azure/issues/670">#670</a> <a href="https://github.com/Azure/PSRule.Rules.Azure/issues/858">#858</a><ul>
 <li>Bicep support is currently experimental.</li>
 <li>To opt-in set the <code>AZURE_BICEP_FILE_EXPANSION</code> configuration to <code>true</code>.</li>
 <li>For more information see <a href="https://azure.github.io/PSRule.Rules.Azure/using-bicep/">Using Bicep</a>.</li>
 </ul>
 </li>
-</ul>
-</li>
-<li>New rules:<ul>
+<li>New rules:</li>
 <li>Application Gateways:<ul>
 <li>Check Application Gateways publish endpoints by HTTPS. <a href="https://github.com/Azure/PSRule.Rules.Azure/issues/841">#841</a></li>
 </ul>
 </li>
-</ul>
-</li>
-<li>Engineering:<ul>
+<li>Engineering:</li>
 <li>Bump PSRule dependency to v1.5.0. <a href="https://github.com/Azure/PSRule.Rules.Azure/issues/832">#832</a></li>
 <li>Migration of Pester v4 tests to Pester v5. Thanks <a href="https://github.com/ArmaanMcleod">@ArmaanMcleod</a>. <a href="https://github.com/Azure/PSRule.Rules.Azure/issues/395">#395</a></li>
 </ul>
-</li>
-</ul>
 <p>What's changed since pre-release v1.6.0-B2108038:</p>
 <ul>
-<li>Bug fixes:<ul>
+<li>Bug fixes:</li>
 <li>Fixed Bicep expand creates deadlock and times out. <a href="https://github.com/Azure/PSRule.Rules.Azure/issues/863">#863</a></li>
-</ul>
-</li>
 </ul>
 <h2 id="v160-b2108038pre-release">v1.6.0-B2108038 (pre-release)<a class="headerlink" href="#v160-b2108038pre-release" title="Permanent link">#</a></h2>
 <p>What's changed since pre-release v1.6.0-B2108023:</p>
 <ul>
-<li>Bug fixes:<ul>
+<li>Bug fixes:</li>
 <li>Fixed Bicep expand hangs analysis. <a href="https://github.com/Azure/PSRule.Rules.Azure/issues/858">#858</a></li>
-</ul>
-</li>
 </ul>
 <h2 id="v160-b2108023pre-release">v1.6.0-B2108023 (pre-release)<a class="headerlink" href="#v160-b2108023pre-release" title="Permanent link">#</a></h2>
 <p>What's changed since pre-release v1.6.0-B2107028:</p>
 <ul>
-<li>New features:<ul>
+<li>New features:</li>
 <li><strong>Experimental</strong>: Added support for expansion from Bicep source files. <a href="https://github.com/Azure/PSRule.Rules.Azure/issues/848">#848</a> <a href="https://github.com/Azure/PSRule.Rules.Azure/issues/670">#670</a><ul>
 <li>Bicep support is currently experimental.</li>
 <li>To opt-in set the <code>AZURE_BICEP_FILE_EXPANSION</code> configuration to <code>true</code>.</li>
@@ -9818,65 +9418,47 @@
 </ul>
 </li>
 </ul>
-</li>
-</ul>
 <h2 id="v160-b2107028pre-release">v1.6.0-B2107028 (pre-release)<a class="headerlink" href="#v160-b2107028pre-release" title="Permanent link">#</a></h2>
 <p>What's changed since v1.5.1:</p>
 <ul>
-<li>New rules:<ul>
+<li>New rules:</li>
 <li>Application Gateways:<ul>
 <li>Check Application Gateways publish endpoints by HTTPS. <a href="https://github.com/Azure/PSRule.Rules.Azure/issues/841">#841</a></li>
 </ul>
 </li>
-</ul>
-</li>
-<li>Engineering:<ul>
+<li>Engineering:</li>
 <li>Bump PSRule dependency to v1.5.0. <a href="https://github.com/Azure/PSRule.Rules.Azure/issues/832">#832</a></li>
-</ul>
-</li>
 </ul>
 <h2 id="v151">v1.5.1<a class="headerlink" href="#v151" title="Permanent link">#</a></h2>
 <p>What's changed since v1.5.0:</p>
 <ul>
-<li>Bug fixes:<ul>
+<li>Bug fixes:</li>
 <li>Fixed rule does not detect more restrictive NSG rules. <a href="https://github.com/Azure/PSRule.Rules.Azure/issues/831">#831</a></li>
-</ul>
-</li>
 </ul>
 <h2 id="v150">v1.5.0<a class="headerlink" href="#v150" title="Permanent link">#</a></h2>
 <p>What's changed since v1.4.1:</p>
 <ul>
-<li>New features:<ul>
+<li>New features:</li>
 <li>Added <code>Azure.GA_2021_06</code> baseline. <a href="https://github.com/Azure/PSRule.Rules.Azure/issues/822">#822</a><ul>
 <li>Includes rules released before or during June 2021 for Azure GA features.</li>
 <li>Marked baseline <code>Azure.GA_2021_03</code> as obsolete.</li>
 </ul>
 </li>
-</ul>
-</li>
-<li>New rules:<ul>
+<li>New rules:</li>
 <li>Application Insights:<ul>
 <li>Check App Insights resources use workspace-based configuration. <a href="https://github.com/Azure/PSRule.Rules.Azure/issues/813">#813</a></li>
 <li>Check App Insights resources meet naming requirements. <a href="https://github.com/Azure/PSRule.Rules.Azure/issues/814">#814</a></li>
 </ul>
 </li>
-</ul>
-</li>
-<li>General improvements:<ul>
+<li>General improvements:</li>
 <li>Exclude not applicable rules for templates generated with Bicep and PSArm. <a href="https://github.com/Azure/PSRule.Rules.Azure/issues/815">#815</a></li>
 <li>Updated rule help to use docs pages for online version. <a href="https://github.com/Azure/PSRule.Rules.Azure/issues/824">#824</a></li>
-</ul>
-</li>
-<li>Engineering:<ul>
+<li>Engineering:</li>
 <li>Bump PSRule dependency to v1.4.0. <a href="https://github.com/Azure/PSRule.Rules.Azure/issues/823">#823</a></li>
 <li>Bump YamlDotNet dependency to v11.2.1. <a href="https://github.com/Azure/PSRule.Rules.Azure/pull/821">#821</a></li>
 <li>Migrate project to Azure GitHub organization and updated links. <a href="https://github.com/Azure/PSRule.Rules.Azure/pull/800">#800</a></li>
-</ul>
-</li>
-<li>Bug fixes:<ul>
+<li>Bug fixes:</li>
 <li>Fixed detection of parameters and variables with line breaks. <a href="https://github.com/Azure/PSRule.Rules.Azure/issues/811">#811</a></li>
-</ul>
-</li>
 </ul>
 <p>What's changed since pre-release v1.5.0-B2107002:</p>
 <ul>
@@ -9885,53 +9467,39 @@
 <h2 id="v150-b2107002pre-release">v1.5.0-B2107002 (pre-release)<a class="headerlink" href="#v150-b2107002pre-release" title="Permanent link">#</a></h2>
 <p>What's changed since pre-release v1.5.0-B2106018:</p>
 <ul>
-<li>New features:<ul>
+<li>New features:</li>
 <li>Added <code>Azure.GA_2021_06</code> baseline. <a href="https://github.com/Azure/PSRule.Rules.Azure/issues/822">#822</a><ul>
 <li>Includes rules released before or during June 2021 for Azure GA features.</li>
 <li>Marked baseline <code>Azure.GA_2021_03</code> as obsolete.</li>
 </ul>
 </li>
-</ul>
-</li>
-<li>General improvements:<ul>
+<li>General improvements:</li>
 <li>Updated rule help to use docs pages for online version. <a href="https://github.com/Azure/PSRule.Rules.Azure/issues/824">#824</a></li>
-</ul>
-</li>
-<li>Engineering:<ul>
+<li>Engineering:</li>
 <li>Bump PSRule dependency to v1.4.0. <a href="https://github.com/Azure/PSRule.Rules.Azure/issues/823">#823</a></li>
 <li>Bump YamlDotNet dependency to v11.2.1. <a href="https://github.com/Azure/PSRule.Rules.Azure/pull/821">#821</a></li>
-</ul>
-</li>
 </ul>
 <h2 id="v150-b2106018pre-release">v1.5.0-B2106018 (pre-release)<a class="headerlink" href="#v150-b2106018pre-release" title="Permanent link">#</a></h2>
 <p>What's changed since v1.4.1:</p>
 <ul>
-<li>New rules:<ul>
+<li>New rules:</li>
 <li>Application Insights:<ul>
 <li>Check App Insights resources use workspace-based configuration. <a href="https://github.com/Azure/PSRule.Rules.Azure/issues/813">#813</a></li>
 <li>Check App Insights resources meet naming requirements. <a href="https://github.com/Azure/PSRule.Rules.Azure/issues/814">#814</a></li>
 </ul>
 </li>
-</ul>
-</li>
-<li>General improvements:<ul>
+<li>General improvements:</li>
 <li>Exclude not applicable rules for templates generated with Bicep and PSArm. <a href="https://github.com/Azure/PSRule.Rules.Azure/issues/815">#815</a></li>
-</ul>
-</li>
-<li>Engineering:<ul>
+<li>Engineering:</li>
 <li>Bump YamlDotNet dependency to v11.2.0. <a href="https://github.com/Azure/PSRule.Rules.Azure/pull/801">#801</a></li>
 <li>Migrate project to Azure GitHub organization and updated links. <a href="https://github.com/Azure/PSRule.Rules.Azure/pull/800">#800</a></li>
-</ul>
-</li>
-<li>Bug fixes:<ul>
+<li>Bug fixes:</li>
 <li>Fixed detection of parameters and variables with line breaks. <a href="https://github.com/Azure/PSRule.Rules.Azure/issues/811">#811</a></li>
-</ul>
-</li>
 </ul>
 <h2 id="v141">v1.4.1<a class="headerlink" href="#v141" title="Permanent link">#</a></h2>
 <p>What's changed since v1.4.0:</p>
 <ul>
-<li>Bug fixes:<ul>
+<li>Bug fixes:</li>
 <li>Fixed boolean string conversion case. <a href="https://github.com/Azure/PSRule.Rules.Azure/issues/793">#793</a></li>
 <li>Fixed case sensitive property matching. <a href="https://github.com/Azure/PSRule.Rules.Azure/issues/794">#794</a></li>
 <li>Fixed automatic expansion of template parameter files. <a href="https://github.com/Azure/PSRule.Rules.Azure/issues/796">#796</a><ul>
@@ -9940,20 +9508,16 @@
 </ul>
 </li>
 </ul>
-</li>
-</ul>
 <h2 id="v140">v1.4.0<a class="headerlink" href="#v140" title="Permanent link">#</a></h2>
 <p>What's changed since v1.3.2:</p>
 <ul>
-<li>New features:<ul>
+<li>New features:</li>
 <li>Automatically expand template from parameter files for analysis. <a href="https://github.com/Azure/PSRule.Rules.Azure/issues/772">#772</a><ul>
 <li>Previously templates needed to be exported with <code>Export-AzRuleTemplateData</code>.</li>
 <li>To export template data automatically use PSRule cmdlets with <code>-Format File</code>.</li>
 </ul>
 </li>
-</ul>
-</li>
-<li>New rules:<ul>
+<li>New rules:</li>
 <li>Cognitive Search:<ul>
 <li>Check search services meet index SLA replica requirement. <a href="https://github.com/Azure/PSRule.Rules.Azure/issues/761">#761</a></li>
 <li>Check search services meet query SLA replica requirement. <a href="https://github.com/Azure/PSRule.Rules.Azure/issues/762">#762</a></li>
@@ -9970,40 +9534,28 @@
 <li>Check clusters used Azure RBAC for Kubernetes authorization. <a href="https://github.com/Azure/PSRule.Rules.Azure/issues/789">#789</a></li>
 </ul>
 </li>
-</ul>
-</li>
-<li>Updated rules:<ul>
+<li>Updated rules:</li>
 <li>Azure Kubernetes Service:<ul>
 <li>Updated <code>Azure.AKS.Version</code> to 1.20.5. <a href="https://github.com/Azure/PSRule.Rules.Azure/issues/767">#767</a></li>
 </ul>
 </li>
-</ul>
-</li>
-<li>General improvements:<ul>
+<li>General improvements:</li>
 <li>Automatically nest template sub-resources for analysis. <a href="https://github.com/Azure/PSRule.Rules.Azure/issues/746">#746</a><ul>
 <li>Sub-resources such as diagnostic logs or configurations are automatically nested.</li>
-<li>Automatic nesting a resource requires:<ul>
+<li>Automatic nesting a resource requires:</li>
 <li>The parent resource is defined in the same template.</li>
 <li>The sub-resource depends on the parent resource.</li>
-</ul>
-</li>
 </ul>
 </li>
 <li>Added support for source location references to template files. <a href="https://github.com/Azure/PSRule.Rules.Azure/issues/781">#781</a><ul>
 <li>Output includes source location to resources exported from a templates.</li>
 </ul>
 </li>
-</ul>
-</li>
-<li>Bug fixes:<ul>
+<li>Bug fixes:</li>
 <li>Fixed string index parsing in expressions with whitespace. <a href="https://github.com/Azure/PSRule.Rules.Azure/issues/775">#775</a></li>
 <li>Fixed base for DateTimeAdd is not a valid string. <a href="https://github.com/Azure/PSRule.Rules.Azure/issues/777">#777</a></li>
-</ul>
-</li>
-<li>Engineering:<ul>
+<li>Engineering:</li>
 <li>Added source link to project. <a href="https://github.com/Azure/PSRule.Rules.Azure/issues/783">#783</a></li>
-</ul>
-</li>
 </ul>
 <p>What's changed since pre-release v1.4.0-B2105057:</p>
 <ul>
@@ -10012,7 +9564,7 @@
 <h2 id="v140-b2105057pre-release">v1.4.0-B2105057 (pre-release)<a class="headerlink" href="#v140-b2105057pre-release" title="Permanent link">#</a></h2>
 <p>What's changed since pre-release v1.4.0-B2105050:</p>
 <ul>
-<li>New rules:<ul>
+<li>New rules:</li>
 <li>Azure Kubernetes Service:<ul>
 <li>Check clusters use AKS-managed Azure AD integration. <a href="https://github.com/Azure/PSRule.Rules.Azure/issues/436">#436</a></li>
 <li>Check clusters have local account disabled (preview). <a href="https://github.com/Azure/PSRule.Rules.Azure/issues/786">#786</a></li>
@@ -10021,52 +9573,40 @@
 <li>Check clusters used Azure RBAC for Kubernetes authorization. <a href="https://github.com/Azure/PSRule.Rules.Azure/issues/789">#789</a></li>
 </ul>
 </li>
-</ul>
-</li>
-<li>Updated rules:<ul>
+<li>Updated rules:</li>
 <li>Azure Kubernetes Service:<ul>
 <li>Updated <code>Azure.AKS.Version</code> to 1.20.5. <a href="https://github.com/Azure/PSRule.Rules.Azure/issues/767">#767</a></li>
 </ul>
 </li>
-</ul>
-</li>
-<li>Engineering:<ul>
+<li>Engineering:</li>
 <li>Added source link to project. <a href="https://github.com/Azure/PSRule.Rules.Azure/issues/783">#783</a></li>
-</ul>
-</li>
 </ul>
 <h2 id="v140-b2105050pre-release">v1.4.0-B2105050 (pre-release)<a class="headerlink" href="#v140-b2105050pre-release" title="Permanent link">#</a></h2>
 <p>What's changed since pre-release v1.4.0-B2105044:</p>
 <ul>
-<li>General improvements:<ul>
+<li>General improvements:</li>
 <li>Added support for source location references to template files. <a href="https://github.com/Azure/PSRule.Rules.Azure/issues/781">#781</a><ul>
 <li>Output includes source location to resources exported from a templates.</li>
-</ul>
-</li>
 </ul>
 </li>
 </ul>
 <h2 id="v140-b2105044pre-release">v1.4.0-B2105044 (pre-release)<a class="headerlink" href="#v140-b2105044pre-release" title="Permanent link">#</a></h2>
 <p>What's changed since pre-release v1.4.0-B2105027:</p>
 <ul>
-<li>New features:<ul>
+<li>New features:</li>
 <li>Automatically expand template from parameter files for analysis. <a href="https://github.com/Azure/PSRule.Rules.Azure/issues/772">#772</a><ul>
 <li>Previously templates needed to be exported with <code>Export-AzRuleTemplateData</code>.</li>
 <li>To export template data automatically use PSRule cmdlets with <code>-Format File</code>.</li>
 </ul>
 </li>
-</ul>
-</li>
-<li>Bug fixes:<ul>
+<li>Bug fixes:</li>
 <li>Fixed string index parsing in expressions with whitespace. <a href="https://github.com/Azure/PSRule.Rules.Azure/issues/775">#775</a></li>
 <li>Fixed base for DateTimeAdd is not a valid string. <a href="https://github.com/Azure/PSRule.Rules.Azure/issues/777">#777</a></li>
-</ul>
-</li>
 </ul>
 <h2 id="v140-b2105027pre-release">v1.4.0-B2105027 (pre-release)<a class="headerlink" href="#v140-b2105027pre-release" title="Permanent link">#</a></h2>
 <p>What's changed since pre-release v1.4.0-B2105020:</p>
 <ul>
-<li>New rules:<ul>
+<li>New rules:</li>
 <li>Cognitive Search:<ul>
 <li>Check search services meet index SLA replica requirement. <a href="https://github.com/Azure/PSRule.Rules.Azure/issues/761">#761</a></li>
 <li>Check search services meet query SLA replica requirement. <a href="https://github.com/Azure/PSRule.Rules.Azure/issues/762">#762</a></li>
@@ -10076,45 +9616,35 @@
 </ul>
 </li>
 </ul>
-</li>
-</ul>
 <h2 id="v140-b2105020pre-release">v1.4.0-B2105020 (pre-release)<a class="headerlink" href="#v140-b2105020pre-release" title="Permanent link">#</a></h2>
 <p>What's changed since v1.3.2:</p>
 <ul>
-<li>General improvements:<ul>
+<li>General improvements:</li>
 <li>Automatically nest template sub-resources for analysis. <a href="https://github.com/Azure/PSRule.Rules.Azure/issues/746">#746</a><ul>
 <li>Sub-resources such as diagnostic logs or configurations are automatically nested.</li>
-<li>Automatic nesting a resource requires:<ul>
+<li>Automatic nesting a resource requires:</li>
 <li>The parent resource is defined in the same template.</li>
 <li>The sub-resource depends on the parent resource.</li>
-</ul>
-</li>
-</ul>
-</li>
 </ul>
 </li>
 </ul>
 <h2 id="v132">v1.3.2<a class="headerlink" href="#v132" title="Permanent link">#</a></h2>
 <p>What's changed since v1.3.1:</p>
 <ul>
-<li>Bug fixes:<ul>
+<li>Bug fixes:</li>
 <li>Fixed rule reason reported the parameter inputObject is null. <a href="https://github.com/Azure/PSRule.Rules.Azure/issues/753">#753</a></li>
-</ul>
-</li>
 </ul>
 <h2 id="v131">v1.3.1<a class="headerlink" href="#v131" title="Permanent link">#</a></h2>
 <p>What's changed since v1.3.0:</p>
 <ul>
-<li>Engineering:<ul>
+<li>Engineering:</li>
 <li>Bump PSRule dependency to v1.3.0. <a href="https://github.com/Azure/PSRule.Rules.Azure/issues/749">#749</a></li>
 <li>Bump YamlDotNet dependency to v11.1.1. <a href="https://github.com/Azure/PSRule.Rules.Azure/issues/742">#742</a></li>
-</ul>
-</li>
 </ul>
 <h2 id="v130">v1.3.0<a class="headerlink" href="#v130" title="Permanent link">#</a></h2>
 <p>What's changed since v1.2.1:</p>
 <ul>
-<li>New rules:<ul>
+<li>New rules:</li>
 <li>Policy:<ul>
 <li>Check policy assignment display name and description are set. <a href="https://github.com/Azure/PSRule.Rules.Azure/issues/725">#725</a></li>
 <li>Check policy assignment assigned by metadata is set. <a href="https://github.com/Azure/PSRule.Rules.Azure/issues/726">#726</a></li>
@@ -10122,38 +9652,26 @@
 <li>Check policy waiver exemptions have an expiry date set. <a href="https://github.com/Azure/PSRule.Rules.Azure/issues/724">#724</a></li>
 </ul>
 </li>
-</ul>
-</li>
-<li>Removed rules:<ul>
+<li>Removed rules:</li>
 <li>Storage:<ul>
-<li>Remove <code>Azure.Storage.UseEncryption</code> as Storage Service Encryption (SSE) is always on. <a href="https://github.com/Azure/PSRule.Rules.Azure/issues/630">#630</a><ul>
+<li>Remove <code>Azure.Storage.UseEncryption</code> as Storage Service Encryption (SSE) is always on. <a href="https://github.com/Azure/PSRule.Rules.Azure/issues/630">#630</a></li>
 <li>SSE is on by default and can not be disabled.</li>
 </ul>
 </li>
-</ul>
-</li>
-</ul>
-</li>
-<li>General improvements:<ul>
+<li>General improvements:</li>
 <li>Additional metadata added in parameter files is passed through with <code>Get-AzRuleTemplateLink</code>. <a href="https://github.com/Azure/PSRule.Rules.Azure/issues/706">#706</a></li>
 <li>Improved binding support for File inputs. <a href="https://github.com/Azure/PSRule.Rules.Azure/issues/480">#480</a><ul>
 <li>Template and parameter file names now return a relative path instead of full path.</li>
 </ul>
 </li>
 <li>Added API version for each module resource. <a href="https://github.com/Azure/PSRule.Rules.Azure/issues/729">#729</a></li>
-</ul>
-</li>
-<li>Engineering:<ul>
+<li>Engineering:</li>
 <li>Clean up depreciated warning message for configuration option <code>azureAllowedRegions</code>. <a href="https://github.com/Azure/PSRule.Rules.Azure/issues/737">#737</a></li>
 <li>Clean up depreciated warning message for configuration option <code>minAKSVersion</code>. <a href="https://github.com/Azure/PSRule.Rules.Azure/issues/738">#738</a></li>
 <li>Bump PSRule dependency to v1.2.0. <a href="https://github.com/Azure/PSRule.Rules.Azure/issues/713">#713</a></li>
-</ul>
-</li>
-<li>Bug fixes:<ul>
+<li>Bug fixes:</li>
 <li>Fixed could not load file or assembly YamlDotNet. <a href="https://github.com/Azure/PSRule.Rules.Azure/issues/741">#741</a><ul>
 <li>This fix pins the PSRule version to v1.2.0 until the next stable release of PSRule for Azure.</li>
-</ul>
-</li>
 </ul>
 </li>
 </ul>
@@ -10164,18 +9682,16 @@
 <h2 id="v130-b2104040pre-release">v1.3.0-B2104040 (pre-release)<a class="headerlink" href="#v130-b2104040pre-release" title="Permanent link">#</a></h2>
 <p>What's changed since pre-release v1.3.0-B2104034:</p>
 <ul>
-<li>Bug fixes:<ul>
+<li>Bug fixes:</li>
 <li>Fixed could not load file or assembly YamlDotNet. <a href="https://github.com/Azure/PSRule.Rules.Azure/issues/741">#741</a><ul>
 <li>This fix pins the PSRule version to v1.2.0 until the next stable release of PSRule for Azure.</li>
-</ul>
-</li>
 </ul>
 </li>
 </ul>
 <h2 id="v130-b2104034pre-release">v1.3.0-B2104034 (pre-release)<a class="headerlink" href="#v130-b2104034pre-release" title="Permanent link">#</a></h2>
 <p>What's changed since pre-release v1.3.0-B2104023:</p>
 <ul>
-<li>New rules:<ul>
+<li>New rules:</li>
 <li>Policy:<ul>
 <li>Check policy assignment display name and description are set. <a href="https://github.com/Azure/PSRule.Rules.Azure/issues/725">#725</a></li>
 <li>Check policy assignment assigned by metadata is set. <a href="https://github.com/Azure/PSRule.Rules.Azure/issues/726">#726</a></li>
@@ -10183,97 +9699,69 @@
 <li>Check policy waiver exemptions have an expiry date set. <a href="https://github.com/Azure/PSRule.Rules.Azure/issues/724">#724</a></li>
 </ul>
 </li>
-</ul>
-</li>
-<li>Engineering:<ul>
+<li>Engineering:</li>
 <li>Clean up depreciated warning message for configuration option <code>azureAllowedRegions</code>. <a href="https://github.com/Azure/PSRule.Rules.Azure/issues/737">#737</a></li>
 <li>Clean up depreciated warning message for configuration option <code>minAKSVersion</code>. <a href="https://github.com/Azure/PSRule.Rules.Azure/issues/738">#738</a></li>
-</ul>
-</li>
 </ul>
 <h2 id="v130-b2104023pre-release">v1.3.0-B2104023 (pre-release)<a class="headerlink" href="#v130-b2104023pre-release" title="Permanent link">#</a></h2>
 <p>What's changed since pre-release v1.3.0-B2104013:</p>
 <ul>
-<li>General improvements:<ul>
+<li>General improvements:</li>
 <li>Improved binding support for File inputs. <a href="https://github.com/Azure/PSRule.Rules.Azure/issues/480">#480</a><ul>
 <li>Template and parameter file names now return a relative path instead of full path.</li>
 </ul>
 </li>
 <li>Added API version for each module resource. <a href="https://github.com/Azure/PSRule.Rules.Azure/issues/729">#729</a></li>
 </ul>
-</li>
-</ul>
 <h2 id="v130-b2104013pre-release">v1.3.0-B2104013 (pre-release)<a class="headerlink" href="#v130-b2104013pre-release" title="Permanent link">#</a></h2>
 <p>What's changed since pre-release v1.3.0-B2103007:</p>
 <ul>
-<li>Engineering:<ul>
+<li>Engineering:</li>
 <li>Bump PSRule dependency to v1.2.0. <a href="https://github.com/Azure/PSRule.Rules.Azure/issues/713">#713</a></li>
-</ul>
-</li>
-<li>Bug fixes:<ul>
+<li>Bug fixes:</li>
 <li>Fixed export not expanding nested deployments. <a href="https://github.com/Azure/PSRule.Rules.Azure/issues/715">#715</a></li>
-</ul>
-</li>
 </ul>
 <h2 id="v130-b2103007pre-release">v1.3.0-B2103007 (pre-release)<a class="headerlink" href="#v130-b2103007pre-release" title="Permanent link">#</a></h2>
 <p>What's changed since v1.2.0:</p>
 <ul>
-<li>Removed rules:<ul>
+<li>Removed rules:</li>
 <li>Storage:<ul>
-<li>Remove <code>Azure.Storage.UseEncryption</code> as Storage Service Encryption (SSE) is always on. <a href="https://github.com/Azure/PSRule.Rules.Azure/issues/630">#630</a><ul>
+<li>Remove <code>Azure.Storage.UseEncryption</code> as Storage Service Encryption (SSE) is always on. <a href="https://github.com/Azure/PSRule.Rules.Azure/issues/630">#630</a></li>
 <li>SSE is on by default and can not be disabled.</li>
 </ul>
 </li>
-</ul>
-</li>
-</ul>
-</li>
-<li>General improvements:<ul>
+<li>General improvements:</li>
 <li>Additional metadata added in parameter files is passed through with <code>Get-AzRuleTemplateLink</code>. <a href="https://github.com/Azure/PSRule.Rules.Azure/issues/706">#706</a></li>
-</ul>
-</li>
 </ul>
 <h2 id="v121">v1.2.1<a class="headerlink" href="#v121" title="Permanent link">#</a></h2>
 <p>What's changed since v1.2.0:</p>
 <ul>
-<li>Bug fixes:<ul>
+<li>Bug fixes:</li>
 <li>Fixed export not expanding nested deployments. <a href="https://github.com/Azure/PSRule.Rules.Azure/issues/715">#715</a></li>
-</ul>
-</li>
 </ul>
 <h2 id="v120">v1.2.0<a class="headerlink" href="#v120" title="Permanent link">#</a></h2>
 <p>What's changed since v1.1.4:</p>
 <ul>
-<li>New features:<ul>
+<li>New features:</li>
 <li>Added <code>Azure.GA_2021_03</code> baseline. <a href="https://github.com/Azure/PSRule.Rules.Azure/issues/673">#673</a><ul>
 <li>Includes rules released before or during March 2021 for Azure GA features.</li>
 <li>Marked baseline <code>Azure.GA_2020_12</code> as obsolete.</li>
 </ul>
 </li>
-</ul>
-</li>
-<li>New rules:<ul>
+<li>New rules:</li>
 <li>Key Vault:<ul>
 <li>Check vaults, keys, and secrets meet name requirements. <a href="https://github.com/Azure/PSRule.Rules.Azure/issues/646">#646</a></li>
 </ul>
 </li>
-</ul>
-</li>
-<li>Updated rules:<ul>
+<li>Updated rules:</li>
 <li>Azure Kubernetes Service:<ul>
 <li>Updated <code>Azure.AKS.Version</code> to 1.19.7. <a href="https://github.com/Azure/PSRule.Rules.Azure/issues/696">#696</a></li>
 </ul>
 </li>
-</ul>
-</li>
-<li>General improvements:<ul>
+<li>General improvements:</li>
 <li>Added support for user defined functions in templates. <a href="https://github.com/Azure/PSRule.Rules.Azure/issues/682">#682</a></li>
-</ul>
-</li>
-<li>Engineering:<ul>
+<li>Engineering:</li>
 <li>Bump PSRule dependency to v1.1.0. <a href="https://github.com/Azure/PSRule.Rules.Azure/issues/692">#692</a></li>
-</ul>
-</li>
 </ul>
 <p>What's changed since pre-release v1.2.0-B2103044:</p>
 <ul>
@@ -10282,93 +9770,73 @@
 <h2 id="v120-b2103044pre-release">v1.2.0-B2103044 (pre-release)<a class="headerlink" href="#v120-b2103044pre-release" title="Permanent link">#</a></h2>
 <p>What's changed since pre-release v1.2.0-B2103032:</p>
 <ul>
-<li>New features:<ul>
+<li>New features:</li>
 <li>Added <code>Azure.GA_2021_03</code> baseline. <a href="https://github.com/Azure/PSRule.Rules.Azure/issues/673">#673</a><ul>
 <li>Includes rules released before or during March 2021 for Azure GA features.</li>
 <li>Marked baseline <code>Azure.GA_2020_12</code> as obsolete.</li>
 </ul>
 </li>
-</ul>
-</li>
-<li>Updated rules:<ul>
+<li>Updated rules:</li>
 <li>Azure Kubernetes Service:<ul>
 <li>Updated <code>Azure.AKS.Version</code> to 1.19.7. <a href="https://github.com/Azure/PSRule.Rules.Azure/issues/696">#696</a></li>
-</ul>
-</li>
 </ul>
 </li>
 </ul>
 <h2 id="v120-b2103032pre-release">v1.2.0-B2103032 (pre-release)<a class="headerlink" href="#v120-b2103032pre-release" title="Permanent link">#</a></h2>
 <p>What's changed since pre-release v1.2.0-B2103024:</p>
 <ul>
-<li>New rules:<ul>
+<li>New rules:</li>
 <li>Key Vault:<ul>
 <li>Check vaults, keys, and secrets meet name requirements. <a href="https://github.com/Azure/PSRule.Rules.Azure/issues/646">#646</a></li>
 </ul>
 </li>
-</ul>
-</li>
-<li>Engineering:<ul>
+<li>Engineering:</li>
 <li>Bump PSRule dependency to v1.1.0. <a href="https://github.com/Azure/PSRule.Rules.Azure/issues/692">#692</a></li>
-</ul>
-</li>
 </ul>
 <h2 id="v120-b2103024pre-release">v1.2.0-B2103024 (pre-release)<a class="headerlink" href="#v120-b2103024pre-release" title="Permanent link">#</a></h2>
 <p>What's changed since v1.1.4:</p>
 <ul>
-<li>General improvements:<ul>
+<li>General improvements:</li>
 <li>Added support for user defined functions in templates. <a href="https://github.com/Azure/PSRule.Rules.Azure/issues/682">#682</a></li>
-</ul>
-</li>
 </ul>
 <h2 id="v114">v1.1.4<a class="headerlink" href="#v114" title="Permanent link">#</a></h2>
 <p>What's changed since v1.1.3:</p>
 <ul>
-<li>Bug fixes:<ul>
+<li>Bug fixes:</li>
 <li>Fixed handling of literal index with copyIndex function. <a href="https://github.com/Azure/PSRule.Rules.Azure/issues/686">#686</a></li>
 <li>Fixed handling of inner scoped nested deployments. <a href="https://github.com/Azure/PSRule.Rules.Azure/issues/687">#687</a></li>
-</ul>
-</li>
 </ul>
 <h2 id="v113">v1.1.3<a class="headerlink" href="#v113" title="Permanent link">#</a></h2>
 <p>What's changed since v1.1.2:</p>
 <ul>
-<li>Bug fixes:<ul>
+<li>Bug fixes:</li>
 <li>Fixed parsing of property names for functions across multiple lines. <a href="https://github.com/Azure/PSRule.Rules.Azure/issues/683">#683</a></li>
-</ul>
-</li>
 </ul>
 <h2 id="v112">v1.1.2<a class="headerlink" href="#v112" title="Permanent link">#</a></h2>
 <p>What's changed since v1.1.1:</p>
 <ul>
-<li>Bug fixes:<ul>
+<li>Bug fixes:</li>
 <li>Fixed copy peer property resolve. <a href="https://github.com/Azure/PSRule.Rules.Azure/issues/677">#677</a></li>
 <li>Fixed partial resource group or subscription object not populating. <a href="https://github.com/Azure/PSRule.Rules.Azure/issues/678">#678</a></li>
 <li>Fixed lazy loading of environment and resource providers. <a href="https://github.com/Azure/PSRule.Rules.Azure/issues/679">#679</a></li>
 </ul>
-</li>
-</ul>
 <h2 id="v111">v1.1.1<a class="headerlink" href="#v111" title="Permanent link">#</a></h2>
 <p>What's changed since v1.1.0:</p>
 <ul>
-<li>Bug fixes:<ul>
+<li>Bug fixes:</li>
 <li>Fixed support for parameter file schemas. <a href="https://github.com/Azure/PSRule.Rules.Azure/issues/674">#674</a></li>
-</ul>
-</li>
 </ul>
 <h2 id="v110">v1.1.0<a class="headerlink" href="#v110" title="Permanent link">#</a></h2>
 <p>What's changed since v1.0.0:</p>
 <ul>
-<li>New features:<ul>
+<li>New features:</li>
 <li>Exporting template with <code>Export-AzRuleTemplateData</code> supports custom resource group and subscription. <a href="https://github.com/Azure/PSRule.Rules.Azure/issues/651">#651</a><ul>
 <li>Subscription and resource group used for deployment can be specified instead of using defaults.</li>
 <li><code>ResourceGroupName</code> parameter of <code>Export-AzRuleTemplateData</code> has been renamed to <code>ResourceGroup</code>.</li>
 <li>Added a parameter alias for <code>ResourceGroupName</code> on <code>Export-AzRuleTemplateData</code>.</li>
 </ul>
 </li>
-</ul>
-</li>
-<li>New rules:<ul>
+<li>New rules:</li>
 <li>All resources:<ul>
 <li>Check template parameters are defined. <a href="https://github.com/Azure/PSRule.Rules.Azure/issues/631">#631</a></li>
 <li>Check location parameter is type string. <a href="https://github.com/Azure/PSRule.Rules.Azure/issues/632">#632</a></li>
@@ -10378,20 +9846,14 @@
 <li>Check increased debug detail is disabled for nested deployments. <a href="https://github.com/Azure/PSRule.Rules.Azure/issues/638">#638</a></li>
 </ul>
 </li>
-</ul>
-</li>
-<li>General improvements:<ul>
+<li>General improvements:</li>
 <li>Added support for matching template by name. <a href="https://github.com/Azure/PSRule.Rules.Azure/issues/661">#661</a><ul>
 <li><code>Get-AzRuleTemplateLink</code> discovers <code>&lt;templateName&gt;.json</code> from <code>&lt;templateName&gt;.parameters.json</code>.</li>
 </ul>
 </li>
-</ul>
-</li>
-<li>Engineering:<ul>
+<li>Engineering:</li>
 <li>Bump PSRule dependency to v1.0.3. <a href="https://github.com/Azure/PSRule.Rules.Azure/issues/648">#648</a></li>
-</ul>
-</li>
-<li>Bug fixes:<ul>
+<li>Bug fixes:</li>
 <li>Fixed <code>Azure.VM.ADE</code> to limit rule to exports only. <a href="https://github.com/Azure/PSRule.Rules.Azure/issues/644">#644</a></li>
 <li>Fixed <code>if</code> condition values evaluation order. <a href="https://github.com/Azure/PSRule.Rules.Azure/issues/652">#652</a></li>
 <li>Fixed handling of <code>int</code> parameters with large values. <a href="https://github.com/Azure/PSRule.Rules.Azure/issues/653">#653</a></li>
@@ -10400,8 +9862,6 @@
 <li>Fixed copy loop value does not fall within the expected range. <a href="https://github.com/Azure/PSRule.Rules.Azure/issues/664">#664</a></li>
 <li>Fixed template comparison functions handling of large integer values. <a href="https://github.com/Azure/PSRule.Rules.Azure/issues/666">#666</a></li>
 <li>Fixed handling of <code>createArray</code> function with no arguments. <a href="https://github.com/Azure/PSRule.Rules.Azure/issues/667">#667</a></li>
-</ul>
-</li>
 </ul>
 <p>What's changed since pre-release v1.1.0-B2102034:</p>
 <ul>
@@ -10410,24 +9870,20 @@
 <h2 id="v110-b2102034pre-release">v1.1.0-B2102034 (pre-release)<a class="headerlink" href="#v110-b2102034pre-release" title="Permanent link">#</a></h2>
 <p>What's changed since pre-release v1.1.0-B2102023:</p>
 <ul>
-<li>General improvements:<ul>
+<li>General improvements:</li>
 <li>Added support for matching template by name. <a href="https://github.com/Azure/PSRule.Rules.Azure/issues/661">#661</a><ul>
 <li><code>Get-AzRuleTemplateLink</code> discovers <code>&lt;templateName&gt;.json</code> from <code>&lt;templateName&gt;.parameters.json</code>.</li>
 </ul>
 </li>
-</ul>
-</li>
-<li>Bug fixes:<ul>
+<li>Bug fixes:</li>
 <li>Fixed copy loop value does not fall within the expected range. <a href="https://github.com/Azure/PSRule.Rules.Azure/issues/664">#664</a></li>
 <li>Fixed template comparison functions handling of large integer values. <a href="https://github.com/Azure/PSRule.Rules.Azure/issues/666">#666</a></li>
 <li>Fixed handling of <code>createArray</code> function with no arguments. <a href="https://github.com/Azure/PSRule.Rules.Azure/issues/667">#667</a></li>
 </ul>
-</li>
-</ul>
 <h2 id="v110-b2102023pre-release">v1.1.0-B2102023 (pre-release)<a class="headerlink" href="#v110-b2102023pre-release" title="Permanent link">#</a></h2>
 <p>What's changed since pre-release v1.1.0-B2102015:</p>
 <ul>
-<li>New features:<ul>
+<li>New features:</li>
 <li>Exporting template with <code>Export-AzRuleTemplateData</code> supports custom resource group and subscription. <a href="https://github.com/Azure/PSRule.Rules.Azure/issues/651">#651</a><ul>
 <li>Subscription and resource group used for deployment can be specified instead of using defaults.</li>
 <li><code>ResourceGroupName</code> parameter of <code>Export-AzRuleTemplateData</code> has been renamed to <code>ResourceGroup</code>.</li>
@@ -10435,35 +9891,27 @@
 </ul>
 </li>
 </ul>
-</li>
-</ul>
 <h2 id="v110-b2102015pre-release">v1.1.0-B2102015 (pre-release)<a class="headerlink" href="#v110-b2102015pre-release" title="Permanent link">#</a></h2>
 <p>What's changed since pre-release v1.1.0-B2102010:</p>
 <ul>
-<li>Bug fixes:<ul>
+<li>Bug fixes:</li>
 <li>Fixed <code>if</code> condition values evaluation order. <a href="https://github.com/Azure/PSRule.Rules.Azure/issues/652">#652</a></li>
 <li>Fixed handling of <code>int</code> parameters with large values. <a href="https://github.com/Azure/PSRule.Rules.Azure/issues/653">#653</a></li>
 <li>Fixed handling of expressions split over multiple lines. <a href="https://github.com/Azure/PSRule.Rules.Azure/issues/654">#654</a></li>
 <li>Fixed handling of bool parameter values within logical expressions. <a href="https://github.com/Azure/PSRule.Rules.Azure/issues/655">#655</a></li>
 </ul>
-</li>
-</ul>
 <h2 id="v110-b2102010pre-release">v1.1.0-B2102010 (pre-release)<a class="headerlink" href="#v110-b2102010pre-release" title="Permanent link">#</a></h2>
 <p>What's changed since pre-release v1.1.0-B2102001:</p>
 <ul>
-<li>Engineering:<ul>
+<li>Engineering:</li>
 <li>Bump PSRule dependency to v1.0.3. <a href="https://github.com/Azure/PSRule.Rules.Azure/issues/648">#648</a></li>
-</ul>
-</li>
-<li>Bug fixes:<ul>
+<li>Bug fixes:</li>
 <li>Fixed <code>Azure.VM.ADE</code> to limit rule to exports only. <a href="https://github.com/Azure/PSRule.Rules.Azure/issues/644">#644</a></li>
-</ul>
-</li>
 </ul>
 <h2 id="v110-b2102001pre-release">v1.1.0-B2102001 (pre-release)<a class="headerlink" href="#v110-b2102001pre-release" title="Permanent link">#</a></h2>
 <p>What's changed since v1.0.0:</p>
 <ul>
-<li>New rules:<ul>
+<li>New rules:</li>
 <li>All resources:<ul>
 <li>Check template parameters are defined. <a href="https://github.com/Azure/PSRule.Rules.Azure/issues/631">#631</a></li>
 <li>Check location parameter is type string. <a href="https://github.com/Azure/PSRule.Rules.Azure/issues/632">#632</a></li>
@@ -10473,17 +9921,13 @@
 <li>Check increased debug detail is disabled for nested deployments. <a href="https://github.com/Azure/PSRule.Rules.Azure/issues/638">#638</a></li>
 </ul>
 </li>
-</ul>
-</li>
-<li>Engineering:<ul>
+<li>Engineering:</li>
 <li>Bump PSRule dependency to v1.0.2. <a href="https://github.com/Azure/PSRule.Rules.Azure/issues/635">#635</a></li>
-</ul>
-</li>
 </ul>
 <h2 id="v100">v1.0.0<a class="headerlink" href="#v100" title="Permanent link">#</a></h2>
 <p>What's changed since v0.19.0:</p>
 <ul>
-<li>New rules:<ul>
+<li>New rules:</li>
 <li>All resources:<ul>
 <li>Check parameter default value type matches type. <a href="https://github.com/Azure/PSRule.Rules.Azure/issues/311">#311</a></li>
 <li>Check location parameter defaults to resource group. <a href="https://github.com/Azure/PSRule.Rules.Azure/issues/361">#361</a></li>
@@ -10499,16 +9943,12 @@
 <li>Check Service Fabric clusters use AAD client authentication. <a href="https://github.com/Azure/PSRule.Rules.Azure/issues/619">#619</a></li>
 </ul>
 </li>
-</ul>
-</li>
-<li>Updated rules:<ul>
+<li>Updated rules:</li>
 <li>Azure Kubernetes Service:<ul>
 <li>Updated <code>Azure.AKS.Version</code> to 1.19.6. <a href="https://github.com/Azure/PSRule.Rules.Azure/issues/603">#603</a></li>
 </ul>
 </li>
-</ul>
-</li>
-<li>General improvements:<ul>
+<li>General improvements:</li>
 <li>Renamed <code>Export-AzTemplateRuleData</code> to <code>Export-AzRuleTemplateData</code>. <a href="https://github.com/Azure/PSRule.Rules.Azure/issues/596">#596</a><ul>
 <li>New name <code>Export-AzRuleTemplateData</code> aligns with prefix of other cmdlets.</li>
 <li>Use of <code>Export-AzTemplateRuleData</code> is now deprecated and will be removed in the next major version.</li>
@@ -10517,12 +9957,8 @@
 </ul>
 </li>
 <li>Added support for <code>environment</code> template function. <a href="https://github.com/Azure/PSRule.Rules.Azure/issues/517">#517</a></li>
-</ul>
-</li>
-<li>Engineering:<ul>
+<li>Engineering:</li>
 <li>Bump PSRule dependency to v1.0.1. <a href="https://github.com/Azure/PSRule.Rules.Azure/issues/611">#611</a></li>
-</ul>
-</li>
 </ul>
 <p>What's changed since pre-release v1.0.0-B2101028:</p>
 <ul>
@@ -10531,14 +9967,12 @@
 <h2 id="v100-b2101028pre-release">v1.0.0-B2101028 (pre-release)<a class="headerlink" href="#v100-b2101028pre-release" title="Permanent link">#</a></h2>
 <p>What's changed since pre-release v1.0.0-B2101016:</p>
 <ul>
-<li>New rules:<ul>
+<li>New rules:</li>
 <li>All resources:<ul>
 <li>Check parameter default value type matches type. <a href="https://github.com/Azure/PSRule.Rules.Azure/issues/311">#311</a></li>
 </ul>
 </li>
-</ul>
-</li>
-<li>General improvements:<ul>
+<li>General improvements:</li>
 <li>Renamed <code>Export-AzTemplateRuleData</code> to <code>Export-AzRuleTemplateData</code>. <a href="https://github.com/Azure/PSRule.Rules.Azure/issues/596">#596</a><ul>
 <li>New name <code>Export-AzRuleTemplateData</code> aligns with prefix of other cmdlets.</li>
 <li>Use of <code>Export-AzTemplateRuleData</code> is now deprecated and will be removed in the next major version.</li>
@@ -10547,27 +9981,21 @@
 </ul>
 </li>
 </ul>
-</li>
-</ul>
 <h2 id="v100-b2101016pre-release">v1.0.0-B2101016 (pre-release)<a class="headerlink" href="#v100-b2101016pre-release" title="Permanent link">#</a></h2>
 <p>What's changed since pre-release v1.0.0-B2101006:</p>
 <ul>
-<li>New rules:<ul>
+<li>New rules:</li>
 <li>Service Fabric:<ul>
 <li>Check Service Fabric clusters use AAD client authentication. <a href="https://github.com/Azure/PSRule.Rules.Azure/issues/619">#619</a></li>
 </ul>
 </li>
-</ul>
-</li>
-<li>Bug fixes:<ul>
+<li>Bug fixes:</li>
 <li>Fixed reason <code>Azure.FrontDoor.ProbePath</code> so the probe name is included. <a href="https://github.com/Azure/PSRule.Rules.Azure/issues/617">#617</a></li>
-</ul>
-</li>
 </ul>
 <h2 id="v100-b2101006pre-release">v1.0.0-B2101006 (pre-release)<a class="headerlink" href="#v100-b2101006pre-release" title="Permanent link">#</a></h2>
 <p>What's changed since v0.19.0:</p>
 <ul>
-<li>New rules:<ul>
+<li>New rules:</li>
 <li>All resources:<ul>
 <li>Check location parameter defaults to resource group. <a href="https://github.com/Azure/PSRule.Rules.Azure/issues/361">#361</a></li>
 </ul>
@@ -10578,23 +10006,15 @@
 <li>Check Front Door uses HEAD requests for backend health probes. <a href="https://github.com/Azure/PSRule.Rules.Azure/issues/613">#613</a></li>
 </ul>
 </li>
-</ul>
-</li>
-<li>Updated rules:<ul>
+<li>Updated rules:</li>
 <li>Azure Kubernetes Service:<ul>
 <li>Updated <code>Azure.AKS.Version</code> to 1.19.6. <a href="https://github.com/Azure/PSRule.Rules.Azure/issues/603">#603</a></li>
 </ul>
 </li>
-</ul>
-</li>
-<li>General improvements:<ul>
+<li>General improvements:</li>
 <li>Added support for <code>environment</code> template function. <a href="https://github.com/Azure/PSRule.Rules.Azure/issues/517">#517</a></li>
-</ul>
-</li>
-<li>Engineering:<ul>
+<li>Engineering:</li>
 <li>Bump PSRule dependency to v1.0.1. <a href="https://github.com/Azure/PSRule.Rules.Azure/issues/611">#611</a></li>
-</ul>
-</li>
 </ul>
 
   <hr>
@@ -10602,7 +10022,7 @@
   <small>
     
       Last update:
-      2022-07-10
+      2022-07-17
     
   </small>
 </div>

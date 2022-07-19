@@ -6320,29 +6320,21 @@ Azure resources are analyzed before deployment as if they are deployed.</p>
 <p>This provides some unique benefits such as:</p>
 <ul>
 <li><strong>Improve success</strong> &mdash; Azure resources are resolved before deployment,
-  increasing success by finding errors earlier such as within a <abbr title="Pull Request">PR</abbr>.<ul>
+  increasing success by finding errors earlier such as within a <abbr title="Pull Request">PR</abbr>.</li>
 <li>Detect common templates issues such as missing parameters and <abbr title="JavaScript Object Notation">JSON</abbr> structure.</li>
 <li>Identify deployment issues such as invalid resource names and incorrect resource identifiers.</li>
-</ul>
-</li>
-<li><strong>As deployed</strong> &mdash; Analysis of Azure resources against Azure <abbr title="Well-Architected Framework">WAF</abbr> as if they are deployed.<ul>
+<li><strong>As deployed</strong> &mdash; Analysis of Azure resources against Azure <abbr title="Well-Architected Framework">WAF</abbr> as if they are deployed.</li>
 <li>Parameters, conditional resources, functions (built-in and user defined), variables,
-  and copy loops are resolved.</li>
+    and copy loops are resolved.</li>
 <li>Azure resource names are shown in passing and failing results.
-  Resolving issues with resource configurations can be targeted by resource.</li>
+    Resolving issues with resource configurations can be targeted by resource.</li>
 <li>Resource file locations for template and parameter files are included in results.</li>
-</ul>
-</li>
-<li><strong>Suppression by resource name</strong> &mdash; Azure resource names can be used to apply exceptions.<ul>
+<li><strong>Suppression by resource name</strong> &mdash; Azure resource names can be used to apply exceptions.</li>
 <li>Suppression allows for individual resources to be excluded from rules by name.</li>
-</ul>
-</li>
-<li><strong>Offline support</strong> &mdash; Static analysis is performed against source files instead of deployed resources.<ul>
+<li><strong>Offline support</strong> &mdash; Static analysis is performed against source files instead of deployed resources.</li>
 <li>Some functions that may be included in templates dynamically query Azure for current state.
-  For these functions standard placeholder values are used by default.
-  Functions that use placeholders include <code>reference</code>, <code>list*</code>.</li>
-</ul>
-</li>
+    For these functions standard placeholder values are used by default.
+    Functions that use placeholders include <code>reference</code>, <code>list*</code>.</li>
 </ul>
 <h3 id="featuresupport">Feature support<a class="headerlink" href="#featuresupport" title="Permanent link">#</a></h3>
 <p>Source expansion is supported with:</p>
@@ -6359,16 +6351,12 @@ Azure resources are analyzed before deployment as if they are deployed.</p>
 <p>Currently the following limitations apply:</p>
 <ul>
 <li>Required parameters in must be provided in parameter files or Bicep deployments.</li>
-<li>Nested templates are expanded, external templates are not.<ul>
+<li>Nested templates are expanded, external templates are not.</li>
 <li>Deployment resources that link to an external template are returned as a resource.</li>
-</ul>
-</li>
 <li>Sub-resources such as diagnostic logs or configurations are automatically nested.
-Automatic nesting a sub-resource requires:<ul>
+Automatic nesting a sub-resource requires:</li>
 <li>The parent resource is defined in the same template.</li>
 <li>The sub-resource depends on the parent resource.</li>
-</ul>
-</li>
 <li>The <code>environment()</code> template function always returns values for Azure public cloud.</li>
 <li>References to Key Vault secrets are not expanded.
   A placeholder value is used instead.</li>
@@ -6382,10 +6370,8 @@ Automatic nesting a sub-resource requires:<ul>
 <li>The Bicep CLI must be installed.
   When using GitHub Actions or Azure Pipelines the Bicep CLI is pre-installed.</li>
 <li>Location of issues in Bicep source files is not supported.</li>
-<li>
-<p>Expansion of Bicep source files times out after 5 seconds by default.
-  The timeout can be overridden by setting the <a href="../setup/setup-bicep/#configuringtimeout">AZURE_BICEP_FILE_EXPANSION_TIMEOUT</a> option.</p>
-</li>
+<li>Expansion of Bicep source files times out after 5 seconds by default.
+  The timeout can be overridden by setting the <a href="../setup/setup-bicep/#configuringtimeout">AZURE_BICEP_FILE_EXPANSION_TIMEOUT</a> option.</li>
 </ul>
 <h2 id="strongtype">Strong type<a class="headerlink" href="#strongtype" title="Permanent link">#</a></h2>
 <p>String parameters are commonly used to pass values such as a resource Id or location.

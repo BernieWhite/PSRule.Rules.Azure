@@ -6303,7 +6303,7 @@ By spreading node pools across multiple zones, nodes in one node pool will conti
 <p>To set availability zones for Enterprise SKU Redis Cache:</p>
 <ul>
 <li>Set <code>zones</code> to <code>["1", "2", "3"]</code> or zone-redundancy.</li>
-<li>Set <code>Properties.sku.name</code> to one of:<ul>
+<li>Set <code>Properties.sku.name</code> to one of:</li>
 <li><code>Enterprise_E10</code> - 12 GB</li>
 <li><code>Enterprise_E20</code> - 25 GB</li>
 <li><code>Enterprise_E50</code> - 50 GB</li>
@@ -6311,13 +6311,9 @@ By spreading node pools across multiple zones, nodes in one node pool will conti
 <li><code>EnterpriseFlash_F300</code> - 345 GB</li>
 <li><code>EnterpriseFlash_F700</code> - 715 GB</li>
 <li><code>EnterpriseFlash_F1500</code> - 1455 GB</li>
-</ul>
-</li>
-<li>Set <code>Properties.sku.capacity</code> to:<ul>
+<li>Set <code>Properties.sku.capacity</code> to:</li>
 <li>One of <code>[2, 4, 6, 8, 10]</code> if using <code>Enterprise_E10</code>, <code>Enterprise_E20</code>, <code>Enterprise_E50</code> or <code>Enterprise_E100</code>.</li>
 <li>Either <code>3</code> or <code>9</code> if using <code>EnterpriseFlash_F300</code>, <code>EnterpriseFlash_F700</code>, <code>EnterpriseFlash_F1500</code>.</li>
-</ul>
-</li>
 </ul>
 <p>For example:</p>
 <div class="highlight"><pre><span></span><code><span class="p">{</span><span class="w"></span>
@@ -6363,7 +6359,7 @@ By spreading node pools across multiple zones, nodes in one node pool will conti
 <p>To set availability zones for Enterprise SKU Redis Cache:</p>
 <ul>
 <li>Set <code>zones</code> to <code>["1", "2", "3"]</code> or zone-redundancy.</li>
-<li>Set <code>Properties.sku.name</code> to one of:<ul>
+<li>Set <code>Properties.sku.name</code> to one of:</li>
 <li><code>Enterprise_E10</code> - 12 GB</li>
 <li><code>Enterprise_E20</code> - 25 GB</li>
 <li><code>Enterprise_E50</code> - 50 GB</li>
@@ -6371,13 +6367,9 @@ By spreading node pools across multiple zones, nodes in one node pool will conti
 <li><code>EnterpriseFlash_F300</code> - 345 GB</li>
 <li><code>EnterpriseFlash_F700</code> - 715 GB</li>
 <li><code>EnterpriseFlash_F1500</code> - 1455 GB</li>
-</ul>
-</li>
-<li>Set <code>Properties.sku.capacity</code> to:<ul>
+<li>Set <code>Properties.sku.capacity</code> to:</li>
 <li>One of <code>[2, 4, 6, 8, 10]</code> if using <code>Enterprise_E10</code>, <code>Enterprise_E20</code>, <code>Enterprise_E50</code> or <code>Enterprise_E100</code>.</li>
 <li>Either <code>3</code> or <code>9</code> if using <code>EnterpriseFlash_F300</code>, <code>EnterpriseFlash_F700</code>, <code>EnterpriseFlash_F1500</code>.</li>
-</ul>
-</li>
 </ul>
 <p>For example:</p>
 <div class="highlight"><pre><span></span><code>resource testrediscache &#39;Microsoft.Cache/redisEnterprise@2021-02-01-preview&#39; = {

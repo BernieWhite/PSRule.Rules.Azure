@@ -6336,24 +6336,18 @@ Functions that use placeholders include <code>reference</code>, <code>list*</cod
 <li>name: 'ps-rule-test-rg'</li>
 <li>location: 'eastus'</li>
 <li>tags: { }</li>
-<li>properties:<ul>
+<li>properties:</li>
 <li>provisioningState: 'Succeeded'</li>
-</ul>
-</li>
 </ul>
 <p>To override, set the <code>AZURE_SUBSCRIPTION</code> and <code>AZURE_RESOURCE_GROUP</code> in configuration.</p>
 <p>Currently the following limitations apply:</p>
 <ul>
-<li>Nested templates are expanded, external templates are not.<ul>
+<li>Nested templates are expanded, external templates are not.</li>
 <li>Deployment resources that link to an external template are returned as a resource.</li>
-</ul>
-</li>
 <li>Sub-resources such as diagnostic logs or configurations are automatically nested.
-Automatic nesting a sub-resource requires:<ul>
+Automatic nesting a sub-resource requires:</li>
 <li>The parent resource is defined in the same template.</li>
 <li>The sub-resource depends on the parent resource.</li>
-</ul>
-</li>
 <li>The <code>environment</code> template function always returns values for Azure public cloud.</li>
 <li>References to Key Vault secrets are not expanded.
 A placeholder value is used instead.</li>

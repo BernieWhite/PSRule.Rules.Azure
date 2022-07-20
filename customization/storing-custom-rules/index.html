@@ -6230,8 +6230,10 @@ PSRule for Azure uses the name prefix of <code>Azure.</code> on all rules and re
 </div>
 <p>When naming custom rules we recommend that you:</p>
 <ul>
-<li><strong>Use a standard prefix</strong> &mdash; You can use the <code>Local.</code> or <code>Org.</code> prefix for standalone rules.</li>
+<li><strong>Use a standard prefix</strong> &mdash; You can use the <code>Local.</code> or <code>Org.</code> prefix for standalone rules.<ul>
 <li>Alternatively choose a short prefix that identifies your organization.</li>
+</ul>
+</li>
 <li><strong>Use dotted notation</strong> &mdash; Use dots to separate rule name.</li>
 <li><strong>Use a maximum length of 35 characters</strong> &mdash; The default view of <code>Invoke-PSRule</code> truncates longer names.
   PSRule supports longer rule names however if <code>Invoke-PSRule</code> is called directly consider using <code>Format-List</code>.</li>

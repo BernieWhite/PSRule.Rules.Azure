@@ -6305,12 +6305,14 @@ Deploying VPN gateways in Azure Availability Zones physically and logically sepa
 <p>To configure an AZ SKU for a VPN gateway:</p>
 <ul>
 <li>Set <code>properties.gatewayType</code> to <code>'Vpn'</code></li>
-<li>Set <code>properties.sku.name</code> and <code>properties.sku.tier</code> to one of the following AZ SKUs:</li>
+<li>Set <code>properties.sku.name</code> and <code>properties.sku.tier</code> to one of the following AZ SKUs:<ul>
 <li><code>'VpnGw1AZ'</code></li>
 <li><code>'VpnGw2AZ'</code></li>
 <li><code>'VpnGw3AZ'</code></li>
 <li><code>'VpnGw4AZ'</code></li>
 <li><code>'VpnGw5AZ'</code></li>
+</ul>
+</li>
 </ul>
 <p>For example:</p>
 <div class="highlight"><pre><span></span><code><span class="p">{</span><span class="w"></span>
@@ -6351,12 +6353,14 @@ Deploying VPN gateways in Azure Availability Zones physically and logically sepa
 <p>To configure an AZ SKU for a VPN gateway:</p>
 <ul>
 <li>Set <code>properties.gatewayType</code> to <code>'Vpn'</code></li>
-<li>Set <code>properties.sku.name</code> and <code>properties.sku.tier</code> to one of the following AZ SKUs:</li>
+<li>Set <code>properties.sku.name</code> and <code>properties.sku.tier</code> to one of the following AZ SKUs:<ul>
 <li><code>'VpnGw1AZ'</code></li>
 <li><code>'VpnGw2AZ'</code></li>
 <li><code>'VpnGw3AZ'</code></li>
 <li><code>'VpnGw4AZ'</code></li>
 <li><code>'VpnGw5AZ'</code></li>
+</ul>
+</li>
 </ul>
 <p>For example:</p>
 <div class="highlight"><pre><span></span><code>resource name_resource &#39;Microsoft.Network/virtualNetworkGateways@2020-11-01&#39; = {

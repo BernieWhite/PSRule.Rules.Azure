@@ -6413,18 +6413,24 @@ Use this method for analyzing resources deployed via the Azure Portal, Terraform
 <p>PSRule for Azure supports two methods for analyzing Azure resources:</p>
 <ul>
 <li><strong>Pre-flight</strong> &mdash; Before resources are deployed from an <abbr title="Azure Resource Manager">ARM</abbr> template or Bicep.
-  Use <em>pre-flight</em> analysis to:</li>
+  Use <em>pre-flight</em> analysis to:<ul>
 <li>Implement checks within Pull Requests (<abbr title="Pull Requests">PRs</abbr>).</li>
 <li>Improve alignment of resources to <abbr title="Well-Architected Framework">WAF</abbr> recommendations.</li>
 <li>Identify issues that prevent successful resource deployments on Azure.</li>
 <li>Integrate continual improvement and standardization of Azure resource configurations.</li>
 <li>Implement release gates between environments.</li>
 <li>For more information see <a href="../creating-your-pipeline/">Creating your pipeline</a>.</li>
-<li><strong>In-flight</strong> &mdash; After resources are deployed to an Azure subscription.
-  Use <em>in-flight</em> analysis to:</li>
+</ul>
+</li>
+<li>
+<p><strong>In-flight</strong> &mdash; After resources are deployed to an Azure subscription.
+  Use <em>in-flight</em> analysis to:</p>
+<ul>
 <li>Implement release gates between environments for non-native tools such as Terraform.</li>
 <li>Performing offline analysis in split-environments.</li>
 <li>For more information see <a href="../export-rule-data/">Exporting rule data</a>.</li>
+</ul>
+</li>
 </ul>
 <h2 id="howdoicreateacustomruletoenforceresourcegrouptagging">How do I create a custom rule to enforce resource group tagging?<a class="headerlink" href="#howdoicreateacustomruletoenforceresourcegrouptagging" title="Permanent link">#</a></h2>
 <p>PSRule for Azure covers common use cases that align to the <a href="https://docs.microsoft.com/azure/architecture/framework/">Microsoft Azure Well-Architected Framework</a>.
@@ -6457,8 +6463,10 @@ We have a walk through scenario <a href="../customization/enforce-custom-tags/">
 the default built-in <em>Reader</em> role to a subscription is required for:</p>
 <ul>
 <li>Exporting rule data with <code>Export-AzRuleData</code>.</li>
-<li>Exporting rule data from templates with <code>Export-AzRuleTemplateData</code> when online features are used.</li>
+<li>Exporting rule data from templates with <code>Export-AzRuleTemplateData</code> when online features are used.<ul>
 <li>Optionally <code>-ResourceGroupName</code> and <code>-Subscription</code> parameter can be used; these require access <em>Reader</em> access.</li>
+</ul>
+</li>
 </ul>
 <h2 id="whatpermissionsdoineedtoanalyzeexportedruledata">What permissions do I need to analyze exported rule data?<a class="headerlink" href="#whatpermissionsdoineedtoanalyzeexportedruledata" title="Permanent link">#</a></h2>
 <p>When exporting data for <em>in-flight</em> analysis,

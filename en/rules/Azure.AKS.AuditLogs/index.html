@@ -6260,10 +6260,12 @@
 <h2 id="description">Description<a class="headerlink" href="#description" title="Permanent link">#</a></h2>
 <p>To capture security-based audit logs from AKS clusters, the following diagnostic log categories should be enabled:</p>
 <ul>
-<li><code>kube-audit</code> or <code>kube-audit-admin</code>, or both.</li>
+<li><code>kube-audit</code> or <code>kube-audit-admin</code>, or both.<ul>
 <li><code>kube-audit</code> - Contains all audit log data for every audit event, including get, list, create, update, delete, patch, and post.</li>
 <li><code>kube-audit-admin</code> - Is a subset of the <code>kube-audit</code> log category.
-    <code>kube-audit-admin</code> reduces the number of logs significantly by excluding the get and list audit events from the log.</li>
+  <code>kube-audit-admin</code> reduces the number of logs significantly by excluding the get and list audit events from the log.</li>
+</ul>
+</li>
 <li><code>guard</code> - Contains logs for Azure Active Directory (AAD) authorization integration.
    For managed Azure AD, this includes token in and user info out.
    For Azure RBAC, this includes access reviews in and out.</li>

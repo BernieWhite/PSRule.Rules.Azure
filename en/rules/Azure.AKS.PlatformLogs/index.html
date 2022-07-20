@@ -6274,16 +6274,26 @@
 <h2 id="description">Description<a class="headerlink" href="#description" title="Permanent link">#</a></h2>
 <p>To capture platform logs from AKS clusters, the following diagnostic log/metric categories should be enabled:</p>
 <ul>
-<li><code>cluster-autoscaler</code></li>
+<li><code>cluster-autoscaler</code><ul>
 <li>Understand why the AKS cluster is scaling up or down, which may not be expected. This information is also useful to correlate time intervals where something interesting may have happened in the cluster.</li>
-<li><code>kube-apiserver</code></li>
+</ul>
+</li>
+<li><code>kube-apiserver</code><ul>
 <li>Logs from the Kubernetes API server.</li>
-<li><code>kube-controller-manager</code></li>
+</ul>
+</li>
+<li><code>kube-controller-manager</code><ul>
 <li>Gain deeper visibility of issues that may arise between Kubernetes and the Azure control plane. A typical example is the AKS cluster having a lack of permissions to interact with Azure.</li>
-<li><code>kube-scheduler</code></li>
+</ul>
+</li>
+<li><code>kube-scheduler</code><ul>
 <li>Logs from the Kubernetes scheduler.</li>
-<li><code>AllMetrics</code></li>
+</ul>
+</li>
+<li><code>AllMetrics</code><ul>
 <li>Includes all platform metrics. Sends these values to Log Analytics workspace where it can be evaluated with other data using log queries.</li>
+</ul>
+</li>
 </ul>
 <h2 id="recommendation">Recommendation<a class="headerlink" href="#recommendation" title="Permanent link">#</a></h2>
 <p>Consider configuring diagnostic settings to capture platform logs from AKS clusters.</p>

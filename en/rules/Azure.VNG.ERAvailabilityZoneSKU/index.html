@@ -6303,10 +6303,12 @@ Deploying ExpressRoute gateways in Azure Availability Zones physically and logic
 <p>To configure an AZ SKU for an ExpressRoute gateway:</p>
 <ul>
 <li>Set <code>properties.gatewayType</code> to <code>'ExpressRoute'</code></li>
-<li>Set <code>properties.sku.name</code> and <code>properties.sku.tier</code> to one of the following AZ SKUs:</li>
+<li>Set <code>properties.sku.name</code> and <code>properties.sku.tier</code> to one of the following AZ SKUs:<ul>
 <li><code>'ErGw1AZ'</code></li>
 <li><code>'ErGw2AZ'</code></li>
 <li><code>'ErGw3AZ'</code></li>
+</ul>
+</li>
 </ul>
 <p>For example:</p>
 <div class="highlight"><pre><span></span><code><span class="p">{</span><span class="w"></span>
@@ -6347,10 +6349,12 @@ Deploying ExpressRoute gateways in Azure Availability Zones physically and logic
 <p>To configure an AZ SKU for an ExpressRoute gateway:</p>
 <ul>
 <li>Set <code>properties.gatewayType</code> to <code>'ExpressRoute'</code></li>
-<li>Set <code>properties.sku.name</code> and <code>properties.sku.tier</code> to one of the following AZ SKUs:</li>
+<li>Set <code>properties.sku.name</code> and <code>properties.sku.tier</code> to one of the following AZ SKUs:<ul>
 <li><code>'ErGw1AZ'</code></li>
 <li><code>'ErGw2AZ'</code></li>
 <li><code>'ErGw3AZ'</code></li>
+</ul>
+</li>
 </ul>
 <p>For example:</p>
 <div class="highlight"><pre><span></span><code>resource name_resource &#39;Microsoft.Network/virtualNetworkGateways@2020-11-01&#39; = {

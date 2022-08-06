@@ -270,7 +270,7 @@
   
   
     <li class="md-tabs__item">
-      <a href="./" class="md-tabs__link md-tabs__link--active">
+      <a href="../" class="md-tabs__link md-tabs__link--active">
         Reference
       </a>
     </li>
@@ -1128,6 +1128,10 @@
       
         
           
+            
+          
+        
+          
         
           
         
@@ -1139,10 +1143,16 @@
         
       
       
-        <label class="md-nav__link" for="__nav_4">
-          Reference
-          <span class="md-nav__icon md-icon"></span>
-        </label>
+        
+        
+        <div class="md-nav__link md-nav__link--index ">
+          <a href="../">Reference</a>
+          
+            <label for="__nav_4">
+              <span class="md-nav__icon md-icon"></span>
+            </label>
+          
+        </div>
       
       <nav class="md-nav" aria-label="Reference" data-md-level="1">
         <label class="md-nav__title" for="__nav_4">
@@ -1150,6 +1160,8 @@
           Reference
         </label>
         <ul class="md-nav__list" data-md-scrollfix>
+          
+            
           
             
               
@@ -1567,7 +1579,7 @@
     <li class="md-nav__item md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4_3" type="checkbox" id="__nav_4_3" >
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4_4" type="checkbox" id="__nav_4_4" >
       
       
       
@@ -2140,13 +2152,13 @@
         
       
       
-        <label class="md-nav__link" for="__nav_4_3">
+        <label class="md-nav__link" for="__nav_4_4">
           Rules
           <span class="md-nav__icon md-icon"></span>
         </label>
       
       <nav class="md-nav" aria-label="Rules" data-md-level="2">
-        <label class="md-nav__title" for="__nav_4_3">
+        <label class="md-nav__title" for="__nav_4_4">
           <span class="md-nav__icon md-icon"></span>
           Rules
         </label>
@@ -6130,7 +6142,7 @@
     <li class="md-nav__item md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4_4" type="checkbox" id="__nav_4_4" >
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4_5" type="checkbox" id="__nav_4_5" >
       
       
       
@@ -6169,13 +6181,13 @@
         
       
       
-        <label class="md-nav__link" for="__nav_4_4">
+        <label class="md-nav__link" for="__nav_4_5">
           Baselines
           <span class="md-nav__icon md-icon"></span>
         </label>
       
       <nav class="md-nav" aria-label="Baselines" data-md-level="2">
-        <label class="md-nav__title" for="__nav_4_4">
+        <label class="md-nav__title" for="__nav_4_5">
           <span class="md-nav__icon md-icon"></span>
           Baselines
         </label>
@@ -6421,7 +6433,7 @@
     <li class="md-nav__item md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4_5" type="checkbox" id="__nav_4_5" >
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4_6" type="checkbox" id="__nav_4_6" >
       
       
       
@@ -6438,13 +6450,13 @@
         
       
       
-        <label class="md-nav__link" for="__nav_4_5">
+        <label class="md-nav__link" for="__nav_4_6">
           Selectors
           <span class="md-nav__icon md-icon"></span>
         </label>
       
       <nav class="md-nav" aria-label="Selectors" data-md-level="2">
-        <label class="md-nav__title" for="__nav_4_5">
+        <label class="md-nav__title" for="__nav_4_6">
           <span class="md-nav__icon md-icon"></span>
           Selectors
         </label>
@@ -6937,6 +6949,7 @@
 <th>Name</th>
 <th>Synopsis</th>
 <th>Severity</th>
+<th>Level</th>
 </tr>
 </thead>
 <tbody>
@@ -6944,11 +6957,13 @@
 <td><a href="../Azure.VM.PromoSku/">Azure.VM.PromoSku</a></td>
 <td>Virtual machines (VMs) should not use expired promotional SKU.</td>
 <td>Awareness</td>
+<td>Error</td>
 </tr>
 <tr>
 <td><a href="../Azure.VM.UseHybridUseBenefit/">Azure.VM.UseHybridUseBenefit</a></td>
 <td>Use Azure Hybrid Benefit for applicable virtual machine (VM) workloads.</td>
 <td>Awareness</td>
+<td>Error</td>
 </tr>
 </tbody>
 </table>
@@ -6959,6 +6974,7 @@
 <th>Name</th>
 <th>Synopsis</th>
 <th>Severity</th>
+<th>Level</th>
 </tr>
 </thead>
 <tbody>
@@ -6966,21 +6982,25 @@
 <td><a href="../Azure.ACR.Usage/">Azure.ACR.Usage</a></td>
 <td>Regularly remove deprecated and unneeded images to reduce storage usage.</td>
 <td>Important</td>
+<td>Error</td>
 </tr>
 <tr>
 <td><a href="../Azure.ADX.Usage/">Azure.ADX.Usage</a></td>
 <td>Regularly remove unused resources to reduce costs.</td>
 <td>Important</td>
+<td>Error</td>
 </tr>
 <tr>
 <td><a href="../Azure.EventHub.Usage/">Azure.EventHub.Usage</a></td>
 <td>Regularly remove unused resources to reduce costs.</td>
 <td>Important</td>
+<td>Error</td>
 </tr>
 <tr>
 <td><a href="../Azure.ServiceBus.Usage/">Azure.ServiceBus.Usage</a></td>
 <td>Regularly remove unused resources to reduce costs.</td>
 <td>Important</td>
+<td>Error</td>
 </tr>
 </tbody>
 </table>
@@ -6991,6 +7011,7 @@
 <th>Name</th>
 <th>Synopsis</th>
 <th>Severity</th>
+<th>Level</th>
 </tr>
 </thead>
 <tbody>
@@ -6998,26 +7019,31 @@
 <td><a href="../Azure.ACR.Retention/">Azure.ACR.Retention</a></td>
 <td>Use a retention policy to cleanup untagged manifests.</td>
 <td>Important</td>
+<td>Error</td>
 </tr>
 <tr>
 <td><a href="../Azure.FrontDoor.State/">Azure.FrontDoor.State</a></td>
 <td>Enable Azure Front Door instance.</td>
 <td>Awareness</td>
+<td>Error</td>
 </tr>
 <tr>
 <td><a href="../Azure.PublicIP.IsAttached/">Azure.PublicIP.IsAttached</a></td>
 <td>Public IP address should be attached or removed.</td>
 <td>Important</td>
+<td>Error</td>
 </tr>
 <tr>
 <td><a href="../Azure.VM.DiskAttached/">Azure.VM.DiskAttached</a></td>
 <td>Managed disks should be attached to virtual machines or removed.</td>
 <td>Important</td>
+<td>Error</td>
 </tr>
 <tr>
 <td><a href="../Azure.VM.DiskSizeAlignment/">Azure.VM.DiskSizeAlignment</a></td>
 <td>Align to the Managed Disk billing model to improve cost efficiency.</td>
 <td>Awareness</td>
+<td>Error</td>
 </tr>
 </tbody>
 </table>
@@ -7029,6 +7055,7 @@
 <th>Name</th>
 <th>Synopsis</th>
 <th>Severity</th>
+<th>Level</th>
 </tr>
 </thead>
 <tbody>
@@ -7036,6 +7063,7 @@
 <td><a href="../Azure.AKS.AutoUpgrade/">Azure.AKS.AutoUpgrade</a></td>
 <td>Configure AKS to automatically upgrade to newer supported AKS versions as they are made available.</td>
 <td>Important</td>
+<td>Error</td>
 </tr>
 </tbody>
 </table>
@@ -7046,6 +7074,7 @@
 <th>Name</th>
 <th>Synopsis</th>
 <th>Severity</th>
+<th>Level</th>
 </tr>
 </thead>
 <tbody>
@@ -7053,21 +7082,25 @@
 <td><a href="../Azure.AKS.ManagedIdentity/">Azure.AKS.ManagedIdentity</a></td>
 <td>Configure AKS clusters to use managed identities for managing cluster infrastructure.</td>
 <td>Important</td>
+<td>Error</td>
 </tr>
 <tr>
 <td><a href="../Azure.APIM.ProductTerms/">Azure.APIM.ProductTerms</a></td>
 <td>Set legal terms for each product registered in API Management.</td>
 <td>Important</td>
+<td>Error</td>
 </tr>
 <tr>
 <td><a href="../Azure.APIM.SampleProducts/">Azure.APIM.SampleProducts</a></td>
 <td>Remove starter and unlimited sample products.</td>
 <td>Awareness</td>
+<td>Error</td>
 </tr>
 <tr>
 <td><a href="../Azure.NSG.DenyAllInbound/">Azure.NSG.DenyAllInbound</a></td>
 <td>Avoid denying all inbound traffic.</td>
 <td>Important</td>
+<td>Error</td>
 </tr>
 </tbody>
 </table>
@@ -7078,6 +7111,7 @@
 <th>Name</th>
 <th>Synopsis</th>
 <th>Severity</th>
+<th>Level</th>
 </tr>
 </thead>
 <tbody>
@@ -7085,56 +7119,67 @@
 <td><a href="../Azure.APIM.CertificateExpiry/">Azure.APIM.CertificateExpiry</a></td>
 <td>Renew certificates used for custom domain bindings.</td>
 <td>Important</td>
+<td>Error</td>
 </tr>
 <tr>
 <td><a href="../Azure.AppGw.MinSku/">Azure.AppGw.MinSku</a></td>
 <td>Application Gateway should use a minimum instance size of Medium.</td>
 <td>Important</td>
+<td>Error</td>
 </tr>
 <tr>
 <td><a href="../Azure.AppInsights.Workspace/">Azure.AppInsights.Workspace</a></td>
 <td>Configure Application Insights resources to store data in workspaces.</td>
 <td>Important</td>
+<td>Error</td>
 </tr>
 <tr>
 <td><a href="../Azure.DataFactory.Version/">Azure.DataFactory.Version</a></td>
 <td>Consider migrating to DataFactory v2.</td>
 <td>Awareness</td>
+<td>Error</td>
 </tr>
 <tr>
 <td><a href="../Azure.VM.BasicSku/">Azure.VM.BasicSku</a></td>
 <td>Virtual machines (VMs) should not use Basic sizes.</td>
 <td>Important</td>
+<td>Error</td>
 </tr>
 <tr>
 <td><a href="../Azure.VM.NICAttached/">Azure.VM.NICAttached</a></td>
 <td>Network interfaces (NICs) should be attached.</td>
 <td>Awareness</td>
+<td>Error</td>
 </tr>
 <tr>
 <td><a href="../Azure.VM.UniqueDns/">Azure.VM.UniqueDns</a></td>
 <td>Network interfaces (NICs) should inherit DNS from virtual networks.</td>
 <td>Awareness</td>
+<td>Error</td>
 </tr>
 <tr>
 <td><a href="../Azure.VM.Updates/">Azure.VM.Updates</a></td>
 <td>Ensure automatic updates are enabled at deployment.</td>
 <td>Important</td>
+<td>Error</td>
 </tr>
 <tr>
 <td><a href="../Azure.VNET.PeerState/">Azure.VNET.PeerState</a></td>
 <td>VNET peering connections must be connected.</td>
 <td>Important</td>
+<td>Error</td>
 </tr>
 <tr>
 <td><a href="../Azure.VNG.ERLegacySKU/">Azure.VNG.ERLegacySKU</a></td>
 <td>Migrate from legacy SKUs to improve reliability and performance of ExpressRoute (ER) gateways.</td>
 <td>Important</td>
+<td>Error</td>
 </tr>
 <tr>
 <td><a href="../Azure.VNG.VPNLegacySKU/">Azure.VNG.VPNLegacySKU</a></td>
 <td>Migrate from legacy SKUs to improve reliability and performance of VPN gateways.</td>
 <td>Important</td>
+<td>Error</td>
 </tr>
 </tbody>
 </table>
@@ -7145,6 +7190,7 @@
 <th>Name</th>
 <th>Synopsis</th>
 <th>Severity</th>
+<th>Level</th>
 </tr>
 </thead>
 <tbody>
@@ -7152,26 +7198,31 @@
 <td><a href="../Azure.AKS.ContainerInsights/">Azure.AKS.ContainerInsights</a></td>
 <td>Enable Container insights to monitor AKS cluster workloads.</td>
 <td>Important</td>
+<td>Error</td>
 </tr>
 <tr>
 <td><a href="../Azure.AKS.PlatformLogs/">Azure.AKS.PlatformLogs</a></td>
 <td>AKS clusters should collect platform diagnostic logs to monitor the state of workloads.</td>
 <td>Important</td>
+<td>Error</td>
 </tr>
 <tr>
 <td><a href="../Azure.Automation.PlatformLogs/">Azure.Automation.PlatformLogs</a></td>
 <td>Ensure automation account platform diagnostic logs are enabled.</td>
 <td>Important</td>
+<td>Error</td>
 </tr>
 <tr>
 <td><a href="../Azure.Monitor.ServiceHealth/">Azure.Monitor.ServiceHealth</a></td>
 <td>Configure Service Health alerts to notify administrators.</td>
 <td>Important</td>
+<td>Error</td>
 </tr>
 <tr>
 <td><a href="../Azure.VM.Agent/">Azure.VM.Agent</a></td>
 <td>Ensure the VM agent is provisioned automatically.</td>
 <td>Important</td>
+<td>Error</td>
 </tr>
 </tbody>
 </table>
@@ -7182,6 +7233,7 @@
 <th>Name</th>
 <th>Synopsis</th>
 <th>Severity</th>
+<th>Level</th>
 </tr>
 </thead>
 <tbody>
@@ -7189,6 +7241,7 @@
 <td><a href="../Azure.NSG.Associated/">Azure.NSG.Associated</a></td>
 <td>Network Security Groups (NSGs) should be associated to a subnet or network interface.</td>
 <td>Awareness</td>
+<td>Error</td>
 </tr>
 </tbody>
 </table>
@@ -7199,6 +7252,7 @@
 <th>Name</th>
 <th>Synopsis</th>
 <th>Severity</th>
+<th>Level</th>
 </tr>
 </thead>
 <tbody>
@@ -7206,61 +7260,73 @@
 <td><a href="../Azure.Template.DebugDeployment/">Azure.Template.DebugDeployment</a></td>
 <td>Use default deployment detail level for nested deployments.</td>
 <td>Awareness</td>
+<td>Error</td>
 </tr>
 <tr>
 <td><a href="../Azure.Template.DefineParameters/">Azure.Template.DefineParameters</a></td>
 <td>Each Azure Resource Manager (ARM) template file should contain a minimal number of parameters.</td>
 <td>Awareness</td>
+<td>Error</td>
 </tr>
 <tr>
 <td><a href="../Azure.Template.LocationType/">Azure.Template.LocationType</a></td>
 <td>Location parameters should use a string value.</td>
 <td>Important</td>
+<td>Error</td>
 </tr>
 <tr>
 <td><a href="../Azure.Template.MetadataLink/">Azure.Template.MetadataLink</a></td>
 <td>Configure a metadata link for each parameter file.</td>
 <td>Important</td>
+<td>Error</td>
 </tr>
 <tr>
 <td><a href="../Azure.Template.ParameterDataTypes/">Azure.Template.ParameterDataTypes</a></td>
 <td>Set the parameter default value to a value of the same type.</td>
 <td>Important</td>
+<td>Error</td>
 </tr>
 <tr>
 <td><a href="../Azure.Template.ParameterMetadata/">Azure.Template.ParameterMetadata</a></td>
 <td>Set metadata descriptions in Azure Resource Manager (ARM) template for each parameter.</td>
 <td>Awareness</td>
+<td>Error</td>
 </tr>
 <tr>
 <td><a href="../Azure.Template.ParameterMinMaxValue/">Azure.Template.ParameterMinMaxValue</a></td>
 <td>Template parameters minValue and maxValue constraints must be valid.</td>
 <td>Important</td>
+<td>Error</td>
 </tr>
 <tr>
 <td><a href="../Azure.Template.ResourceLocation/">Azure.Template.ResourceLocation</a></td>
 <td>Template resource location should be an expression or global.</td>
 <td>Awareness</td>
+<td>Error</td>
 </tr>
 <tr>
 <td><a href="../Azure.Template.Resources/">Azure.Template.Resources</a></td>
 <td>Each Azure Resource Manager (ARM) template file should deploy at least one resource.</td>
 <td>Awareness</td>
+<td>Error</td>
 </tr>
 <tr>
 <td><a href="../Azure.Template.UseLocationParameter/">Azure.Template.UseLocationParameter</a></td>
 <td>Template should reference a location parameter to specify resource location.</td>
 <td>Awareness</td>
+<td>Warning</td>
 </tr>
 <tr>
 <td><a href="../Azure.Template.UseParameters/">Azure.Template.UseParameters</a></td>
 <td>Each Azure Resource Manager (ARM) template parameter should be used or removed from template files.</td>
 <td>Awareness</td>
+<td>Error</td>
 </tr>
 <tr>
 <td><a href="../Azure.Template.UseVariables/">Azure.Template.UseVariables</a></td>
 <td>Each Azure Resource Manager (ARM) template variable should be used or removed from template files.</td>
 <td>Awareness</td>
+<td>Error</td>
 </tr>
 </tbody>
 </table>
@@ -7271,6 +7337,7 @@
 <th>Name</th>
 <th>Synopsis</th>
 <th>Severity</th>
+<th>Level</th>
 </tr>
 </thead>
 <tbody>
@@ -7278,301 +7345,361 @@
 <td><a href="../Azure.ACR.Name/">Azure.ACR.Name</a></td>
 <td>Container registry names should meet naming requirements.</td>
 <td>Awareness</td>
+<td>Error</td>
 </tr>
 <tr>
 <td><a href="../Azure.AKS.Name/">Azure.AKS.Name</a></td>
 <td>Azure Kubernetes Service (AKS) cluster names should meet naming requirements.</td>
 <td>Awareness</td>
+<td>Error</td>
 </tr>
 <tr>
 <td><a href="../Azure.APIM.Name/">Azure.APIM.Name</a></td>
 <td>API Management service names should meet naming requirements.</td>
 <td>Awareness</td>
+<td>Error</td>
 </tr>
 <tr>
 <td><a href="../Azure.AppConfig.Name/">Azure.AppConfig.Name</a></td>
 <td>App Configuration store names should meet naming requirements.</td>
 <td>Awareness</td>
+<td>Error</td>
 </tr>
 <tr>
 <td><a href="../Azure.AppInsights.Name/">Azure.AppInsights.Name</a></td>
 <td>Azure Application Insights resources names should meet naming requirements.</td>
 <td>Awareness</td>
+<td>Error</td>
 </tr>
 <tr>
 <td><a href="../Azure.ASG.Name/">Azure.ASG.Name</a></td>
 <td>Application Security Group (ASG) names should meet naming requirements.</td>
 <td>Awareness</td>
+<td>Error</td>
 </tr>
 <tr>
 <td><a href="../Azure.CDN.EndpointName/">Azure.CDN.EndpointName</a></td>
 <td>Azure CDN Endpoint names should meet naming requirements.</td>
 <td>Awareness</td>
+<td>Error</td>
 </tr>
 <tr>
 <td><a href="../Azure.Cosmos.AccountName/">Azure.Cosmos.AccountName</a></td>
 <td>Cosmos DB account names should meet naming requirements.</td>
 <td>Awareness</td>
+<td>Error</td>
 </tr>
 <tr>
 <td><a href="../Azure.Firewall.Name/">Azure.Firewall.Name</a></td>
 <td>Firewall names should meet naming requirements.</td>
 <td>Awareness</td>
+<td>Error</td>
 </tr>
 <tr>
 <td><a href="../Azure.Firewall.PolicyName/">Azure.Firewall.PolicyName</a></td>
 <td>Firewall policy names should meet naming requirements.</td>
 <td>Awareness</td>
+<td>Error</td>
 </tr>
 <tr>
 <td><a href="../Azure.FrontDoor.Name/">Azure.FrontDoor.Name</a></td>
 <td>Front Door names should meet naming requirements.</td>
 <td>Awareness</td>
+<td>Error</td>
 </tr>
 <tr>
 <td><a href="../Azure.FrontDoor.WAF.Name/">Azure.FrontDoor.WAF.Name</a></td>
 <td>Front Door WAF policy names should meet naming requirements.</td>
 <td>Awareness</td>
+<td>Error</td>
 </tr>
 <tr>
 <td><a href="../Azure.Identity.UserAssignedName/">Azure.Identity.UserAssignedName</a></td>
 <td>Managed Identity names should meet naming requirements.</td>
 <td>Awareness</td>
+<td>Error</td>
 </tr>
 <tr>
 <td><a href="../Azure.KeyVault.KeyName/">Azure.KeyVault.KeyName</a></td>
 <td>Key Vault Key names should meet naming requirements.</td>
 <td>Awareness</td>
+<td>Error</td>
 </tr>
 <tr>
 <td><a href="../Azure.KeyVault.Name/">Azure.KeyVault.Name</a></td>
 <td>Key Vault names should meet naming requirements.</td>
 <td>Awareness</td>
+<td>Error</td>
 </tr>
 <tr>
 <td><a href="../Azure.KeyVault.SecretName/">Azure.KeyVault.SecretName</a></td>
 <td>Key Vault Secret names should meet naming requirements.</td>
 <td>Awareness</td>
+<td>Error</td>
 </tr>
 <tr>
 <td><a href="../Azure.LB.Name/">Azure.LB.Name</a></td>
 <td>Load Balancer names should meet naming requirements.</td>
 <td>Awareness</td>
+<td>Error</td>
 </tr>
 <tr>
 <td><a href="../Azure.MySQL.ServerName/">Azure.MySQL.ServerName</a></td>
 <td>Azure MySQL DB server names should meet naming requirements.</td>
 <td>Awareness</td>
+<td>Error</td>
 </tr>
 <tr>
 <td><a href="../Azure.NSG.Name/">Azure.NSG.Name</a></td>
 <td>Network Security Group (NSG) names should meet naming requirements.</td>
 <td>Awareness</td>
+<td>Error</td>
 </tr>
 <tr>
 <td><a href="../Azure.Policy.AssignmentAssignedBy/">Azure.Policy.AssignmentAssignedBy</a></td>
 <td>Policy assignments should use assignedBy metadata.</td>
 <td>Awareness</td>
+<td>Error</td>
 </tr>
 <tr>
 <td><a href="../Azure.Policy.AssignmentDescriptors/">Azure.Policy.AssignmentDescriptors</a></td>
 <td>Policy assignments should use a display name and description.</td>
 <td>Awareness</td>
+<td>Error</td>
 </tr>
 <tr>
 <td><a href="../Azure.Policy.Descriptors/">Azure.Policy.Descriptors</a></td>
 <td>Policy and initiative definitions should use a display name, description, and category.</td>
 <td>Awareness</td>
+<td>Error</td>
 </tr>
 <tr>
 <td><a href="../Azure.Policy.ExemptionDescriptors/">Azure.Policy.ExemptionDescriptors</a></td>
 <td>Policy exemptions should use a display name and description.</td>
 <td>Awareness</td>
+<td>Error</td>
 </tr>
 <tr>
 <td><a href="../Azure.Policy.WaiverExpiry/">Azure.Policy.WaiverExpiry</a></td>
 <td>Configure policy waiver exemptions to expire.</td>
 <td>Awareness</td>
+<td>Error</td>
 </tr>
 <tr>
 <td><a href="../Azure.PostgreSQL.ServerName/">Azure.PostgreSQL.ServerName</a></td>
 <td>Azure PostgreSQL DB server names should meet naming requirements.</td>
 <td>Awareness</td>
+<td>Error</td>
 </tr>
 <tr>
 <td><a href="../Azure.PrivateEndpoint.Name/">Azure.PrivateEndpoint.Name</a></td>
 <td>Private Endpoint names should meet naming requirements.</td>
 <td>Awareness</td>
+<td>Error</td>
 </tr>
 <tr>
 <td><a href="../Azure.PublicIP.Name/">Azure.PublicIP.Name</a></td>
 <td>Public IP names should meet naming requirements.</td>
 <td>Awareness</td>
+<td>Error</td>
 </tr>
 <tr>
 <td><a href="../Azure.ResourceGroup.Name/">Azure.ResourceGroup.Name</a></td>
 <td>Resource Group names should meet naming requirements.</td>
 <td>Awareness</td>
+<td>Error</td>
 </tr>
 <tr>
 <td><a href="../Azure.Route.Name/">Azure.Route.Name</a></td>
 <td>Route table names should meet naming requirements.</td>
 <td>Awareness</td>
+<td>Error</td>
 </tr>
 <tr>
 <td><a href="../Azure.Search.Name/">Azure.Search.Name</a></td>
 <td>Azure Cognitive Search service names should meet naming requirements.</td>
 <td>Awareness</td>
+<td>Error</td>
 </tr>
 <tr>
 <td><a href="../Azure.SignalR.Name/">Azure.SignalR.Name</a></td>
 <td>SignalR service instance names should meet naming requirements.</td>
 <td>Awareness</td>
+<td>Error</td>
 </tr>
 <tr>
 <td><a href="../Azure.SQL.DBName/">Azure.SQL.DBName</a></td>
 <td>Azure SQL Database names should meet naming requirements.</td>
 <td>Awareness</td>
+<td>Error</td>
 </tr>
 <tr>
 <td><a href="../Azure.SQL.FGName/">Azure.SQL.FGName</a></td>
 <td>Azure SQL failover group names should meet naming requirements.</td>
 <td>Awareness</td>
+<td>Error</td>
 </tr>
 <tr>
 <td><a href="../Azure.SQL.ServerName/">Azure.SQL.ServerName</a></td>
 <td>Azure SQL logical server names should meet naming requirements.</td>
 <td>Awareness</td>
+<td>Error</td>
 </tr>
 <tr>
 <td><a href="../Azure.SQLMI.Name/">Azure.SQLMI.Name</a></td>
 <td>SQL Managed Instance names should meet naming requirements.</td>
 <td>Awareness</td>
+<td>Error</td>
 </tr>
 <tr>
 <td><a href="../Azure.Storage.Name/">Azure.Storage.Name</a></td>
 <td>Storage Account names should meet naming requirements.</td>
 <td>Awareness</td>
+<td>Error</td>
 </tr>
 <tr>
 <td><a href="../Azure.Template.ExpressionLength/">Azure.Template.ExpressionLength</a></td>
 <td>Template expressions should not exceed the maximum length.</td>
 <td>Awareness</td>
+<td>Error</td>
 </tr>
 <tr>
 <td><a href="../Azure.Template.ParameterFile/">Azure.Template.ParameterFile</a></td>
 <td>Use ARM template parameter files that are valid.</td>
 <td>Important</td>
+<td>Error</td>
 </tr>
 <tr>
 <td><a href="../Azure.Template.ParameterScheme/">Azure.Template.ParameterScheme</a></td>
 <td>Use an Azure template parameter file schema with the https scheme.</td>
 <td>Awareness</td>
+<td>Error</td>
 </tr>
 <tr>
 <td><a href="../Azure.Template.ParameterStrongType/">Azure.Template.ParameterStrongType</a></td>
 <td>Set the parameter value to a value that matches the specified strong type.</td>
 <td>Awareness</td>
+<td>Error</td>
 </tr>
 <tr>
 <td><a href="../Azure.Template.ParameterValue/">Azure.Template.ParameterValue</a></td>
 <td>Specify a value for each parameter in template parameter files.</td>
 <td>Awareness</td>
+<td>Error</td>
 </tr>
 <tr>
 <td><a href="../Azure.Template.TemplateFile/">Azure.Template.TemplateFile</a></td>
 <td>Use ARM template files that are valid.</td>
 <td>Important</td>
+<td>Error</td>
 </tr>
 <tr>
 <td><a href="../Azure.Template.TemplateSchema/">Azure.Template.TemplateSchema</a></td>
 <td>Use a more recent version of the Azure template schema.</td>
 <td>Awareness</td>
+<td>Error</td>
 </tr>
 <tr>
 <td><a href="../Azure.Template.TemplateScheme/">Azure.Template.TemplateScheme</a></td>
 <td>Use an Azure template file schema with the https scheme.</td>
 <td>Awareness</td>
+<td>Error</td>
 </tr>
 <tr>
 <td><a href="../Azure.Template.UseComments/">Azure.Template.UseComments</a></td>
 <td>Use comments for each resource in ARM template to communicate purpose.</td>
 <td>Awareness</td>
+<td>Information</td>
 </tr>
 <tr>
 <td><a href="../Azure.Template.UseDescriptions/">Azure.Template.UseDescriptions</a></td>
 <td>Use descriptions for each resource in generated template(bicep, psarm, AzOps) to communicate purpose.</td>
 <td>Awareness</td>
+<td>Information</td>
 </tr>
 <tr>
 <td><a href="../Azure.Template.ValidSecretRef/">Azure.Template.ValidSecretRef</a></td>
 <td>Use a valid secret reference within parameter files.</td>
 <td>Awareness</td>
+<td>Error</td>
 </tr>
 <tr>
 <td><a href="../Azure.VM.ASName/">Azure.VM.ASName</a></td>
 <td>Availability Set names should meet naming requirements.</td>
 <td>Awareness</td>
+<td>Error</td>
 </tr>
 <tr>
 <td><a href="../Azure.VM.ComputerName/">Azure.VM.ComputerName</a></td>
 <td>Virtual Machine (VM) computer name should meet naming requirements.</td>
 <td>Awareness</td>
+<td>Error</td>
 </tr>
 <tr>
 <td><a href="../Azure.VM.DiskName/">Azure.VM.DiskName</a></td>
 <td>Managed Disk names should meet naming requirements.</td>
 <td>Awareness</td>
+<td>Error</td>
 </tr>
 <tr>
 <td><a href="../Azure.VM.Name/">Azure.VM.Name</a></td>
 <td>Virtual Machine (VM) names should meet naming requirements.</td>
 <td>Awareness</td>
+<td>Error</td>
 </tr>
 <tr>
 <td><a href="../Azure.VM.NICName/">Azure.VM.NICName</a></td>
 <td>Network Interface (NIC) names should meet naming requirements.</td>
 <td>Awareness</td>
+<td>Error</td>
 </tr>
 <tr>
 <td><a href="../Azure.VM.PPGName/">Azure.VM.PPGName</a></td>
 <td>Proximity Placement Group (PPG) names should meet naming requirements.</td>
 <td>Awareness</td>
+<td>Error</td>
 </tr>
 <tr>
 <td><a href="../Azure.VMSS.ComputerName/">Azure.VMSS.ComputerName</a></td>
 <td>Virtual Machine Scale Set (VMSS) computer name should meet naming requirements.</td>
 <td>Awareness</td>
+<td>Error</td>
 </tr>
 <tr>
 <td><a href="../Azure.VMSS.Name/">Azure.VMSS.Name</a></td>
 <td>Virtual Machine Scale Set (VMSS) names should meet naming requirements.</td>
 <td>Awareness</td>
+<td>Error</td>
 </tr>
 <tr>
 <td><a href="../Azure.VNET.Name/">Azure.VNET.Name</a></td>
 <td>Virtual Network (VNET) names should meet naming requirements.</td>
 <td>Awareness</td>
+<td>Error</td>
 </tr>
 <tr>
 <td><a href="../Azure.VNET.SubnetName/">Azure.VNET.SubnetName</a></td>
 <td>Subnet names should meet naming requirements.</td>
 <td>Awareness</td>
+<td>Error</td>
 </tr>
 <tr>
 <td><a href="../Azure.VNG.ConnectionName/">Azure.VNG.ConnectionName</a></td>
 <td>Virtual Network Gateway (VNG) connection names should meet naming requirements.</td>
 <td>Awareness</td>
+<td>Error</td>
 </tr>
 <tr>
 <td><a href="../Azure.VNG.Name/">Azure.VNG.Name</a></td>
 <td>Virtual Network Gateway (VNG) names should meet naming requirements.</td>
 <td>Awareness</td>
+<td>Error</td>
 </tr>
 <tr>
 <td><a href="../Azure.vWAN.Name/">Azure.vWAN.Name</a></td>
 <td>Virtual WAN (vWAN) names should meet naming requirements.</td>
 <td>Awareness</td>
+<td>Error</td>
 </tr>
 </tbody>
 </table>
@@ -7583,6 +7710,7 @@
 <th>Name</th>
 <th>Synopsis</th>
 <th>Severity</th>
+<th>Level</th>
 </tr>
 </thead>
 <tbody>
@@ -7590,26 +7718,31 @@
 <td><a href="../Azure.AKS.DNSPrefix/">Azure.AKS.DNSPrefix</a></td>
 <td>Azure Kubernetes Service (AKS) cluster DNS prefix should meet naming requirements.</td>
 <td>Awareness</td>
+<td>Error</td>
 </tr>
 <tr>
 <td><a href="../Azure.APIM.APIDescriptors/">Azure.APIM.APIDescriptors</a></td>
 <td>API Management APIs should have a display name and description.</td>
 <td>Awareness</td>
+<td>Error</td>
 </tr>
 <tr>
 <td><a href="../Azure.APIM.ProductDescriptors/">Azure.APIM.ProductDescriptors</a></td>
 <td>API Management products should have a display name and description.</td>
 <td>Awareness</td>
+<td>Error</td>
 </tr>
 <tr>
 <td><a href="../Azure.PublicIP.DNSLabel/">Azure.PublicIP.DNSLabel</a></td>
 <td>Public IP domain name labels should meet naming requirements.</td>
 <td>Awareness</td>
+<td>Error</td>
 </tr>
 <tr>
 <td><a href="../Azure.Resource.UseTags/">Azure.Resource.UseTags</a></td>
 <td>Azure resources should be tagged using a standard convention.</td>
 <td>Awareness</td>
+<td>Error</td>
 </tr>
 </tbody>
 </table>
@@ -7621,6 +7754,7 @@
 <th>Name</th>
 <th>Synopsis</th>
 <th>Severity</th>
+<th>Level</th>
 </tr>
 </thead>
 <tbody>
@@ -7628,16 +7762,19 @@
 <td><a href="../Azure.AppService.AlwaysOn/">Azure.AppService.AlwaysOn</a></td>
 <td>Configure Always On for App Service apps.</td>
 <td>Important</td>
+<td>Error</td>
 </tr>
 <tr>
 <td><a href="../Azure.AppService.ARRAffinity/">Azure.AppService.ARRAffinity</a></td>
 <td>Disable client affinity for stateless services.</td>
 <td>Awareness</td>
+<td>Error</td>
 </tr>
 <tr>
 <td><a href="../Azure.AppService.HTTP2/">Azure.AppService.HTTP2</a></td>
 <td>Use HTTP/2 instead of HTTP/1.x to improve protocol efficiency.</td>
 <td>Awareness</td>
+<td>Error</td>
 </tr>
 </tbody>
 </table>
@@ -7648,6 +7785,7 @@
 <th>Name</th>
 <th>Synopsis</th>
 <th>Severity</th>
+<th>Level</th>
 </tr>
 </thead>
 <tbody>
@@ -7655,36 +7793,43 @@
 <td><a href="../Azure.AKS.NodeMinPods/">Azure.AKS.NodeMinPods</a></td>
 <td>Azure Kubernetes Cluster (AKS) nodes should use a minimum number of pods.</td>
 <td>Important</td>
+<td>Error</td>
 </tr>
 <tr>
 <td><a href="../Azure.AKS.PoolScaleSet/">Azure.AKS.PoolScaleSet</a></td>
 <td>Deploy AKS clusters with nodes pools based on VM scale sets.</td>
 <td>Important</td>
+<td>Error</td>
 </tr>
 <tr>
 <td><a href="../Azure.AKS.StandardLB/">Azure.AKS.StandardLB</a></td>
 <td>Azure Kubernetes Clusters (AKS) should use a Standard load balancer SKU.</td>
 <td>Important</td>
+<td>Error</td>
 </tr>
 <tr>
 <td><a href="../Azure.AppService.MinPlan/">Azure.AppService.MinPlan</a></td>
 <td>Use at least a Standard App Service Plan.</td>
 <td>Important</td>
+<td>Error</td>
 </tr>
 <tr>
 <td><a href="../Azure.Redis.MaxMemoryReserved/">Azure.Redis.MaxMemoryReserved</a></td>
 <td>Configure maxmemory-reserved to reserve memory for non-cache operations.</td>
 <td>Important</td>
+<td>Error</td>
 </tr>
 <tr>
 <td><a href="../Azure.Redis.MinSKU/">Azure.Redis.MinSKU</a></td>
 <td>Use Azure Cache for Redis instances of at least Standard C1.</td>
 <td>Important</td>
+<td>Error</td>
 </tr>
 <tr>
 <td><a href="../Azure.Search.SKU/">Azure.Search.SKU</a></td>
 <td>Use the basic and standard tiers for entry level workloads.</td>
 <td>Critical</td>
+<td>Error</td>
 </tr>
 </tbody>
 </table>
@@ -7695,6 +7840,7 @@
 <th>Name</th>
 <th>Synopsis</th>
 <th>Severity</th>
+<th>Level</th>
 </tr>
 </thead>
 <tbody>
@@ -7702,16 +7848,19 @@
 <td><a href="../Azure.AKS.AutoScaling/">Azure.AKS.AutoScaling</a></td>
 <td>Use Autoscaling to ensure AKS clusters deployed with virtual machine scale sets are running efficiently with the right number of nodes for the workloads present.</td>
 <td>Important</td>
+<td>Error</td>
 </tr>
 <tr>
 <td><a href="../Azure.VM.AcceleratedNetworking/">Azure.VM.AcceleratedNetworking</a></td>
 <td>Use accelerated networking for supported operating systems and VM types.</td>
 <td>Important</td>
+<td>Error</td>
 </tr>
 <tr>
 <td><a href="../Azure.VM.DiskCaching/">Azure.VM.DiskCaching</a></td>
 <td>Check disk caching is configured correctly for the workload.</td>
 <td>Important</td>
+<td>Error</td>
 </tr>
 </tbody>
 </table>
@@ -7722,6 +7871,7 @@
 <th>Name</th>
 <th>Synopsis</th>
 <th>Severity</th>
+<th>Level</th>
 </tr>
 </thead>
 <tbody>
@@ -7729,6 +7879,7 @@
 <td><a href="../Azure.AKS.CNISubnetSize/">Azure.AKS.CNISubnetSize</a></td>
 <td>AKS clusters using Azure CNI should use large subnets to reduce IP exhaustion issues.</td>
 <td>Important</td>
+<td>Error</td>
 </tr>
 </tbody>
 </table>
@@ -7740,6 +7891,7 @@
 <th>Name</th>
 <th>Synopsis</th>
 <th>Severity</th>
+<th>Level</th>
 </tr>
 </thead>
 <tbody>
@@ -7747,36 +7899,43 @@
 <td><a href="../Azure.Search.IndexSLA/">Azure.Search.IndexSLA</a></td>
 <td>Use a minimum of 3 replicas to receive an SLA for query and index updates.</td>
 <td>Important</td>
+<td>Error</td>
 </tr>
 <tr>
 <td><a href="../Azure.Search.QuerySLA/">Azure.Search.QuerySLA</a></td>
 <td>Use a minimum of 2 replicas to receive an SLA for index queries.</td>
 <td>Important</td>
+<td>Error</td>
 </tr>
 <tr>
 <td><a href="../Azure.VM.ASAlignment/">Azure.VM.ASAlignment</a></td>
 <td>Use availability sets aligned with managed disks fault domains.</td>
 <td>Important</td>
+<td>Error</td>
 </tr>
 <tr>
 <td><a href="../Azure.VM.Standalone/">Azure.VM.Standalone</a></td>
 <td>Use VM features to increase reliability and improve covered SLA for VM configurations.</td>
 <td>Important</td>
+<td>Error</td>
 </tr>
 <tr>
 <td><a href="../Azure.VM.UseManagedDisks/">Azure.VM.UseManagedDisks</a></td>
 <td>Virtual machines (VMs) should use managed disks.</td>
 <td>Important</td>
+<td>Error</td>
 </tr>
 <tr>
 <td><a href="../Azure.VNET.LocalDNS/">Azure.VNET.LocalDNS</a></td>
 <td>Virtual networks (VNETs) should use Azure local DNS servers.</td>
 <td>Important</td>
+<td>Error</td>
 </tr>
 <tr>
 <td><a href="../Azure.VNET.SingleDNS/">Azure.VNET.SingleDNS</a></td>
 <td>VNETs should have at least two DNS servers assigned.</td>
 <td>Important</td>
+<td>Error</td>
 </tr>
 </tbody>
 </table>
@@ -7787,6 +7946,7 @@
 <th>Name</th>
 <th>Synopsis</th>
 <th>Severity</th>
+<th>Level</th>
 </tr>
 </thead>
 <tbody>
@@ -7794,26 +7954,31 @@
 <td><a href="../Azure.ACR.GeoReplica/">Azure.ACR.GeoReplica</a></td>
 <td>Use geo-replicated container registries to compliment a multi-region container deployments.</td>
 <td>Important</td>
+<td>Error</td>
 </tr>
 <tr>
 <td><a href="../Azure.KeyVault.PurgeProtect/">Azure.KeyVault.PurgeProtect</a></td>
 <td>Enable Purge Protection on Key Vaults to prevent early purge of vaults and vault items.</td>
 <td>Important</td>
+<td>Error</td>
 </tr>
 <tr>
 <td><a href="../Azure.KeyVault.SoftDelete/">Azure.KeyVault.SoftDelete</a></td>
 <td>Enable Soft Delete on Key Vaults to protect vaults and vault items from accidental deletion.</td>
 <td>Important</td>
+<td>Error</td>
 </tr>
 <tr>
 <td><a href="../Azure.Storage.SoftDelete/">Azure.Storage.SoftDelete</a></td>
 <td>Enable blob soft delete on Storage Accounts.</td>
 <td>Important</td>
+<td>Error</td>
 </tr>
 <tr>
 <td><a href="../Azure.Storage.UseReplication/">Azure.Storage.UseReplication</a></td>
 <td>Storage Accounts not using geo-replicated storage (GRS) may be at risk.</td>
 <td>Important</td>
+<td>Error</td>
 </tr>
 </tbody>
 </table>
@@ -7824,6 +7989,7 @@
 <th>Name</th>
 <th>Synopsis</th>
 <th>Severity</th>
+<th>Level</th>
 </tr>
 </thead>
 <tbody>
@@ -7831,71 +7997,85 @@
 <td><a href="../Azure.AKS.AvailabilityZone/">Azure.AKS.AvailabilityZone</a></td>
 <td>AKS clusters deployed with virtual machine scale sets should use availability zones in supported regions for high availability.</td>
 <td>Important</td>
+<td>Error</td>
 </tr>
 <tr>
 <td><a href="../Azure.AKS.PoolVersion/">Azure.AKS.PoolVersion</a></td>
 <td>AKS node pools should match Kubernetes control plane version.</td>
 <td>Important</td>
+<td>Error</td>
 </tr>
 <tr>
 <td><a href="../Azure.APIM.AvailabilityZone/">Azure.APIM.AvailabilityZone</a></td>
 <td>API management services deployed with Premium SKU should use availability zones in supported regions for high availability.</td>
 <td>Important</td>
+<td>Error</td>
 </tr>
 <tr>
 <td><a href="../Azure.AppGw.AvailabilityZone/">Azure.AppGw.AvailabilityZone</a></td>
 <td>Application gateways deployed with should use availability zones in supported regions for high availability.</td>
 <td>Important</td>
+<td>Error</td>
 </tr>
 <tr>
 <td><a href="../Azure.LB.AvailabilityZone/">Azure.LB.AvailabilityZone</a></td>
 <td>Load balancers deployed with Standard SKU should be zone-redundant for high availability.</td>
 <td>Important</td>
+<td>Error</td>
 </tr>
 <tr>
 <td><a href="../Azure.LB.StandardSKU/">Azure.LB.StandardSKU</a></td>
 <td>Load balancers should be deployed with Standard SKU for production workloads.</td>
 <td>Important</td>
+<td>Error</td>
 </tr>
 <tr>
 <td><a href="../Azure.PublicIP.AvailabilityZone/">Azure.PublicIP.AvailabilityZone</a></td>
 <td>Public IP addresses deployed with Standard SKU should use availability zones in supported regions for high availability.</td>
 <td>Important</td>
+<td>Error</td>
 </tr>
 <tr>
 <td><a href="../Azure.PublicIP.StandardSKU/">Azure.PublicIP.StandardSKU</a></td>
 <td>Public IP addresses should be deployed with Standard SKU for production workloads.</td>
 <td>Important</td>
+<td>Error</td>
 </tr>
 <tr>
 <td><a href="../Azure.Redis.AvailabilityZone/">Azure.Redis.AvailabilityZone</a></td>
 <td>Premium Redis cache should be deployed with availability zones for high availability.</td>
 <td>Important</td>
+<td>Error</td>
 </tr>
 <tr>
 <td><a href="../Azure.RedisEnterprise.Zones/">Azure.RedisEnterprise.Zones</a></td>
 <td>Enterprise Redis cache should be zone-redundant for high availability.</td>
 <td>Important</td>
+<td>Error</td>
 </tr>
 <tr>
 <td><a href="../Azure.RSV.ReplicationAlert/">Azure.RSV.ReplicationAlert</a></td>
 <td>Recovery Services Vaults (RSV) without replication alerts configured may be at risk.</td>
 <td>Important</td>
+<td>Error</td>
 </tr>
 <tr>
 <td><a href="../Azure.RSV.StorageType/">Azure.RSV.StorageType</a></td>
 <td>Recovery Services Vaults (RSV) not using geo-replicated storage (GRS) may be at risk.</td>
 <td>Important</td>
+<td>Error</td>
 </tr>
 <tr>
 <td><a href="../Azure.VNG.ERAvailabilityZoneSKU/">Azure.VNG.ERAvailabilityZoneSKU</a></td>
 <td>Use availability zone SKU for virtual network gateways deployed with ExpressRoute gateway type.</td>
 <td>Important</td>
+<td>Error</td>
 </tr>
 <tr>
 <td><a href="../Azure.VNG.VPNAvailabilityZoneSKU/">Azure.VNG.VPNAvailabilityZoneSKU</a></td>
 <td>Use availability zone SKU for virtual network gateways deployed with VPN gateway type.</td>
 <td>Important</td>
+<td>Error</td>
 </tr>
 </tbody>
 </table>
@@ -7906,6 +8086,7 @@
 <th>Name</th>
 <th>Synopsis</th>
 <th>Severity</th>
+<th>Level</th>
 </tr>
 </thead>
 <tbody>
@@ -7913,56 +8094,67 @@
 <td><a href="../Azure.AKS.MinNodeCount/">Azure.AKS.MinNodeCount</a></td>
 <td>AKS clusters should have minimum number of nodes for failover and updates.</td>
 <td>Important</td>
+<td>Error</td>
 </tr>
 <tr>
 <td><a href="../Azure.AppGw.MinInstance/">Azure.AppGw.MinInstance</a></td>
 <td>Application Gateways should use a minimum of two instances.</td>
 <td>Important</td>
+<td>Error</td>
 </tr>
 <tr>
 <td><a href="../Azure.AppService.WebProbe/">Azure.AppService.WebProbe</a></td>
 <td>Configure and enable instance health probes.</td>
 <td>Important</td>
+<td>Error</td>
 </tr>
 <tr>
 <td><a href="../Azure.AppService.WebProbePath/">Azure.AppService.WebProbePath</a></td>
 <td>Configure a dedicated path for health probe requests.</td>
 <td>Important</td>
+<td>Error</td>
 </tr>
 <tr>
 <td><a href="../Azure.FrontDoor.Probe/">Azure.FrontDoor.Probe</a></td>
 <td>Configure and enable health probes for each backend pool.</td>
 <td>Important</td>
+<td>Error</td>
 </tr>
 <tr>
 <td><a href="../Azure.FrontDoor.ProbeMethod/">Azure.FrontDoor.ProbeMethod</a></td>
 <td>Configure health probes to use HEAD instead of GET requests.</td>
 <td>Important</td>
+<td>Error</td>
 </tr>
 <tr>
 <td><a href="../Azure.FrontDoor.ProbePath/">Azure.FrontDoor.ProbePath</a></td>
 <td>Configure a dedicated path for health probe requests.</td>
 <td>Important</td>
+<td>Error</td>
 </tr>
 <tr>
 <td><a href="../Azure.LB.Probe/">Azure.LB.Probe</a></td>
 <td>Use a specific probe for web protocols.</td>
 <td>Important</td>
+<td>Error</td>
 </tr>
 <tr>
 <td><a href="../Azure.TrafficManager.Endpoints/">Azure.TrafficManager.Endpoints</a></td>
 <td>Traffic Manager should use at lest two enabled endpoints.</td>
 <td>Important</td>
+<td>Error</td>
 </tr>
 <tr>
 <td><a href="../Azure.VM.ASMinMembers/">Azure.VM.ASMinMembers</a></td>
 <td>Availability sets should be deployed with at least two virtual machines (VMs).</td>
 <td>Important</td>
+<td>Error</td>
 </tr>
 <tr>
 <td><a href="../Azure.VNG.VPNActiveActive/">Azure.VNG.VPNActiveActive</a></td>
 <td>Use VPN gateways configured to operate in an Active-Active configuration to reduce connectivity downtime.</td>
 <td>Important</td>
+<td>Error</td>
 </tr>
 </tbody>
 </table>
@@ -7973,6 +8165,7 @@
 <th>Name</th>
 <th>Synopsis</th>
 <th>Severity</th>
+<th>Level</th>
 </tr>
 </thead>
 <tbody>
@@ -7980,31 +8173,37 @@
 <td><a href="../Azure.ACR.MinSku/">Azure.ACR.MinSku</a></td>
 <td>ACR should use the Premium or Standard SKU for production deployments.</td>
 <td>Important</td>
+<td>Error</td>
 </tr>
 <tr>
 <td><a href="../Azure.ADX.SLA/">Azure.ADX.SLA</a></td>
 <td>Use SKUs that include an SLA when configuring Azure Data Explorer (ADX) clusters.</td>
 <td>Important</td>
+<td>Error</td>
 </tr>
 <tr>
 <td><a href="../Azure.AKS.Version/">Azure.AKS.Version</a></td>
 <td>AKS control plane and nodes pools should use a current stable release.</td>
 <td>Important</td>
+<td>Error</td>
 </tr>
 <tr>
 <td><a href="../Azure.AppConfig.SKU/">Azure.AppConfig.SKU</a></td>
 <td>App Configuration should use a minimum size of Standard.</td>
 <td>Important</td>
+<td>Error</td>
 </tr>
 <tr>
 <td><a href="../Azure.SignalR.SLA/">Azure.SignalR.SLA</a></td>
 <td>Use SKUs that include an SLA when configuring SignalR Services.</td>
 <td>Important</td>
+<td>Error</td>
 </tr>
 <tr>
 <td><a href="../Azure.WebPubSub.SLA/">Azure.WebPubSub.SLA</a></td>
 <td>Use SKUs that include an SLA when configuring Web PubSub Services.</td>
 <td>Important</td>
+<td>Error</td>
 </tr>
 </tbody>
 </table>
@@ -8015,6 +8214,7 @@
 <th>Name</th>
 <th>Synopsis</th>
 <th>Severity</th>
+<th>Level</th>
 </tr>
 </thead>
 <tbody>
@@ -8022,6 +8222,7 @@
 <td><a href="../Azure.AppService.PlanInstanceCount/">Azure.AppService.PlanInstanceCount</a></td>
 <td>App Service Plan should use a minimum number of instances for failover.</td>
 <td>Important</td>
+<td>Error</td>
 </tr>
 </tbody>
 </table>
@@ -8032,6 +8233,7 @@
 <th>Name</th>
 <th>Synopsis</th>
 <th>Severity</th>
+<th>Level</th>
 </tr>
 </thead>
 <tbody>
@@ -8039,6 +8241,7 @@
 <td><a href="../Azure.Template.LocationDefault/">Azure.Template.LocationDefault</a></td>
 <td>Set the default value for the location parameter within an ARM template to resource group location.</td>
 <td>Awareness</td>
+<td>Error</td>
 </tr>
 </tbody>
 </table>
@@ -8050,6 +8253,7 @@
 <th>Name</th>
 <th>Synopsis</th>
 <th>Severity</th>
+<th>Level</th>
 </tr>
 </thead>
 <tbody>
@@ -8057,21 +8261,25 @@
 <td><a href="../Azure.AKS.HttpAppRouting/">Azure.AKS.HttpAppRouting</a></td>
 <td>Disable HTTP application routing add-on in AKS clusters.</td>
 <td>Important</td>
+<td>Error</td>
 </tr>
 <tr>
 <td><a href="../Azure.Cognitive.PublicAccess/">Azure.Cognitive.PublicAccess</a></td>
 <td>Restrict access of Cognitive Services accounts to authorized virtual networks.</td>
 <td>Important</td>
+<td>Error</td>
 </tr>
 <tr>
 <td><a href="../Azure.Redis.PublicNetworkAccess/">Azure.Redis.PublicNetworkAccess</a></td>
 <td>Redis cache should disable public network access.</td>
 <td>Critical</td>
+<td>Error</td>
 </tr>
 <tr>
 <td><a href="../Azure.Storage.Firewall/">Azure.Storage.Firewall</a></td>
 <td>Storage Accounts should only accept explicitly allowed traffic.</td>
 <td>Important</td>
+<td>Error</td>
 </tr>
 </tbody>
 </table>
@@ -8082,6 +8290,7 @@
 <th>Name</th>
 <th>Synopsis</th>
 <th>Severity</th>
+<th>Level</th>
 </tr>
 </thead>
 <tbody>
@@ -8089,6 +8298,7 @@
 <td><a href="../Azure.ACR.ImageHealth/">Azure.ACR.ImageHealth</a></td>
 <td>Remove container images with known vulnerabilities.</td>
 <td>Critical</td>
+<td>Error</td>
 </tr>
 </tbody>
 </table>
@@ -8099,6 +8309,7 @@
 <th>Name</th>
 <th>Synopsis</th>
 <th>Severity</th>
+<th>Level</th>
 </tr>
 </thead>
 <tbody>
@@ -8106,46 +8317,55 @@
 <td><a href="../Azure.ADX.ManagedIdentity/">Azure.ADX.ManagedIdentity</a></td>
 <td>Configure Data Explorer clusters to use managed identities to access Azure resources securely.</td>
 <td>Important</td>
+<td>Error</td>
 </tr>
 <tr>
 <td><a href="../Azure.AKS.PodIdentity/">Azure.AKS.PodIdentity</a></td>
 <td>Configure AKS clusters to use AAD pod identities to access Azure resources securely.</td>
 <td>Important</td>
+<td>Error</td>
 </tr>
 <tr>
 <td><a href="../Azure.Cognitive.DisableLocalAuth/">Azure.Cognitive.DisableLocalAuth</a></td>
 <td>Authenticate requests to Cognitive Services with Azure AD identities.</td>
 <td>Important</td>
+<td>Error</td>
 </tr>
 <tr>
 <td><a href="../Azure.EventGrid.DisableLocalAuth/">Azure.EventGrid.DisableLocalAuth</a></td>
 <td>Authenticate publishing clients with Azure AD identities.</td>
 <td>Important</td>
+<td>Error</td>
 </tr>
 <tr>
 <td><a href="../Azure.EventHub.DisableLocalAuth/">Azure.EventHub.DisableLocalAuth</a></td>
 <td>Authenticate Event Hub publishers and consumers with Azure AD identities.</td>
 <td>Important</td>
+<td>Error</td>
 </tr>
 <tr>
 <td><a href="../Azure.ServiceBus.DisableLocalAuth/">Azure.ServiceBus.DisableLocalAuth</a></td>
 <td>Authenticate Service Bus publishers and consumers with Azure AD identities.</td>
 <td>Important</td>
+<td>Error</td>
 </tr>
 <tr>
 <td><a href="../Azure.SignalR.ManagedIdentity/">Azure.SignalR.ManagedIdentity</a></td>
 <td>Configure SignalR Services to use managed identities to access Azure resources securely.</td>
 <td>Important</td>
+<td>Error</td>
 </tr>
 <tr>
 <td><a href="../Azure.Storage.BlobAccessType/">Azure.Storage.BlobAccessType</a></td>
 <td>Use containers configured with a private access type that requires authorization.</td>
 <td>Important</td>
+<td>Error</td>
 </tr>
 <tr>
 <td><a href="../Azure.WebPubSub.ManagedIdentity/">Azure.WebPubSub.ManagedIdentity</a></td>
 <td>Configure Web PubSub Services to use managed identities to access Azure resources securely.</td>
 <td>Important</td>
+<td>Error</td>
 </tr>
 </tbody>
 </table>
@@ -8156,6 +8376,7 @@
 <th>Name</th>
 <th>Synopsis</th>
 <th>Severity</th>
+<th>Level</th>
 </tr>
 </thead>
 <tbody>
@@ -8163,11 +8384,13 @@
 <td><a href="../Azure.ACR.ContainerScan/">Azure.ACR.ContainerScan</a></td>
 <td>Enable vulnerability scanning for container images.</td>
 <td>Critical</td>
+<td>Error</td>
 </tr>
 <tr>
 <td><a href="../Azure.ACR.Quarantine/">Azure.ACR.Quarantine</a></td>
 <td>Enable container image quarantine, scan, and mark images as verified.</td>
 <td>Important</td>
+<td>Error</td>
 </tr>
 </tbody>
 </table>
@@ -8178,6 +8401,7 @@
 <th>Name</th>
 <th>Synopsis</th>
 <th>Severity</th>
+<th>Level</th>
 </tr>
 </thead>
 <tbody>
@@ -8185,11 +8409,13 @@
 <td><a href="../Azure.Cognitive.PrivateEndpoints/">Azure.Cognitive.PrivateEndpoints</a></td>
 <td>Use Private Endpoints to access Cognitive Services accounts.</td>
 <td>Important</td>
+<td>Error</td>
 </tr>
 <tr>
 <td><a href="../Azure.EventGrid.TopicPublicAccess/">Azure.EventGrid.TopicPublicAccess</a></td>
 <td>Use Private Endpoints to access Event Grid topics and domains.</td>
 <td>Important</td>
+<td>Error</td>
 </tr>
 </tbody>
 </table>
@@ -8200,6 +8426,7 @@
 <th>Name</th>
 <th>Synopsis</th>
 <th>Severity</th>
+<th>Level</th>
 </tr>
 </thead>
 <tbody>
@@ -8207,141 +8434,169 @@
 <td><a href="../Azure.ACR.ContentTrust/">Azure.ACR.ContentTrust</a></td>
 <td>Use container images signed by a trusted image publisher.</td>
 <td>Important</td>
+<td>Error</td>
 </tr>
 <tr>
 <td><a href="../Azure.APIM.Ciphers/">Azure.APIM.Ciphers</a></td>
 <td>API Management should not accept weak or deprecated ciphers.</td>
 <td>Important</td>
+<td>Error</td>
 </tr>
 <tr>
 <td><a href="../Azure.APIM.EncryptValues/">Azure.APIM.EncryptValues</a></td>
 <td>API Management named values should be encrypted.</td>
 <td>Important</td>
+<td>Error</td>
 </tr>
 <tr>
 <td><a href="../Azure.APIM.HTTPBackend/">Azure.APIM.HTTPBackend</a></td>
 <td>Use HTTPS for communication to backend services.</td>
 <td>Critical</td>
+<td>Error</td>
 </tr>
 <tr>
 <td><a href="../Azure.APIM.HTTPEndpoint/">Azure.APIM.HTTPEndpoint</a></td>
 <td>Enforce HTTPS for communication to API clients.</td>
 <td>Important</td>
+<td>Error</td>
 </tr>
 <tr>
 <td><a href="../Azure.APIM.Protocols/">Azure.APIM.Protocols</a></td>
 <td>API Management should only accept a minimum of TLS 1.2.</td>
 <td>Important</td>
+<td>Error</td>
 </tr>
 <tr>
 <td><a href="../Azure.AppGw.SSLPolicy/">Azure.AppGw.SSLPolicy</a></td>
 <td>Application Gateway should only accept a minimum of TLS 1.2.</td>
 <td>Critical</td>
+<td>Error</td>
 </tr>
 <tr>
 <td><a href="../Azure.AppGw.UseHTTPS/">Azure.AppGw.UseHTTPS</a></td>
 <td>Application Gateways should only expose frontend HTTP endpoints over HTTPS.</td>
 <td>Critical</td>
+<td>Error</td>
 </tr>
 <tr>
 <td><a href="../Azure.AppService.MinTLS/">Azure.AppService.MinTLS</a></td>
 <td>App Service should reject TLS versions older then 1.2.</td>
 <td>Critical</td>
+<td>Error</td>
 </tr>
 <tr>
 <td><a href="../Azure.AppService.UseHTTPS/">Azure.AppService.UseHTTPS</a></td>
 <td>Azure App Service apps should only accept encrypted connections.</td>
 <td>Important</td>
+<td>Error</td>
 </tr>
 <tr>
 <td><a href="../Azure.AppService.WebSecureFtp/">Azure.AppService.WebSecureFtp</a></td>
 <td>Web apps should disable insecure FTP and configure SFTP when required.</td>
 <td>Important</td>
+<td>Error</td>
 </tr>
 <tr>
 <td><a href="../Azure.Automation.EncryptVariables/">Azure.Automation.EncryptVariables</a></td>
 <td>Azure Automation variables should be encrypted.</td>
 <td>Important</td>
+<td>Error</td>
 </tr>
 <tr>
 <td><a href="../Azure.CDN.HTTP/">Azure.CDN.HTTP</a></td>
 <td>Enforce HTTPS for client connections.</td>
 <td>Important</td>
+<td>Error</td>
 </tr>
 <tr>
 <td><a href="../Azure.CDN.MinTLS/">Azure.CDN.MinTLS</a></td>
 <td>Azure CDN endpoints should reject TLS versions older than 1.2.</td>
 <td>Important</td>
+<td>Error</td>
 </tr>
 <tr>
 <td><a href="../Azure.FrontDoor.MinTLS/">Azure.FrontDoor.MinTLS</a></td>
 <td>Front Door should reject TLS versions older then 1.2.</td>
 <td>Critical</td>
+<td>Error</td>
 </tr>
 <tr>
 <td><a href="../Azure.KeyVault.AutoRotationPolicy/">Azure.KeyVault.AutoRotationPolicy</a></td>
 <td>Key Vault keys should have auto-rotation enabled.</td>
 <td>Important</td>
+<td>Error</td>
 </tr>
 <tr>
 <td><a href="../Azure.MySQL.MinTLS/">Azure.MySQL.MinTLS</a></td>
 <td>MySQL DB servers should reject TLS versions older than 1.2.</td>
 <td>Critical</td>
+<td>Error</td>
 </tr>
 <tr>
 <td><a href="../Azure.MySQL.UseSSL/">Azure.MySQL.UseSSL</a></td>
 <td>Enforce encrypted MySQL connections.</td>
 <td>Critical</td>
+<td>Error</td>
 </tr>
 <tr>
 <td><a href="../Azure.PostgreSQL.MinTLS/">Azure.PostgreSQL.MinTLS</a></td>
 <td>PostgreSQL DB servers should reject TLS versions older than 1.2.</td>
 <td>Critical</td>
+<td>Error</td>
 </tr>
 <tr>
 <td><a href="../Azure.PostgreSQL.UseSSL/">Azure.PostgreSQL.UseSSL</a></td>
 <td>Enforce encrypted PostgreSQL connections.</td>
 <td>Critical</td>
+<td>Error</td>
 </tr>
 <tr>
 <td><a href="../Azure.Redis.MinTLS/">Azure.Redis.MinTLS</a></td>
 <td>Redis Cache should reject TLS versions older then 1.2.</td>
 <td>Critical</td>
+<td>Error</td>
 </tr>
 <tr>
 <td><a href="../Azure.Redis.NonSslPort/">Azure.Redis.NonSslPort</a></td>
 <td>Azure Cache for Redis should only accept secure connections.</td>
 <td>Critical</td>
+<td>Error</td>
 </tr>
 <tr>
 <td><a href="../Azure.SQL.MinTLS/">Azure.SQL.MinTLS</a></td>
 <td>Azure SQL Database servers should reject TLS versions older than 1.2.</td>
 <td>Critical</td>
+<td>Error</td>
 </tr>
 <tr>
 <td><a href="../Azure.SQL.TDE/">Azure.SQL.TDE</a></td>
 <td>Use Transparent Data Encryption (TDE) with Azure SQL Database.</td>
 <td>Critical</td>
+<td>Error</td>
 </tr>
 <tr>
 <td><a href="../Azure.Storage.MinTLS/">Azure.Storage.MinTLS</a></td>
 <td>Storage Accounts should reject TLS versions older than 1.2.</td>
 <td>Critical</td>
+<td>Error</td>
 </tr>
 <tr>
 <td><a href="../Azure.Storage.SecureTransfer/">Azure.Storage.SecureTransfer</a></td>
 <td>Storage accounts should only accept encrypted connections.</td>
 <td>Important</td>
+<td>Error</td>
 </tr>
 <tr>
 <td><a href="../Azure.TrafficManager.Protocol/">Azure.TrafficManager.Protocol</a></td>
 <td>Monitor Traffic Manager web-based endpoints with HTTPS.</td>
 <td>Important</td>
+<td>Error</td>
 </tr>
 <tr>
 <td><a href="../Azure.VM.ADE/">Azure.VM.ADE</a></td>
 <td>Use Azure Disk Encryption (ADE).</td>
 <td>Important</td>
+<td>Error</td>
 </tr>
 </tbody>
 </table>
@@ -8352,6 +8607,7 @@
 <th>Name</th>
 <th>Synopsis</th>
 <th>Severity</th>
+<th>Level</th>
 </tr>
 </thead>
 <tbody>
@@ -8359,11 +8615,13 @@
 <td><a href="../Azure.AppService.NETVersion/">Azure.AppService.NETVersion</a></td>
 <td>Configure applications to use newer .NET versions.</td>
 <td>Important</td>
+<td>Error</td>
 </tr>
 <tr>
 <td><a href="../Azure.AppService.PHPVersion/">Azure.AppService.PHPVersion</a></td>
 <td>Configure applications to use newer PHP runtime versions.</td>
 <td>Important</td>
+<td>Error</td>
 </tr>
 </tbody>
 </table>
@@ -8374,6 +8632,7 @@
 <th>Name</th>
 <th>Synopsis</th>
 <th>Severity</th>
+<th>Level</th>
 </tr>
 </thead>
 <tbody>
@@ -8381,11 +8640,13 @@
 <td><a href="../Azure.AKS.AuthorizedIPs/">Azure.AKS.AuthorizedIPs</a></td>
 <td>Restrict access to API server endpoints to authorized IP addresses.</td>
 <td>Important</td>
+<td>Error</td>
 </tr>
 <tr>
 <td><a href="../Azure.Resource.AllowedRegions/">Azure.Resource.AllowedRegions</a></td>
 <td>Resources should be deployed to allowed regions.</td>
 <td>Awareness</td>
+<td>Error</td>
 </tr>
 </tbody>
 </table>
@@ -8396,6 +8657,7 @@
 <th>Name</th>
 <th>Synopsis</th>
 <th>Severity</th>
+<th>Level</th>
 </tr>
 </thead>
 <tbody>
@@ -8403,11 +8665,13 @@
 <td><a href="../Azure.ADX.DiskEncryption/">Azure.ADX.DiskEncryption</a></td>
 <td>Use disk encryption for Azure Data Explorer (ADX) clusters.</td>
 <td>Important</td>
+<td>Error</td>
 </tr>
 <tr>
 <td><a href="../Azure.ContainerApp.Insecure/">Azure.ContainerApp.Insecure</a></td>
 <td>Ensure insecure inbound traffic is not permitted to the container app.</td>
 <td>Important</td>
+<td>Error</td>
 </tr>
 </tbody>
 </table>
@@ -8418,6 +8682,7 @@
 <th>Name</th>
 <th>Synopsis</th>
 <th>Severity</th>
+<th>Level</th>
 </tr>
 </thead>
 <tbody>
@@ -8425,131 +8690,157 @@
 <td><a href="../Azure.ACR.AdminUser/">Azure.ACR.AdminUser</a></td>
 <td>Use Azure AD identities instead of using the registry admin user.</td>
 <td>Critical</td>
+<td>Error</td>
 </tr>
 <tr>
 <td><a href="../Azure.AKS.AzureRBAC/">Azure.AKS.AzureRBAC</a></td>
 <td>Use Azure RBAC for Kubernetes Authorization with AKS clusters.</td>
 <td>Important</td>
+<td>Error</td>
 </tr>
 <tr>
 <td><a href="../Azure.AKS.LocalAccounts/">Azure.AKS.LocalAccounts</a></td>
 <td>Enforce named user accounts with RBAC assigned permissions.</td>
 <td>Important</td>
+<td>Error</td>
 </tr>
 <tr>
 <td><a href="../Azure.AKS.ManagedAAD/">Azure.AKS.ManagedAAD</a></td>
 <td>Use AKS-managed Azure AD to simplify authorization and improve security.</td>
 <td>Important</td>
+<td>Error</td>
 </tr>
 <tr>
 <td><a href="../Azure.AKS.UseRBAC/">Azure.AKS.UseRBAC</a></td>
 <td>Deploy AKS cluster with role-based access control (RBAC) enabled.</td>
 <td>Important</td>
+<td>Error</td>
 </tr>
 <tr>
 <td><a href="../Azure.APIM.ManagedIdentity/">Azure.APIM.ManagedIdentity</a></td>
 <td>Configure managed identities to access Azure resources.</td>
 <td>Important</td>
+<td>Error</td>
 </tr>
 <tr>
 <td><a href="../Azure.APIM.ProductApproval/">Azure.APIM.ProductApproval</a></td>
 <td>Configure products to require approval.</td>
 <td>Important</td>
+<td>Error</td>
 </tr>
 <tr>
 <td><a href="../Azure.APIM.ProductSubscription/">Azure.APIM.ProductSubscription</a></td>
 <td>Configure products to require a subscription.</td>
 <td>Important</td>
+<td>Error</td>
 </tr>
 <tr>
 <td><a href="../Azure.AppService.ManagedIdentity/">Azure.AppService.ManagedIdentity</a></td>
 <td>Configure managed identities to access Azure resources.</td>
 <td>Important</td>
+<td>Error</td>
 </tr>
 <tr>
 <td><a href="../Azure.Automation.ManagedIdentity/">Azure.Automation.ManagedIdentity</a></td>
 <td>Ensure Managed Identity is used for authentication.</td>
 <td>Important</td>
+<td>Error</td>
 </tr>
 <tr>
 <td><a href="../Azure.Automation.WebHookExpiry/">Azure.Automation.WebHookExpiry</a></td>
 <td>Do not create webhooks with an expiry time greater than 1 year (default).</td>
 <td>Awareness</td>
+<td>Error</td>
 </tr>
 <tr>
 <td><a href="../Azure.Cognitive.ManagedIdentity/">Azure.Cognitive.ManagedIdentity</a></td>
 <td>Configure managed identities to access Azure resources.</td>
 <td>Important</td>
+<td>Error</td>
 </tr>
 <tr>
 <td><a href="../Azure.Cosmos.DisableMetadataWrite/">Azure.Cosmos.DisableMetadataWrite</a></td>
 <td>Use Azure AD identities for management place operations in Azure Cosmos DB.</td>
 <td>Important</td>
+<td>Error</td>
 </tr>
 <tr>
 <td><a href="../Azure.EventGrid.ManagedIdentity/">Azure.EventGrid.ManagedIdentity</a></td>
 <td>Use managed identities to deliver Event Grid Topic events.</td>
 <td>Important</td>
+<td>Error</td>
 </tr>
 <tr>
 <td><a href="../Azure.KeyVault.AccessPolicy/">Azure.KeyVault.AccessPolicy</a></td>
 <td>Use the principal of least privilege when assigning access to Key Vault.</td>
 <td>Important</td>
+<td>Error</td>
 </tr>
 <tr>
 <td><a href="../Azure.RBAC.CoAdministrator/">Azure.RBAC.CoAdministrator</a></td>
 <td>Delegate access to manage Azure resources using role-based access control (RBAC).</td>
 <td>Important</td>
+<td>Error</td>
 </tr>
 <tr>
 <td><a href="../Azure.RBAC.LimitMGDelegation/">Azure.RBAC.LimitMGDelegation</a></td>
 <td>Limit Role-Base Access Control (RBAC) inheritance from Management Groups.</td>
 <td>Important</td>
+<td>Error</td>
 </tr>
 <tr>
 <td><a href="../Azure.RBAC.LimitOwner/">Azure.RBAC.LimitOwner</a></td>
 <td>Limit the number of subscription Owners.</td>
 <td>Important</td>
+<td>Error</td>
 </tr>
 <tr>
 <td><a href="../Azure.RBAC.PIM/">Azure.RBAC.PIM</a></td>
 <td>Use just-in-time (JiT) activation of roles instead of persistent role assignment.</td>
 <td>Important</td>
+<td>Error</td>
 </tr>
 <tr>
 <td><a href="../Azure.RBAC.UseGroups/">Azure.RBAC.UseGroups</a></td>
 <td>Use groups for assigning permissions instead of individual user accounts.</td>
 <td>Important</td>
+<td>Error</td>
 </tr>
 <tr>
 <td><a href="../Azure.RBAC.UseRGDelegation/">Azure.RBAC.UseRGDelegation</a></td>
 <td>Use RBAC assignments on resource groups instead of individual resources.</td>
 <td>Important</td>
+<td>Error</td>
 </tr>
 <tr>
 <td><a href="../Azure.Search.ManagedIdentity/">Azure.Search.ManagedIdentity</a></td>
 <td>Configure managed identities to access Azure resources.</td>
 <td>Important</td>
+<td>Error</td>
 </tr>
 <tr>
 <td><a href="../Azure.ServiceFabric.AAD/">Azure.ServiceFabric.AAD</a></td>
 <td>Use Azure Active Directory (AAD) client authentication for Service Fabric clusters.</td>
 <td>Critical</td>
+<td>Error</td>
 </tr>
 <tr>
 <td><a href="../Azure.SQL.AAD/">Azure.SQL.AAD</a></td>
 <td>Use Azure Active Directory (AAD) authentication with Azure SQL databases.</td>
 <td>Critical</td>
+<td>Error</td>
 </tr>
 <tr>
 <td><a href="../Azure.Storage.BlobPublicAccess/">Azure.Storage.BlobPublicAccess</a></td>
 <td>Storage Accounts should only accept authorized requests.</td>
 <td>Important</td>
+<td>Error</td>
 </tr>
 <tr>
 <td><a href="../Azure.VM.PublicKey/">Azure.VM.PublicKey</a></td>
 <td>Linux virtual machines should use public keys.</td>
 <td>Important</td>
+<td>Error</td>
 </tr>
 </tbody>
 </table>
@@ -8560,6 +8851,7 @@
 <th>Name</th>
 <th>Synopsis</th>
 <th>Severity</th>
+<th>Level</th>
 </tr>
 </thead>
 <tbody>
@@ -8567,6 +8859,7 @@
 <td><a href="../Azure.Deployment.OutputSecretValue/">Azure.Deployment.OutputSecretValue</a></td>
 <td>Avoid outputting sensitive deployment values.</td>
 <td>Critical</td>
+<td>Error</td>
 </tr>
 </tbody>
 </table>
@@ -8577,6 +8870,7 @@
 <th>Name</th>
 <th>Synopsis</th>
 <th>Severity</th>
+<th>Level</th>
 </tr>
 </thead>
 <tbody>
@@ -8584,11 +8878,13 @@
 <td><a href="../Azure.AKS.SecretStore/">Azure.AKS.SecretStore</a></td>
 <td>Deploy AKS clusters with Secrets Store CSI Driver and store Secrets in Key Vault.</td>
 <td>Important</td>
+<td>Error</td>
 </tr>
 <tr>
 <td><a href="../Azure.AKS.SecretStoreRotation/">Azure.AKS.SecretStoreRotation</a></td>
 <td>Enable autorotation of Secrets Store CSI Driver secrets for AKS clusters.</td>
 <td>Important</td>
+<td>Error</td>
 </tr>
 </tbody>
 </table>
@@ -8599,6 +8895,7 @@
 <th>Name</th>
 <th>Synopsis</th>
 <th>Severity</th>
+<th>Level</th>
 </tr>
 </thead>
 <tbody>
@@ -8606,11 +8903,13 @@
 <td><a href="../Azure.AKS.AuditLogs/">Azure.AKS.AuditLogs</a></td>
 <td>AKS clusters should collect security-based audit logs to assess and monitor the compliance status of workloads.</td>
 <td>Important</td>
+<td>Error</td>
 </tr>
 <tr>
 <td><a href="../Azure.Automation.AuditLogs/">Azure.Automation.AuditLogs</a></td>
 <td>Ensure automation account audit diagnostic logs are enabled.</td>
 <td>Important</td>
+<td>Error</td>
 </tr>
 </tbody>
 </table>
@@ -8621,6 +8920,7 @@
 <th>Name</th>
 <th>Synopsis</th>
 <th>Severity</th>
+<th>Level</th>
 </tr>
 </thead>
 <tbody>
@@ -8628,111 +8928,133 @@
 <td><a href="../Azure.AppGw.OWASP/">Azure.AppGw.OWASP</a></td>
 <td>Application Gateway Web Application Firewall (WAF) should use OWASP 3.x rules.</td>
 <td>Important</td>
+<td>Error</td>
 </tr>
 <tr>
 <td><a href="../Azure.AppGw.Prevention/">Azure.AppGw.Prevention</a></td>
 <td>Internet exposed Application Gateways should use prevention mode to protect backend resources.</td>
 <td>Critical</td>
+<td>Error</td>
 </tr>
 <tr>
 <td><a href="../Azure.AppGw.UseWAF/">Azure.AppGw.UseWAF</a></td>
 <td>Internet accessible Application Gateways should use protect endpoints with WAF.</td>
 <td>Critical</td>
+<td>Error</td>
 </tr>
 <tr>
 <td><a href="../Azure.AppGw.WAFEnabled/">Azure.AppGw.WAFEnabled</a></td>
 <td>Application Gateway Web Application Firewall (WAF) must be enabled to protect backend resources.</td>
 <td>Critical</td>
+<td>Error</td>
 </tr>
 <tr>
 <td><a href="../Azure.AppGw.WAFRules/">Azure.AppGw.WAFRules</a></td>
 <td>Application Gateway Web Application Firewall (WAF) should have all rules enabled.</td>
 <td>Important</td>
+<td>Error</td>
 </tr>
 <tr>
 <td><a href="../Azure.Firewall.Mode/">Azure.Firewall.Mode</a></td>
 <td>Deny high confidence malicious IP addresses and domains on classic managed Azure Firewalls.</td>
 <td>Critical</td>
+<td>Error</td>
 </tr>
 <tr>
 <td><a href="../Azure.FrontDoor.UseWAF/">Azure.FrontDoor.UseWAF</a></td>
 <td>Enable Web Application Firewall (WAF) policies on each Front Door endpoint.</td>
 <td>Critical</td>
+<td>Error</td>
 </tr>
 <tr>
 <td><a href="../Azure.FrontDoor.WAF.Enabled/">Azure.FrontDoor.WAF.Enabled</a></td>
 <td>Front Door Web Application Firewall (WAF) policy must be enabled to protect back end resources.</td>
 <td>Critical</td>
+<td>Error</td>
 </tr>
 <tr>
 <td><a href="../Azure.FrontDoor.WAF.Mode/">Azure.FrontDoor.WAF.Mode</a></td>
 <td>Use protection mode in Front Door Web Application Firewall (WAF) policies to protect back end resources.</td>
 <td>Critical</td>
+<td>Error</td>
 </tr>
 <tr>
 <td><a href="../Azure.LogicApp.LimitHTTPTrigger/">Azure.LogicApp.LimitHTTPTrigger</a></td>
 <td>Limit HTTP request trigger access to trusted IP addresses.</td>
 <td>Critical</td>
+<td>Error</td>
 </tr>
 <tr>
 <td><a href="../Azure.MySQL.AllowAzureAccess/">Azure.MySQL.AllowAzureAccess</a></td>
 <td>Determine if access from Azure services is required.</td>
 <td>Important</td>
+<td>Error</td>
 </tr>
 <tr>
 <td><a href="../Azure.MySQL.FirewallIPRange/">Azure.MySQL.FirewallIPRange</a></td>
 <td>Determine if there is an excessive number of permitted IP addresses.</td>
 <td>Important</td>
+<td>Error</td>
 </tr>
 <tr>
 <td><a href="../Azure.MySQL.FirewallRuleCount/">Azure.MySQL.FirewallRuleCount</a></td>
 <td>Determine if there is an excessive number of firewall rules.</td>
 <td>Awareness</td>
+<td>Error</td>
 </tr>
 <tr>
 <td><a href="../Azure.NSG.AnyInboundSource/">Azure.NSG.AnyInboundSource</a></td>
 <td>Network security groups (NSGs) should avoid rules that allow any inbound source.</td>
 <td>Critical</td>
+<td>Error</td>
 </tr>
 <tr>
 <td><a href="../Azure.NSG.LateralTraversal/">Azure.NSG.LateralTraversal</a></td>
 <td>Deny outbound management connections from non-management hosts.</td>
 <td>Important</td>
+<td>Error</td>
 </tr>
 <tr>
 <td><a href="../Azure.PostgreSQL.AllowAzureAccess/">Azure.PostgreSQL.AllowAzureAccess</a></td>
 <td>Determine if access from Azure services is required.</td>
 <td>Important</td>
+<td>Error</td>
 </tr>
 <tr>
 <td><a href="../Azure.PostgreSQL.FirewallIPRange/">Azure.PostgreSQL.FirewallIPRange</a></td>
 <td>Determine if there is an excessive number of permitted IP addresses.</td>
 <td>Important</td>
+<td>Error</td>
 </tr>
 <tr>
 <td><a href="../Azure.PostgreSQL.FirewallRuleCount/">Azure.PostgreSQL.FirewallRuleCount</a></td>
 <td>Determine if there is an excessive number of firewall rules.</td>
 <td>Awareness</td>
+<td>Error</td>
 </tr>
 <tr>
 <td><a href="../Azure.SQL.AllowAzureAccess/">Azure.SQL.AllowAzureAccess</a></td>
 <td>Determine if access from Azure services is required.</td>
 <td>Important</td>
+<td>Error</td>
 </tr>
 <tr>
 <td><a href="../Azure.SQL.FirewallIPRange/">Azure.SQL.FirewallIPRange</a></td>
 <td>Determine if there is an excessive number of permitted IP addresses.</td>
 <td>Important</td>
+<td>Error</td>
 </tr>
 <tr>
 <td><a href="../Azure.SQL.FirewallRuleCount/">Azure.SQL.FirewallRuleCount</a></td>
 <td>Determine if there is an excessive number of firewall rules.</td>
 <td>Awareness</td>
+<td>Error</td>
 </tr>
 <tr>
 <td><a href="../Azure.VNET.UseNSGs/">Azure.VNET.UseNSGs</a></td>
 <td>Virtual network (VNET) subnets should have Network Security Groups (NSGs) assigned.</td>
 <td>Critical</td>
+<td>Error</td>
 </tr>
 </tbody>
 </table>
@@ -8743,6 +9065,7 @@
 <th>Name</th>
 <th>Synopsis</th>
 <th>Severity</th>
+<th>Level</th>
 </tr>
 </thead>
 <tbody>
@@ -8750,6 +9073,7 @@
 <td><a href="../Azure.AKS.NetworkPolicy/">Azure.AKS.NetworkPolicy</a></td>
 <td>Deploy AKS clusters with Network Policies enabled.</td>
 <td>Important</td>
+<td>Error</td>
 </tr>
 </tbody>
 </table>
@@ -8760,6 +9084,7 @@
 <th>Name</th>
 <th>Synopsis</th>
 <th>Severity</th>
+<th>Level</th>
 </tr>
 </thead>
 <tbody>
@@ -8767,6 +9092,7 @@
 <td><a href="../Azure.AKS.AzurePolicyAddOn/">Azure.AKS.AzurePolicyAddOn</a></td>
 <td>Configure Azure Kubernetes Service (AKS) clusters to use Azure Policy Add-on for Kubernetes.</td>
 <td>Important</td>
+<td>Error</td>
 </tr>
 </tbody>
 </table>
@@ -8777,6 +9103,7 @@
 <th>Name</th>
 <th>Synopsis</th>
 <th>Severity</th>
+<th>Level</th>
 </tr>
 </thead>
 <tbody>
@@ -8784,6 +9111,7 @@
 <td><a href="../Azure.AppService.RemoteDebug/">Azure.AppService.RemoteDebug</a></td>
 <td>Disable remote debugging on App Service apps when not in use.</td>
 <td>Important</td>
+<td>Error</td>
 </tr>
 </tbody>
 </table>
@@ -8794,6 +9122,7 @@
 <th>Name</th>
 <th>Synopsis</th>
 <th>Severity</th>
+<th>Level</th>
 </tr>
 </thead>
 <tbody>
@@ -8801,31 +9130,37 @@
 <td><a href="../Azure.FrontDoor.Logs/">Azure.FrontDoor.Logs</a></td>
 <td>Audit and monitor access through Front Door.</td>
 <td>Important</td>
+<td>Error</td>
 </tr>
 <tr>
 <td><a href="../Azure.KeyVault.Logs/">Azure.KeyVault.Logs</a></td>
 <td>Audit and monitor access to Key Vault data.</td>
 <td>Important</td>
+<td>Error</td>
 </tr>
 <tr>
 <td><a href="../Azure.SecurityCenter.Contact/">Azure.SecurityCenter.Contact</a></td>
 <td>Security Center email and phone contact details should be set.</td>
 <td>Important</td>
+<td>Error</td>
 </tr>
 <tr>
 <td><a href="../Azure.SecurityCenter.Provisioning/">Azure.SecurityCenter.Provisioning</a></td>
 <td>Enable auto-provisioning on to improve Azure Security Center insights.</td>
 <td>Important</td>
+<td>Error</td>
 </tr>
 <tr>
 <td><a href="../Azure.SQL.Auditing/">Azure.SQL.Auditing</a></td>
 <td>Enable auditing for Azure SQL logical server.</td>
 <td>Important</td>
+<td>Error</td>
 </tr>
 <tr>
 <td><a href="../Azure.SQL.ThreatDetection/">Azure.SQL.ThreatDetection</a></td>
 <td>Enable Advanced Thread Protection for Azure SQL logical server.</td>
 <td>Important</td>
+<td>Error</td>
 </tr>
 </tbody>
 </table>
@@ -8838,7 +9173,7 @@
   <small>
     
       Last update:
-      2022-07-27
+      2022-08-06
     
   </small>
 </div>
@@ -8858,7 +9193,7 @@
     <nav class="md-footer__inner md-grid" aria-label="Footer" >
       
         
-        <a href="../../../integrations/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Integrations" rel="prev">
+        <a href="../" class="md-footer__link md-footer__link--prev" aria-label="Previous: Index" rel="prev">
           <div class="md-footer__button md-icon">
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
           </div>
@@ -8867,7 +9202,7 @@
               <span class="md-footer__direction">
                 Previous
               </span>
-              Integrations
+              Index
             </div>
           </div>
         </a>

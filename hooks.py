@@ -53,8 +53,9 @@ def replace_maml(markdown: str, page: mkdocs.structure.nav.Page, config: mkdocs.
         read_metadata(page)
 
     if page.meta.get('rule', 'None') != 'None':
-        markdown = markdown.replace('<!-- TAGS -->', '<nav class="md-tags"><rule/><ref/></nav>\r<!-- TAGS -->')
+        markdown = markdown.replace('<!-- TAGS -->', '<nav class="md-tags"><rule/><ref/><level/></nav>\r<!-- TAGS -->')
         markdown = markdown.replace('<rule/>', '<span class="md-tag">' + page.meta['rule'] + '</span>')
+        markdown = markdown.replace('<level/>', '<span class="md-tag">' + page.meta['level'] + '</span>')
         if page.meta.get('ref', 'None') != 'None':
             markdown = markdown.replace('<ref/>', '<span class="md-tag">' + page.meta['ref'] + '</span>')
         if page.meta.get('ref', 'None') == 'None':
@@ -102,6 +103,9 @@ def read_metadata(page: mkdocs.structure.nav.Page):
 
         if page.meta.get('rule', '') != '' and data.get(name, None) != None and data[name].get('RuleSet', None) != None:
             page.meta['ruleSet'] = data[name]['RuleSet']
+
+        if page.meta.get('rule', '') != '' and data.get(name, None) != None and data[name].get('Level', None) != None:
+            page.meta['level'] = data[name]['Level']
 
     page.meta['tags'] = tags
 

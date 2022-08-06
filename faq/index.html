@@ -572,6 +572,13 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#whatdothedifferentseverityandlevelsforrulesmeans" class="md-nav__link">
+    What do the different severity and levels for rules means?
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#traditionalunittestingvspsruleforazure" class="md-nav__link">
     Traditional unit testing vs PSRule for Azure?
   </a>
@@ -6417,6 +6424,13 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#whatdothedifferentseverityandlevelsforrulesmeans" class="md-nav__link">
+    What do the different severity and levels for rules means?
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#traditionalunittestingvspsruleforazure" class="md-nav__link">
     Traditional unit testing vs PSRule for Azure?
   </a>
@@ -6580,6 +6594,32 @@ PSRule for Azure does not replace Azure Advisor, Security Center, or Azure Polic
 <li>Providing the ability to layer on organization specific rules, as required.</li>
 <li>Data collection requires limited permissions and requires no additional configuration.</li>
 </ul>
+<h2 id="whatdothedifferentseverityandlevelsforrulesmeans">What do the different severity and levels for rules means?<a class="headerlink" href="#whatdothedifferentseverityandlevelsforrulesmeans" title="Permanent link">#</a></h2>
+<p>PSRule for Azure annotates rules with three (3) severities which indicate how you should prioritize remediation.
+The following severities are defined:</p>
+<ul>
+<li><code>Critical</code> &mdash; Consider addressing these first, ideally within the next thirty (30) days.
+  Rules identified as <em>critical</em> often have high impact and are highly likely to affect your services.</li>
+<li><code>Important</code> &mdash; Consider addressing these next, ideally within the next sixty (60) days.
+  Rules identified as <em>important</em> often have a significant impact and are likely to affect your services.</li>
+<li><code>Awareness</code> &mdash; Consider addressing these last, ideally within the next ninty (90) days.
+  Rules identified as <em>awareness</em> often have a moderate or low impact to the operation of your services.</li>
+</ul>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>Severities and suggested time frames are an indicator only.
+They may affect your environment, compliance, or security differently based on your specific requirements.
+If you feel the severity for a rule is broadly incorrect then please let as know.
+You can do this by <a href="https://github.com/Azure/PSRule.Rules.Azure/discussions">joining or starting a discussion</a>.</p>
+</div>
+<p>Additionally, PSRule for Azure uses three (3) rule levels.
+These levels determine how PSRule provides feedback about failing cases.
+The following levels are defined:</p>
+<ul>
+<li><code>Error</code> &mdash; Rules defined as <em>error</em> will stop <abbr title="Continuous Integration">CI</abbr> pipelines that are configured to break on error.</li>
+<li><code>Warning</code> &mdash; Rules defined as <em>warning</em> will not stop <abbr title="Continuous Integration">CI</abbr> pipelines and will produce a warning.</li>
+<li><code>Information</code> &mdash; Rules defined as <em>information</em> will not stop <abbr title="Continuous Integration">CI</abbr> pipelines.</li>
+</ul>
 <h2 id="traditionalunittestingvspsruleforazure">Traditional unit testing vs PSRule for Azure?<a class="headerlink" href="#traditionalunittestingvspsruleforazure" title="Permanent link">#</a></h2>
 <p>You may already be using a unit test framework such as Pester to test infrastructure code.
 If you are, then you may have encountered the following challenges.</p>
@@ -6610,7 +6650,7 @@ Collection of telemetry in PowerShell and how to opt-out is explained in <a href
   <small>
     
       Last update:
-      2022-07-29
+      2022-08-06
     
   </small>
 </div>
@@ -6618,6 +6658,8 @@ Collection of telemetry in PowerShell and how to opt-out is explained in <a href
               
             </article>
             
+  <script>var tabs=__md_get("__tabs");if(Array.isArray(tabs))e:for(var set of document.querySelectorAll(".tabbed-set")){var tab,labels=set.querySelector(".tabbed-labels");for(tab of tabs)for(var label of labels.getElementsByTagName("label"))if(label.innerText.trim()===tab){var input=document.getElementById(label.htmlFor);input.checked=!0;continue e}}</script>
+
           </div>
         </div>
         
@@ -6694,7 +6736,7 @@ Collection of telemetry in PowerShell and how to opt-out is explained in <a href
     <div class="md-dialog" data-md-component="dialog">
       <div class="md-dialog__inner md-typeset"></div>
     </div>
-    <script id="__config" type="application/json">{"base": "..", "features": ["navigation.instant", "navigation.indexes", {"navigation.sections": {"level": 1}}, "navigation.tabs", "content.code.annotate"], "search": "../assets/javascripts/workers/search.b97dbffb.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version.title": "Select version"}, "version": {"provider": "mike"}}</script>
+    <script id="__config" type="application/json">{"base": "..", "features": ["navigation.instant", "navigation.indexes", {"navigation.sections": {"level": 1}}, "navigation.tabs", "content.code.annotate", "content.tabs.link"], "search": "../assets/javascripts/workers/search.b97dbffb.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version.title": "Select version"}, "version": {"provider": "mike"}}</script>
     
     
       <script src="../assets/javascripts/bundle.6c7ad80a.min.js"></script>

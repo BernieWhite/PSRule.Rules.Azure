@@ -940,6 +940,13 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#v1180" class="md-nav__link">
+    v1.18.0
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#v1180-b0027pre-release" class="md-nav__link">
     v1.18.0-B0027 (pre-release)
   </a>
@@ -7101,6 +7108,13 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#v1180" class="md-nav__link">
+    v1.18.0
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#v1180-b0027pre-release" class="md-nav__link">
     v1.18.0-B0027 (pre-release)
   </a>
@@ -8005,6 +8019,64 @@
   See <a href="../upgrade-notes/">upgrade notes</a> for more information.</li>
 </ul>
 <h2 id="unreleased">Unreleased<a class="headerlink" href="#unreleased" title="Permanent link">#</a></h2>
+<p>What's changed since v1.18.0:</p>
+<ul>
+<li>Engineering:<ul>
+<li>Added publishing of symbols for NuGet packages by @BernieWhite.
+  <a href="https://github.com/Azure/PSRule.Rules.Azure/issues/1549">#1549</a></li>
+</ul>
+</li>
+</ul>
+<h2 id="v1180">v1.18.0<a class="headerlink" href="#v1180" title="Permanent link">#</a></h2>
+<p>What's changed since v1.17.1:</p>
+<ul>
+<li>New rules:<ul>
+<li>Cognitive Services:<ul>
+<li>Check accounts use network access restrictions by @BernieWhite.
+  <a href="https://github.com/Azure/PSRule.Rules.Azure/issues/1532">#1532</a></li>
+<li>Check accounts use managed identities to access Azure resources by @BernieWhite.
+  <a href="https://github.com/Azure/PSRule.Rules.Azure/issues/1532">#1532</a></li>
+<li>Check accounts only accept requests using Azure AD identities by @BernieWhite.
+  <a href="https://github.com/Azure/PSRule.Rules.Azure/issues/1532">#1532</a></li>
+<li>Check accounts disable access using public endpoints by @BernieWhite.
+  <a href="https://github.com/Azure/PSRule.Rules.Azure/issues/1532">#1532</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li>General improvements:<ul>
+<li>Added support for array <code>indexOf</code>, <code>lastIndexOf</code>, and <code>items</code> ARM functions by @BernieWhite.
+  <a href="https://github.com/Azure/PSRule.Rules.Azure/issues/1440">#1440</a></li>
+<li>Added support for <code>join</code> ARM function by @BernieWhite.
+  <a href="https://github.com/Azure/PSRule.Rules.Azure/issues/1535">#1535</a></li>
+</ul>
+</li>
+<li>General improvements:<ul>
+<li>Improved output of full path to emitted resources by @BernieWhite.
+  <a href="https://github.com/Azure/PSRule.Rules.Azure/issues/1523">#1523</a></li>
+</ul>
+</li>
+<li>Engineering:<ul>
+<li>Bump Az.Resources to v6.0.1.
+  <a href="https://github.com/Azure/PSRule.Rules.Azure/pull/1521">#1521</a></li>
+<li>Updated provider data for analysis.
+  <a href="https://github.com/Azure/PSRule.Rules.Azure/pull/1540">#1540</a></li>
+<li>Bump xunit to v2.4.2.
+  <a href="https://github.com/Azure/PSRule.Rules.Azure/pull/1542">#1542</a></li>
+<li>Added readme and tags to NuGet by @BernieWhite.
+  <a href="https://github.com/Azure/PSRule.Rules.Azure/issues/1513">#1513</a></li>
+</ul>
+</li>
+<li>Bug fixes:<ul>
+<li>Fixed <code>Azure.SQL.TDE</code> is not required to enable Transparent Data Encryption for IaC by @BernieWhite.
+  <a href="https://github.com/Azure/PSRule.Rules.Azure/issues/1530">#1530</a></li>
+</ul>
+</li>
+</ul>
+<p>What's changed since pre-release v1.18.0-B0027:</p>
+<ul>
+<li>No additional changes.</li>
+</ul>
 <h2 id="v1180-b0027pre-release">v1.18.0-B0027 (pre-release)<a class="headerlink" href="#v1180-b0027pre-release" title="Permanent link">#</a></h2>
 <p>What's changed since pre-release v1.18.0-B0010:</p>
 <ul>
@@ -10761,7 +10833,7 @@
   <small>
     
       Last update:
-      2022-08-03
+      2022-08-06
     
   </small>
 </div>

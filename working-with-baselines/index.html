@@ -6414,13 +6414,13 @@ This is different from the <code>Azure.Preview</code> baseline which contains <a
 <h2 id="usingbaselines">Using baselines<a class="headerlink" href="#usingbaselines" title="Permanent link">#</a></h2>
 <p>To use a baseline within a CI pipeline specify the baseline by name.
 See <a href="../en/baselines/Azure.All/">reference</a> for a list baselines shipped with PSRule for Azure.</p>
-<div class="tabbed-set tabbed-alternate" data-tabs="1:2"><input checked="checked" id="__tabbed_1_1" name="__tabbed_1" type="radio" /><input id="__tabbed_1_2" name="__tabbed_1" type="radio" /><div class="tabbed-labels"><label for="__tabbed_1_1">GitHub Actions</label><label for="__tabbed_1_2">Azure Pipelines</label></div>
+<div class="tabbed-set tabbed-alternate" data-tabs="1:3"><input checked="checked" id="__tabbed_1_1" name="__tabbed_1" type="radio" /><input id="__tabbed_1_2" name="__tabbed_1" type="radio" /><input id="__tabbed_1_3" name="__tabbed_1" type="radio" /><div class="tabbed-labels"><label for="__tabbed_1_1">GitHub Actions</label><label for="__tabbed_1_2">Azure Pipelines</label><label for="__tabbed_1_3">PowerShell</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
 <p>Update your GitHub Actions workflow by specifying <code>baseline: &lt;name_of_baseline&gt;</code>.</p>
 <div class="highlight"><pre><span></span><code><span class="c1"># Analyze Azure resources using PSRule for Azure</span><span class="w"></span>
 <span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Analyze Azure template files</span><span class="w"></span>
-<span class="w">  </span><span class="nt">uses</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">microsoft/ps-rule@v2.1.0</span><span class="w"></span>
+<span class="w">  </span><span class="nt">uses</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">microsoft/ps-rule@v2.2.0</span><span class="w"></span>
 <span class="w">  </span><span class="nt">with</span><span class="p">:</span><span class="w"></span>
 <span class="w">    </span><span class="nt">modules</span><span class="p">:</span><span class="w"> </span><span class="s">&#39;PSRule.Rules.Azure&#39;</span><span class="w"></span>
 <span class="w">    </span><span class="nt">baseline</span><span class="p">:</span><span class="w"> </span><span class="s">&#39;Azure.GA_2022_06&#39;</span><span class="w"></span>
@@ -6436,17 +6436,24 @@ See <a href="../en/baselines/Azure.All/">reference</a> for a list baselines ship
 <span class="w">    </span><span class="nt">baseline</span><span class="p">:</span><span class="w"> </span><span class="s">&#39;Azure.GA_2022_06&#39;</span><span class="w"></span>
 </code></pre></div>
 </div>
+<div class="tabbed-block">
+<p>Update your PowerShell command-line with <code>-Baseline &lt;name_of_baseline&gt;</code>.</p>
+<div class="highlight"><span class="filename">With Assert-PSRule</span><pre><span></span><code><span class="nb">Assert-PSRule</span> <span class="n">-Format</span> <span class="n">File</span> <span class="n">-InputPath</span> <span class="s1">&#39;.&#39;</span> <span class="n">-Module</span> <span class="s1">&#39;PSRule.Rules.Azure&#39;</span> <span class="n">-Baseline</span> <span class="s1">&#39;Azure.GA_2022_06&#39;</span>
+</code></pre></div>
+<div class="highlight"><span class="filename">With Invoke-PSRule</span><pre><span></span><code><span class="nb">Invoke-PSRule</span> <span class="n">-Format</span> <span class="n">File</span> <span class="n">-InputPath</span> <span class="s1">&#39;.&#39;</span> <span class="n">-Module</span> <span class="s1">&#39;PSRule.Rules.Azure&#39;</span> <span class="n">-Baseline</span> <span class="s1">&#39;Azure.GA_2022_06&#39;</span>
+</code></pre></div>
+</div>
 </div>
 </div>
 <h2 id="creatingbaselines">Creating baselines<a class="headerlink" href="#creatingbaselines" title="Permanent link">#</a></h2>
-<p>To create your own baselines see the PSRule help topic <a href="https://microsoft.github.io/PSRule/concepts/PSRule/en-US/about_PSRule_Baseline.html">about_PSRule_Baseline</a>.</p>
+<p>To create your own baselines see the PSRule help topic <a href="https://microsoft.github.io/PSRule/v2/concepts/PSRule/en-US/about_PSRule_Baseline/">about_PSRule_Baseline</a>.</p>
 <h2 id="includingcustomrules">Including custom rules<a class="headerlink" href="#includingcustomrules" title="Permanent link">#</a></h2>
 <p><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path fill-rule="evenodd" d="M11.75 1a.75.75 0 0 1 .75.75V4h6.532c.42 0 .826.15 1.143.425l3.187 2.75a1.75 1.75 0 0 1 0 2.65l-3.187 2.75a1.75 1.75 0 0 1-1.143.425H12.5v9.25a.75.75 0 0 1-1.5 0V13H3.75A1.75 1.75 0 0 1 2 11.25v-5.5C2 4.783 2.784 4 3.75 4H11V1.75a.75.75 0 0 1 .75-.75zm0 4.5h7.282a.25.25 0 0 1 .163.06l3.188 2.75a.25.25 0 0 1 0 .38l-3.188 2.75a.25.25 0 0 1-.163.06H3.75a.25.25 0 0 1-.25-.25v-5.5a.25.25 0 0 1 .25-.25h8z"/></svg></span> v1.8.0</p>
 <p>The quarterly baselines shipped with PSRule for Azure target a subset of rules for <abbr title="generally available">GA</abbr> Azure features.
 When you specify a baseline, custom rules you create and store in <code>.ps-rule/</code> will be ignored by default.</p>
 <p>To change this behavior, set the <code>Rule.IncludeLocal</code> option to <code>true</code>.
 This option can be set in <code>ps-rule.yaml</code>.</p>
-<div class="highlight"><pre><span></span><code><span class="c1"># YAML: Enable custom rules that don&#39;t exist in the baseline</span><span class="w"></span>
+<div class="highlight"><span class="filename">ps-rule.yaml</span><pre><span></span><code><span class="c1"># YAML: Enable custom rules that don&#39;t exist in the baseline</span><span class="w"></span>
 <span class="nt">rule</span><span class="p">:</span><span class="w"></span>
 <span class="w">  </span><span class="nt">includeLocal</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span><span class="w"></span>
 </code></pre></div>
@@ -6456,7 +6463,7 @@ This option can be set in <code>ps-rule.yaml</code>.</p>
   <small>
     
       Last update:
-      2022-06-29
+      2022-08-06
     
   </small>
 </div>

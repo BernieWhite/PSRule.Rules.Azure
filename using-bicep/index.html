@@ -6389,7 +6389,7 @@ To learn more about why this is important see <a href="../expanding-source-files
 </div>
 <h2 id="enablingexpansion">Enabling expansion<a class="headerlink" href="#enablingexpansion" title="Permanent link">#</a></h2>
 <p>To expand Bicep deployments configure <code>ps-rule.yaml</code> with the <code>AZURE_BICEP_FILE_EXPANSION</code> option.</p>
-<div class="highlight"><pre><span></span><code><span class="c1"># YAML: Enable expansion for Bicep source files.</span><span class="w"></span>
+<div class="highlight"><span class="filename">ps-rule.yaml</span><pre><span></span><code><span class="c1"># YAML: Enable expansion for Bicep source files.</span><span class="w"></span>
 <span class="nt">configuration</span><span class="p">:</span><span class="w"></span>
 <span class="w">  </span><span class="nt">AZURE_BICEP_FILE_EXPANSION</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span><span class="w"></span>
 </code></pre></div>
@@ -6489,7 +6489,7 @@ This setting determines the order to find a credential to use when authenticatin
 <div class="tabbed-block">
 <p>Configure the <code>microsoft/ps-rule</code> action with Azure environment variables.</p>
 <div class="highlight"><pre><span></span><code><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Analyze Azure template files</span><span class="w"></span>
-<span class="w">  </span><span class="nt">uses</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">microsoft/ps-rule@v2.1.0</span><span class="w"></span>
+<span class="w">  </span><span class="nt">uses</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">microsoft/ps-rule@v2.2.0</span><span class="w"></span>
 <span class="w">  </span><span class="nt">with</span><span class="p">:</span><span class="w"></span>
 <span class="w">    </span><span class="nt">modules</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">PSRule.Rules.Azure,PSRule.Monitor</span><span class="w"></span>
 <span class="w">    </span><span class="nt">conventions</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Monitor.LogAnalytics.Import</span><span class="w"></span>
@@ -6572,7 +6572,7 @@ This option will discover Bicep files from parameter metadata.</p>
   <small>
     
       Last update:
-      2022-05-25
+      2022-08-06
     
   </small>
 </div>

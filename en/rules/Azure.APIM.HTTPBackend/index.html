@@ -2485,6 +2485,33 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#examples" class="md-nav__link">
+    Examples
+  </a>
+  
+    <nav class="md-nav" aria-label="Examples">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#configurewithazuretemplate" class="md-nav__link">
+    Configure with Azure template
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#configurewithbicep" class="md-nav__link">
+    Configure with Bicep
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#links" class="md-nav__link">
     Links
   </a>
@@ -6264,6 +6291,33 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#examples" class="md-nav__link">
+    Examples
+  </a>
+  
+    <nav class="md-nav" aria-label="Examples">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#configurewithazuretemplate" class="md-nav__link">
+    Configure with Azure template
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#configurewithbicep" class="md-nav__link">
+    Configure with Bicep
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#links" class="md-nav__link">
     Links
   </a>
@@ -6312,11 +6366,108 @@
 <h2 id="description">Description<a class="headerlink" href="#description" title="Permanent link">#</a></h2>
 <p>When API Management connects to the backend API it can use HTTP or HTTPS.
 When using HTTP, sensitive information may be exposed to an untrusted party.</p>
+<p>Additionally, when configuring backends:</p>
+<ul>
+<li>Use a newer version of TLS such as TLS 1.2.</li>
+<li>Use client certificate authentication from API Management to authenticate to the backend.</li>
+</ul>
 <h2 id="recommendation">Recommendation<a class="headerlink" href="#recommendation" title="Permanent link">#</a></h2>
 <p>Consider configuring only backend services configured with HTTPS-based URLs.</p>
+<h2 id="examples">Examples<a class="headerlink" href="#examples" title="Permanent link">#</a></h2>
+<h3 id="configurewithazuretemplate">Configure with Azure template<a class="headerlink" href="#configurewithazuretemplate" title="Permanent link">#</a></h3>
+<p>To deploy APIs that pass this rule:</p>
+<ul>
+<li>Set the <code>properties.serviceUrl</code> property to a URL that starts with <code>https://</code>.</li>
+</ul>
+<p>For example:</p>
+<div class="highlight"><pre><span></span><code><span class="p">{</span><span class="w"></span>
+<span class="w">    </span><span class="nt">&quot;type&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Microsoft.ApiManagement/service/apis&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">    </span><span class="nt">&quot;apiVersion&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;2021-08-01&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">    </span><span class="nt">&quot;name&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;[format(&#39;{0}/{1}&#39;, parameters(&#39;name&#39;), &#39;echo-v1&#39;)]&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">    </span><span class="nt">&quot;properties&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">        </span><span class="nt">&quot;displayName&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Echo API&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">        </span><span class="nt">&quot;description&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;An echo API service.&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">        </span><span class="nt">&quot;path&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;echo&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">        </span><span class="nt">&quot;serviceUrl&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;https://echo.contoso.com&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">        </span><span class="nt">&quot;protocols&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w"></span>
+<span class="w">            </span><span class="s2">&quot;https&quot;</span><span class="w"></span>
+<span class="w">        </span><span class="p">],</span><span class="w"></span>
+<span class="w">        </span><span class="nt">&quot;apiVersion&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;v1&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">        </span><span class="nt">&quot;apiVersionSetId&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;[resourceId(&#39;Microsoft.ApiManagement/service/apiVersionSets&#39;, parameters(&#39;name&#39;), &#39;echo&#39;)]&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">        </span><span class="nt">&quot;subscriptionRequired&quot;</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="w"></span>
+<span class="w">    </span><span class="p">},</span><span class="w"></span>
+<span class="w">    </span><span class="nt">&quot;dependsOn&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w"></span>
+<span class="w">        </span><span class="s2">&quot;[resourceId(&#39;Microsoft.ApiManagement/service&#39;, parameters(&#39;name&#39;))]&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">        </span><span class="s2">&quot;[resourceId(&#39;Microsoft.ApiManagement/service/apiVersionSets&#39;, parameters(&#39;name&#39;), &#39;echo&#39;)]&quot;</span><span class="w"></span>
+<span class="w">    </span><span class="p">]</span><span class="w"></span>
+<span class="p">}</span><span class="w"></span>
+</code></pre></div>
+<p>To deploy API backends that pass this rule:</p>
+<ul>
+<li>Set the <code>properties.url</code> property to a URL that starts with <code>https://</code>.</li>
+</ul>
+<p>For example:</p>
+<div class="highlight"><pre><span></span><code><span class="p">{</span><span class="w"></span>
+<span class="w">    </span><span class="nt">&quot;type&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Microsoft.ApiManagement/service/backends&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">    </span><span class="nt">&quot;apiVersion&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;2021-08-01&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">    </span><span class="nt">&quot;name&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;[format(&#39;{0}/{1}&#39;, parameters(&#39;name&#39;), &#39;echo&#39;)]&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">    </span><span class="nt">&quot;properties&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">        </span><span class="nt">&quot;title&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;echo&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">        </span><span class="nt">&quot;description&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;A backend service for the Each API.&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">        </span><span class="nt">&quot;protocol&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;http&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">        </span><span class="nt">&quot;url&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;https://echo.contoso.com&quot;</span><span class="w"></span>
+<span class="w">    </span><span class="p">},</span><span class="w"></span>
+<span class="w">    </span><span class="nt">&quot;dependsOn&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w"></span>
+<span class="w">        </span><span class="s2">&quot;[resourceId(&#39;Microsoft.ApiManagement/service&#39;, parameters(&#39;name&#39;))]&quot;</span><span class="w"></span>
+<span class="w">    </span><span class="p">]</span><span class="w"></span>
+<span class="p">}</span><span class="w"></span>
+</code></pre></div>
+<h3 id="configurewithbicep">Configure with Bicep<a class="headerlink" href="#configurewithbicep" title="Permanent link">#</a></h3>
+<p>To deploy APIs that pass this rule:</p>
+<ul>
+<li>Set the <code>properties.serviceUrl</code> property to a URL that starts with <code>https://</code>.</li>
+</ul>
+<p>For example:</p>
+<div class="highlight"><pre><span></span><code>resource api &#39;Microsoft.ApiManagement/service/apis@2021-08-01&#39; = {
+  parent: service
+  name: &#39;echo-v1&#39;
+  properties: {
+    displayName: &#39;Echo API&#39;
+    description: &#39;An echo API service.&#39;
+    path: &#39;echo&#39;
+    serviceUrl: &#39;https://echo.contoso.com&#39;
+    protocols: [
+      &#39;https&#39;
+    ]
+    apiVersion: &#39;v1&#39;
+    apiVersionSetId: version.id
+    subscriptionRequired: true
+  }
+}
+</code></pre></div>
+<p>To deploy API backends that pass this rule:</p>
+<ul>
+<li>Set the <code>properties.url</code> property to a URL that starts with <code>https://</code>.</li>
+</ul>
+<p>For example:</p>
+<div class="highlight"><pre><span></span><code>resource backend &#39;Microsoft.ApiManagement/service/backends@2021-08-01&#39; = {
+  parent: service
+  name: &#39;echo&#39;
+  properties: {
+    title: &#39;echo&#39;
+    description: &#39;A backend service for the Each API.&#39;
+    protocol: &#39;http&#39;
+    url: &#39;https://echo.contoso.com&#39;
+  }
+}
+</code></pre></div>
 <h2 id="links">Links<a class="headerlink" href="#links" title="Permanent link">#</a></h2>
 <ul>
 <li><a href="https://docs.microsoft.com/azure/architecture/framework/security/design-storage-encryption#data-in-transit">Data encryption in Azure</a></li>
+<li><a href="https://docs.microsoft.com/azure/api-management/api-management-howto-manage-protocols-ciphers">Manage protocols and ciphers in Azure API Management</a></li>
+<li><a href="https://docs.microsoft.com/azure/api-management/api-management-howto-mutual-certificates">Secure backend services using client certificate authentication in Azure API Management</a></li>
+<li><a href="https://docs.microsoft.com/azure/templates/microsoft.apimanagement/service/apis">Azure template reference for APIs</a></li>
+<li><a href="https://docs.microsoft.com/azure/templates/microsoft.apimanagement/service/backends">Azure template reference for backends</a></li>
 </ul>
 
 <!-- Last update of source file -->
@@ -6327,7 +6478,7 @@ When using HTTP, sensitive information may be exposed to an untrusted party.</p>
   <small>
     
       Last update:
-      2021-07-25
+      2022-08-11
     
   </small>
 </div>

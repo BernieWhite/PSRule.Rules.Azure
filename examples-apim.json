@@ -4,13 +4,14 @@
   "metadata": {
     "_generator": {
       "name": "bicep",
-      "version": "0.4.1124.51302",
-      "templateHash": "12787001591238882275"
+      "version": "0.9.1.41621",
+      "templateHash": "12511286077090340745"
     }
   },
   "parameters": {
     "name": {
       "type": "string",
+      "defaultValue": "apim-contoso-test-eus-001",
       "metadata": {
         "description": "The name of the API Management service."
       }
@@ -24,12 +25,14 @@
     },
     "publisherEmail": {
       "type": "string",
+      "defaultValue": "noreply@contoso.com",
       "metadata": {
         "description": "The reply email of the publisher."
       }
     },
     "publisherName": {
       "type": "string",
+      "defaultValue": "Contoso",
       "metadata": {
         "description": "The display name of the publisher."
       }
@@ -54,7 +57,7 @@
         "customProperties": {
           "Microsoft.WindowsAzure.ApiManagement.Gateway.Security.Protocols.Tls10": "False",
           "Microsoft.WindowsAzure.ApiManagement.Gateway.Security.Protocols.Tls11": "False",
-          "Microsoft.WindowsAzure.ApiManagement.Gateway.Security.Protocols.Ssl30": "True",
+          "Microsoft.WindowsAzure.ApiManagement.Gateway.Security.Protocols.Ssl30": "False",
           "Microsoft.WindowsAzure.ApiManagement.Gateway.Security.Backend.Protocols.Tls10": "False",
           "Microsoft.WindowsAzure.ApiManagement.Gateway.Security.Backend.Protocols.Tls11": "False",
           "Microsoft.WindowsAzure.ApiManagement.Gateway.Security.Backend.Protocols.Ssl30": "False",
@@ -69,6 +72,68 @@
           "Microsoft.WindowsAzure.ApiManagement.Gateway.Security.Ciphers.TLS_RSA_WITH_AES_128_GCM_SHA256": "False"
         }
       }
+    },
+    {
+      "type": "Microsoft.ApiManagement/service/products",
+      "apiVersion": "2021-08-01",
+      "name": "[format('{0}/{1}', parameters('name'), 'echo')]",
+      "properties": {
+        "displayName": "Echo",
+        "description": "Echo API services for Contoso.",
+        "approvalRequired": true,
+        "subscriptionRequired": true
+      },
+      "dependsOn": [
+        "[resourceId('Microsoft.ApiManagement/service', parameters('name'))]"
+      ]
+    },
+    {
+      "type": "Microsoft.ApiManagement/service/apiVersionSets",
+      "apiVersion": "2021-08-01",
+      "name": "[format('{0}/{1}', parameters('name'), 'echo')]",
+      "properties": {
+        "displayName": "Echo API",
+        "description": "An echo API service.",
+        "versioningScheme": "Segment"
+      },
+      "dependsOn": [
+        "[resourceId('Microsoft.ApiManagement/service', parameters('name'))]"
+      ]
+    },
+    {
+      "type": "Microsoft.ApiManagement/service/apis",
+      "apiVersion": "2021-08-01",
+      "name": "[format('{0}/{1}', parameters('name'), 'echo-v1')]",
+      "properties": {
+        "displayName": "Echo API",
+        "description": "An echo API service.",
+        "path": "echo",
+        "serviceUrl": "https://echo.contoso.com",
+        "protocols": [
+          "https"
+        ],
+        "apiVersion": "v1",
+        "apiVersionSetId": "[resourceId('Microsoft.ApiManagement/service/apiVersionSets', parameters('name'), 'echo')]",
+        "subscriptionRequired": true
+      },
+      "dependsOn": [
+        "[resourceId('Microsoft.ApiManagement/service', parameters('name'))]",
+        "[resourceId('Microsoft.ApiManagement/service/apiVersionSets', parameters('name'), 'echo')]"
+      ]
+    },
+    {
+      "type": "Microsoft.ApiManagement/service/backends",
+      "apiVersion": "2021-08-01",
+      "name": "[format('{0}/{1}', parameters('name'), 'echo')]",
+      "properties": {
+        "title": "echo",
+        "description": "A backend service for the Each API.",
+        "protocol": "http",
+        "url": "https://echo.contoso.com"
+      },
+      "dependsOn": [
+        "[resourceId('Microsoft.ApiManagement/service', parameters('name'))]"
+      ]
     }
   ]
 }

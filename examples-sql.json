@@ -1,0 +1,63 @@
+{
+  "$schema": "https://schema.management.azure.com/schemas/2019-04-01/deploymentTemplate.json#",
+  "contentVersion": "1.0.0.0",
+  "metadata": {
+    "_generator": {
+      "name": "bicep",
+      "version": "0.9.1.41621",
+      "templateHash": "149537783775596231"
+    }
+  },
+  "parameters": {
+    "name": {
+      "type": "string",
+      "metadata": {
+        "description": "The name of the resource."
+      }
+    },
+    "location": {
+      "type": "string",
+      "defaultValue": "[resourceGroup().location]",
+      "metadata": {
+        "description": "The location resources will be deployed."
+      }
+    },
+    "adminLogin": {
+      "type": "string"
+    },
+    "adminPrincipalId": {
+      "type": "string"
+    }
+  },
+  "resources": [
+    {
+      "type": "Microsoft.Sql/servers",
+      "apiVersion": "2022-02-01-preview",
+      "name": "[parameters('name')]",
+      "location": "[parameters('location')]",
+      "properties": {
+        "minimalTlsVersion": "1.2",
+        "administrators": {
+          "administratorType": "ActiveDirectory",
+          "login": "[parameters('adminLogin')]",
+          "principalType": "Group",
+          "sid": "[parameters('adminPrincipalId')]",
+          "tenantId": "[tenant().tenantId]"
+        }
+      }
+    },
+    {
+      "type": "Microsoft.Sql/servers/administrators",
+      "apiVersion": "2022-02-01-preview",
+      "name": "[format('{0}/{1}', parameters('name'), 'ActiveDirectory')]",
+      "properties": {
+        "administratorType": "ActiveDirectory",
+        "login": "[parameters('adminLogin')]",
+        "sid": "[parameters('adminPrincipalId')]"
+      },
+      "dependsOn": [
+        "[resourceId('Microsoft.Sql/servers', parameters('name'))]"
+      ]
+    }
+  ]
+}

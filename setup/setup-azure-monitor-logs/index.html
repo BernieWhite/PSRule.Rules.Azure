@@ -1163,6 +1163,33 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#samplequeries" class="md-nav__link">
+    Sample queries
+  </a>
+  
+    <nav class="md-nav" aria-label="Sample queries">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#resultswithannotations" class="md-nav__link">
+    Results with annotations
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#summarizeresultsbyrun" class="md-nav__link">
+    Summarize results by run
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -6320,6 +6347,33 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#samplequeries" class="md-nav__link">
+    Sample queries
+  </a>
+  
+    <nav class="md-nav" aria-label="Sample queries">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#resultswithannotations" class="md-nav__link">
+    Results with annotations
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#summarizeresultsbyrun" class="md-nav__link">
+    Summarize results by run
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -6362,6 +6416,7 @@ Centrally storing PSRule results enables the following scenarios:</p>
 <h2 id="loggingintoaloganalyticsworkspace">Logging into a Log Analytics workspace<a class="headerlink" href="#loggingintoaloganalyticsworkspace" title="Permanent link">#</a></h2>
 <p>Logging of PSRule results into a workspace is done using the <em>PSRule for Azure Monitor</em> module.
 PSRule for Azure Monitor extends the PSRule pipeline to import results into the specified workspace.</p>
+<p>Once configured, PSRule will log results into the <code>PSRule_CL</code> custom log table of the chosen workspace.</p>
 <div class="admonition info">
 <p class="admonition-title">Info</p>
 <p>Integration between PSRule and Azure Monitor is done by means of a convention.
@@ -6482,13 +6537,28 @@ To keep <code>MONITOR_WORKSPACE_KEY</code> secure, use an <a href="https://docs.
 <p>Variables can be configured in YAML, on the pipeline, or referenced from a defined variable group.
 To keep <code>MONITORWORKSPACEKEY</code> secure, use a <a href="https://docs.microsoft.com/azure/devops/pipelines/library/variable-groups">variable group</a> linked to an Azure Key Vault.</p>
 </div>
+<h2 id="samplequeries">Sample queries<a class="headerlink" href="#samplequeries" title="Permanent link">#</a></h2>
+<p>Continue reading for some sample queries you can try out Azure Monitor integration.</p>
+<h3 id="resultswithannotations">Results with annotations<a class="headerlink" href="#resultswithannotations" title="Permanent link">#</a></h3>
+<div class="highlight"><pre><span></span><code>// Show extended info
+PSRule_CL
+| where TimeGenerated &gt; ago(30d)
+| extend Pillar = tostring(parse_json(Annotations_s).pillar)
+| extend Link = tostring(parse_json(Annotations_s).[&quot;online version&quot;])
+</code></pre></div>
+<h3 id="summarizeresultsbyrun">Summarize results by run<a class="headerlink" href="#summarizeresultsbyrun" title="Permanent link">#</a></h3>
+<div class="highlight"><pre><span></span><code>// Group by run
+PSRule_CL
+| where TimeGenerated &gt; ago(30d)
+| summarize Pass=countif(Outcome_s == &quot;Pass&quot;), Fail=countif(Outcome_s  == &quot;Fail&quot;) by RunId_s
+</code></pre></div>
 
   <hr>
 <div class="md-source-file">
   <small>
     
       Last update:
-      2022-08-06
+      2022-08-14
     
   </small>
 </div>

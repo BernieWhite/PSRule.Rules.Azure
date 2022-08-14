@@ -6224,6 +6224,13 @@
 <!-- Markdown content -->
 <h1 id="reference">Reference<a class="headerlink" href="#reference" title="Permanent link">#</a></h1>
 <p>The following rules and features are included in PSRule for Azure.</p>
+<div class="admonition info">
+<p class="admonition-title">Info</p>
+<p>The rule <em>release</em> indicates if the Azure feature is <em>generally available (<abbr title="Generally Available &mdash; Rules related to a generally available Azure features.">GA</abbr>)</em> or available under <em>preview</em>.
+Features provided under previews may have additional limits, availablity restrictions, or <a href="https://azure.microsoft.com/support/legal/preview-supplemental-terms/">terms</a>.
+By default, PSRule for Azure will not provide recommendations that relate to preview features.
+To include rules for preview features see <a href="../../working-with-baselines/">working with baselines</a>.</p>
+</div>
 <h2 id="rules">Rules<a class="headerlink" href="#rules" title="Permanent link">#</a></h2>
 <p>The following rules are included in PSRule for Azure.</p>
 <table>
@@ -6240,43 +6247,43 @@
 <td>AZR-000001</td>
 <td><a href="Azure.ACR.Usage/">Azure.ACR.Usage</a></td>
 <td>Regularly remove deprecated and unneeded images to reduce storage usage.</td>
-<td>GA</td>
+<td><abbr title="Generally Available &mdash; Rules related to a generally available Azure features.">GA</abbr></td>
 </tr>
 <tr>
 <td>AZR-000002</td>
 <td><a href="Azure.ACR.ContainerScan/">Azure.ACR.ContainerScan</a></td>
 <td>Enable vulnerability scanning for container images.</td>
-<td>GA</td>
+<td><abbr title="Generally Available &mdash; Rules related to a generally available Azure features.">GA</abbr></td>
 </tr>
 <tr>
 <td>AZR-000003</td>
 <td><a href="Azure.ACR.ImageHealth/">Azure.ACR.ImageHealth</a></td>
 <td>Remove container images with known vulnerabilities.</td>
-<td>GA</td>
+<td><abbr title="Generally Available &mdash; Rules related to a generally available Azure features.">GA</abbr></td>
 </tr>
 <tr>
 <td>AZR-000004</td>
 <td><a href="Azure.ACR.GeoReplica/">Azure.ACR.GeoReplica</a></td>
 <td>Use geo-replicated container registries to compliment a multi-region container deployments.</td>
-<td>GA</td>
+<td><abbr title="Generally Available &mdash; Rules related to a generally available Azure features.">GA</abbr></td>
 </tr>
 <tr>
 <td>AZR-000005</td>
 <td><a href="Azure.ACR.AdminUser/">Azure.ACR.AdminUser</a></td>
 <td>Use Azure AD identities instead of using the registry admin user.</td>
-<td>GA</td>
+<td><abbr title="Generally Available &mdash; Rules related to a generally available Azure features.">GA</abbr></td>
 </tr>
 <tr>
 <td>AZR-000006</td>
 <td><a href="Azure.ACR.MinSku/">Azure.ACR.MinSku</a></td>
 <td>ACR should use the Premium or Standard SKU for production deployments.</td>
-<td>GA</td>
+<td><abbr title="Generally Available &mdash; Rules related to a generally available Azure features.">GA</abbr></td>
 </tr>
 <tr>
 <td>AZR-000007</td>
 <td><a href="Azure.ACR.Name/">Azure.ACR.Name</a></td>
 <td>Container registry names should meet naming requirements.</td>
-<td>GA</td>
+<td><abbr title="Generally Available &mdash; Rules related to a generally available Azure features.">GA</abbr></td>
 </tr>
 <tr>
 <td>AZR-000008</td>
@@ -6288,7 +6295,7 @@
 <td>AZR-000009</td>
 <td><a href="Azure.ACR.ContentTrust/">Azure.ACR.ContentTrust</a></td>
 <td>Use container images signed by a trusted image publisher.</td>
-<td>GA</td>
+<td><abbr title="Generally Available &mdash; Rules related to a generally available Azure features.">GA</abbr></td>
 </tr>
 <tr>
 <td>AZR-000010</td>
@@ -6300,121 +6307,121 @@
 <td>AZR-000011</td>
 <td><a href="Azure.ADX.Usage/">Azure.ADX.Usage</a></td>
 <td>Regularly remove unused resources to reduce costs.</td>
-<td>GA</td>
+<td><abbr title="Generally Available &mdash; Rules related to a generally available Azure features.">GA</abbr></td>
 </tr>
 <tr>
 <td>AZR-000012</td>
 <td><a href="Azure.ADX.ManagedIdentity/">Azure.ADX.ManagedIdentity</a></td>
 <td>Configure Data Explorer clusters to use managed identities to access Azure resources securely.</td>
-<td>GA</td>
+<td><abbr title="Generally Available &mdash; Rules related to a generally available Azure features.">GA</abbr></td>
 </tr>
 <tr>
 <td>AZR-000013</td>
 <td><a href="Azure.ADX.DiskEncryption/">Azure.ADX.DiskEncryption</a></td>
 <td>Use disk encryption for Azure Data Explorer (ADX) clusters.</td>
-<td>GA</td>
+<td><abbr title="Generally Available &mdash; Rules related to a generally available Azure features.">GA</abbr></td>
 </tr>
 <tr>
 <td>AZR-000014</td>
 <td><a href="Azure.ADX.SLA/">Azure.ADX.SLA</a></td>
 <td>Use SKUs that include an SLA when configuring Azure Data Explorer (ADX) clusters.</td>
-<td>GA</td>
+<td><abbr title="Generally Available &mdash; Rules related to a generally available Azure features.">GA</abbr></td>
 </tr>
 <tr>
 <td>AZR-000015</td>
 <td><a href="Azure.AKS.Version/">Azure.AKS.Version</a></td>
 <td>AKS control plane and nodes pools should use a current stable release.</td>
-<td>GA</td>
+<td><abbr title="Generally Available &mdash; Rules related to a generally available Azure features.">GA</abbr></td>
 </tr>
 <tr>
 <td>AZR-000016</td>
 <td><a href="Azure.AKS.PoolVersion/">Azure.AKS.PoolVersion</a></td>
 <td>AKS node pools should match Kubernetes control plane version.</td>
-<td>GA</td>
+<td><abbr title="Generally Available &mdash; Rules related to a generally available Azure features.">GA</abbr></td>
 </tr>
 <tr>
 <td>AZR-000017</td>
 <td><a href="Azure.AKS.PoolScaleSet/">Azure.AKS.PoolScaleSet</a></td>
 <td>Deploy AKS clusters with nodes pools based on VM scale sets.</td>
-<td>GA</td>
+<td><abbr title="Generally Available &mdash; Rules related to a generally available Azure features.">GA</abbr></td>
 </tr>
 <tr>
 <td>AZR-000018</td>
 <td><a href="Azure.AKS.NodeMinPods/">Azure.AKS.NodeMinPods</a></td>
 <td>Azure Kubernetes Cluster (AKS) nodes should use a minimum number of pods.</td>
-<td>GA</td>
+<td><abbr title="Generally Available &mdash; Rules related to a generally available Azure features.">GA</abbr></td>
 </tr>
 <tr>
 <td>AZR-000019</td>
 <td><a href="Azure.AKS.AutoScaling/">Azure.AKS.AutoScaling</a></td>
 <td>Use Autoscaling to ensure AKS clusters deployed with virtual machine scale sets are running efficiently with the right number of nodes for the workloads present.</td>
-<td>GA</td>
+<td><abbr title="Generally Available &mdash; Rules related to a generally available Azure features.">GA</abbr></td>
 </tr>
 <tr>
 <td>AZR-000020</td>
 <td><a href="Azure.AKS.CNISubnetSize/">Azure.AKS.CNISubnetSize</a></td>
 <td>AKS clusters using Azure CNI should use large subnets to reduce IP exhaustion issues.</td>
-<td>GA</td>
+<td><abbr title="Generally Available &mdash; Rules related to a generally available Azure features.">GA</abbr></td>
 </tr>
 <tr>
 <td>AZR-000021</td>
 <td><a href="Azure.AKS.AvailabilityZone/">Azure.AKS.AvailabilityZone</a></td>
 <td>AKS clusters deployed with virtual machine scale sets should use availability zones in supported regions for high availability.</td>
-<td>GA</td>
+<td><abbr title="Generally Available &mdash; Rules related to a generally available Azure features.">GA</abbr></td>
 </tr>
 <tr>
 <td>AZR-000022</td>
 <td><a href="Azure.AKS.AuditLogs/">Azure.AKS.AuditLogs</a></td>
 <td>AKS clusters should collect security-based audit logs to assess and monitor the compliance status of workloads.</td>
-<td>GA</td>
+<td><abbr title="Generally Available &mdash; Rules related to a generally available Azure features.">GA</abbr></td>
 </tr>
 <tr>
 <td>AZR-000023</td>
 <td><a href="Azure.AKS.PlatformLogs/">Azure.AKS.PlatformLogs</a></td>
 <td>AKS clusters should collect platform diagnostic logs to monitor the state of workloads.</td>
-<td>GA</td>
+<td><abbr title="Generally Available &mdash; Rules related to a generally available Azure features.">GA</abbr></td>
 </tr>
 <tr>
 <td>AZR-000024</td>
 <td><a href="Azure.AKS.MinNodeCount/">Azure.AKS.MinNodeCount</a></td>
 <td>AKS clusters should have minimum number of nodes for failover and updates.</td>
-<td>GA</td>
+<td><abbr title="Generally Available &mdash; Rules related to a generally available Azure features.">GA</abbr></td>
 </tr>
 <tr>
 <td>AZR-000025</td>
 <td><a href="Azure.AKS.ManagedIdentity/">Azure.AKS.ManagedIdentity</a></td>
 <td>Configure AKS clusters to use managed identities for managing cluster infrastructure.</td>
-<td>GA</td>
+<td><abbr title="Generally Available &mdash; Rules related to a generally available Azure features.">GA</abbr></td>
 </tr>
 <tr>
 <td>AZR-000026</td>
 <td><a href="Azure.AKS.StandardLB/">Azure.AKS.StandardLB</a></td>
 <td>Azure Kubernetes Clusters (AKS) should use a Standard load balancer SKU.</td>
-<td>GA</td>
+<td><abbr title="Generally Available &mdash; Rules related to a generally available Azure features.">GA</abbr></td>
 </tr>
 <tr>
 <td>AZR-000027</td>
 <td><a href="Azure.AKS.NetworkPolicy/">Azure.AKS.NetworkPolicy</a></td>
 <td>Deploy AKS clusters with Network Policies enabled.</td>
-<td>GA</td>
+<td><abbr title="Generally Available &mdash; Rules related to a generally available Azure features.">GA</abbr></td>
 </tr>
 <tr>
 <td>AZR-000028</td>
 <td><a href="Azure.AKS.AzurePolicyAddOn/">Azure.AKS.AzurePolicyAddOn</a></td>
 <td>Configure Azure Kubernetes Service (AKS) clusters to use Azure Policy Add-on for Kubernetes.</td>
-<td>GA</td>
+<td><abbr title="Generally Available &mdash; Rules related to a generally available Azure features.">GA</abbr></td>
 </tr>
 <tr>
 <td>AZR-000029</td>
 <td><a href="Azure.AKS.ManagedAAD/">Azure.AKS.ManagedAAD</a></td>
 <td>Use AKS-managed Azure AD to simplify authorization and improve security.</td>
-<td>GA</td>
+<td><abbr title="Generally Available &mdash; Rules related to a generally available Azure features.">GA</abbr></td>
 </tr>
 <tr>
 <td>AZR-000030</td>
 <td><a href="Azure.AKS.AuthorizedIPs/">Azure.AKS.AuthorizedIPs</a></td>
 <td>Restrict access to API server endpoints to authorized IP addresses.</td>
-<td>GA</td>
+<td><abbr title="Generally Available &mdash; Rules related to a generally available Azure features.">GA</abbr></td>
 </tr>
 <tr>
 <td>AZR-000031</td>
@@ -6426,31 +6433,31 @@
 <td>AZR-000032</td>
 <td><a href="Azure.AKS.AzureRBAC/">Azure.AKS.AzureRBAC</a></td>
 <td>Use Azure RBAC for Kubernetes Authorization with AKS clusters.</td>
-<td>GA</td>
+<td><abbr title="Generally Available &mdash; Rules related to a generally available Azure features.">GA</abbr></td>
 </tr>
 <tr>
 <td>AZR-000033</td>
 <td><a href="Azure.AKS.SecretStore/">Azure.AKS.SecretStore</a></td>
 <td>Deploy AKS clusters with Secrets Store CSI Driver and store Secrets in Key Vault.</td>
-<td>GA</td>
+<td><abbr title="Generally Available &mdash; Rules related to a generally available Azure features.">GA</abbr></td>
 </tr>
 <tr>
 <td>AZR-000034</td>
 <td><a href="Azure.AKS.SecretStoreRotation/">Azure.AKS.SecretStoreRotation</a></td>
 <td>Enable autorotation of Secrets Store CSI Driver secrets for AKS clusters.</td>
-<td>GA</td>
+<td><abbr title="Generally Available &mdash; Rules related to a generally available Azure features.">GA</abbr></td>
 </tr>
 <tr>
 <td>AZR-000035</td>
 <td><a href="Azure.AKS.HttpAppRouting/">Azure.AKS.HttpAppRouting</a></td>
 <td>Disable HTTP application routing add-on in AKS clusters.</td>
-<td>GA</td>
+<td><abbr title="Generally Available &mdash; Rules related to a generally available Azure features.">GA</abbr></td>
 </tr>
 <tr>
 <td>AZR-000036</td>
 <td><a href="Azure.AKS.AutoUpgrade/">Azure.AKS.AutoUpgrade</a></td>
 <td>Configure AKS to automatically upgrade to newer supported AKS versions as they are made available.</td>
-<td>GA</td>
+<td><abbr title="Generally Available &mdash; Rules related to a generally available Azure features.">GA</abbr></td>
 </tr>
 <tr>
 <td>AZR-000037</td>
@@ -6462,337 +6469,337 @@
 <td>AZR-000038</td>
 <td><a href="Azure.AKS.UseRBAC/">Azure.AKS.UseRBAC</a></td>
 <td>Deploy AKS cluster with role-based access control (RBAC) enabled.</td>
-<td>GA</td>
+<td><abbr title="Generally Available &mdash; Rules related to a generally available Azure features.">GA</abbr></td>
 </tr>
 <tr>
 <td>AZR-000039</td>
 <td><a href="Azure.AKS.Name/">Azure.AKS.Name</a></td>
 <td>Azure Kubernetes Service (AKS) cluster names should meet naming requirements.</td>
-<td>GA</td>
+<td><abbr title="Generally Available &mdash; Rules related to a generally available Azure features.">GA</abbr></td>
 </tr>
 <tr>
 <td>AZR-000040</td>
 <td><a href="Azure.AKS.DNSPrefix/">Azure.AKS.DNSPrefix</a></td>
 <td>Azure Kubernetes Service (AKS) cluster DNS prefix should meet naming requirements.</td>
-<td>GA</td>
+<td><abbr title="Generally Available &mdash; Rules related to a generally available Azure features.">GA</abbr></td>
 </tr>
 <tr>
 <td>AZR-000041</td>
 <td><a href="Azure.AKS.ContainerInsights/">Azure.AKS.ContainerInsights</a></td>
 <td>Enable Container insights to monitor AKS cluster workloads.</td>
-<td>GA</td>
+<td><abbr title="Generally Available &mdash; Rules related to a generally available Azure features.">GA</abbr></td>
 </tr>
 <tr>
 <td>AZR-000042</td>
 <td><a href="Azure.APIM.HTTPEndpoint/">Azure.APIM.HTTPEndpoint</a></td>
 <td>Enforce HTTPS for communication to API clients.</td>
-<td>GA</td>
+<td><abbr title="Generally Available &mdash; Rules related to a generally available Azure features.">GA</abbr></td>
 </tr>
 <tr>
 <td>AZR-000043</td>
 <td><a href="Azure.APIM.APIDescriptors/">Azure.APIM.APIDescriptors</a></td>
 <td>API Management APIs should have a display name and description.</td>
-<td>GA</td>
+<td><abbr title="Generally Available &mdash; Rules related to a generally available Azure features.">GA</abbr></td>
 </tr>
 <tr>
 <td>AZR-000044</td>
 <td><a href="Azure.APIM.HTTPBackend/">Azure.APIM.HTTPBackend</a></td>
 <td>Use HTTPS for communication to backend services.</td>
-<td>GA</td>
+<td><abbr title="Generally Available &mdash; Rules related to a generally available Azure features.">GA</abbr></td>
 </tr>
 <tr>
 <td>AZR-000045</td>
 <td><a href="Azure.APIM.EncryptValues/">Azure.APIM.EncryptValues</a></td>
 <td>API Management named values should be encrypted.</td>
-<td>GA</td>
+<td><abbr title="Generally Available &mdash; Rules related to a generally available Azure features.">GA</abbr></td>
 </tr>
 <tr>
 <td>AZR-000046</td>
 <td><a href="Azure.APIM.ProductSubscription/">Azure.APIM.ProductSubscription</a></td>
 <td>Configure products to require a subscription.</td>
-<td>GA</td>
+<td><abbr title="Generally Available &mdash; Rules related to a generally available Azure features.">GA</abbr></td>
 </tr>
 <tr>
 <td>AZR-000047</td>
 <td><a href="Azure.APIM.ProductApproval/">Azure.APIM.ProductApproval</a></td>
 <td>Configure products to require approval.</td>
-<td>GA</td>
+<td><abbr title="Generally Available &mdash; Rules related to a generally available Azure features.">GA</abbr></td>
 </tr>
 <tr>
 <td>AZR-000048</td>
 <td><a href="Azure.APIM.SampleProducts/">Azure.APIM.SampleProducts</a></td>
 <td>Remove starter and unlimited sample products.</td>
-<td>GA</td>
+<td><abbr title="Generally Available &mdash; Rules related to a generally available Azure features.">GA</abbr></td>
 </tr>
 <tr>
 <td>AZR-000049</td>
 <td><a href="Azure.APIM.ProductDescriptors/">Azure.APIM.ProductDescriptors</a></td>
 <td>API Management products should have a display name and description.</td>
-<td>GA</td>
+<td><abbr title="Generally Available &mdash; Rules related to a generally available Azure features.">GA</abbr></td>
 </tr>
 <tr>
 <td>AZR-000050</td>
 <td><a href="Azure.APIM.ProductTerms/">Azure.APIM.ProductTerms</a></td>
 <td>Set legal terms for each product registered in API Management.</td>
-<td>GA</td>
+<td><abbr title="Generally Available &mdash; Rules related to a generally available Azure features.">GA</abbr></td>
 </tr>
 <tr>
 <td>AZR-000051</td>
 <td><a href="Azure.APIM.CertificateExpiry/">Azure.APIM.CertificateExpiry</a></td>
 <td>Renew certificates used for custom domain bindings.</td>
-<td>GA</td>
+<td><abbr title="Generally Available &mdash; Rules related to a generally available Azure features.">GA</abbr></td>
 </tr>
 <tr>
 <td>AZR-000052</td>
 <td><a href="Azure.APIM.AvailabilityZone/">Azure.APIM.AvailabilityZone</a></td>
 <td>API management services deployed with Premium SKU should use availability zones in supported regions for high availability.</td>
-<td>GA</td>
+<td><abbr title="Generally Available &mdash; Rules related to a generally available Azure features.">GA</abbr></td>
 </tr>
 <tr>
 <td>AZR-000053</td>
 <td><a href="Azure.APIM.ManagedIdentity/">Azure.APIM.ManagedIdentity</a></td>
 <td>Configure managed identities to access Azure resources.</td>
-<td>GA</td>
+<td><abbr title="Generally Available &mdash; Rules related to a generally available Azure features.">GA</abbr></td>
 </tr>
 <tr>
 <td>AZR-000054</td>
 <td><a href="Azure.APIM.Protocols/">Azure.APIM.Protocols</a></td>
 <td>API Management should only accept a minimum of TLS 1.2.</td>
-<td>GA</td>
+<td><abbr title="Generally Available &mdash; Rules related to a generally available Azure features.">GA</abbr></td>
 </tr>
 <tr>
 <td>AZR-000055</td>
 <td><a href="Azure.APIM.Ciphers/">Azure.APIM.Ciphers</a></td>
 <td>API Management should not accept weak or deprecated ciphers.</td>
-<td>GA</td>
+<td><abbr title="Generally Available &mdash; Rules related to a generally available Azure features.">GA</abbr></td>
 </tr>
 <tr>
 <td>AZR-000056</td>
 <td><a href="Azure.APIM.Name/">Azure.APIM.Name</a></td>
 <td>API Management service names should meet naming requirements.</td>
-<td>GA</td>
+<td><abbr title="Generally Available &mdash; Rules related to a generally available Azure features.">GA</abbr></td>
 </tr>
 <tr>
 <td>AZR-000057</td>
 <td><a href="Azure.AppConfig.SKU/">Azure.AppConfig.SKU</a></td>
 <td>App Configuration should use a minimum size of Standard.</td>
-<td>GA</td>
+<td><abbr title="Generally Available &mdash; Rules related to a generally available Azure features.">GA</abbr></td>
 </tr>
 <tr>
 <td>AZR-000058</td>
 <td><a href="Azure.AppConfig.Name/">Azure.AppConfig.Name</a></td>
 <td>App Configuration store names should meet naming requirements.</td>
-<td>GA</td>
+<td><abbr title="Generally Available &mdash; Rules related to a generally available Azure features.">GA</abbr></td>
 </tr>
 <tr>
 <td>AZR-000059</td>
 <td><a href="Azure.AppGw.UseHTTPS/">Azure.AppGw.UseHTTPS</a></td>
 <td>Application Gateways should only expose frontend HTTP endpoints over HTTPS.</td>
-<td>GA</td>
+<td><abbr title="Generally Available &mdash; Rules related to a generally available Azure features.">GA</abbr></td>
 </tr>
 <tr>
 <td>AZR-000060</td>
 <td><a href="Azure.AppGw.AvailabilityZone/">Azure.AppGw.AvailabilityZone</a></td>
 <td>Application gateways deployed with should use availability zones in supported regions for high availability.</td>
-<td>GA</td>
+<td><abbr title="Generally Available &mdash; Rules related to a generally available Azure features.">GA</abbr></td>
 </tr>
 <tr>
 <td>AZR-000061</td>
 <td><a href="Azure.AppGw.MinInstance/">Azure.AppGw.MinInstance</a></td>
 <td>Application Gateways should use a minimum of two instances.</td>
-<td>GA</td>
+<td><abbr title="Generally Available &mdash; Rules related to a generally available Azure features.">GA</abbr></td>
 </tr>
 <tr>
 <td>AZR-000062</td>
 <td><a href="Azure.AppGw.MinSku/">Azure.AppGw.MinSku</a></td>
 <td>Application Gateway should use a minimum instance size of Medium.</td>
-<td>GA</td>
+<td><abbr title="Generally Available &mdash; Rules related to a generally available Azure features.">GA</abbr></td>
 </tr>
 <tr>
 <td>AZR-000063</td>
 <td><a href="Azure.AppGw.UseWAF/">Azure.AppGw.UseWAF</a></td>
 <td>Internet accessible Application Gateways should use protect endpoints with WAF.</td>
-<td>GA</td>
+<td><abbr title="Generally Available &mdash; Rules related to a generally available Azure features.">GA</abbr></td>
 </tr>
 <tr>
 <td>AZR-000064</td>
 <td><a href="Azure.AppGw.SSLPolicy/">Azure.AppGw.SSLPolicy</a></td>
 <td>Application Gateway should only accept a minimum of TLS 1.2.</td>
-<td>GA</td>
+<td><abbr title="Generally Available &mdash; Rules related to a generally available Azure features.">GA</abbr></td>
 </tr>
 <tr>
 <td>AZR-000065</td>
 <td><a href="Azure.AppGw.Prevention/">Azure.AppGw.Prevention</a></td>
 <td>Internet exposed Application Gateways should use prevention mode to protect backend resources.</td>
-<td>GA</td>
+<td><abbr title="Generally Available &mdash; Rules related to a generally available Azure features.">GA</abbr></td>
 </tr>
 <tr>
 <td>AZR-000066</td>
 <td><a href="Azure.AppGw.WAFEnabled/">Azure.AppGw.WAFEnabled</a></td>
 <td>Application Gateway Web Application Firewall (WAF) must be enabled to protect backend resources.</td>
-<td>GA</td>
+<td><abbr title="Generally Available &mdash; Rules related to a generally available Azure features.">GA</abbr></td>
 </tr>
 <tr>
 <td>AZR-000067</td>
 <td><a href="Azure.AppGw.OWASP/">Azure.AppGw.OWASP</a></td>
 <td>Application Gateway Web Application Firewall (WAF) should use OWASP 3.x rules.</td>
-<td>GA</td>
+<td><abbr title="Generally Available &mdash; Rules related to a generally available Azure features.">GA</abbr></td>
 </tr>
 <tr>
 <td>AZR-000068</td>
 <td><a href="Azure.AppGw.WAFRules/">Azure.AppGw.WAFRules</a></td>
 <td>Application Gateway Web Application Firewall (WAF) should have all rules enabled.</td>
-<td>GA</td>
+<td><abbr title="Generally Available &mdash; Rules related to a generally available Azure features.">GA</abbr></td>
 </tr>
 <tr>
 <td>AZR-000069</td>
 <td><a href="Azure.AppInsights.Workspace/">Azure.AppInsights.Workspace</a></td>
 <td>Configure Application Insights resources to store data in workspaces.</td>
-<td>GA</td>
+<td><abbr title="Generally Available &mdash; Rules related to a generally available Azure features.">GA</abbr></td>
 </tr>
 <tr>
 <td>AZR-000070</td>
 <td><a href="Azure.AppInsights.Name/">Azure.AppInsights.Name</a></td>
 <td>Azure Application Insights resources names should meet naming requirements.</td>
-<td>GA</td>
+<td><abbr title="Generally Available &mdash; Rules related to a generally available Azure features.">GA</abbr></td>
 </tr>
 <tr>
 <td>AZR-000071</td>
 <td><a href="Azure.AppService.PlanInstanceCount/">Azure.AppService.PlanInstanceCount</a></td>
 <td>App Service Plan should use a minimum number of instances for failover.</td>
-<td>GA</td>
+<td><abbr title="Generally Available &mdash; Rules related to a generally available Azure features.">GA</abbr></td>
 </tr>
 <tr>
 <td>AZR-000072</td>
 <td><a href="Azure.AppService.MinPlan/">Azure.AppService.MinPlan</a></td>
 <td>Use at least a Standard App Service Plan.</td>
-<td>GA</td>
+<td><abbr title="Generally Available &mdash; Rules related to a generally available Azure features.">GA</abbr></td>
 </tr>
 <tr>
 <td>AZR-000073</td>
 <td><a href="Azure.AppService.MinTLS/">Azure.AppService.MinTLS</a></td>
 <td>App Service should reject TLS versions older then 1.2.</td>
-<td>GA</td>
+<td><abbr title="Generally Available &mdash; Rules related to a generally available Azure features.">GA</abbr></td>
 </tr>
 <tr>
 <td>AZR-000074</td>
 <td><a href="Azure.AppService.RemoteDebug/">Azure.AppService.RemoteDebug</a></td>
 <td>Disable remote debugging on App Service apps when not in use.</td>
-<td>GA</td>
+<td><abbr title="Generally Available &mdash; Rules related to a generally available Azure features.">GA</abbr></td>
 </tr>
 <tr>
 <td>AZR-000075</td>
 <td><a href="Azure.AppService.NETVersion/">Azure.AppService.NETVersion</a></td>
 <td>Configure applications to use newer .NET versions.</td>
-<td>GA</td>
+<td><abbr title="Generally Available &mdash; Rules related to a generally available Azure features.">GA</abbr></td>
 </tr>
 <tr>
 <td>AZR-000076</td>
 <td><a href="Azure.AppService.PHPVersion/">Azure.AppService.PHPVersion</a></td>
 <td>Configure applications to use newer PHP runtime versions.</td>
-<td>GA</td>
+<td><abbr title="Generally Available &mdash; Rules related to a generally available Azure features.">GA</abbr></td>
 </tr>
 <tr>
 <td>AZR-000077</td>
 <td><a href="Azure.AppService.AlwaysOn/">Azure.AppService.AlwaysOn</a></td>
 <td>Configure Always On for App Service apps.</td>
-<td>GA</td>
+<td><abbr title="Generally Available &mdash; Rules related to a generally available Azure features.">GA</abbr></td>
 </tr>
 <tr>
 <td>AZR-000078</td>
 <td><a href="Azure.AppService.HTTP2/">Azure.AppService.HTTP2</a></td>
 <td>Use HTTP/2 instead of HTTP/1.x to improve protocol efficiency.</td>
-<td>GA</td>
+<td><abbr title="Generally Available &mdash; Rules related to a generally available Azure features.">GA</abbr></td>
 </tr>
 <tr>
 <td>AZR-000079</td>
 <td><a href="Azure.AppService.WebProbe/">Azure.AppService.WebProbe</a></td>
 <td>Configure and enable instance health probes.</td>
-<td>GA</td>
+<td><abbr title="Generally Available &mdash; Rules related to a generally available Azure features.">GA</abbr></td>
 </tr>
 <tr>
 <td>AZR-000080</td>
 <td><a href="Azure.AppService.WebProbePath/">Azure.AppService.WebProbePath</a></td>
 <td>Configure a dedicated path for health probe requests.</td>
-<td>GA</td>
+<td><abbr title="Generally Available &mdash; Rules related to a generally available Azure features.">GA</abbr></td>
 </tr>
 <tr>
 <td>AZR-000081</td>
 <td><a href="Azure.AppService.WebSecureFtp/">Azure.AppService.WebSecureFtp</a></td>
 <td>Web apps should disable insecure FTP and configure SFTP when required.</td>
-<td>GA</td>
+<td><abbr title="Generally Available &mdash; Rules related to a generally available Azure features.">GA</abbr></td>
 </tr>
 <tr>
 <td>AZR-000082</td>
 <td><a href="Azure.AppService.ManagedIdentity/">Azure.AppService.ManagedIdentity</a></td>
 <td>Configure managed identities to access Azure resources.</td>
-<td>GA</td>
+<td><abbr title="Generally Available &mdash; Rules related to a generally available Azure features.">GA</abbr></td>
 </tr>
 <tr>
 <td>AZR-000083</td>
 <td><a href="Azure.AppService.ARRAffinity/">Azure.AppService.ARRAffinity</a></td>
 <td>Disable client affinity for stateless services.</td>
-<td>GA</td>
+<td><abbr title="Generally Available &mdash; Rules related to a generally available Azure features.">GA</abbr></td>
 </tr>
 <tr>
 <td>AZR-000084</td>
 <td><a href="Azure.AppService.UseHTTPS/">Azure.AppService.UseHTTPS</a></td>
 <td>Azure App Service apps should only accept encrypted connections.</td>
-<td>GA</td>
+<td><abbr title="Generally Available &mdash; Rules related to a generally available Azure features.">GA</abbr></td>
 </tr>
 <tr>
 <td>AZR-000085</td>
 <td><a href="Azure.ASG.Name/">Azure.ASG.Name</a></td>
 <td>Application Security Group (ASG) names should meet naming requirements.</td>
-<td>GA</td>
+<td><abbr title="Generally Available &mdash; Rules related to a generally available Azure features.">GA</abbr></td>
 </tr>
 <tr>
 <td>AZR-000086</td>
 <td><a href="Azure.Automation.EncryptVariables/">Azure.Automation.EncryptVariables</a></td>
 <td>Azure Automation variables should be encrypted.</td>
-<td>GA</td>
+<td><abbr title="Generally Available &mdash; Rules related to a generally available Azure features.">GA</abbr></td>
 </tr>
 <tr>
 <td>AZR-000087</td>
 <td><a href="Azure.Automation.WebHookExpiry/">Azure.Automation.WebHookExpiry</a></td>
 <td>Do not create webhooks with an expiry time greater than 1 year (default).</td>
-<td>GA</td>
+<td><abbr title="Generally Available &mdash; Rules related to a generally available Azure features.">GA</abbr></td>
 </tr>
 <tr>
 <td>AZR-000088</td>
 <td><a href="Azure.Automation.AuditLogs/">Azure.Automation.AuditLogs</a></td>
 <td>Ensure automation account audit diagnostic logs are enabled.</td>
-<td>GA</td>
+<td><abbr title="Generally Available &mdash; Rules related to a generally available Azure features.">GA</abbr></td>
 </tr>
 <tr>
 <td>AZR-000089</td>
 <td><a href="Azure.Automation.PlatformLogs/">Azure.Automation.PlatformLogs</a></td>
 <td>Ensure automation account platform diagnostic logs are enabled.</td>
-<td>GA</td>
+<td><abbr title="Generally Available &mdash; Rules related to a generally available Azure features.">GA</abbr></td>
 </tr>
 <tr>
 <td>AZR-000090</td>
 <td><a href="Azure.Automation.ManagedIdentity/">Azure.Automation.ManagedIdentity</a></td>
 <td>Ensure Managed Identity is used for authentication.</td>
-<td>GA</td>
+<td><abbr title="Generally Available &mdash; Rules related to a generally available Azure features.">GA</abbr></td>
 </tr>
 <tr>
 <td>AZR-000091</td>
 <td><a href="Azure.CDN.EndpointName/">Azure.CDN.EndpointName</a></td>
 <td>Azure CDN Endpoint names should meet naming requirements.</td>
-<td>GA</td>
+<td><abbr title="Generally Available &mdash; Rules related to a generally available Azure features.">GA</abbr></td>
 </tr>
 <tr>
 <td>AZR-000092</td>
 <td><a href="Azure.CDN.MinTLS/">Azure.CDN.MinTLS</a></td>
 <td>Azure CDN endpoints should reject TLS versions older than 1.2.</td>
-<td>GA</td>
+<td><abbr title="Generally Available &mdash; Rules related to a generally available Azure features.">GA</abbr></td>
 </tr>
 <tr>
 <td>AZR-000093</td>
 <td><a href="Azure.CDN.HTTP/">Azure.CDN.HTTP</a></td>
 <td>Enforce HTTPS for client connections.</td>
-<td>GA</td>
+<td><abbr title="Generally Available &mdash; Rules related to a generally available Azure features.">GA</abbr></td>
 </tr>
 <tr>
 <td>AZR-000094</td>
@@ -6804,31 +6811,31 @@
 <td>AZR-000095</td>
 <td><a href="Azure.Cosmos.DisableMetadataWrite/">Azure.Cosmos.DisableMetadataWrite</a></td>
 <td>Use Azure AD identities for management place operations in Azure Cosmos DB.</td>
-<td>GA</td>
+<td><abbr title="Generally Available &mdash; Rules related to a generally available Azure features.">GA</abbr></td>
 </tr>
 <tr>
 <td>AZR-000096</td>
 <td><a href="Azure.Cosmos.AccountName/">Azure.Cosmos.AccountName</a></td>
 <td>Cosmos DB account names should meet naming requirements.</td>
-<td>GA</td>
+<td><abbr title="Generally Available &mdash; Rules related to a generally available Azure features.">GA</abbr></td>
 </tr>
 <tr>
 <td>AZR-000097</td>
 <td><a href="Azure.DataFactory.Version/">Azure.DataFactory.Version</a></td>
 <td>Consider migrating to DataFactory v2.</td>
-<td>GA</td>
+<td><abbr title="Generally Available &mdash; Rules related to a generally available Azure features.">GA</abbr></td>
 </tr>
 <tr>
 <td>AZR-000098</td>
 <td><a href="Azure.EventGrid.TopicPublicAccess/">Azure.EventGrid.TopicPublicAccess</a></td>
 <td>Use Private Endpoints to access Event Grid topics and domains.</td>
-<td>GA</td>
+<td><abbr title="Generally Available &mdash; Rules related to a generally available Azure features.">GA</abbr></td>
 </tr>
 <tr>
 <td>AZR-000099</td>
 <td><a href="Azure.EventGrid.ManagedIdentity/">Azure.EventGrid.ManagedIdentity</a></td>
 <td>Use managed identities to deliver Event Grid Topic events.</td>
-<td>GA</td>
+<td><abbr title="Generally Available &mdash; Rules related to a generally available Azure features.">GA</abbr></td>
 </tr>
 <tr>
 <td>AZR-000100</td>
@@ -6840,133 +6847,133 @@
 <td>AZR-000101</td>
 <td><a href="Azure.EventHub.Usage/">Azure.EventHub.Usage</a></td>
 <td>Regularly remove unused resources to reduce costs.</td>
-<td>GA</td>
+<td><abbr title="Generally Available &mdash; Rules related to a generally available Azure features.">GA</abbr></td>
 </tr>
 <tr>
 <td>AZR-000102</td>
 <td><a href="Azure.EventHub.DisableLocalAuth/">Azure.EventHub.DisableLocalAuth</a></td>
 <td>Authenticate Event Hub publishers and consumers with Azure AD identities.</td>
-<td>GA</td>
+<td><abbr title="Generally Available &mdash; Rules related to a generally available Azure features.">GA</abbr></td>
 </tr>
 <tr>
 <td>AZR-000103</td>
 <td><a href="Azure.Firewall.Name/">Azure.Firewall.Name</a></td>
 <td>Firewall names should meet naming requirements.</td>
-<td>GA</td>
+<td><abbr title="Generally Available &mdash; Rules related to a generally available Azure features.">GA</abbr></td>
 </tr>
 <tr>
 <td>AZR-000104</td>
 <td><a href="Azure.Firewall.PolicyName/">Azure.Firewall.PolicyName</a></td>
 <td>Firewall policy names should meet naming requirements.</td>
-<td>GA</td>
+<td><abbr title="Generally Available &mdash; Rules related to a generally available Azure features.">GA</abbr></td>
 </tr>
 <tr>
 <td>AZR-000105</td>
 <td><a href="Azure.Firewall.Mode/">Azure.Firewall.Mode</a></td>
 <td>Deny high confidence malicious IP addresses and domains on classic managed Azure Firewalls.</td>
-<td>GA</td>
+<td><abbr title="Generally Available &mdash; Rules related to a generally available Azure features.">GA</abbr></td>
 </tr>
 <tr>
 <td>AZR-000106</td>
 <td><a href="Azure.FrontDoor.MinTLS/">Azure.FrontDoor.MinTLS</a></td>
 <td>Front Door should reject TLS versions older then 1.2.</td>
-<td>GA</td>
+<td><abbr title="Generally Available &mdash; Rules related to a generally available Azure features.">GA</abbr></td>
 </tr>
 <tr>
 <td>AZR-000107</td>
 <td><a href="Azure.FrontDoor.Logs/">Azure.FrontDoor.Logs</a></td>
 <td>Audit and monitor access through Front Door.</td>
-<td>GA</td>
+<td><abbr title="Generally Available &mdash; Rules related to a generally available Azure features.">GA</abbr></td>
 </tr>
 <tr>
 <td>AZR-000108</td>
 <td><a href="Azure.FrontDoor.Probe/">Azure.FrontDoor.Probe</a></td>
 <td>Configure and enable health probes for each backend pool.</td>
-<td>GA</td>
+<td><abbr title="Generally Available &mdash; Rules related to a generally available Azure features.">GA</abbr></td>
 </tr>
 <tr>
 <td>AZR-000109</td>
 <td><a href="Azure.FrontDoor.ProbeMethod/">Azure.FrontDoor.ProbeMethod</a></td>
 <td>Configure health probes to use HEAD instead of GET requests.</td>
-<td>GA</td>
+<td><abbr title="Generally Available &mdash; Rules related to a generally available Azure features.">GA</abbr></td>
 </tr>
 <tr>
 <td>AZR-000110</td>
 <td><a href="Azure.FrontDoor.ProbePath/">Azure.FrontDoor.ProbePath</a></td>
 <td>Configure a dedicated path for health probe requests.</td>
-<td>GA</td>
+<td><abbr title="Generally Available &mdash; Rules related to a generally available Azure features.">GA</abbr></td>
 </tr>
 <tr>
 <td>AZR-000111</td>
 <td><a href="Azure.FrontDoor.UseWAF/">Azure.FrontDoor.UseWAF</a></td>
 <td>Enable Web Application Firewall (WAF) policies on each Front Door endpoint.</td>
-<td>GA</td>
+<td><abbr title="Generally Available &mdash; Rules related to a generally available Azure features.">GA</abbr></td>
 </tr>
 <tr>
 <td>AZR-000112</td>
 <td><a href="Azure.FrontDoor.State/">Azure.FrontDoor.State</a></td>
 <td>Enable Azure Front Door instance.</td>
-<td>GA</td>
+<td><abbr title="Generally Available &mdash; Rules related to a generally available Azure features.">GA</abbr></td>
 </tr>
 <tr>
 <td>AZR-000113</td>
 <td><a href="Azure.FrontDoor.Name/">Azure.FrontDoor.Name</a></td>
 <td>Front Door names should meet naming requirements.</td>
-<td>GA</td>
+<td><abbr title="Generally Available &mdash; Rules related to a generally available Azure features.">GA</abbr></td>
 </tr>
 <tr>
 <td>AZR-000114</td>
 <td><a href="Azure.FrontDoor.WAF.Mode/">Azure.FrontDoor.WAF.Mode</a></td>
 <td>Use protection mode in Front Door Web Application Firewall (WAF) policies to protect back end resources.</td>
-<td>GA</td>
+<td><abbr title="Generally Available &mdash; Rules related to a generally available Azure features.">GA</abbr></td>
 </tr>
 <tr>
 <td>AZR-000115</td>
 <td><a href="Azure.FrontDoor.WAF.Enabled/">Azure.FrontDoor.WAF.Enabled</a></td>
 <td>Front Door Web Application Firewall (WAF) policy must be enabled to protect back end resources.</td>
-<td>GA</td>
+<td><abbr title="Generally Available &mdash; Rules related to a generally available Azure features.">GA</abbr></td>
 </tr>
 <tr>
 <td>AZR-000116</td>
 <td><a href="Azure.FrontDoor.WAF.Name/">Azure.FrontDoor.WAF.Name</a></td>
 <td>Front Door WAF policy names should meet naming requirements.</td>
-<td>GA</td>
+<td><abbr title="Generally Available &mdash; Rules related to a generally available Azure features.">GA</abbr></td>
 </tr>
 <tr>
 <td>AZR-000117</td>
 <td><a href="Azure.Identity.UserAssignedName/">Azure.Identity.UserAssignedName</a></td>
 <td>Managed Identity names should meet naming requirements.</td>
-<td>GA</td>
+<td><abbr title="Generally Available &mdash; Rules related to a generally available Azure features.">GA</abbr></td>
 </tr>
 <tr>
 <td>AZR-000118</td>
 <td><a href="Azure.KeyVault.AccessPolicy/">Azure.KeyVault.AccessPolicy</a></td>
 <td>Use the principal of least privilege when assigning access to Key Vault.</td>
-<td>GA</td>
+<td><abbr title="Generally Available &mdash; Rules related to a generally available Azure features.">GA</abbr></td>
 </tr>
 <tr>
 <td>AZR-000119</td>
 <td><a href="Azure.KeyVault.Logs/">Azure.KeyVault.Logs</a></td>
 <td>Audit and monitor access to Key Vault data.</td>
-<td>GA</td>
+<td><abbr title="Generally Available &mdash; Rules related to a generally available Azure features.">GA</abbr></td>
 </tr>
 <tr>
 <td>AZR-000120</td>
 <td><a href="Azure.KeyVault.Name/">Azure.KeyVault.Name</a></td>
 <td>Key Vault names should meet naming requirements.</td>
-<td>GA</td>
+<td><abbr title="Generally Available &mdash; Rules related to a generally available Azure features.">GA</abbr></td>
 </tr>
 <tr>
 <td>AZR-000121</td>
 <td><a href="Azure.KeyVault.SecretName/">Azure.KeyVault.SecretName</a></td>
 <td>Key Vault Secret names should meet naming requirements.</td>
-<td>GA</td>
+<td><abbr title="Generally Available &mdash; Rules related to a generally available Azure features.">GA</abbr></td>
 </tr>
 <tr>
 <td>AZR-000122</td>
 <td><a href="Azure.KeyVault.KeyName/">Azure.KeyVault.KeyName</a></td>
 <td>Key Vault Key names should meet naming requirements.</td>
-<td>GA</td>
+<td><abbr title="Generally Available &mdash; Rules related to a generally available Azure features.">GA</abbr></td>
 </tr>
 <tr>
 <td>AZR-000123</td>
@@ -6978,961 +6985,961 @@
 <td>AZR-000124</td>
 <td><a href="Azure.KeyVault.SoftDelete/">Azure.KeyVault.SoftDelete</a></td>
 <td>Enable Soft Delete on Key Vaults to protect vaults and vault items from accidental deletion.</td>
-<td>GA</td>
+<td><abbr title="Generally Available &mdash; Rules related to a generally available Azure features.">GA</abbr></td>
 </tr>
 <tr>
 <td>AZR-000125</td>
 <td><a href="Azure.KeyVault.PurgeProtect/">Azure.KeyVault.PurgeProtect</a></td>
 <td>Enable Purge Protection on Key Vaults to prevent early purge of vaults and vault items.</td>
-<td>GA</td>
+<td><abbr title="Generally Available &mdash; Rules related to a generally available Azure features.">GA</abbr></td>
 </tr>
 <tr>
 <td>AZR-000126</td>
 <td><a href="Azure.LB.Probe/">Azure.LB.Probe</a></td>
 <td>Use a specific probe for web protocols.</td>
-<td>GA</td>
+<td><abbr title="Generally Available &mdash; Rules related to a generally available Azure features.">GA</abbr></td>
 </tr>
 <tr>
 <td>AZR-000127</td>
 <td><a href="Azure.LB.AvailabilityZone/">Azure.LB.AvailabilityZone</a></td>
 <td>Load balancers deployed with Standard SKU should be zone-redundant for high availability.</td>
-<td>GA</td>
+<td><abbr title="Generally Available &mdash; Rules related to a generally available Azure features.">GA</abbr></td>
 </tr>
 <tr>
 <td>AZR-000128</td>
 <td><a href="Azure.LB.StandardSKU/">Azure.LB.StandardSKU</a></td>
 <td>Load balancers should be deployed with Standard SKU for production workloads.</td>
-<td>GA</td>
+<td><abbr title="Generally Available &mdash; Rules related to a generally available Azure features.">GA</abbr></td>
 </tr>
 <tr>
 <td>AZR-000129</td>
 <td><a href="Azure.LB.Name/">Azure.LB.Name</a></td>
 <td>Load Balancer names should meet naming requirements.</td>
-<td>GA</td>
+<td><abbr title="Generally Available &mdash; Rules related to a generally available Azure features.">GA</abbr></td>
 </tr>
 <tr>
 <td>AZR-000130</td>
 <td><a href="Azure.LogicApp.LimitHTTPTrigger/">Azure.LogicApp.LimitHTTPTrigger</a></td>
 <td>Limit HTTP request trigger access to trusted IP addresses.</td>
-<td>GA</td>
+<td><abbr title="Generally Available &mdash; Rules related to a generally available Azure features.">GA</abbr></td>
 </tr>
 <tr>
 <td>AZR-000131</td>
 <td><a href="Azure.MySQL.UseSSL/">Azure.MySQL.UseSSL</a></td>
 <td>Enforce encrypted MySQL connections.</td>
-<td>GA</td>
+<td><abbr title="Generally Available &mdash; Rules related to a generally available Azure features.">GA</abbr></td>
 </tr>
 <tr>
 <td>AZR-000132</td>
 <td><a href="Azure.MySQL.MinTLS/">Azure.MySQL.MinTLS</a></td>
 <td>MySQL DB servers should reject TLS versions older than 1.2.</td>
-<td>GA</td>
+<td><abbr title="Generally Available &mdash; Rules related to a generally available Azure features.">GA</abbr></td>
 </tr>
 <tr>
 <td>AZR-000133</td>
 <td><a href="Azure.MySQL.FirewallRuleCount/">Azure.MySQL.FirewallRuleCount</a></td>
 <td>Determine if there is an excessive number of firewall rules.</td>
-<td>GA</td>
+<td><abbr title="Generally Available &mdash; Rules related to a generally available Azure features.">GA</abbr></td>
 </tr>
 <tr>
 <td>AZR-000134</td>
 <td><a href="Azure.MySQL.AllowAzureAccess/">Azure.MySQL.AllowAzureAccess</a></td>
 <td>Determine if access from Azure services is required.</td>
-<td>GA</td>
+<td><abbr title="Generally Available &mdash; Rules related to a generally available Azure features.">GA</abbr></td>
 </tr>
 <tr>
 <td>AZR-000135</td>
 <td><a href="Azure.MySQL.FirewallIPRange/">Azure.MySQL.FirewallIPRange</a></td>
 <td>Determine if there is an excessive number of permitted IP addresses.</td>
-<td>GA</td>
+<td><abbr title="Generally Available &mdash; Rules related to a generally available Azure features.">GA</abbr></td>
 </tr>
 <tr>
 <td>AZR-000136</td>
 <td><a href="Azure.MySQL.ServerName/">Azure.MySQL.ServerName</a></td>
 <td>Azure MySQL DB server names should meet naming requirements.</td>
-<td>GA</td>
+<td><abbr title="Generally Available &mdash; Rules related to a generally available Azure features.">GA</abbr></td>
 </tr>
 <tr>
 <td>AZR-000137</td>
 <td><a href="Azure.NSG.AnyInboundSource/">Azure.NSG.AnyInboundSource</a></td>
 <td>Network security groups (NSGs) should avoid rules that allow any inbound source.</td>
-<td>GA</td>
+<td><abbr title="Generally Available &mdash; Rules related to a generally available Azure features.">GA</abbr></td>
 </tr>
 <tr>
 <td>AZR-000138</td>
 <td><a href="Azure.NSG.DenyAllInbound/">Azure.NSG.DenyAllInbound</a></td>
 <td>Avoid denying all inbound traffic.</td>
-<td>GA</td>
+<td><abbr title="Generally Available &mdash; Rules related to a generally available Azure features.">GA</abbr></td>
 </tr>
 <tr>
 <td>AZR-000139</td>
 <td><a href="Azure.NSG.LateralTraversal/">Azure.NSG.LateralTraversal</a></td>
 <td>Deny outbound management connections from non-management hosts.</td>
-<td>GA</td>
+<td><abbr title="Generally Available &mdash; Rules related to a generally available Azure features.">GA</abbr></td>
 </tr>
 <tr>
 <td>AZR-000140</td>
 <td><a href="Azure.NSG.Associated/">Azure.NSG.Associated</a></td>
 <td>Network Security Groups (NSGs) should be associated to a subnet or network interface.</td>
-<td>GA</td>
+<td><abbr title="Generally Available &mdash; Rules related to a generally available Azure features.">GA</abbr></td>
 </tr>
 <tr>
 <td>AZR-000141</td>
 <td><a href="Azure.NSG.Name/">Azure.NSG.Name</a></td>
 <td>Network Security Group (NSG) names should meet naming requirements.</td>
-<td>GA</td>
+<td><abbr title="Generally Available &mdash; Rules related to a generally available Azure features.">GA</abbr></td>
 </tr>
 <tr>
 <td>AZR-000142</td>
 <td><a href="Azure.Policy.Descriptors/">Azure.Policy.Descriptors</a></td>
 <td>Policy and initiative definitions should use a display name, description, and category.</td>
-<td>GA</td>
+<td><abbr title="Generally Available &mdash; Rules related to a generally available Azure features.">GA</abbr></td>
 </tr>
 <tr>
 <td>AZR-000143</td>
 <td><a href="Azure.Policy.AssignmentDescriptors/">Azure.Policy.AssignmentDescriptors</a></td>
 <td>Policy assignments should use a display name and description.</td>
-<td>GA</td>
+<td><abbr title="Generally Available &mdash; Rules related to a generally available Azure features.">GA</abbr></td>
 </tr>
 <tr>
 <td>AZR-000144</td>
 <td><a href="Azure.Policy.AssignmentAssignedBy/">Azure.Policy.AssignmentAssignedBy</a></td>
 <td>Policy assignments should use assignedBy metadata.</td>
-<td>GA</td>
+<td><abbr title="Generally Available &mdash; Rules related to a generally available Azure features.">GA</abbr></td>
 </tr>
 <tr>
 <td>AZR-000145</td>
 <td><a href="Azure.Policy.ExemptionDescriptors/">Azure.Policy.ExemptionDescriptors</a></td>
 <td>Policy exemptions should use a display name and description.</td>
-<td>GA</td>
+<td><abbr title="Generally Available &mdash; Rules related to a generally available Azure features.">GA</abbr></td>
 </tr>
 <tr>
 <td>AZR-000146</td>
 <td><a href="Azure.Policy.WaiverExpiry/">Azure.Policy.WaiverExpiry</a></td>
 <td>Configure policy waiver exemptions to expire.</td>
-<td>GA</td>
+<td><abbr title="Generally Available &mdash; Rules related to a generally available Azure features.">GA</abbr></td>
 </tr>
 <tr>
 <td>AZR-000147</td>
 <td><a href="Azure.PostgreSQL.UseSSL/">Azure.PostgreSQL.UseSSL</a></td>
 <td>Enforce encrypted PostgreSQL connections.</td>
-<td>GA</td>
+<td><abbr title="Generally Available &mdash; Rules related to a generally available Azure features.">GA</abbr></td>
 </tr>
 <tr>
 <td>AZR-000148</td>
 <td><a href="Azure.PostgreSQL.MinTLS/">Azure.PostgreSQL.MinTLS</a></td>
 <td>PostgreSQL DB servers should reject TLS versions older than 1.2.</td>
-<td>GA</td>
+<td><abbr title="Generally Available &mdash; Rules related to a generally available Azure features.">GA</abbr></td>
 </tr>
 <tr>
 <td>AZR-000149</td>
 <td><a href="Azure.PostgreSQL.FirewallRuleCount/">Azure.PostgreSQL.FirewallRuleCount</a></td>
 <td>Determine if there is an excessive number of firewall rules.</td>
-<td>GA</td>
+<td><abbr title="Generally Available &mdash; Rules related to a generally available Azure features.">GA</abbr></td>
 </tr>
 <tr>
 <td>AZR-000150</td>
 <td><a href="Azure.PostgreSQL.AllowAzureAccess/">Azure.PostgreSQL.AllowAzureAccess</a></td>
 <td>Determine if access from Azure services is required.</td>
-<td>GA</td>
+<td><abbr title="Generally Available &mdash; Rules related to a generally available Azure features.">GA</abbr></td>
 </tr>
 <tr>
 <td>AZR-000151</td>
 <td><a href="Azure.PostgreSQL.FirewallIPRange/">Azure.PostgreSQL.FirewallIPRange</a></td>
 <td>Determine if there is an excessive number of permitted IP addresses.</td>
-<td>GA</td>
+<td><abbr title="Generally Available &mdash; Rules related to a generally available Azure features.">GA</abbr></td>
 </tr>
 <tr>
 <td>AZR-000152</td>
 <td><a href="Azure.PostgreSQL.ServerName/">Azure.PostgreSQL.ServerName</a></td>
 <td>Azure PostgreSQL DB server names should meet naming requirements.</td>
-<td>GA</td>
+<td><abbr title="Generally Available &mdash; Rules related to a generally available Azure features.">GA</abbr></td>
 </tr>
 <tr>
 <td>AZR-000153</td>
 <td><a href="Azure.PrivateEndpoint.Name/">Azure.PrivateEndpoint.Name</a></td>
 <td>Private Endpoint names should meet naming requirements.</td>
-<td>GA</td>
+<td><abbr title="Generally Available &mdash; Rules related to a generally available Azure features.">GA</abbr></td>
 </tr>
 <tr>
 <td>AZR-000154</td>
 <td><a href="Azure.PublicIP.IsAttached/">Azure.PublicIP.IsAttached</a></td>
 <td>Public IP address should be attached or removed.</td>
-<td>GA</td>
+<td><abbr title="Generally Available &mdash; Rules related to a generally available Azure features.">GA</abbr></td>
 </tr>
 <tr>
 <td>AZR-000155</td>
 <td><a href="Azure.PublicIP.Name/">Azure.PublicIP.Name</a></td>
 <td>Public IP names should meet naming requirements.</td>
-<td>GA</td>
+<td><abbr title="Generally Available &mdash; Rules related to a generally available Azure features.">GA</abbr></td>
 </tr>
 <tr>
 <td>AZR-000156</td>
 <td><a href="Azure.PublicIP.DNSLabel/">Azure.PublicIP.DNSLabel</a></td>
 <td>Public IP domain name labels should meet naming requirements.</td>
-<td>GA</td>
+<td><abbr title="Generally Available &mdash; Rules related to a generally available Azure features.">GA</abbr></td>
 </tr>
 <tr>
 <td>AZR-000157</td>
 <td><a href="Azure.PublicIP.AvailabilityZone/">Azure.PublicIP.AvailabilityZone</a></td>
 <td>Public IP addresses deployed with Standard SKU should use availability zones in supported regions for high availability.</td>
-<td>GA</td>
+<td><abbr title="Generally Available &mdash; Rules related to a generally available Azure features.">GA</abbr></td>
 </tr>
 <tr>
 <td>AZR-000158</td>
 <td><a href="Azure.PublicIP.StandardSKU/">Azure.PublicIP.StandardSKU</a></td>
 <td>Public IP addresses should be deployed with Standard SKU for production workloads.</td>
-<td>GA</td>
+<td><abbr title="Generally Available &mdash; Rules related to a generally available Azure features.">GA</abbr></td>
 </tr>
 <tr>
 <td>AZR-000159</td>
 <td><a href="Azure.Redis.MinSKU/">Azure.Redis.MinSKU</a></td>
 <td>Use Azure Cache for Redis instances of at least Standard C1.</td>
-<td>GA</td>
+<td><abbr title="Generally Available &mdash; Rules related to a generally available Azure features.">GA</abbr></td>
 </tr>
 <tr>
 <td>AZR-000160</td>
 <td><a href="Azure.Redis.MaxMemoryReserved/">Azure.Redis.MaxMemoryReserved</a></td>
 <td>Configure maxmemory-reserved to reserve memory for non-cache operations.</td>
-<td>GA</td>
+<td><abbr title="Generally Available &mdash; Rules related to a generally available Azure features.">GA</abbr></td>
 </tr>
 <tr>
 <td>AZR-000161</td>
 <td><a href="Azure.Redis.AvailabilityZone/">Azure.Redis.AvailabilityZone</a></td>
 <td>Premium Redis cache should be deployed with availability zones for high availability.</td>
-<td>GA</td>
+<td><abbr title="Generally Available &mdash; Rules related to a generally available Azure features.">GA</abbr></td>
 </tr>
 <tr>
 <td>AZR-000162</td>
 <td><a href="Azure.RedisEnterprise.Zones/">Azure.RedisEnterprise.Zones</a></td>
 <td>Enterprise Redis cache should be zone-redundant for high availability.</td>
-<td>GA</td>
+<td><abbr title="Generally Available &mdash; Rules related to a generally available Azure features.">GA</abbr></td>
 </tr>
 <tr>
 <td>AZR-000163</td>
 <td><a href="Azure.Redis.NonSslPort/">Azure.Redis.NonSslPort</a></td>
 <td>Azure Cache for Redis should only accept secure connections.</td>
-<td>GA</td>
+<td><abbr title="Generally Available &mdash; Rules related to a generally available Azure features.">GA</abbr></td>
 </tr>
 <tr>
 <td>AZR-000164</td>
 <td><a href="Azure.Redis.MinTLS/">Azure.Redis.MinTLS</a></td>
 <td>Redis Cache should reject TLS versions older then 1.2.</td>
-<td>GA</td>
+<td><abbr title="Generally Available &mdash; Rules related to a generally available Azure features.">GA</abbr></td>
 </tr>
 <tr>
 <td>AZR-000165</td>
 <td><a href="Azure.Redis.PublicNetworkAccess/">Azure.Redis.PublicNetworkAccess</a></td>
 <td>Redis cache should disable public network access.</td>
-<td>GA</td>
+<td><abbr title="Generally Available &mdash; Rules related to a generally available Azure features.">GA</abbr></td>
 </tr>
 <tr>
 <td>AZR-000166</td>
 <td><a href="Azure.Resource.UseTags/">Azure.Resource.UseTags</a></td>
 <td>Azure resources should be tagged using a standard convention.</td>
-<td>GA</td>
+<td><abbr title="Generally Available &mdash; Rules related to a generally available Azure features.">GA</abbr></td>
 </tr>
 <tr>
 <td>AZR-000167</td>
 <td><a href="Azure.Resource.AllowedRegions/">Azure.Resource.AllowedRegions</a></td>
 <td>Resources should be deployed to allowed regions.</td>
-<td>GA</td>
+<td><abbr title="Generally Available &mdash; Rules related to a generally available Azure features.">GA</abbr></td>
 </tr>
 <tr>
 <td>AZR-000168</td>
 <td><a href="Azure.ResourceGroup.Name/">Azure.ResourceGroup.Name</a></td>
 <td>Resource Group names should meet naming requirements.</td>
-<td>GA</td>
+<td><abbr title="Generally Available &mdash; Rules related to a generally available Azure features.">GA</abbr></td>
 </tr>
 <tr>
 <td>AZR-000169</td>
 <td><a href="Azure.Route.Name/">Azure.Route.Name</a></td>
 <td>Route table names should meet naming requirements.</td>
-<td>GA</td>
+<td><abbr title="Generally Available &mdash; Rules related to a generally available Azure features.">GA</abbr></td>
 </tr>
 <tr>
 <td>AZR-000170</td>
 <td><a href="Azure.RSV.StorageType/">Azure.RSV.StorageType</a></td>
 <td>Recovery Services Vaults (RSV) not using geo-replicated storage (GRS) may be at risk.</td>
-<td>GA</td>
+<td><abbr title="Generally Available &mdash; Rules related to a generally available Azure features.">GA</abbr></td>
 </tr>
 <tr>
 <td>AZR-000171</td>
 <td><a href="Azure.RSV.ReplicationAlert/">Azure.RSV.ReplicationAlert</a></td>
 <td>Recovery Services Vaults (RSV) without replication alerts configured may be at risk.</td>
-<td>GA</td>
+<td><abbr title="Generally Available &mdash; Rules related to a generally available Azure features.">GA</abbr></td>
 </tr>
 <tr>
 <td>AZR-000172</td>
 <td><a href="Azure.Search.SKU/">Azure.Search.SKU</a></td>
 <td>Use the basic and standard tiers for entry level workloads.</td>
-<td>GA</td>
+<td><abbr title="Generally Available &mdash; Rules related to a generally available Azure features.">GA</abbr></td>
 </tr>
 <tr>
 <td>AZR-000173</td>
 <td><a href="Azure.Search.QuerySLA/">Azure.Search.QuerySLA</a></td>
 <td>Use a minimum of 2 replicas to receive an SLA for index queries.</td>
-<td>GA</td>
+<td><abbr title="Generally Available &mdash; Rules related to a generally available Azure features.">GA</abbr></td>
 </tr>
 <tr>
 <td>AZR-000174</td>
 <td><a href="Azure.Search.IndexSLA/">Azure.Search.IndexSLA</a></td>
 <td>Use a minimum of 3 replicas to receive an SLA for query and index updates.</td>
-<td>GA</td>
+<td><abbr title="Generally Available &mdash; Rules related to a generally available Azure features.">GA</abbr></td>
 </tr>
 <tr>
 <td>AZR-000175</td>
 <td><a href="Azure.Search.ManagedIdentity/">Azure.Search.ManagedIdentity</a></td>
 <td>Configure managed identities to access Azure resources.</td>
-<td>GA</td>
+<td><abbr title="Generally Available &mdash; Rules related to a generally available Azure features.">GA</abbr></td>
 </tr>
 <tr>
 <td>AZR-000176</td>
 <td><a href="Azure.Search.Name/">Azure.Search.Name</a></td>
 <td>Azure Cognitive Search service names should meet naming requirements.</td>
-<td>GA</td>
+<td><abbr title="Generally Available &mdash; Rules related to a generally available Azure features.">GA</abbr></td>
 </tr>
 <tr>
 <td>AZR-000177</td>
 <td><a href="Azure.ServiceBus.Usage/">Azure.ServiceBus.Usage</a></td>
 <td>Regularly remove unused resources to reduce costs.</td>
-<td>GA</td>
+<td><abbr title="Generally Available &mdash; Rules related to a generally available Azure features.">GA</abbr></td>
 </tr>
 <tr>
 <td>AZR-000178</td>
 <td><a href="Azure.ServiceBus.DisableLocalAuth/">Azure.ServiceBus.DisableLocalAuth</a></td>
 <td>Authenticate Service Bus publishers and consumers with Azure AD identities.</td>
-<td>GA</td>
+<td><abbr title="Generally Available &mdash; Rules related to a generally available Azure features.">GA</abbr></td>
 </tr>
 <tr>
 <td>AZR-000179</td>
 <td><a href="Azure.ServiceFabric.AAD/">Azure.ServiceFabric.AAD</a></td>
 <td>Use Azure Active Directory (AAD) client authentication for Service Fabric clusters.</td>
-<td>GA</td>
+<td><abbr title="Generally Available &mdash; Rules related to a generally available Azure features.">GA</abbr></td>
 </tr>
 <tr>
 <td>AZR-000180</td>
 <td><a href="Azure.SignalR.Name/">Azure.SignalR.Name</a></td>
 <td>SignalR service instance names should meet naming requirements.</td>
-<td>GA</td>
+<td><abbr title="Generally Available &mdash; Rules related to a generally available Azure features.">GA</abbr></td>
 </tr>
 <tr>
 <td>AZR-000181</td>
 <td><a href="Azure.SignalR.ManagedIdentity/">Azure.SignalR.ManagedIdentity</a></td>
 <td>Configure SignalR Services to use managed identities to access Azure resources securely.</td>
-<td>GA</td>
+<td><abbr title="Generally Available &mdash; Rules related to a generally available Azure features.">GA</abbr></td>
 </tr>
 <tr>
 <td>AZR-000182</td>
 <td><a href="Azure.SignalR.SLA/">Azure.SignalR.SLA</a></td>
 <td>Use SKUs that include an SLA when configuring SignalR Services.</td>
-<td>GA</td>
+<td><abbr title="Generally Available &mdash; Rules related to a generally available Azure features.">GA</abbr></td>
 </tr>
 <tr>
 <td>AZR-000183</td>
 <td><a href="Azure.SQL.FirewallRuleCount/">Azure.SQL.FirewallRuleCount</a></td>
 <td>Determine if there is an excessive number of firewall rules.</td>
-<td>GA</td>
+<td><abbr title="Generally Available &mdash; Rules related to a generally available Azure features.">GA</abbr></td>
 </tr>
 <tr>
 <td>AZR-000184</td>
 <td><a href="Azure.SQL.AllowAzureAccess/">Azure.SQL.AllowAzureAccess</a></td>
 <td>Determine if access from Azure services is required.</td>
-<td>GA</td>
+<td><abbr title="Generally Available &mdash; Rules related to a generally available Azure features.">GA</abbr></td>
 </tr>
 <tr>
 <td>AZR-000185</td>
 <td><a href="Azure.SQL.FirewallIPRange/">Azure.SQL.FirewallIPRange</a></td>
 <td>Determine if there is an excessive number of permitted IP addresses.</td>
-<td>GA</td>
+<td><abbr title="Generally Available &mdash; Rules related to a generally available Azure features.">GA</abbr></td>
 </tr>
 <tr>
 <td>AZR-000186</td>
 <td><a href="Azure.SQL.ThreatDetection/">Azure.SQL.ThreatDetection</a></td>
 <td>Enable Advanced Thread Protection for Azure SQL logical server.</td>
-<td>GA</td>
+<td><abbr title="Generally Available &mdash; Rules related to a generally available Azure features.">GA</abbr></td>
 </tr>
 <tr>
 <td>AZR-000187</td>
 <td><a href="Azure.SQL.Auditing/">Azure.SQL.Auditing</a></td>
 <td>Enable auditing for Azure SQL logical server.</td>
-<td>GA</td>
+<td><abbr title="Generally Available &mdash; Rules related to a generally available Azure features.">GA</abbr></td>
 </tr>
 <tr>
 <td>AZR-000188</td>
 <td><a href="Azure.SQL.AAD/">Azure.SQL.AAD</a></td>
 <td>Use Azure Active Directory (AAD) authentication with Azure SQL databases.</td>
-<td>GA</td>
+<td><abbr title="Generally Available &mdash; Rules related to a generally available Azure features.">GA</abbr></td>
 </tr>
 <tr>
 <td>AZR-000189</td>
 <td><a href="Azure.SQL.MinTLS/">Azure.SQL.MinTLS</a></td>
 <td>Azure SQL Database servers should reject TLS versions older than 1.2.</td>
-<td>GA</td>
+<td><abbr title="Generally Available &mdash; Rules related to a generally available Azure features.">GA</abbr></td>
 </tr>
 <tr>
 <td>AZR-000190</td>
 <td><a href="Azure.SQL.ServerName/">Azure.SQL.ServerName</a></td>
 <td>Azure SQL logical server names should meet naming requirements.</td>
-<td>GA</td>
+<td><abbr title="Generally Available &mdash; Rules related to a generally available Azure features.">GA</abbr></td>
 </tr>
 <tr>
 <td>AZR-000191</td>
 <td><a href="Azure.SQL.TDE/">Azure.SQL.TDE</a></td>
 <td>Use Transparent Data Encryption (TDE) with Azure SQL Database.</td>
-<td>GA</td>
+<td><abbr title="Generally Available &mdash; Rules related to a generally available Azure features.">GA</abbr></td>
 </tr>
 <tr>
 <td>AZR-000192</td>
 <td><a href="Azure.SQL.DBName/">Azure.SQL.DBName</a></td>
 <td>Azure SQL Database names should meet naming requirements.</td>
-<td>GA</td>
+<td><abbr title="Generally Available &mdash; Rules related to a generally available Azure features.">GA</abbr></td>
 </tr>
 <tr>
 <td>AZR-000193</td>
 <td><a href="Azure.SQL.FGName/">Azure.SQL.FGName</a></td>
 <td>Azure SQL failover group names should meet naming requirements.</td>
-<td>GA</td>
+<td><abbr title="Generally Available &mdash; Rules related to a generally available Azure features.">GA</abbr></td>
 </tr>
 <tr>
 <td>AZR-000194</td>
 <td><a href="Azure.SQLMI.Name/">Azure.SQLMI.Name</a></td>
 <td>SQL Managed Instance names should meet naming requirements.</td>
-<td>GA</td>
+<td><abbr title="Generally Available &mdash; Rules related to a generally available Azure features.">GA</abbr></td>
 </tr>
 <tr>
 <td>AZR-000195</td>
 <td><a href="Azure.Storage.UseReplication/">Azure.Storage.UseReplication</a></td>
 <td>Storage Accounts not using geo-replicated storage (GRS) may be at risk.</td>
-<td>GA</td>
+<td><abbr title="Generally Available &mdash; Rules related to a generally available Azure features.">GA</abbr></td>
 </tr>
 <tr>
 <td>AZR-000196</td>
 <td><a href="Azure.Storage.SecureTransfer/">Azure.Storage.SecureTransfer</a></td>
 <td>Storage accounts should only accept encrypted connections.</td>
-<td>GA</td>
+<td><abbr title="Generally Available &mdash; Rules related to a generally available Azure features.">GA</abbr></td>
 </tr>
 <tr>
 <td>AZR-000197</td>
 <td><a href="Azure.Storage.SoftDelete/">Azure.Storage.SoftDelete</a></td>
 <td>Enable blob soft delete on Storage Accounts.</td>
-<td>GA</td>
+<td><abbr title="Generally Available &mdash; Rules related to a generally available Azure features.">GA</abbr></td>
 </tr>
 <tr>
 <td>AZR-000198</td>
 <td><a href="Azure.Storage.BlobPublicAccess/">Azure.Storage.BlobPublicAccess</a></td>
 <td>Storage Accounts should only accept authorized requests.</td>
-<td>GA</td>
+<td><abbr title="Generally Available &mdash; Rules related to a generally available Azure features.">GA</abbr></td>
 </tr>
 <tr>
 <td>AZR-000199</td>
 <td><a href="Azure.Storage.BlobAccessType/">Azure.Storage.BlobAccessType</a></td>
 <td>Use containers configured with a private access type that requires authorization.</td>
-<td>GA</td>
+<td><abbr title="Generally Available &mdash; Rules related to a generally available Azure features.">GA</abbr></td>
 </tr>
 <tr>
 <td>AZR-000200</td>
 <td><a href="Azure.Storage.MinTLS/">Azure.Storage.MinTLS</a></td>
 <td>Storage Accounts should reject TLS versions older than 1.2.</td>
-<td>GA</td>
+<td><abbr title="Generally Available &mdash; Rules related to a generally available Azure features.">GA</abbr></td>
 </tr>
 <tr>
 <td>AZR-000201</td>
 <td><a href="Azure.Storage.Name/">Azure.Storage.Name</a></td>
 <td>Storage Account names should meet naming requirements.</td>
-<td>GA</td>
+<td><abbr title="Generally Available &mdash; Rules related to a generally available Azure features.">GA</abbr></td>
 </tr>
 <tr>
 <td>AZR-000202</td>
 <td><a href="Azure.Storage.Firewall/">Azure.Storage.Firewall</a></td>
 <td>Storage Accounts should only accept explicitly allowed traffic.</td>
-<td>GA</td>
+<td><abbr title="Generally Available &mdash; Rules related to a generally available Azure features.">GA</abbr></td>
 </tr>
 <tr>
 <td>AZR-000203</td>
 <td><a href="Azure.RBAC.UseGroups/">Azure.RBAC.UseGroups</a></td>
 <td>Use groups for assigning permissions instead of individual user accounts.</td>
-<td>GA</td>
+<td><abbr title="Generally Available &mdash; Rules related to a generally available Azure features.">GA</abbr></td>
 </tr>
 <tr>
 <td>AZR-000204</td>
 <td><a href="Azure.RBAC.LimitOwner/">Azure.RBAC.LimitOwner</a></td>
 <td>Limit the number of subscription Owners.</td>
-<td>GA</td>
+<td><abbr title="Generally Available &mdash; Rules related to a generally available Azure features.">GA</abbr></td>
 </tr>
 <tr>
 <td>AZR-000205</td>
 <td><a href="Azure.RBAC.LimitMGDelegation/">Azure.RBAC.LimitMGDelegation</a></td>
 <td>Limit Role-Base Access Control (RBAC) inheritance from Management Groups.</td>
-<td>GA</td>
+<td><abbr title="Generally Available &mdash; Rules related to a generally available Azure features.">GA</abbr></td>
 </tr>
 <tr>
 <td>AZR-000206</td>
 <td><a href="Azure.RBAC.CoAdministrator/">Azure.RBAC.CoAdministrator</a></td>
 <td>Delegate access to manage Azure resources using role-based access control (RBAC).</td>
-<td>GA</td>
+<td><abbr title="Generally Available &mdash; Rules related to a generally available Azure features.">GA</abbr></td>
 </tr>
 <tr>
 <td>AZR-000207</td>
 <td><a href="Azure.RBAC.UseRGDelegation/">Azure.RBAC.UseRGDelegation</a></td>
 <td>Use RBAC assignments on resource groups instead of individual resources.</td>
-<td>GA</td>
+<td><abbr title="Generally Available &mdash; Rules related to a generally available Azure features.">GA</abbr></td>
 </tr>
 <tr>
 <td>AZR-000208</td>
 <td><a href="Azure.RBAC.PIM/">Azure.RBAC.PIM</a></td>
 <td>Use just-in-time (JiT) activation of roles instead of persistent role assignment.</td>
-<td>GA</td>
+<td><abbr title="Generally Available &mdash; Rules related to a generally available Azure features.">GA</abbr></td>
 </tr>
 <tr>
 <td>AZR-000209</td>
 <td><a href="Azure.SecurityCenter.Contact/">Azure.SecurityCenter.Contact</a></td>
 <td>Security Center email and phone contact details should be set.</td>
-<td>GA</td>
+<td><abbr title="Generally Available &mdash; Rules related to a generally available Azure features.">GA</abbr></td>
 </tr>
 <tr>
 <td>AZR-000210</td>
 <td><a href="Azure.SecurityCenter.Provisioning/">Azure.SecurityCenter.Provisioning</a></td>
 <td>Enable auto-provisioning on to improve Azure Security Center insights.</td>
-<td>GA</td>
+<td><abbr title="Generally Available &mdash; Rules related to a generally available Azure features.">GA</abbr></td>
 </tr>
 <tr>
 <td>AZR-000211</td>
 <td><a href="Azure.Monitor.ServiceHealth/">Azure.Monitor.ServiceHealth</a></td>
 <td>Configure Service Health alerts to notify administrators.</td>
-<td>GA</td>
+<td><abbr title="Generally Available &mdash; Rules related to a generally available Azure features.">GA</abbr></td>
 </tr>
 <tr>
 <td>AZR-000212</td>
 <td><a href="Azure.Template.TemplateFile/">Azure.Template.TemplateFile</a></td>
 <td>Use ARM template files that are valid.</td>
-<td>GA</td>
+<td><abbr title="Generally Available &mdash; Rules related to a generally available Azure features.">GA</abbr></td>
 </tr>
 <tr>
 <td>AZR-000213</td>
 <td><a href="Azure.Template.TemplateSchema/">Azure.Template.TemplateSchema</a></td>
 <td>Use a more recent version of the Azure template schema.</td>
-<td>GA</td>
+<td><abbr title="Generally Available &mdash; Rules related to a generally available Azure features.">GA</abbr></td>
 </tr>
 <tr>
 <td>AZR-000214</td>
 <td><a href="Azure.Template.TemplateScheme/">Azure.Template.TemplateScheme</a></td>
 <td>Use an Azure template file schema with the https scheme.</td>
-<td>GA</td>
+<td><abbr title="Generally Available &mdash; Rules related to a generally available Azure features.">GA</abbr></td>
 </tr>
 <tr>
 <td>AZR-000215</td>
 <td><a href="Azure.Template.ParameterMetadata/">Azure.Template.ParameterMetadata</a></td>
 <td>Set metadata descriptions in Azure Resource Manager (ARM) template for each parameter.</td>
-<td>GA</td>
+<td><abbr title="Generally Available &mdash; Rules related to a generally available Azure features.">GA</abbr></td>
 </tr>
 <tr>
 <td>AZR-000216</td>
 <td><a href="Azure.Template.Resources/">Azure.Template.Resources</a></td>
 <td>Each Azure Resource Manager (ARM) template file should deploy at least one resource.</td>
-<td>GA</td>
+<td><abbr title="Generally Available &mdash; Rules related to a generally available Azure features.">GA</abbr></td>
 </tr>
 <tr>
 <td>AZR-000217</td>
 <td><a href="Azure.Template.UseParameters/">Azure.Template.UseParameters</a></td>
 <td>Each Azure Resource Manager (ARM) template parameter should be used or removed from template files.</td>
-<td>GA</td>
+<td><abbr title="Generally Available &mdash; Rules related to a generally available Azure features.">GA</abbr></td>
 </tr>
 <tr>
 <td>AZR-000218</td>
 <td><a href="Azure.Template.DefineParameters/">Azure.Template.DefineParameters</a></td>
 <td>Each Azure Resource Manager (ARM) template file should contain a minimal number of parameters.</td>
-<td>GA</td>
+<td><abbr title="Generally Available &mdash; Rules related to a generally available Azure features.">GA</abbr></td>
 </tr>
 <tr>
 <td>AZR-000219</td>
 <td><a href="Azure.Template.UseVariables/">Azure.Template.UseVariables</a></td>
 <td>Each Azure Resource Manager (ARM) template variable should be used or removed from template files.</td>
-<td>GA</td>
+<td><abbr title="Generally Available &mdash; Rules related to a generally available Azure features.">GA</abbr></td>
 </tr>
 <tr>
 <td>AZR-000220</td>
 <td><a href="Azure.Template.LocationDefault/">Azure.Template.LocationDefault</a></td>
 <td>Set the default value for the location parameter within an ARM template to resource group location.</td>
-<td>GA</td>
+<td><abbr title="Generally Available &mdash; Rules related to a generally available Azure features.">GA</abbr></td>
 </tr>
 <tr>
 <td>AZR-000221</td>
 <td><a href="Azure.Template.LocationType/">Azure.Template.LocationType</a></td>
 <td>Location parameters should use a string value.</td>
-<td>GA</td>
+<td><abbr title="Generally Available &mdash; Rules related to a generally available Azure features.">GA</abbr></td>
 </tr>
 <tr>
 <td>AZR-000222</td>
 <td><a href="Azure.Template.ResourceLocation/">Azure.Template.ResourceLocation</a></td>
 <td>Template resource location should be an expression or global.</td>
-<td>GA</td>
+<td><abbr title="Generally Available &mdash; Rules related to a generally available Azure features.">GA</abbr></td>
 </tr>
 <tr>
 <td>AZR-000223</td>
 <td><a href="Azure.Template.UseLocationParameter/">Azure.Template.UseLocationParameter</a></td>
 <td>Template should reference a location parameter to specify resource location.</td>
-<td>GA</td>
+<td><abbr title="Generally Available &mdash; Rules related to a generally available Azure features.">GA</abbr></td>
 </tr>
 <tr>
 <td>AZR-000224</td>
 <td><a href="Azure.Template.ParameterMinMaxValue/">Azure.Template.ParameterMinMaxValue</a></td>
 <td>Template parameters minValue and maxValue constraints must be valid.</td>
-<td>GA</td>
+<td><abbr title="Generally Available &mdash; Rules related to a generally available Azure features.">GA</abbr></td>
 </tr>
 <tr>
 <td>AZR-000225</td>
 <td><a href="Azure.Template.DebugDeployment/">Azure.Template.DebugDeployment</a></td>
 <td>Use default deployment detail level for nested deployments.</td>
-<td>GA</td>
+<td><abbr title="Generally Available &mdash; Rules related to a generally available Azure features.">GA</abbr></td>
 </tr>
 <tr>
 <td>AZR-000226</td>
 <td><a href="Azure.Template.ParameterDataTypes/">Azure.Template.ParameterDataTypes</a></td>
 <td>Set the parameter default value to a value of the same type.</td>
-<td>GA</td>
+<td><abbr title="Generally Available &mdash; Rules related to a generally available Azure features.">GA</abbr></td>
 </tr>
 <tr>
 <td>AZR-000227</td>
 <td><a href="Azure.Template.ParameterStrongType/">Azure.Template.ParameterStrongType</a></td>
 <td>Set the parameter value to a value that matches the specified strong type.</td>
-<td>GA</td>
+<td><abbr title="Generally Available &mdash; Rules related to a generally available Azure features.">GA</abbr></td>
 </tr>
 <tr>
 <td>AZR-000228</td>
 <td><a href="Azure.Template.ExpressionLength/">Azure.Template.ExpressionLength</a></td>
 <td>Template expressions should not exceed the maximum length.</td>
-<td>GA</td>
+<td><abbr title="Generally Available &mdash; Rules related to a generally available Azure features.">GA</abbr></td>
 </tr>
 <tr>
 <td>AZR-000229</td>
 <td><a href="Azure.Template.ParameterFile/">Azure.Template.ParameterFile</a></td>
 <td>Use ARM template parameter files that are valid.</td>
-<td>GA</td>
+<td><abbr title="Generally Available &mdash; Rules related to a generally available Azure features.">GA</abbr></td>
 </tr>
 <tr>
 <td>AZR-000230</td>
 <td><a href="Azure.Template.ParameterScheme/">Azure.Template.ParameterScheme</a></td>
 <td>Use an Azure template parameter file schema with the https scheme.</td>
-<td>GA</td>
+<td><abbr title="Generally Available &mdash; Rules related to a generally available Azure features.">GA</abbr></td>
 </tr>
 <tr>
 <td>AZR-000231</td>
 <td><a href="Azure.Template.MetadataLink/">Azure.Template.MetadataLink</a></td>
 <td>Configure a metadata link for each parameter file.</td>
-<td>GA</td>
+<td><abbr title="Generally Available &mdash; Rules related to a generally available Azure features.">GA</abbr></td>
 </tr>
 <tr>
 <td>AZR-000232</td>
 <td><a href="Azure.Template.ParameterValue/">Azure.Template.ParameterValue</a></td>
 <td>Specify a value for each parameter in template parameter files.</td>
-<td>GA</td>
+<td><abbr title="Generally Available &mdash; Rules related to a generally available Azure features.">GA</abbr></td>
 </tr>
 <tr>
 <td>AZR-000233</td>
 <td><a href="Azure.Template.ValidSecretRef/">Azure.Template.ValidSecretRef</a></td>
 <td>Use a valid secret reference within parameter files.</td>
-<td>GA</td>
+<td><abbr title="Generally Available &mdash; Rules related to a generally available Azure features.">GA</abbr></td>
 </tr>
 <tr>
 <td>AZR-000234</td>
 <td><a href="Azure.Template.UseComments/">Azure.Template.UseComments</a></td>
 <td>Use comments for each resource in ARM template to communicate purpose.</td>
-<td>GA</td>
+<td><abbr title="Generally Available &mdash; Rules related to a generally available Azure features.">GA</abbr></td>
 </tr>
 <tr>
 <td>AZR-000235</td>
 <td><a href="Azure.Template.UseDescriptions/">Azure.Template.UseDescriptions</a></td>
 <td>Use descriptions for each resource in generated template(bicep, psarm, AzOps) to communicate purpose.</td>
-<td>GA</td>
+<td><abbr title="Generally Available &mdash; Rules related to a generally available Azure features.">GA</abbr></td>
 </tr>
 <tr>
 <td>AZR-000236</td>
 <td><a href="Azure.TrafficManager.Endpoints/">Azure.TrafficManager.Endpoints</a></td>
 <td>Traffic Manager should use at lest two enabled endpoints.</td>
-<td>GA</td>
+<td><abbr title="Generally Available &mdash; Rules related to a generally available Azure features.">GA</abbr></td>
 </tr>
 <tr>
 <td>AZR-000237</td>
 <td><a href="Azure.TrafficManager.Protocol/">Azure.TrafficManager.Protocol</a></td>
 <td>Monitor Traffic Manager web-based endpoints with HTTPS.</td>
-<td>GA</td>
+<td><abbr title="Generally Available &mdash; Rules related to a generally available Azure features.">GA</abbr></td>
 </tr>
 <tr>
 <td>AZR-000238</td>
 <td><a href="Azure.VM.UseManagedDisks/">Azure.VM.UseManagedDisks</a></td>
 <td>Virtual machines (VMs) should use managed disks.</td>
-<td>GA</td>
+<td><abbr title="Generally Available &mdash; Rules related to a generally available Azure features.">GA</abbr></td>
 </tr>
 <tr>
 <td>AZR-000239</td>
 <td><a href="Azure.VM.Standalone/">Azure.VM.Standalone</a></td>
 <td>Use VM features to increase reliability and improve covered SLA for VM configurations.</td>
-<td>GA</td>
+<td><abbr title="Generally Available &mdash; Rules related to a generally available Azure features.">GA</abbr></td>
 </tr>
 <tr>
 <td>AZR-000240</td>
 <td><a href="Azure.VM.PromoSku/">Azure.VM.PromoSku</a></td>
 <td>Virtual machines (VMs) should not use expired promotional SKU.</td>
-<td>GA</td>
+<td><abbr title="Generally Available &mdash; Rules related to a generally available Azure features.">GA</abbr></td>
 </tr>
 <tr>
 <td>AZR-000241</td>
 <td><a href="Azure.VM.BasicSku/">Azure.VM.BasicSku</a></td>
 <td>Virtual machines (VMs) should not use Basic sizes.</td>
-<td>GA</td>
+<td><abbr title="Generally Available &mdash; Rules related to a generally available Azure features.">GA</abbr></td>
 </tr>
 <tr>
 <td>AZR-000242</td>
 <td><a href="Azure.VM.DiskCaching/">Azure.VM.DiskCaching</a></td>
 <td>Check disk caching is configured correctly for the workload.</td>
-<td>GA</td>
+<td><abbr title="Generally Available &mdash; Rules related to a generally available Azure features.">GA</abbr></td>
 </tr>
 <tr>
 <td>AZR-000243</td>
 <td><a href="Azure.VM.UseHybridUseBenefit/">Azure.VM.UseHybridUseBenefit</a></td>
 <td>Use Azure Hybrid Benefit for applicable virtual machine (VM) workloads.</td>
-<td>GA</td>
+<td><abbr title="Generally Available &mdash; Rules related to a generally available Azure features.">GA</abbr></td>
 </tr>
 <tr>
 <td>AZR-000244</td>
 <td><a href="Azure.VM.AcceleratedNetworking/">Azure.VM.AcceleratedNetworking</a></td>
 <td>Use accelerated networking for supported operating systems and VM types.</td>
-<td>GA</td>
+<td><abbr title="Generally Available &mdash; Rules related to a generally available Azure features.">GA</abbr></td>
 </tr>
 <tr>
 <td>AZR-000245</td>
 <td><a href="Azure.VM.PublicKey/">Azure.VM.PublicKey</a></td>
 <td>Linux virtual machines should use public keys.</td>
-<td>GA</td>
+<td><abbr title="Generally Available &mdash; Rules related to a generally available Azure features.">GA</abbr></td>
 </tr>
 <tr>
 <td>AZR-000246</td>
 <td><a href="Azure.VM.Agent/">Azure.VM.Agent</a></td>
 <td>Ensure the VM agent is provisioned automatically.</td>
-<td>GA</td>
+<td><abbr title="Generally Available &mdash; Rules related to a generally available Azure features.">GA</abbr></td>
 </tr>
 <tr>
 <td>AZR-000247</td>
 <td><a href="Azure.VM.Updates/">Azure.VM.Updates</a></td>
 <td>Ensure automatic updates are enabled at deployment.</td>
-<td>GA</td>
+<td><abbr title="Generally Available &mdash; Rules related to a generally available Azure features.">GA</abbr></td>
 </tr>
 <tr>
 <td>AZR-000248</td>
 <td><a href="Azure.VM.Name/">Azure.VM.Name</a></td>
 <td>Virtual Machine (VM) names should meet naming requirements.</td>
-<td>GA</td>
+<td><abbr title="Generally Available &mdash; Rules related to a generally available Azure features.">GA</abbr></td>
 </tr>
 <tr>
 <td>AZR-000249</td>
 <td><a href="Azure.VM.ComputerName/">Azure.VM.ComputerName</a></td>
 <td>Virtual Machine (VM) computer name should meet naming requirements.</td>
-<td>GA</td>
+<td><abbr title="Generally Available &mdash; Rules related to a generally available Azure features.">GA</abbr></td>
 </tr>
 <tr>
 <td>AZR-000250</td>
 <td><a href="Azure.VM.DiskAttached/">Azure.VM.DiskAttached</a></td>
 <td>Managed disks should be attached to virtual machines or removed.</td>
-<td>GA</td>
+<td><abbr title="Generally Available &mdash; Rules related to a generally available Azure features.">GA</abbr></td>
 </tr>
 <tr>
 <td>AZR-000251</td>
 <td><a href="Azure.VM.DiskSizeAlignment/">Azure.VM.DiskSizeAlignment</a></td>
 <td>Align to the Managed Disk billing model to improve cost efficiency.</td>
-<td>GA</td>
+<td><abbr title="Generally Available &mdash; Rules related to a generally available Azure features.">GA</abbr></td>
 </tr>
 <tr>
 <td>AZR-000252</td>
 <td><a href="Azure.VM.ADE/">Azure.VM.ADE</a></td>
 <td>Use Azure Disk Encryption (ADE).</td>
-<td>GA</td>
+<td><abbr title="Generally Available &mdash; Rules related to a generally available Azure features.">GA</abbr></td>
 </tr>
 <tr>
 <td>AZR-000253</td>
 <td><a href="Azure.VM.DiskName/">Azure.VM.DiskName</a></td>
 <td>Managed Disk names should meet naming requirements.</td>
-<td>GA</td>
+<td><abbr title="Generally Available &mdash; Rules related to a generally available Azure features.">GA</abbr></td>
 </tr>
 <tr>
 <td>AZR-000254</td>
 <td><a href="Azure.VM.ASAlignment/">Azure.VM.ASAlignment</a></td>
 <td>Use availability sets aligned with managed disks fault domains.</td>
-<td>GA</td>
+<td><abbr title="Generally Available &mdash; Rules related to a generally available Azure features.">GA</abbr></td>
 </tr>
 <tr>
 <td>AZR-000255</td>
 <td><a href="Azure.VM.ASMinMembers/">Azure.VM.ASMinMembers</a></td>
 <td>Availability sets should be deployed with at least two virtual machines (VMs).</td>
-<td>GA</td>
+<td><abbr title="Generally Available &mdash; Rules related to a generally available Azure features.">GA</abbr></td>
 </tr>
 <tr>
 <td>AZR-000256</td>
 <td><a href="Azure.VM.ASName/">Azure.VM.ASName</a></td>
 <td>Availability Set names should meet naming requirements.</td>
-<td>GA</td>
+<td><abbr title="Generally Available &mdash; Rules related to a generally available Azure features.">GA</abbr></td>
 </tr>
 <tr>
 <td>AZR-000257</td>
 <td><a href="Azure.VM.NICAttached/">Azure.VM.NICAttached</a></td>
 <td>Network interfaces (NICs) should be attached.</td>
-<td>GA</td>
+<td><abbr title="Generally Available &mdash; Rules related to a generally available Azure features.">GA</abbr></td>
 </tr>
 <tr>
 <td>AZR-000258</td>
 <td><a href="Azure.VM.UniqueDns/">Azure.VM.UniqueDns</a></td>
 <td>Network interfaces (NICs) should inherit DNS from virtual networks.</td>
-<td>GA</td>
+<td><abbr title="Generally Available &mdash; Rules related to a generally available Azure features.">GA</abbr></td>
 </tr>
 <tr>
 <td>AZR-000259</td>
 <td><a href="Azure.VM.NICName/">Azure.VM.NICName</a></td>
 <td>Network Interface (NIC) names should meet naming requirements.</td>
-<td>GA</td>
+<td><abbr title="Generally Available &mdash; Rules related to a generally available Azure features.">GA</abbr></td>
 </tr>
 <tr>
 <td>AZR-000260</td>
 <td><a href="Azure.VM.PPGName/">Azure.VM.PPGName</a></td>
 <td>Proximity Placement Group (PPG) names should meet naming requirements.</td>
-<td>GA</td>
+<td><abbr title="Generally Available &mdash; Rules related to a generally available Azure features.">GA</abbr></td>
 </tr>
 <tr>
 <td>AZR-000261</td>
 <td><a href="Azure.VMSS.Name/">Azure.VMSS.Name</a></td>
 <td>Virtual Machine Scale Set (VMSS) names should meet naming requirements.</td>
-<td>GA</td>
+<td><abbr title="Generally Available &mdash; Rules related to a generally available Azure features.">GA</abbr></td>
 </tr>
 <tr>
 <td>AZR-000262</td>
 <td><a href="Azure.VMSS.ComputerName/">Azure.VMSS.ComputerName</a></td>
 <td>Virtual Machine Scale Set (VMSS) computer name should meet naming requirements.</td>
-<td>GA</td>
+<td><abbr title="Generally Available &mdash; Rules related to a generally available Azure features.">GA</abbr></td>
 </tr>
 <tr>
 <td>AZR-000263</td>
 <td><a href="Azure.VNET.UseNSGs/">Azure.VNET.UseNSGs</a></td>
 <td>Virtual network (VNET) subnets should have Network Security Groups (NSGs) assigned.</td>
-<td>GA</td>
+<td><abbr title="Generally Available &mdash; Rules related to a generally available Azure features.">GA</abbr></td>
 </tr>
 <tr>
 <td>AZR-000264</td>
 <td><a href="Azure.VNET.SingleDNS/">Azure.VNET.SingleDNS</a></td>
 <td>VNETs should have at least two DNS servers assigned.</td>
-<td>GA</td>
+<td><abbr title="Generally Available &mdash; Rules related to a generally available Azure features.">GA</abbr></td>
 </tr>
 <tr>
 <td>AZR-000265</td>
 <td><a href="Azure.VNET.LocalDNS/">Azure.VNET.LocalDNS</a></td>
 <td>Virtual networks (VNETs) should use Azure local DNS servers.</td>
-<td>GA</td>
+<td><abbr title="Generally Available &mdash; Rules related to a generally available Azure features.">GA</abbr></td>
 </tr>
 <tr>
 <td>AZR-000266</td>
 <td><a href="Azure.VNET.PeerState/">Azure.VNET.PeerState</a></td>
 <td>VNET peering connections must be connected.</td>
-<td>GA</td>
+<td><abbr title="Generally Available &mdash; Rules related to a generally available Azure features.">GA</abbr></td>
 </tr>
 <tr>
 <td>AZR-000267</td>
 <td><a href="Azure.VNET.SubnetName/">Azure.VNET.SubnetName</a></td>
 <td>Subnet names should meet naming requirements.</td>
-<td>GA</td>
+<td><abbr title="Generally Available &mdash; Rules related to a generally available Azure features.">GA</abbr></td>
 </tr>
 <tr>
 <td>AZR-000268</td>
 <td><a href="Azure.VNET.Name/">Azure.VNET.Name</a></td>
 <td>Virtual Network (VNET) names should meet naming requirements.</td>
-<td>GA</td>
+<td><abbr title="Generally Available &mdash; Rules related to a generally available Azure features.">GA</abbr></td>
 </tr>
 <tr>
 <td>AZR-000269</td>
 <td><a href="Azure.VNG.VPNLegacySKU/">Azure.VNG.VPNLegacySKU</a></td>
 <td>Migrate from legacy SKUs to improve reliability and performance of VPN gateways.</td>
-<td>GA</td>
+<td><abbr title="Generally Available &mdash; Rules related to a generally available Azure features.">GA</abbr></td>
 </tr>
 <tr>
 <td>AZR-000270</td>
 <td><a href="Azure.VNG.VPNActiveActive/">Azure.VNG.VPNActiveActive</a></td>
 <td>Use VPN gateways configured to operate in an Active-Active configuration to reduce connectivity downtime.</td>
-<td>GA</td>
+<td><abbr title="Generally Available &mdash; Rules related to a generally available Azure features.">GA</abbr></td>
 </tr>
 <tr>
 <td>AZR-000271</td>
 <td><a href="Azure.VNG.ERLegacySKU/">Azure.VNG.ERLegacySKU</a></td>
 <td>Migrate from legacy SKUs to improve reliability and performance of ExpressRoute (ER) gateways.</td>
-<td>GA</td>
+<td><abbr title="Generally Available &mdash; Rules related to a generally available Azure features.">GA</abbr></td>
 </tr>
 <tr>
 <td>AZR-000272</td>
 <td><a href="Azure.VNG.VPNAvailabilityZoneSKU/">Azure.VNG.VPNAvailabilityZoneSKU</a></td>
 <td>Use availability zone SKU for virtual network gateways deployed with VPN gateway type.</td>
-<td>GA</td>
+<td><abbr title="Generally Available &mdash; Rules related to a generally available Azure features.">GA</abbr></td>
 </tr>
 <tr>
 <td>AZR-000273</td>
 <td><a href="Azure.VNG.ERAvailabilityZoneSKU/">Azure.VNG.ERAvailabilityZoneSKU</a></td>
 <td>Use availability zone SKU for virtual network gateways deployed with ExpressRoute gateway type.</td>
-<td>GA</td>
+<td><abbr title="Generally Available &mdash; Rules related to a generally available Azure features.">GA</abbr></td>
 </tr>
 <tr>
 <td>AZR-000274</td>
 <td><a href="Azure.VNG.Name/">Azure.VNG.Name</a></td>
 <td>Virtual Network Gateway (VNG) names should meet naming requirements.</td>
-<td>GA</td>
+<td><abbr title="Generally Available &mdash; Rules related to a generally available Azure features.">GA</abbr></td>
 </tr>
 <tr>
 <td>AZR-000275</td>
 <td><a href="Azure.VNG.ConnectionName/">Azure.VNG.ConnectionName</a></td>
 <td>Virtual Network Gateway (VNG) connection names should meet naming requirements.</td>
-<td>GA</td>
+<td><abbr title="Generally Available &mdash; Rules related to a generally available Azure features.">GA</abbr></td>
 </tr>
 <tr>
 <td>AZR-000276</td>
 <td><a href="Azure.vWAN.Name/">Azure.vWAN.Name</a></td>
 <td>Virtual WAN (vWAN) names should meet naming requirements.</td>
-<td>GA</td>
+<td><abbr title="Generally Available &mdash; Rules related to a generally available Azure features.">GA</abbr></td>
 </tr>
 <tr>
 <td>AZR-000277</td>
 <td><a href="Azure.WebPubSub.ManagedIdentity/">Azure.WebPubSub.ManagedIdentity</a></td>
 <td>Configure Web PubSub Services to use managed identities to access Azure resources securely.</td>
-<td>GA</td>
+<td><abbr title="Generally Available &mdash; Rules related to a generally available Azure features.">GA</abbr></td>
 </tr>
 <tr>
 <td>AZR-000278</td>
 <td><a href="Azure.WebPubSub.SLA/">Azure.WebPubSub.SLA</a></td>
 <td>Use SKUs that include an SLA when configuring Web PubSub Services.</td>
-<td>GA</td>
+<td><abbr title="Generally Available &mdash; Rules related to a generally available Azure features.">GA</abbr></td>
 </tr>
 <tr>
 <td>AZR-000279</td>
 <td><a href="Azure.Deployment.OutputSecretValue/">Azure.Deployment.OutputSecretValue</a></td>
 <td>Avoid outputting sensitive deployment values.</td>
-<td>GA</td>
+<td><abbr title="Generally Available &mdash; Rules related to a generally available Azure features.">GA</abbr></td>
 </tr>
 <tr>
 <td>AZR-000280</td>
 <td><a href="Azure.Cognitive.PublicAccess/">Azure.Cognitive.PublicAccess</a></td>
 <td>Restrict access of Cognitive Services accounts to authorized virtual networks.</td>
-<td>GA</td>
+<td><abbr title="Generally Available &mdash; Rules related to a generally available Azure features.">GA</abbr></td>
 </tr>
 <tr>
 <td>AZR-000281</td>
 <td><a href="Azure.Cognitive.ManagedIdentity/">Azure.Cognitive.ManagedIdentity</a></td>
 <td>Configure managed identities to access Azure resources.</td>
-<td>GA</td>
+<td><abbr title="Generally Available &mdash; Rules related to a generally available Azure features.">GA</abbr></td>
 </tr>
 <tr>
 <td>AZR-000282</td>
 <td><a href="Azure.Cognitive.DisableLocalAuth/">Azure.Cognitive.DisableLocalAuth</a></td>
 <td>Authenticate requests to Cognitive Services with Azure AD identities.</td>
-<td>GA</td>
+<td><abbr title="Generally Available &mdash; Rules related to a generally available Azure features.">GA</abbr></td>
 </tr>
 <tr>
 <td>AZR-000283</td>
 <td><a href="Azure.Cognitive.PrivateEndpoints/">Azure.Cognitive.PrivateEndpoints</a></td>
 <td>Use Private Endpoints to access Cognitive Services accounts.</td>
-<td>GA</td>
+<td><abbr title="Generally Available &mdash; Rules related to a generally available Azure features.">GA</abbr></td>
 </tr>
 </tbody>
 </table>
@@ -7945,7 +7952,7 @@
   <small>
     
       Last update:
-      2022-08-11
+      2022-08-14
     
   </small>
 </div>

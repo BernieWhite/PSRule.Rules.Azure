@@ -6464,7 +6464,7 @@ Is not currently supported in sovereign or national clouds (e.g. US Gov, China G
 <div class="highlight"><pre><span></span><code><span class="nb">Set-AzSecurityPricing</span> <span class="n">-Name</span> <span class="s1">&#39;ContainerRegistry&#39;</span> <span class="n">-PricingTier</span> <span class="s1">&#39;Standard&#39;</span>
 </code></pre></div>
 <h2 id="notes">Notes<a class="headerlink" href="#notes" title="Permanent link">#</a></h2>
-<p>This rule applies when analyzing resources deployed (in-flight) to Azure.</p>
+<p>This rule applies when analyzing resources deployed to Azure.</p>
 <h2 id="links">Links<a class="headerlink" href="#links" title="Permanent link">#</a></h2>
 <ul>
 <li><a href="https://docs.microsoft.com/azure/architecture/framework/security/monitor-resources#containers">Monitor Azure resources in Microsoft Defender for Cloud</a></li>
@@ -6481,12 +6481,61 @@ Is not currently supported in sovereign or national clouds (e.g. US Gov, China G
   <small>
     
       Last update:
-      2022-08-14
+      2021-11-13
     
   </small>
 </div>
   
 
+
+<!-- Giscus -->
+<h2 id="__comments">Comments</h2>
+<script src="https://giscus.app/client.js"
+  data-repo="Azure/PSRule.Rules.Azure"
+  data-repo-id="MDEwOlJlcG9zaXRvcnkxODQxNTQ2Njg="
+  data-category="Documentation"
+  data-category-id="DIC_kwDOCvn6LM4CQqE6"
+  data-mapping="pathname"
+  data-strict="0"
+  data-reactions-enabled="1"
+  data-emit-metadata="0"
+  data-input-position="top"
+  data-theme="light"
+  data-lang="en"
+  data-loading="lazy"
+  crossorigin="anonymous"
+  async>
+</script>
+
+<!-- Synchronize Giscus theme with palette -->
+<script>
+  var giscus = document.querySelector("script[src*=giscus]")
+
+  /* Set palette on initial load */
+  var palette = __md_get("__palette")
+  if (palette && typeof palette.color === "object") {
+    var theme = palette.color.scheme === "slate" ? "dark" : "light"
+    giscus.setAttribute("data-theme", theme) 
+  }
+
+  /* Register event handlers after documented loaded */
+  document.addEventListener("DOMContentLoaded", function() {
+    var ref = document.querySelector("[data-md-component=palette]")
+    ref.addEventListener("change", function() {
+      var palette = __md_get("__palette")
+      if (palette && typeof palette.color === "object") {
+        var theme = palette.color.scheme === "slate" ? "dark" : "light"
+
+        /* Instruct Giscus to change theme */
+        var frame = document.querySelector(".giscus-frame")
+        frame.contentWindow.postMessage(
+          { giscus: { setConfig: { theme } } },
+          "https://giscus.app"
+        )
+      }
+    })
+  })
+</script>
 
             </article>
             

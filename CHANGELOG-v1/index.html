@@ -61,10 +61,15 @@
     
   
 
+  <!-- Determine description -->
+  
+  
+
   <!-- The image needs to have an absolute URL -->
   
 
   <!-- Open graph meta tags -->
+  <meta property="og:site_name" content="PSRule for Azure" />
   <meta property="og:type" content="website" />
   <meta property="og:title" content="PSRule for Azure - v1" />
   <meta property="og:description" content="Ready to go validation and governance controls for Azure Infrastructure as Code (IaC)." />
@@ -8060,11 +8065,19 @@
   See <a href="../upgrade-notes/">upgrade notes</a> for more information.</li>
 </ul>
 <h2 id="unreleased">Unreleased<a class="headerlink" href="#unreleased" title="Permanent link">#</a></h2>
+<p>What's changed since pre-release v1.19.0-B0010:</p>
+<ul>
+<li>General improvements:<ul>
+<li>Improve reporting of failing resource property for rules by @BernieWhite.
+  <a href="https://github.com/Azure/PSRule.Rules.Azure/issues/1429">#1429</a></li>
+</ul>
+</li>
+</ul>
 <h2 id="v1190-b0010pre-release">v1.19.0-B0010 (pre-release)<a class="headerlink" href="#v1190-b0010pre-release" title="Permanent link">#</a></h2>
 <p>What's changed since v1.18.1:</p>
 <ul>
 <li>General improvements:<ul>
-<li>Updated rule level for the following rules by @BernieWhite:
+<li>Updated rule level for the following rules by @BernieWhite.
   <a href="https://github.com/Azure/PSRule.Rules.Azure/issues/1551">#1551</a><ul>
 <li>Set <code>Azure.APIM.APIDescriptors</code> to warning from error.</li>
 <li>Set <code>Azure.APIM.ProductDescriptors</code> to warning from error.</li>
@@ -10904,61 +10917,15 @@
   <small>
     
       Last update:
-      2022-08-11
+      2022-08-15
     
   </small>
 </div>
 
               
 
-  <!-- Giscus -->
-  <h2 id="__comments">Comments</h2>
-  <script src="https://giscus.app/client.js"
-    data-repo="Azure/PSRule.Rules.Azure"
-    data-repo-id="MDEwOlJlcG9zaXRvcnkxODQxNTQ2Njg="
-    data-category="Documentation"
-    data-category-id="DIC_kwDOCvn6LM4CQqE6"
-    data-mapping="pathname"
-    data-strict="0"
-    data-reactions-enabled="1"
-    data-emit-metadata="0"
-    data-input-position="top"
-    data-theme="light"
-    data-lang="en"
-    data-loading="lazy"
-    crossorigin="anonymous"
-    async>
-  </script>
+  
 
-  <!-- Synchronize Giscus theme with palette -->
-  <script>
-    var giscus = document.querySelector("script[src*=giscus]")
-
-    /* Set palette on initial load */
-    var palette = __md_get("__palette")
-    if (palette && typeof palette.color === "object") {
-      var theme = palette.color.scheme === "slate" ? "dark" : "light"
-      giscus.setAttribute("data-theme", theme) 
-    }
-
-    /* Register event handlers after documented loaded */
-    document.addEventListener("DOMContentLoaded", function() {
-      var ref = document.querySelector("[data-md-component=palette]")
-      ref.addEventListener("change", function() {
-        var palette = __md_get("__palette")
-        if (palette && typeof palette.color === "object") {
-          var theme = palette.color.scheme === "slate" ? "dark" : "light"
-
-          /* Instruct Giscus to change theme */
-          var frame = document.querySelector(".giscus-frame")
-          frame.contentWindow.postMessage(
-            { giscus: { setConfig: { theme } } },
-            "https://giscus.app"
-          )
-        }
-      })
-    })
-  </script>
 
             </article>
             

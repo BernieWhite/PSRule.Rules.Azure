@@ -61,10 +61,15 @@
     
   
 
+  <!-- Determine description -->
+  
+  
+
   <!-- The image needs to have an absolute URL -->
   
 
   <!-- Open graph meta tags -->
+  <meta property="og:site_name" content="PSRule for Azure" />
   <meta property="og:type" content="website" />
   <meta property="og:title" content="PSRule for Azure - v0" />
   <meta property="og:description" content="Ready to go validation and governance controls for Azure Infrastructure as Code (IaC)." />
@@ -9185,61 +9190,15 @@
   <small>
     
       Last update:
-      2021-06-18
+      2022-08-15
     
   </small>
 </div>
 
               
 
-  <!-- Giscus -->
-  <h2 id="__comments">Comments</h2>
-  <script src="https://giscus.app/client.js"
-    data-repo="Azure/PSRule.Rules.Azure"
-    data-repo-id="MDEwOlJlcG9zaXRvcnkxODQxNTQ2Njg="
-    data-category="Documentation"
-    data-category-id="DIC_kwDOCvn6LM4CQqE6"
-    data-mapping="pathname"
-    data-strict="0"
-    data-reactions-enabled="1"
-    data-emit-metadata="0"
-    data-input-position="top"
-    data-theme="light"
-    data-lang="en"
-    data-loading="lazy"
-    crossorigin="anonymous"
-    async>
-  </script>
+  
 
-  <!-- Synchronize Giscus theme with palette -->
-  <script>
-    var giscus = document.querySelector("script[src*=giscus]")
-
-    /* Set palette on initial load */
-    var palette = __md_get("__palette")
-    if (palette && typeof palette.color === "object") {
-      var theme = palette.color.scheme === "slate" ? "dark" : "light"
-      giscus.setAttribute("data-theme", theme) 
-    }
-
-    /* Register event handlers after documented loaded */
-    document.addEventListener("DOMContentLoaded", function() {
-      var ref = document.querySelector("[data-md-component=palette]")
-      ref.addEventListener("change", function() {
-        var palette = __md_get("__palette")
-        if (palette && typeof palette.color === "object") {
-          var theme = palette.color.scheme === "slate" ? "dark" : "light"
-
-          /* Instruct Giscus to change theme */
-          var frame = document.querySelector(".giscus-frame")
-          frame.contentWindow.postMessage(
-            { giscus: { setConfig: { theme } } },
-            "https://giscus.app"
-          )
-        }
-      })
-    })
-  </script>
 
             </article>
             

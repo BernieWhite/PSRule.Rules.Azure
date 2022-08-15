@@ -6,7 +6,7 @@
       <meta charset="utf-8">
       <meta name="viewport" content="width=device-width,initial-scale=1">
       
-        <meta name="description" content="Ready to go validation and governance controls for Azure Infrastructure as Code (IaC).">
+        <meta name="description" content="Subnet names should meet naming requirements.">
       
       
         <meta name="author" content="Microsoft">
@@ -61,25 +61,32 @@
     
   
 
+  <!-- Determine description -->
+  
+  
+    
+  
+
   <!-- The image needs to have an absolute URL -->
   
 
   <!-- Open graph meta tags -->
+  <meta property="og:site_name" content="PSRule for Azure" />
   <meta property="og:type" content="website" />
   <meta property="og:title" content="PSRule for Azure - Azure.VNET.SubnetName" />
-  <meta property="og:description" content="Ready to go validation and governance controls for Azure Infrastructure as Code (IaC)." />
+  <meta property="og:description" content="Subnet names should meet naming requirements." />
   <meta property="og:url" content="https://azure.github.io/PSRule.Rules.Azure/en/rules/Azure.VNET.SubnetName/" />
   <meta property="og:image" content="https://repository-images.githubusercontent.com/184154668/58818c00-d496-11eb-9b77-016145022654" />
   <meta property="og:image:type" content="image/png" />
   <meta property="og:image:width" content="1280" />
   <meta property="og:image:height" content="640" />
-  <meta property="og:image:alt" content="Ready to go validation and governance controls for Azure Infrastructure as Code (IaC)." />
+  <meta property="og:image:alt" content="Subnet names should meet naming requirements." />
 
   <!-- Twitter meta tags -->
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:site" content="@github" />
   <meta name="twitter:title" content="PSRule for Azure - Azure.VNET.SubnetName" />
-  <meta name="twitter:description" content="Ready to go validation and governance controls for Azure Infrastructure as Code (IaC)." />
+  <meta name="twitter:description" content="Subnet names should meet naming requirements." />
   <meta name="twitter:image" content="https://repository-images.githubusercontent.com/184154668/58818c00-d496-11eb-9b77-016145022654" />
 
 
@@ -6296,28 +6303,28 @@
             <article class="md-content__inner md-typeset">
               
 
-<!-- Edit button -->
-
+  <!-- Edit button -->
   
-    <a
-      href="https://github.com/Azure/PSRule.Rules.Azure/blob/main/docs/en/rules/Azure.VNET.SubnetName.md"
-      title="Edit this page"
-      class="md-content__button md-icon"
-    >
-      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75L3 17.25Z"/></svg>
-    </a>
+    
+      <a
+        href="https://github.com/Azure/PSRule.Rules.Azure/blob/main/docs/en/rules/Azure.VNET.SubnetName.md"
+        title="Edit this page"
+        class="md-content__button md-icon"
+      >
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75L3 17.25Z"/></svg>
+      </a>
+    
   
 
+  <!--
+    Hack: check whether the content contains a h1 headline. If it
+    doesn't, the page title (or respectively site name) is used
+    as the main headline.
+  -->
+  
 
-<!--
-  Hack: check whether the content contains a h1 headline. If it
-  doesn't, the page title (or respectively site name) is used
-  as the main headline.
--->
-
-
-<!-- Markdown content -->
-<h1 id="usevalidsubnetnames">Use valid subnet names<a class="headerlink" href="#usevalidsubnetnames" title="Permanent link">#</a></h1>
+  <!-- Markdown content -->
+  <h1 id="usevalidsubnetnames">Use valid subnet names<a class="headerlink" href="#usevalidsubnetnames" title="Permanent link">#</a></h1>
 <nav class="md-tags"><span class="md-tag">Azure.VNET.SubnetName</span><span class="md-tag">AZR-000267</span><span class="md-tag">Error</span></nav>
 <p><a href="../module/#operationalexcellence"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path fill-rule="evenodd" d="M1.527 13.237a1.75 1.75 0 0 1 0-2.474l9.272-9.273a1.75 1.75 0 0 1 2.475 0l9.272 9.273a1.75 1.75 0 0 1 0 2.474l-9.272 9.272a1.75 1.75 0 0 1-2.475 0l-9.272-9.272zm1.06-1.414a.25.25 0 0 0 0 .354l9.273 9.272a.25.25 0 0 0 .353 0l9.272-9.272a.25.25 0 0 0 0-.354l-9.272-9.272a.25.25 0 0 0-.353 0l-9.273 9.272z"/></svg></span> Operational Excellence</a>
  · <a href="../resource/#virtualnetwork"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path fill-rule="evenodd" d="M13.152.682a2.25 2.25 0 0 1 2.269 0l.007.004 6.957 4.276a2.276 2.276 0 0 1 1.126 1.964v7.516c0 .81-.432 1.56-1.133 1.968l-.002.001-11.964 7.037-.004.003a2.276 2.276 0 0 1-2.284 0l-.026-.015-6.503-4.502a2.268 2.268 0 0 1-1.096-1.943V9.438c0-.392.1-.77.284-1.1l.003-.006.014-.026a2.28 2.28 0 0 1 .82-.827h.002L13.152.681zm.757 1.295h-.001L2.648 8.616l6.248 4.247a.776.776 0 0 0 .758-.01h.001l11.633-6.804-6.629-4.074a.75.75 0 0 0-.75.003zM18 9.709l-3.25 1.9v7.548L18 17.245V9.709zm1.5-.878v7.532l2.124-1.25a.777.777 0 0 0 .387-.671V7.363L19.5 8.831zm-9.09 5.316 2.84-1.66v7.552l-3.233 1.902v-7.612c.134-.047.265-.107.391-.18l.002-.002zm-1.893 7.754V14.33a2.277 2.277 0 0 1-.393-.18l-.023-.014-6.102-4.147v7.003c0 .275.145.528.379.664l.025.014 6.114 4.232z"/></svg></span> Virtual Network</a>
@@ -6344,10 +6351,10 @@ Additionally consider naming resources with a standard naming convention.</p>
 <li><a href="https://docs.microsoft.com/azure/azure-resource-manager/management/resource-name-rules">Naming rules and restrictions for Azure resources</a></li>
 </ul>
 
-<!-- Last update of source file -->
-
+  <!-- Last update of source file -->
   
-    <hr>
+    
+      <hr>
 <div class="md-source-file">
   <small>
     
@@ -6356,57 +6363,68 @@ Additionally consider naming resources with a standard naming convention.</p>
     
   </small>
 </div>
+    
+  
+
   
 
 
-<!-- Giscus -->
-<h2 id="__comments">Comments</h2>
-<script src="https://giscus.app/client.js"
-  data-repo="Azure/PSRule.Rules.Azure"
-  data-repo-id="MDEwOlJlcG9zaXRvcnkxODQxNTQ2Njg="
-  data-category="Documentation"
-  data-category-id="DIC_kwDOCvn6LM4CQqE6"
-  data-mapping="pathname"
-  data-strict="0"
-  data-reactions-enabled="1"
-  data-emit-metadata="0"
-  data-input-position="top"
-  data-theme="light"
-  data-lang="en"
-  data-loading="lazy"
-  crossorigin="anonymous"
-  async>
-</script>
+  <!-- Giscus -->
+  <h2 id="__comments">Comments</h2>
+  
+    
+  
 
-<!-- Synchronize Giscus theme with palette -->
-<script>
-  var giscus = document.querySelector("script[src*=giscus]")
+  
+    <script src="https://giscus.app/client.js"
+      data-repo="Azure/PSRule.Rules.Azure"
+      data-repo-id="MDEwOlJlcG9zaXRvcnkxODQxNTQ2Njg="
+      data-category="Documentation"
+      data-category-id="DIC_kwDOCvn6LM4CQqE6"
+      data-mapping="specific"
+      data-term="Azure.VNET.SubnetName"
+      data-strict="0"
+      data-reactions-enabled="1"
+      data-emit-metadata="0"
+      data-input-position="top"
+      data-theme="light"
+      data-lang="en"
+      data-loading="lazy"
+      crossorigin="anonymous"
+      async>
+    </script>
+  
 
-  /* Set palette on initial load */
-  var palette = __md_get("__palette")
-  if (palette && typeof palette.color === "object") {
-    var theme = palette.color.scheme === "slate" ? "dark" : "light"
-    giscus.setAttribute("data-theme", theme) 
-  }
+  <!-- Synchronize Giscus theme with palette -->
+  <script>
+    var giscus = document.querySelector("script[src*=giscus]")
 
-  /* Register event handlers after documented loaded */
-  document.addEventListener("DOMContentLoaded", function() {
-    var ref = document.querySelector("[data-md-component=palette]")
-    ref.addEventListener("change", function() {
-      var palette = __md_get("__palette")
-      if (palette && typeof palette.color === "object") {
-        var theme = palette.color.scheme === "slate" ? "dark" : "light"
+    /* Set palette on initial load */
+    var palette = __md_get("__palette")
+    if (palette && typeof palette.color === "object") {
+      var theme = palette.color.scheme === "slate" ? "dark" : "light"
+      giscus.setAttribute("data-theme", theme) 
+    }
 
-        /* Instruct Giscus to change theme */
-        var frame = document.querySelector(".giscus-frame")
-        frame.contentWindow.postMessage(
-          { giscus: { setConfig: { theme } } },
-          "https://giscus.app"
-        )
-      }
+    /* Register event handlers after documented loaded */
+    document.addEventListener("DOMContentLoaded", function() {
+      var ref = document.querySelector("[data-md-component=palette]")
+      ref.addEventListener("change", function() {
+        var palette = __md_get("__palette")
+        if (palette && typeof palette.color === "object") {
+          var theme = palette.color.scheme === "slate" ? "dark" : "light"
+
+          /* Instruct Giscus to change theme */
+          var frame = document.querySelector(".giscus-frame")
+          frame.contentWindow.postMessage(
+            { giscus: { setConfig: { theme } } },
+            "https://giscus.app"
+          )
+        }
+      })
     })
-  })
-</script>
+  </script>
+
 
             </article>
             

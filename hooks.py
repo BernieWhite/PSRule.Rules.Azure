@@ -107,6 +107,10 @@ def read_metadata(page: mkdocs.structure.nav.Page):
         if page.meta.get('rule', '') != '' and data.get(name, None) != None and data[name].get('Level', None) != None:
             page.meta['level'] = data[name]['Level']
 
+        if page.meta.get('rule', '') != '' and data.get(name, None) != None and data[name].get('Synopsis', None) != None:
+            description = data[name]['Synopsis']
+            page.meta['description'] = description
+
     page.meta['tags'] = tags
 
 

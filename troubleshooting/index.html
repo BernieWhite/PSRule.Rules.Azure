@@ -824,6 +824,20 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#mypipelineisnotfindinganyazureresources" class="md-nav__link">
+    My pipeline is not finding any Azure resources
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#parameterfilewarnsofmetadataproperty" class="md-nav__link">
+    Parameter file warns of metadata property
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#couldnotloadfileorassemblyyamldotnet" class="md-nav__link">
     Could not load file or assembly YamlDotNet
   </a>
@@ -6265,6 +6279,20 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#mypipelineisnotfindinganyazureresources" class="md-nav__link">
+    My pipeline is not finding any Azure resources
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#parameterfilewarnsofmetadataproperty" class="md-nav__link">
+    Parameter file warns of metadata property
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#couldnotloadfileorassemblyyamldotnet" class="md-nav__link">
     Could not load file or assembly YamlDotNet
   </a>
@@ -6332,6 +6360,43 @@ The default timeout is 5 seconds.</p>
 </ul>
 <p>To increase the timeout value, set the <code>AZURE_BICEP_FILE_EXPANSION_TIMEOUT</code> configuration option.
 See <a href="../setup/configuring-expansion/#bicepcompilationtimeout">Bicep compilation timeout</a> for details on how to configure this option.</p>
+<h2 id="mypipelineisnotfindinganyazureresources">My pipeline is not finding any Azure resources<a class="headerlink" href="#mypipelineisnotfindinganyazureresources" title="Permanent link">#</a></h2>
+<p>There is a few common causes of this issue including:</p>
+<ul>
+<li>Your pipeline is configured with the parameter <code>inputType</code> set to <code>inputPath</code>.
+  PSRule for Azure will not work with this setting.
+  Only <code>inputType</code> set to <code>repository</code> <em>(default)</em> is supported.
+  You may have set this parameter because you wanted to use the <code>inputPath</code> parameter.
+  Setting the <code>inputType</code> is not a requirement for using the <code>inputPath</code> parameter.
+  The <code>inputPath</code> can be used independently.</li>
+<li>You have not enabled expansion for Azure parameter files or Bicep source files.
+  See <a href="../using-templates/">using templates</a> and <a href="../using-bicep/">using Bicep source</a> for details on how to enable expansion.</li>
+<li>You are using parameter files to but haven't linked them to templates or Bicep source files.
+  See <a href="../using-templates/">using templates</a> for details on how to link using metadata or naming convention.</li>
+</ul>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>If your pipeline is still not finding any Azure resources, please <a href="https://github.com/Azure/PSRule.Rules.Azure/discussions">join or start a discussion</a>.</p>
+</div>
+<h2 id="parameterfilewarnsofmetadataproperty">Parameter file warns of metadata property<a class="headerlink" href="#parameterfilewarnsofmetadataproperty" title="Permanent link">#</a></h2>
+<p>You may find while editing a <code>.json</code> parameter file the root <code>metadata</code> property is flagged with a warning.</p>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>The property 'metadata' is not allowed.</p>
+</div>
+<div class="highlight"><span class="filename">Azure parameter file</span><pre><span></span><code><span class="p">{</span><span class="w"></span>
+<span class="w">    </span><span class="nt">&quot;$schema&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;https://schema.management.azure.com/schemas/2015-01-01/deploymentParameters.json#&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">    </span><span class="nt">&quot;contentVersion&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;1.0.0.0&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="hll"><span class="w">    </span><span class="nt">&quot;metadata&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+</span><span class="w">        </span><span class="nt">&quot;template&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;./storage.template.json&quot;</span><span class="w"></span>
+<span class="w">    </span><span class="p">},</span><span class="w"></span>
+<span class="w">    </span><span class="nt">&quot;parameters&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">    </span><span class="p">}</span><span class="w"></span>
+<span class="p">}</span><span class="w"></span>
+</code></pre></div>
+<p>This doesn't affect the workings of the parameter file or deployment.
+The reason for the warning is that the <code>metadata</code> property has not been added to the parameter file JSON schema.
+However, the top level <code>metadata</code> property is ignored by Azure Resource Manager when deploying a template.</p>
 <h2 id="couldnotloadfileorassemblyyamldotnet">Could not load file or assembly YamlDotNet<a class="headerlink" href="#couldnotloadfileorassemblyyamldotnet" title="Permanent link">#</a></h2>
 <p>PSRule <strong>&gt;=1.3.0</strong> uses an updated version of the YamlDotNet library.
 The PSRule for Azure <strong>&lt;1.3.1</strong> uses an older version of this library which may conflict.</p>
@@ -6353,7 +6418,7 @@ The PSRule for Azure <strong>&lt;1.3.1</strong> uses an older version of this li
   <small>
     
       Last update:
-      2022-08-16
+      2022-08-19
     
   </small>
 </div>

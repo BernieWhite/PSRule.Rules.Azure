@@ -6350,6 +6350,10 @@ To learn more about why this is important see <a href="../expanding-source-files
 <p>Metadata links take priority over naming convention.
 For details on both options continue reading.</p>
 </div>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>Linking templates also applies to Bicep modules when you are using <code>.json</code> parameter files.</p>
+</div>
 <h3 id="bymetadata">By metadata<a class="headerlink" href="#bymetadata" title="Permanent link">#</a></h3>
 <p>A parameter file can be linked to an associated template or Bicep module by setting metadata.
 To link a template within a parameter file, set the <code>metadata.template</code> property to the path of the template.</p>
@@ -6418,21 +6422,40 @@ For details on <code>AZURE_PARAMETER_FILE_METADATA_LINK</code> see <a href="../s
 <p>Bicep modules can also be expanded from parameter files.
 Instead of specifing a template path, you can specify the path to a Bicep file.</p>
 </div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>You may find while editing a <code>.json</code> parameter file the root <code>metadata</code> property is flagged with a warning.
+For example <code>Property metadata is not allowed.</code>.
+This doesn't affect the workings of the parameter file or deployment.
+If you like a detailed description continue reading <a href="../troubleshooting/">Troubleshooting</a>.</p>
+</div>
 <h3 id="bynamingconvention">By naming convention<a class="headerlink" href="#bynamingconvention" title="Permanent link">#</a></h3>
-<p>When metadata links are not set, PSRule for Azure will use a naming convention to link to template files.
-PSRule for Azure uses the parameter file prefix <code>&lt;templateName&gt;.parameters.json</code> to link to a template.
-When linking using naming convention, the template and the parameter file must be in the same sub-directory.</p>
+<p>When metadata links are not set, PSRule will fallback to use a naming convention to link to template files.</p>
 <div class="admonition example">
 <p class="admonition-title">Example</p>
 <p>A parameter file named <code>azuredeploy.parameters.json</code> links to the template file named <code>azuredeploy.json</code>.</p>
 </div>
+<p>PSRule for Azure supports linking by naming convention when:</p>
+<ul>
+<li>Parameter files end with <code>.parameters.json</code> linking to <abbr title="Azure Resource Manager">ARM</abbr> templates or Bicep modules.</li>
+<li>The parameter file prefix matches the file name of the template or Bicep module.
+  For example, <code>azuredeploy.parameters.json</code> links to <code>azuredeploy.json</code> or <code>azuredeploy.bicep</code>.</li>
+<li>If both an <abbr title="Azure Resource Manager">ARM</abbr> template and Bicep module exist, the template (<code>.json</code>) is preferred.
+  For example, <code>azuredeploy.parameters.json</code> chooses <code>azuredeploy.json</code> over <code>azuredeploy.bicep</code> if both exist.</li>
+<li>Both parameter file and template or Bicep module must be in the same directory.</li>
+</ul>
+<p>The following is not currently supported:</p>
+<ul>
+<li>Using a different naming convention for parameter files such as <code>&lt;templateName&gt;.param.json</code>.</li>
+<li>Template or parameter files with alternative file extensions such as <code>.jsonc</code>.</li>
+</ul>
 
   <hr>
 <div class="md-source-file">
   <small>
     
       Last update:
-      2022-08-06
+      2022-08-19
     
   </small>
 </div>

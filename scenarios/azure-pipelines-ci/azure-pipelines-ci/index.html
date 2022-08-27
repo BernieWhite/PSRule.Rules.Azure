@@ -106,7 +106,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#validateazureresourcesfromtemplateswithazurepipelines" class="md-skip">
+        <a href="#validate-azure-resources-from-templates-with-azure-pipelines" class="md-skip">
           Skip to content
         </a>
       
@@ -6192,21 +6192,21 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#installingpsruleextension" class="md-nav__link">
+  <a href="#installing-psrule-extension" class="md-nav__link">
     Installing PSRule extension
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#linkingparameterfilestotemplates" class="md-nav__link">
+  <a href="#linking-parameter-files-to-templates" class="md-nav__link">
     Linking parameter files to templates
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#creatingayamlpipeline" class="md-nav__link">
+  <a href="#creating-a-yaml-pipeline" class="md-nav__link">
     Creating a YAML pipeline
   </a>
   
@@ -6214,21 +6214,21 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#installingazurerules" class="md-nav__link">
+  <a href="#installing-azure-rules" class="md-nav__link">
     Installing Azure rules
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#exportingresourcedataforanalysis" class="md-nav__link">
+  <a href="#exporting-resource-data-for-analysis" class="md-nav__link">
     Exporting resource data for analysis
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#validatingexportedresources" class="md-nav__link">
+  <a href="#validating-exported-resources" class="md-nav__link">
     Validating exported resources
   </a>
   
@@ -6240,14 +6240,14 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#generatingnunitoutput" class="md-nav__link">
+  <a href="#generating-nunit-output" class="md-nav__link">
     Generating NUnit output
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#completeexample" class="md-nav__link">
+  <a href="#complete-example" class="md-nav__link">
     Complete example
   </a>
   
@@ -6255,7 +6255,7 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#azuredevopspipeline" class="md-nav__link">
+  <a href="#azure-devops-pipeline" class="md-nav__link">
     Azure DevOps Pipeline
   </a>
   
@@ -6267,7 +6267,7 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#moreinformation" class="md-nav__link">
+  <a href="#more-information" class="md-nav__link">
     More information
   </a>
   
@@ -6295,7 +6295,7 @@
 
 
 
-<h1 id="validateazureresourcesfromtemplateswithazurepipelines">Validate Azure resources from templates with Azure Pipelines<a class="headerlink" href="#validateazureresourcesfromtemplateswithazurepipelines" title="Permanent link">#</a></h1>
+<h1 id="validate-azure-resources-from-templates-with-azure-pipelines">Validate Azure resources from templates with Azure Pipelines<a class="headerlink" href="#validate-azure-resources-from-templates-with-azure-pipelines" title="Permanent link">#</a></h1>
 <p>Azure Resource Manager (ARM) templates are a JSON-based file structure.
 ARM templates are typically not static, they include parameters, functions and conditions.
 Depending on the parameters provided to a template, resources may differ significantly.</p>
@@ -6315,10 +6315,10 @@ Under these circumstances, to correctly validate resources in a template, parame
 <li><a href="#generating-nunit-output">Generating NUnit output</a></li>
 <li><a href="#complete-example">Complete example</a></li>
 </ul>
-<h2 id="installingpsruleextension">Installing PSRule extension<a class="headerlink" href="#installingpsruleextension" title="Permanent link">#</a></h2>
+<h2 id="installing-psrule-extension">Installing PSRule extension<a class="headerlink" href="#installing-psrule-extension" title="Permanent link">#</a></h2>
 <p>PSRule includes an extension that can be installed from the <a href="https://marketplace.visualstudio.com/items?itemName=bewhite.ps-rule">Visual Studio Marketplace</a>.
 Once installed, Azure Pipelines tasks are available to install PSRule modules and run analysis.</p>
-<h2 id="linkingparameterfilestotemplates">Linking parameter files to templates<a class="headerlink" href="#linkingparameterfilestotemplates" title="Permanent link">#</a></h2>
+<h2 id="linking-parameter-files-to-templates">Linking parameter files to templates<a class="headerlink" href="#linking-parameter-files-to-templates" title="Permanent link">#</a></h2>
 <p>ARM template parameter files allows parameters for a deployment to be saved and checked into source control.
 PSRule can automatically resolve ARM templates from parameter files by using a metadata link.</p>
 <p>To link a parameter file to an ARM template add the <code>metadata.template</code> property within a parameter file.</p>
@@ -6363,17 +6363,17 @@ If <code>./</code> is not included, PSRule will look for the template relative t
 <span class="w">    </span><span class="p">}</span><span class="w"></span>
 <span class="p">}</span><span class="w"></span>
 </code></pre></div>
-<h2 id="creatingayamlpipeline">Creating a YAML pipeline<a class="headerlink" href="#creatingayamlpipeline" title="Permanent link">#</a></h2>
+<h2 id="creating-a-yaml-pipeline">Creating a YAML pipeline<a class="headerlink" href="#creating-a-yaml-pipeline" title="Permanent link">#</a></h2>
 <p>Azure Pipelines supports defining pipelines in YAML.
 PSRule uses a number of configurable task steps to install modules, export data and perform analysis.</p>
-<h3 id="installingazurerules">Installing Azure rules<a class="headerlink" href="#installingazurerules" title="Permanent link">#</a></h3>
+<h3 id="installing-azure-rules">Installing Azure rules<a class="headerlink" href="#installing-azure-rules" title="Permanent link">#</a></h3>
 <p>To install the module containing Azure rules use the <code>ps-rule-install</code> YAML task.</p>
 <div class="highlight"><pre><span></span><code><span class="c1"># Install PSRule.Rules.Azure from the PowerShell Gallery.</span><span class="w"></span>
 <span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">task</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">ps-rule-install@2</span><span class="w"></span>
 <span class="w">  </span><span class="nt">inputs</span><span class="p">:</span><span class="w"></span>
 <span class="w">    </span><span class="nt">module</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">PSRule.Rules.Azure</span><span class="w">   </span><span class="c1"># Install PSRule.Rules.Azure from the PowerShell Gallery.</span><span class="w"></span>
 </code></pre></div>
-<h3 id="exportingresourcedataforanalysis">Exporting resource data for analysis<a class="headerlink" href="#exportingresourcedataforanalysis" title="Permanent link">#</a></h3>
+<h3 id="exporting-resource-data-for-analysis">Exporting resource data for analysis<a class="headerlink" href="#exporting-resource-data-for-analysis" title="Permanent link">#</a></h3>
 <p>PSRule provides a pre-built cmdlets for finding template files within a path and exporting resource data.</p>
 <ul>
 <li><code>Get-AzRuleTemplateLink</code> finds linked templates from parameter files.
@@ -6397,7 +6397,7 @@ Files are found recursively from the current working path.</li>
 <span class="w">  </span><span class="nt">displayName</span><span class="p">:</span><span class="w"> </span><span class="s">&#39;Export</span><span class="nv"> </span><span class="s">template</span><span class="nv"> </span><span class="s">data&#39;</span><span class="w"></span>
 </code></pre></div>
 <p>In both cases, resource data for analysis is exported to <code>out/templates/</code>.</p>
-<h3 id="validatingexportedresources">Validating exported resources<a class="headerlink" href="#validatingexportedresources" title="Permanent link">#</a></h3>
+<h3 id="validating-exported-resources">Validating exported resources<a class="headerlink" href="#validating-exported-resources" title="Permanent link">#</a></h3>
 <p>To validate exported resources use the <code>ps-rule-assert</code> YAML task.
 The following task uses previously exported resource data for analysis.</p>
 <div class="highlight"><pre><span></span><code><span class="c1"># Run analysis from JSON files using the `PSRule.Rules.Azure` module and custom rules from `.ps-rule/`.</span><span class="w"></span>
@@ -6418,7 +6418,7 @@ The following task uses previously exported resource data for analysis.</p>
 <li>If custom rules are defined in the <code>.ps-rule/</code> these are also evaluated.</li>
 <li>Validation results are saved as an NUnit report.</li>
 </ul>
-<h2 id="generatingnunitoutput">Generating NUnit output<a class="headerlink" href="#generatingnunitoutput" title="Permanent link">#</a></h2>
+<h2 id="generating-nunit-output">Generating NUnit output<a class="headerlink" href="#generating-nunit-output" title="Permanent link">#</a></h2>
 <p>NUnit is a popular unit test framework for .NET.
 PSRule supports publishing validation results in the NUnit format.
 With Azure DevOps, an NUnit report can be published using <a href="https://docs.microsoft.com/en-us/azure/devops/pipelines/tasks/test/publish-test-results">Publish Test Results task</a>.</p>
@@ -6432,9 +6432,9 @@ With Azure DevOps, an NUnit report can be published using <a href="https://docs.
 <span class="w">    </span><span class="nt">testResultsFiles</span><span class="p">:</span><span class="w"> </span><span class="s">&#39;reports/ps-rule-results.xml&#39;</span><span class="w"> </span><span class="c1"># The previously saved NUnit report.</span><span class="w"></span>
 <span class="w">  </span><span class="nt">condition</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">succeededOrFailed()</span><span class="w">                    </span><span class="c1"># Run this task if previous steps succeeded of failed.</span><span class="w"></span>
 </code></pre></div>
-<h2 id="completeexample">Complete example<a class="headerlink" href="#completeexample" title="Permanent link">#</a></h2>
+<h2 id="complete-example">Complete example<a class="headerlink" href="#complete-example" title="Permanent link">#</a></h2>
 <p>Putting each of these steps together.</p>
-<h3 id="azuredevopspipeline">Azure DevOps Pipeline<a class="headerlink" href="#azuredevopspipeline" title="Permanent link">#</a></h3>
+<h3 id="azure-devops-pipeline">Azure DevOps Pipeline<a class="headerlink" href="#azure-devops-pipeline" title="Permanent link">#</a></h3>
 <div class="highlight"><pre><span></span><code><span class="c1">#</span><span class="w"></span>
 <span class="c1"># PSRule with Azure Pipelines</span><span class="w"></span>
 <span class="c1">#</span><span class="w"></span>
@@ -6478,7 +6478,7 @@ With Azure DevOps, an NUnit report can be published using <a href="https://docs.
 <span class="w">    </span><span class="nt">mergeTestResults</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span><span class="w">                          </span><span class="c1"># Merge multiple reports.</span><span class="w"></span>
 <span class="w">  </span><span class="nt">condition</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">succeededOrFailed()</span><span class="w">                    </span><span class="c1"># Run this task if previous steps succeeded of failed.</span><span class="w"></span>
 </code></pre></div>
-<h2 id="moreinformation">More information<a class="headerlink" href="#moreinformation" title="Permanent link">#</a></h2>
+<h2 id="more-information">More information<a class="headerlink" href="#more-information" title="Permanent link">#</a></h2>
 <ul>
 <li><a href="../azure-pipelines.yaml">azure-pipelines.yaml</a> - An example Azure DevOps Pipeline.</li>
 <li><a href="../azuredeploy.json">azuredeploy.json</a> - An example template file.</li>

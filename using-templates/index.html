@@ -106,7 +106,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#usingtemplates" class="md-skip">
+        <a href="#using-templates" class="md-skip">
           Skip to content
         </a>
       
@@ -585,14 +585,14 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#enablingexpansion" class="md-nav__link">
+  <a href="#enabling-expansion" class="md-nav__link">
     Enabling expansion
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#linkingtemplates" class="md-nav__link">
+  <a href="#linking-templates" class="md-nav__link">
     Linking templates
   </a>
   
@@ -600,14 +600,14 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#bymetadata" class="md-nav__link">
+  <a href="#by-metadata" class="md-nav__link">
     By metadata
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#bynamingconvention" class="md-nav__link">
+  <a href="#by-naming-convention" class="md-nav__link">
     By naming convention
   </a>
   
@@ -6266,14 +6266,14 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#enablingexpansion" class="md-nav__link">
+  <a href="#enabling-expansion" class="md-nav__link">
     Enabling expansion
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#linkingtemplates" class="md-nav__link">
+  <a href="#linking-templates" class="md-nav__link">
     Linking templates
   </a>
   
@@ -6281,14 +6281,14 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#bymetadata" class="md-nav__link">
+  <a href="#by-metadata" class="md-nav__link">
     By metadata
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#bynamingconvention" class="md-nav__link">
+  <a href="#by-naming-convention" class="md-nav__link">
     By naming convention
   </a>
   
@@ -6321,7 +6321,7 @@
 
 
 
-<h1 id="usingtemplates">Using templates<a class="headerlink" href="#usingtemplates" title="Permanent link">#</a></h1>
+<h1 id="using-templates">Using templates<a class="headerlink" href="#using-templates" title="Permanent link">#</a></h1>
 <p>PSRule for Azure discovers and analyzes Azure resources contained within template and parameter files.
 To enable this feature, you need to:</p>
 <ul>
@@ -6333,14 +6333,14 @@ To enable this feature, you need to:</p>
 <p>This topic covers how you can validate Azure resources within template <code>.json</code> files.
 To learn more about why this is important see <a href="../expanding-source-files/">Expanding source files</a>.</p>
 </div>
-<h2 id="enablingexpansion">Enabling expansion<a class="headerlink" href="#enablingexpansion" title="Permanent link">#</a></h2>
+<h2 id="enabling-expansion">Enabling expansion<a class="headerlink" href="#enabling-expansion" title="Permanent link">#</a></h2>
 <p>To expand parameter files configure <code>ps-rule.yaml</code> with the <code>AZURE_PARAMETER_FILE_EXPANSION</code> option.</p>
 <div class="highlight"><span class="filename">ps-rule.yaml</span><pre><span></span><code><span class="c1"># YAML: Enable expansion for template expansion.</span><span class="w"></span>
 <span class="nt">configuration</span><span class="p">:</span><span class="w"></span>
 <span class="w">  </span><span class="nt">AZURE_PARAMETER_FILE_EXPANSION</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span><span class="w"></span>
 </code></pre></div>
-<h2 id="linkingtemplates">Linking templates<a class="headerlink" href="#linkingtemplates" title="Permanent link">#</a></h2>
-<p>PSRule for Azure automatically detects parameter files and uses the following logic to link templates.</p>
+<h2 id="linking-templates">Linking templates<a class="headerlink" href="#linking-templates" title="Permanent link">#</a></h2>
+<p>PSRule for Azure automatically detects parameter files and uses the following logic to link templates or Bicep modules.</p>
 <ul>
 <li><strong>By metadata</strong> &mdash; Check parameter file for a metadata link identifying the associated template.</li>
 <li><strong>By naming convention</strong> &mdash; Check for matching template files using file naming convention.</li>
@@ -6354,7 +6354,7 @@ For details on both options continue reading.</p>
 <p class="admonition-title">Tip</p>
 <p>Linking templates also applies to Bicep modules when you are using <code>.json</code> parameter files.</p>
 </div>
-<h3 id="bymetadata">By metadata<a class="headerlink" href="#bymetadata" title="Permanent link">#</a></h3>
+<h3 id="by-metadata">By metadata<a class="headerlink" href="#by-metadata" title="Permanent link">#</a></h3>
 <p>A parameter file can be linked to an associated template or Bicep module by setting metadata.
 To link a template within a parameter file, set the <code>metadata.template</code> property to the path of the template.</p>
 <p>PSRule for Azure supports either:</p>
@@ -6415,7 +6415,7 @@ To link a template within a parameter file, set the <code>metadata.template</cod
 <p>By default, metadata links are not required.
 By configuring the <code>AZURE_PARAMETER_FILE_METADATA_LINK</code> option to <code>true</code>, this can be enforced.
 When configured, PSRule for Azure will fail parameter files that do not contain a metadata link.
-For details on <code>AZURE_PARAMETER_FILE_METADATA_LINK</code> see <a href="../setup/configuring-expansion/#requiretemplatemetadatalink">Configuring expansion</a>.</p>
+For details on <code>AZURE_PARAMETER_FILE_METADATA_LINK</code> see <a href="../setup/configuring-expansion/#require-template-metadata-link">Configuring expansion</a>.</p>
 </div>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
@@ -6429,7 +6429,7 @@ For example <code>Property metadata is not allowed.</code>.
 This doesn't affect the workings of the parameter file or deployment.
 If you like a detailed description continue reading <a href="../troubleshooting/">Troubleshooting</a>.</p>
 </div>
-<h3 id="bynamingconvention">By naming convention<a class="headerlink" href="#bynamingconvention" title="Permanent link">#</a></h3>
+<h3 id="by-naming-convention">By naming convention<a class="headerlink" href="#by-naming-convention" title="Permanent link">#</a></h3>
 <p>When metadata links are not set, PSRule will fallback to use a naming convention to link to template files.</p>
 <div class="admonition example">
 <p class="admonition-title">Example</p>
@@ -6455,7 +6455,7 @@ If you like a detailed description continue reading <a href="../troubleshooting/
   <small>
     
       Last update:
-      2022-08-19
+      2022-08-27
     
   </small>
 </div>

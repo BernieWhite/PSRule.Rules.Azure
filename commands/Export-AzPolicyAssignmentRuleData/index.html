@@ -6200,7 +6200,7 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#defaultdefault" class="md-nav__link">
+  <a href="#default-default" class="md-nav__link">
     Default (Default)
   </a>
   
@@ -6227,21 +6227,21 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#example1" class="md-nav__link">
+  <a href="#example-1" class="md-nav__link">
     Example 1
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#example2" class="md-nav__link">
+  <a href="#example-2" class="md-nav__link">
     Example 2
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#example3" class="md-nav__link">
+  <a href="#example-3" class="md-nav__link">
     Example 3
   </a>
   
@@ -6369,7 +6369,7 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#relatedlinks" class="md-nav__link">
+  <a href="#related-links" class="md-nav__link">
     RELATED LINKS
   </a>
   
@@ -6400,7 +6400,7 @@
 <h1 id="export-azpolicyassignmentruledata">Export-AzPolicyAssignmentRuleData<a class="headerlink" href="#export-azpolicyassignmentruledata" title="Permanent link">#</a></h1>
 <p>Export JSON based rules from policy assignment data.</p>
 <h2 id="syntax">SYNTAX<a class="headerlink" href="#syntax" title="Permanent link">#</a></h2>
-<h3 id="defaultdefault">Default (Default)<a class="headerlink" href="#defaultdefault" title="Permanent link">#</a></h3>
+<h3 id="default-default">Default (Default)<a class="headerlink" href="#default-default" title="Permanent link">#</a></h3>
 <div class="highlight"><pre><span></span><code>Export-AzPolicyAssignmentRuleData [[-Name] &lt;string&gt;] [-AssignmentFile] &lt;string&gt; [[-ResourceGroup] &lt;ResourceGroupReference&gt;] [[-Subscription] &lt;SubscriptionReference&gt;] [[-OutputPath] &lt;string&gt;] [-PassThru] [&lt;CommonParameters&gt;]
 </code></pre></div>
 <h2 id="description">Description<a class="headerlink" href="#description" title="Permanent link">#</a></h2>
@@ -6435,7 +6435,7 @@
 <li>Any of the above will lead to errors when emitting JSON rules.</li>
 </ul>
 <h2 id="examples">Examples<a class="headerlink" href="#examples" title="Permanent link">#</a></h2>
-<h3 id="example1">Example 1<a class="headerlink" href="#example1" title="Permanent link">#</a></h3>
+<h3 id="example-1">Example 1<a class="headerlink" href="#example-1" title="Permanent link">#</a></h3>
 <div class="highlight"><pre><span></span><code><span class="nb">Export-AzPolicyAssignmentRuleData</span> <span class="n">-Name</span> <span class="s2">&quot;policy&quot;</span> <span class="n">-AssignmentFile</span> <span class="p">.\</span><span class="n">00000000</span><span class="p">-</span><span class="n">0000</span><span class="p">-</span><span class="n">0000</span><span class="p">-</span><span class="n">0000</span><span class="p">-</span><span class="n">000000000000</span><span class="p">.</span><span class="n">assignment</span><span class="p">.</span><span class="n">json</span>
 </code></pre></div>
 <div class="highlight"><pre><span></span><code>Mode                LastWriteTime         Length Name
@@ -6443,7 +6443,7 @@
 -a---        26/03/2022   9:41 PM            361   definitions-policy.Rule.jsonc
 </code></pre></div>
 <p>Export JSON rules to file in current working directory.</p>
-<h3 id="example2">Example 2<a class="headerlink" href="#example2" title="Permanent link">#</a></h3>
+<h3 id="example-2">Example 2<a class="headerlink" href="#example-2" title="Permanent link">#</a></h3>
 <div class="highlight"><pre><span></span><code><span class="nv">$subscription</span> <span class="p">=</span> <span class="p">@{</span>
   <span class="n">subscriptionId</span> <span class="p">=</span> <span class="s1">&#39;nnnnnnnn-nnnn-nnnn-nnnn-nnnnnnnnnnnn&#39;</span>
   <span class="n">displayName</span> <span class="p">=</span> <span class="s1">&#39;My Azure Subscription&#39;</span>
@@ -6457,7 +6457,7 @@
 -a---        26/03/2022   9:41 PM            361   definitions-policy.Rule.jsonc
 </code></pre></div>
 <p>Export JSON rules to file in current working directory using a specific subscription.</p>
-<h3 id="example3">Example 3<a class="headerlink" href="#example3" title="Permanent link">#</a></h3>
+<h3 id="example-3">Example 3<a class="headerlink" href="#example-3" title="Permanent link">#</a></h3>
 <div class="highlight"><pre><span></span><code><span class="nb">Get-AzPolicyAssignmentDataSource</span> <span class="p">|</span> <span class="nb">Export-AzPolicyAssignmentRuleData</span>
 </code></pre></div>
 <div class="highlight"><pre><span></span><code>Mode                LastWriteTime         Length Name
@@ -6571,7 +6571,7 @@ For more information, see <a href="https://docs.microsoft.com/powershell/module/
 <h3 id="systemiofileinfo">System.IO.FileInfo<a class="headerlink" href="#systemiofileinfo" title="Permanent link">#</a></h3>
 <h3 id="systemobject">System.Object<a class="headerlink" href="#systemobject" title="Permanent link">#</a></h3>
 <h2 id="notes">Notes<a class="headerlink" href="#notes" title="Permanent link">#</a></h2>
-<h2 id="relatedlinks">RELATED LINKS<a class="headerlink" href="#relatedlinks" title="Permanent link">#</a></h2>
+<h2 id="related-links">RELATED LINKS<a class="headerlink" href="#related-links" title="Permanent link">#</a></h2>
 
   <hr>
 <div class="md-source-file">

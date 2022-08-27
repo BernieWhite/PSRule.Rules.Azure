@@ -62,10 +62,10 @@ def replace_maml(markdown: str, page: mkdocs.structure.nav.Page, config: mkdocs.
             markdown = markdown.replace('<ref/>', '')
 
     if page.meta.get("pillar", "None") != "None":
-        markdown = markdown.replace("<!-- TAGS -->", "[:octicons-diamond-24: " + page.meta['pillar'] + "](module.md#" + page.meta['pillar'].lower().replace(" ", "") + ")\r<!-- TAGS -->")
+        markdown = markdown.replace("<!-- TAGS -->", "[:octicons-diamond-24: " + page.meta['pillar'] + "](module.md#" + page.meta['pillar'].lower().replace(" ", "-") + ")\r<!-- TAGS -->")
 
     if page.meta.get("resource", "None") != "None":
-        markdown = markdown.replace("<!-- TAGS -->", " · [:octicons-container-24: " + page.meta['resource'] + "](resource.md#" + page.meta['resource'].lower().replace(" ", "") + ")\r<!-- TAGS -->")
+        markdown = markdown.replace("<!-- TAGS -->", " · [:octicons-container-24: " + page.meta['resource'] + "](resource.md#" + page.meta['resource'].lower().replace(" ", "-") + ")\r<!-- TAGS -->")
 
     if page.meta.get('release', 'None') == 'preview':
         markdown = markdown.replace("<!-- TAGS -->", " · :octicons-beaker-24: Preview\r<!-- TAGS -->")

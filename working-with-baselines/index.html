@@ -106,7 +106,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#workingwithbaselines" class="md-skip">
+        <a href="#working-with-baselines" class="md-skip">
           Skip to content
         </a>
       
@@ -627,7 +627,7 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#quarterlybaselines" class="md-nav__link">
+  <a href="#quarterly-baselines" class="md-nav__link">
     Quarterly baselines
   </a>
   
@@ -647,28 +647,28 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#additionalstandardbaselines" class="md-nav__link">
+  <a href="#additional-standard-baselines" class="md-nav__link">
     Additional standard baselines
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#usingbaselines" class="md-nav__link">
+  <a href="#using-baselines" class="md-nav__link">
     Using baselines
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#creatingbaselines" class="md-nav__link">
+  <a href="#creating-baselines" class="md-nav__link">
     Creating baselines
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#includingcustomrules" class="md-nav__link">
+  <a href="#including-custom-rules" class="md-nav__link">
     Including custom rules
   </a>
   
@@ -6280,7 +6280,7 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#quarterlybaselines" class="md-nav__link">
+  <a href="#quarterly-baselines" class="md-nav__link">
     Quarterly baselines
   </a>
   
@@ -6300,28 +6300,28 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#additionalstandardbaselines" class="md-nav__link">
+  <a href="#additional-standard-baselines" class="md-nav__link">
     Additional standard baselines
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#usingbaselines" class="md-nav__link">
+  <a href="#using-baselines" class="md-nav__link">
     Using baselines
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#creatingbaselines" class="md-nav__link">
+  <a href="#creating-baselines" class="md-nav__link">
     Creating baselines
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#includingcustomrules" class="md-nav__link">
+  <a href="#including-custom-rules" class="md-nav__link">
     Including custom rules
   </a>
   
@@ -6349,14 +6349,14 @@
 
 
 
-<h1 id="workingwithbaselines">Working with baselines<a class="headerlink" href="#workingwithbaselines" title="Permanent link">#</a></h1>
+<h1 id="working-with-baselines">Working with baselines<a class="headerlink" href="#working-with-baselines" title="Permanent link">#</a></h1>
 <p>A baseline is a standard PSRule artifact that combines rules and configuration.
 PSRule for Azure provides several baselines that can be referenced when running PSRule.</p>
 <div class="admonition abstract">
 <p class="admonition-title">Abstract</p>
 <p>This topic covers how to use baselines shipped with PSRule for Azure.</p>
 </div>
-<h2 id="quarterlybaselines">Quarterly baselines<a class="headerlink" href="#quarterlybaselines" title="Permanent link">#</a></h2>
+<h2 id="quarterly-baselines">Quarterly baselines<a class="headerlink" href="#quarterly-baselines" title="Permanent link">#</a></h2>
 <p>PSRule for Azure ships new rules on a monthly cadence.
 As new rules are added, existing pipelines that previously passed may fail based on additional requirements.
 It is generally expected that files committed to an integration branch such as <code>main</code> continue to pass.</p>
@@ -6405,7 +6405,7 @@ This is different from the <code>Azure.Preview</code> baseline which contains <a
   Currently rule configuration defaults are not included in quarterly baselines.
   To workaround this, override the rule configuration option by setting the value in <code>ps-rule.yaml</code>.</li>
 </ul>
-<h2 id="additionalstandardbaselines">Additional standard baselines<a class="headerlink" href="#additionalstandardbaselines" title="Permanent link">#</a></h2>
+<h2 id="additional-standard-baselines">Additional standard baselines<a class="headerlink" href="#additional-standard-baselines" title="Permanent link">#</a></h2>
 <p>In additional to quarterly baselines, some additional baselines exist:</p>
 <ul>
 <li><code>Azure.Default</code> - Includes rules for <abbr title="generally available">GA</abbr> Azure features.
@@ -6415,7 +6415,7 @@ This is different from the <code>Azure.Preview</code> baseline which contains <a
 <li><code>Azure.All</code> - Includes all Azure rules shipped with PSRule for Azure.
   This is functionally the same as <code>Azure.Preview</code> however intended for internal use only.</li>
 </ul>
-<h2 id="usingbaselines">Using baselines<a class="headerlink" href="#usingbaselines" title="Permanent link">#</a></h2>
+<h2 id="using-baselines">Using baselines<a class="headerlink" href="#using-baselines" title="Permanent link">#</a></h2>
 <p>To use a baseline within a CI pipeline specify the baseline by name.
 See <a href="../en/baselines/Azure.All/">reference</a> for a list baselines shipped with PSRule for Azure.</p>
 <div class="tabbed-set tabbed-alternate" data-tabs="1:3"><input checked="checked" id="__tabbed_1_1" name="__tabbed_1" type="radio" /><input id="__tabbed_1_2" name="__tabbed_1" type="radio" /><input id="__tabbed_1_3" name="__tabbed_1" type="radio" /><div class="tabbed-labels"><label for="__tabbed_1_1">GitHub Actions</label><label for="__tabbed_1_2">Azure Pipelines</label><label for="__tabbed_1_3">PowerShell</label></div>
@@ -6449,9 +6449,9 @@ See <a href="../en/baselines/Azure.All/">reference</a> for a list baselines ship
 </div>
 </div>
 </div>
-<h2 id="creatingbaselines">Creating baselines<a class="headerlink" href="#creatingbaselines" title="Permanent link">#</a></h2>
+<h2 id="creating-baselines">Creating baselines<a class="headerlink" href="#creating-baselines" title="Permanent link">#</a></h2>
 <p>To create your own baselines see the PSRule help topic <a href="https://microsoft.github.io/PSRule/v2/concepts/PSRule/en-US/about_PSRule_Baseline/">about_PSRule_Baseline</a>.</p>
-<h2 id="includingcustomrules">Including custom rules<a class="headerlink" href="#includingcustomrules" title="Permanent link">#</a></h2>
+<h2 id="including-custom-rules">Including custom rules<a class="headerlink" href="#including-custom-rules" title="Permanent link">#</a></h2>
 <p><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path fill-rule="evenodd" d="M11.75 1a.75.75 0 0 1 .75.75V4h6.532c.42 0 .826.15 1.143.425l3.187 2.75a1.75 1.75 0 0 1 0 2.65l-3.187 2.75a1.75 1.75 0 0 1-1.143.425H12.5v9.25a.75.75 0 0 1-1.5 0V13H3.75A1.75 1.75 0 0 1 2 11.25v-5.5C2 4.783 2.784 4 3.75 4H11V1.75a.75.75 0 0 1 .75-.75zm0 4.5h7.282a.25.25 0 0 1 .163.06l3.188 2.75a.25.25 0 0 1 0 .38l-3.188 2.75a.25.25 0 0 1-.163.06H3.75a.25.25 0 0 1-.25-.25v-5.5a.25.25 0 0 1 .25-.25h8z"/></svg></span> v1.8.0</p>
 <p>The quarterly baselines shipped with PSRule for Azure target a subset of rules for <abbr title="generally available">GA</abbr> Azure features.
 When you specify a baseline, custom rules you create and store in <code>.ps-rule/</code> will be ignored by default.</p>

@@ -106,7 +106,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#enforcingcustomtags" class="md-skip">
+        <a href="#enforcing-custom-tags" class="md-skip">
           Skip to content
         </a>
       
@@ -777,42 +777,42 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#creatinganewrule" class="md-nav__link">
+  <a href="#creating-a-new-rule" class="md-nav__link">
     Creating a new rule
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#addingmandatorytags" class="md-nav__link">
+  <a href="#adding-mandatory-tags" class="md-nav__link">
     Adding mandatory tags
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#limitingtagsvalues" class="md-nav__link">
+  <a href="#limiting-tags-values" class="md-nav__link">
     Limiting tags values
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#bindingtype" class="md-nav__link">
+  <a href="#binding-type" class="md-nav__link">
     Binding type
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#testinglocally" class="md-nav__link">
+  <a href="#testing-locally" class="md-nav__link">
     Testing locally
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#samplecode" class="md-nav__link">
+  <a href="#sample-code" class="md-nav__link">
     Sample code
   </a>
   
@@ -6274,42 +6274,42 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#creatinganewrule" class="md-nav__link">
+  <a href="#creating-a-new-rule" class="md-nav__link">
     Creating a new rule
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#addingmandatorytags" class="md-nav__link">
+  <a href="#adding-mandatory-tags" class="md-nav__link">
     Adding mandatory tags
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#limitingtagsvalues" class="md-nav__link">
+  <a href="#limiting-tags-values" class="md-nav__link">
     Limiting tags values
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#bindingtype" class="md-nav__link">
+  <a href="#binding-type" class="md-nav__link">
     Binding type
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#testinglocally" class="md-nav__link">
+  <a href="#testing-locally" class="md-nav__link">
     Testing locally
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#samplecode" class="md-nav__link">
+  <a href="#sample-code" class="md-nav__link">
     Sample code
   </a>
   
@@ -6337,7 +6337,7 @@
 
 
 
-<h1 id="enforcingcustomtags">Enforcing custom tags<a class="headerlink" href="#enforcingcustomtags" title="Permanent link">#</a></h1>
+<h1 id="enforcing-custom-tags">Enforcing custom tags<a class="headerlink" href="#enforcing-custom-tags" title="Permanent link">#</a></h1>
 <p>With PSRule, you can layer on custom rules with to implement organization specific requirements.
 These custom rules work side-by-side with PSRule for Azure.</p>
 <p>Use of resource and resource group tags is recommended in the WAF, however implementations may vary.
@@ -6347,7 +6347,7 @@ You may want to use PSRule to enforce tagging or something similar early in a De
 <p>The following scenario shows how to create a custom rule to validate Resource Group tags.
 The scenario walks you through the process so that you can apply the same concepts for similar requirements.</p>
 </div>
-<h2 id="creatinganewrule">Creating a new rule<a class="headerlink" href="#creatinganewrule" title="Permanent link">#</a></h2>
+<h2 id="creating-a-new-rule">Creating a new rule<a class="headerlink" href="#creating-a-new-rule" title="Permanent link">#</a></h2>
 <p>Within the <code>.ps-rule</code> sub-directory create a new file called <code>Org.Azure.Rule.ps1</code>.
 Use the following snippet to populate the rule file:</p>
 <div class="highlight"><pre><span></span><code><span class="c"># Synopsis: Resource Groups must have all mandatory tags defined.</span>
@@ -6375,7 +6375,7 @@ Use the following snippet to populate the rule file:</p>
 <p class="admonition-title">Tip</p>
 <p>For recommendations on naming and storing rules see <a href="../storing-custom-rules/">storing custom rules</a>.</p>
 </div>
-<h2 id="addingmandatorytags">Adding mandatory tags<a class="headerlink" href="#addingmandatorytags" title="Permanent link">#</a></h2>
+<h2 id="adding-mandatory-tags">Adding mandatory tags<a class="headerlink" href="#adding-mandatory-tags" title="Permanent link">#</a></h2>
 <p>To require specific tags to be configured on Resource Groups append this code to the rule.</p>
 <div class="highlight"><pre><span></span><code><span class="c"># Require tags be case-sensitive</span>
 <span class="nv">$Assert</span><span class="p">.</span><span class="n">HasField</span><span class="p">(</span><span class="nv">$TargetObject</span><span class="p">.</span><span class="n">tags</span><span class="p">,</span> <span class="s1">&#39;costCentre&#39;</span><span class="p">,</span> <span class="cm">&lt;# case-sensitive #&gt;</span> <span class="nv">$True</span><span class="p">)</span>
@@ -6403,7 +6403,7 @@ Use the following snippet to populate the rule file:</p>
 <span class="p">}</span>
 </code></pre></div>
 </details>
-<h2 id="limitingtagsvalues">Limiting tags values<a class="headerlink" href="#limitingtagsvalues" title="Permanent link">#</a></h2>
+<h2 id="limiting-tags-values">Limiting tags values<a class="headerlink" href="#limiting-tags-values" title="Permanent link">#</a></h2>
 <p>To require these tags to only accept allowed values, append this code to the rule.</p>
 <div class="highlight"><pre><span></span><code><span class="cm">&lt;#</span>
 <span class="cm">The costCentre tag must:</span>
@@ -6455,7 +6455,7 @@ i.e. <code>tags.costCentre</code>.</li>
 <span class="p">}</span>
 </code></pre></div>
 </details>
-<h2 id="bindingtype">Binding type<a class="headerlink" href="#bindingtype" title="Permanent link">#</a></h2>
+<h2 id="binding-type">Binding type<a class="headerlink" href="#binding-type" title="Permanent link">#</a></h2>
 <p>Rules packaged within PSRule for Azure will automatically detect Resource Groups by their type properties.
 Standalone rules will get their type binding configuration from <code>ps-rule.yaml</code> instead.</p>
 <p>To configure type binding:</p>
@@ -6477,12 +6477,12 @@ Our custom rule uses <code>-Type 'Microsoft.Resources/resourceGroups'</code>.</l
 alternative it will use <code>type</code>.
 If neither property exists, PSRule will use the object type.</li>
 </ul>
-<h2 id="testinglocally">Testing locally<a class="headerlink" href="#testinglocally" title="Permanent link">#</a></h2>
+<h2 id="testing-locally">Testing locally<a class="headerlink" href="#testing-locally" title="Permanent link">#</a></h2>
 <p>To test the custom rule within Visual Studio Code, see <a href="../../validating-locally/">validating locally</a>.
 Alternatively you can test the rule manually by running the following from a PowerShell terminal.</p>
 <div class="highlight"><pre><span></span><code><span class="nb">Assert-PSRule</span> <span class="n">-Path</span> <span class="s1">&#39;.ps-rule/&#39;</span> <span class="n">-Module</span> <span class="s1">&#39;PSRule.Rules.Azure&#39;</span> <span class="n">-InputPath</span> <span class="p">.</span> <span class="n">-Format</span> <span class="n">File</span>
 </code></pre></div>
-<h2 id="samplecode">Sample code<a class="headerlink" href="#samplecode" title="Permanent link">#</a></h2>
+<h2 id="sample-code">Sample code<a class="headerlink" href="#sample-code" title="Permanent link">#</a></h2>
 <p>Grab the full sample code for each of these files from:</p>
 <ul>
 <li><a href="https://github.com/Azure/PSRule.Rules.Azure/blob/main/docs/customization/enforce-custom-tags/.ps-rule/Org.Azure.Rule.ps1">Org.Azure.Rule.ps1</a></li>

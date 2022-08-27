@@ -106,7 +106,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#validateazureresourcesfromtemplateswithcontinuousintegrationci" class="md-skip">
+        <a href="#validate-azure-resources-from-templates-with-continuous-integration-ci" class="md-skip">
           Skip to content
         </a>
       
@@ -6192,14 +6192,14 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#installingpsrulewithinacipipeline" class="md-nav__link">
+  <a href="#installing-psrule-within-a-ci-pipeline" class="md-nav__link">
     Installing PSRule within a CI pipeline
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#exportingruledataforanalysis" class="md-nav__link">
+  <a href="#exporting-rule-data-for-analysis" class="md-nav__link">
     Exporting rule data for analysis
   </a>
   
@@ -6207,14 +6207,14 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#exportcmdletparameters" class="md-nav__link">
+  <a href="#export-cmdlet-parameters" class="md-nav__link">
     Export cmdlet parameters
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#useofplaceholdervalues" class="md-nav__link">
+  <a href="#use-of-placeholder-values" class="md-nav__link">
     Use of placeholder values
   </a>
   
@@ -6226,35 +6226,35 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#validatingexportedresources" class="md-nav__link">
+  <a href="#validating-exported-resources" class="md-nav__link">
     Validating exported resources
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#formattingoutput" class="md-nav__link">
+  <a href="#formatting-output" class="md-nav__link">
     Formatting output
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#failingthepipeline" class="md-nav__link">
+  <a href="#failing-the-pipeline" class="md-nav__link">
     Failing the pipeline
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#generatingnunitoutput" class="md-nav__link">
+  <a href="#generating-nunit-output" class="md-nav__link">
     Generating NUnit output
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#completeexample" class="md-nav__link">
+  <a href="#complete-example" class="md-nav__link">
     Complete example
   </a>
   
@@ -6262,14 +6262,14 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#installdependencies" class="md-nav__link">
+  <a href="#install-dependencies" class="md-nav__link">
     Install dependencies
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#validatetemplates" class="md-nav__link">
+  <a href="#validate-templates" class="md-nav__link">
     Validate templates
   </a>
   
@@ -6281,7 +6281,7 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#additionaloptions" class="md-nav__link">
+  <a href="#additional-options" class="md-nav__link">
     Additional options
   </a>
   
@@ -6289,14 +6289,14 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#usinginvoke-build" class="md-nav__link">
+  <a href="#using-invoke-build" class="md-nav__link">
     Using Invoke-Build
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#callingfrompester" class="md-nav__link">
+  <a href="#calling-from-pester" class="md-nav__link">
     Calling from Pester
   </a>
   
@@ -6308,7 +6308,7 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#moreinformation" class="md-nav__link">
+  <a href="#more-information" class="md-nav__link">
     More information
   </a>
   
@@ -6336,7 +6336,7 @@
 
 
 
-<h1 id="validateazureresourcesfromtemplateswithcontinuousintegrationci">Validate Azure resources from templates with continuous integration (CI)<a class="headerlink" href="#validateazureresourcesfromtemplateswithcontinuousintegrationci" title="Permanent link">#</a></h1>
+<h1 id="validate-azure-resources-from-templates-with-continuous-integration-ci">Validate Azure resources from templates with continuous integration (CI)<a class="headerlink" href="#validate-azure-resources-from-templates-with-continuous-integration-ci" title="Permanent link">#</a></h1>
 <p>Azure Resource Manager (ARM) templates are a JSON-based file structure.
 ARM templates are typically not static, they include parameters, functions and conditions.
 Depending on the parameters provided to a template, resources may differ significantly.</p>
@@ -6356,7 +6356,7 @@ The examples provided can be integrated into a continuous integration (CI) pipel
 <li><a href="#complete-example">Complete example</a></li>
 <li><a href="#additional-options">Additional options</a></li>
 </ul>
-<h2 id="installingpsrulewithinacipipeline">Installing PSRule within a CI pipeline<a class="headerlink" href="#installingpsrulewithinacipipeline" title="Permanent link">#</a></h2>
+<h2 id="installing-psrule-within-a-ci-pipeline">Installing PSRule within a CI pipeline<a class="headerlink" href="#installing-psrule-within-a-ci-pipeline" title="Permanent link">#</a></h2>
 <p>Typically, PSRule is not pre-installed on CI worker nodes and must be installed within the pipeline.
 PSRule PowerShell modules need to be installed prior to calling PSRule cmdlets.</p>
 <p>If your CI pipeline runs on a persistent virtual machine that you control, consider pre-installing PSRule.
@@ -6392,11 +6392,11 @@ The NuGet package provider can be installed using the <code>Install-PackageProvi
 </code></pre></div>
 <p>Add <code>-AllowPrerelease</code> to install pre-release versions.
 See the <a href="https://github.com/Azure/PSRule.Rules.Azure/blob/main/CHANGELOG.md">change log</a> for the latest version.</p>
-<h2 id="exportingruledataforanalysis">Exporting rule data for analysis<a class="headerlink" href="#exportingruledataforanalysis" title="Permanent link">#</a></h2>
+<h2 id="exporting-rule-data-for-analysis">Exporting rule data for analysis<a class="headerlink" href="#exporting-rule-data-for-analysis" title="Permanent link">#</a></h2>
 <p>In PSRule, the <code>Export-AzRuleTemplateData</code> cmdlet resolves a template and returns a resultant set of resources.
 The resultant set of resources can then be validated.</p>
 <p>No connectivity to Azure is required by default when calling <code>Export-AzRuleTemplateData</code>.</p>
-<h3 id="exportcmdletparameters">Export cmdlet parameters<a class="headerlink" href="#exportcmdletparameters" title="Permanent link">#</a></h3>
+<h3 id="export-cmdlet-parameters">Export cmdlet parameters<a class="headerlink" href="#export-cmdlet-parameters" title="Permanent link">#</a></h3>
 <p>To run <code>Export-AzRuleTemplateData</code> two key parameters are required:</p>
 <ul>
 <li><code>-TemplateFile</code> - An absolute or relative path to the template JSON file.</li>
@@ -6420,7 +6420,7 @@ If not specified placeholder values will be used.</li>
 </code></pre></div>
 <p>Multiple parameter files that map to the same template can be supplied in a single cmdlet call.
 Additional templates can be exported by calling <code>Export-AzRuleTemplateData</code> multiple times.</p>
-<h3 id="useofplaceholdervalues">Use of placeholder values<a class="headerlink" href="#useofplaceholdervalues" title="Permanent link">#</a></h3>
+<h3 id="use-of-placeholder-values">Use of placeholder values<a class="headerlink" href="#use-of-placeholder-values" title="Permanent link">#</a></h3>
 <p>A number of functions that can be used within Azure templates retrieve information from Azure.
 Some examples include <code>reference</code>, <code>subscription</code>, <code>resourceGroup</code>, <code>list*</code>.</p>
 <p>The default for <code>Export-AzRuleTemplateData</code> is to operate without requiring authenticated connectivity to Azure.
@@ -6430,7 +6430,7 @@ When using <code>-Subscription</code> and <code>-ResourceGroup</code> the subscr
 Additionally the context running the cmdlet must have at least read access (i.e. <code>Reader</code>).</p>
 <p>It is currently not possible to provide a real value for <code>reference</code> and <code>list*</code>, only placeholders will be used.</p>
 <p>Key Vault references in parameter files use placeholders instead of the real value to prevent accidental exposure of secrets.</p>
-<h2 id="validatingexportedresources">Validating exported resources<a class="headerlink" href="#validatingexportedresources" title="Permanent link">#</a></h2>
+<h2 id="validating-exported-resources">Validating exported resources<a class="headerlink" href="#validating-exported-resources" title="Permanent link">#</a></h2>
 <p>To validate exported resources use <code>Invoke-PSRule</code>, <code>Assert-PSRule</code> or <code>Test-PSRuleTarget</code>.
 In a CI pipeline, <code>Assert-PSRule</code> is recommended.
 <code>Assert-PSRule</code> outputs preformatted results ideal for use within a CI pipeline.</p>
@@ -6453,7 +6453,7 @@ In a CI pipeline, <code>Assert-PSRule</code> is recommended.
 <p>To process multiple input files a wildcard <code>*</code> can be used.</p>
 <div class="highlight"><pre><span></span><code><span class="nb">Assert-PSRule</span> <span class="n">-InputPath</span> <span class="p">.\</span><span class="n">out</span><span class="p">\*.</span><span class="n">json</span> <span class="n">-Module</span> <span class="n">PSRule</span><span class="p">.</span><span class="n">Rules</span><span class="p">.</span><span class="n">Azure</span><span class="p">;</span>
 </code></pre></div>
-<h2 id="formattingoutput">Formatting output<a class="headerlink" href="#formattingoutput" title="Permanent link">#</a></h2>
+<h2 id="formatting-output">Formatting output<a class="headerlink" href="#formatting-output" title="Permanent link">#</a></h2>
 <p>When executing a CI pipeline, feedback on any validation failures is important.
 The <code>Assert-PSRule</code> cmdlet provides easy to read formatted output instead of PowerShell objects.</p>
 <p>Additionally, <code>Assert-PSRule</code> supports styling formatted output for Azure Pipelines and GitHub Actions.
@@ -6461,7 +6461,7 @@ Use the <code>-Style AzurePipelines</code> or <code>-Style GitHubActions</code> 
 <p>For example:</p>
 <div class="highlight"><pre><span></span><code><span class="nb">Assert-PSRule</span> <span class="n">-InputPath</span> <span class="p">.\</span><span class="n">out</span><span class="p">\*.</span><span class="n">json</span> <span class="n">-Style</span> <span class="n">AzurePipelines</span> <span class="n">-Module</span> <span class="n">PSRule</span><span class="p">.</span><span class="n">Rules</span><span class="p">.</span><span class="n">Azure</span><span class="p">;</span>
 </code></pre></div>
-<h2 id="failingthepipeline">Failing the pipeline<a class="headerlink" href="#failingthepipeline" title="Permanent link">#</a></h2>
+<h2 id="failing-the-pipeline">Failing the pipeline<a class="headerlink" href="#failing-the-pipeline" title="Permanent link">#</a></h2>
 <p>When using PSRule within a CI pipeline, a failed rule should stop the pipeline.
 When using <code>Assert-PSRule</code> if any rules fail, an error will be generated.</p>
 <div class="highlight"><pre><span></span><code>Assert-PSRule : One or more rules reported failure.
@@ -6476,7 +6476,7 @@ If you are using a different configuration additionally <code>-ErrorAction Stop<
 <p>For example:</p>
 <div class="highlight"><pre><span></span><code><span class="nb">Assert-PSRule</span> <span class="n">-Module</span> <span class="n">PSRule</span><span class="p">.</span><span class="n">Rules</span><span class="p">.</span><span class="n">Azure</span> <span class="n">-InputPath</span> <span class="p">.\</span><span class="n">out</span><span class="p">\*.</span><span class="n">json</span> <span class="n">-ErrorAction</span> <span class="n">Stop</span><span class="p">;</span>
 </code></pre></div>
-<h2 id="generatingnunitoutput">Generating NUnit output<a class="headerlink" href="#generatingnunitoutput" title="Permanent link">#</a></h2>
+<h2 id="generating-nunit-output">Generating NUnit output<a class="headerlink" href="#generating-nunit-output" title="Permanent link">#</a></h2>
 <p>NUnit is a popular unit test framework for .NET.
 NUnit generates a test report format that is widely interpreted by CI systems.
 While PSRule does not use NUnit directly, it support outputting validation results in the NUnit3 format.
@@ -6489,9 +6489,9 @@ Using a common format allows integration with any system that supports the NUnit
 <div class="highlight"><pre><span></span><code><span class="nb">Assert-PSRule</span> <span class="n">-OutputFormat</span> <span class="n">NUnit3</span> <span class="n">-OutputPath</span> <span class="p">.\</span><span class="n">reports</span><span class="p">\</span><span class="n">rule-report</span><span class="p">.</span><span class="n">xml</span> <span class="n">-Module</span> <span class="n">PSRule</span><span class="p">.</span><span class="n">Rules</span><span class="p">.</span><span class="n">Azure</span> <span class="n">-InputPath</span> <span class="p">.\</span><span class="n">out</span><span class="p">\*.</span><span class="n">json</span><span class="p">;</span>
 </code></pre></div>
 <p>The output path will be created if it does not exist.</p>
-<h2 id="completeexample">Complete example<a class="headerlink" href="#completeexample" title="Permanent link">#</a></h2>
+<h2 id="complete-example">Complete example<a class="headerlink" href="#complete-example" title="Permanent link">#</a></h2>
 <p>Putting each of these steps together.</p>
-<h3 id="installdependencies">Install dependencies<a class="headerlink" href="#installdependencies" title="Permanent link">#</a></h3>
+<h3 id="install-dependencies">Install dependencies<a class="headerlink" href="#install-dependencies" title="Permanent link">#</a></h3>
 <div class="highlight"><pre><span></span><code><span class="c"># Install dependencies for connecting to PowerShell Gallery</span>
 <span class="k">if</span> <span class="p">(</span><span class="nv">$Null</span> <span class="o">-eq</span> <span class="p">(</span><span class="nb">Get-PackageProvider</span> <span class="n">-Name</span> <span class="n">NuGet</span> <span class="n">-ErrorAction</span> <span class="n">Ignore</span><span class="p">))</span> <span class="p">{</span>
     <span class="nb">Install-PackageProvider</span> <span class="n">-Name</span> <span class="n">NuGet</span> <span class="n">-Force</span> <span class="n">-Scope</span> <span class="n">CurrentUser</span><span class="p">;</span>
@@ -6501,7 +6501,7 @@ Using a common format allows integration with any system that supports the NUnit
     <span class="nb">Install-Module</span> <span class="n">PowerShellGet</span> <span class="n">-MinimumVersion</span> <span class="n">2</span><span class="p">.</span><span class="n">2</span><span class="p">.</span><span class="n">1</span> <span class="n">-Scope</span> <span class="n">CurrentUser</span> <span class="n">-Force</span> <span class="n">-AllowClobber</span><span class="p">;</span>
 <span class="p">}</span>
 </code></pre></div>
-<h3 id="validatetemplates">Validate templates<a class="headerlink" href="#validatetemplates" title="Permanent link">#</a></h3>
+<h3 id="validate-templates">Validate templates<a class="headerlink" href="#validate-templates" title="Permanent link">#</a></h3>
 <div class="highlight"><pre><span></span><code><span class="c"># Install PSRule.Rules.Azure module</span>
 <span class="k">if</span> <span class="p">(</span><span class="nv">$Null</span> <span class="o">-eq</span> <span class="p">(</span><span class="nb">Get-InstalledModule</span> <span class="n">-Name</span> <span class="n">PSRule</span><span class="p">.</span><span class="n">Rules</span><span class="p">.</span><span class="n">Azure</span> <span class="n">-MinimumVersion</span> <span class="s1">&#39;0.12.1&#39;</span> <span class="n">-ErrorAction</span> <span class="n">SilentlyContinue</span><span class="p">))</span> <span class="p">{</span>
     <span class="nv">$Null</span> <span class="p">=</span> <span class="nb">Install-Module</span> <span class="n">-Name</span> <span class="n">PSRule</span><span class="p">.</span><span class="n">Rules</span><span class="p">.</span><span class="n">Azure</span> <span class="n">-Scope</span> <span class="n">CurrentUser</span> <span class="n">-MinimumVersion</span> <span class="s1">&#39;0.12.1&#39;</span> <span class="n">-Force</span><span class="p">;</span>
@@ -6520,8 +6520,8 @@ Using a common format allows integration with any system that supports the NUnit
 <span class="p">}</span>
 <span class="nb">Assert-PSRule</span> <span class="nv">@assertParams</span><span class="p">;</span>
 </code></pre></div>
-<h2 id="additionaloptions">Additional options<a class="headerlink" href="#additionaloptions" title="Permanent link">#</a></h2>
-<h3 id="usinginvoke-build">Using Invoke-Build<a class="headerlink" href="#usinginvoke-build" title="Permanent link">#</a></h3>
+<h2 id="additional-options">Additional options<a class="headerlink" href="#additional-options" title="Permanent link">#</a></h2>
+<h3 id="using-invoke-build">Using Invoke-Build<a class="headerlink" href="#using-invoke-build" title="Permanent link">#</a></h3>
 <p><code>Invoke-Build</code> is a build automation cmdlet that can be installed from the PowerShell Gallery by installing the <em>InvokeBuild</em> module.
 Within Invoke-Build, each build process is broken into tasks.</p>
 <p>The following example shows an example of using <em>PSRule.Rules.Azure</em> with <em>InvokeBuild</em> tasks.</p>
@@ -6553,7 +6553,7 @@ Within Invoke-Build, each build process is broken into tasks.</p>
 </code></pre></div>
 <div class="highlight"><pre><span></span><code><span class="nb">Invoke-Build</span> <span class="n">Build</span><span class="p">;</span>
 </code></pre></div>
-<h3 id="callingfrompester">Calling from Pester<a class="headerlink" href="#callingfrompester" title="Permanent link">#</a></h3>
+<h3 id="calling-from-pester">Calling from Pester<a class="headerlink" href="#calling-from-pester" title="Permanent link">#</a></h3>
 <p>Pester is a unit test framework for PowerShell that can be installed from the PowerShell Gallery.</p>
 <p>Typically, Pester unit tests are built for a particular pipeline.
 PSRule can complement Pester unit tests by providing dynamic and sharable rules that are easy to reuse.
@@ -6580,7 +6580,7 @@ By using <code>-If</code> or <code>-Type</code> pre-conditions, rules can dynami
     <span class="p">}</span>
 <span class="p">}</span>
 </code></pre></div>
-<h2 id="moreinformation">More information<a class="headerlink" href="#moreinformation" title="Permanent link">#</a></h2>
+<h2 id="more-information">More information<a class="headerlink" href="#more-information" title="Permanent link">#</a></h2>
 <ul>
 <li><a href="../pipeline-deps.ps1">pipeline-deps.ps1</a> - Example script installing pipeline dependencies.</li>
 <li><a href="../validate-template.ps1">validate-template.ps1</a> - Example script for running template validation.</li>

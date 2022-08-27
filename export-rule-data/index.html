@@ -106,7 +106,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#exportingruledata" class="md-skip">
+        <a href="#exporting-rule-data" class="md-skip">
           Skip to content
         </a>
       
@@ -680,7 +680,7 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#exportanazuresubscription" class="md-nav__link">
+  <a href="#export-an-azure-subscription" class="md-nav__link">
     Export an Azure subscription
   </a>
   
@@ -688,7 +688,7 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#additionaloptions" class="md-nav__link">
+  <a href="#additional-options" class="md-nav__link">
     Additional options
   </a>
   
@@ -6252,7 +6252,7 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#exportanazuresubscription" class="md-nav__link">
+  <a href="#export-an-azure-subscription" class="md-nav__link">
     Export an Azure subscription
   </a>
   
@@ -6260,7 +6260,7 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#additionaloptions" class="md-nav__link">
+  <a href="#additional-options" class="md-nav__link">
     Additional options
   </a>
   
@@ -6293,7 +6293,7 @@
 
 
 
-<h1 id="exportingruledata">Exporting rule data<a class="headerlink" href="#exportingruledata" title="Permanent link">#</a></h1>
+<h1 id="exporting-rule-data">Exporting rule data<a class="headerlink" href="#exporting-rule-data" title="Permanent link">#</a></h1>
 <p>The current state of Azure resources can be tested with PSRule for Azure, referred to as <em>in-flight</em> analysis.
 This is a two step process that works in high security environments with separation of roles.</p>
 <div class="admonition abstract">
@@ -6303,7 +6303,7 @@ After the current state has been exported, offline analysis can be performed aga
 </div>
 <div class="admonition important">
 <p class="admonition-title">Important</p>
-<p>Before continuing, complete the steps from <a href="../install-instructions/#installinglocally">Installing locally</a>.
+<p>Before continuing, complete the steps from <a href="../install-instructions/#installing-locally">Installing locally</a>.
 To export data from a subscription, Azure PowerShell modules must be installed.
 Exporting rule data can also be automated and scheduled with Azure Automation Service.
 However, for this scenario we will focus how to run this process interactively.</p>
@@ -6322,7 +6322,7 @@ The exported state is processed later during analysis.</p>
 </ul>
 </li>
 </ul>
-<h2 id="exportanazuresubscription">Export an Azure subscription<a class="headerlink" href="#exportanazuresubscription" title="Permanent link">#</a></h2>
+<h2 id="export-an-azure-subscription">Export an Azure subscription<a class="headerlink" href="#export-an-azure-subscription" title="Permanent link">#</a></h2>
 <p>The state of resources from the current Azure subscription will be exported by using the following commands:</p>
 <div class="highlight"><pre><span></span><code><span class="c"># STEP 1: Authenticate to Azure, only required if not currently connected</span>
 <span class="nb">Connect-AzAccount</span><span class="p">;</span>
@@ -6333,7 +6333,7 @@ The exported state is processed later during analysis.</p>
 <span class="c"># STEP 3: Exports Azure resources to JSON files</span>
 <span class="nb">Export-AzRuleData</span> <span class="n">-OutputPath</span> <span class="s1">&#39;out/&#39;</span><span class="p">;</span>
 </code></pre></div>
-<h3 id="additionaloptions">Additional options<a class="headerlink" href="#additionaloptions" title="Permanent link">#</a></h3>
+<h3 id="additional-options">Additional options<a class="headerlink" href="#additional-options" title="Permanent link">#</a></h3>
 <p>By default, resource data for the current subscription context will be exported.</p>
 <p>To export resource data for specific subscriptions use:</p>
 <ul>
@@ -6367,7 +6367,7 @@ The exported state is processed later during analysis.</p>
   <small>
     
       Last update:
-      2022-06-03
+      2022-08-27
     
   </small>
 </div>

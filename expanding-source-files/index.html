@@ -106,7 +106,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#expandingsourcefiles" class="md-skip">
+        <a href="#expanding-source-files" class="md-skip">
           Skip to content
         </a>
       
@@ -571,7 +571,7 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#sourceexpansion" class="md-nav__link">
+  <a href="#source-expansion" class="md-nav__link">
     Source expansion
   </a>
   
@@ -579,7 +579,7 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#featuresupport" class="md-nav__link">
+  <a href="#feature-support" class="md-nav__link">
     Feature support
   </a>
   
@@ -598,14 +598,14 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#strongtype" class="md-nav__link">
+  <a href="#strong-type" class="md-nav__link">
     Strong type
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#scopefunctions" class="md-nav__link">
+  <a href="#scope-functions" class="md-nav__link">
     Scope functions
   </a>
   
@@ -620,7 +620,7 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#resourcegroup" class="md-nav__link">
+  <a href="#resource-group" class="md-nav__link">
     Resource Group
   </a>
   
@@ -634,7 +634,7 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#managementgroup" class="md-nav__link">
+  <a href="#management-group" class="md-nav__link">
     Management Group
   </a>
   
@@ -6307,7 +6307,7 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#sourceexpansion" class="md-nav__link">
+  <a href="#source-expansion" class="md-nav__link">
     Source expansion
   </a>
   
@@ -6315,7 +6315,7 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#featuresupport" class="md-nav__link">
+  <a href="#feature-support" class="md-nav__link">
     Feature support
   </a>
   
@@ -6334,14 +6334,14 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#strongtype" class="md-nav__link">
+  <a href="#strong-type" class="md-nav__link">
     Strong type
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#scopefunctions" class="md-nav__link">
+  <a href="#scope-functions" class="md-nav__link">
     Scope functions
   </a>
   
@@ -6356,7 +6356,7 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#resourcegroup" class="md-nav__link">
+  <a href="#resource-group" class="md-nav__link">
     Resource Group
   </a>
   
@@ -6370,7 +6370,7 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#managementgroup" class="md-nav__link">
+  <a href="#management-group" class="md-nav__link">
     Management Group
   </a>
   
@@ -6403,13 +6403,13 @@
 
 
 
-<h1 id="expandingsourcefiles">Expanding source files<a class="headerlink" href="#expandingsourcefiles" title="Permanent link">#</a></h1>
+<h1 id="expanding-source-files">Expanding source files<a class="headerlink" href="#expanding-source-files" title="Permanent link">#</a></h1>
 <p>PSRule for Azure supports analyzing resources contained within Azure Infrastructure as Code.</p>
 <div class="admonition abstract">
 <p class="admonition-title">Abstract</p>
 <p>This topic covers what source expansion is, why it's important, and how to use it within PSRule for Azure.</p>
 </div>
-<h2 id="sourceexpansion">Source expansion<a class="headerlink" href="#sourceexpansion" title="Permanent link">#</a></h2>
+<h2 id="source-expansion">Source expansion<a class="headerlink" href="#source-expansion" title="Permanent link">#</a></h2>
 <p>PSRule for Azure goes beyond linting Azure Bicep and template files for syntax.
 Source expansion performs context specific static analysis on Azure resources.
 Azure resources are analyzed before deployment as if they are deployed.</p>
@@ -6440,7 +6440,7 @@ Azure resources are analyzed before deployment as if they are deployed.</p>
 </ul>
 </li>
 </ul>
-<h3 id="featuresupport">Feature support<a class="headerlink" href="#featuresupport" title="Permanent link">#</a></h3>
+<h3 id="feature-support">Feature support<a class="headerlink" href="#feature-support" title="Permanent link">#</a></h3>
 <p>Source expansion is supported with:</p>
 <ul>
 <li><strong>Azure template and parameter files</strong> &mdash; Azure templates are expanded from parameter files.
@@ -6480,10 +6480,10 @@ Automatic nesting a sub-resource requires:<ul>
 <li>Location of issues in Bicep source files is not supported.</li>
 <li>
 <p>Expansion of Bicep source files times out after 5 seconds by default.
-  The timeout can be overridden by setting the <a href="../setup/setup-bicep/#configuringtimeout">AZURE_BICEP_FILE_EXPANSION_TIMEOUT</a> option.</p>
+  The timeout can be overridden by setting the <a href="../setup/setup-bicep/#configuring-timeout">AZURE_BICEP_FILE_EXPANSION_TIMEOUT</a> option.</p>
 </li>
 </ul>
-<h2 id="strongtype">Strong type<a class="headerlink" href="#strongtype" title="Permanent link">#</a></h2>
+<h2 id="strong-type">Strong type<a class="headerlink" href="#strong-type" title="Permanent link">#</a></h2>
 <p>String parameters are commonly used to pass values such as a resource Id or location.
 PSRule for Azure provides additional support to allow parameters to be strongly typed.
 When a parameter is strongly typed, the value is checked against the type during expansion.</p>
@@ -6521,7 +6521,7 @@ param workspaceId string
 <ul>
 <li><code>location</code> - Specifies the parameter must contain any valid Azure location.</li>
 </ul>
-<h2 id="scopefunctions">Scope functions<a class="headerlink" href="#scopefunctions" title="Permanent link">#</a></h2>
+<h2 id="scope-functions">Scope functions<a class="headerlink" href="#scope-functions" title="Permanent link">#</a></h2>
 <p>Azure deployments support a number of <a href="https://docs.microsoft.com/azure/azure-resource-manager/templates/template-functions-scope">scope functions</a> can be used within Infrastructure as Code.
 When using PSRule for Azure, these functions have a default meaning that can be configured.</p>
 <p>When configuring scope functions, only the properties you want to override has to be specified.
@@ -6532,8 +6532,8 @@ Unspecified properties will inherit from the defaults.</p>
 <span class="nt">displayName</span><span class="p">:</span><span class="w"> </span><span class="s">&#39;PSRule</span><span class="nv"> </span><span class="s">Test</span><span class="nv"> </span><span class="s">Subscription&#39;</span><span class="w"></span>
 <span class="nt">state</span><span class="p">:</span><span class="w"> </span><span class="s">&#39;NotDefined&#39;</span><span class="w"></span>
 </code></pre></div>
-<p>To override, configure <a href="../setup/configuring-expansion/#deploymentsubscription"><code>AZURE_SUBSCRIPTION</code></a>.</p>
-<h3 id="resourcegroup">Resource Group<a class="headerlink" href="#resourcegroup" title="Permanent link">#</a></h3>
+<p>To override, configure <a href="../setup/configuring-expansion/#deployment-subscription"><code>AZURE_SUBSCRIPTION</code></a>.</p>
+<h3 id="resource-group">Resource Group<a class="headerlink" href="#resource-group" title="Permanent link">#</a></h3>
 <p>The <code>resourceGroup()</code> function will return the following unless overridden:</p>
 <div class="highlight"><pre><span></span><code><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="s">&#39;ps-rule-test-rg&#39;</span><span class="w"></span>
 <span class="nt">location</span><span class="p">:</span><span class="w"> </span><span class="s">&#39;eastus&#39;</span><span class="w"></span>
@@ -6541,28 +6541,28 @@ Unspecified properties will inherit from the defaults.</p>
 <span class="nt">properties</span><span class="p">:</span><span class="w"></span>
 <span class="w">  </span><span class="nt">provisioningState</span><span class="p">:</span><span class="w"> </span><span class="s">&#39;Succeeded&#39;</span><span class="w"></span>
 </code></pre></div>
-<p>To override, configure <a href="../setup/configuring-expansion/#deploymentresourcegroup"><code>AZURE_RESOURCE_GROUP</code></a>.</p>
+<p>To override, configure <a href="../setup/configuring-expansion/#deployment-resource-group"><code>AZURE_RESOURCE_GROUP</code></a>.</p>
 <h3 id="tenant">Tenant<a class="headerlink" href="#tenant" title="Permanent link">#</a></h3>
 <p>The <code>tenant()</code> function will return the following unless overridden:</p>
 <div class="highlight"><pre><span></span><code><span class="nt">countryCode</span><span class="p">:</span><span class="w"> </span><span class="s">&#39;US&#39;</span><span class="w"></span>
 <span class="nt">tenantId</span><span class="p">:</span><span class="w"> </span><span class="s">&#39;ffffffff-ffff-ffff-ffff-ffffffffffff&#39;</span><span class="w"></span>
 <span class="nt">displayName</span><span class="p">:</span><span class="w"> </span><span class="s">&#39;PSRule&#39;</span><span class="w"></span>
 </code></pre></div>
-<p>To override, configure <a href="../setup/configuring-expansion/#deploymenttenant"><code>AZURE_TENANT</code></a>.</p>
-<h3 id="managementgroup">Management Group<a class="headerlink" href="#managementgroup" title="Permanent link">#</a></h3>
+<p>To override, configure <a href="../setup/configuring-expansion/#deployment-tenant"><code>AZURE_TENANT</code></a>.</p>
+<h3 id="management-group">Management Group<a class="headerlink" href="#management-group" title="Permanent link">#</a></h3>
 <p>The <code>managementGroup()</code> function will return the following unless overridden:</p>
 <div class="highlight"><pre><span></span><code><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="s">&#39;psrule-test&#39;</span><span class="w"></span>
 <span class="nt">properties</span><span class="p">:</span><span class="w"></span>
 <span class="w">  </span><span class="nt">displyName</span><span class="p">:</span><span class="w"> </span><span class="s">&#39;PSRule</span><span class="nv"> </span><span class="s">Test</span><span class="nv"> </span><span class="s">Management</span><span class="nv"> </span><span class="s">Group&#39;</span><span class="w"></span>
 </code></pre></div>
-<p>To override, configure <a href="../setup/configuring-expansion/#deploymentmanagementgroup"><code>AZURE_MANAGEMENT_GROUP</code></a>.</p>
+<p>To override, configure <a href="../setup/configuring-expansion/#deployment-management-group"><code>AZURE_MANAGEMENT_GROUP</code></a>.</p>
 
   <hr>
 <div class="md-source-file">
   <small>
     
       Last update:
-      2022-08-19
+      2022-08-27
     
   </small>
 </div>

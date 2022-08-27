@@ -106,7 +106,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#storingcustomrules" class="md-skip">
+        <a href="#storing-custom-rules" class="md-skip">
           Skip to content
         </a>
       
@@ -763,14 +763,14 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#usingastandardfilepath" class="md-nav__link">
+  <a href="#using-a-standard-file-path" class="md-nav__link">
     Using a standard file path
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#namingrules" class="md-nav__link">
+  <a href="#naming-rules" class="md-nav__link">
     Naming rules
   </a>
   
@@ -6246,14 +6246,14 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#usingastandardfilepath" class="md-nav__link">
+  <a href="#using-a-standard-file-path" class="md-nav__link">
     Using a standard file path
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#namingrules" class="md-nav__link">
+  <a href="#naming-rules" class="md-nav__link">
     Naming rules
   </a>
   
@@ -6281,7 +6281,7 @@
 
 
 
-<h1 id="storingcustomrules">Storing custom rules<a class="headerlink" href="#storingcustomrules" title="Permanent link">#</a></h1>
+<h1 id="storing-custom-rules">Storing custom rules<a class="headerlink" href="#storing-custom-rules" title="Permanent link">#</a></h1>
 <p>PSRule for Azure covers common use cases that align to the <a href="https://docs.microsoft.com/en-gb/azure/architecture/framework/">Microsoft Azure Well-Architected Framework (WAF)</a>.
 In addition to WAF alignment you may have a requirement to enforce organization specific rules.</p>
 <p>For example:</p>
@@ -6291,7 +6291,7 @@ In addition to WAF alignment you may have a requirement to enforce organization 
 </ul>
 <p>PSRule allows custom rules to be layered on.
 These custom rules work side-by-side with PSRule for Azure.</p>
-<h2 id="usingastandardfilepath">Using a standard file path<a class="headerlink" href="#usingastandardfilepath" title="Permanent link">#</a></h2>
+<h2 id="using-a-standard-file-path">Using a standard file path<a class="headerlink" href="#using-a-standard-file-path" title="Permanent link">#</a></h2>
 <p>Rules can be standalone or packaged within a module.
 Standalone rules are ideal for a single project such as an Infrastructure as Code (IaC) repository.
 To reuse rules across multiple projects consider packaging these as a module.</p>
@@ -6312,7 +6312,7 @@ To reuse rules across multiple projects consider packaging these as a module.</p
 <p>Build pipelines are often case-sensitive or run on Linux-based systems.
 Using the casing rule above reduces confusion latter when you configure continuous integration (CI).</p>
 </div>
-<h2 id="namingrules">Naming rules<a class="headerlink" href="#namingrules" title="Permanent link">#</a></h2>
+<h2 id="naming-rules">Naming rules<a class="headerlink" href="#naming-rules" title="Permanent link">#</a></h2>
 <p>When running PSRule, rule names must be unique.
 PSRule for Azure uses the name prefix of <code>Azure.</code> on all rules and resources included in the module.</p>
 <div class="admonition example">

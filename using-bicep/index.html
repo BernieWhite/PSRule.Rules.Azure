@@ -106,7 +106,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#usingbicepsource" class="md-skip">
+        <a href="#using-bicep-source" class="md-skip">
           Skip to content
         </a>
       
@@ -599,7 +599,7 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#enablingexpansion" class="md-nav__link">
+  <a href="#enabling-expansion" class="md-nav__link">
     Enabling expansion
   </a>
   
@@ -607,14 +607,14 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#setupbicep" class="md-nav__link">
+  <a href="#setup-bicep" class="md-nav__link">
     Setup Bicep
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#buildingfiles" class="md-nav__link">
+  <a href="#building-files" class="md-nav__link">
     Building files
   </a>
   
@@ -626,7 +626,7 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#testingbicepmodules" class="md-nav__link">
+  <a href="#testing-bicep-modules" class="md-nav__link">
     Testing Bicep modules
   </a>
   
@@ -634,21 +634,21 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#configuringpathexclusions" class="md-nav__link">
+  <a href="#configuring-path-exclusions" class="md-nav__link">
     Configuring path exclusions
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#restoringmodulesfromaprivateregistry" class="md-nav__link">
+  <a href="#restoring-modules-from-a-private-registry" class="md-nav__link">
     Restoring modules from a private registry
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#usingparameterfiles" class="md-nav__link">
+  <a href="#using-parameter-files" class="md-nav__link">
     Using parameter files
   </a>
   
@@ -6293,7 +6293,7 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#enablingexpansion" class="md-nav__link">
+  <a href="#enabling-expansion" class="md-nav__link">
     Enabling expansion
   </a>
   
@@ -6301,14 +6301,14 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#setupbicep" class="md-nav__link">
+  <a href="#setup-bicep" class="md-nav__link">
     Setup Bicep
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#buildingfiles" class="md-nav__link">
+  <a href="#building-files" class="md-nav__link">
     Building files
   </a>
   
@@ -6320,7 +6320,7 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#testingbicepmodules" class="md-nav__link">
+  <a href="#testing-bicep-modules" class="md-nav__link">
     Testing Bicep modules
   </a>
   
@@ -6328,21 +6328,21 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#configuringpathexclusions" class="md-nav__link">
+  <a href="#configuring-path-exclusions" class="md-nav__link">
     Configuring path exclusions
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#restoringmodulesfromaprivateregistry" class="md-nav__link">
+  <a href="#restoring-modules-from-a-private-registry" class="md-nav__link">
     Restoring modules from a private registry
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#usingparameterfiles" class="md-nav__link">
+  <a href="#using-parameter-files" class="md-nav__link">
     Using parameter files
   </a>
   
@@ -6375,7 +6375,7 @@
 
 
 
-<h1 id="usingbicepsource">Using Bicep source<a class="headerlink" href="#usingbicepsource" title="Permanent link">#</a></h1>
+<h1 id="using-bicep-source">Using Bicep source<a class="headerlink" href="#using-bicep-source" title="Permanent link">#</a></h1>
 <p>PSRule for Azure discovers and analyzes Azure resources contained within Bicep files.
 To enable this feature, you need to:</p>
 <ul>
@@ -6391,7 +6391,7 @@ To enable this feature, you need to:</p>
 <p>This topic covers how you can validate Azure resources within <code>.bicep</code> files.
 To learn more about why this is important see <a href="../expanding-source-files/">Expanding source files</a>.</p>
 </div>
-<h2 id="enablingexpansion">Enabling expansion<a class="headerlink" href="#enablingexpansion" title="Permanent link">#</a></h2>
+<h2 id="enabling-expansion">Enabling expansion<a class="headerlink" href="#enabling-expansion" title="Permanent link">#</a></h2>
 <p>To expand Bicep deployments configure <code>ps-rule.yaml</code> with the <code>AZURE_BICEP_FILE_EXPANSION</code> option.</p>
 <div class="highlight"><span class="filename">ps-rule.yaml</span><pre><span></span><code><span class="c1"># YAML: Enable expansion for Bicep source files.</span><span class="w"></span>
 <span class="nt">configuration</span><span class="p">:</span><span class="w"></span>
@@ -6402,11 +6402,11 @@ To learn more about why this is important see <a href="../expanding-source-files
 <p>If you are using JSON parameter files exclusively, you do not need to set this option.
 Instead continue reading <a href="#usingparameterfiles">using parameter files</a>.</p>
 </div>
-<h3 id="setupbicep">Setup Bicep<a class="headerlink" href="#setupbicep" title="Permanent link">#</a></h3>
+<h3 id="setup-bicep">Setup Bicep<a class="headerlink" href="#setup-bicep" title="Permanent link">#</a></h3>
 <p>To expand Azure resources for analysis from Bicep source files the Bicep CLI is required.
 The Bicep CLI is already installed on hosted runners and agents used by GitHub Actions and Azure Pipelines.
 For details on how to configure Bicep for PSRule for Azure see <a href="../setup/setup-bicep/">Setup Bicep</a>.</p>
-<h3 id="buildingfiles">Building files<a class="headerlink" href="#buildingfiles" title="Permanent link">#</a></h3>
+<h3 id="building-files">Building files<a class="headerlink" href="#building-files" title="Permanent link">#</a></h3>
 <p>It's not nessecary to build <code>.bicep</code> files with <code>bicep build</code> or <code>az bicep build</code>.
 PSRule will automatically detect and build <code>.bicep</code> files.
 You may choose to pre-build <code>.bicep</code> files if the Bicep CLI is not available when PSRule is run.</p>
@@ -6415,7 +6415,7 @@ You may choose to pre-build <code>.bicep</code> files if the Bicep CLI is not av
 <p>If using this method, follow <a href="../using-templates/">using templates</a> instead.
 Using <code>bicep build</code> transpiles Bicep code into an Azure template <code>.json</code>.</p>
 </div>
-<h2 id="testingbicepmodules">Testing Bicep modules<a class="headerlink" href="#testingbicepmodules" title="Permanent link">#</a></h2>
+<h2 id="testing-bicep-modules">Testing Bicep modules<a class="headerlink" href="#testing-bicep-modules" title="Permanent link">#</a></h2>
 <p>Bicep allows you to separate out complex details into separate files called <a href="https://docs.microsoft.com/azure/azure-resource-manager/bicep/modules">modules</a>.
 To expand resources, any parameters must be resolved.</p>
 <div class="admonition tip">
@@ -6459,7 +6459,7 @@ module test_required_params &#39;../main.bicep&#39; = {
 }
 </code></pre></div>
 </div>
-<h3 id="configuringpathexclusions">Configuring path exclusions<a class="headerlink" href="#configuringpathexclusions" title="Permanent link">#</a></h3>
+<h3 id="configuring-path-exclusions">Configuring path exclusions<a class="headerlink" href="#configuring-path-exclusions" title="Permanent link">#</a></h3>
 <p>Unless configured, PSRule will discover all <code>.bicep</code> files when expansion is enabled.
 Bicep module files with required parameters will not be able be expanded and should be excluded.
 Instead expand resources from deployments or tests.</p>
@@ -6484,7 +6484,7 @@ Instead expand resources from deployments or tests.</p>
 <p class="admonition-title">Note</p>
 <p>In this example, Bicep files such as <code>deploy.bicep</code> in other directories will be expanded.</p>
 </div>
-<h3 id="restoringmodulesfromaprivateregistry">Restoring modules from a private registry<a class="headerlink" href="#restoringmodulesfromaprivateregistry" title="Permanent link">#</a></h3>
+<h3 id="restoring-modules-from-a-private-registry">Restoring modules from a private registry<a class="headerlink" href="#restoring-modules-from-a-private-registry" title="Permanent link">#</a></h3>
 <p>Bicep modules can be stored in a private registry.
 Storing modules in a private registry gives you a central location to reference modules across your organization.</p>
 <p>To test Bicep deployments which uses modules stored in a private registry, these modules must be restored.
@@ -6533,10 +6533,10 @@ To keep <code>BICEPREGISTRYCLIENTSECRET</code> secure, use a <a href="https://do
 </div>
 </div>
 </div>
-<h3 id="usingparameterfiles">Using parameter files<a class="headerlink" href="#usingparameterfiles" title="Permanent link">#</a></h3>
+<h3 id="using-parameter-files">Using parameter files<a class="headerlink" href="#using-parameter-files" title="Permanent link">#</a></h3>
 <p>When using Bicep, you don't need to use parameter files.
 You can call <code>.bicep</code> files directly from other <code>.bicep</code> files with modules by using the <code>module</code> keyword.
-Alternatively, you can choose to expand and test a Bicep module from JSON parameter files <a href="../using-templates/#bymetadata">by metadata</a>.</p>
+Alternatively, you can choose to expand and test a Bicep module from JSON parameter files <a href="../using-templates/#by-metadata">by metadata</a>.</p>
 <p>When using parameter files exclusively,
 the <code>AZURE_BICEP_FILE_EXPANSION</code> configuration option does not need to be set.
 Instead set the <code>AZURE_PARAMETER_FILE_EXPANSION</code> configuration option to <code>true</code>.
@@ -6582,7 +6582,7 @@ This option will discover Bicep files from parameter metadata.</p>
   <small>
     
       Last update:
-      2022-08-19
+      2022-08-27
     
   </small>
 </div>

@@ -6214,28 +6214,28 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#example1" class="md-nav__link">
+  <a href="#example-1" class="md-nav__link">
     Example 1
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#example2" class="md-nav__link">
+  <a href="#example-2" class="md-nav__link">
     Example 2
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#example3" class="md-nav__link">
+  <a href="#example-3" class="md-nav__link">
     Example 3
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#example4" class="md-nav__link">
+  <a href="#example-4" class="md-nav__link">
     Example 4
   </a>
   
@@ -6377,7 +6377,7 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#relatedlinks" class="md-nav__link">
+  <a href="#related-links" class="md-nav__link">
     RELATED LINKS
   </a>
   
@@ -6459,15 +6459,15 @@ A placeholder value is used instead.</li>
 <li>Template expressions up to a maximum of 100,000 characters are supported.</li>
 </ul>
 <h2 id="examples">Examples<a class="headerlink" href="#examples" title="Permanent link">#</a></h2>
-<h3 id="example1">Example 1<a class="headerlink" href="#example1" title="Permanent link">#</a></h3>
+<h3 id="example-1">Example 1<a class="headerlink" href="#example-1" title="Permanent link">#</a></h3>
 <div class="highlight"><pre><span></span><code><span class="nb">Export-AzRuleTemplateData</span> <span class="n">-TemplateFile</span> <span class="p">.\</span><span class="n">template</span><span class="p">.</span><span class="n">json</span> <span class="n">-ParameterFile</span> <span class="p">.\</span><span class="n">parameters</span><span class="p">.</span><span class="n">json</span><span class="p">;</span>
 </code></pre></div>
 <p>Export resource configuration data based on merging a template and parameter file together.</p>
-<h3 id="example2">Example 2<a class="headerlink" href="#example2" title="Permanent link">#</a></h3>
+<h3 id="example-2">Example 2<a class="headerlink" href="#example-2" title="Permanent link">#</a></h3>
 <div class="highlight"><pre><span></span><code><span class="nb">Get-AzRuleTemplateLink</span> <span class="p">|</span> <span class="nb">Export-AzRuleTemplateData</span><span class="p">;</span>
 </code></pre></div>
 <p>Recursively scan the current working path and export linked templates.</p>
-<h3 id="example3">Example 3<a class="headerlink" href="#example3" title="Permanent link">#</a></h3>
+<h3 id="example-3">Example 3<a class="headerlink" href="#example-3" title="Permanent link">#</a></h3>
 <div class="highlight"><pre><span></span><code><span class="nv">$subscription</span> <span class="p">=</span> <span class="p">@{</span>
   <span class="n">subscriptionId</span> <span class="p">=</span> <span class="s1">&#39;nnnnnnnn-nnnn-nnnn-nnnn-nnnnnnnnnnnn&#39;</span>
   <span class="n">displayName</span> <span class="p">=</span> <span class="s1">&#39;My Azure Subscription&#39;</span>
@@ -6476,7 +6476,7 @@ A placeholder value is used instead.</li>
 <span class="nb">Get-AzRuleTemplateLink</span> <span class="p">|</span> <span class="nb">Export-AzRuleTemplateData</span> <span class="n">-Subscription</span> <span class="nv">$subscription</span><span class="p">;</span>
 </code></pre></div>
 <p>Export linked templates from the current working path using a specific subscription.</p>
-<h3 id="example4">Example 4<a class="headerlink" href="#example4" title="Permanent link">#</a></h3>
+<h3 id="example-4">Example 4<a class="headerlink" href="#example-4" title="Permanent link">#</a></h3>
 <div class="highlight"><pre><span></span><code><span class="nv">$rg</span> <span class="p">=</span> <span class="p">@{</span>
   <span class="n">name</span> <span class="p">=</span> <span class="s1">&#39;my-test-rg&#39;</span>
   <span class="n">location</span> <span class="p">=</span> <span class="s1">&#39;australiaeast&#39;</span>
@@ -6602,7 +6602,7 @@ The hashtable will override the defaults for any specified properties.</p>
 <h3 id="systemiofileinfo">System.IO.FileInfo<a class="headerlink" href="#systemiofileinfo" title="Permanent link">#</a></h3>
 <h3 id="systemobject">System.Object<a class="headerlink" href="#systemobject" title="Permanent link">#</a></h3>
 <h2 id="notes">Notes<a class="headerlink" href="#notes" title="Permanent link">#</a></h2>
-<h2 id="relatedlinks">RELATED LINKS<a class="headerlink" href="#relatedlinks" title="Permanent link">#</a></h2>
+<h2 id="related-links">RELATED LINKS<a class="headerlink" href="#related-links" title="Permanent link">#</a></h2>
 
   <hr>
 <div class="md-source-file">

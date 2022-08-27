@@ -6200,7 +6200,7 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#defaultdefault" class="md-nav__link">
+  <a href="#default-default" class="md-nav__link">
     Default (Default)
   </a>
   
@@ -6234,21 +6234,21 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#example1" class="md-nav__link">
+  <a href="#example-1" class="md-nav__link">
     Example 1
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#example2" class="md-nav__link">
+  <a href="#example-2" class="md-nav__link">
     Example 2
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#example3" class="md-nav__link">
+  <a href="#example-3" class="md-nav__link">
     Example 3
   </a>
   
@@ -6397,7 +6397,7 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#relatedlinks" class="md-nav__link">
+  <a href="#related-links" class="md-nav__link">
     RELATED LINKS
   </a>
   
@@ -6428,7 +6428,7 @@
 <h1 id="export-azruledata">Export-AzRuleData<a class="headerlink" href="#export-azruledata" title="Permanent link">#</a></h1>
 <p>Export resource configuration data from one or more Azure subscriptions.</p>
 <h2 id="syntax">SYNTAX<a class="headerlink" href="#syntax" title="Permanent link">#</a></h2>
-<h3 id="defaultdefault">Default (Default)<a class="headerlink" href="#defaultdefault" title="Permanent link">#</a></h3>
+<h3 id="default-default">Default (Default)<a class="headerlink" href="#default-default" title="Permanent link">#</a></h3>
 <div class="highlight"><pre><span></span><code>Export-AzRuleData [[-OutputPath] &lt;String&gt;] [-Subscription &lt;String[]&gt;] [-Tenant &lt;String[]&gt;]
  [-ResourceGroupName &lt;String[]&gt;] [-Tag &lt;Hashtable&gt;] [-PassThru] [-WhatIf] [-Confirm] [&lt;CommonParameters&gt;]
 </code></pre></div>
@@ -6443,7 +6443,7 @@
 When the <code>-All</code> switch is used, all subscriptions contexts will be exported. i.e. <code>Get-AzContext -ListAvailable</code></p>
 <p>Resource data will be exported to the current working directory by default as JSON files, one per subscription.</p>
 <h2 id="examples">Examples<a class="headerlink" href="#examples" title="Permanent link">#</a></h2>
-<h3 id="example1">Example 1<a class="headerlink" href="#example1" title="Permanent link">#</a></h3>
+<h3 id="example-1">Example 1<a class="headerlink" href="#example-1" title="Permanent link">#</a></h3>
 <div class="highlight"><pre><span></span><code><span class="nb">Export-AzRuleData</span>
 </code></pre></div>
 <div class="highlight"><pre><span></span><code>Directory: C:\
@@ -6453,7 +6453,7 @@ Mode                LastWriteTime         Length Name
 -a----         1/07/2019 10:03 AM        7304948 00000000-0000-0000-0000-000000000001.json
 </code></pre></div>
 <p>Export resource configuration data from current subscription context.</p>
-<h3 id="example2">Example 2<a class="headerlink" href="#example2" title="Permanent link">#</a></h3>
+<h3 id="example-2">Example 2<a class="headerlink" href="#example-2" title="Permanent link">#</a></h3>
 <div class="highlight"><pre><span></span><code><span class="nb">Export-AzRuleData</span> <span class="n">-Subscription</span> <span class="s1">&#39;Contoso Production&#39;</span><span class="p">,</span> <span class="s1">&#39;Contoso Non-production&#39;</span>
 </code></pre></div>
 <div class="highlight"><pre><span></span><code>Directory: C:\
@@ -6464,7 +6464,7 @@ Mode                LastWriteTime         Length Name
 -a----         1/07/2019 10:03 AM        7304948 00000000-0000-0000-0000-000000000002.json
 </code></pre></div>
 <p>Export resource configuration data from subscriptions by name.</p>
-<h3 id="example3">Example 3<a class="headerlink" href="#example3" title="Permanent link">#</a></h3>
+<h3 id="example-3">Example 3<a class="headerlink" href="#example-3" title="Permanent link">#</a></h3>
 <div class="highlight"><pre><span></span><code><span class="nb">Export-AzRuleData</span> <span class="n">-ResourceGroupName</span> <span class="s1">&#39;rg-app1-web&#39;</span><span class="p">,</span> <span class="s1">&#39;rg-app1-db&#39;</span>
 </code></pre></div>
 <div class="highlight"><pre><span></span><code>Directory: C:\
@@ -6597,7 +6597,7 @@ This is the default.</p>
 <p>Return an object for each Azure resource, and configuration exported.
 This is returned when the <code>-PassThru</code> switch is used.</p>
 <h2 id="notes">Notes<a class="headerlink" href="#notes" title="Permanent link">#</a></h2>
-<h2 id="relatedlinks">RELATED LINKS<a class="headerlink" href="#relatedlinks" title="Permanent link">#</a></h2>
+<h2 id="related-links">RELATED LINKS<a class="headerlink" href="#related-links" title="Permanent link">#</a></h2>
 
   <hr>
 <div class="md-source-file">

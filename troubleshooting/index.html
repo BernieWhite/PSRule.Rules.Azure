@@ -810,35 +810,42 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#anearlierversionofazaccountsisimported" class="md-nav__link">
+  <a href="#an-earlier-version-of-azaccounts-is-imported" class="md-nav__link">
     An earlier version of Az.Accounts is imported
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#bicepcompilationtimeout" class="md-nav__link">
+  <a href="#bicep-compilation-timeout" class="md-nav__link">
     Bicep compilation timeout
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#mypipelineisnotfindinganyazureresources" class="md-nav__link">
-    My pipeline is not finding any Azure resources
+  <a href="#no-rules-or-no-azure-resources-are-found" class="md-nav__link">
+    No rules or no Azure resources are found
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#parameterfilewarnsofmetadataproperty" class="md-nav__link">
+  <a href="#custom-rules-are-not-running" class="md-nav__link">
+    Custom rules are not running
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#parameter-file-warns-of-metadata-property" class="md-nav__link">
     Parameter file warns of metadata property
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#couldnotloadfileorassemblyyamldotnet" class="md-nav__link">
+  <a href="#could-not-load-file-or-assembly-yamldotnet" class="md-nav__link">
     Could not load file or assembly YamlDotNet
   </a>
   
@@ -6265,35 +6272,42 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#anearlierversionofazaccountsisimported" class="md-nav__link">
+  <a href="#an-earlier-version-of-azaccounts-is-imported" class="md-nav__link">
     An earlier version of Az.Accounts is imported
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#bicepcompilationtimeout" class="md-nav__link">
+  <a href="#bicep-compilation-timeout" class="md-nav__link">
     Bicep compilation timeout
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#mypipelineisnotfindinganyazureresources" class="md-nav__link">
-    My pipeline is not finding any Azure resources
+  <a href="#no-rules-or-no-azure-resources-are-found" class="md-nav__link">
+    No rules or no Azure resources are found
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#parameterfilewarnsofmetadataproperty" class="md-nav__link">
+  <a href="#custom-rules-are-not-running" class="md-nav__link">
+    Custom rules are not running
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#parameter-file-warns-of-metadata-property" class="md-nav__link">
     Parameter file warns of metadata property
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#couldnotloadfileorassemblyyamldotnet" class="md-nav__link">
+  <a href="#could-not-load-file-or-assembly-yamldotnet" class="md-nav__link">
     Could not load file or assembly YamlDotNet
   </a>
   
@@ -6323,7 +6337,7 @@
 
 <h1 id="troubleshooting">Troubleshooting<a class="headerlink" href="#troubleshooting" title="Permanent link">#</a></h1>
 <p>This article provides troubleshooting instructions for common errors.</p>
-<h2 id="anearlierversionofazaccountsisimported">An earlier version of Az.Accounts is imported<a class="headerlink" href="#anearlierversionofazaccountsisimported" title="Permanent link">#</a></h2>
+<h2 id="an-earlier-version-of-azaccounts-is-imported">An earlier version of Az.Accounts is imported<a class="headerlink" href="#an-earlier-version-of-azaccounts-is-imported" title="Permanent link">#</a></h2>
 <p>When running PSRule for Azure in Azure DevOps within the <code>AzurePowerShell@5</code> task,
 you may see the following error.</p>
 <div class="admonition error">
@@ -6345,7 +6359,7 @@ When using export commands from PSRule, you may need to install these modules.</
 <p>To install these modules, use the following PowerShell command:</p>
 <div class="highlight"><pre><span></span><code><span class="nb">Install-Module</span> <span class="n">Az</span><span class="p">.</span><span class="n">Resources</span> <span class="n">-Force</span> <span class="n">-Scope</span> <span class="n">CurrentUser</span>
 </code></pre></div>
-<h2 id="bicepcompilationtimeout">Bicep compilation timeout<a class="headerlink" href="#bicepcompilationtimeout" title="Permanent link">#</a></h2>
+<h2 id="bicep-compilation-timeout">Bicep compilation timeout<a class="headerlink" href="#bicep-compilation-timeout" title="Permanent link">#</a></h2>
 <p>When expanding Bicep source files you may get an error similar to the following:</p>
 <div class="admonition error">
 <p class="admonition-title">Error</p>
@@ -6359,26 +6373,60 @@ The default timeout is 5 seconds.</p>
 <li>Cache bicep modules restored from a registry in continuous integration (CI) pipelines.</li>
 </ul>
 <p>To increase the timeout value, set the <code>AZURE_BICEP_FILE_EXPANSION_TIMEOUT</code> configuration option.
-See <a href="../setup/configuring-expansion/#bicepcompilationtimeout">Bicep compilation timeout</a> for details on how to configure this option.</p>
-<h2 id="mypipelineisnotfindinganyazureresources">My pipeline is not finding any Azure resources<a class="headerlink" href="#mypipelineisnotfindinganyazureresources" title="Permanent link">#</a></h2>
+See <a href="../setup/configuring-expansion/#bicep-compilation-timeout">Bicep compilation timeout</a> for details on how to configure this option.</p>
+<h2 id="no-rules-or-no-azure-resources-are-found">No rules or no Azure resources are found<a class="headerlink" href="#no-rules-or-no-azure-resources-are-found" title="Permanent link">#</a></h2>
 <p>There is a few common causes of this issue including:</p>
 <ul>
-<li>Your pipeline is configured with the parameter <code>inputType</code> set to <code>inputPath</code>.
-  PSRule for Azure will not work with this setting.
-  Only <code>inputType</code> set to <code>repository</code> <em>(default)</em> is supported.
-  You may have set this parameter because you wanted to use the <code>inputPath</code> parameter.
+<li><strong>Check input format</strong> &mdash; PSRule for Azure must discover files to expand them.<ul>
+<li>When running PSRule for Azure using GitHub Actions or the Azure Pipelines extension:<ul>
+<li>Your pipeline <strong>must</strong> be set to <code>inputType: repository</code>, which is the default value.</li>
+<li>PSRule for Azure will not work with <code>inputType</code> set to <code>inputPath</code>.</li>
+<li>You may have set this parameter because you wanted to use the <code>inputPath</code> parameter.
   Setting the <code>inputType</code> is not a requirement for using the <code>inputPath</code> parameter.
-  The <code>inputPath</code> can be used independently.</li>
-<li>You have not enabled expansion for Azure parameter files or Bicep source files.
+  The <code>inputPath</code> parameter can be used independently.</li>
+</ul>
+</li>
+<li>When running PSRule for Azure from PowerShell:<ul>
+<li>Your command-line <strong>must</strong> use the <code>-Format File</code> parameter.</li>
+<li>Your command-line <strong>must</strong> use the <code>-InputPath</code> or <code>-f</code> parameter followed by a file or directory path.</li>
+<li>For example: <code>Assert-PSRule -Module PSRule.Rules.Azure -Format File -f 'modules/'</code>.</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><strong>Check expansion is enabled</strong> &mdash; Expansion must be enabled to analyze Azure Infrastructure as Code.
   See <a href="../using-templates/">using templates</a> and <a href="../using-bicep/">using Bicep source</a> for details on how to enable expansion.</li>
-<li>You are using parameter files to but haven't linked them to templates or Bicep source files.
+<li><strong>Check parameter files are linked</strong> &mdash; Parameter files must be linked to ARM templates or Bicep source files.
   See <a href="../using-templates/">using templates</a> for details on how to link using metadata or naming convention.</li>
 </ul>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>If your pipeline is still not finding any Azure resources, please <a href="https://github.com/Azure/PSRule.Rules.Azure/discussions">join or start a discussion</a>.</p>
 </div>
-<h2 id="parameterfilewarnsofmetadataproperty">Parameter file warns of metadata property<a class="headerlink" href="#parameterfilewarnsofmetadataproperty" title="Permanent link">#</a></h2>
+<h2 id="custom-rules-are-not-running">Custom rules are not running<a class="headerlink" href="#custom-rules-are-not-running" title="Permanent link">#</a></h2>
+<p>There is a few common causes of this issue including:</p>
+<ul>
+<li><strong>Check rule path</strong> &mdash; By default, PSRule will look for rules in the <code>.ps-rule/</code> directory.
+  This directory is the root for your repository or the current working path by default.
+  On case-sensitive file systems such as Linux, this directory name is case-sensitive.
+  See <a href="https://github.com/Azure/PSRule.Rules.Azure/discussions">Storing and naming rules</a> for more information.</li>
+<li><strong>Check file name suffix</strong> &mdash; PSRule only looks for files with the <code>.Rule.ps1</code>, <code>.Rule.yaml</code>, or <code>.Rule.jsonc</code> suffix.
+  On case-sensitive file systems such as Linux, this file siffix is case-sensitive.
+  See <a href="https://github.com/Azure/PSRule.Rules.Azure/discussions">Storing and naming rules</a> for more information.</li>
+<li><strong>Check binding configuration</strong> &mdash; PSRule uses <em>binding</em> to work out which property to use for a resource type.
+  To be able to use the <code>-Type</code> parameter or <code>type</code> properties in rules definitions, binding must be set.
+  This is automatically configured for PSRule for Azure, however must be set in <code>ps-rule.yaml</code> for custom rules.
+  See <a href="../customization/enforce-custom-tags/#binding-type">binding type</a> for more information.</li>
+<li><strong>Check modules</strong> &mdash; PSRule for Azure is responsible for expanding Azure resources from Infrastructure as Code.
+  Expansion occurs automatically in memory when enabled.
+  For this to work, the module <code>PSRule.Rules.Azure</code> must be run with any custom rules.
+  See <a href="../using-templates/">using templates</a> and <a href="../using-bicep/">using Bicep source</a> for details on how to enable expansion.</li>
+</ul>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>You may be able to use <code>git mv</code> to change the case of a file if it is commited to the repository inorrectly.</p>
+</div>
+<h2 id="parameter-file-warns-of-metadata-property">Parameter file warns of metadata property<a class="headerlink" href="#parameter-file-warns-of-metadata-property" title="Permanent link">#</a></h2>
 <p>You may find while editing a <code>.json</code> parameter file the root <code>metadata</code> property is flagged with a warning.</p>
 <div class="admonition warning">
 <p class="admonition-title">Warning</p>
@@ -6397,7 +6445,7 @@ See <a href="../setup/configuring-expansion/#bicepcompilationtimeout">Bicep comp
 <p>This doesn't affect the workings of the parameter file or deployment.
 The reason for the warning is that the <code>metadata</code> property has not been added to the parameter file JSON schema.
 However, the top level <code>metadata</code> property is ignored by Azure Resource Manager when deploying a template.</p>
-<h2 id="couldnotloadfileorassemblyyamldotnet">Could not load file or assembly YamlDotNet<a class="headerlink" href="#couldnotloadfileorassemblyyamldotnet" title="Permanent link">#</a></h2>
+<h2 id="could-not-load-file-or-assembly-yamldotnet">Could not load file or assembly YamlDotNet<a class="headerlink" href="#could-not-load-file-or-assembly-yamldotnet" title="Permanent link">#</a></h2>
 <p>PSRule <strong>&gt;=1.3.0</strong> uses an updated version of the YamlDotNet library.
 The PSRule for Azure <strong>&lt;1.3.1</strong> uses an older version of this library which may conflict.</p>
 <p>To avoid this issue:</p>
@@ -6418,7 +6466,7 @@ The PSRule for Azure <strong>&lt;1.3.1</strong> uses an older version of this li
   <small>
     
       Last update:
-      2022-08-19
+      2022-08-27
     
   </small>
 </div>

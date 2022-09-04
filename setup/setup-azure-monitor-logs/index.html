@@ -1188,6 +1188,13 @@
   
 </li>
         
+          <li class="md-nav__item">
+  <a href="#querying-the-data" class="md-nav__link">
+    Querying The Data
+  </a>
+  
+</li>
+        
       </ul>
     </nav>
   
@@ -1315,6 +1322,8 @@
       
       
       
+        
+          
         
           
         
@@ -3320,6 +3329,20 @@
     <li class="md-nav__item">
       <a href="../../en/rules/Azure.DataFactory.Version/" class="md-nav__link">
         Azure.DataFactory.Version
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../en/rules/Azure.Deployment.AdminUsername/" class="md-nav__link">
+        Azure.Deployment.AdminUsername
       </a>
     </li>
   
@@ -6388,6 +6411,13 @@
   
 </li>
         
+          <li class="md-nav__item">
+  <a href="#querying-the-data" class="md-nav__link">
+    Querying The Data
+  </a>
+  
+</li>
+        
       </ul>
     </nav>
   
@@ -6572,13 +6602,17 @@ PSRule_CL
 | where TimeGenerated &gt; ago(30d)
 | summarize Pass=countif(Outcome_s == &quot;Pass&quot;), Fail=countif(Outcome_s  == &quot;Fail&quot;) by RunId_s
 </code></pre></div>
+<h3 id="querying-the-data">Querying The Data<a class="headerlink" href="#querying-the-data" title="Permanent link">#</a></h3>
+<p>Once the results have been published to the Log Analytics workspace, they can be queried by executing
+results against the <code>PSRule_CL</code> table (under Custom Logs). For more information on how to write Log
+Analytics querys, review the <a href="https://docs.microsoft.com/azure/azure-monitor/logs/log-analytics-tutorial">Log Analytics tutortial</a></p>
 
   <hr>
 <div class="md-source-file">
   <small>
     
       Last update:
-      2022-08-16
+      2022-09-03
     
   </small>
 </div>

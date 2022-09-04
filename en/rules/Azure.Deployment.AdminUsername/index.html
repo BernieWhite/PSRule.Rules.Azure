@@ -6,27 +6,27 @@
       <meta charset="utf-8">
       <meta name="viewport" content="width=device-width,initial-scale=1">
       
-        <meta name="description" content="Ready to go validation and governance controls for Azure Infrastructure as Code (IaC).">
+        <meta name="description" content="The adminUsername or administratorUsername property should not be a string literal in nested templates.">
       
       
-        <meta name="author" content="BernieWhite">
+        <meta name="author" content="Microsoft">
       
       
-        <link rel="canonical" href="https://azure.github.io/PSRule.Rules.Azure/expanding-source-files/">
+        <link rel="canonical" href="https://azure.github.io/PSRule.Rules.Azure/en/rules/Azure.Deployment.AdminUsername/">
       
-      <link rel="icon" href="../assets/ms_icon.png">
+      <link rel="icon" href="../../../assets/ms_icon.png">
       <meta name="generator" content="mkdocs-1.3.1, mkdocs-material-8.4.2">
     
     
       
-        <title>Expanding source files - PSRule for Azure</title>
+        <title>Azure.Deployment.AdminUsername - PSRule for Azure</title>
       
     
     
-      <link rel="stylesheet" href="../assets/stylesheets/main.69437709.min.css">
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.69437709.min.css">
       
         
-        <link rel="stylesheet" href="../assets/stylesheets/palette.cbb835fc.min.css">
+        <link rel="stylesheet" href="../../../assets/stylesheets/palette.cbb835fc.min.css">
         
           
           
@@ -46,9 +46,9 @@
       
     
     
-      <link rel="stylesheet" href="../assets/stylesheets/extra.css">
+      <link rel="stylesheet" href="../../../assets/stylesheets/extra.css">
     
-    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    <script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
 
@@ -64,6 +64,8 @@
   <!-- Determine description -->
   
   
+    
+  
 
   <!-- The image needs to have an absolute URL -->
   
@@ -71,20 +73,20 @@
   <!-- Open graph meta tags -->
   <meta property="og:site_name" content="PSRule for Azure" />
   <meta property="og:type" content="website" />
-  <meta property="og:title" content="PSRule for Azure - Expanding source files" />
-  <meta property="og:description" content="Ready to go validation and governance controls for Azure Infrastructure as Code (IaC)." />
-  <meta property="og:url" content="https://azure.github.io/PSRule.Rules.Azure/expanding-source-files/" />
+  <meta property="og:title" content="PSRule for Azure - Azure.Deployment.AdminUsername" />
+  <meta property="og:description" content="The adminUsername or administratorUsername property should not be a string literal in nested templates." />
+  <meta property="og:url" content="https://azure.github.io/PSRule.Rules.Azure/en/rules/Azure.Deployment.AdminUsername/" />
   <meta property="og:image" content="https://repository-images.githubusercontent.com/184154668/58818c00-d496-11eb-9b77-016145022654" />
   <meta property="og:image:type" content="image/png" />
   <meta property="og:image:width" content="1280" />
   <meta property="og:image:height" content="640" />
-  <meta property="og:image:alt" content="Ready to go validation and governance controls for Azure Infrastructure as Code (IaC)." />
+  <meta property="og:image:alt" content="The adminUsername or administratorUsername property should not be a string literal in nested templates." />
 
   <!-- Twitter meta tags -->
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:site" content="@github" />
-  <meta name="twitter:title" content="PSRule for Azure - Expanding source files" />
-  <meta name="twitter:description" content="Ready to go validation and governance controls for Azure Infrastructure as Code (IaC)." />
+  <meta name="twitter:title" content="PSRule for Azure - Azure.Deployment.AdminUsername" />
+  <meta name="twitter:description" content="The adminUsername or administratorUsername property should not be a string literal in nested templates." />
   <meta name="twitter:image" content="https://repository-images.githubusercontent.com/184154668/58818c00-d496-11eb-9b77-016145022654" />
 
 
@@ -106,7 +108,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#expanding-source-files" class="md-skip">
+        <a href="#administrator-username-types" class="md-skip">
           Skip to content
         </a>
       
@@ -124,9 +126,9 @@
 
 <header class="md-header" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="Header">
-    <a href=".." title="PSRule for Azure" class="md-header__button md-logo" aria-label="PSRule for Azure" data-md-component="logo">
+    <a href="../../.." title="PSRule for Azure" class="md-header__button md-logo" aria-label="PSRule for Azure" data-md-component="logo">
       
-  <img src="../assets/ms_icon.png" alt="logo">
+  <img src="../../../assets/ms_icon.png" alt="logo">
 
     </a>
     <label class="md-header__button md-icon" for="__drawer">
@@ -142,7 +144,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Expanding source files
+              Azure.Deployment.AdminUsername
             
           </span>
         </div>
@@ -217,7 +219,7 @@
 
 
   <li class="md-tabs__item">
-    <a href=".." class="md-tabs__link">
+    <a href="../../.." class="md-tabs__link">
       Home
     </a>
   </li>
@@ -225,8 +227,6 @@
       
         
   
-  
-    
   
 
 
@@ -239,7 +239,7 @@
   
   
     <li class="md-tabs__item">
-      <a href="../about/" class="md-tabs__link md-tabs__link--active">
+      <a href="../../../about/" class="md-tabs__link">
         Getting started
       </a>
     </li>
@@ -257,7 +257,7 @@
   
   
     <li class="md-tabs__item">
-      <a href="../setup/configuring-options/" class="md-tabs__link">
+      <a href="../../../setup/configuring-options/" class="md-tabs__link">
         Setup
       </a>
     </li>
@@ -267,13 +267,15 @@
         
   
   
+    
+  
 
 
   
   
   
     <li class="md-tabs__item">
-      <a href="../en/rules/" class="md-tabs__link">
+      <a href="../" class="md-tabs__link md-tabs__link--active">
         Reference
       </a>
     </li>
@@ -301,9 +303,9 @@
 
 <nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href=".." title="PSRule for Azure" class="md-nav__button md-logo" aria-label="PSRule for Azure" data-md-component="logo">
+    <a href="../../.." title="PSRule for Azure" class="md-nav__button md-logo" aria-label="PSRule for Azure" data-md-component="logo">
       
-  <img src="../assets/ms_icon.png" alt="logo">
+  <img src="../../../assets/ms_icon.png" alt="logo">
 
     </a>
     PSRule for Azure
@@ -331,7 +333,7 @@
   
   
     <li class="md-nav__item">
-      <a href=".." class="md-nav__link">
+      <a href="../../.." class="md-nav__link">
         Home
       </a>
     </li>
@@ -344,14 +346,12 @@
 
   
   
-    
-  
   
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2" type="checkbox" id="__nav_2" checked>
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2" type="checkbox" id="__nav_2" >
       
       
       
@@ -434,7 +434,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../about/" class="md-nav__link">
+      <a href="../../../about/" class="md-nav__link">
         About
       </a>
     </li>
@@ -448,7 +448,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../features/" class="md-nav__link">
+      <a href="../../../features/" class="md-nav__link">
         Features
       </a>
     </li>
@@ -462,7 +462,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../faq/" class="md-nav__link">
+      <a href="../../../faq/" class="md-nav__link">
         FAQ
       </a>
     </li>
@@ -483,7 +483,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../install-instructions/" class="md-nav__link">
+      <a href="../../../install-instructions/" class="md-nav__link">
         Installation
       </a>
     </li>
@@ -495,14 +495,12 @@
               
   
   
-    
-  
   
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_3" type="checkbox" id="__nav_2_3" checked>
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_3" type="checkbox" id="__nav_2_3" >
       
       
       
@@ -535,120 +533,11 @@
               
   
   
-    
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          Expanding source files
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../../../expanding-source-files/" class="md-nav__link">
         Expanding source files
       </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#source-expansion" class="md-nav__link">
-    Source expansion
-  </a>
-  
-    <nav class="md-nav" aria-label="Source expansion">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#feature-support" class="md-nav__link">
-    Feature support
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#limitations" class="md-nav__link">
-    Limitations
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#strong-type" class="md-nav__link">
-    Strong type
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#scope-functions" class="md-nav__link">
-    Scope functions
-  </a>
-  
-    <nav class="md-nav" aria-label="Scope functions">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#subscription" class="md-nav__link">
-    Subscription
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#resource-group" class="md-nav__link">
-    Resource Group
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#tenant" class="md-nav__link">
-    Tenant
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#management-group" class="md-nav__link">
-    Management Group
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -660,7 +549,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../using-templates/" class="md-nav__link">
+      <a href="../../../using-templates/" class="md-nav__link">
         Using templates
       </a>
     </li>
@@ -674,7 +563,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../using-bicep/" class="md-nav__link">
+      <a href="../../../using-bicep/" class="md-nav__link">
         Using Bicep source
       </a>
     </li>
@@ -688,7 +577,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../creating-your-pipeline/" class="md-nav__link">
+      <a href="../../../creating-your-pipeline/" class="md-nav__link">
         Creating your pipeline
       </a>
     </li>
@@ -702,7 +591,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../working-with-baselines/" class="md-nav__link">
+      <a href="../../../working-with-baselines/" class="md-nav__link">
         Working with baselines
       </a>
     </li>
@@ -755,7 +644,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../export-rule-data/" class="md-nav__link">
+      <a href="../../../export-rule-data/" class="md-nav__link">
         Exporting rule data
       </a>
     </li>
@@ -769,7 +658,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../analyzing-resources/" class="md-nav__link">
+      <a href="../../../analyzing-resources/" class="md-nav__link">
         Analyzing resources
       </a>
     </li>
@@ -790,7 +679,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../validating-locally/" class="md-nav__link">
+      <a href="../../../validating-locally/" class="md-nav__link">
         Validating locally
       </a>
     </li>
@@ -838,7 +727,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../customization/storing-custom-rules/" class="md-nav__link">
+      <a href="../../../customization/storing-custom-rules/" class="md-nav__link">
         Storing custom rules
       </a>
     </li>
@@ -852,7 +741,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../customization/enforce-custom-tags/" class="md-nav__link">
+      <a href="../../../customization/enforce-custom-tags/" class="md-nav__link">
         Enforcing custom tags
       </a>
     </li>
@@ -866,7 +755,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../customization/enforce-codeowners/" class="md-nav__link">
+      <a href="../../../customization/enforce-codeowners/" class="md-nav__link">
         Enforcing code ownership
       </a>
     </li>
@@ -887,7 +776,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../troubleshooting/" class="md-nav__link">
+      <a href="../../../troubleshooting/" class="md-nav__link">
         Troubleshooting
       </a>
     </li>
@@ -901,7 +790,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../samples/" class="md-nav__link">
+      <a href="../../../samples/" class="md-nav__link">
         Samples
       </a>
     </li>
@@ -915,7 +804,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../license-contributing/" class="md-nav__link">
+      <a href="../../../license-contributing/" class="md-nav__link">
         License and contributing
       </a>
     </li>
@@ -929,7 +818,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../related-projects/" class="md-nav__link">
+      <a href="../../../related-projects/" class="md-nav__link">
         Related projects
       </a>
     </li>
@@ -1009,7 +898,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../CHANGELOG-v1/" class="md-nav__link">
+      <a href="../../../CHANGELOG-v1/" class="md-nav__link">
         v1
       </a>
     </li>
@@ -1023,7 +912,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../CHANGELOG-v0/" class="md-nav__link">
+      <a href="../../../CHANGELOG-v0/" class="md-nav__link">
         v0
       </a>
     </li>
@@ -1044,7 +933,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../upgrade-notes/" class="md-nav__link">
+      <a href="../../../upgrade-notes/" class="md-nav__link">
         Upgrade notes
       </a>
     </li>
@@ -1058,7 +947,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../deprecations/" class="md-nav__link">
+      <a href="../../../deprecations/" class="md-nav__link">
         Deprecations
       </a>
     </li>
@@ -1079,7 +968,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../support/" class="md-nav__link">
+      <a href="../../../support/" class="md-nav__link">
         Support
       </a>
     </li>
@@ -1141,7 +1030,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../setup/configuring-options/" class="md-nav__link">
+      <a href="../../../setup/configuring-options/" class="md-nav__link">
         Configuring options
       </a>
     </li>
@@ -1155,7 +1044,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../setup/configuring-rules/" class="md-nav__link">
+      <a href="../../../setup/configuring-rules/" class="md-nav__link">
         Configuring rule defaults
       </a>
     </li>
@@ -1169,7 +1058,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../setup/configuring-expansion/" class="md-nav__link">
+      <a href="../../../setup/configuring-expansion/" class="md-nav__link">
         Configuring expansion
       </a>
     </li>
@@ -1183,7 +1072,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../setup/setup-bicep/" class="md-nav__link">
+      <a href="../../../setup/setup-bicep/" class="md-nav__link">
         Setup Bicep
       </a>
     </li>
@@ -1197,7 +1086,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../setup/setup-azure-monitor-logs/" class="md-nav__link">
+      <a href="../../../setup/setup-azure-monitor-logs/" class="md-nav__link">
         Setup Azure Monitor logs
       </a>
     </li>
@@ -1211,7 +1100,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../integrations/" class="md-nav__link">
+      <a href="../../../integrations/" class="md-nav__link">
         Integrations
       </a>
     </li>
@@ -1231,12 +1120,14 @@
 
   
   
+    
+  
   
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4" type="checkbox" id="__nav_4" >
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4" type="checkbox" id="__nav_4" checked>
       
       
       
@@ -1260,7 +1151,7 @@
         
         
         <div class="md-nav__link md-nav__link--index ">
-          <a href="../en/rules/">Reference</a>
+          <a href="../">Reference</a>
           
             <label for="__nav_4">
               <span class="md-nav__icon md-icon"></span>
@@ -1283,7 +1174,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../en/rules/module/" class="md-nav__link">
+      <a href="../module/" class="md-nav__link">
         By pillar
       </a>
     </li>
@@ -1297,7 +1188,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../en/rules/resource/" class="md-nav__link">
+      <a href="../resource/" class="md-nav__link">
         By resource
       </a>
     </li>
@@ -1309,12 +1200,14 @@
               
   
   
+    
+  
   
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4_4" type="checkbox" id="__nav_4_4" >
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4_4" type="checkbox" id="__nav_4_4" checked>
       
       
       
@@ -1909,7 +1802,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../en/rules/Azure.ACR.AdminUser/" class="md-nav__link">
+      <a href="../Azure.ACR.AdminUser/" class="md-nav__link">
         Azure.ACR.AdminUser
       </a>
     </li>
@@ -1923,7 +1816,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../en/rules/Azure.ACR.ContainerScan/" class="md-nav__link">
+      <a href="../Azure.ACR.ContainerScan/" class="md-nav__link">
         Azure.ACR.ContainerScan
       </a>
     </li>
@@ -1937,7 +1830,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../en/rules/Azure.ACR.ContentTrust/" class="md-nav__link">
+      <a href="../Azure.ACR.ContentTrust/" class="md-nav__link">
         Azure.ACR.ContentTrust
       </a>
     </li>
@@ -1951,7 +1844,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../en/rules/Azure.ACR.GeoReplica/" class="md-nav__link">
+      <a href="../Azure.ACR.GeoReplica/" class="md-nav__link">
         Azure.ACR.GeoReplica
       </a>
     </li>
@@ -1965,7 +1858,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../en/rules/Azure.ACR.ImageHealth/" class="md-nav__link">
+      <a href="../Azure.ACR.ImageHealth/" class="md-nav__link">
         Azure.ACR.ImageHealth
       </a>
     </li>
@@ -1979,7 +1872,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../en/rules/Azure.ACR.MinSku/" class="md-nav__link">
+      <a href="../Azure.ACR.MinSku/" class="md-nav__link">
         Azure.ACR.MinSku
       </a>
     </li>
@@ -1993,7 +1886,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../en/rules/Azure.ACR.Name/" class="md-nav__link">
+      <a href="../Azure.ACR.Name/" class="md-nav__link">
         Azure.ACR.Name
       </a>
     </li>
@@ -2007,7 +1900,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../en/rules/Azure.ACR.Quarantine/" class="md-nav__link">
+      <a href="../Azure.ACR.Quarantine/" class="md-nav__link">
         Azure.ACR.Quarantine
       </a>
     </li>
@@ -2021,7 +1914,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../en/rules/Azure.ACR.Retention/" class="md-nav__link">
+      <a href="../Azure.ACR.Retention/" class="md-nav__link">
         Azure.ACR.Retention
       </a>
     </li>
@@ -2035,7 +1928,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../en/rules/Azure.ACR.Usage/" class="md-nav__link">
+      <a href="../Azure.ACR.Usage/" class="md-nav__link">
         Azure.ACR.Usage
       </a>
     </li>
@@ -2049,7 +1942,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../en/rules/Azure.ADX.DiskEncryption/" class="md-nav__link">
+      <a href="../Azure.ADX.DiskEncryption/" class="md-nav__link">
         Azure.ADX.DiskEncryption
       </a>
     </li>
@@ -2063,7 +1956,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../en/rules/Azure.ADX.ManagedIdentity/" class="md-nav__link">
+      <a href="../Azure.ADX.ManagedIdentity/" class="md-nav__link">
         Azure.ADX.ManagedIdentity
       </a>
     </li>
@@ -2077,7 +1970,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../en/rules/Azure.ADX.SLA/" class="md-nav__link">
+      <a href="../Azure.ADX.SLA/" class="md-nav__link">
         Azure.ADX.SLA
       </a>
     </li>
@@ -2091,7 +1984,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../en/rules/Azure.ADX.Usage/" class="md-nav__link">
+      <a href="../Azure.ADX.Usage/" class="md-nav__link">
         Azure.ADX.Usage
       </a>
     </li>
@@ -2105,7 +1998,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../en/rules/Azure.AKS.AuditLogs/" class="md-nav__link">
+      <a href="../Azure.AKS.AuditLogs/" class="md-nav__link">
         Azure.AKS.AuditLogs
       </a>
     </li>
@@ -2119,7 +2012,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../en/rules/Azure.AKS.AuthorizedIPs/" class="md-nav__link">
+      <a href="../Azure.AKS.AuthorizedIPs/" class="md-nav__link">
         Azure.AKS.AuthorizedIPs
       </a>
     </li>
@@ -2133,7 +2026,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../en/rules/Azure.AKS.AutoScaling/" class="md-nav__link">
+      <a href="../Azure.AKS.AutoScaling/" class="md-nav__link">
         Azure.AKS.AutoScaling
       </a>
     </li>
@@ -2147,7 +2040,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../en/rules/Azure.AKS.AutoUpgrade/" class="md-nav__link">
+      <a href="../Azure.AKS.AutoUpgrade/" class="md-nav__link">
         Azure.AKS.AutoUpgrade
       </a>
     </li>
@@ -2161,7 +2054,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../en/rules/Azure.AKS.AvailabilityZone/" class="md-nav__link">
+      <a href="../Azure.AKS.AvailabilityZone/" class="md-nav__link">
         Azure.AKS.AvailabilityZone
       </a>
     </li>
@@ -2175,7 +2068,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../en/rules/Azure.AKS.AzurePolicyAddOn/" class="md-nav__link">
+      <a href="../Azure.AKS.AzurePolicyAddOn/" class="md-nav__link">
         Azure.AKS.AzurePolicyAddOn
       </a>
     </li>
@@ -2189,7 +2082,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../en/rules/Azure.AKS.AzureRBAC/" class="md-nav__link">
+      <a href="../Azure.AKS.AzureRBAC/" class="md-nav__link">
         Azure.AKS.AzureRBAC
       </a>
     </li>
@@ -2203,7 +2096,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../en/rules/Azure.AKS.CNISubnetSize/" class="md-nav__link">
+      <a href="../Azure.AKS.CNISubnetSize/" class="md-nav__link">
         Azure.AKS.CNISubnetSize
       </a>
     </li>
@@ -2217,7 +2110,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../en/rules/Azure.AKS.ContainerInsights/" class="md-nav__link">
+      <a href="../Azure.AKS.ContainerInsights/" class="md-nav__link">
         Azure.AKS.ContainerInsights
       </a>
     </li>
@@ -2231,7 +2124,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../en/rules/Azure.AKS.DNSPrefix/" class="md-nav__link">
+      <a href="../Azure.AKS.DNSPrefix/" class="md-nav__link">
         Azure.AKS.DNSPrefix
       </a>
     </li>
@@ -2245,7 +2138,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../en/rules/Azure.AKS.HttpAppRouting/" class="md-nav__link">
+      <a href="../Azure.AKS.HttpAppRouting/" class="md-nav__link">
         Azure.AKS.HttpAppRouting
       </a>
     </li>
@@ -2259,7 +2152,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../en/rules/Azure.AKS.LocalAccounts/" class="md-nav__link">
+      <a href="../Azure.AKS.LocalAccounts/" class="md-nav__link">
         Azure.AKS.LocalAccounts
       </a>
     </li>
@@ -2273,7 +2166,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../en/rules/Azure.AKS.ManagedAAD/" class="md-nav__link">
+      <a href="../Azure.AKS.ManagedAAD/" class="md-nav__link">
         Azure.AKS.ManagedAAD
       </a>
     </li>
@@ -2287,7 +2180,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../en/rules/Azure.AKS.ManagedIdentity/" class="md-nav__link">
+      <a href="../Azure.AKS.ManagedIdentity/" class="md-nav__link">
         Azure.AKS.ManagedIdentity
       </a>
     </li>
@@ -2301,7 +2194,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../en/rules/Azure.AKS.MinNodeCount/" class="md-nav__link">
+      <a href="../Azure.AKS.MinNodeCount/" class="md-nav__link">
         Azure.AKS.MinNodeCount
       </a>
     </li>
@@ -2315,7 +2208,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../en/rules/Azure.AKS.Name/" class="md-nav__link">
+      <a href="../Azure.AKS.Name/" class="md-nav__link">
         Azure.AKS.Name
       </a>
     </li>
@@ -2329,7 +2222,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../en/rules/Azure.AKS.NetworkPolicy/" class="md-nav__link">
+      <a href="../Azure.AKS.NetworkPolicy/" class="md-nav__link">
         Azure.AKS.NetworkPolicy
       </a>
     </li>
@@ -2343,7 +2236,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../en/rules/Azure.AKS.NodeMinPods/" class="md-nav__link">
+      <a href="../Azure.AKS.NodeMinPods/" class="md-nav__link">
         Azure.AKS.NodeMinPods
       </a>
     </li>
@@ -2357,7 +2250,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../en/rules/Azure.AKS.PlatformLogs/" class="md-nav__link">
+      <a href="../Azure.AKS.PlatformLogs/" class="md-nav__link">
         Azure.AKS.PlatformLogs
       </a>
     </li>
@@ -2371,7 +2264,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../en/rules/Azure.AKS.PodIdentity/" class="md-nav__link">
+      <a href="../Azure.AKS.PodIdentity/" class="md-nav__link">
         Azure.AKS.PodIdentity
       </a>
     </li>
@@ -2385,7 +2278,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../en/rules/Azure.AKS.PoolScaleSet/" class="md-nav__link">
+      <a href="../Azure.AKS.PoolScaleSet/" class="md-nav__link">
         Azure.AKS.PoolScaleSet
       </a>
     </li>
@@ -2399,7 +2292,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../en/rules/Azure.AKS.PoolVersion/" class="md-nav__link">
+      <a href="../Azure.AKS.PoolVersion/" class="md-nav__link">
         Azure.AKS.PoolVersion
       </a>
     </li>
@@ -2413,7 +2306,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../en/rules/Azure.AKS.SecretStore/" class="md-nav__link">
+      <a href="../Azure.AKS.SecretStore/" class="md-nav__link">
         Azure.AKS.SecretStore
       </a>
     </li>
@@ -2427,7 +2320,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../en/rules/Azure.AKS.SecretStoreRotation/" class="md-nav__link">
+      <a href="../Azure.AKS.SecretStoreRotation/" class="md-nav__link">
         Azure.AKS.SecretStoreRotation
       </a>
     </li>
@@ -2441,7 +2334,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../en/rules/Azure.AKS.StandardLB/" class="md-nav__link">
+      <a href="../Azure.AKS.StandardLB/" class="md-nav__link">
         Azure.AKS.StandardLB
       </a>
     </li>
@@ -2455,7 +2348,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../en/rules/Azure.AKS.UptimeSLA/" class="md-nav__link">
+      <a href="../Azure.AKS.UptimeSLA/" class="md-nav__link">
         Azure.AKS.UptimeSLA
       </a>
     </li>
@@ -2469,7 +2362,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../en/rules/Azure.AKS.UseRBAC/" class="md-nav__link">
+      <a href="../Azure.AKS.UseRBAC/" class="md-nav__link">
         Azure.AKS.UseRBAC
       </a>
     </li>
@@ -2483,7 +2376,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../en/rules/Azure.AKS.Version/" class="md-nav__link">
+      <a href="../Azure.AKS.Version/" class="md-nav__link">
         Azure.AKS.Version
       </a>
     </li>
@@ -2497,7 +2390,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../en/rules/Azure.APIM.APIDescriptors/" class="md-nav__link">
+      <a href="../Azure.APIM.APIDescriptors/" class="md-nav__link">
         Azure.APIM.APIDescriptors
       </a>
     </li>
@@ -2511,7 +2404,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../en/rules/Azure.APIM.AvailabilityZone/" class="md-nav__link">
+      <a href="../Azure.APIM.AvailabilityZone/" class="md-nav__link">
         Azure.APIM.AvailabilityZone
       </a>
     </li>
@@ -2525,7 +2418,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../en/rules/Azure.APIM.CertificateExpiry/" class="md-nav__link">
+      <a href="../Azure.APIM.CertificateExpiry/" class="md-nav__link">
         Azure.APIM.CertificateExpiry
       </a>
     </li>
@@ -2539,7 +2432,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../en/rules/Azure.APIM.Ciphers/" class="md-nav__link">
+      <a href="../Azure.APIM.Ciphers/" class="md-nav__link">
         Azure.APIM.Ciphers
       </a>
     </li>
@@ -2553,7 +2446,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../en/rules/Azure.APIM.EncryptValues/" class="md-nav__link">
+      <a href="../Azure.APIM.EncryptValues/" class="md-nav__link">
         Azure.APIM.EncryptValues
       </a>
     </li>
@@ -2567,7 +2460,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../en/rules/Azure.APIM.HTTPBackend/" class="md-nav__link">
+      <a href="../Azure.APIM.HTTPBackend/" class="md-nav__link">
         Azure.APIM.HTTPBackend
       </a>
     </li>
@@ -2581,7 +2474,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../en/rules/Azure.APIM.HTTPEndpoint/" class="md-nav__link">
+      <a href="../Azure.APIM.HTTPEndpoint/" class="md-nav__link">
         Azure.APIM.HTTPEndpoint
       </a>
     </li>
@@ -2595,7 +2488,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../en/rules/Azure.APIM.ManagedIdentity/" class="md-nav__link">
+      <a href="../Azure.APIM.ManagedIdentity/" class="md-nav__link">
         Azure.APIM.ManagedIdentity
       </a>
     </li>
@@ -2609,7 +2502,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../en/rules/Azure.APIM.Name/" class="md-nav__link">
+      <a href="../Azure.APIM.Name/" class="md-nav__link">
         Azure.APIM.Name
       </a>
     </li>
@@ -2623,7 +2516,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../en/rules/Azure.APIM.ProductApproval/" class="md-nav__link">
+      <a href="../Azure.APIM.ProductApproval/" class="md-nav__link">
         Azure.APIM.ProductApproval
       </a>
     </li>
@@ -2637,7 +2530,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../en/rules/Azure.APIM.ProductDescriptors/" class="md-nav__link">
+      <a href="../Azure.APIM.ProductDescriptors/" class="md-nav__link">
         Azure.APIM.ProductDescriptors
       </a>
     </li>
@@ -2651,7 +2544,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../en/rules/Azure.APIM.ProductSubscription/" class="md-nav__link">
+      <a href="../Azure.APIM.ProductSubscription/" class="md-nav__link">
         Azure.APIM.ProductSubscription
       </a>
     </li>
@@ -2665,7 +2558,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../en/rules/Azure.APIM.ProductTerms/" class="md-nav__link">
+      <a href="../Azure.APIM.ProductTerms/" class="md-nav__link">
         Azure.APIM.ProductTerms
       </a>
     </li>
@@ -2679,7 +2572,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../en/rules/Azure.APIM.Protocols/" class="md-nav__link">
+      <a href="../Azure.APIM.Protocols/" class="md-nav__link">
         Azure.APIM.Protocols
       </a>
     </li>
@@ -2693,7 +2586,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../en/rules/Azure.APIM.SampleProducts/" class="md-nav__link">
+      <a href="../Azure.APIM.SampleProducts/" class="md-nav__link">
         Azure.APIM.SampleProducts
       </a>
     </li>
@@ -2707,7 +2600,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../en/rules/Azure.ASG.Name/" class="md-nav__link">
+      <a href="../Azure.ASG.Name/" class="md-nav__link">
         Azure.ASG.Name
       </a>
     </li>
@@ -2721,7 +2614,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../en/rules/Azure.AppConfig.Name/" class="md-nav__link">
+      <a href="../Azure.AppConfig.Name/" class="md-nav__link">
         Azure.AppConfig.Name
       </a>
     </li>
@@ -2735,7 +2628,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../en/rules/Azure.AppConfig.SKU/" class="md-nav__link">
+      <a href="../Azure.AppConfig.SKU/" class="md-nav__link">
         Azure.AppConfig.SKU
       </a>
     </li>
@@ -2749,7 +2642,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../en/rules/Azure.AppGw.AvailabilityZone/" class="md-nav__link">
+      <a href="../Azure.AppGw.AvailabilityZone/" class="md-nav__link">
         Azure.AppGw.AvailabilityZone
       </a>
     </li>
@@ -2763,7 +2656,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../en/rules/Azure.AppGw.MinInstance/" class="md-nav__link">
+      <a href="../Azure.AppGw.MinInstance/" class="md-nav__link">
         Azure.AppGw.MinInstance
       </a>
     </li>
@@ -2777,7 +2670,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../en/rules/Azure.AppGw.MinSku/" class="md-nav__link">
+      <a href="../Azure.AppGw.MinSku/" class="md-nav__link">
         Azure.AppGw.MinSku
       </a>
     </li>
@@ -2791,7 +2684,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../en/rules/Azure.AppGw.OWASP/" class="md-nav__link">
+      <a href="../Azure.AppGw.OWASP/" class="md-nav__link">
         Azure.AppGw.OWASP
       </a>
     </li>
@@ -2805,7 +2698,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../en/rules/Azure.AppGw.Prevention/" class="md-nav__link">
+      <a href="../Azure.AppGw.Prevention/" class="md-nav__link">
         Azure.AppGw.Prevention
       </a>
     </li>
@@ -2819,7 +2712,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../en/rules/Azure.AppGw.SSLPolicy/" class="md-nav__link">
+      <a href="../Azure.AppGw.SSLPolicy/" class="md-nav__link">
         Azure.AppGw.SSLPolicy
       </a>
     </li>
@@ -2833,7 +2726,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../en/rules/Azure.AppGw.UseHTTPS/" class="md-nav__link">
+      <a href="../Azure.AppGw.UseHTTPS/" class="md-nav__link">
         Azure.AppGw.UseHTTPS
       </a>
     </li>
@@ -2847,7 +2740,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../en/rules/Azure.AppGw.UseWAF/" class="md-nav__link">
+      <a href="../Azure.AppGw.UseWAF/" class="md-nav__link">
         Azure.AppGw.UseWAF
       </a>
     </li>
@@ -2861,7 +2754,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../en/rules/Azure.AppGw.WAFEnabled/" class="md-nav__link">
+      <a href="../Azure.AppGw.WAFEnabled/" class="md-nav__link">
         Azure.AppGw.WAFEnabled
       </a>
     </li>
@@ -2875,7 +2768,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../en/rules/Azure.AppGw.WAFRules/" class="md-nav__link">
+      <a href="../Azure.AppGw.WAFRules/" class="md-nav__link">
         Azure.AppGw.WAFRules
       </a>
     </li>
@@ -2889,7 +2782,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../en/rules/Azure.AppInsights.Name/" class="md-nav__link">
+      <a href="../Azure.AppInsights.Name/" class="md-nav__link">
         Azure.AppInsights.Name
       </a>
     </li>
@@ -2903,7 +2796,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../en/rules/Azure.AppInsights.Workspace/" class="md-nav__link">
+      <a href="../Azure.AppInsights.Workspace/" class="md-nav__link">
         Azure.AppInsights.Workspace
       </a>
     </li>
@@ -2917,7 +2810,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../en/rules/Azure.AppService.ARRAffinity/" class="md-nav__link">
+      <a href="../Azure.AppService.ARRAffinity/" class="md-nav__link">
         Azure.AppService.ARRAffinity
       </a>
     </li>
@@ -2931,7 +2824,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../en/rules/Azure.AppService.AlwaysOn/" class="md-nav__link">
+      <a href="../Azure.AppService.AlwaysOn/" class="md-nav__link">
         Azure.AppService.AlwaysOn
       </a>
     </li>
@@ -2945,7 +2838,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../en/rules/Azure.AppService.HTTP2/" class="md-nav__link">
+      <a href="../Azure.AppService.HTTP2/" class="md-nav__link">
         Azure.AppService.HTTP2
       </a>
     </li>
@@ -2959,7 +2852,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../en/rules/Azure.AppService.ManagedIdentity/" class="md-nav__link">
+      <a href="../Azure.AppService.ManagedIdentity/" class="md-nav__link">
         Azure.AppService.ManagedIdentity
       </a>
     </li>
@@ -2973,7 +2866,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../en/rules/Azure.AppService.MinPlan/" class="md-nav__link">
+      <a href="../Azure.AppService.MinPlan/" class="md-nav__link">
         Azure.AppService.MinPlan
       </a>
     </li>
@@ -2987,7 +2880,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../en/rules/Azure.AppService.MinTLS/" class="md-nav__link">
+      <a href="../Azure.AppService.MinTLS/" class="md-nav__link">
         Azure.AppService.MinTLS
       </a>
     </li>
@@ -3001,7 +2894,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../en/rules/Azure.AppService.NETVersion/" class="md-nav__link">
+      <a href="../Azure.AppService.NETVersion/" class="md-nav__link">
         Azure.AppService.NETVersion
       </a>
     </li>
@@ -3015,7 +2908,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../en/rules/Azure.AppService.PHPVersion/" class="md-nav__link">
+      <a href="../Azure.AppService.PHPVersion/" class="md-nav__link">
         Azure.AppService.PHPVersion
       </a>
     </li>
@@ -3029,7 +2922,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../en/rules/Azure.AppService.PlanInstanceCount/" class="md-nav__link">
+      <a href="../Azure.AppService.PlanInstanceCount/" class="md-nav__link">
         Azure.AppService.PlanInstanceCount
       </a>
     </li>
@@ -3043,7 +2936,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../en/rules/Azure.AppService.RemoteDebug/" class="md-nav__link">
+      <a href="../Azure.AppService.RemoteDebug/" class="md-nav__link">
         Azure.AppService.RemoteDebug
       </a>
     </li>
@@ -3057,7 +2950,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../en/rules/Azure.AppService.UseHTTPS/" class="md-nav__link">
+      <a href="../Azure.AppService.UseHTTPS/" class="md-nav__link">
         Azure.AppService.UseHTTPS
       </a>
     </li>
@@ -3071,7 +2964,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../en/rules/Azure.AppService.WebProbe/" class="md-nav__link">
+      <a href="../Azure.AppService.WebProbe/" class="md-nav__link">
         Azure.AppService.WebProbe
       </a>
     </li>
@@ -3085,7 +2978,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../en/rules/Azure.AppService.WebProbePath/" class="md-nav__link">
+      <a href="../Azure.AppService.WebProbePath/" class="md-nav__link">
         Azure.AppService.WebProbePath
       </a>
     </li>
@@ -3099,7 +2992,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../en/rules/Azure.AppService.WebSecureFtp/" class="md-nav__link">
+      <a href="../Azure.AppService.WebSecureFtp/" class="md-nav__link">
         Azure.AppService.WebSecureFtp
       </a>
     </li>
@@ -3113,7 +3006,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../en/rules/Azure.Automation.AuditLogs/" class="md-nav__link">
+      <a href="../Azure.Automation.AuditLogs/" class="md-nav__link">
         Azure.Automation.AuditLogs
       </a>
     </li>
@@ -3127,7 +3020,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../en/rules/Azure.Automation.EncryptVariables/" class="md-nav__link">
+      <a href="../Azure.Automation.EncryptVariables/" class="md-nav__link">
         Azure.Automation.EncryptVariables
       </a>
     </li>
@@ -3141,7 +3034,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../en/rules/Azure.Automation.ManagedIdentity/" class="md-nav__link">
+      <a href="../Azure.Automation.ManagedIdentity/" class="md-nav__link">
         Azure.Automation.ManagedIdentity
       </a>
     </li>
@@ -3155,7 +3048,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../en/rules/Azure.Automation.PlatformLogs/" class="md-nav__link">
+      <a href="../Azure.Automation.PlatformLogs/" class="md-nav__link">
         Azure.Automation.PlatformLogs
       </a>
     </li>
@@ -3169,7 +3062,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../en/rules/Azure.Automation.WebHookExpiry/" class="md-nav__link">
+      <a href="../Azure.Automation.WebHookExpiry/" class="md-nav__link">
         Azure.Automation.WebHookExpiry
       </a>
     </li>
@@ -3183,7 +3076,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../en/rules/Azure.CDN.EndpointName/" class="md-nav__link">
+      <a href="../Azure.CDN.EndpointName/" class="md-nav__link">
         Azure.CDN.EndpointName
       </a>
     </li>
@@ -3197,7 +3090,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../en/rules/Azure.CDN.HTTP/" class="md-nav__link">
+      <a href="../Azure.CDN.HTTP/" class="md-nav__link">
         Azure.CDN.HTTP
       </a>
     </li>
@@ -3211,7 +3104,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../en/rules/Azure.CDN.MinTLS/" class="md-nav__link">
+      <a href="../Azure.CDN.MinTLS/" class="md-nav__link">
         Azure.CDN.MinTLS
       </a>
     </li>
@@ -3225,7 +3118,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../en/rules/Azure.Cognitive.DisableLocalAuth/" class="md-nav__link">
+      <a href="../Azure.Cognitive.DisableLocalAuth/" class="md-nav__link">
         Azure.Cognitive.DisableLocalAuth
       </a>
     </li>
@@ -3239,7 +3132,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../en/rules/Azure.Cognitive.ManagedIdentity/" class="md-nav__link">
+      <a href="../Azure.Cognitive.ManagedIdentity/" class="md-nav__link">
         Azure.Cognitive.ManagedIdentity
       </a>
     </li>
@@ -3253,7 +3146,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../en/rules/Azure.Cognitive.PrivateEndpoints/" class="md-nav__link">
+      <a href="../Azure.Cognitive.PrivateEndpoints/" class="md-nav__link">
         Azure.Cognitive.PrivateEndpoints
       </a>
     </li>
@@ -3267,7 +3160,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../en/rules/Azure.Cognitive.PublicAccess/" class="md-nav__link">
+      <a href="../Azure.Cognitive.PublicAccess/" class="md-nav__link">
         Azure.Cognitive.PublicAccess
       </a>
     </li>
@@ -3281,7 +3174,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../en/rules/Azure.ContainerApp.Insecure/" class="md-nav__link">
+      <a href="../Azure.ContainerApp.Insecure/" class="md-nav__link">
         Azure.ContainerApp.Insecure
       </a>
     </li>
@@ -3295,7 +3188,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../en/rules/Azure.Cosmos.AccountName/" class="md-nav__link">
+      <a href="../Azure.Cosmos.AccountName/" class="md-nav__link">
         Azure.Cosmos.AccountName
       </a>
     </li>
@@ -3309,7 +3202,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../en/rules/Azure.Cosmos.DisableMetadataWrite/" class="md-nav__link">
+      <a href="../Azure.Cosmos.DisableMetadataWrite/" class="md-nav__link">
         Azure.Cosmos.DisableMetadataWrite
       </a>
     </li>
@@ -3323,7 +3216,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../en/rules/Azure.DataFactory.Version/" class="md-nav__link">
+      <a href="../Azure.DataFactory.Version/" class="md-nav__link">
         Azure.DataFactory.Version
       </a>
     </li>
@@ -3335,11 +3228,66 @@
               
   
   
+    
   
-    <li class="md-nav__item">
-      <a href="../en/rules/Azure.Deployment.AdminUsername/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          Azure.Deployment.AdminUsername
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         Azure.Deployment.AdminUsername
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#description" class="md-nav__link">
+    Description
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#recommendation" class="md-nav__link">
+    Recommendation
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#links" class="md-nav__link">
+    Links
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -3351,7 +3299,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../en/rules/Azure.Deployment.OutputSecretValue/" class="md-nav__link">
+      <a href="../Azure.Deployment.OutputSecretValue/" class="md-nav__link">
         Azure.Deployment.OutputSecretValue
       </a>
     </li>
@@ -3365,7 +3313,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../en/rules/Azure.EventGrid.DisableLocalAuth/" class="md-nav__link">
+      <a href="../Azure.EventGrid.DisableLocalAuth/" class="md-nav__link">
         Azure.EventGrid.DisableLocalAuth
       </a>
     </li>
@@ -3379,7 +3327,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../en/rules/Azure.EventGrid.ManagedIdentity/" class="md-nav__link">
+      <a href="../Azure.EventGrid.ManagedIdentity/" class="md-nav__link">
         Azure.EventGrid.ManagedIdentity
       </a>
     </li>
@@ -3393,7 +3341,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../en/rules/Azure.EventGrid.TopicPublicAccess/" class="md-nav__link">
+      <a href="../Azure.EventGrid.TopicPublicAccess/" class="md-nav__link">
         Azure.EventGrid.TopicPublicAccess
       </a>
     </li>
@@ -3407,7 +3355,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../en/rules/Azure.EventHub.DisableLocalAuth/" class="md-nav__link">
+      <a href="../Azure.EventHub.DisableLocalAuth/" class="md-nav__link">
         Azure.EventHub.DisableLocalAuth
       </a>
     </li>
@@ -3421,7 +3369,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../en/rules/Azure.EventHub.Usage/" class="md-nav__link">
+      <a href="../Azure.EventHub.Usage/" class="md-nav__link">
         Azure.EventHub.Usage
       </a>
     </li>
@@ -3435,7 +3383,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../en/rules/Azure.Firewall.Mode/" class="md-nav__link">
+      <a href="../Azure.Firewall.Mode/" class="md-nav__link">
         Azure.Firewall.Mode
       </a>
     </li>
@@ -3449,7 +3397,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../en/rules/Azure.Firewall.Name/" class="md-nav__link">
+      <a href="../Azure.Firewall.Name/" class="md-nav__link">
         Azure.Firewall.Name
       </a>
     </li>
@@ -3463,7 +3411,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../en/rules/Azure.Firewall.PolicyName/" class="md-nav__link">
+      <a href="../Azure.Firewall.PolicyName/" class="md-nav__link">
         Azure.Firewall.PolicyName
       </a>
     </li>
@@ -3477,7 +3425,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../en/rules/Azure.FrontDoor.Logs/" class="md-nav__link">
+      <a href="../Azure.FrontDoor.Logs/" class="md-nav__link">
         Azure.FrontDoor.Logs
       </a>
     </li>
@@ -3491,7 +3439,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../en/rules/Azure.FrontDoor.MinTLS/" class="md-nav__link">
+      <a href="../Azure.FrontDoor.MinTLS/" class="md-nav__link">
         Azure.FrontDoor.MinTLS
       </a>
     </li>
@@ -3505,7 +3453,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../en/rules/Azure.FrontDoor.Name/" class="md-nav__link">
+      <a href="../Azure.FrontDoor.Name/" class="md-nav__link">
         Azure.FrontDoor.Name
       </a>
     </li>
@@ -3519,7 +3467,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../en/rules/Azure.FrontDoor.Probe/" class="md-nav__link">
+      <a href="../Azure.FrontDoor.Probe/" class="md-nav__link">
         Azure.FrontDoor.Probe
       </a>
     </li>
@@ -3533,7 +3481,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../en/rules/Azure.FrontDoor.ProbeMethod/" class="md-nav__link">
+      <a href="../Azure.FrontDoor.ProbeMethod/" class="md-nav__link">
         Azure.FrontDoor.ProbeMethod
       </a>
     </li>
@@ -3547,7 +3495,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../en/rules/Azure.FrontDoor.ProbePath/" class="md-nav__link">
+      <a href="../Azure.FrontDoor.ProbePath/" class="md-nav__link">
         Azure.FrontDoor.ProbePath
       </a>
     </li>
@@ -3561,7 +3509,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../en/rules/Azure.FrontDoor.State/" class="md-nav__link">
+      <a href="../Azure.FrontDoor.State/" class="md-nav__link">
         Azure.FrontDoor.State
       </a>
     </li>
@@ -3575,7 +3523,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../en/rules/Azure.FrontDoor.UseWAF/" class="md-nav__link">
+      <a href="../Azure.FrontDoor.UseWAF/" class="md-nav__link">
         Azure.FrontDoor.UseWAF
       </a>
     </li>
@@ -3589,7 +3537,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../en/rules/Azure.FrontDoor.WAF.Enabled/" class="md-nav__link">
+      <a href="../Azure.FrontDoor.WAF.Enabled/" class="md-nav__link">
         Azure.FrontDoor.WAF.Enabled
       </a>
     </li>
@@ -3603,7 +3551,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../en/rules/Azure.FrontDoor.WAF.Mode/" class="md-nav__link">
+      <a href="../Azure.FrontDoor.WAF.Mode/" class="md-nav__link">
         Azure.FrontDoor.WAF.Mode
       </a>
     </li>
@@ -3617,7 +3565,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../en/rules/Azure.FrontDoor.WAF.Name/" class="md-nav__link">
+      <a href="../Azure.FrontDoor.WAF.Name/" class="md-nav__link">
         Azure.FrontDoor.WAF.Name
       </a>
     </li>
@@ -3631,7 +3579,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../en/rules/Azure.Identity.UserAssignedName/" class="md-nav__link">
+      <a href="../Azure.Identity.UserAssignedName/" class="md-nav__link">
         Azure.Identity.UserAssignedName
       </a>
     </li>
@@ -3645,7 +3593,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../en/rules/Azure.KeyVault.AccessPolicy/" class="md-nav__link">
+      <a href="../Azure.KeyVault.AccessPolicy/" class="md-nav__link">
         Azure.KeyVault.AccessPolicy
       </a>
     </li>
@@ -3659,7 +3607,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../en/rules/Azure.KeyVault.AutoRotationPolicy/" class="md-nav__link">
+      <a href="../Azure.KeyVault.AutoRotationPolicy/" class="md-nav__link">
         Azure.KeyVault.AutoRotationPolicy
       </a>
     </li>
@@ -3673,7 +3621,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../en/rules/Azure.KeyVault.KeyName/" class="md-nav__link">
+      <a href="../Azure.KeyVault.KeyName/" class="md-nav__link">
         Azure.KeyVault.KeyName
       </a>
     </li>
@@ -3687,7 +3635,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../en/rules/Azure.KeyVault.Logs/" class="md-nav__link">
+      <a href="../Azure.KeyVault.Logs/" class="md-nav__link">
         Azure.KeyVault.Logs
       </a>
     </li>
@@ -3701,7 +3649,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../en/rules/Azure.KeyVault.Name/" class="md-nav__link">
+      <a href="../Azure.KeyVault.Name/" class="md-nav__link">
         Azure.KeyVault.Name
       </a>
     </li>
@@ -3715,7 +3663,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../en/rules/Azure.KeyVault.PurgeProtect/" class="md-nav__link">
+      <a href="../Azure.KeyVault.PurgeProtect/" class="md-nav__link">
         Azure.KeyVault.PurgeProtect
       </a>
     </li>
@@ -3729,7 +3677,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../en/rules/Azure.KeyVault.SecretName/" class="md-nav__link">
+      <a href="../Azure.KeyVault.SecretName/" class="md-nav__link">
         Azure.KeyVault.SecretName
       </a>
     </li>
@@ -3743,7 +3691,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../en/rules/Azure.KeyVault.SoftDelete/" class="md-nav__link">
+      <a href="../Azure.KeyVault.SoftDelete/" class="md-nav__link">
         Azure.KeyVault.SoftDelete
       </a>
     </li>
@@ -3757,7 +3705,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../en/rules/Azure.LB.AvailabilityZone/" class="md-nav__link">
+      <a href="../Azure.LB.AvailabilityZone/" class="md-nav__link">
         Azure.LB.AvailabilityZone
       </a>
     </li>
@@ -3771,7 +3719,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../en/rules/Azure.LB.Name/" class="md-nav__link">
+      <a href="../Azure.LB.Name/" class="md-nav__link">
         Azure.LB.Name
       </a>
     </li>
@@ -3785,7 +3733,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../en/rules/Azure.LB.Probe/" class="md-nav__link">
+      <a href="../Azure.LB.Probe/" class="md-nav__link">
         Azure.LB.Probe
       </a>
     </li>
@@ -3799,7 +3747,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../en/rules/Azure.LB.StandardSKU/" class="md-nav__link">
+      <a href="../Azure.LB.StandardSKU/" class="md-nav__link">
         Azure.LB.StandardSKU
       </a>
     </li>
@@ -3813,7 +3761,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../en/rules/Azure.LogicApp.LimitHTTPTrigger/" class="md-nav__link">
+      <a href="../Azure.LogicApp.LimitHTTPTrigger/" class="md-nav__link">
         Azure.LogicApp.LimitHTTPTrigger
       </a>
     </li>
@@ -3827,7 +3775,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../en/rules/Azure.Monitor.ServiceHealth/" class="md-nav__link">
+      <a href="../Azure.Monitor.ServiceHealth/" class="md-nav__link">
         Azure.Monitor.ServiceHealth
       </a>
     </li>
@@ -3841,7 +3789,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../en/rules/Azure.MySQL.AllowAzureAccess/" class="md-nav__link">
+      <a href="../Azure.MySQL.AllowAzureAccess/" class="md-nav__link">
         Azure.MySQL.AllowAzureAccess
       </a>
     </li>
@@ -3855,7 +3803,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../en/rules/Azure.MySQL.FirewallIPRange/" class="md-nav__link">
+      <a href="../Azure.MySQL.FirewallIPRange/" class="md-nav__link">
         Azure.MySQL.FirewallIPRange
       </a>
     </li>
@@ -3869,7 +3817,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../en/rules/Azure.MySQL.FirewallRuleCount/" class="md-nav__link">
+      <a href="../Azure.MySQL.FirewallRuleCount/" class="md-nav__link">
         Azure.MySQL.FirewallRuleCount
       </a>
     </li>
@@ -3883,7 +3831,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../en/rules/Azure.MySQL.MinTLS/" class="md-nav__link">
+      <a href="../Azure.MySQL.MinTLS/" class="md-nav__link">
         Azure.MySQL.MinTLS
       </a>
     </li>
@@ -3897,7 +3845,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../en/rules/Azure.MySQL.ServerName/" class="md-nav__link">
+      <a href="../Azure.MySQL.ServerName/" class="md-nav__link">
         Azure.MySQL.ServerName
       </a>
     </li>
@@ -3911,7 +3859,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../en/rules/Azure.MySQL.UseSSL/" class="md-nav__link">
+      <a href="../Azure.MySQL.UseSSL/" class="md-nav__link">
         Azure.MySQL.UseSSL
       </a>
     </li>
@@ -3925,7 +3873,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../en/rules/Azure.NSG.AnyInboundSource/" class="md-nav__link">
+      <a href="../Azure.NSG.AnyInboundSource/" class="md-nav__link">
         Azure.NSG.AnyInboundSource
       </a>
     </li>
@@ -3939,7 +3887,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../en/rules/Azure.NSG.Associated/" class="md-nav__link">
+      <a href="../Azure.NSG.Associated/" class="md-nav__link">
         Azure.NSG.Associated
       </a>
     </li>
@@ -3953,7 +3901,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../en/rules/Azure.NSG.DenyAllInbound/" class="md-nav__link">
+      <a href="../Azure.NSG.DenyAllInbound/" class="md-nav__link">
         Azure.NSG.DenyAllInbound
       </a>
     </li>
@@ -3967,7 +3915,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../en/rules/Azure.NSG.LateralTraversal/" class="md-nav__link">
+      <a href="../Azure.NSG.LateralTraversal/" class="md-nav__link">
         Azure.NSG.LateralTraversal
       </a>
     </li>
@@ -3981,7 +3929,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../en/rules/Azure.NSG.Name/" class="md-nav__link">
+      <a href="../Azure.NSG.Name/" class="md-nav__link">
         Azure.NSG.Name
       </a>
     </li>
@@ -3995,7 +3943,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../en/rules/Azure.Policy.AssignmentAssignedBy/" class="md-nav__link">
+      <a href="../Azure.Policy.AssignmentAssignedBy/" class="md-nav__link">
         Azure.Policy.AssignmentAssignedBy
       </a>
     </li>
@@ -4009,7 +3957,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../en/rules/Azure.Policy.AssignmentDescriptors/" class="md-nav__link">
+      <a href="../Azure.Policy.AssignmentDescriptors/" class="md-nav__link">
         Azure.Policy.AssignmentDescriptors
       </a>
     </li>
@@ -4023,7 +3971,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../en/rules/Azure.Policy.Descriptors/" class="md-nav__link">
+      <a href="../Azure.Policy.Descriptors/" class="md-nav__link">
         Azure.Policy.Descriptors
       </a>
     </li>
@@ -4037,7 +3985,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../en/rules/Azure.Policy.ExemptionDescriptors/" class="md-nav__link">
+      <a href="../Azure.Policy.ExemptionDescriptors/" class="md-nav__link">
         Azure.Policy.ExemptionDescriptors
       </a>
     </li>
@@ -4051,7 +3999,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../en/rules/Azure.Policy.WaiverExpiry/" class="md-nav__link">
+      <a href="../Azure.Policy.WaiverExpiry/" class="md-nav__link">
         Azure.Policy.WaiverExpiry
       </a>
     </li>
@@ -4065,7 +4013,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../en/rules/Azure.PostgreSQL.AllowAzureAccess/" class="md-nav__link">
+      <a href="../Azure.PostgreSQL.AllowAzureAccess/" class="md-nav__link">
         Azure.PostgreSQL.AllowAzureAccess
       </a>
     </li>
@@ -4079,7 +4027,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../en/rules/Azure.PostgreSQL.FirewallIPRange/" class="md-nav__link">
+      <a href="../Azure.PostgreSQL.FirewallIPRange/" class="md-nav__link">
         Azure.PostgreSQL.FirewallIPRange
       </a>
     </li>
@@ -4093,7 +4041,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../en/rules/Azure.PostgreSQL.FirewallRuleCount/" class="md-nav__link">
+      <a href="../Azure.PostgreSQL.FirewallRuleCount/" class="md-nav__link">
         Azure.PostgreSQL.FirewallRuleCount
       </a>
     </li>
@@ -4107,7 +4055,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../en/rules/Azure.PostgreSQL.MinTLS/" class="md-nav__link">
+      <a href="../Azure.PostgreSQL.MinTLS/" class="md-nav__link">
         Azure.PostgreSQL.MinTLS
       </a>
     </li>
@@ -4121,7 +4069,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../en/rules/Azure.PostgreSQL.ServerName/" class="md-nav__link">
+      <a href="../Azure.PostgreSQL.ServerName/" class="md-nav__link">
         Azure.PostgreSQL.ServerName
       </a>
     </li>
@@ -4135,7 +4083,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../en/rules/Azure.PostgreSQL.UseSSL/" class="md-nav__link">
+      <a href="../Azure.PostgreSQL.UseSSL/" class="md-nav__link">
         Azure.PostgreSQL.UseSSL
       </a>
     </li>
@@ -4149,7 +4097,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../en/rules/Azure.PrivateEndpoint.Name/" class="md-nav__link">
+      <a href="../Azure.PrivateEndpoint.Name/" class="md-nav__link">
         Azure.PrivateEndpoint.Name
       </a>
     </li>
@@ -4163,7 +4111,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../en/rules/Azure.PublicIP.AvailabilityZone/" class="md-nav__link">
+      <a href="../Azure.PublicIP.AvailabilityZone/" class="md-nav__link">
         Azure.PublicIP.AvailabilityZone
       </a>
     </li>
@@ -4177,7 +4125,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../en/rules/Azure.PublicIP.DNSLabel/" class="md-nav__link">
+      <a href="../Azure.PublicIP.DNSLabel/" class="md-nav__link">
         Azure.PublicIP.DNSLabel
       </a>
     </li>
@@ -4191,7 +4139,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../en/rules/Azure.PublicIP.IsAttached/" class="md-nav__link">
+      <a href="../Azure.PublicIP.IsAttached/" class="md-nav__link">
         Azure.PublicIP.IsAttached
       </a>
     </li>
@@ -4205,7 +4153,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../en/rules/Azure.PublicIP.Name/" class="md-nav__link">
+      <a href="../Azure.PublicIP.Name/" class="md-nav__link">
         Azure.PublicIP.Name
       </a>
     </li>
@@ -4219,7 +4167,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../en/rules/Azure.PublicIP.StandardSKU/" class="md-nav__link">
+      <a href="../Azure.PublicIP.StandardSKU/" class="md-nav__link">
         Azure.PublicIP.StandardSKU
       </a>
     </li>
@@ -4233,7 +4181,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../en/rules/Azure.RBAC.CoAdministrator/" class="md-nav__link">
+      <a href="../Azure.RBAC.CoAdministrator/" class="md-nav__link">
         Azure.RBAC.CoAdministrator
       </a>
     </li>
@@ -4247,7 +4195,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../en/rules/Azure.RBAC.LimitMGDelegation/" class="md-nav__link">
+      <a href="../Azure.RBAC.LimitMGDelegation/" class="md-nav__link">
         Azure.RBAC.LimitMGDelegation
       </a>
     </li>
@@ -4261,7 +4209,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../en/rules/Azure.RBAC.LimitOwner/" class="md-nav__link">
+      <a href="../Azure.RBAC.LimitOwner/" class="md-nav__link">
         Azure.RBAC.LimitOwner
       </a>
     </li>
@@ -4275,7 +4223,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../en/rules/Azure.RBAC.PIM/" class="md-nav__link">
+      <a href="../Azure.RBAC.PIM/" class="md-nav__link">
         Azure.RBAC.PIM
       </a>
     </li>
@@ -4289,7 +4237,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../en/rules/Azure.RBAC.UseGroups/" class="md-nav__link">
+      <a href="../Azure.RBAC.UseGroups/" class="md-nav__link">
         Azure.RBAC.UseGroups
       </a>
     </li>
@@ -4303,7 +4251,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../en/rules/Azure.RBAC.UseRGDelegation/" class="md-nav__link">
+      <a href="../Azure.RBAC.UseRGDelegation/" class="md-nav__link">
         Azure.RBAC.UseRGDelegation
       </a>
     </li>
@@ -4317,7 +4265,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../en/rules/Azure.RSV.ReplicationAlert/" class="md-nav__link">
+      <a href="../Azure.RSV.ReplicationAlert/" class="md-nav__link">
         Azure.RSV.ReplicationAlert
       </a>
     </li>
@@ -4331,7 +4279,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../en/rules/Azure.RSV.StorageType/" class="md-nav__link">
+      <a href="../Azure.RSV.StorageType/" class="md-nav__link">
         Azure.RSV.StorageType
       </a>
     </li>
@@ -4345,7 +4293,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../en/rules/Azure.Redis.AvailabilityZone/" class="md-nav__link">
+      <a href="../Azure.Redis.AvailabilityZone/" class="md-nav__link">
         Azure.Redis.AvailabilityZone
       </a>
     </li>
@@ -4359,7 +4307,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../en/rules/Azure.Redis.MaxMemoryReserved/" class="md-nav__link">
+      <a href="../Azure.Redis.MaxMemoryReserved/" class="md-nav__link">
         Azure.Redis.MaxMemoryReserved
       </a>
     </li>
@@ -4373,7 +4321,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../en/rules/Azure.Redis.MinSKU/" class="md-nav__link">
+      <a href="../Azure.Redis.MinSKU/" class="md-nav__link">
         Azure.Redis.MinSKU
       </a>
     </li>
@@ -4387,7 +4335,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../en/rules/Azure.Redis.MinTLS/" class="md-nav__link">
+      <a href="../Azure.Redis.MinTLS/" class="md-nav__link">
         Azure.Redis.MinTLS
       </a>
     </li>
@@ -4401,7 +4349,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../en/rules/Azure.Redis.NonSslPort/" class="md-nav__link">
+      <a href="../Azure.Redis.NonSslPort/" class="md-nav__link">
         Azure.Redis.NonSslPort
       </a>
     </li>
@@ -4415,7 +4363,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../en/rules/Azure.Redis.PublicNetworkAccess/" class="md-nav__link">
+      <a href="../Azure.Redis.PublicNetworkAccess/" class="md-nav__link">
         Azure.Redis.PublicNetworkAccess
       </a>
     </li>
@@ -4429,7 +4377,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../en/rules/Azure.RedisEnterprise.Zones/" class="md-nav__link">
+      <a href="../Azure.RedisEnterprise.Zones/" class="md-nav__link">
         Azure.RedisEnterprise.Zones
       </a>
     </li>
@@ -4443,7 +4391,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../en/rules/Azure.Resource.AllowedRegions/" class="md-nav__link">
+      <a href="../Azure.Resource.AllowedRegions/" class="md-nav__link">
         Azure.Resource.AllowedRegions
       </a>
     </li>
@@ -4457,7 +4405,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../en/rules/Azure.Resource.UseTags/" class="md-nav__link">
+      <a href="../Azure.Resource.UseTags/" class="md-nav__link">
         Azure.Resource.UseTags
       </a>
     </li>
@@ -4471,7 +4419,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../en/rules/Azure.ResourceGroup.Name/" class="md-nav__link">
+      <a href="../Azure.ResourceGroup.Name/" class="md-nav__link">
         Azure.ResourceGroup.Name
       </a>
     </li>
@@ -4485,7 +4433,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../en/rules/Azure.Route.Name/" class="md-nav__link">
+      <a href="../Azure.Route.Name/" class="md-nav__link">
         Azure.Route.Name
       </a>
     </li>
@@ -4499,7 +4447,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../en/rules/Azure.SQL.AAD/" class="md-nav__link">
+      <a href="../Azure.SQL.AAD/" class="md-nav__link">
         Azure.SQL.AAD
       </a>
     </li>
@@ -4513,7 +4461,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../en/rules/Azure.SQL.AllowAzureAccess/" class="md-nav__link">
+      <a href="../Azure.SQL.AllowAzureAccess/" class="md-nav__link">
         Azure.SQL.AllowAzureAccess
       </a>
     </li>
@@ -4527,7 +4475,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../en/rules/Azure.SQL.Auditing/" class="md-nav__link">
+      <a href="../Azure.SQL.Auditing/" class="md-nav__link">
         Azure.SQL.Auditing
       </a>
     </li>
@@ -4541,7 +4489,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../en/rules/Azure.SQL.DBName/" class="md-nav__link">
+      <a href="../Azure.SQL.DBName/" class="md-nav__link">
         Azure.SQL.DBName
       </a>
     </li>
@@ -4555,7 +4503,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../en/rules/Azure.SQL.FGName/" class="md-nav__link">
+      <a href="../Azure.SQL.FGName/" class="md-nav__link">
         Azure.SQL.FGName
       </a>
     </li>
@@ -4569,7 +4517,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../en/rules/Azure.SQL.FirewallIPRange/" class="md-nav__link">
+      <a href="../Azure.SQL.FirewallIPRange/" class="md-nav__link">
         Azure.SQL.FirewallIPRange
       </a>
     </li>
@@ -4583,7 +4531,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../en/rules/Azure.SQL.FirewallRuleCount/" class="md-nav__link">
+      <a href="../Azure.SQL.FirewallRuleCount/" class="md-nav__link">
         Azure.SQL.FirewallRuleCount
       </a>
     </li>
@@ -4597,7 +4545,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../en/rules/Azure.SQL.MinTLS/" class="md-nav__link">
+      <a href="../Azure.SQL.MinTLS/" class="md-nav__link">
         Azure.SQL.MinTLS
       </a>
     </li>
@@ -4611,7 +4559,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../en/rules/Azure.SQL.ServerName/" class="md-nav__link">
+      <a href="../Azure.SQL.ServerName/" class="md-nav__link">
         Azure.SQL.ServerName
       </a>
     </li>
@@ -4625,7 +4573,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../en/rules/Azure.SQL.TDE/" class="md-nav__link">
+      <a href="../Azure.SQL.TDE/" class="md-nav__link">
         Azure.SQL.TDE
       </a>
     </li>
@@ -4639,7 +4587,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../en/rules/Azure.SQL.ThreatDetection/" class="md-nav__link">
+      <a href="../Azure.SQL.ThreatDetection/" class="md-nav__link">
         Azure.SQL.ThreatDetection
       </a>
     </li>
@@ -4653,7 +4601,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../en/rules/Azure.SQLMI.Name/" class="md-nav__link">
+      <a href="../Azure.SQLMI.Name/" class="md-nav__link">
         Azure.SQLMI.Name
       </a>
     </li>
@@ -4667,7 +4615,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../en/rules/Azure.Search.IndexSLA/" class="md-nav__link">
+      <a href="../Azure.Search.IndexSLA/" class="md-nav__link">
         Azure.Search.IndexSLA
       </a>
     </li>
@@ -4681,7 +4629,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../en/rules/Azure.Search.ManagedIdentity/" class="md-nav__link">
+      <a href="../Azure.Search.ManagedIdentity/" class="md-nav__link">
         Azure.Search.ManagedIdentity
       </a>
     </li>
@@ -4695,7 +4643,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../en/rules/Azure.Search.Name/" class="md-nav__link">
+      <a href="../Azure.Search.Name/" class="md-nav__link">
         Azure.Search.Name
       </a>
     </li>
@@ -4709,7 +4657,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../en/rules/Azure.Search.QuerySLA/" class="md-nav__link">
+      <a href="../Azure.Search.QuerySLA/" class="md-nav__link">
         Azure.Search.QuerySLA
       </a>
     </li>
@@ -4723,7 +4671,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../en/rules/Azure.Search.SKU/" class="md-nav__link">
+      <a href="../Azure.Search.SKU/" class="md-nav__link">
         Azure.Search.SKU
       </a>
     </li>
@@ -4737,7 +4685,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../en/rules/Azure.SecurityCenter.Contact/" class="md-nav__link">
+      <a href="../Azure.SecurityCenter.Contact/" class="md-nav__link">
         Azure.SecurityCenter.Contact
       </a>
     </li>
@@ -4751,7 +4699,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../en/rules/Azure.SecurityCenter.Provisioning/" class="md-nav__link">
+      <a href="../Azure.SecurityCenter.Provisioning/" class="md-nav__link">
         Azure.SecurityCenter.Provisioning
       </a>
     </li>
@@ -4765,7 +4713,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../en/rules/Azure.ServiceBus.DisableLocalAuth/" class="md-nav__link">
+      <a href="../Azure.ServiceBus.DisableLocalAuth/" class="md-nav__link">
         Azure.ServiceBus.DisableLocalAuth
       </a>
     </li>
@@ -4779,7 +4727,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../en/rules/Azure.ServiceBus.Usage/" class="md-nav__link">
+      <a href="../Azure.ServiceBus.Usage/" class="md-nav__link">
         Azure.ServiceBus.Usage
       </a>
     </li>
@@ -4793,7 +4741,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../en/rules/Azure.ServiceFabric.AAD/" class="md-nav__link">
+      <a href="../Azure.ServiceFabric.AAD/" class="md-nav__link">
         Azure.ServiceFabric.AAD
       </a>
     </li>
@@ -4807,7 +4755,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../en/rules/Azure.SignalR.ManagedIdentity/" class="md-nav__link">
+      <a href="../Azure.SignalR.ManagedIdentity/" class="md-nav__link">
         Azure.SignalR.ManagedIdentity
       </a>
     </li>
@@ -4821,7 +4769,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../en/rules/Azure.SignalR.Name/" class="md-nav__link">
+      <a href="../Azure.SignalR.Name/" class="md-nav__link">
         Azure.SignalR.Name
       </a>
     </li>
@@ -4835,7 +4783,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../en/rules/Azure.SignalR.SLA/" class="md-nav__link">
+      <a href="../Azure.SignalR.SLA/" class="md-nav__link">
         Azure.SignalR.SLA
       </a>
     </li>
@@ -4849,7 +4797,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../en/rules/Azure.Storage.BlobAccessType/" class="md-nav__link">
+      <a href="../Azure.Storage.BlobAccessType/" class="md-nav__link">
         Azure.Storage.BlobAccessType
       </a>
     </li>
@@ -4863,7 +4811,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../en/rules/Azure.Storage.BlobPublicAccess/" class="md-nav__link">
+      <a href="../Azure.Storage.BlobPublicAccess/" class="md-nav__link">
         Azure.Storage.BlobPublicAccess
       </a>
     </li>
@@ -4877,7 +4825,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../en/rules/Azure.Storage.Firewall/" class="md-nav__link">
+      <a href="../Azure.Storage.Firewall/" class="md-nav__link">
         Azure.Storage.Firewall
       </a>
     </li>
@@ -4891,7 +4839,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../en/rules/Azure.Storage.MinTLS/" class="md-nav__link">
+      <a href="../Azure.Storage.MinTLS/" class="md-nav__link">
         Azure.Storage.MinTLS
       </a>
     </li>
@@ -4905,7 +4853,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../en/rules/Azure.Storage.Name/" class="md-nav__link">
+      <a href="../Azure.Storage.Name/" class="md-nav__link">
         Azure.Storage.Name
       </a>
     </li>
@@ -4919,7 +4867,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../en/rules/Azure.Storage.SecureTransfer/" class="md-nav__link">
+      <a href="../Azure.Storage.SecureTransfer/" class="md-nav__link">
         Azure.Storage.SecureTransfer
       </a>
     </li>
@@ -4933,7 +4881,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../en/rules/Azure.Storage.SoftDelete/" class="md-nav__link">
+      <a href="../Azure.Storage.SoftDelete/" class="md-nav__link">
         Azure.Storage.SoftDelete
       </a>
     </li>
@@ -4947,7 +4895,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../en/rules/Azure.Storage.UseReplication/" class="md-nav__link">
+      <a href="../Azure.Storage.UseReplication/" class="md-nav__link">
         Azure.Storage.UseReplication
       </a>
     </li>
@@ -4961,7 +4909,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../en/rules/Azure.Template.DebugDeployment/" class="md-nav__link">
+      <a href="../Azure.Template.DebugDeployment/" class="md-nav__link">
         Azure.Template.DebugDeployment
       </a>
     </li>
@@ -4975,7 +4923,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../en/rules/Azure.Template.DefineParameters/" class="md-nav__link">
+      <a href="../Azure.Template.DefineParameters/" class="md-nav__link">
         Azure.Template.DefineParameters
       </a>
     </li>
@@ -4989,7 +4937,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../en/rules/Azure.Template.ExpressionLength/" class="md-nav__link">
+      <a href="../Azure.Template.ExpressionLength/" class="md-nav__link">
         Azure.Template.ExpressionLength
       </a>
     </li>
@@ -5003,7 +4951,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../en/rules/Azure.Template.LocationDefault/" class="md-nav__link">
+      <a href="../Azure.Template.LocationDefault/" class="md-nav__link">
         Azure.Template.LocationDefault
       </a>
     </li>
@@ -5017,7 +4965,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../en/rules/Azure.Template.LocationType/" class="md-nav__link">
+      <a href="../Azure.Template.LocationType/" class="md-nav__link">
         Azure.Template.LocationType
       </a>
     </li>
@@ -5031,7 +4979,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../en/rules/Azure.Template.MetadataLink/" class="md-nav__link">
+      <a href="../Azure.Template.MetadataLink/" class="md-nav__link">
         Azure.Template.MetadataLink
       </a>
     </li>
@@ -5045,7 +4993,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../en/rules/Azure.Template.ParameterDataTypes/" class="md-nav__link">
+      <a href="../Azure.Template.ParameterDataTypes/" class="md-nav__link">
         Azure.Template.ParameterDataTypes
       </a>
     </li>
@@ -5059,7 +5007,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../en/rules/Azure.Template.ParameterFile/" class="md-nav__link">
+      <a href="../Azure.Template.ParameterFile/" class="md-nav__link">
         Azure.Template.ParameterFile
       </a>
     </li>
@@ -5073,7 +5021,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../en/rules/Azure.Template.ParameterMetadata/" class="md-nav__link">
+      <a href="../Azure.Template.ParameterMetadata/" class="md-nav__link">
         Azure.Template.ParameterMetadata
       </a>
     </li>
@@ -5087,7 +5035,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../en/rules/Azure.Template.ParameterMinMaxValue/" class="md-nav__link">
+      <a href="../Azure.Template.ParameterMinMaxValue/" class="md-nav__link">
         Azure.Template.ParameterMinMaxValue
       </a>
     </li>
@@ -5101,7 +5049,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../en/rules/Azure.Template.ParameterScheme/" class="md-nav__link">
+      <a href="../Azure.Template.ParameterScheme/" class="md-nav__link">
         Azure.Template.ParameterScheme
       </a>
     </li>
@@ -5115,7 +5063,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../en/rules/Azure.Template.ParameterStrongType/" class="md-nav__link">
+      <a href="../Azure.Template.ParameterStrongType/" class="md-nav__link">
         Azure.Template.ParameterStrongType
       </a>
     </li>
@@ -5129,7 +5077,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../en/rules/Azure.Template.ParameterValue/" class="md-nav__link">
+      <a href="../Azure.Template.ParameterValue/" class="md-nav__link">
         Azure.Template.ParameterValue
       </a>
     </li>
@@ -5143,7 +5091,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../en/rules/Azure.Template.ResourceLocation/" class="md-nav__link">
+      <a href="../Azure.Template.ResourceLocation/" class="md-nav__link">
         Azure.Template.ResourceLocation
       </a>
     </li>
@@ -5157,7 +5105,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../en/rules/Azure.Template.Resources/" class="md-nav__link">
+      <a href="../Azure.Template.Resources/" class="md-nav__link">
         Azure.Template.Resources
       </a>
     </li>
@@ -5171,7 +5119,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../en/rules/Azure.Template.TemplateFile/" class="md-nav__link">
+      <a href="../Azure.Template.TemplateFile/" class="md-nav__link">
         Azure.Template.TemplateFile
       </a>
     </li>
@@ -5185,7 +5133,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../en/rules/Azure.Template.TemplateSchema/" class="md-nav__link">
+      <a href="../Azure.Template.TemplateSchema/" class="md-nav__link">
         Azure.Template.TemplateSchema
       </a>
     </li>
@@ -5199,7 +5147,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../en/rules/Azure.Template.TemplateScheme/" class="md-nav__link">
+      <a href="../Azure.Template.TemplateScheme/" class="md-nav__link">
         Azure.Template.TemplateScheme
       </a>
     </li>
@@ -5213,7 +5161,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../en/rules/Azure.Template.UseComments/" class="md-nav__link">
+      <a href="../Azure.Template.UseComments/" class="md-nav__link">
         Azure.Template.UseComments
       </a>
     </li>
@@ -5227,7 +5175,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../en/rules/Azure.Template.UseDescriptions/" class="md-nav__link">
+      <a href="../Azure.Template.UseDescriptions/" class="md-nav__link">
         Azure.Template.UseDescriptions
       </a>
     </li>
@@ -5241,7 +5189,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../en/rules/Azure.Template.UseLocationParameter/" class="md-nav__link">
+      <a href="../Azure.Template.UseLocationParameter/" class="md-nav__link">
         Azure.Template.UseLocationParameter
       </a>
     </li>
@@ -5255,7 +5203,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../en/rules/Azure.Template.UseParameters/" class="md-nav__link">
+      <a href="../Azure.Template.UseParameters/" class="md-nav__link">
         Azure.Template.UseParameters
       </a>
     </li>
@@ -5269,7 +5217,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../en/rules/Azure.Template.UseVariables/" class="md-nav__link">
+      <a href="../Azure.Template.UseVariables/" class="md-nav__link">
         Azure.Template.UseVariables
       </a>
     </li>
@@ -5283,7 +5231,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../en/rules/Azure.Template.ValidSecretRef/" class="md-nav__link">
+      <a href="../Azure.Template.ValidSecretRef/" class="md-nav__link">
         Azure.Template.ValidSecretRef
       </a>
     </li>
@@ -5297,7 +5245,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../en/rules/Azure.TrafficManager.Endpoints/" class="md-nav__link">
+      <a href="../Azure.TrafficManager.Endpoints/" class="md-nav__link">
         Azure.TrafficManager.Endpoints
       </a>
     </li>
@@ -5311,7 +5259,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../en/rules/Azure.TrafficManager.Protocol/" class="md-nav__link">
+      <a href="../Azure.TrafficManager.Protocol/" class="md-nav__link">
         Azure.TrafficManager.Protocol
       </a>
     </li>
@@ -5325,7 +5273,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../en/rules/Azure.VM.ADE/" class="md-nav__link">
+      <a href="../Azure.VM.ADE/" class="md-nav__link">
         Azure.VM.ADE
       </a>
     </li>
@@ -5339,7 +5287,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../en/rules/Azure.VM.ASAlignment/" class="md-nav__link">
+      <a href="../Azure.VM.ASAlignment/" class="md-nav__link">
         Azure.VM.ASAlignment
       </a>
     </li>
@@ -5353,7 +5301,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../en/rules/Azure.VM.ASMinMembers/" class="md-nav__link">
+      <a href="../Azure.VM.ASMinMembers/" class="md-nav__link">
         Azure.VM.ASMinMembers
       </a>
     </li>
@@ -5367,7 +5315,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../en/rules/Azure.VM.ASName/" class="md-nav__link">
+      <a href="../Azure.VM.ASName/" class="md-nav__link">
         Azure.VM.ASName
       </a>
     </li>
@@ -5381,7 +5329,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../en/rules/Azure.VM.AcceleratedNetworking/" class="md-nav__link">
+      <a href="../Azure.VM.AcceleratedNetworking/" class="md-nav__link">
         Azure.VM.AcceleratedNetworking
       </a>
     </li>
@@ -5395,7 +5343,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../en/rules/Azure.VM.Agent/" class="md-nav__link">
+      <a href="../Azure.VM.Agent/" class="md-nav__link">
         Azure.VM.Agent
       </a>
     </li>
@@ -5409,7 +5357,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../en/rules/Azure.VM.BasicSku/" class="md-nav__link">
+      <a href="../Azure.VM.BasicSku/" class="md-nav__link">
         Azure.VM.BasicSku
       </a>
     </li>
@@ -5423,7 +5371,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../en/rules/Azure.VM.ComputerName/" class="md-nav__link">
+      <a href="../Azure.VM.ComputerName/" class="md-nav__link">
         Azure.VM.ComputerName
       </a>
     </li>
@@ -5437,7 +5385,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../en/rules/Azure.VM.DiskAttached/" class="md-nav__link">
+      <a href="../Azure.VM.DiskAttached/" class="md-nav__link">
         Azure.VM.DiskAttached
       </a>
     </li>
@@ -5451,7 +5399,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../en/rules/Azure.VM.DiskCaching/" class="md-nav__link">
+      <a href="../Azure.VM.DiskCaching/" class="md-nav__link">
         Azure.VM.DiskCaching
       </a>
     </li>
@@ -5465,7 +5413,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../en/rules/Azure.VM.DiskName/" class="md-nav__link">
+      <a href="../Azure.VM.DiskName/" class="md-nav__link">
         Azure.VM.DiskName
       </a>
     </li>
@@ -5479,7 +5427,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../en/rules/Azure.VM.DiskSizeAlignment/" class="md-nav__link">
+      <a href="../Azure.VM.DiskSizeAlignment/" class="md-nav__link">
         Azure.VM.DiskSizeAlignment
       </a>
     </li>
@@ -5493,7 +5441,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../en/rules/Azure.VM.NICAttached/" class="md-nav__link">
+      <a href="../Azure.VM.NICAttached/" class="md-nav__link">
         Azure.VM.NICAttached
       </a>
     </li>
@@ -5507,7 +5455,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../en/rules/Azure.VM.NICName/" class="md-nav__link">
+      <a href="../Azure.VM.NICName/" class="md-nav__link">
         Azure.VM.NICName
       </a>
     </li>
@@ -5521,7 +5469,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../en/rules/Azure.VM.Name/" class="md-nav__link">
+      <a href="../Azure.VM.Name/" class="md-nav__link">
         Azure.VM.Name
       </a>
     </li>
@@ -5535,7 +5483,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../en/rules/Azure.VM.PPGName/" class="md-nav__link">
+      <a href="../Azure.VM.PPGName/" class="md-nav__link">
         Azure.VM.PPGName
       </a>
     </li>
@@ -5549,7 +5497,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../en/rules/Azure.VM.PromoSku/" class="md-nav__link">
+      <a href="../Azure.VM.PromoSku/" class="md-nav__link">
         Azure.VM.PromoSku
       </a>
     </li>
@@ -5563,7 +5511,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../en/rules/Azure.VM.PublicKey/" class="md-nav__link">
+      <a href="../Azure.VM.PublicKey/" class="md-nav__link">
         Azure.VM.PublicKey
       </a>
     </li>
@@ -5577,7 +5525,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../en/rules/Azure.VM.Standalone/" class="md-nav__link">
+      <a href="../Azure.VM.Standalone/" class="md-nav__link">
         Azure.VM.Standalone
       </a>
     </li>
@@ -5591,7 +5539,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../en/rules/Azure.VM.UniqueDns/" class="md-nav__link">
+      <a href="../Azure.VM.UniqueDns/" class="md-nav__link">
         Azure.VM.UniqueDns
       </a>
     </li>
@@ -5605,7 +5553,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../en/rules/Azure.VM.Updates/" class="md-nav__link">
+      <a href="../Azure.VM.Updates/" class="md-nav__link">
         Azure.VM.Updates
       </a>
     </li>
@@ -5619,7 +5567,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../en/rules/Azure.VM.UseHybridUseBenefit/" class="md-nav__link">
+      <a href="../Azure.VM.UseHybridUseBenefit/" class="md-nav__link">
         Azure.VM.UseHybridUseBenefit
       </a>
     </li>
@@ -5633,7 +5581,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../en/rules/Azure.VM.UseManagedDisks/" class="md-nav__link">
+      <a href="../Azure.VM.UseManagedDisks/" class="md-nav__link">
         Azure.VM.UseManagedDisks
       </a>
     </li>
@@ -5647,7 +5595,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../en/rules/Azure.VMSS.ComputerName/" class="md-nav__link">
+      <a href="../Azure.VMSS.ComputerName/" class="md-nav__link">
         Azure.VMSS.ComputerName
       </a>
     </li>
@@ -5661,7 +5609,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../en/rules/Azure.VMSS.Name/" class="md-nav__link">
+      <a href="../Azure.VMSS.Name/" class="md-nav__link">
         Azure.VMSS.Name
       </a>
     </li>
@@ -5675,7 +5623,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../en/rules/Azure.VNET.LocalDNS/" class="md-nav__link">
+      <a href="../Azure.VNET.LocalDNS/" class="md-nav__link">
         Azure.VNET.LocalDNS
       </a>
     </li>
@@ -5689,7 +5637,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../en/rules/Azure.VNET.Name/" class="md-nav__link">
+      <a href="../Azure.VNET.Name/" class="md-nav__link">
         Azure.VNET.Name
       </a>
     </li>
@@ -5703,7 +5651,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../en/rules/Azure.VNET.PeerState/" class="md-nav__link">
+      <a href="../Azure.VNET.PeerState/" class="md-nav__link">
         Azure.VNET.PeerState
       </a>
     </li>
@@ -5717,7 +5665,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../en/rules/Azure.VNET.SingleDNS/" class="md-nav__link">
+      <a href="../Azure.VNET.SingleDNS/" class="md-nav__link">
         Azure.VNET.SingleDNS
       </a>
     </li>
@@ -5731,7 +5679,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../en/rules/Azure.VNET.SubnetName/" class="md-nav__link">
+      <a href="../Azure.VNET.SubnetName/" class="md-nav__link">
         Azure.VNET.SubnetName
       </a>
     </li>
@@ -5745,7 +5693,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../en/rules/Azure.VNET.UseNSGs/" class="md-nav__link">
+      <a href="../Azure.VNET.UseNSGs/" class="md-nav__link">
         Azure.VNET.UseNSGs
       </a>
     </li>
@@ -5759,7 +5707,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../en/rules/Azure.VNG.ConnectionName/" class="md-nav__link">
+      <a href="../Azure.VNG.ConnectionName/" class="md-nav__link">
         Azure.VNG.ConnectionName
       </a>
     </li>
@@ -5773,7 +5721,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../en/rules/Azure.VNG.ERAvailabilityZoneSKU/" class="md-nav__link">
+      <a href="../Azure.VNG.ERAvailabilityZoneSKU/" class="md-nav__link">
         Azure.VNG.ERAvailabilityZoneSKU
       </a>
     </li>
@@ -5787,7 +5735,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../en/rules/Azure.VNG.ERLegacySKU/" class="md-nav__link">
+      <a href="../Azure.VNG.ERLegacySKU/" class="md-nav__link">
         Azure.VNG.ERLegacySKU
       </a>
     </li>
@@ -5801,7 +5749,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../en/rules/Azure.VNG.Name/" class="md-nav__link">
+      <a href="../Azure.VNG.Name/" class="md-nav__link">
         Azure.VNG.Name
       </a>
     </li>
@@ -5815,7 +5763,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../en/rules/Azure.VNG.VPNActiveActive/" class="md-nav__link">
+      <a href="../Azure.VNG.VPNActiveActive/" class="md-nav__link">
         Azure.VNG.VPNActiveActive
       </a>
     </li>
@@ -5829,7 +5777,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../en/rules/Azure.VNG.VPNAvailabilityZoneSKU/" class="md-nav__link">
+      <a href="../Azure.VNG.VPNAvailabilityZoneSKU/" class="md-nav__link">
         Azure.VNG.VPNAvailabilityZoneSKU
       </a>
     </li>
@@ -5843,7 +5791,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../en/rules/Azure.VNG.VPNLegacySKU/" class="md-nav__link">
+      <a href="../Azure.VNG.VPNLegacySKU/" class="md-nav__link">
         Azure.VNG.VPNLegacySKU
       </a>
     </li>
@@ -5857,7 +5805,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../en/rules/Azure.WebPubSub.ManagedIdentity/" class="md-nav__link">
+      <a href="../Azure.WebPubSub.ManagedIdentity/" class="md-nav__link">
         Azure.WebPubSub.ManagedIdentity
       </a>
     </li>
@@ -5871,7 +5819,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../en/rules/Azure.WebPubSub.SLA/" class="md-nav__link">
+      <a href="../Azure.WebPubSub.SLA/" class="md-nav__link">
         Azure.WebPubSub.SLA
       </a>
     </li>
@@ -5885,7 +5833,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../en/rules/Azure.vWAN.Name/" class="md-nav__link">
+      <a href="../Azure.vWAN.Name/" class="md-nav__link">
         Azure.vWAN.Name
       </a>
     </li>
@@ -5966,7 +5914,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../en/baselines/Azure.All/" class="md-nav__link">
+      <a href="../../baselines/Azure.All/" class="md-nav__link">
         Azure.All
       </a>
     </li>
@@ -5980,7 +5928,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../en/baselines/Azure.Default/" class="md-nav__link">
+      <a href="../../baselines/Azure.Default/" class="md-nav__link">
         Azure.Default
       </a>
     </li>
@@ -5994,7 +5942,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../en/baselines/Azure.GA_2020_06/" class="md-nav__link">
+      <a href="../../baselines/Azure.GA_2020_06/" class="md-nav__link">
         Azure.GA_2020_06
       </a>
     </li>
@@ -6008,7 +5956,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../en/baselines/Azure.GA_2020_09/" class="md-nav__link">
+      <a href="../../baselines/Azure.GA_2020_09/" class="md-nav__link">
         Azure.GA_2020_09
       </a>
     </li>
@@ -6022,7 +5970,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../en/baselines/Azure.GA_2020_12/" class="md-nav__link">
+      <a href="../../baselines/Azure.GA_2020_12/" class="md-nav__link">
         Azure.GA_2020_12
       </a>
     </li>
@@ -6036,7 +5984,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../en/baselines/Azure.GA_2021_03/" class="md-nav__link">
+      <a href="../../baselines/Azure.GA_2021_03/" class="md-nav__link">
         Azure.GA_2021_03
       </a>
     </li>
@@ -6050,7 +5998,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../en/baselines/Azure.GA_2021_06/" class="md-nav__link">
+      <a href="../../baselines/Azure.GA_2021_06/" class="md-nav__link">
         Azure.GA_2021_06
       </a>
     </li>
@@ -6064,7 +6012,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../en/baselines/Azure.GA_2021_09/" class="md-nav__link">
+      <a href="../../baselines/Azure.GA_2021_09/" class="md-nav__link">
         Azure.GA_2021_09
       </a>
     </li>
@@ -6078,7 +6026,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../en/baselines/Azure.GA_2021_12/" class="md-nav__link">
+      <a href="../../baselines/Azure.GA_2021_12/" class="md-nav__link">
         Azure.GA_2021_12
       </a>
     </li>
@@ -6092,7 +6040,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../en/baselines/Azure.GA_2022_03/" class="md-nav__link">
+      <a href="../../baselines/Azure.GA_2022_03/" class="md-nav__link">
         Azure.GA_2022_03
       </a>
     </li>
@@ -6106,7 +6054,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../en/baselines/Azure.GA_2022_06/" class="md-nav__link">
+      <a href="../../baselines/Azure.GA_2022_06/" class="md-nav__link">
         Azure.GA_2022_06
       </a>
     </li>
@@ -6120,7 +6068,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../en/baselines/Azure.Preview/" class="md-nav__link">
+      <a href="../../baselines/Azure.Preview/" class="md-nav__link">
         Azure.Preview
       </a>
     </li>
@@ -6134,7 +6082,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../en/baselines/Azure.Preview_2021_09/" class="md-nav__link">
+      <a href="../../baselines/Azure.Preview_2021_09/" class="md-nav__link">
         Azure.Preview_2021_09
       </a>
     </li>
@@ -6148,7 +6096,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../en/baselines/Azure.Preview_2021_12/" class="md-nav__link">
+      <a href="../../baselines/Azure.Preview_2021_12/" class="md-nav__link">
         Azure.Preview_2021_12
       </a>
     </li>
@@ -6162,7 +6110,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../en/baselines/Azure.Preview_2022_03/" class="md-nav__link">
+      <a href="../../baselines/Azure.Preview_2022_03/" class="md-nav__link">
         Azure.Preview_2022_03
       </a>
     </li>
@@ -6176,7 +6124,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../en/baselines/Azure.Preview_2022_06/" class="md-nav__link">
+      <a href="../../baselines/Azure.Preview_2022_06/" class="md-nav__link">
         Azure.Preview_2022_06
       </a>
     </li>
@@ -6235,7 +6183,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../en/selectors/Azure.AppService.IsAPIApp/" class="md-nav__link">
+      <a href="../../selectors/Azure.AppService.IsAPIApp/" class="md-nav__link">
         Azure.AppService.IsAPIApp
       </a>
     </li>
@@ -6249,7 +6197,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../en/selectors/Azure.AppService.IsFunctionApp/" class="md-nav__link">
+      <a href="../../selectors/Azure.AppService.IsFunctionApp/" class="md-nav__link">
         Azure.AppService.IsFunctionApp
       </a>
     </li>
@@ -6263,7 +6211,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../en/selectors/Azure.AppService.IsLogicApp/" class="md-nav__link">
+      <a href="../../selectors/Azure.AppService.IsLogicApp/" class="md-nav__link">
         Azure.AppService.IsLogicApp
       </a>
     </li>
@@ -6277,7 +6225,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../en/selectors/Azure.AppService.IsWebApp/" class="md-nav__link">
+      <a href="../../selectors/Azure.AppService.IsWebApp/" class="md-nav__link">
         Azure.AppService.IsWebApp
       </a>
     </li>
@@ -6291,7 +6239,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../en/selectors/Azure.Resource.SupportsTags/" class="md-nav__link">
+      <a href="../../selectors/Azure.Resource.SupportsTags/" class="md-nav__link">
         Azure.Resource.SupportsTags
       </a>
     </li>
@@ -6339,77 +6287,23 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#source-expansion" class="md-nav__link">
-    Source expansion
-  </a>
-  
-    <nav class="md-nav" aria-label="Source expansion">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#feature-support" class="md-nav__link">
-    Feature support
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#limitations" class="md-nav__link">
-    Limitations
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#strong-type" class="md-nav__link">
-    Strong type
+  <a href="#description" class="md-nav__link">
+    Description
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#scope-functions" class="md-nav__link">
-    Scope functions
-  </a>
-  
-    <nav class="md-nav" aria-label="Scope functions">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#subscription" class="md-nav__link">
-    Subscription
+  <a href="#recommendation" class="md-nav__link">
+    Recommendation
   </a>
   
 </li>
-        
-          <li class="md-nav__item">
-  <a href="#resource-group" class="md-nav__link">
-    Resource Group
+      
+        <li class="md-nav__item">
+  <a href="#links" class="md-nav__link">
+    Links
   </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#tenant" class="md-nav__link">
-    Tenant
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#management-group" class="md-nav__link">
-    Management Group
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
   
 </li>
       
@@ -6424,191 +6318,68 @@
           <div class="md-content" data-md-component="content">
             <article class="md-content__inner md-typeset">
               
+
+  <!-- Edit button -->
   
-                
-  <a href="https://github.com/Azure/PSRule.Rules.Azure/blob/main/docs/expanding-source-files.md" title="Edit this page" class="md-content__button md-icon">
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75L3 17.25Z"/></svg>
-  </a>
-
-
+    
+      <a
+        href="https://github.com/Azure/PSRule.Rules.Azure/blob/main/docs/en/rules/Azure.Deployment.AdminUsername.md"
+        title="Edit this page"
+        class="md-content__button md-icon"
+      >
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75L3 17.25Z"/></svg>
+      </a>
+    
   
 
+  <!--
+    Hack: check whether the content contains a h1 headline. If it
+    doesn't, the page title (or respectively site name) is used
+    as the main headline.
+  -->
+  
 
+  <!-- Markdown content -->
+  <h1 id="administrator-username-types">Administrator Username Types<a class="headerlink" href="#administrator-username-types" title="Permanent link">#</a></h1>
+<nav class="md-tags"><span class="md-tag">Azure.Deployment.AdminUsername</span><span class="md-tag">AZR-000284</span><span class="md-tag">Error</span></nav>
+<p><a href="../module/#security"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path fill-rule="evenodd" d="M1.527 13.237a1.75 1.75 0 0 1 0-2.474l9.272-9.273a1.75 1.75 0 0 1 2.475 0l9.272 9.273a1.75 1.75 0 0 1 0 2.474l-9.272 9.272a1.75 1.75 0 0 1-2.475 0l-9.272-9.272zm1.06-1.414a.25.25 0 0 0 0 .354l9.273 9.272a.25.25 0 0 0 .353 0l9.272-9.272a.25.25 0 0 0 0-.354l-9.272-9.272a.25.25 0 0 0-.353 0l-9.273 9.272z"/></svg></span> Security</a>
+ · <a href="../resource/#all-resources"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path fill-rule="evenodd" d="M13.152.682a2.25 2.25 0 0 1 2.269 0l.007.004 6.957 4.276a2.276 2.276 0 0 1 1.126 1.964v7.516c0 .81-.432 1.56-1.133 1.968l-.002.001-11.964 7.037-.004.003a2.276 2.276 0 0 1-2.284 0l-.026-.015-6.503-4.502a2.268 2.268 0 0 1-1.096-1.943V9.438c0-.392.1-.77.284-1.1l.003-.006.014-.026a2.28 2.28 0 0 1 .82-.827h.002L13.152.681zm.757 1.295h-.001L2.648 8.616l6.248 4.247a.776.776 0 0 0 .758-.01h.001l11.633-6.804-6.629-4.074a.75.75 0 0 0-.75.003zM18 9.709l-3.25 1.9v7.548L18 17.245V9.709zm1.5-.878v7.532l2.124-1.25a.777.777 0 0 0 .387-.671V7.363L19.5 8.831zm-9.09 5.316 2.84-1.66v7.552l-3.233 1.902v-7.612c.134-.047.265-.107.391-.18l.002-.002zm-1.893 7.754V14.33a2.277 2.277 0 0 1-.393-.18l-.023-.014-6.102-4.147v7.003c0 .275.145.528.379.664l.025.014 6.114 4.232z"/></svg></span> All resources</a>
+ · <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M7.75 6.5a1.25 1.25 0 1 0 0 2.5 1.25 1.25 0 0 0 0-2.5z"/><path fill-rule="evenodd" d="M2.5 1A1.5 1.5 0 0 0 1 2.5v8.44c0 .397.158.779.44 1.06l10.25 10.25a1.5 1.5 0 0 0 2.12 0l8.44-8.44a1.5 1.5 0 0 0 0-2.12L12 1.44A1.5 1.5 0 0 0 10.94 1H2.5zm0 1.5h8.44l10.25 10.25-8.44 8.44L2.5 10.94V2.5z"/></svg></span> 2022_09</p>
+<p>The adminUsername or administratorUsername property should not be a string literal in nested templates.</p>
+<h2 id="description">Description<a class="headerlink" href="#description" title="Permanent link">#</a></h2>
+<p>In nested deployments a resource can have the adminUsername property set to a string literal value.
+This means that the value is passed through insecurely and is a security risk.</p>
+<h2 id="recommendation">Recommendation<a class="headerlink" href="#recommendation" title="Permanent link">#</a></h2>
+<p>Sensitive properties for nested deployments should be set by a secureString parameter.</p>
+<h2 id="links">Links<a class="headerlink" href="#links" title="Permanent link">#</a></h2>
+<ul>
+<li><a href="https://docs.microsoft.com/azure/azure-resource-manager/bicep/key-vault-parameter">Use KeyVault Secrets in Bicep</a></li>
+<li><a href="https://docs.microsoft.com/azure/azure-resource-manager/templates/template-tutorial-use-key-vault#edit-the-parameters-file">Use KeyVault Secret in Parameter File</a></li>
+<li><a href="https://docs.microsoft.com/azure/architecture/framework/security/deploy-infrastructure">Well Architected Framework - IAC</a></li>
+</ul>
 
-<h1 id="expanding-source-files">Expanding source files<a class="headerlink" href="#expanding-source-files" title="Permanent link">#</a></h1>
-<p>PSRule for Azure supports analyzing resources contained within Azure Infrastructure as Code.</p>
-<div class="admonition abstract">
-<p class="admonition-title">Abstract</p>
-<p>This topic covers what source expansion is, why it's important, and how to use it within PSRule for Azure.</p>
-</div>
-<h2 id="source-expansion">Source expansion<a class="headerlink" href="#source-expansion" title="Permanent link">#</a></h2>
-<p>PSRule for Azure goes beyond linting Azure Bicep and template files for syntax.
-Source expansion performs context specific static analysis on Azure resources.
-Azure resources are analyzed before deployment as if they are deployed.</p>
-<p>This provides some unique benefits such as:</p>
-<ul>
-<li><strong>Improve success</strong> &mdash; Azure resources are resolved before deployment,
-  increasing success by finding errors earlier such as within a <abbr title="Pull Request">PR</abbr>.<ul>
-<li>Detect common templates issues such as missing parameters and <abbr title="JavaScript Object Notation">JSON</abbr> structure.</li>
-<li>Identify deployment issues such as invalid resource names and incorrect resource identifiers.</li>
-</ul>
-</li>
-<li><strong>As deployed</strong> &mdash; Analysis of Azure resources against Azure <abbr title="Well-Architected Framework">WAF</abbr> as if they are deployed.<ul>
-<li>Parameters, conditional resources, functions (built-in and user defined), variables,
-  and copy loops are resolved.</li>
-<li>Azure resource names are shown in passing and failing results.
-  Resolving issues with resource configurations can be targeted by resource.</li>
-<li>Resource file locations for template and parameter files are included in results.</li>
-</ul>
-</li>
-<li><strong>Suppression by resource name</strong> &mdash; Azure resource names can be used to apply exceptions.<ul>
-<li>Suppression allows for individual resources to be excluded from rules by name.</li>
-</ul>
-</li>
-<li><strong>Offline support</strong> &mdash; Static analysis is performed against source files instead of deployed resources.<ul>
-<li>Some functions that may be included in templates dynamically query Azure for current state.
-  For these functions standard placeholder values are used by default.
-  Functions that use placeholders include <code>reference</code>, <code>list*</code>.</li>
-</ul>
-</li>
-</ul>
-<h3 id="feature-support">Feature support<a class="headerlink" href="#feature-support" title="Permanent link">#</a></h3>
-<p>Source expansion is supported with:</p>
-<ul>
-<li><strong>Azure template and parameter files</strong> &mdash; Azure templates are expanded from parameter files.
-  Link parameter files to templates by metadata or naming convention.
-  See <a href="../using-templates/">Using templates</a> for a detailed explanation of how to do this.</li>
-<li><strong>Azure Bicep deployments</strong> &mdash; Files with the <code>.bicep</code> extension are detected and expanded.
-  See <a href="../using-bicep/">Using Bicep source</a> for a detailed explanation of how to do this.</li>
-<li><strong>Azure Bicep modules with tests</strong> &mdash; Reusable Bicep modules can be expanded with tests.
-  See <a href="../using-bicep/">Using Bicep source</a> for a detailed explanation of how to do this.</li>
-</ul>
-<h3 id="limitations">Limitations<a class="headerlink" href="#limitations" title="Permanent link">#</a></h3>
-<p>Currently the following limitations apply:</p>
-<ul>
-<li>Required parameters in must be provided in parameter files or Bicep deployments.</li>
-<li>Nested templates are expanded, external templates are not.<ul>
-<li>Deployment resources that link to an external template are returned as a resource.</li>
-</ul>
-</li>
-<li>Sub-resources such as diagnostic logs or configurations are automatically nested.
-Automatic nesting a sub-resource requires:<ul>
-<li>The parent resource is defined in the same template.</li>
-<li>The sub-resource depends on the parent resource.</li>
-</ul>
-</li>
-<li>The <code>environment()</code> template function always returns values for Azure public cloud.</li>
-<li>References to Key Vault secrets are not expanded.
-  A placeholder value is used instead.</li>
-<li>The <code>reference()</code> function will return objects for resources within the same template.
-  For resources that are not in the same template, a placeholder value is used instead.</li>
-<li>Multi-line strings are not supported.</li>
-<li>Template expressions up to a maximum of 100,000 characters are supported.</li>
-</ul>
-<p>In addition, currently the following limitation apply to using Bicep source files:</p>
-<ul>
-<li>The Bicep CLI must be installed.
-  When using GitHub Actions or Azure Pipelines the Bicep CLI is pre-installed.</li>
-<li>Location of issues in Bicep source files is not supported.</li>
-<li>
-<p>Expansion of Bicep source files times out after 5 seconds by default.
-  The timeout can be overridden by setting the <a href="../setup/setup-bicep/#configuring-timeout">AZURE_BICEP_FILE_EXPANSION_TIMEOUT</a> option.</p>
-</li>
-</ul>
-<h2 id="strong-type">Strong type<a class="headerlink" href="#strong-type" title="Permanent link">#</a></h2>
-<p>String parameters are commonly used to pass values such as a resource Id or location.
-PSRule for Azure provides additional support to allow parameters to be strongly typed.
-When a parameter is strongly typed, the value is checked against the type during expansion.</p>
-<p>To configure a strong type for a parameter set the <code>strongType</code> metadata property on the parameter.
-The strong type will be set to the resource type that the parameter will accept, such as <code>Microsoft.OperationalInsights/workspaces</code>.</p>
-<div class="tabbed-set tabbed-alternate" data-tabs="1:2"><input checked="checked" id="__tabbed_1_1" name="__tabbed_1" type="radio" /><input id="__tabbed_1_2" name="__tabbed_1" type="radio" /><div class="tabbed-labels"><label for="__tabbed_1_1">Template</label><label for="__tabbed_1_2">Bicep</label></div>
-<div class="tabbed-content">
-<div class="tabbed-block">
-<div class="highlight"><pre><span></span><code><span class="p">{</span><span class="w"></span>
-<span class="w">    </span><span class="nt">&quot;$schema&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;https://schema.management.azure.com/schemas/2019-04-01/deploymentTemplate.json#&quot;</span><span class="p">,</span><span class="w"></span>
-<span class="w">    </span><span class="nt">&quot;contentVersion&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;1.0.0.0&quot;</span><span class="p">,</span><span class="w"></span>
-<span class="w">    </span><span class="nt">&quot;parameters&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
-<span class="w">        </span><span class="nt">&quot;workspaceId&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
-<span class="w">            </span><span class="nt">&quot;type&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;string&quot;</span><span class="p">,</span><span class="w"></span>
-<span class="w">            </span><span class="nt">&quot;metadata&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
-<span class="w">                </span><span class="nt">&quot;description&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;The resource identifier for a Log Analytics workspace.&quot;</span><span class="p">,</span><span class="w"></span>
-<span class="w">                </span><span class="nt">&quot;strongType&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Microsoft.OperationalInsights/workspaces&quot;</span><span class="w"></span>
-<span class="w">            </span><span class="p">}</span><span class="w"></span>
-<span class="w">        </span><span class="p">}</span><span class="w"></span>
-<span class="w">    </span><span class="p">}</span><span class="w"></span>
-<span class="p">}</span><span class="w"></span>
-</code></pre></div>
-</div>
-<div class="tabbed-block">
-<div class="highlight"><pre><span></span><code>@metadata({
-  strongType: &#39;Microsoft.OperationalInsights/workspaces&#39;
-})
-@description(&#39;The resource identifier for a Log Analytics workspace.&#39;)
-param workspaceId string
-</code></pre></div>
-</div>
-</div>
-</div>
-<p>Strong type also supports the following non-resource type values:</p>
-<ul>
-<li><code>location</code> - Specifies the parameter must contain any valid Azure location.</li>
-</ul>
-<h2 id="scope-functions">Scope functions<a class="headerlink" href="#scope-functions" title="Permanent link">#</a></h2>
-<p>Azure deployments support a number of <a href="https://docs.microsoft.com/azure/azure-resource-manager/templates/template-functions-scope">scope functions</a> can be used within Infrastructure as Code.
-When using PSRule for Azure, these functions have a default meaning that can be configured.</p>
-<p>When configuring scope functions, only the properties you want to override has to be specified.
-Unspecified properties will inherit from the defaults.</p>
-<h3 id="subscription">Subscription<a class="headerlink" href="#subscription" title="Permanent link">#</a></h3>
-<p>The <code>subscription()</code> function will return the following unless overridden:</p>
-<div class="highlight"><pre><span></span><code><span class="nt">subscriptionId</span><span class="p">:</span><span class="w"> </span><span class="s">&#39;ffffffff-ffff-ffff-ffff-ffffffffffff&#39;</span><span class="w"></span>
-<span class="nt">displayName</span><span class="p">:</span><span class="w"> </span><span class="s">&#39;PSRule</span><span class="nv"> </span><span class="s">Test</span><span class="nv"> </span><span class="s">Subscription&#39;</span><span class="w"></span>
-<span class="nt">state</span><span class="p">:</span><span class="w"> </span><span class="s">&#39;NotDefined&#39;</span><span class="w"></span>
-</code></pre></div>
-<p>To override, configure <a href="../setup/configuring-expansion/#deployment-subscription"><code>AZURE_SUBSCRIPTION</code></a>.</p>
-<h3 id="resource-group">Resource Group<a class="headerlink" href="#resource-group" title="Permanent link">#</a></h3>
-<p>The <code>resourceGroup()</code> function will return the following unless overridden:</p>
-<div class="highlight"><pre><span></span><code><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="s">&#39;ps-rule-test-rg&#39;</span><span class="w"></span>
-<span class="nt">location</span><span class="p">:</span><span class="w"> </span><span class="s">&#39;eastus&#39;</span><span class="w"></span>
-<span class="nt">tags</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">{</span><span class="w"> </span><span class="p p-Indicator">}</span><span class="w"></span>
-<span class="nt">properties</span><span class="p">:</span><span class="w"></span>
-<span class="w">  </span><span class="nt">provisioningState</span><span class="p">:</span><span class="w"> </span><span class="s">&#39;Succeeded&#39;</span><span class="w"></span>
-</code></pre></div>
-<p>To override, configure <a href="../setup/configuring-expansion/#deployment-resource-group"><code>AZURE_RESOURCE_GROUP</code></a>.</p>
-<h3 id="tenant">Tenant<a class="headerlink" href="#tenant" title="Permanent link">#</a></h3>
-<p>The <code>tenant()</code> function will return the following unless overridden:</p>
-<div class="highlight"><pre><span></span><code><span class="nt">countryCode</span><span class="p">:</span><span class="w"> </span><span class="s">&#39;US&#39;</span><span class="w"></span>
-<span class="nt">tenantId</span><span class="p">:</span><span class="w"> </span><span class="s">&#39;ffffffff-ffff-ffff-ffff-ffffffffffff&#39;</span><span class="w"></span>
-<span class="nt">displayName</span><span class="p">:</span><span class="w"> </span><span class="s">&#39;PSRule&#39;</span><span class="w"></span>
-</code></pre></div>
-<p>To override, configure <a href="../setup/configuring-expansion/#deployment-tenant"><code>AZURE_TENANT</code></a>.</p>
-<h3 id="management-group">Management Group<a class="headerlink" href="#management-group" title="Permanent link">#</a></h3>
-<p>The <code>managementGroup()</code> function will return the following unless overridden:</p>
-<div class="highlight"><pre><span></span><code><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="s">&#39;psrule-test&#39;</span><span class="w"></span>
-<span class="nt">properties</span><span class="p">:</span><span class="w"></span>
-<span class="w">  </span><span class="nt">displyName</span><span class="p">:</span><span class="w"> </span><span class="s">&#39;PSRule</span><span class="nv"> </span><span class="s">Test</span><span class="nv"> </span><span class="s">Management</span><span class="nv"> </span><span class="s">Group&#39;</span><span class="w"></span>
-</code></pre></div>
-<p>To override, configure <a href="../setup/configuring-expansion/#deployment-management-group"><code>AZURE_MANAGEMENT_GROUP</code></a>.</p>
-
-  <hr>
+  <!-- Last update of source file -->
+  
+    
+      <hr>
 <div class="md-source-file">
   <small>
     
       Last update:
-      2022-08-27
+      2022-09-03
     
   </small>
 </div>
-
-
-
-
-              
+    
+  
 
   
 
 
   <!-- Giscus -->
   <h2 id="__comments">Comments</h2>
+  
+    
   
 
   
@@ -6617,7 +6388,8 @@ Unspecified properties will inherit from the defaults.</p>
       data-repo-id="MDEwOlJlcG9zaXRvcnkxODQxNTQ2Njg="
       data-category="Documentation"
       data-category-id="DIC_kwDOCvn6LM4CQqE6"
-      data-mapping="pathname"
+      data-mapping="specific"
+      data-term="Azure.Deployment.AdminUsername"
       data-strict="0"
       data-reactions-enabled="1"
       data-emit-metadata="0"
@@ -6672,42 +6444,6 @@ Unspecified properties will inherit from the defaults.</p>
       
         <footer class="md-footer">
   
-    
-    <nav class="md-footer__inner md-grid" aria-label="Footer" >
-      
-        
-        <a href="../install-instructions/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Installation" rel="prev">
-          <div class="md-footer__button md-icon">
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
-          </div>
-          <div class="md-footer__title">
-            <div class="md-ellipsis">
-              <span class="md-footer__direction">
-                Previous
-              </span>
-              Installation
-            </div>
-          </div>
-        </a>
-      
-      
-        
-        <a href="../using-templates/" class="md-footer__link md-footer__link--next" aria-label="Next: Using templates" rel="next">
-          <div class="md-footer__title">
-            <div class="md-ellipsis">
-              <span class="md-footer__direction">
-                Next
-              </span>
-              Using templates
-            </div>
-          </div>
-          <div class="md-footer__button md-icon">
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4Z"/></svg>
-          </div>
-        </a>
-      
-    </nav>
-  
   <div class="md-footer-meta md-typeset">
     <div class="md-footer-meta__inner md-grid">
       <div class="md-copyright">
@@ -6742,10 +6478,10 @@ Unspecified properties will inherit from the defaults.</p>
       <div class="md-dialog__inner md-typeset"></div>
     </div>
     
-    <script id="__config" type="application/json">{"base": "..", "features": ["navigation.instant", "navigation.indexes", {"navigation.sections": {"level": 1}}, "navigation.tabs", "content.code.annotate", "content.tabs.link"], "search": "../assets/javascripts/workers/search.ecf98df9.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version.title": "Select version"}, "version": {"provider": "mike"}}</script>
+    <script id="__config" type="application/json">{"base": "../../..", "features": ["navigation.instant", "navigation.indexes", {"navigation.sections": {"level": 1}}, "navigation.tabs", "content.code.annotate", "content.tabs.link"], "search": "../../../assets/javascripts/workers/search.ecf98df9.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version.title": "Select version"}, "version": {"provider": "mike"}}</script>
     
     
-      <script src="../assets/javascripts/bundle.9c69f0bc.min.js"></script>
+      <script src="../../../assets/javascripts/bundle.9c69f0bc.min.js"></script>
       
     
   </body>

@@ -539,6 +539,13 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
+  <a href="#prerequisites" class="md-nav__link">
+    PreRequisites
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#installing-powershell" class="md-nav__link">
     Installing PowerShell
   </a>
@@ -557,6 +564,19 @@
     Pre-release versions
   </a>
   
+    <nav class="md-nav" aria-label="Pre-release versions">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#development-dependencies" class="md-nav__link">
+    Development dependencies
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
         
           <li class="md-nav__item">
@@ -568,8 +588,8 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#development-dependencies" class="md-nav__link">
-    Development dependencies
+  <a href="#troubleshooting" class="md-nav__link">
+    Troubleshooting
   </a>
   
 </li>
@@ -1316,6 +1336,8 @@
       
       
       
+        
+          
         
           
         
@@ -3321,6 +3343,20 @@
     <li class="md-nav__item">
       <a href="../en/rules/Azure.DataFactory.Version/" class="md-nav__link">
         Azure.DataFactory.Version
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../en/rules/Azure.Deployment.AdminUsername/" class="md-nav__link">
+        Azure.Deployment.AdminUsername
       </a>
     </li>
   
@@ -6343,6 +6379,13 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
+  <a href="#prerequisites" class="md-nav__link">
+    PreRequisites
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#installing-powershell" class="md-nav__link">
     Installing PowerShell
   </a>
@@ -6361,6 +6404,19 @@
     Pre-release versions
   </a>
   
+    <nav class="md-nav" aria-label="Pre-release versions">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#development-dependencies" class="md-nav__link">
+    Development dependencies
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
         
           <li class="md-nav__item">
@@ -6372,8 +6428,8 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#development-dependencies" class="md-nav__link">
-    Development dependencies
+  <a href="#troubleshooting" class="md-nav__link">
+    Troubleshooting
   </a>
   
 </li>
@@ -6485,14 +6541,53 @@ Install the extension from the marketplace, then use the <code>ps-rule-assert</c
 <h2 id="installing-locally">Installing locally<a class="headerlink" href="#installing-locally" title="Permanent link">#</a></h2>
 <p>PSRule for Azure can be installed locally from the PowerShell Gallery using PowerShell.
 You can also use this option to install on <abbr title="continuous integration">CI</abbr> workers that are not natively supported.</p>
-<p>The following platforms are supported:</p>
-<ul>
-<li>Windows PowerShell 5.1 with .NET Framework 4.7.2 or greater.</li>
-<li>PowerShell 7.2 or greater on MacOS, Linux, and Windows.</li>
-</ul>
+<h3 id="prerequisites">PreRequisites<a class="headerlink" href="#prerequisites" title="Permanent link">#</a></h3>
+<table>
+<thead>
+<tr>
+<th>Operating System</th>
+<th>Tool</th>
+<th>Overview</th>
+<th>Installation Link</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Windows</td>
+<td>Windows PowerShell</td>
+<td>Support for version 5.1 with .NET Framework 4.7.2 or greater.</td>
+<td><a href="https://dotnet.microsoft.com/download/dotnet-framework/net48">link</a></td>
+</tr>
+<tr>
+<td>Windows, MacOS, Linux</td>
+<td>PowerShell</td>
+<td>Version 7.2 or greater is support.</td>
+<td><a href="https://github.com/PowerShell/PowerShell#get-powershell">link</a></td>
+</tr>
+<tr>
+<td>-</td>
+<td>-</td>
+<td>Multiple PowerShell modules are required (PlatyPS, Pester, PSScriptAnalyzer, PowerShellGet, PackageManagement, InvokeBuild, PSRule).</td>
+<td>Installed when you run the <code>build.ps1</code> script</td>
+</tr>
+<tr>
+<td>-</td>
+<td>.NET</td>
+<td>.NET SDK v6 is required.</td>
+<td><a href="https://dotnet.microsoft.com/en-us/download/dotnet/6.0">link</a></td>
+</tr>
+<tr>
+<td>-</td>
+<td>Bicep CLI</td>
+<td>PsRule depends on the Bicep CLI to decompile (expand) Bicep modules to ARM</td>
+<td>Installed when you run the <code>build.ps1</code> script</td>
+</tr>
+</tbody>
+</table>
 <p>To use PSRule for Azure, PSRule a separate PowerShell module must be installed.
 The required version will automatically be installed along-side PSRule for Azure.</p>
-<p>Additionally, exporting data from an subscription requires:</p>
+<p>Additionally, the exporting data from a subscription functionality requires the additional
+PowerShell modules:</p>
 <ul>
 <li>Az.Accounts</li>
 <li>Az.Resources</li>
@@ -6566,15 +6661,6 @@ Use the following command line examples from a PowerShell terminal to install or
 </div>
 </div>
 </div>
-<h3 id="building-from-source">Building from source<a class="headerlink" href="#building-from-source" title="Permanent link">#</a></h3>
-<p><a href="https://github.com/Azure/PSRule.Rules.Azure.git"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path fill-rule="evenodd" d="M3 3a2 2 0 0 1 2-2h9.982a2 2 0 0 1 1.414.586l4.018 4.018A2 2 0 0 1 21 7.018V21a2 2 0 0 1-2 2H4.75a.75.75 0 0 1 0-1.5H19a.5.5 0 0 0 .5-.5V8.5h-4a2 2 0 0 1-2-2v-4H5a.5.5 0 0 0-.5.5v6.25a.75.75 0 0 1-1.5 0V3zm12-.5v4a.5.5 0 0 0 .5.5h4a.5.5 0 0 0-.146-.336l-4.018-4.018A.5.5 0 0 0 15 2.5z"/><path d="M4.53 12.24a.75.75 0 0 1-.039 1.06l-2.639 2.45 2.64 2.45a.75.75 0 1 1-1.022 1.1l-3.23-3a.75.75 0 0 1 0-1.1l3.23-3a.75.75 0 0 1 1.06.04zm3.979 1.06a.75.75 0 1 1 1.02-1.1l3.231 3a.75.75 0 0 1 0 1.1l-3.23 3a.75.75 0 1 1-1.021-1.1l2.639-2.45-2.64-2.45z"/></svg></span> Source</a></p>
-<p>PSRule for Azure is provided as open source on GitHub.
-To build PSRule for Azure from source code:</p>
-<ol>
-<li>Clone the GitHub <a href="https://github.com/Azure/PSRule.Rules.Azure.git">repository</a>.</li>
-<li>Run <code>./build.ps1</code> from a PowerShell terminal in the cloned path.</li>
-</ol>
-<p>This build script will compile the module and documentation then output the result into <code>out/modules/PSRule.Rules.Azure</code>.</p>
 <h4 id="development-dependencies">Development dependencies<a class="headerlink" href="#development-dependencies" title="Permanent link">#</a></h4>
 <p>The following dependencies will be automatically installed if the required versions are not present:</p>
 <ul>
@@ -6590,9 +6676,26 @@ To build PSRule for Azure from source code:</p>
 <li>Bicep CLI</li>
 </ul>
 <p>These dependencies are only required for building and running tests for PSRule for Azure.</p>
-<p>Additionally .NET SDK v6 is required.
-.NET will not be automatically downloaded and installed.
-To download and install the latest SDK see <a href="https://dotnet.microsoft.com/download/dotnet/6.0">Download .NET 6</a>.</p>
+<h3 id="building-from-source">Building from source<a class="headerlink" href="#building-from-source" title="Permanent link">#</a></h3>
+<p><a href="https://github.com/Azure/PSRule.Rules.Azure.git"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path fill-rule="evenodd" d="M3 3a2 2 0 0 1 2-2h9.982a2 2 0 0 1 1.414.586l4.018 4.018A2 2 0 0 1 21 7.018V21a2 2 0 0 1-2 2H4.75a.75.75 0 0 1 0-1.5H19a.5.5 0 0 0 .5-.5V8.5h-4a2 2 0 0 1-2-2v-4H5a.5.5 0 0 0-.5.5v6.25a.75.75 0 0 1-1.5 0V3zm12-.5v4a.5.5 0 0 0 .5.5h4a.5.5 0 0 0-.146-.336l-4.018-4.018A.5.5 0 0 0 15 2.5z"/><path d="M4.53 12.24a.75.75 0 0 1-.039 1.06l-2.639 2.45 2.64 2.45a.75.75 0 1 1-1.022 1.1l-3.23-3a.75.75 0 0 1 0-1.1l3.23-3a.75.75 0 0 1 1.06.04zm3.979 1.06a.75.75 0 1 1 1.02-1.1l3.231 3a.75.75 0 0 1 0 1.1l-3.23 3a.75.75 0 1 1-1.021-1.1l2.639-2.45-2.64-2.45z"/></svg></span> Source</a></p>
+<p>PSRule for Azure is provided as open source on GitHub.
+To build PSRule for Azure from source code:</p>
+<ol>
+<li>Clone the GitHub <a href="https://github.com/Azure/PSRule.Rules.Azure.git">repository</a>.</li>
+<li>Run <code>./build.ps1</code> from a PowerShell terminal in the cloned path.</li>
+</ol>
+<p>This build script will compile the module and documentation then output the result into <code>out/modules/PSRule.Rules.Azure</code>.</p>
+<h4 id="troubleshooting">Troubleshooting<a class="headerlink" href="#troubleshooting" title="Permanent link">#</a></h4>
+<p>If the <code>./build.ps1</code> script fails, you can start troubleshooting this by:</p>
+<ul>
+<li>Checking the prerequisites are installed installed (and the specific versions)<ul>
+<li>Check the <strong>PowerShell</strong> version enter the following statement in the PowerShell terminal: <code>$PSVersionTable.PSVersion</code></li>
+<li>Check the installed <strong>.NET</strong> version by entering the <code>dotnet --list-sdks</code> command in your terminal.</li>
+</ul>
+</li>
+<li>Check if your .NET setup is connected to any Nuget repositories and if there's any 
+connectivity or authentication issues.</li>
+</ul>
 <h3 id="limited-access-networks">Limited access networks<a class="headerlink" href="#limited-access-networks" title="Permanent link">#</a></h3>
 <p>If you are on a network that does not permit Internet access to the PowerShell Gallery,
 download the required PowerShell modules on an alternative device that has access.
@@ -6624,7 +6727,7 @@ After downloading the modules, copy the module directories to devices with restr
   <small>
     
       Last update:
-      2022-08-19
+      2022-09-03
     
   </small>
 </div>

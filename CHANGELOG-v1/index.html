@@ -943,6 +943,13 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#v1191" class="md-nav__link">
+    v1.19.1
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#v1190" class="md-nav__link">
     v1.19.0
   </a>
@@ -7190,6 +7197,13 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#v1191" class="md-nav__link">
+    v1.19.1
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#v1190" class="md-nav__link">
     v1.19.0
   </a>
@@ -8137,7 +8151,7 @@
   See <a href="../upgrade-notes/">upgrade notes</a> for more information.</li>
 </ul>
 <h2 id="unreleased">Unreleased<a class="headerlink" href="#unreleased" title="Permanent link">#</a></h2>
-<p>What's changed since v1.19.0:</p>
+<p>What's changed since v1.19.1:</p>
 <ul>
 <li>Engineering:<ul>
 <li>Bump Microsoft.NET.Test.Sdk to v17.3.1.
@@ -8146,8 +8160,20 @@
 </li>
 <li>New rules:<ul>
 <li>Azure Resources:<ul>
-<li>Check that nested deployments securely pass through administrator usernames @ms-sambell.
+<li>Check that nested deployments securely pass through administrator usernames by @ms-sambell.
   <a href="https://github.com/Azure/PSRule.Rules.Azure/issues/1479">#1479</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h2 id="v1191">v1.19.1<a class="headerlink" href="#v1191" title="Permanent link">#</a></h2>
+<p>What's changed since v1.19.0:</p>
+<ul>
+<li>Bug fixes:<ul>
+<li>Fixed <code>Azure.VNET.UseNSGs</code> is missing exceptions by @BernieWhite.
+  <a href="https://github.com/Azure/PSRule.Rules.Azure/issues/1609">#1609</a><ul>
+<li>Added exclusions for <code>RouteServerSubnet</code> and any subnet with a dedicated HSM delegation.</li>
 </ul>
 </li>
 </ul>
@@ -11091,7 +11117,7 @@
   <small>
     
       Last update:
-      2022-09-03
+      2022-09-04
     
   </small>
 </div>

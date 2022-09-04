@@ -66,6 +66,20 @@ resource vnet 'Microsoft.Network/virtualNetworks@2021-02-01' = {
           }
         }
       }
+      {
+        name: 'snet-002'
+        properties: {
+          addressPrefix: '10.0.2.0/24'
+          delegations: [
+            {
+              name: 'HSM'
+              properties: {
+                serviceName: 'Microsoft.HardwareSecurityModules/dedicatedHSMs'
+              }
+            }
+          ]
+        }
+      }
     ]
   }
 }

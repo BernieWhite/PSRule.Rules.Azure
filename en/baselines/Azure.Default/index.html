@@ -6335,7 +6335,7 @@
   <h1 id="azuredefault">Azure.Default<a class="headerlink" href="#azuredefault" title="Permanent link">#</a></h1>
 <p>Default baseline for Azure rules.</p>
 <h2 id="rules">Rules<a class="headerlink" href="#rules" title="Permanent link">#</a></h2>
-<p>The following rules are included within <code>Azure.Default</code>. This baseline includes a total of 279 rules.</p>
+<p>The following rules are included within <code>Azure.Default</code>. This baseline includes a total of 281 rules.</p>
 <table>
 <thead>
 <tr>
@@ -6846,6 +6846,11 @@
 <td>Critical</td>
 </tr>
 <tr>
+<td><a href="../../rules/Azure.EventGrid.DisableLocalAuth/">Azure.EventGrid.DisableLocalAuth</a></td>
+<td>Authenticate publishing clients with Azure AD identities.</td>
+<td>Important</td>
+</tr>
+<tr>
 <td><a href="../../rules/Azure.EventGrid.ManagedIdentity/">Azure.EventGrid.ManagedIdentity</a></td>
 <td>Use managed identities to deliver Event Grid Topic events.</td>
 <td>Important</td>
@@ -6943,6 +6948,11 @@
 <tr>
 <td><a href="../../rules/Azure.KeyVault.AccessPolicy/">Azure.KeyVault.AccessPolicy</a></td>
 <td>Use the principal of least privilege when assigning access to Key Vault.</td>
+<td>Important</td>
+</tr>
+<tr>
+<td><a href="../../rules/Azure.KeyVault.AutoRotationPolicy/">Azure.KeyVault.AutoRotationPolicy</a></td>
+<td>Key Vault keys should have auto-rotation enabled.</td>
 <td>Important</td>
 </tr>
 <tr>

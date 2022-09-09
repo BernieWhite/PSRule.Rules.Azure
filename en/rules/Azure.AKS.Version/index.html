@@ -6498,7 +6498,7 @@ Additionally two patch releases for each minor version are supported.</p>
 <span class="w">        </span><span class="p">}</span><span class="w"></span>
 <span class="w">    </span><span class="p">},</span><span class="w"></span>
 <span class="w">    </span><span class="nt">&quot;properties&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
-<span class="w">        </span><span class="nt">&quot;kubernetesVersion&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;1.22.6&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">        </span><span class="nt">&quot;kubernetesVersion&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;1.23.8&quot;</span><span class="p">,</span><span class="w"></span>
 <span class="w">        </span><span class="nt">&quot;enableRBAC&quot;</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span><span class="w"></span>
 <span class="w">        </span><span class="nt">&quot;dnsPrefix&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;[parameters(&#39;dnsPrefix&#39;)]&quot;</span><span class="p">,</span><span class="w"></span>
 <span class="w">        </span><span class="nt">&quot;agentPoolProfiles&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;[variables(&#39;allPools&#39;)]&quot;</span><span class="p">,</span><span class="w"></span>
@@ -6571,7 +6571,7 @@ Additionally two patch releases for each minor version are supported.</p>
     }
   }
   properties: {
-    kubernetesVersion: &#39;1.22.6&#39;
+    kubernetesVersion: &#39;1.23.8&#39;
     enableRBAC: true
     dnsPrefix: dnsPrefix
     agentPoolProfiles: allPools
@@ -6626,10 +6626,10 @@ Additionally two patch releases for each minor version are supported.</p>
 }
 </code></pre></div>
 <h3 id="configure-with-azure-cli">Configure with Azure CLI<a class="headerlink" href="#configure-with-azure-cli" title="Permanent link">#</a></h3>
-<div class="highlight"><pre><span></span><code>az aks upgrade -n <span class="s1">&#39;&lt;name&gt;&#39;</span> -g <span class="s1">&#39;&lt;resource_group&gt;&#39;</span> --kubernetes-version <span class="s1">&#39;1.22.6&#39;</span>
+<div class="highlight"><pre><span></span><code>az aks upgrade -n <span class="s1">&#39;&lt;name&gt;&#39;</span> -g <span class="s1">&#39;&lt;resource_group&gt;&#39;</span> --kubernetes-version <span class="s1">&#39;1.23.8&#39;</span>
 </code></pre></div>
 <h3 id="configure-with-azure-powershell">Configure with Azure PowerShell<a class="headerlink" href="#configure-with-azure-powershell" title="Permanent link">#</a></h3>
-<div class="highlight"><pre><span></span><code><span class="nb">Set-AzAksCluster</span> <span class="n">-Name</span> <span class="s1">&#39;&lt;name&gt;&#39;</span> <span class="n">-ResourceGroupName</span> <span class="s1">&#39;&lt;resource_group&gt;&#39;</span> <span class="n">-KubernetesVersion</span> <span class="s1">&#39;1.22.6&#39;</span>
+<div class="highlight"><pre><span></span><code><span class="nb">Set-AzAksCluster</span> <span class="n">-Name</span> <span class="s1">&#39;&lt;name&gt;&#39;</span> <span class="n">-ResourceGroupName</span> <span class="s1">&#39;&lt;resource_group&gt;&#39;</span> <span class="n">-KubernetesVersion</span> <span class="s1">&#39;1.23.8&#39;</span>
 </code></pre></div>
 <h2 id="notes">Notes<a class="headerlink" href="#notes" title="Permanent link">#</a></h2>
 <p>A list of available Kubernetes versions can be found using the <code>az aks get-versions -o table --location &lt;location&gt;</code> CLI command.
@@ -6642,7 +6642,7 @@ To configure this rule:</p>
 <li><a href="https://docs.microsoft.com/azure/architecture/framework/resiliency/design-requirements#meet-application-platform-requirements">Target and non-functional requirements</a></li>
 <li><a href="https://docs.microsoft.com/azure/aks/supported-kubernetes-versions">Supported Kubernetes versions in Azure Kubernetes Service</a></li>
 <li><a href="https://docs.microsoft.com/azure/aks/support-policies">Support policies for Azure Kubernetes Service</a></li>
-<li><a href="https://docs.microsoft.com/azure/templates/microsoft.containerservice/managedclusters">Azure template reference</a></li>
+<li><a href="https://docs.microsoft.com/azure/templates/microsoft.containerservice/managedclusters">Azure deployment reference</a></li>
 </ul>
 
   <!-- Last update of source file -->
@@ -6653,7 +6653,7 @@ To configure this rule:</p>
   <small>
     
       Last update:
-      2022-04-29
+      2022-09-09
     
   </small>
 </div>

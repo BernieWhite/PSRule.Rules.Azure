@@ -1931,6 +1931,8 @@
         
           
         
+          
+        
       
       
         <label class="md-nav__link" for="__nav_4_4">
@@ -2275,6 +2277,20 @@
     <li class="md-nav__item">
       <a href="../../en/rules/Azure.AKS.DNSPrefix/" class="md-nav__link">
         Azure.AKS.DNSPrefix
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../en/rules/Azure.AKS.EphemeralOSDisk/" class="md-nav__link">
+        Azure.AKS.EphemeralOSDisk
       </a>
     </li>
   
@@ -6664,14 +6680,14 @@ To keep <code>MONITORWORKSPACEKEY</code> secure, use a <a href="https://docs.mic
 <p>Continue reading for some sample resources you can try once this integration is setup Azure Monitor integration.</p>
 <h3 id="log-analytics-queries">Log Analytics Queries<a class="headerlink" href="#log-analytics-queries" title="Permanent link">#</a></h3>
 <h4 id="results-with-annotations">Results with annotations<a class="headerlink" href="#results-with-annotations" title="Permanent link">#</a></h4>
-<div class="highlight"><pre><span></span><code>// Show extended info
+<div class="highlight"><span class="filename">Kusto</span><pre><span></span><code>// Show extended info
 PSRule_CL
 | where TimeGenerated &gt; ago(30d)
 | extend Pillar = tostring(parse_json(Annotations_s).pillar)
 | extend Link = tostring(parse_json(Annotations_s).[&quot;online version&quot;])
 </code></pre></div>
 <h4 id="summarize-results-by-run">Summarize results by run<a class="headerlink" href="#summarize-results-by-run" title="Permanent link">#</a></h4>
-<div class="highlight"><pre><span></span><code>// Group by run
+<div class="highlight"><span class="filename">Kusto</span><pre><span></span><code>// Group by run
 PSRule_CL
 | where TimeGenerated &gt; ago(30d)
 | summarize Pass=countif(Outcome_s == &quot;Pass&quot;), Fail=countif(Outcome_s  == &quot;Fail&quot;) by RunId_s
@@ -6679,20 +6695,19 @@ PSRule_CL
 <h4 id="querying-the-data">Querying The Data<a class="headerlink" href="#querying-the-data" title="Permanent link">#</a></h4>
 <p>Once the results have been published to the Log Analytics workspace, they can be queried by executing
 results against the <code>PSRule_CL</code> table (under Custom Logs). For more information on how to write Log
-Analytics querys, review the <a href="https://docs.microsoft.com/azure/azure-monitor/logs/log-analytics-tutorial">Log Analytics tutortial</a></p>
+Analytics querys, review the <a href="https://docs.microsoft.com/azure/azure-monitor/logs/log-analytics-tutorial">Log Analytics tutortial</a>.</p>
 <h3 id="workbook">Workbook<a class="headerlink" href="#workbook" title="Permanent link">#</a></h3>
-<p>A sample Azure Workbook is available in the PSRule for Azure GitHub repository.
-The Workbook is available in the <code>data</code> directory and is called <code>workbook.json</code>.
-This Workbook can be imported directly into Azure monitor and used as a foundation to build from.
-Review the <a href="https://docs.microsoft.com/azure/azure-monitor/visualize/workbooks-create-workbook">Workbook creation tutorial</a>
-for instructions on how to work with the sample Workbook.</p>
+<p><a href="https://github.com/Azure/PSRule.Rules.Azure/blob/main/docs/setup/workbook.json"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M10.3 8.24a.75.75 0 0 1-.04 1.06L7.352 12l2.908 2.7a.75.75 0 1 1-1.02 1.1l-3.5-3.25a.75.75 0 0 1 0-1.1l3.5-3.25a.75.75 0 0 1 1.06.04zm3.44 1.06a.75.75 0 1 1 1.02-1.1l3.5 3.25a.75.75 0 0 1 0 1.1l-3.5 3.25a.75.75 0 1 1-1.02-1.1l2.908-2.7-2.908-2.7z"/><path fill-rule="evenodd" d="M2 3.75C2 2.784 2.784 2 3.75 2h16.5c.966 0 1.75.784 1.75 1.75v16.5A1.75 1.75 0 0 1 20.25 22H3.75A1.75 1.75 0 0 1 2 20.25V3.75zm1.75-.25a.25.25 0 0 0-.25.25v16.5c0 .138.112.25.25.25h16.5a.25.25 0 0 0 .25-.25V3.75a.25.25 0 0 0-.25-.25H3.75z"/></svg></span> Workbook</a></p>
+<p>A <a href="https://github.com/Azure/PSRule.Rules.Azure/blob/main/docs/setup/workbook.json">sample Azure Monitor Workbook</a> is available in the PSRule for Azure GitHub repository.
+This workbook can be imported directly into Azure Monitor and used as a foundation to build from.
+Review the <a href="https://docs.microsoft.com/azure/azure-monitor/visualize/workbooks-create-workbook">Workbook creation tutorial</a> for instructions on how to work with the sample Workbook.</p>
 
   <hr>
 <div class="md-source-file">
   <small>
     
       Last update:
-      2022-09-09
+      2022-09-11
     
   </small>
 </div>

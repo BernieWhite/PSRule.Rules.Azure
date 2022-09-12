@@ -1839,6 +1839,8 @@
         
           
         
+          
+        
       
       
         <label class="md-nav__link" for="__nav_4_4">
@@ -2183,6 +2185,20 @@
     <li class="md-nav__item">
       <a href="../../en/rules/Azure.AKS.DNSPrefix/" class="md-nav__link">
         Azure.AKS.DNSPrefix
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../en/rules/Azure.AKS.EphemeralOSDisk/" class="md-nav__link">
+        Azure.AKS.EphemeralOSDisk
       </a>
     </li>
   
@@ -6333,17 +6349,17 @@
 
 
 <h1 id="permit-outbound-management">Permit outbound management<a class="headerlink" href="#permit-outbound-management" title="Permanent link">#</a></h1>
-<p>As discussed in <a href="../../en/rules/Azure.NSG.LateralTraversal/">Azure.NSG.LateralTraversal</a>, outbound management traffic is expected from some subnets.
+<p>As discussed in <a href="../../en/rules/Azure.NSG.LateralTraversal/">Azure.<abbr title="Network Security Group">NSG</abbr>.LateralTraversal</a>, outbound management traffic is expected from some subnets.
 Subnets that are expected allow outbound management traffic may include:</p>
 <ul>
 <li>Privileged access workstations (PAWs)</li>
 <li>Bastion hosts</li>
 <li>Jump boxes</li>
 </ul>
-<p>As a result, you may want to suppress the <a href="../../en/rules/Azure.NSG.LateralTraversal/">Azure.NSG.LateralTraversal</a> rule on NSGs for these special cases.</p>
+<p>As a result, you may want to suppress the <a href="../../en/rules/Azure.NSG.LateralTraversal/">Azure.<abbr title="Network Security Group">NSG</abbr>.LateralTraversal</a> rule on <abbr title="Network Security Groups">NSGs</abbr> for these special cases.</p>
 <div class="admonition abstract">
 <p class="admonition-title">Abstract</p>
-<p>This topic provides an example you can use to configure PSRule to ignore special case NSGs.</p>
+<p>This topic provides an example you can use to configure PSRule to ignore special case <abbr title="Network Security Groups">NSGs</abbr>.</p>
 </div>
 <h2 id="create-a-suppression-group">Create a suppression group<a class="headerlink" href="#create-a-suppression-group" title="Permanent link">#</a></h2>
 <p>Within the <code>.ps-rule</code> sub-directory create a file called <code>Org.Azure.Suppressions.Rule.yaml</code>.
@@ -6376,11 +6392,11 @@ If the <code>.ps-rule</code> sub-directory does not exist, create it in the root
   Each resource name must be unique.</li>
 <li>The suppression group applies to:<ul>
 <li>The rule <code>PSRule.Rules.Azure\Azure.NSG.LateralTraversal</code>.</li>
-<li>Run against NSGs with the type <code>Microsoft.Network/networkSecurityGroups</code>.</li>
-<li>When the name of the NSG contains <code>bastion</code> or <code>management</code>.
+<li>Run against <abbr title="Network Security Groups">NSGs</abbr> with the type <code>Microsoft.Network/networkSecurityGroups</code>.</li>
+<li>When the name of the <abbr title="Network Security Group">NSG</abbr> contains <code>bastion</code> or <code>management</code>.
   The <a href="https://microsoft.github.io/PSRule/v2/concepts/PSRule/en-US/about_PSRule_SuppressionGroups/">suppression group</a> uses <a href="https://microsoft.github.io/PSRule/v2/concepts/PSRule/en-US/about_PSRule_Expressions/">expressions</a> to determine when a resource is suppressed.
   Update this condition to match your environment.
-  For example, the following NSGs would be suppressed by this suppression group:<ul>
+  For example, the following <abbr title="Network Security Groups">NSGs</abbr> would be suppressed by this suppression group:<ul>
 <li><code>nsg-bastion-prod-eus-001</code></li>
 <li><code>nsg-hub-management-prod-001</code></li>
 </ul>
@@ -6393,15 +6409,13 @@ If the <code>.ps-rule</code> sub-directory does not exist, create it in the root
 <p class="admonition-title">Tip</p>
 <p><a href="https://microsoft.github.io/PSRule/v2/concepts/PSRule/en-US/about_PSRule_Expressions/">Expressions</a> can be combined within a <a href="https://microsoft.github.io/PSRule/v2/concepts/PSRule/en-US/about_PSRule_SuppressionGroups/">suppression group</a> using <code>allOf</code> or <code>anyOf</code> operators.</p>
 </div>
-<p>^[NSGs]: Network Security Groups
-^[NSG]: Network Security Group</p>
 
   <hr>
 <div class="md-source-file">
   <small>
     
       Last update:
-      2022-09-09
+      2022-09-11
     
   </small>
 </div>

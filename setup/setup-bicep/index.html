@@ -1884,6 +1884,8 @@
         
           
         
+          
+        
       
       
         <label class="md-nav__link" for="__nav_4_4">
@@ -2228,6 +2230,20 @@
     <li class="md-nav__item">
       <a href="../../en/rules/Azure.AKS.DNSPrefix/" class="md-nav__link">
         Azure.AKS.DNSPrefix
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../en/rules/Azure.AKS.EphemeralOSDisk/" class="md-nav__link">
+        Azure.AKS.EphemeralOSDisk
       </a>
     </li>
   
@@ -6500,7 +6516,7 @@ This is intended to improve forward compatibility with Bicep CLI.</p>
 When enabled, PSRule for Azure automatically expands and analyzes Azure resource from <code>.bicep</code> files.</p>
 <p>To enabled this feature, set the <code>Configuration.AZURE_BICEP_FILE_EXPANSION</code> to <code>true</code>.
 This option can be set within the <code>ps-rule.yaml</code> file.</p>
-<div class="highlight"><pre><span></span><code><span class="nt">configuration</span><span class="p">:</span><span class="w"></span>
+<div class="highlight"><span class="filename">ps-rule.yaml</span><pre><span></span><code><span class="nt">configuration</span><span class="p">:</span><span class="w"></span>
 <span class="w">  </span><span class="c1"># Enable automatic expansion of bicep source files.</span><span class="w"></span>
 <span class="w">  </span><span class="nt">AZURE_BICEP_FILE_EXPANSION</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span><span class="w"></span>
 </code></pre></div>
@@ -6521,7 +6537,7 @@ This can occur if your Bicep deployments are:</p>
 </ul>
 <p>If you are experincing timeout errors you can increase the default timeout of 5 seconds.
 To configure the timeout, set <code>Configuration.AZURE_BICEP_FILE_EXPANSION_TIMEOUT</code> to the timeout in seconds.</p>
-<div class="highlight"><pre><span></span><code><span class="nt">configuration</span><span class="p">:</span><span class="w"></span>
+<div class="highlight"><span class="filename">ps-rule.yaml</span><pre><span></span><code><span class="nt">configuration</span><span class="p">:</span><span class="w"></span>
 <span class="w">  </span><span class="c1"># Enable automatic expansion of bicep source files.</span><span class="w"></span>
 <span class="w">  </span><span class="nt">AZURE_BICEP_FILE_EXPANSION</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span><span class="w"></span>
 
@@ -6534,7 +6550,7 @@ To configure the timeout, set <code>Configuration.AZURE_BICEP_FILE_EXPANSION_TIM
   <small>
     
       Last update:
-      2022-08-27
+      2022-09-11
     
   </small>
 </div>

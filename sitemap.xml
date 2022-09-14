@@ -1666,6 +1666,11 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
+         <loc>https://azure.github.io/PSRule.Rules.Azure/en/rules/Azure.VMSS.PublicKey/</loc>
+         <lastmod>2022-09-14</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
          <loc>https://azure.github.io/PSRule.Rules.Azure/en/rules/Azure.VNET.LocalDNS/</loc>
          <lastmod>2022-09-14</lastmod>
          <changefreq>daily</changefreq>

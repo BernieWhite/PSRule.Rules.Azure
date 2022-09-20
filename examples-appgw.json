@@ -25,29 +25,41 @@
   },
   "resources": [
     {
-      "type": "Microsoft.Network/applicationGateways",
-      "apiVersion": "2021-08-01",
       "name": "[parameters('name')]",
+      "type": "Microsoft.Network/applicationGateways",
+      "apiVersion": "2019-09-01",
       "location": "[parameters('location')]",
       "zones": [
         "1",
         "2",
         "3"
       ],
-      "identity": {
-        "type": "UserAssigned",
-        "userAssignedIdentities": {
-          "[format('{0}', resourceId('Microsoft.ManagedIdentity/userAssignedIdentities', 'id-test'))]": {}
-        }
-      },
+      "tags": {},
       "properties": {
-        "enableHttp2": true,
-        "sslPolicy": {
-          "policyType": "Predefined",
-          "policyName": "AppGwSslPolicy20170401S"
+        "sku": {
+          "name": "WAF_v2",
+          "tier": "WAF_v2"
         },
-        "firewallPolicy": {
-          "id": "[resourceId('Microsoft.Network/ApplicationGatewayWebApplicationFirewallPolicies', 'wafpolicy')]"
+        "gatewayIPConfigurations": [],
+        "frontendIPConfigurations": [],
+        "frontendPorts": [],
+        "backendAddressPools": [],
+        "backendHttpSettingsCollection": [],
+        "httpListeners": [
+        ],
+        "requestRoutingRules": [],
+        "enableHttp2": false,
+        "sslCertificates": [],
+        "probes": [],
+        "autoscaleConfiguration": {
+          "minCapacity": 2,
+          "maxCapacity": 3
+        },
+        "webApplicationFirewallConfiguration": {
+          "enabled": true,
+          "firewallMode": "Detection",
+          "ruleSetType": "OWASP",
+          "ruleSetVersion": "3.0"
         }
       }
     }

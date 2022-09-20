@@ -8279,6 +8279,29 @@
 <h2 id="unreleased">Unreleased<a class="headerlink" href="#unreleased" title="Permanent link">#</a></h2>
 <p>What's changed since pre-release v1.20.0-B0028:</p>
 <ul>
+<li>Updated rules:<ul>
+<li>Updated rules, tests and docs with Microsoft Defender for Cloud by @jonathanruiz.
+  <a href="https://github.com/Azure/PSRule.Rules.Azure/issues/545">#545</a><ul>
+<li>The following rules have been renamed with aliases:<ul>
+<li>Renamed <code>Azure.SQL.ThreatDetection</code> to <code>Azure.SQL.DefenderCloud</code>.</li>
+<li>Renamed <code>Azure.SecurityCenter.Contact</code> to <code>Azure.DefenderCloud.Contact</code>.</li>
+<li>Renamed <code>Azure.SecurityCenter.Provisioning</code> to <code>Azure.DefenderCloud.Provisioning</code>.</li>
+</ul>
+</li>
+<li>If you are referencing the old names please consider updating to the new names.</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>General improvements:<ul>
+<li>Updated NSG documentation with code snippets and links by @simone-bennett.
+  <a href="https://github.com/Azure/PSRule.Rules.Azure/issues/1607">#1607</a></li>
+<li>Updated Application Gateway documentation with code snippets by @ms-sambell.
+  <a href="https://github.com/Azure/PSRule.Rules.Azure/issues/1608">#1608</a></li>
+<li>Updated SQL firewall rules documentation by @ms-sambell.
+  <a href="https://github.com/Azure/PSRule.Rules.Azure/issues/1569">#1569</a></li>
+</ul>
+</li>
 <li>Bug fixes:<ul>
 <li>Fixed continue processing policy assignments on error by @BernieWhite.
   <a href="https://github.com/Azure/PSRule.Rules.Azure/issues/1651">#1651</a></li>
@@ -11318,7 +11341,7 @@
   <small>
     
       Last update:
-      2022-09-16
+      2022-09-20
     
   </small>
 </div>

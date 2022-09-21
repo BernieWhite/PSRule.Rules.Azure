@@ -1056,6 +1056,11 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
+         <loc>https://azure.github.io/PSRule.Rules.Azure/en/rules/Azure.NSG.AKSRules/</loc>
+         <lastmod>2022-09-21</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
          <loc>https://azure.github.io/PSRule.Rules.Azure/en/rules/Azure.NSG.AnyInboundSource/</loc>
          <lastmod>2022-09-21</lastmod>
          <changefreq>daily</changefreq>

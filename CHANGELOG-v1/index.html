@@ -2803,6 +2803,10 @@
         
           
         
+          
+        
+          
+        
       
       
         <label class="md-nav__link" for="__nav_4_5">
@@ -5833,6 +5837,34 @@
   
   
     <li class="md-nav__item">
+      <a href="../en/rules/Azure.Storage.ContainerSoftDelete/" class="md-nav__link">
+        Azure.Storage.ContainerSoftDelete
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../en/rules/Azure.Storage.FileShareSoftDelete/" class="md-nav__link">
+        Azure.Storage.FileShareSoftDelete
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
       <a href="../en/rules/Azure.Storage.Firewall/" class="md-nav__link">
         Azure.Storage.Firewall
       </a>
@@ -8295,6 +8327,13 @@
 <h2 id="unreleased">Unreleased<a class="headerlink" href="#unreleased" title="Permanent link">#</a></h2>
 <p>What's changed since pre-release v1.20.0-B0028:</p>
 <ul>
+<li>New rules:<ul>
+<li>Enabled storage container soft delete by @pazdedav
+  [<a href="https://github.com/Azure/PSRule.Rules.Azure/issues/1671">#1671</a>]</li>
+<li>Enabled fileshare soft delete by @jonathanruiz
+  <a href="https://github.com/Azure/PSRule.Rules.Azure/issues/966">[#966]</a></li>
+</ul>
+</li>
 <li>Updated rules:<ul>
 <li>Updated rules, tests and docs with Microsoft Defender for Cloud by @jonathanruiz.
   <a href="https://github.com/Azure/PSRule.Rules.Azure/issues/545">#545</a><ul>
@@ -8307,7 +8346,7 @@
 <li>If you are referencing the old names please consider updating to the new names.</li>
 </ul>
 </li>
-<li>Added Bicep/ARM examples to KeyVault.Logs.md, FrontDoor.Logs.md, FrontDoor.MinTLS.md, and FrontDoor.Probe*.md by @lluppesms 
+<li>Added Bicep/ARM examples to KeyVault.Logs.md, FrontDoor.Logs.md, FrontDoor.MinTLS.md, and FrontDoor.Probe*.md by @lluppesms
   <a href="https://github.com/Azure/PSRule.Rules.Azure/issues/1667">#1667</a></li>
 </ul>
 </li>
@@ -9488,7 +9527,7 @@
 </li>
 <li>Azure API Management:<ul>
 <li>Check service disabled insecure ciphers.
-<a href="https://github.com/Azure/PSRule.Rules.Azure/issues/1128">#1128</a></li>
+  <a href="https://github.com/Azure/PSRule.Rules.Azure/issues/1128">#1128</a></li>
 <li>Refactored the cipher and protocol rule into individual rules.<ul>
 <li><code>Azure.APIM.Protocols</code></li>
 <li><code>Azure.APIM.Ciphers</code></li>
@@ -9575,7 +9614,7 @@
 </li>
 <li>Azure API Management:<ul>
 <li>Check service disabled insecure ciphers.
-<a href="https://github.com/Azure/PSRule.Rules.Azure/issues/1128">#1128</a></li>
+  <a href="https://github.com/Azure/PSRule.Rules.Azure/issues/1128">#1128</a></li>
 <li>Refactored the cipher and protocol rule into individual rules.<ul>
 <li><code>Azure.APIM.Protocols</code></li>
 <li><code>Azure.APIM.Ciphers</code></li>

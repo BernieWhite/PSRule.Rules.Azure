@@ -1824,6 +1824,12 @@
         
           
         
+          
+        
+          
+        
+          
+        
       
       
         <label class="md-nav__link" for="__nav_4_5">
@@ -2658,6 +2664,20 @@
     <li class="md-nav__item">
       <a href="../../rules/Azure.ASG.Name/" class="md-nav__link">
         Azure.ASG.Name
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../rules/Azure.AppConfig.DisableLocalAuth/" class="md-nav__link">
+        Azure.AppConfig.DisableLocalAuth
       </a>
     </li>
   
@@ -4352,6 +4372,34 @@
     <li class="md-nav__item">
       <a href="../../rules/Azure.Redis.AvailabilityZone/" class="md-nav__link">
         Azure.Redis.AvailabilityZone
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../rules/Azure.Redis.FirewallIPRange/" class="md-nav__link">
+        Azure.Redis.FirewallIPRange
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../rules/Azure.Redis.FirewallRuleCount/" class="md-nav__link">
+        Azure.Redis.FirewallRuleCount
       </a>
     </li>
   
@@ -6434,7 +6482,7 @@
   <h1 id="azureall">Azure.All<a class="headerlink" href="#azureall" title="Permanent link">#</a></h1>
 <p>Includes all Azure rules.</p>
 <h2 id="rules">Rules<a class="headerlink" href="#rules" title="Permanent link">#</a></h2>
-<p>The following rules are included within <code>Azure.All</code>. This baseline includes a total of 291 rules.</p>
+<p>The following rules are included within <code>Azure.All</code>. This baseline includes a total of 294 rules.</p>
 <table>
 <thead>
 <tr>
@@ -6733,6 +6781,11 @@
 <td><a href="../../rules/Azure.APIM.SampleProducts/">Azure.APIM.SampleProducts</a></td>
 <td>Remove starter and unlimited sample products.</td>
 <td>Awareness</td>
+</tr>
+<tr>
+<td><a href="../../rules/Azure.AppConfig.DisableLocalAuth/">Azure.AppConfig.DisableLocalAuth</a></td>
+<td>Authenticate App Configuration clients with Azure AD identities.</td>
+<td>Important</td>
 </tr>
 <tr>
 <td><a href="../../rules/Azure.AppConfig.Name/">Azure.AppConfig.Name</a></td>
@@ -7333,6 +7386,16 @@
 <td><a href="../../rules/Azure.Redis.AvailabilityZone/">Azure.Redis.AvailabilityZone</a></td>
 <td>Premium Redis cache should be deployed with availability zones for high availability.</td>
 <td>Important</td>
+</tr>
+<tr>
+<td><a href="../../rules/Azure.Redis.FirewallIPRange/">Azure.Redis.FirewallIPRange</a></td>
+<td>Determine if there is an excessive nunber of permitted IP addresses for the Redis cache.</td>
+<td>Critical</td>
+</tr>
+<tr>
+<td><a href="../../rules/Azure.Redis.FirewallRuleCount/">Azure.Redis.FirewallRuleCount</a></td>
+<td>Determine if there is an excessive number of firewall rules for the Redis cache.</td>
+<td>Awareness</td>
 </tr>
 <tr>
 <td><a href="../../rules/Azure.Redis.MaxMemoryReserved/">Azure.Redis.MaxMemoryReserved</a></td>

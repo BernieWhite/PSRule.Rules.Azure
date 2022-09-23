@@ -2807,6 +2807,12 @@
         
           
         
+          
+        
+          
+        
+          
+        
       
       
         <label class="md-nav__link" for="__nav_4_5">
@@ -3641,6 +3647,20 @@
     <li class="md-nav__item">
       <a href="../en/rules/Azure.ASG.Name/" class="md-nav__link">
         Azure.ASG.Name
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../en/rules/Azure.AppConfig.DisableLocalAuth/" class="md-nav__link">
+        Azure.AppConfig.DisableLocalAuth
       </a>
     </li>
   
@@ -5335,6 +5355,34 @@
     <li class="md-nav__item">
       <a href="../en/rules/Azure.Redis.AvailabilityZone/" class="md-nav__link">
         Azure.Redis.AvailabilityZone
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../en/rules/Azure.Redis.FirewallIPRange/" class="md-nav__link">
+        Azure.Redis.FirewallIPRange
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../en/rules/Azure.Redis.FirewallRuleCount/" class="md-nav__link">
+        Azure.Redis.FirewallRuleCount
       </a>
     </li>
   
@@ -8328,10 +8376,22 @@
 <p>What's changed since pre-release v1.20.0-B0028:</p>
 <ul>
 <li>New rules:<ul>
-<li>Enabled storage container soft delete by @pazdedav
-  [<a href="https://github.com/Azure/PSRule.Rules.Azure/issues/1671">#1671</a>]</li>
-<li>Enabled fileshare soft delete by @jonathanruiz
-  <a href="https://github.com/Azure/PSRule.Rules.Azure/issues/966">[#966]</a></li>
+<li>Storage Account:<ul>
+<li>Check blob container soft delete is enabled by @pazdedav.
+  <a href="https://github.com/Azure/PSRule.Rules.Azure/issues/1671">#1671</a></li>
+<li>Check file share soft delete is enabled by @jonathanruiz.
+  <a href="https://github.com/Azure/PSRule.Rules.Azure/issues/966">#966</a></li>
+<li>Limit number of firewall rules for Redis @jonathanruiz
+  <a href="https://github.com/Azure/PSRule.Rules.Azure/issues/544">#544</a></li>
+<li>Limit number of IP addresses in firewall rules for Redis @jonathanruiz
+  <a href="https://github.com/Azure/PSRule.Rules.Azure/issues/544">#544</a></li>
+</ul>
+</li>
+<li>App Configuration:<ul>
+<li>Use identity-based authentication for App Configuration by @pazdedav
+  <a href="https://github.com/Azure/PSRule.Rules.Azure/issues/1691">#1691</a></li>
+</ul>
+</li>
 </ul>
 </li>
 <li>Updated rules:<ul>
@@ -8359,6 +8419,8 @@
   <a href="https://github.com/Azure/PSRule.Rules.Azure/issues/1569">#1569</a></li>
 <li>Updated Container Apps documentation and rule to new resource type by @marie-schmidt.
   <a href="https://github.com/Azure/PSRule.Rules.Azure/issues/1672">#1672</a></li>
+<li>Updated KeyVault and FrontDoor documentation with code snippets by @lluppesms.
+  <a href="https://github.com/Azure/PSRule.Rules.Azure/issues/1667">#1667</a></li>
 </ul>
 </li>
 <li>Bug fixes:<ul>
@@ -11407,7 +11469,7 @@
   <small>
     
       Last update:
-      2022-09-21
+      2022-09-22
     
   </small>
 </div>

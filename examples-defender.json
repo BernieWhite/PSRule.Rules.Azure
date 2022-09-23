@@ -4,16 +4,64 @@
   "metadata": {
     "_generator": {
       "name": "bicep",
-      "version": "0.4.1008.15138",
-      "templateHash": "12703429750249310477"
+      "version": "0.10.61.36676",
+      "templateHash": "13956112484547449048"
     }
   },
-  "functions": [],
   "resources": [
     {
       "type": "Microsoft.Security/pricings",
       "apiVersion": "2018-06-01",
       "name": "ContainerRegistry",
+      "properties": {
+        "pricingTier": "Standard"
+      }
+    },
+    {
+      "type": "Microsoft.Security/pricings",
+      "apiVersion": "2022-03-01",
+      "name": "Containers",
+      "properties": {
+        "pricingTier": "Standard"
+      }
+    },
+    {
+      "type": "Microsoft.Security/pricings",
+      "apiVersion": "2022-03-01",
+      "name": "VirtualMachines",
+      "properties": {
+        "pricingTier": "Standard",
+        "subPlan": "P2"
+      }
+    },
+    {
+      "type": "Microsoft.Security/pricings",
+      "apiVersion": "2022-03-01",
+      "name": "SqlServers",
+      "properties": {
+        "pricingTier": "Standard"
+      }
+    },
+    {
+      "type": "Microsoft.Security/pricings",
+      "apiVersion": "2022-03-01",
+      "name": "AppServices",
+      "properties": {
+        "pricingTier": "Standard"
+      }
+    },
+    {
+      "type": "Microsoft.Security/pricings",
+      "apiVersion": "2022-03-01",
+      "name": "StorageAccounts",
+      "properties": {
+        "pricingTier": "Standard"
+      }
+    },
+    {
+      "type": "Microsoft.Security/pricings",
+      "apiVersion": "2022-03-01",
+      "name": "SqlServerVirtualMachines",
       "properties": {
         "pricingTier": "Standard"
       }

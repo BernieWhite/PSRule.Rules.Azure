@@ -841,6 +841,36 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
+         <loc>https://azure.github.io/PSRule.Rules.Azure/en/rules/Azure.Defender.AppServices/</loc>
+         <lastmod>2022-09-23</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://azure.github.io/PSRule.Rules.Azure/en/rules/Azure.Defender.Containers/</loc>
+         <lastmod>2022-09-23</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://azure.github.io/PSRule.Rules.Azure/en/rules/Azure.Defender.SQL/</loc>
+         <lastmod>2022-09-23</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://azure.github.io/PSRule.Rules.Azure/en/rules/Azure.Defender.SQLOnVM/</loc>
+         <lastmod>2022-09-23</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://azure.github.io/PSRule.Rules.Azure/en/rules/Azure.Defender.Servers/</loc>
+         <lastmod>2022-09-23</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://azure.github.io/PSRule.Rules.Azure/en/rules/Azure.Defender.Storage/</loc>
+         <lastmod>2022-09-23</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
          <loc>https://azure.github.io/PSRule.Rules.Azure/en/rules/Azure.DefenderCloud.Contact/</loc>
          <lastmod>2022-09-23</lastmod>
          <changefreq>daily</changefreq>

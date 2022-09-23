@@ -4,8 +4,8 @@
   "metadata": {
     "_generator": {
       "name": "bicep",
-      "version": "0.6.18.56646",
-      "templateHash": "11471630422390052107"
+      "version": "0.10.61.36676",
+      "templateHash": "17322635064657728998"
     }
   },
   "parameters": {
@@ -25,9 +25,9 @@
   },
   "resources": [
     {
-      "name": "[parameters('name')]",
       "type": "Microsoft.Network/applicationGateways",
       "apiVersion": "2019-09-01",
+      "name": "[parameters('name')]",
       "location": "[parameters('location')]",
       "zones": [
         "1",
@@ -45,8 +45,7 @@
         "frontendPorts": [],
         "backendAddressPools": [],
         "backendHttpSettingsCollection": [],
-        "httpListeners": [
-        ],
+        "httpListeners": [],
         "requestRoutingRules": [],
         "enableHttp2": false,
         "sslCertificates": [],
@@ -60,6 +59,30 @@
           "firewallMode": "Detection",
           "ruleSetType": "OWASP",
           "ruleSetVersion": "3.0"
+        }
+      }
+    },
+    {
+      "type": "Microsoft.Network/ApplicationGatewayWebApplicationFirewallPolicies",
+      "apiVersion": "2022-01-01",
+      "name": "agwwaf",
+      "location": "[parameters('location')]",
+      "properties": {
+        "managedRules": {
+          "managedRuleSets": [
+            {
+              "ruleSetType": "OWASP",
+              "ruleSetVersion": "3.2"
+            },
+            {
+              "ruleSetType": "Microsoft_BotManagerRuleSet",
+              "ruleSetVersion": "0.1"
+            }
+          ]
+        },
+        "policySettings": {
+          "state": "Enabled",
+          "mode": "Prevention"
         }
       }
     }

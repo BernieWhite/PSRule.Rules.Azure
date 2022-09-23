@@ -8488,17 +8488,6 @@
 <p>What's changed since pre-release v1.20.0-B0028:</p>
 <ul>
 <li>New rules:<ul>
-<li>Storage Account:<ul>
-<li>Check blob container soft delete is enabled by @pazdedav.
-  <a href="https://github.com/Azure/PSRule.Rules.Azure/issues/1671">#1671</a></li>
-<li>Check file share soft delete is enabled by @jonathanruiz.
-  <a href="https://github.com/Azure/PSRule.Rules.Azure/issues/966">#966</a></li>
-<li>Limit number of firewall rules for Redis @jonathanruiz
-  <a href="https://github.com/Azure/PSRule.Rules.Azure/issues/544">#544</a></li>
-<li>Limit number of IP addresses in firewall rules for Redis @jonathanruiz
-  <a href="https://github.com/Azure/PSRule.Rules.Azure/issues/544">#544</a></li>
-</ul>
-</li>
 <li>App Configuration:<ul>
 <li>Use identity-based authentication for App Configuration by @pazdedav
   <a href="https://github.com/Azure/PSRule.Rules.Azure/issues/1691">#1691</a></li>
@@ -8519,10 +8508,26 @@
   <a href="hhttps://github.com/Azure/PSRule.Rules.Azure/issues/1632">#1632</a></li>
 </ul>
 </li>
+<li>Network Security Group:<ul>
+<li>Check AKS managed NSGs don't contain custom rules by @ms-sambell.
+  <a href="https://github.com/Azure/PSRule.Rules.Azure/issues/8">#8</a></li>
+</ul>
+</li>
+<li>Storage Account:<ul>
+<li>Check blob container soft delete is enabled by @pazdedav.
+  <a href="https://github.com/Azure/PSRule.Rules.Azure/issues/1671">#1671</a></li>
+<li>Check file share soft delete is enabled by @jonathanruiz.
+  <a href="https://github.com/Azure/PSRule.Rules.Azure/issues/966">#966</a></li>
+<li>Limit number of firewall rules for Redis @jonathanruiz
+  <a href="https://github.com/Azure/PSRule.Rules.Azure/issues/544">#544</a></li>
+<li>Limit number of IP addresses in firewall rules for Redis @jonathanruiz
+  <a href="https://github.com/Azure/PSRule.Rules.Azure/issues/544">#544</a></li>
+</ul>
+</li>
 </ul>
 </li>
 <li>Updated rules:<ul>
-<li>Updated rules, tests and docs with Microsoft Defender for Cloud by @jonathanruiz.
+<li><strong>Important change</strong>: Updated rules, tests and docs with Microsoft Defender for Cloud by @jonathanruiz.
   <a href="https://github.com/Azure/PSRule.Rules.Azure/issues/545">#545</a><ul>
 <li>The following rules have been renamed with aliases:<ul>
 <li>Renamed <code>Azure.SQL.ThreatDetection</code> to <code>Azure.SQL.DefenderCloud</code>.</li>
@@ -8533,7 +8538,7 @@
 <li>If you are referencing the old names please consider updating to the new names.</li>
 </ul>
 </li>
-<li>Added Bicep/ARM examples to KeyVault.Logs.md, FrontDoor.Logs.md, FrontDoor.MinTLS.md, and FrontDoor.Probe*.md by @lluppesms
+<li>Updated documentation examples for Front Door and Key Vault rules by @lluppesms.
   <a href="https://github.com/Azure/PSRule.Rules.Azure/issues/1667">#1667</a></li>
 <li>Improved the way we check that VM or VMSS has Linux by @verabe
   <a href="https://github.com/Azure/PSRule.Rules.Azure/issues/1704">#1704</a></li>
@@ -8557,13 +8562,8 @@
 <li>Bug fixes:<ul>
 <li>Fixed continue processing policy assignments on error by @BernieWhite.
   <a href="https://github.com/Azure/PSRule.Rules.Azure/issues/1651">#1651</a></li>
-</ul>
-</li>
-<li>New rules:<ul>
-<li>AKS:<ul>
-<li>Check AKS managed NSGs don't contain custom rules by @ms-sambell</li>
-</ul>
-</li>
+<li>Fixed handling of runtime assessment data by @BernieWhite.
+  <a href="https://github.com/Azure/PSRule.Rules.Azure/issues/1707">#1707</a></li>
 </ul>
 </li>
 </ul>
@@ -11604,7 +11604,7 @@
   <small>
     
       Last update:
-      2022-09-23
+      2022-09-24
     
   </small>
 </div>

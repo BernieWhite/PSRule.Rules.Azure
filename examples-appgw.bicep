@@ -43,3 +43,26 @@ resource name_resource 'Microsoft.Network/applicationGateways@2019-09-01' = {
     }
   }
 }
+
+resource waf 'Microsoft.Network/ApplicationGatewayWebApplicationFirewallPolicies@2022-01-01' = {
+  name: 'agwwaf'
+  location: location
+  properties: {
+    managedRules: {
+      managedRuleSets: [
+        {
+          ruleSetType: 'OWASP'
+          ruleSetVersion: '3.2'
+        }
+        {
+          ruleSetType: 'Microsoft_BotManagerRuleSet'
+          ruleSetVersion: '0.1'
+        }
+      ]
+    }
+    policySettings: {
+      state: 'Enabled'
+      mode: 'Prevention'
+    }
+  }
+}

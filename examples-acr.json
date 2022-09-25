@@ -4,8 +4,8 @@
   "metadata": {
     "_generator": {
       "name": "bicep",
-      "version": "0.4.1008.15138",
-      "templateHash": "7172118729176493931"
+      "version": "0.10.61.36676",
+      "templateHash": "6527020949954796408"
     }
   },
   "parameters": {
@@ -23,11 +23,10 @@
       }
     }
   },
-  "functions": [],
   "resources": [
     {
       "type": "Microsoft.ContainerRegistry/registries",
-      "apiVersion": "2021-06-01-preview",
+      "apiVersion": "2022-02-01-preview",
       "name": "[parameters('registryName')]",
       "location": "[parameters('location')]",
       "sku": {
@@ -46,9 +45,9 @@
             "status": "enabled",
             "type": "Notary"
           },
-          "retentionPolicy": {
-            "status": "enabled",
-            "days": 30
+          "softDeletePolicy": {
+            "retentionDays": 90,
+            "status": "enabled"
           }
         }
       }

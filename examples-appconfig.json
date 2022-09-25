@@ -4,12 +4,12 @@
   "metadata": {
     "_generator": {
       "name": "bicep",
-      "version": "0.4.1124.51302",
-      "templateHash": "17843007109288324703"
+      "version": "0.10.61.36676",
+      "templateHash": "17129707164536914510"
     }
   },
   "parameters": {
-    "storeName": {
+    "name": {
       "type": "string",
       "metadata": {
         "description": "The name of the App Configuration Store."
@@ -26,11 +26,15 @@
   "resources": [
     {
       "type": "Microsoft.AppConfiguration/configurationStores",
-      "apiVersion": "2020-06-01",
-      "name": "[parameters('storeName')]",
+      "apiVersion": "2022-05-01",
+      "name": "[parameters('name')]",
       "location": "[parameters('location')]",
       "sku": {
         "name": "standard"
+      },
+      "properties": {
+        "disableLocalAuth": true,
+        "enablePurgeProtection": true
       }
     }
   ]

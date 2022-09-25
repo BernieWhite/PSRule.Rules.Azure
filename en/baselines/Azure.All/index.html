@@ -1844,6 +1844,24 @@
         
           
         
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
       
       
         <label class="md-nav__link" for="__nav_4_5">
@@ -1978,6 +1996,20 @@
     <li class="md-nav__item">
       <a href="../../rules/Azure.ACR.Retention/" class="md-nav__link">
         Azure.ACR.Retention
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../rules/Azure.ACR.SoftDelete/" class="md-nav__link">
+        Azure.ACR.SoftDelete
       </a>
     </li>
   
@@ -2872,6 +2904,62 @@
   
   
     <li class="md-nav__item">
+      <a href="../../rules/Azure.AppGwWAF.Enabled/" class="md-nav__link">
+        Azure.AppGwWAF.Enabled
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../rules/Azure.AppGwWAF.Exclusions/" class="md-nav__link">
+        Azure.AppGwWAF.Exclusions
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../rules/Azure.AppGwWAF.PreventionMode/" class="md-nav__link">
+        Azure.AppGwWAF.PreventionMode
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../rules/Azure.AppGwWAF.RuleGroups/" class="md-nav__link">
+        Azure.AppGwWAF.RuleGroups
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
       <a href="../../rules/Azure.AppInsights.Name/" class="md-nav__link">
         Azure.AppInsights.Name
       </a>
@@ -3728,6 +3816,62 @@
     <li class="md-nav__item">
       <a href="../../rules/Azure.FrontDoor.WAF.Name/" class="md-nav__link">
         Azure.FrontDoor.WAF.Name
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../rules/Azure.FrontDoorWAF.Enabled/" class="md-nav__link">
+        Azure.FrontDoorWAF.Enabled
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../rules/Azure.FrontDoorWAF.Exclusions/" class="md-nav__link">
+        Azure.FrontDoorWAF.Exclusions
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../rules/Azure.FrontDoorWAF.PreventionMode/" class="md-nav__link">
+        Azure.FrontDoorWAF.PreventionMode
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../rules/Azure.FrontDoorWAF.RuleGroups/" class="md-nav__link">
+        Azure.FrontDoorWAF.RuleGroups
       </a>
     </li>
   
@@ -6594,7 +6738,7 @@
   <h1 id="azureall">Azure.All<a class="headerlink" href="#azureall" title="Permanent link">#</a></h1>
 <p>Includes all Azure rules.</p>
 <h2 id="rules">Rules<a class="headerlink" href="#rules" title="Permanent link">#</a></h2>
-<p>The following rules are included within <code>Azure.All</code>. This baseline includes a total of 301 rules.</p>
+<p>The following rules are included within <code>Azure.All</code>. This baseline includes a total of 310 rules.</p>
 <table>
 <thead>
 <tr>
@@ -6647,6 +6791,11 @@
 <tr>
 <td><a href="../../rules/Azure.ACR.Retention/">Azure.ACR.Retention</a></td>
 <td>Use a retention policy to cleanup untagged manifests.</td>
+<td>Important</td>
+</tr>
+<tr>
+<td><a href="../../rules/Azure.ACR.SoftDelete/">Azure.ACR.SoftDelete</a></td>
+<td>Azure Container Registries should have soft delete policy enabled.</td>
 <td>Important</td>
 </tr>
 <tr>
@@ -6958,6 +7107,26 @@
 <td><a href="../../rules/Azure.AppGw.WAFRules/">Azure.AppGw.WAFRules</a></td>
 <td>Application Gateway Web Application Firewall (WAF) should have all rules enabled.</td>
 <td>Important</td>
+</tr>
+<tr>
+<td><a href="../../rules/Azure.AppGwWAF.Enabled/">Azure.AppGwWAF.Enabled</a></td>
+<td>Application Gateway Web Application Firewall (WAF) must be enabled to protect backend resources.</td>
+<td>Critical</td>
+</tr>
+<tr>
+<td><a href="../../rules/Azure.AppGwWAF.Exclusions/">Azure.AppGwWAF.Exclusions</a></td>
+<td>Application Gateway Web Application Firewall (WAF) should have all rules enabled.</td>
+<td>Critical</td>
+</tr>
+<tr>
+<td><a href="../../rules/Azure.AppGwWAF.PreventionMode/">Azure.AppGwWAF.PreventionMode</a></td>
+<td>Use protection mode in Application Gateway Web Application Firewall (WAF) policies to protect back end resources.</td>
+<td>Critical</td>
+</tr>
+<tr>
+<td><a href="../../rules/Azure.AppGwWAF.RuleGroups/">Azure.AppGwWAF.RuleGroups</a></td>
+<td>Use recommended rule groups in Application Gateway Web Application Firewall (WAF) policies to protect back end resources.</td>
+<td>Critical</td>
 </tr>
 <tr>
 <td><a href="../../rules/Azure.AppInsights.Name/">Azure.AppInsights.Name</a></td>
@@ -7273,6 +7442,26 @@
 <td><a href="../../rules/Azure.FrontDoor.WAF.Name/">Azure.FrontDoor.WAF.Name</a></td>
 <td>Front Door WAF policy names should meet naming requirements.</td>
 <td>Awareness</td>
+</tr>
+<tr>
+<td><a href="../../rules/Azure.FrontDoorWAF.Enabled/">Azure.FrontDoorWAF.Enabled</a></td>
+<td>Front Door Web Application Firewall (WAF) policy must be enabled to protect back end resources.</td>
+<td>Critical</td>
+</tr>
+<tr>
+<td><a href="../../rules/Azure.FrontDoorWAF.Exclusions/">Azure.FrontDoorWAF.Exclusions</a></td>
+<td>Use recommended rule groups in Front Door Web Application Firewall (WAF) policies to protect back end resources. Avoid configuring rule exclusions.</td>
+<td>Critical</td>
+</tr>
+<tr>
+<td><a href="../../rules/Azure.FrontDoorWAF.PreventionMode/">Azure.FrontDoorWAF.PreventionMode</a></td>
+<td>Use protection mode in Front Door Web Application Firewall (WAF) policies to protect back end resources.</td>
+<td>Critical</td>
+</tr>
+<tr>
+<td><a href="../../rules/Azure.FrontDoorWAF.RuleGroups/">Azure.FrontDoorWAF.RuleGroups</a></td>
+<td>Use recommended rule groups in Front Door Web Application Firewall (WAF) policies to protect back end resources.</td>
+<td>Critical</td>
 </tr>
 <tr>
 <td><a href="../../rules/Azure.Identity.UserAssignedName/">Azure.Identity.UserAssignedName</a></td>

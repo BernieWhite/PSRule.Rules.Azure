@@ -4,8 +4,8 @@
   "metadata": {
     "_generator": {
       "name": "bicep",
-      "version": "0.4.613.9944",
-      "templateHash": "9904020945217708168"
+      "version": "0.10.61.36676",
+      "templateHash": "3888836277028789846"
     }
   },
   "parameters": {
@@ -15,26 +15,80 @@
       "metadata": {
         "description": "The location resources will be deployed."
       }
+    },
+    "asgName": {
+      "type": "string",
+      "defaultValue": "asg-001"
+    },
+    "nsgName": {
+      "type": "string",
+      "defaultValue": "nsg-001"
+    },
+    "lbName": {
+      "type": "string",
+      "defaultValue": "lb-001"
     }
   },
-  "functions": [],
   "resources": [
     {
       "type": "Microsoft.Network/networkSecurityGroups",
-      "apiVersion": "2021-02-01",
-      "name": "nsg-001",
+      "apiVersion": "2022-01-01",
+      "name": "[parameters('nsgName')]",
       "location": "[parameters('location')]",
       "properties": {
         "securityRules": [
           {
-            "name": "deny-hop-outbound",
+            "name": "AllowLoadBalancerHealthInbound",
             "properties": {
-              "priority": 200,
-              "access": "Deny",
-              "protocol": "Tcp",
-              "direction": "Outbound",
-              "sourceAddressPrefix": "VirtualNetwork",
+              "description": "Allow inbound Azure Load Balancer health check.",
+              "access": "Allow",
+              "direction": "Inbound",
+              "priority": 100,
+              "protocol": "*",
               "sourcePortRange": "*",
+              "sourceAddressPrefix": "AzureLoadBalancer",
+              "destinationPortRange": "*",
+              "destinationAddressPrefix": "*"
+            }
+          },
+          {
+            "name": "AllowApplicationInbound",
+            "properties": {
+              "description": "Allow internal web traffic into application.",
+              "access": "Allow",
+              "direction": "Inbound",
+              "priority": 300,
+              "protocol": "Tcp",
+              "sourcePortRange": "*",
+              "sourceAddressPrefix": "10.0.0.0/8",
+              "destinationPortRange": "443",
+              "destinationAddressPrefix": "VirtualNetwork"
+            }
+          },
+          {
+            "name": "DenyAllInbound",
+            "properties": {
+              "description": "Deny all other inbound traffic.",
+              "access": "Deny",
+              "direction": "Inbound",
+              "priority": 4000,
+              "protocol": "*",
+              "sourcePortRange": "*",
+              "sourceAddressPrefix": "*",
+              "destinationPortRange": "*",
+              "destinationAddressPrefix": "*"
+            }
+          },
+          {
+            "name": "DenyTraversalOutbound",
+            "properties": {
+              "description": "Deny outbound double hop traversal.",
+              "access": "Deny",
+              "direction": "Outbound",
+              "priority": 200,
+              "protocol": "Tcp",
+              "sourcePortRange": "*",
+              "sourceAddressPrefix": "VirtualNetwork",
               "destinationAddressPrefix": "*",
               "destinationPortRanges": [
                 "3389",
@@ -46,8 +100,15 @@
       }
     },
     {
+      "type": "Microsoft.Network/applicationSecurityGroups",
+      "apiVersion": "2022-01-01",
+      "name": "[parameters('asgName')]",
+      "location": "[parameters('location')]",
+      "properties": {}
+    },
+    {
       "type": "Microsoft.Network/virtualNetworks",
-      "apiVersion": "2021-02-01",
+      "apiVersion": "2022-01-01",
       "name": "vnet-001",
       "location": "[parameters('location')]",
       "properties": {
@@ -74,20 +135,34 @@
             "properties": {
               "addressPrefix": "10.0.1.0/24",
               "networkSecurityGroup": {
-                "id": "[resourceId('Microsoft.Network/networkSecurityGroups', 'nsg-001')]"
+                "id": "[resourceId('Microsoft.Network/networkSecurityGroups', parameters('nsgName'))]"
               }
+            }
+          },
+          {
+            "name": "snet-002",
+            "properties": {
+              "addressPrefix": "10.0.2.0/24",
+              "delegations": [
+                {
+                  "name": "HSM",
+                  "properties": {
+                    "serviceName": "Microsoft.HardwareSecurityModules/dedicatedHSMs"
+                  }
+                }
+              ]
             }
           }
         ]
       },
       "dependsOn": [
-        "[resourceId('Microsoft.Network/networkSecurityGroups', 'nsg-001')]"
+        "[resourceId('Microsoft.Network/networkSecurityGroups', parameters('nsgName'))]"
       ]
     },
     {
       "type": "Microsoft.Network/loadBalancers",
-      "apiVersion": "2021-02-01",
-      "name": "lb-001",
+      "apiVersion": "2022-01-01",
+      "name": "[parameters('lbName')]",
       "location": "[parameters('location')]",
       "sku": {
         "name": "Standard"

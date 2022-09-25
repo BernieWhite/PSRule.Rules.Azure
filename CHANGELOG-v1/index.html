@@ -2827,6 +2827,24 @@
         
           
         
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
       
       
         <label class="md-nav__link" for="__nav_4_5">
@@ -2961,6 +2979,20 @@
     <li class="md-nav__item">
       <a href="../en/rules/Azure.ACR.Retention/" class="md-nav__link">
         Azure.ACR.Retention
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../en/rules/Azure.ACR.SoftDelete/" class="md-nav__link">
+        Azure.ACR.SoftDelete
       </a>
     </li>
   
@@ -3855,6 +3887,62 @@
   
   
     <li class="md-nav__item">
+      <a href="../en/rules/Azure.AppGwWAF.Enabled/" class="md-nav__link">
+        Azure.AppGwWAF.Enabled
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../en/rules/Azure.AppGwWAF.Exclusions/" class="md-nav__link">
+        Azure.AppGwWAF.Exclusions
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../en/rules/Azure.AppGwWAF.PreventionMode/" class="md-nav__link">
+        Azure.AppGwWAF.PreventionMode
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../en/rules/Azure.AppGwWAF.RuleGroups/" class="md-nav__link">
+        Azure.AppGwWAF.RuleGroups
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
       <a href="../en/rules/Azure.AppInsights.Name/" class="md-nav__link">
         Azure.AppInsights.Name
       </a>
@@ -4711,6 +4799,62 @@
     <li class="md-nav__item">
       <a href="../en/rules/Azure.FrontDoor.WAF.Name/" class="md-nav__link">
         Azure.FrontDoor.WAF.Name
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../en/rules/Azure.FrontDoorWAF.Enabled/" class="md-nav__link">
+        Azure.FrontDoorWAF.Enabled
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../en/rules/Azure.FrontDoorWAF.Exclusions/" class="md-nav__link">
+        Azure.FrontDoorWAF.Exclusions
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../en/rules/Azure.FrontDoorWAF.PreventionMode/" class="md-nav__link">
+        Azure.FrontDoorWAF.PreventionMode
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../en/rules/Azure.FrontDoorWAF.RuleGroups/" class="md-nav__link">
+        Azure.FrontDoorWAF.RuleGroups
       </a>
     </li>
   
@@ -8485,26 +8629,43 @@
   See <a href="../upgrade-notes/">upgrade notes</a> for more information.</li>
 </ul>
 <h2 id="unreleased">Unreleased<a class="headerlink" href="#unreleased" title="Permanent link">#</a></h2>
+<ul>
+<li>New rules:<ul>
+<li>Azure Container Registry:<ul>
+<li>Check soft delete policy enabled by @bengeset96
+  <a href="https://github.com/Azure/PSRule.Rules.Azure/issues/1674">#1674</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
 <p>What's changed since pre-release v1.20.0-B0028:</p>
 <ul>
 <li>New rules:<ul>
+<li>Azure Cache for Redis:<ul>
+<li>Check the number of firewall rules for caches by @jonathanruiz.
+  <a href="https://github.com/Azure/PSRule.Rules.Azure/issues/544">#544</a></li>
+<li>Check the number of IP addresses in firewall rules for caches by @jonathanruiz.
+  <a href="https://github.com/Azure/PSRule.Rules.Azure/issues/544">#544</a></li>
+</ul>
+</li>
 <li>App Configuration:<ul>
-<li>Use identity-based authentication for App Configuration by @pazdedav
+<li>Check identity-based authentication is used for configuration stores by @pazdedav.
   <a href="https://github.com/Azure/PSRule.Rules.Azure/issues/1691">#1691</a></li>
 </ul>
 </li>
 <li>Defender for Cloud:<ul>
-<li>Check Microsoft Defender for Cloud is enabled for Containers by @jdewisscher
+<li>Check Microsoft Defender for Cloud is enabled for Containers by @jdewisscher.
   <a href="hhttps://github.com/Azure/PSRule.Rules.Azure/issues/1632">#1632</a></li>
-<li>Check Microsoft Defender for Cloud is enabled for Virtual Machines by @jdewisscher
+<li>Check Microsoft Defender for Cloud is enabled for Virtual Machines by @jdewisscher.
   <a href="hhttps://github.com/Azure/PSRule.Rules.Azure/issues/1632">#1632</a></li>
-<li>Check Microsoft Defender for Cloud is enabled for SQL Servers by @jdewisscher
+<li>Check Microsoft Defender for Cloud is enabled for SQL Servers by @jdewisscher.
   <a href="hhttps://github.com/Azure/PSRule.Rules.Azure/issues/1632">#1632</a></li>
-<li>Check Microsoft Defender for Cloud is enabled for App Services by @jdewisscher
+<li>Check Microsoft Defender for Cloud is enabled for App Services by @jdewisscher.
   <a href="hhttps://github.com/Azure/PSRule.Rules.Azure/issues/1632">#1632</a></li>
-<li>Check Microsoft Defender for Cloud is enabled for Storage Accounts by @jdewisscher
+<li>Check Microsoft Defender for Cloud is enabled for Storage Accounts by @jdewisscher.
   <a href="hhttps://github.com/Azure/PSRule.Rules.Azure/issues/1632">#1632</a></li>
-<li>Check Microsoft Defender for Cloud is enabled for SQL Servers on machines by @jdewisscher
+<li>Check Microsoft Defender for Cloud is enabled for SQL Servers on machines by @jdewisscher.
   <a href="hhttps://github.com/Azure/PSRule.Rules.Azure/issues/1632">#1632</a></li>
 </ul>
 </li>
@@ -8518,10 +8679,6 @@
   <a href="https://github.com/Azure/PSRule.Rules.Azure/issues/1671">#1671</a></li>
 <li>Check file share soft delete is enabled by @jonathanruiz.
   <a href="https://github.com/Azure/PSRule.Rules.Azure/issues/966">#966</a></li>
-<li>Limit number of firewall rules for Redis @jonathanruiz
-  <a href="https://github.com/Azure/PSRule.Rules.Azure/issues/544">#544</a></li>
-<li>Limit number of IP addresses in firewall rules for Redis @jonathanruiz
-  <a href="https://github.com/Azure/PSRule.Rules.Azure/issues/544">#544</a></li>
 </ul>
 </li>
 </ul>
@@ -8564,6 +8721,8 @@
   <a href="https://github.com/Azure/PSRule.Rules.Azure/issues/1651">#1651</a></li>
 <li>Fixed handling of runtime assessment data by @BernieWhite.
   <a href="https://github.com/Azure/PSRule.Rules.Azure/issues/1707">#1707</a></li>
+<li>Fixed conversion of type conditions to pre-conditions by @BernieWhite
+  <a href="https://github.com/Azure/PSRule.Rules.Azure/issues/1708">#1708</a></li>
 </ul>
 </li>
 </ul>
@@ -11604,7 +11763,7 @@
   <small>
     
       Last update:
-      2022-09-24
+      2022-09-25
     
   </small>
 </div>

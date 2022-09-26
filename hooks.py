@@ -21,18 +21,22 @@ def replace_maml(markdown: str, page: mkdocs.structure.nav.Page, config: mkdocs.
     markdown = markdown.replace("## about_PSRule_Azure_Configuration", "")
     markdown = markdown.replace("# PSRule_Azure_Configuration", "# Configuration options")
 
-    # Rules
-    markdown = markdown.replace("## SYNOPSIS", "")
-    markdown = markdown.replace("## DESCRIPTION", "## Description")
-    markdown = markdown.replace("## RECOMMENDATION", "## Recommendation")
-    markdown = markdown.replace("## NOTES", "## Notes")
-    markdown = markdown.replace("## EXAMPLES", "## Examples")
-    markdown = markdown.replace("## LINKS", "## Links")
+    if page.canonical_url.__contains__("/rules/") or page.canonical_url.__contains__("/baselines/") or page.canonical_url.__contains__("/concepts/") or page.canonical_url.__contains__("/commands/") or page.canonical_url.__contains__("/selectors/"):
+        # Rules
+        markdown = markdown.replace("## SYNOPSIS", "")
+        markdown = markdown.replace("## DESCRIPTION", "## Description")
+        markdown = markdown.replace("## RECOMMENDATION", "## Recommendation")
+        markdown = markdown.replace("## NOTES", "## Notes")
+        markdown = markdown.replace("## EXAMPLES", "## Examples")
+        markdown = markdown.replace("## LINKS", "## Links")
 
-    # Conceptual topics
-    markdown = markdown.replace("## SHORT DESCRIPTION", "")
-    markdown = markdown.replace("## LONG DESCRIPTION", "## Description")
-    markdown = re.sub("(\#\#\s+(NOTE|KEYWORDS)\s+(.|\s{1,2}(?!\#))+)", "", markdown)
+        # Conceptual topics
+        markdown = markdown.replace("## SHORT DESCRIPTION", "")
+        markdown = markdown.replace("## LONG DESCRIPTION", "## Description")
+        markdown = re.sub("(\#\#\s+(NOTE|KEYWORDS)\s+(.|\s{1,2}(?!\#))+)", "", markdown)
+
+    if page.meta.get('link_users', 'false') == 'true':
+        markdown = re.sub(r"\@([\w-]*)", r"[@\g<1>](https://github.com/\g<1>)", markdown)
 
     markdown = add_tags(markdown)
 

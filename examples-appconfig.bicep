@@ -9,6 +9,9 @@ param name string
 @description('The location resources will be deployed.')
 param location string = resourceGroup().location
 
+@description('The resource id of the Log Analytics workspace to send diagnostic logs to.')
+param workspaceId string
+
 // An example App Configuration Store
 resource store 'Microsoft.AppConfiguration/configurationStores@2022-05-01' = {
   name: name
@@ -19,5 +22,23 @@ resource store 'Microsoft.AppConfiguration/configurationStores@2022-05-01' = {
   properties: {
     disableLocalAuth: true
     enablePurgeProtection: true
+  }
+}
+
+resource diagnostic 'Microsoft.Insights/diagnosticSettings@2021-05-01-preview' = {
+  name: '${name}-diagnostic'
+  scope: store
+  properties: {
+    logs: [
+      {
+        categoryGroup: 'audit'
+        enabled: true
+        retentionPolicy: {
+          days: 90
+          enabled: true
+        }
+      }
+    ]
+    workspaceId: workspaceId
   }
 }

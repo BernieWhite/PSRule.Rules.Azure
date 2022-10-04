@@ -4025,6 +4025,33 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#examples" class="md-nav__link">
+    Examples
+  </a>
+  
+    <nav class="md-nav" aria-label="Examples">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#configure-with-azure-template" class="md-nav__link">
+    Configure with Azure template
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#configure-with-bicep" class="md-nav__link">
+    Configure with Bicep
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#links" class="md-nav__link">
     Links
   </a>
@@ -7024,6 +7051,33 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#examples" class="md-nav__link">
+    Examples
+  </a>
+  
+    <nav class="md-nav" aria-label="Examples">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#configure-with-azure-template" class="md-nav__link">
+    Configure with Azure template
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#configure-with-bicep" class="md-nav__link">
+    Configure with Bicep
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#links" class="md-nav__link">
     Links
   </a>
@@ -7082,12 +7136,92 @@ The action to perform is configurable for each WAF rule.</li>
 </ul>
 <h2 id="recommendation">Recommendation<a class="headerlink" href="#recommendation" title="Permanent link">#</a></h2>
 <p>Consider setting Front Door WAF policy to use protection mode.</p>
+<h2 id="examples">Examples<a class="headerlink" href="#examples" title="Permanent link">#</a></h2>
+<h3 id="configure-with-azure-template">Configure with Azure template<a class="headerlink" href="#configure-with-azure-template" title="Permanent link">#</a></h3>
+<p>To deploy WAF policies that pass this rule:</p>
+<ul>
+<li>Set the <code>properties.policySettings.mode</code> property to <code>Prevention</code>.</li>
+</ul>
+<p>For example:</p>
+<div class="highlight"><pre><span></span><code><span class="p">{</span><span class="w"></span>
+<span class="w">  </span><span class="nt">&quot;type&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Microsoft.Network/FrontDoorWebApplicationFirewallPolicies&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">  </span><span class="nt">&quot;apiVersion&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;2022-05-01&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">  </span><span class="nt">&quot;name&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;[parameters(&#39;name&#39;)]&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">  </span><span class="nt">&quot;location&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Global&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">  </span><span class="nt">&quot;sku&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">    </span><span class="nt">&quot;name&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Premium_AzureFrontDoor&quot;</span><span class="w"></span>
+<span class="w">  </span><span class="p">},</span><span class="w"></span>
+<span class="w">  </span><span class="nt">&quot;properties&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">    </span><span class="nt">&quot;managedRules&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">      </span><span class="nt">&quot;managedRuleSets&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w"></span>
+<span class="w">        </span><span class="p">{</span><span class="w"></span>
+<span class="w">          </span><span class="nt">&quot;ruleSetType&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Microsoft_DefaultRuleSet&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">          </span><span class="nt">&quot;ruleSetVersion&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;2.0&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">          </span><span class="nt">&quot;ruleSetAction&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Block&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">          </span><span class="nt">&quot;exclusions&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[],</span><span class="w"></span>
+<span class="w">          </span><span class="nt">&quot;ruleGroupOverrides&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[]</span><span class="w"></span>
+<span class="w">        </span><span class="p">},</span><span class="w"></span>
+<span class="w">        </span><span class="p">{</span><span class="w"></span>
+<span class="w">          </span><span class="nt">&quot;ruleSetType&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Microsoft_BotManagerRuleSet&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">          </span><span class="nt">&quot;ruleSetVersion&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;1.0&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">          </span><span class="nt">&quot;ruleSetAction&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Block&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">          </span><span class="nt">&quot;exclusions&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[],</span><span class="w"></span>
+<span class="w">          </span><span class="nt">&quot;ruleGroupOverrides&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[]</span><span class="w"></span>
+<span class="w">        </span><span class="p">}</span><span class="w"></span>
+<span class="w">      </span><span class="p">]</span><span class="w"></span>
+<span class="w">    </span><span class="p">},</span><span class="w"></span>
+<span class="w">    </span><span class="nt">&quot;policySettings&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">      </span><span class="nt">&quot;enabledState&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Enabled&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">      </span><span class="nt">&quot;mode&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Prevention&quot;</span><span class="w"></span>
+<span class="w">    </span><span class="p">}</span><span class="w"></span>
+<span class="w">  </span><span class="p">}</span><span class="w"></span>
+<span class="p">}</span><span class="w"></span>
+</code></pre></div>
+<h3 id="configure-with-bicep">Configure with Bicep<a class="headerlink" href="#configure-with-bicep" title="Permanent link">#</a></h3>
+<p>To deploy WAF policies that pass this rule:</p>
+<ul>
+<li>Set the <code>properties.policySettings.mode</code> property to <code>Prevention</code>.</li>
+</ul>
+<p>For example:</p>
+<div class="highlight"><pre><span></span><code>resource waf &#39;Microsoft.Network/FrontDoorWebApplicationFirewallPolicies@2022-05-01&#39; = {
+  name: name
+  location: &#39;Global&#39;
+  sku: {
+    name: &#39;Premium_AzureFrontDoor&#39;
+  }
+  properties: {
+    managedRules: {
+      managedRuleSets: [
+        {
+          ruleSetType: &#39;Microsoft_DefaultRuleSet&#39;
+          ruleSetVersion: &#39;2.0&#39;
+          ruleSetAction: &#39;Block&#39;
+          exclusions: []
+          ruleGroupOverrides: []
+        }
+        {
+          ruleSetType: &#39;Microsoft_BotManagerRuleSet&#39;
+          ruleSetVersion: &#39;1.0&#39;
+          ruleSetAction: &#39;Block&#39;
+          exclusions: []
+          ruleGroupOverrides: []
+        }
+      ]
+    }
+    policySettings: {
+      enabledState: &#39;Enabled&#39;
+      mode: &#39;Prevention&#39;
+    }
+  }
+}
+</code></pre></div>
 <h2 id="links">Links<a class="headerlink" href="#links" title="Permanent link">#</a></h2>
 <ul>
 <li><a href="https://docs.microsoft.com/azure/architecture/framework/security/design-network-endpoints">Best practices for endpoint security on Azure</a></li>
 <li><a href="https://docs.microsoft.com/azure/security/fundamentals/paas-deployments#install-a-web-application-firewall">Securing PaaS deployments</a></li>
 <li><a href="https://docs.microsoft.com/azure/web-application-firewall/afds/waf-front-door-policy-settings#waf-mode">Policy settings for Web Application Firewall on Azure Front Door</a></li>
 <li><a href="https://docs.microsoft.com/azure/web-application-firewall/afds/waf-front-door-best-practices">Web Application Firewall best practices</a></li>
+<li><a href="https://learn.microsoft.com/azure/templates/microsoft.network/frontdoorwebapplicationfirewallpolicies">Azure deployment reference</a></li>
 </ul>
 
   <!-- Last update of source file -->
@@ -7098,7 +7232,7 @@ The action to perform is configurable for each WAF rule.</li>
   <small>
     
       Last update:
-      2022-09-24
+      2022-10-05
     
   </small>
 </div>

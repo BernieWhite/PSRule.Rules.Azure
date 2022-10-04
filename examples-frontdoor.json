@@ -5,14 +5,23 @@
     "_generator": {
       "name": "bicep",
       "version": "0.10.61.36676",
-      "templateHash": "6401344353123447650"
+      "templateHash": "8538999798863753976"
+    }
+  },
+  "parameters": {
+    "name": {
+      "type": "string",
+      "defaultValue": "firewall",
+      "metadata": {
+        "description": "The name of the resource."
+      }
     }
   },
   "resources": [
     {
       "type": "Microsoft.Network/FrontDoorWebApplicationFirewallPolicies",
       "apiVersion": "2022-05-01",
-      "name": "fdwaf",
+      "name": "[parameters('name')]",
       "location": "Global",
       "sku": {
         "name": "Premium_AzureFrontDoor"
@@ -22,11 +31,17 @@
           "managedRuleSets": [
             {
               "ruleSetType": "Microsoft_DefaultRuleSet",
-              "ruleSetVersion": "2.0"
+              "ruleSetVersion": "2.0",
+              "ruleSetAction": "Block",
+              "exclusions": [],
+              "ruleGroupOverrides": []
             },
             {
               "ruleSetType": "Microsoft_BotManagerRuleSet",
-              "ruleSetVersion": "1.0"
+              "ruleSetVersion": "1.0",
+              "ruleSetAction": "Block",
+              "exclusions": [],
+              "ruleGroupOverrides": []
             }
           ]
         },

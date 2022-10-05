@@ -1231,6 +1231,13 @@
   
 </li>
         
+          <li class="md-nav__item">
+  <a href="#azure-linux-os-offers" class="md-nav__link">
+    Azure Linux OS offers
+  </a>
+  
+</li>
+        
       </ul>
     </nav>
   
@@ -7131,6 +7138,13 @@
   
 </li>
         
+          <li class="md-nav__item">
+  <a href="#azure-linux-os-offers" class="md-nav__link">
+    Azure Linux OS offers
+  </a>
+  
+</li>
+        
       </ul>
     </nav>
   
@@ -7369,13 +7383,33 @@ The above shows examples specific to <code>Azure.AKS.AvailabilityZone</code>, bu
 <span class="nt">configuration</span><span class="p">:</span><span class="w"></span>
 <span class="w">  </span><span class="nt">AZURE_AUTOMATIONACCOUNT_ENABLED_PLATFORM_LOG_CATEGORIES_LIST</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">[</span><span class="s">&#39;JobLogs&#39;</span><span class="p p-Indicator">,</span><span class="w"> </span><span class="s">&#39;AllMetrics&#39;</span><span class="p p-Indicator">]</span><span class="w"></span>
 </code></pre></div>
+<h3 id="azure-linux-os-offers">Azure Linux OS offers<a class="headerlink" href="#azure-linux-os-offers" title="Permanent link">#</a></h3>
+<p>This configurations specifies names of offers corresponding to the Linux OS.
+It's mostly intended to be used when analyzing templates that use private Linux offerings.
+Rules that check if a VM or VMSS has Linux OS also validate against the values set by this configuration.</p>
+<p>Syntax:</p>
+<div class="highlight"><pre><span></span><code><span class="nt">configuration</span><span class="p">:</span><span class="w"></span>
+<span class="w">  </span><span class="nt">AZURE_LINUX_OS_OFFERS</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">array</span><span class="w"> </span><span class="c1"># An array of offer names</span><span class="w"></span>
+</code></pre></div>
+<p>Default:</p>
+<div class="highlight"><pre><span></span><code><span class="c1"># YAML: The default AZURE_LINUX_OS_OFFERS configuration option</span><span class="w"></span>
+<span class="nt">configuration</span><span class="p">:</span><span class="w"></span>
+<span class="w">  </span><span class="nt">AZURE_LINUX_OS_OFFERS</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">[]</span><span class="w"></span>
+</code></pre></div>
+<p>Example:</p>
+<div class="highlight"><pre><span></span><code><span class="c1"># YAML: Set the AZURE_LINUX_OS_OFFERS configuration option to aLinuxOffer, anotherLinuxOffer</span><span class="w"></span>
+<span class="nt">configuration</span><span class="p">:</span><span class="w"></span>
+<span class="w">  </span><span class="nt">AZURE_LINUX_OS_OFFERS</span><span class="p">:</span><span class="w"></span>
+<span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="s">&#39;aLinuxOffer&#39;</span><span class="w"></span>
+<span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="s">&#39;anotherLinuxOffer&#39;</span><span class="w"></span>
+</code></pre></div>
 
   <hr>
 <div class="md-source-file">
   <small>
     
       Last update:
-      2022-05-05
+      2022-10-05
     
   </small>
 </div>

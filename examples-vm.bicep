@@ -9,13 +9,18 @@ param name string
 @description('The location resources will be deployed.')
 param location string = resourceGroup().location
 
+@secure()
+@description('The name of the local administrator account.')
 param adminUsername string
 
 @secure()
+@description('A password for the local administrator account.')
 param adminPassword string
 
+@description('The VM sku to use.')
 param sku string
 
+@description('A reference to the VNET subnet where the VM will be deployed.')
 param subnetId string
 
 // An example basic VM

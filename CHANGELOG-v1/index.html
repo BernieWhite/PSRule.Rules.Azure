@@ -8962,9 +8962,19 @@
 <h2 id="unreleased">Unreleased<a class="headerlink" href="#unreleased" title="Permanent link">#</a></h2>
 <p>What's changed since pre-release v1.20.0-B0223:</p>
 <ul>
+<li>Engineering:<ul>
+<li>Bump PSRule to v2.4.2.
+  <a href="https://github.com/Azure/PSRule.Rules.Azure/pull/1753">#1753</a>
+  <a href="https://github.com/Azure/PSRule.Rules.Azure/issues/1748">#1748</a></li>
+</ul>
+</li>
 <li>Bug fixes:<ul>
 <li>Fixed <code>Azure.FrontDoorWAF.Exclusions</code> reports exclusions when none are specified by @BernieWhite.
   <a href="https://github.com/Azure/PSRule.Rules.Azure/issues/1751">#1751</a></li>
+<li>Fixed <code>Azure.Deployment.AdminUsername</code> does not match the pattern by @BernieWhite.
+  <a href="https://github.com/Azure/PSRule.Rules.Azure/issues/1758">#1758</a></li>
+<li>Consider private offerings when checking that a VM or VMSS has Linux by @verabe.
+  <a href="https://github.com/Azure/PSRule.Rules.Azure/issues/1725">#1725</a></li>
 </ul>
 </li>
 </ul>
@@ -9002,8 +9012,6 @@
   <a href="https://github.com/Azure/PSRule.Rules.Azure/issues/1653">#1653</a></li>
 <li>Fixed bug requiring all diagnostic logs settings to have auditing enabled by @bengeset96.
   <a href="https://github.com/Azure/PSRule.Rules.Azure/issues/1726">#1726</a></li>
-<li>Consider private offerings when checking that a VM or VMSS has Linux by @verabe.
-  <a href="https://github.com/Azure/PSRule.Rules.Azure/issues/1725">#1725</a></li>
 </ul>
 </li>
 </ul>
@@ -12159,7 +12167,7 @@
   <small>
     
       Last update:
-      2022-10-05
+      2022-10-06
     
   </small>
 </div>

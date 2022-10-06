@@ -4,8 +4,8 @@
   "metadata": {
     "_generator": {
       "name": "bicep",
-      "version": "0.8.9.13224",
-      "templateHash": "16285889769326646237"
+      "version": "0.10.61.36676",
+      "templateHash": "13174914885982696413"
     }
   },
   "parameters": {
@@ -23,16 +23,28 @@
       }
     },
     "adminUsername": {
-      "type": "string"
+      "type": "secureString",
+      "metadata": {
+        "description": "The name of the local administrator account."
+      }
     },
     "adminPassword": {
-      "type": "secureString"
+      "type": "secureString",
+      "metadata": {
+        "description": "A password for the local administrator account."
+      }
     },
     "sku": {
-      "type": "string"
+      "type": "string",
+      "metadata": {
+        "description": "The VM sku to use."
+      }
     },
     "subnetId": {
-      "type": "string"
+      "type": "string",
+      "metadata": {
+        "description": "A reference to the VNET subnet where the VM will be deployed."
+      }
     }
   },
   "resources": [

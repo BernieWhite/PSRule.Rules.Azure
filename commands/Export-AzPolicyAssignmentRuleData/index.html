@@ -7053,6 +7053,13 @@
 </li>
         
           <li class="md-nav__item">
+  <a href="#-ruleprefix" class="md-nav__link">
+    -RulePrefix
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#-passthru" class="md-nav__link">
     -PassThru
   </a>
@@ -7174,7 +7181,7 @@
 <p>Export JSON based rules from policy assignment data.</p>
 <h2 id="syntax">SYNTAX<a class="headerlink" href="#syntax" title="Permanent link">#</a></h2>
 <h3 id="default-default">Default (Default)<a class="headerlink" href="#default-default" title="Permanent link">#</a></h3>
-<div class="highlight"><pre><span></span><code>Export-AzPolicyAssignmentRuleData [[-Name] &lt;string&gt;] [-AssignmentFile] &lt;string&gt; [[-ResourceGroup] &lt;ResourceGroupReference&gt;] [[-Subscription] &lt;SubscriptionReference&gt;] [[-OutputPath] &lt;string&gt;] [-PassThru] [&lt;CommonParameters&gt;]
+<div class="highlight"><pre><span></span><code>Export-AzPolicyAssignmentRuleData [[-Name] &lt;string&gt;] [-AssignmentFile] &lt;string&gt; [[-ResourceGroup] &lt;ResourceGroupReference&gt;] [[-Subscription] &lt;SubscriptionReference&gt;] [[-OutputPath] &lt;string&gt;] [[-RulePrefix] &lt;string&gt;] [-PassThru] [&lt;CommonParameters&gt;]
 </code></pre></div>
 <h2 id="description">Description<a class="headerlink" href="#description" title="Permanent link">#</a></h2>
 <p>This is an <strong>experimental</strong> cmdlet.</p>
@@ -7200,6 +7207,8 @@
 </li>
 </ul>
 <p>To override, set the <code>AZURE_SUBSCRIPTION</code> and <code>AZURE_RESOURCE_GROUP</code> in configuration.</p>
+<p>The rule prefix <code>Azure</code> is also applied to the policy names unless overridden with <code>-RulePrefix</code> or <code>AZURE_POLICY_RULE_PREFIX</code>
+in configuration.</p>
 <p>Currently the following limitations apply:</p>
 <ul>
 <li><code>field()</code> expressions are not expanded.</li>
@@ -7282,6 +7291,20 @@ Where <code>&lt;name&gt;</code> is the name of the assignment specified by <code
 <span class="nt">Accept pipeline input</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">False</span><span class="w"></span>
 <span class="nt">Accept wildcard characters</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">False</span><span class="w"></span>
 </code></pre></div>
+<h3 id="-ruleprefix">-RulePrefix<a class="headerlink" href="#-ruleprefix" title="Permanent link">#</a></h3>
+<p>By default, policy rule names use the <code>Azure</code> prefix e.g. <code>Azure.Policy.e749c2d003da</code>.</p>
+<p>When <code>-RulePrefix</code> is specified, the default prefix is overridden.</p>
+<p>For example, with <code>-RulePrefix 'CustomPolicyPrefix'</code> this would generate the policy rule name <code>CustomPolicyPrefix.Policy.e749c2d003da</code>.</p>
+<div class="highlight"><pre><span></span><code><span class="nt">Type</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">String</span><span class="w"></span>
+<span class="nt">Parameter Sets</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Default</span><span class="w"></span>
+<span class="nt">Aliases</span><span class="p">:</span><span class="w"></span>
+
+<span class="nt">Required</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">False</span><span class="w"></span>
+<span class="nt">Position</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Named</span><span class="w"></span>
+<span class="nt">Default value</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">None</span><span class="w"></span>
+<span class="nt">Accept pipeline input</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">False</span><span class="w"></span>
+<span class="nt">Accept wildcard characters</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">False</span><span class="w"></span>
+</code></pre></div>
 <h3 id="-passthru">-PassThru<a class="headerlink" href="#-passthru" title="Permanent link">#</a></h3>
 <p>By default, FileInfo objects are returned to the pipeline for each JSON file created.
 When <code>-PassThru</code> is specified, JSON files are not created and Azure resource objects are returned to
@@ -7351,7 +7374,7 @@ For more information, see <a href="https://docs.microsoft.com/powershell/module/
   <small>
     
       Last update:
-      2022-03-30
+      2022-10-08
     
   </small>
 </div>

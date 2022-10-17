@@ -1949,6 +1949,8 @@
         
           
         
+          
+        
       
       
         <label class="md-nav__link" for="__nav_4_5">
@@ -6127,6 +6129,20 @@
   
   
     <li class="md-nav__item">
+      <a href="../../../en/rules/Azure.VNET.BastionSubnet/" class="md-nav__link">
+        Azure.VNET.BastionSubnet
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
       <a href="../../../en/rules/Azure.VNET.LocalDNS/" class="md-nav__link">
         Azure.VNET.LocalDNS
       </a>
@@ -7129,6 +7145,13 @@
 </li>
         
           <li class="md-nav__item">
+  <a href="#best-practices" class="md-nav__link">
+    Best practices
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#data-management" class="md-nav__link">
     Data management
   </a>
@@ -7186,13 +7209,6 @@
           <li class="md-nav__item">
   <a href="#application-endpoints" class="md-nav__link">
     Application endpoints
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#applications-and-services" class="md-nav__link">
-    Applications and services
   </a>
   
 </li>
@@ -7291,6 +7307,13 @@
           <li class="md-nav__item">
   <a href="#optimize" class="md-nav__link">
     Optimize
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#review-and-remediate" class="md-nav__link">
+    Review and remediate
   </a>
   
 </li>
@@ -8208,12 +8231,6 @@
 <td>Error</td>
 </tr>
 <tr>
-<td><a href="Azure.AKS.PoolScaleSet.md">Azure.AKS.PoolScaleSet</a></td>
-<td>Deploy AKS clusters with nodes pools based on VM scale sets.</td>
-<td>Important</td>
-<td>Error</td>
-</tr>
-<tr>
 <td><a href="Azure.AKS.StandardLB.md">Azure.AKS.StandardLB</a></td>
 <td>Azure Kubernetes Clusters (AKS) should use a Standard load balancer SKU.</td>
 <td>Important</td>
@@ -8318,6 +8335,12 @@
 <td>Important</td>
 <td>Error</td>
 </tr>
+<tr>
+<td><a href="Azure.AKS.PoolScaleSet.md">Azure.AKS.PoolScaleSet</a></td>
+<td>Deploy AKS clusters with nodes pools based on VM scale sets.</td>
+<td>Important</td>
+<td>Error</td>
+</tr>
 </tbody>
 </table>
 <h2 id="reliability">Reliability<a class="headerlink" href="#reliability" title="Permanent link">#</a></h2>
@@ -8371,6 +8394,25 @@
 <tr>
 <td><a href="Azure.VNET.SingleDNS.md">Azure.VNET.SingleDNS</a></td>
 <td>VNETs should have at least two DNS servers assigned.</td>
+<td>Important</td>
+<td>Error</td>
+</tr>
+</tbody>
+</table>
+<h3 id="best-practices">Best practices<a class="headerlink" href="#best-practices" title="Permanent link">#</a></h3>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Synopsis</th>
+<th>Severity</th>
+<th>Level</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="Azure.VNET.BastionSubnet.md">Azure.VNET.BastionSubnet</a></td>
+<td>VNETs with a GatewaySubnet should have an AzureBastionSubnet to allow for out of band remote access to VMs.</td>
 <td>Important</td>
 <td>Error</td>
 </tr>
@@ -8770,25 +8812,6 @@
 <td><a href="Azure.Storage.Firewall.md">Azure.Storage.Firewall</a></td>
 <td>Storage Accounts should only accept explicitly allowed traffic.</td>
 <td>Important</td>
-<td>Error</td>
-</tr>
-</tbody>
-</table>
-<h3 id="applications-and-services">Applications and services<a class="headerlink" href="#applications-and-services" title="Permanent link">#</a></h3>
-<table>
-<thead>
-<tr>
-<th>Name</th>
-<th>Synopsis</th>
-<th>Severity</th>
-<th>Level</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><a href="../Azure.ACR.ImageHealth/">Azure.ACR.ImageHealth</a></td>
-<td>Remove container images with known vulnerabilities.</td>
-<td>Critical</td>
 <td>Error</td>
 </tr>
 </tbody>
@@ -9673,6 +9696,25 @@
 <td><a href="Azure.AKS.AzurePolicyAddOn.md">Azure.AKS.AzurePolicyAddOn</a></td>
 <td>Configure Azure Kubernetes Service (AKS) clusters to use Azure Policy Add-on for Kubernetes.</td>
 <td>Important</td>
+<td>Error</td>
+</tr>
+</tbody>
+</table>
+<h3 id="review-and-remediate">Review and remediate<a class="headerlink" href="#review-and-remediate" title="Permanent link">#</a></h3>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Synopsis</th>
+<th>Severity</th>
+<th>Level</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="../Azure.ACR.ImageHealth/">Azure.ACR.ImageHealth</a></td>
+<td>Remove container images with known vulnerabilities.</td>
+<td>Critical</td>
 <td>Error</td>
 </tr>
 </tbody>

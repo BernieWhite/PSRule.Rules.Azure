@@ -1026,6 +1026,13 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#v1201" class="md-nav__link">
+    v1.20.1
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#v1200" class="md-nav__link">
     v1.20.0
   </a>
@@ -2338,6 +2345,8 @@
       
       
       
+        
+          
         
           
         
@@ -7163,6 +7172,20 @@
   
   
     <li class="md-nav__item">
+      <a href="../en/rules/Azure.VNET.BastionSubnet/" class="md-nav__link">
+        Azure.VNET.BastionSubnet
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
       <a href="../en/rules/Azure.VNET.LocalDNS/" class="md-nav__link">
         Azure.VNET.LocalDNS
       </a>
@@ -8001,6 +8024,13 @@
         <li class="md-nav__item">
   <a href="#unreleased" class="md-nav__link">
     Unreleased
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#v1201" class="md-nav__link">
+    v1.20.1
   </a>
   
 </li>
@@ -9032,6 +9062,16 @@
   See <a href="../upgrade-notes/">upgrade notes</a> for more information.</li>
 </ul>
 <h2 id="unreleased">Unreleased<a class="headerlink" href="#unreleased" title="Permanent link">#</a></h2>
+<ul>
+<li>New rules:<ul>
+<li>VNET:<ul>
+<li>Check VNETs with a GatewaySubnet also has a AzureBastionSubnet by @bengeset96.
+  <a href="https://github.com/Azure/PSRule.Rules.Azure/issues/1761">#1761</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
 <p>What's changed since pre-release v1.20.0:</p>
 <ul>
 <li>New features:<ul>
@@ -9048,8 +9088,19 @@
 </ul>
 </li>
 <li>Engineering:<ul>
-<li>Bump PSRule to v2.5.0.
-  <a href="https://github.com/Azure/PSRule.Rules.Azure/pull/1769">#1769</a></li>
+<li>Bump PSRule to v2.5.1.
+  <a href="https://github.com/Azure/PSRule.Rules.Azure/pull/1782">#1782</a></li>
+<li>Bump Az.Resources to v6.3.0.
+  <a href="https://github.com/Azure/PSRule.Rules.Azure/pull/1782">#1782</a></li>
+</ul>
+</li>
+</ul>
+<h2 id="v1201">v1.20.1<a class="headerlink" href="#v1201" title="Permanent link">#</a></h2>
+<p>What's changed since pre-release v1.20.0:</p>
+<ul>
+<li>Bug fixes:<ul>
+<li>Fixed expand bicep source when reading JsonContent into a parameter by @BernieWhite.
+  <a href="https://github.com/Azure/PSRule.Rules.Azure/issues/1780">#1780</a></li>
 </ul>
 </li>
 </ul>
@@ -12497,7 +12548,7 @@
   <small>
     
       Last update:
-      2022-10-09
+      2022-10-17
     
   </small>
 </div>

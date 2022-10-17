@@ -763,7 +763,7 @@
           {
             "type": 1,
             "content": {
-              "json": "# {selectedTab} - Pillar\r\n\r\nThe {selectedTab} Pillar provides guidance around governing costs of resources in the Cloud. This includes checklists, principals and tradeoffs.\r\n\r\nFor more information about this pillar: \r\n\r\n- [Well-Archited Framework - {selectedTab}](https://docs.microsoft.com/azure/architecture/framework/#cost-optimization)\r\n- [PSRule for Azure {selectedTab} Rules](https://azure.github.io/PSRule.Rules.Azure/en/rules/module/#cost-optimization)\r\n\r\n<br>"
+              "json": "# {selectedTab} - Pillar\r\n\r\nThe {selectedTab} Pillar provides guidance around governing costs of resources in the Cloud. This includes checklists, principals and tradeoffs.\r\n\r\nFor more information about this pillar: \r\n\r\n- [Well-Archited Framework - {selectedTab}](https://learn.microsoft.com/azure/architecture/framework/#cost-optimization)\r\n- [PSRule for Azure {selectedTab} Rules](https://azure.github.io/PSRule.Rules.Azure/en/rules/module/#cost-optimization)\r\n\r\n<br>"
             },
             "conditionalVisibility": {
               "parameterName": "selectedTab",
@@ -775,7 +775,7 @@
           {
             "type": 1,
             "content": {
-              "json": "# {selectedTab} - Pillar\r\n\r\nThe {selectedTab} Pillar provides guidance around building highly resiliency solutions in Azure. It details recommendations for different services and best practices for ensuring solutions are as resilient as possible. \r\n\r\nFor more information about this pillar: \r\n\r\n- [Well-Archited Framework - {selectedTab}](https://docs.microsoft.com/azure/architecture/framework/resiliency)\r\n- [PSRule for Azure {selectedTab} Rules](https://azure.github.io/PSRule.Rules.Azure/en/rules/module/#reliability)\r\n\r\n<br>"
+              "json": "# {selectedTab} - Pillar\r\n\r\nThe {selectedTab} Pillar provides guidance around building highly resiliency solutions in Azure. It details recommendations for different services and best practices for ensuring solutions are as resilient as possible. \r\n\r\nFor more information about this pillar: \r\n\r\n- [Well-Archited Framework - {selectedTab}](https://learn.microsoft.com/azure/architecture/framework/resiliency)\r\n- [PSRule for Azure {selectedTab} Rules](https://azure.github.io/PSRule.Rules.Azure/en/rules/module/#reliability)\r\n\r\n<br>"
             },
             "conditionalVisibility": {
               "parameterName": "selectedTab",
@@ -787,7 +787,7 @@
           {
             "type": 1,
             "content": {
-              "json": "# {selectedTab} - Pillar\r\n\r\nThe {selectedTab} Pillar provides guidance and best practices for securing resources running in Azure. It details recommendations for different services and checklists to increase the security of a solution. \r\n\r\nFor more information about this pillar: \r\n\r\n- [Well-Archited Framework - {selectedTab}](https://docs.microsoft.com/azure/architecture/framework/security/)\r\n- [PSRule for Azure {selectedTab} Rules](https://azure.github.io/PSRule.Rules.Azure/en/rules/module/#security)\r\n\r\n<br>"
+              "json": "# {selectedTab} - Pillar\r\n\r\nThe {selectedTab} Pillar provides guidance and best practices for securing resources running in Azure. It details recommendations for different services and checklists to increase the security of a solution. \r\n\r\nFor more information about this pillar: \r\n\r\n- [Well-Archited Framework - {selectedTab}](https://learn.microsoft.com/azure/architecture/framework/security/)\r\n- [PSRule for Azure {selectedTab} Rules](https://azure.github.io/PSRule.Rules.Azure/en/rules/module/#security)\r\n\r\n<br>"
             },
             "conditionalVisibility": {
               "parameterName": "selectedTab",
@@ -799,7 +799,7 @@
           {
             "type": 1,
             "content": {
-              "json": "# {selectedTab} - Pillar\r\n\r\nThe {selectedTab} Pillar provides guidance and best practices for optimising a solution for performance. This includes tips for horizontally scaling and which services to pick for the best performance. \r\n\r\nFor more information about this pillar: \r\n\r\n- [Well-Archited Framework - {selectedTab}](https://docs.microsoft.com/azure/architecture/framework/scalability/)\r\n- [PSRule for Azure {selectedTab} Rules](https://azure.github.io/PSRule.Rules.Azure/en/rules/module/#performance-efficiency)\r\n\r\n<br>"
+              "json": "# {selectedTab} - Pillar\r\n\r\nThe {selectedTab} Pillar provides guidance and best practices for optimising a solution for performance. This includes tips for horizontally scaling and which services to pick for the best performance. \r\n\r\nFor more information about this pillar: \r\n\r\n- [Well-Archited Framework - {selectedTab}](https://learn.microsoft.com/azure/architecture/framework/scalability/)\r\n- [PSRule for Azure {selectedTab} Rules](https://azure.github.io/PSRule.Rules.Azure/en/rules/module/#performance-efficiency)\r\n\r\n<br>"
             },
             "conditionalVisibility": {
               "parameterName": "selectedTab",
@@ -811,7 +811,7 @@
           {
             "type": 1,
             "content": {
-              "json": "# {selectedTab} - Pillar\r\n\r\nThe {selectedTab} Pillar provides guidance on operational excellency.\r\n\r\nFor more information about this pillar: \r\n\r\n- [Well-Archited Framework - {selectedTab}](https://docs.microsoft.com/azure/architecture/framework/devops/)\r\n- [PSRule for Azure {selectedTab} Rules](https://azure.github.io/PSRule.Rules.Azure/en/rules/module/#operational-excellence)\r\n\r\n<br>"
+              "json": "# {selectedTab} - Pillar\r\n\r\nThe {selectedTab} Pillar provides guidance on operational excellency.\r\n\r\nFor more information about this pillar: \r\n\r\n- [Well-Archited Framework - {selectedTab}](https://learn.microsoft.com/azure/architecture/framework/devops/)\r\n- [PSRule for Azure {selectedTab} Rules](https://azure.github.io/PSRule.Rules.Azure/en/rules/module/#operational-excellence)\r\n\r\n<br>"
             },
             "conditionalVisibility": {
               "parameterName": "selectedTab",

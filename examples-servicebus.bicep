@@ -10,7 +10,7 @@ param name string
 param location string = resourceGroup().location
 
 // An example Service Bus namespace
-resource ns 'Microsoft.ServiceBus/namespaces@2021-11-01' = {
+resource ns 'Microsoft.ServiceBus/namespaces@2022-01-01-preview' = {
   name: name
   location: location
   identity: {
@@ -21,5 +21,6 @@ resource ns 'Microsoft.ServiceBus/namespaces@2021-11-01' = {
   }
   properties: {
     disableLocalAuth: true
+    minimumTlsVersion: '1.2'
   }
 }

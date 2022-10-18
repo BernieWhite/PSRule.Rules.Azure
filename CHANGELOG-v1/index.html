@@ -1026,6 +1026,13 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#v1210-b0011-pre-release" class="md-nav__link">
+    v1.21.0-B0011 (pre-release)
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#v1201" class="md-nav__link">
     v1.20.1
   </a>
@@ -2345,6 +2352,10 @@
       
       
       
+        
+          
+        
+          
         
           
         
@@ -4736,6 +4747,20 @@
   
   
     <li class="md-nav__item">
+      <a href="../en/rules/Azure.Deployment.SecureValue/" class="md-nav__link">
+        Azure.Deployment.SecureValue
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
       <a href="../en/rules/Azure.EventGrid.DisableLocalAuth/" class="md-nav__link">
         Azure.EventGrid.DisableLocalAuth
       </a>
@@ -6222,6 +6247,20 @@
     <li class="md-nav__item">
       <a href="../en/rules/Azure.ServiceBus.DisableLocalAuth/" class="md-nav__link">
         Azure.ServiceBus.DisableLocalAuth
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../en/rules/Azure.ServiceBus.MinTLS/" class="md-nav__link">
+        Azure.ServiceBus.MinTLS
       </a>
     </li>
   
@@ -8029,6 +8068,13 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#v1210-b0011-pre-release" class="md-nav__link">
+    v1.21.0-B0011 (pre-release)
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#v1201" class="md-nav__link">
     v1.20.1
   </a>
@@ -9062,21 +9108,36 @@
   See <a href="../upgrade-notes/">upgrade notes</a> for more information.</li>
 </ul>
 <h2 id="unreleased">Unreleased<a class="headerlink" href="#unreleased" title="Permanent link">#</a></h2>
+<p>What's changed since pre-release v1.21.0-B0011:</p>
 <ul>
 <li>New rules:<ul>
-<li>VNET:<ul>
-<li>Check VNETs with a GatewaySubnet also has a AzureBastionSubnet by @bengeset96.
-  <a href="https://github.com/Azure/PSRule.Rules.Azure/issues/1761">#1761</a></li>
+<li>Deployment:<ul>
+<li>Check sensitive resource values use secure parameters by @BernieWhite.
+  <a href="https://github.com/Azure/PSRule.Rules.Azure/issues/1773">#1773</a></li>
+</ul>
+</li>
+<li>Service Bus:<ul>
+<li>Check service bus namespaces uses TLS 1.2 version by @bengeset96.
+  <a href="https://github.com/Azure/PSRule.Rules.Azure/issues/1777">#1777</a></li>
 </ul>
 </li>
 </ul>
 </li>
 </ul>
-<p>What's changed since pre-release v1.20.0:</p>
+<h2 id="v1210-b0011-pre-release">v1.21.0-B0011 (pre-release)<a class="headerlink" href="#v1210-b0011-pre-release" title="Permanent link">#</a></h2>
+<p>What's changed since v1.20.1:</p>
 <ul>
 <li>New features:<ul>
 <li>Mapping of Azure Security Benchmark v3 to security rules by @jagoodwin.
   <a href="https://github.com/Azure/PSRule.Rules.Azure/issues/1610">#1610</a></li>
+</ul>
+</li>
+<li>New rules:<ul>
+<li>Virtual Network:<ul>
+<li>Check VNETs with a GatewaySubnet also has a AzureBastionSubnet by @bengeset96.
+  <a href="https://github.com/Azure/PSRule.Rules.Azure/issues/1761">#1761</a></li>
+</ul>
+</li>
 </ul>
 </li>
 <li>General improvements:<ul>
@@ -9096,7 +9157,7 @@
 </li>
 </ul>
 <h2 id="v1201">v1.20.1<a class="headerlink" href="#v1201" title="Permanent link">#</a></h2>
-<p>What's changed since pre-release v1.20.0:</p>
+<p>What's changed since v1.20.0:</p>
 <ul>
 <li>Bug fixes:<ul>
 <li>Fixed expand bicep source when reading JsonContent into a parameter by @BernieWhite.
@@ -9105,7 +9166,7 @@
 </li>
 </ul>
 <h2 id="v1200">v1.20.0<a class="headerlink" href="#v1200" title="Permanent link">#</a></h2>
-<p>What's changed since pre-release v1.19.2:</p>
+<p>What's changed since v1.19.2:</p>
 <ul>
 <li>New features:<ul>
 <li>Added September 2022 baselines <code>Azure.GA_2022_09</code> and <code>Azure.Preview_2022_09</code> by @BernieWhite.
@@ -12548,7 +12609,7 @@
   <small>
     
       Last update:
-      2022-10-17
+      2022-10-18
     
   </small>
 </div>

@@ -4,8 +4,8 @@
   "metadata": {
     "_generator": {
       "name": "bicep",
-      "version": "0.4.1124.51302",
-      "templateHash": "14805995388406051764"
+      "version": "0.11.1.770",
+      "templateHash": "17235301402195616974"
     }
   },
   "parameters": {
@@ -26,7 +26,7 @@
   "resources": [
     {
       "type": "Microsoft.ServiceBus/namespaces",
-      "apiVersion": "2021-11-01",
+      "apiVersion": "2022-01-01-preview",
       "name": "[parameters('name')]",
       "location": "[parameters('location')]",
       "identity": {
@@ -36,7 +36,8 @@
         "name": "Standard"
       },
       "properties": {
-        "disableLocalAuth": true
+        "disableLocalAuth": true,
+        "minimumTlsVersion": "1.2"
       }
     }
   ]

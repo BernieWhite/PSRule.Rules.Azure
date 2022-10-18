@@ -7282,7 +7282,7 @@ RBAC se puede usar para delegar permisos de registro a una identidad de Azure AD
 <li>Establezca <code>properties.adminUserEnabled</code> a <code>false</code>.</li>
 </ul>
 <p>Por ejemplo:</p>
-<div class="highlight"><pre><span></span><code>resource acr &#39;Microsoft.ContainerRegistry/registries@2021-06-01-preview&#39; = {
+<div class="highlight"><pre><span></span><code>resource acr &#39;Microsoft.ContainerRegistry/registries[@2021-06-01-preview](https://github.com/2021-06-01-preview)&#39; = {
   name: registryName
   location: location
   sku: {

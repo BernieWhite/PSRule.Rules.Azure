@@ -7211,7 +7211,7 @@ Alternatively, consider using firewall policies to manage Azure Firewalls at sca
 <li>Set the <code>properties.threatIntelMode</code> to <code>Deny</code>.</li>
 </ul>
 <p>For example:</p>
-<div class="highlight"><pre><span></span><code>resource firewall_classic &#39;Microsoft.Network/azureFirewalls@2021-05-01&#39; = {
+<div class="highlight"><pre><span></span><code>resource firewall_classic &#39;Microsoft.Network/azureFirewalls[@2021-05-01](https://github.com/2021-05-01)&#39; = {
   name: &#39;${name}_classic&#39;
   location: location
   properties: {

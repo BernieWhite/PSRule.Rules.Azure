@@ -7275,7 +7275,7 @@ Is not currently supported in sovereign or national clouds (e.g. US Gov, China G
 <li>Set the <code>Standard</code> pricing tier for Microsoft Defender for container registries.</li>
 </ul>
 <p>For example:</p>
-<div class="highlight"><pre><span></span><code>resource defenderForContainerRegistry &#39;Microsoft.Security/pricings@2018-06-01&#39; = {
+<div class="highlight"><pre><span></span><code>resource defenderForContainerRegistry &#39;Microsoft.Security/pricings[@2018-06-01](https://github.com/2018-06-01)&#39; = {
   name: &#39;ContainerRegistry&#39;
   properties: {
     pricingTier: &#39;Standard&#39;

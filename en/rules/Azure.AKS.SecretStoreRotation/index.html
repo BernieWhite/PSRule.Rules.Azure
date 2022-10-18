@@ -7293,7 +7293,7 @@ Updating the secrets in Key Vault must be done by an external process, such as a
 <li>Set <code>Properties.addonProfiles.azureKeyvaultSecretsProvider.config.enableSecretRotation</code> to <code>true</code>.</li>
 </ul>
 <p>For example:</p>
-<div class="highlight"><pre><span></span><code>resource cluster &#39;Microsoft.ContainerService/managedClusters@2021-07-01&#39; = {
+<div class="highlight"><pre><span></span><code>resource cluster &#39;Microsoft.ContainerService/managedClusters[@2021-07-01](https://github.com/2021-07-01)&#39; = {
   location: location
   name: clusterName
   identity: {

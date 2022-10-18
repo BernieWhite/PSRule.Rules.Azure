@@ -7281,7 +7281,7 @@ Consider enabling Flow Logs on all critical subnets in your subscription as an a
 <li>Set the priority of rules to a number less than a deny all rule.</li>
 </ul>
 <p>For example:</p>
-<div class="highlight"><pre><span></span><code>resource nsg &#39;Microsoft.Network/networkSecurityGroups@2022-01-01&#39; = {
+<div class="highlight"><pre><span></span><code>resource nsg &#39;Microsoft.Network/networkSecurityGroups[@2022-01-01](https://github.com/2022-01-01)&#39; = {
   name: nsgName
   location: location
   properties: {

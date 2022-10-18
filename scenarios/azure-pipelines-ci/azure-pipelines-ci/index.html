@@ -7190,7 +7190,7 @@ PSRule uses a number of configurable task steps to install modules, export data 
 <h3 id="installing-azure-rules">Installing Azure rules<a class="headerlink" href="#installing-azure-rules" title="Permanent link">#</a></h3>
 <p>To install the module containing Azure rules use the <code>ps-rule-install</code> YAML task.</p>
 <div class="highlight"><pre><span></span><code><span class="c1"># Install PSRule.Rules.Azure from the PowerShell Gallery.</span><span class="w"></span>
-<span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">task</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">ps-rule-install@2</span><span class="w"></span>
+<span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">task</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">ps-rule-install[@2](https://github.com/2)</span><span class="w"></span>
 <span class="w">  </span><span class="nt">inputs</span><span class="p">:</span><span class="w"></span>
 <span class="w">    </span><span class="nt">module</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">PSRule.Rules.Azure</span><span class="w">   </span><span class="c1"># Install PSRule.Rules.Azure from the PowerShell Gallery.</span><span class="w"></span>
 </code></pre></div>
@@ -7222,7 +7222,7 @@ Files are found recursively from the current working path.</li>
 <p>To validate exported resources use the <code>ps-rule-assert</code> YAML task.
 The following task uses previously exported resource data for analysis.</p>
 <div class="highlight"><pre><span></span><code><span class="c1"># Run analysis from JSON files using the `PSRule.Rules.Azure` module and custom rules from `.ps-rule/`.</span><span class="w"></span>
-<span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">task</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">ps-rule-assert@2</span><span class="w"></span>
+<span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">task</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">ps-rule-assert[@2](https://github.com/2)</span><span class="w"></span>
 <span class="w">  </span><span class="nt">inputs</span><span class="p">:</span><span class="w"></span>
 <span class="w">    </span><span class="nt">inputType</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">inputPath</span><span class="w"></span>
 <span class="w">    </span><span class="nt">inputPath</span><span class="p">:</span><span class="w"> </span><span class="s">&#39;out/templates/*.json&#39;</span><span class="w">        </span><span class="c1"># Read exported resource data from &#39;out/templates/&#39;.</span><span class="w"></span>
@@ -7245,7 +7245,7 @@ PSRule supports publishing validation results in the NUnit format.
 With Azure DevOps, an NUnit report can be published using <a href="https://docs.microsoft.com/en-us/azure/devops/pipelines/tasks/test/publish-test-results">Publish Test Results task</a>.</p>
 <p>An example YAML snippet is included below:</p>
 <div class="highlight"><pre><span></span><code><span class="c1"># Publish NUnit report as test results</span><span class="w"></span>
-<span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">task</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">PublishTestResults@2</span><span class="w"></span>
+<span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">task</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">PublishTestResults[@2](https://github.com/2)</span><span class="w"></span>
 <span class="w">  </span><span class="nt">displayName</span><span class="p">:</span><span class="w"> </span><span class="s">&#39;Publish</span><span class="nv"> </span><span class="s">PSRule</span><span class="nv"> </span><span class="s">results&#39;</span><span class="w"></span>
 <span class="w">  </span><span class="nt">inputs</span><span class="p">:</span><span class="w"></span>
 <span class="w">    </span><span class="nt">testRunTitle</span><span class="p">:</span><span class="w"> </span><span class="s">&#39;PSRule&#39;</span><span class="w">                          </span><span class="c1"># The title to use for the test run.</span><span class="w"></span>
@@ -7269,7 +7269,7 @@ With Azure DevOps, an NUnit report can be published using <a href="https://docs.
 <span class="nt">steps</span><span class="p">:</span><span class="w"></span>
 
 <span class="c1"># Install PSRule.Rules.Azure from the PowerShell Gallery</span><span class="w"></span>
-<span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">task</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">ps-rule-install@2</span><span class="w"></span>
+<span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">task</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">ps-rule-install[@2](https://github.com/2)</span><span class="w"></span>
 <span class="w">  </span><span class="nt">inputs</span><span class="p">:</span><span class="w"></span>
 <span class="w">    </span><span class="nt">module</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">PSRule.Rules.Azure</span><span class="w">   </span><span class="c1"># Install PSRule.Rules.Azure from the PowerShell Gallery.</span><span class="w"></span>
 
@@ -7278,7 +7278,7 @@ With Azure DevOps, an NUnit report can be published using <a href="https://docs.
 <span class="w">  </span><span class="nt">displayName</span><span class="p">:</span><span class="w"> </span><span class="s">&#39;Export</span><span class="nv"> </span><span class="s">template</span><span class="nv"> </span><span class="s">data&#39;</span><span class="w"></span>
 
 <span class="c1"># Run analysis from JSON files using the `PSRule.Rules.Azure` module and custom rules from `.ps-rule/`.</span><span class="w"></span>
-<span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">task</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">ps-rule-assert@2</span><span class="w"></span>
+<span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">task</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">ps-rule-assert[@2](https://github.com/2)</span><span class="w"></span>
 <span class="w">  </span><span class="nt">inputs</span><span class="p">:</span><span class="w"></span>
 <span class="w">    </span><span class="nt">inputType</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">inputPath</span><span class="w"></span>
 <span class="w">    </span><span class="nt">inputPath</span><span class="p">:</span><span class="w"> </span><span class="s">&#39;out/templates/*.json&#39;</span><span class="w">        </span><span class="c1"># Read exported resource data from &#39;out/templates/&#39;.</span><span class="w"></span>
@@ -7290,7 +7290,7 @@ With Azure DevOps, an NUnit report can be published using <a href="https://docs.
 <span class="w">    </span><span class="nt">outputPath</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">reports/ps-rule-resources.xml</span><span class="w"></span>
 
 <span class="c1"># Publish NUnit report as test results</span><span class="w"></span>
-<span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">task</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">PublishTestResults@2</span><span class="w"></span>
+<span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">task</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">PublishTestResults[@2](https://github.com/2)</span><span class="w"></span>
 <span class="w">  </span><span class="nt">displayName</span><span class="p">:</span><span class="w"> </span><span class="s">&#39;Publish</span><span class="nv"> </span><span class="s">PSRule</span><span class="nv"> </span><span class="s">results&#39;</span><span class="w"></span>
 <span class="w">  </span><span class="nt">inputs</span><span class="p">:</span><span class="w"></span>
 <span class="w">    </span><span class="nt">testRunTitle</span><span class="p">:</span><span class="w"> </span><span class="s">&#39;PSRule&#39;</span><span class="w">                          </span><span class="c1"># The title to use for the test run.</span><span class="w"></span>

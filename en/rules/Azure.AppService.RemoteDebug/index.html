@@ -7230,7 +7230,7 @@ While access to remote debugging ports is authenticated, the attack service for 
 <li>Set <code>properties.siteConfig.remoteDebuggingEnabled</code> to <code>false</code>.</li>
 </ul>
 <p>For example:</p>
-<div class="highlight"><pre><span></span><code>resource webApp &#39;Microsoft.Web/sites@2021-02-01&#39; = {
+<div class="highlight"><pre><span></span><code>resource webApp &#39;Microsoft.Web/sites[@2021-02-01](https://github.com/2021-02-01)&#39; = {
   name: name
   location: location
   kind: &#39;web&#39;

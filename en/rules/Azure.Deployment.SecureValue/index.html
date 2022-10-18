@@ -7240,13 +7240,13 @@ These values can be retrieved by anyone with access to the deployment history.</
 <h3 id="configure-with-bicep">Configure with Bicep<a class="headerlink" href="#configure-with-bicep" title="Permanent link">#</a></h3>
 <p>To configure deployments that pass this rule:</p>
 <ul>
-<li>Add the <code>@secure()</code> attribute on parameters used to set sensitive resource properties.</li>
+<li>Add the <code>[@secure](https://github.com/secure)()</code> attribute on parameters used to set sensitive resource properties.</li>
 </ul>
 <p>For example:</p>
-<div class="highlight"><pre><span></span><code>@secure()
+<div class="highlight"><pre><span></span><code>[@secure](https://github.com/secure)()
 param secret string
 
-resource goodSecret &#39;Microsoft.KeyVault/vaults/secrets@2022-07-01&#39; = {
+resource goodSecret &#39;Microsoft.KeyVault/vaults/secrets[@2022-07-01](https://github.com/2022-07-01)&#39; = {
   name: &#39;keyvault/good&#39;
   properties: {
     value: secret

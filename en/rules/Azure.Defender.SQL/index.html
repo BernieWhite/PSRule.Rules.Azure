@@ -7263,7 +7263,7 @@ Microsoft Defender for SQL represents a single go-to location to manage security
 <li>Set the <code>Standard</code> pricing tier for Microsoft Defender for SQL.</li>
 </ul>
 <p>For example:</p>
-<div class="highlight"><pre><span></span><code>resource defenderForSQL &#39;Microsoft.Security/pricings@2022-03-01&#39; = {
+<div class="highlight"><pre><span></span><code>resource defenderForSQL &#39;Microsoft.Security/pricings[@2022-03-01](https://github.com/2022-03-01)&#39; = {
   name: &#39;SqlServers&#39;
   properties: {
     pricingTier: &#39;Standard&#39;

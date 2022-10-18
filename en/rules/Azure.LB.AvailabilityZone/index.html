@@ -7265,7 +7265,7 @@ One or more availability zones can fail and the data path survives as long as on
 <li>Set <code>properties.frontendIPConfigurations[*].zones</code> to <code>['1', '2', '3']</code>.</li>
 </ul>
 <p>For example:</p>
-<div class="highlight"><pre><span></span><code>resource lb_001 &#39;Microsoft.Network/loadBalancers@2021-02-01&#39; = {
+<div class="highlight"><pre><span></span><code>resource lb_001 &#39;Microsoft.Network/loadBalancers[@2021-02-01](https://github.com/2021-02-01)&#39; = {
   name: lbName
   location: location
   sku: {

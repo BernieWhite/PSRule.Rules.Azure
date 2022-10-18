@@ -7239,9 +7239,9 @@ With zone redundancy, the gateway and the control plane of your API Management i
 <span class="w">        </span><span class="s2">&quot;3&quot;</span><span class="w"></span>
 <span class="w">    </span><span class="p">],</span><span class="w"></span>
 <span class="w">    </span><span class="nt">&quot;properties&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
-<span class="w">        </span><span class="nt">&quot;publisherEmail&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;john.doe@contoso.com&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">        </span><span class="nt">&quot;publisherEmail&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;john.doe[@contoso](https://github.com/contoso).com&quot;</span><span class="p">,</span><span class="w"></span>
 <span class="w">        </span><span class="nt">&quot;publisherName&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;contoso&quot;</span><span class="p">,</span><span class="w"></span>
-<span class="w">        </span><span class="nt">&quot;notificationSenderEmail&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;apimgmt-noreply@mail.windowsazure.com&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">        </span><span class="nt">&quot;notificationSenderEmail&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;apimgmt-noreply[@mail](https://github.com/mail).windowsazure.com&quot;</span><span class="p">,</span><span class="w"></span>
 <span class="w">        </span><span class="nt">&quot;hostnameConfigurations&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w"></span>
 <span class="w">            </span><span class="p">{</span><span class="w"></span>
 <span class="w">                </span><span class="nt">&quot;type&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Proxy&quot;</span><span class="p">,</span><span class="w"></span>
@@ -7290,7 +7290,7 @@ With zone redundancy, the gateway and the control plane of your API Management i
 <li>Set <code>sku.name</code> and/or <code>properties.additionalLocations[*].sku.name</code> to <code>Premium</code>.</li>
 </ul>
 <p>For example:</p>
-<div class="highlight"><pre><span></span><code>resource service_api_mgmt_test2_name_resource &#39;Microsoft.ApiManagement/service@2021-01-01-preview&#39; = {
+<div class="highlight"><pre><span></span><code>resource service_api_mgmt_test2_name_resource &#39;Microsoft.ApiManagement/service[@2021-01-01-preview](https://github.com/2021-01-01-preview)&#39; = {
   name: service_api_mgmt_test2_name
   location: &#39;Australia East&#39;
   sku: {
@@ -7303,9 +7303,9 @@ With zone redundancy, the gateway and the control plane of your API Management i
     &#39;3&#39;
   ]
   properties: {
-    publisherEmail: &#39;john.doe@contoso.com&#39;
+    publisherEmail: &#39;john.doe[@contoso](https://github.com/contoso).com&#39;
     publisherName: &#39;contoso&#39;
-    notificationSenderEmail: &#39;apimgmt-noreply@mail.windowsazure.com&#39;
+    notificationSenderEmail: &#39;apimgmt-noreply[@mail](https://github.com/mail).windowsazure.com&#39;
     hostnameConfigurations: [
       {
         type: &#39;Proxy&#39;

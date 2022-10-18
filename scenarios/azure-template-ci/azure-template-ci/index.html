@@ -7332,14 +7332,14 @@ Using a common format allows integration with any system that supports the NUnit
 <span class="nb">Export-AzRuleTemplateData</span> <span class="n">-TemplateFile</span> <span class="p">.\</span><span class="n">template</span><span class="p">.</span><span class="n">json</span> <span class="n">-ParameterFile</span> <span class="p">.\</span><span class="n">parameters</span><span class="p">.</span><span class="n">json</span> <span class="n">-OutputPath</span> <span class="n">out</span><span class="p">/;</span>
 
 <span class="c"># Validate resources</span>
-<span class="nv">$assertParams</span> <span class="p">=</span> <span class="p">@{</span>
+<span class="nv">$assertParams</span> <span class="p">=</span> <span class="p">[@](</span><span class="n">https</span><span class="p">://</span><span class="n">github</span><span class="p">.</span><span class="n">com</span><span class="p">/){</span>
     <span class="n">InputPath</span> <span class="p">=</span> <span class="s1">&#39;out/*.json&#39;</span>
     <span class="n">Module</span> <span class="p">=</span> <span class="s1">&#39;PSRule.Rules.Azure&#39;</span>
     <span class="n">Style</span> <span class="p">=</span> <span class="s1">&#39;AzurePipelines&#39;</span>
     <span class="n">OutputFormat</span> <span class="p">=</span> <span class="s1">&#39;NUnit3&#39;</span>
     <span class="n">OutputPath</span> <span class="p">=</span> <span class="s1">&#39;reports/rule-report.xml&#39;</span>
 <span class="p">}</span>
-<span class="nb">Assert-PSRule</span> <span class="nv">@assertParams</span><span class="p">;</span>
+<span class="nb">Assert-PSRule</span> <span class="p">[</span><span class="nv">@assertParams</span><span class="p">](</span><span class="n">https</span><span class="p">://</span><span class="n">github</span><span class="p">.</span><span class="n">com</span><span class="p">/</span><span class="n">assertParams</span><span class="p">);</span>
 </code></pre></div>
 <h2 id="additional-options">Additional options<a class="headerlink" href="#additional-options" title="Permanent link">#</a></h2>
 <h3 id="using-invoke-build">Using Invoke-Build<a class="headerlink" href="#using-invoke-build" title="Permanent link">#</a></h3>
@@ -7359,14 +7359,14 @@ Within Invoke-Build, each build process is broken into tasks.</p>
     <span class="nb">Export-AzRuleTemplateData</span> <span class="n">-TemplateFile</span> <span class="p">.\</span><span class="n">template</span><span class="p">.</span><span class="n">json</span> <span class="n">-ParameterFile</span> <span class="p">.\</span><span class="n">parameters</span><span class="p">.</span><span class="n">json</span> <span class="n">-OutputPath</span> <span class="n">out</span><span class="p">/;</span>
 
     <span class="c"># Validate resources</span>
-    <span class="nv">$assertParams</span> <span class="p">=</span> <span class="p">@{</span>
+    <span class="nv">$assertParams</span> <span class="p">=</span> <span class="p">[@](</span><span class="n">https</span><span class="p">://</span><span class="n">github</span><span class="p">.</span><span class="n">com</span><span class="p">/){</span>
         <span class="n">InputPath</span> <span class="p">=</span> <span class="s1">&#39;out/*.json&#39;</span>
         <span class="n">Module</span> <span class="p">=</span> <span class="s1">&#39;PSRule.Rules.Azure&#39;</span>
         <span class="n">Style</span> <span class="p">=</span> <span class="s1">&#39;AzurePipelines&#39;</span>
         <span class="n">OutputFormat</span> <span class="p">=</span> <span class="s1">&#39;NUnit3&#39;</span>
         <span class="n">OutputPath</span> <span class="p">=</span> <span class="s1">&#39;reports/rule-report.xml&#39;</span>
     <span class="p">}</span>
-    <span class="nb">Assert-PSRule</span> <span class="nv">@assertParams</span><span class="p">;</span>
+    <span class="nb">Assert-PSRule</span> <span class="p">[</span><span class="nv">@assertParams</span><span class="p">](</span><span class="n">https</span><span class="p">://</span><span class="n">github</span><span class="p">.</span><span class="n">com</span><span class="p">/</span><span class="n">assertParams</span><span class="p">);</span>
 <span class="p">}</span>
 
 <span class="c"># Synopsis: Run all build tasks</span>
@@ -7389,14 +7389,14 @@ By using <code>-If</code> or <code>-Type</code> pre-conditions, rules can dynami
             <span class="nb">Export-AzRuleTemplateData</span> <span class="n">-TemplateFile</span> <span class="p">.\</span><span class="n">template</span><span class="p">.</span><span class="n">json</span> <span class="n">-ParameterFile</span> <span class="p">.\</span><span class="n">parameters</span><span class="p">.</span><span class="n">json</span> <span class="n">-OutputPath</span> <span class="p">.\</span><span class="n">out</span><span class="p">\</span><span class="n">resources</span><span class="p">.</span><span class="n">json</span><span class="p">;</span>
 
             <span class="c"># Validate resources</span>
-            <span class="nv">$invokeParams</span> <span class="p">=</span> <span class="p">@{</span>
+            <span class="nv">$invokeParams</span> <span class="p">=</span> <span class="p">[@](</span><span class="n">https</span><span class="p">://</span><span class="n">github</span><span class="p">.</span><span class="n">com</span><span class="p">/){</span>
                 <span class="n">InputPath</span> <span class="p">=</span> <span class="s1">&#39;out/*.json&#39;</span>
                 <span class="n">Module</span> <span class="p">=</span> <span class="s1">&#39;PSRule.Rules.Azure&#39;</span>
                 <span class="n">OutputFormat</span> <span class="p">=</span> <span class="s1">&#39;NUnit3&#39;</span>
                 <span class="n">OutputPath</span> <span class="p">=</span> <span class="s1">&#39;reports/rule-report.xml&#39;</span>
                 <span class="n">Option</span> <span class="p">=</span> <span class="p">(</span><span class="nb">New-PSRuleOption</span> <span class="n">-LoggingRuleFail</span> <span class="n">Error</span><span class="p">)</span>
             <span class="p">}</span>
-            <span class="nb">Invoke-PSRule</span> <span class="nv">@invokeParams</span> <span class="n">-Outcome</span> <span class="n">Fail</span><span class="p">,</span><span class="n">Error</span> <span class="p">|</span> <span class="n">Should</span> <span class="n">-BeNullOrEmpty</span><span class="p">;</span>
+            <span class="nb">Invoke-PSRule</span> <span class="p">[</span><span class="nv">@invokeParams</span><span class="p">](</span><span class="n">https</span><span class="p">://</span><span class="n">github</span><span class="p">.</span><span class="n">com</span><span class="p">/</span><span class="n">invokeParams</span><span class="p">)</span> <span class="n">-Outcome</span> <span class="n">Fail</span><span class="p">,</span><span class="n">Error</span> <span class="p">|</span> <span class="n">Should</span> <span class="n">-BeNullOrEmpty</span><span class="p">;</span>
         <span class="p">}</span>
     <span class="p">}</span>
 <span class="p">}</span>

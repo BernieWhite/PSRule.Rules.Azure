@@ -7315,7 +7315,7 @@ Optionally geo-replication to one or more additional regions can be enabled.</p>
 <li>Add <code>replications</code> child resource with <code>location</code> set to the region to replicate to.</li>
 </ul>
 <p>For example:</p>
-<div class="highlight"><pre><span></span><code>resource containerRegistry &#39;Microsoft.ContainerRegistry/registries@2019-12-01-preview&#39; = {
+<div class="highlight"><pre><span></span><code>resource containerRegistry &#39;Microsoft.ContainerRegistry/registries[@2019-12-01-preview](https://github.com/2019-12-01-preview)&#39; = {
   name: acrName
   location: location
   sku: {
@@ -7330,7 +7330,7 @@ Optionally geo-replication to one or more additional regions can be enabled.</p>
   }
 }
 
-resource containerRegistryReplica &#39;Microsoft.ContainerRegistry/registries/replications@2019-12-01-preview&#39; = {
+resource containerRegistryReplica &#39;Microsoft.ContainerRegistry/registries/replications[@2019-12-01-preview](https://github.com/2019-12-01-preview)&#39; = {
   parent: containerRegistry
   name: &#39;${acrReplicaLocation}&#39;
   location: acrReplicaLocation

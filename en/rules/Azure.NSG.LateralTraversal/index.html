@@ -7266,7 +7266,7 @@ Management protocols originating from application workload hosts should be block
 <li>Add an outbound security rule that denies TCP port 3389 and/ or 22.</li>
 </ul>
 <p>For example:</p>
-<div class="highlight"><pre><span></span><code>resource nsg &#39;Microsoft.Network/networkSecurityGroups@2021-02-01&#39; = {
+<div class="highlight"><pre><span></span><code>resource nsg &#39;Microsoft.Network/networkSecurityGroups[@2021-02-01](https://github.com/2021-02-01)&#39; = {
   name: &#39;nsg-001&#39;
   properties: {
     securityRules: [

@@ -7277,7 +7277,7 @@
 param location string
 param workspaceId string
 
-resource automationAccountResource &#39;Microsoft.Automation/automationAccounts@2021-06-22&#39; = {
+resource automationAccountResource &#39;Microsoft.Automation/automationAccounts[@2021-06-22](https://github.com/2021-06-22)&#39; = {
   name: automationAccountName
   location: location
   identity: {
@@ -7295,7 +7295,7 @@ resource automationAccountResource &#39;Microsoft.Automation/automationAccounts@
   }
 }
 
-resource automationAccountName_Microsoft_Insights_service &#39;Microsoft.Insights/diagnosticSettings@2021-05-01-preview&#39; = {
+resource automationAccountName_Microsoft_Insights_service &#39;Microsoft.Insights/diagnosticSettings[@2021-05-01-preview](https://github.com/2021-05-01-preview)&#39; = {
   name: &#39;diagnosticSettings&#39;
   properties: {
     workspaceId: workspaceId

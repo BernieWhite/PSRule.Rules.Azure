@@ -7227,7 +7227,7 @@ defining the backup config via Bicep:</p>
 <li>Set <code>properties.storageType</code> to either <code>GeoRedundant</code> or <code>ReadAccessGeoZoneRedundant</code>.</li>
 </ul>
 <p>For example:</p>
-<div class="highlight"><pre><span></span><code>resource testRecoveryServices &#39;Microsoft.RecoveryServices/vaults/backupconfig@2021-10-01&#39; = {
+<div class="highlight"><pre><span></span><code>resource testRecoveryServices &#39;Microsoft.RecoveryServices/vaults/backupconfig[@2021-10-01](https://github.com/2021-10-01)&#39; = {
   name: &#39;vaultconfig&#39;
   location: &#39;string&#39;
   parent: resourceSymbolicName

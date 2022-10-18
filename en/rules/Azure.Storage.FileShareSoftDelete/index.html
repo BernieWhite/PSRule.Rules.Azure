@@ -7248,7 +7248,7 @@
 <li>Configure the <code>properties.deleteRetentionPolicy.days</code> property to the number of days to retain files.</li>
 </ul>
 <p>For example:</p>
-<div class="highlight"><pre><span></span><code>resource  &#39;Microsoft.Storage/storageAccounts/fileServices@2022-05-01&#39; = {
+<div class="highlight"><pre><span></span><code>resource  &#39;Microsoft.Storage/storageAccounts/fileServices[@2022-05-01](https://github.com/2022-05-01)&#39; = {
   name: &#39;default&#39;
   parent: st0000001
     shareDeleteRetentionPolicy: {

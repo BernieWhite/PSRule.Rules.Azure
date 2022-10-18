@@ -7224,13 +7224,13 @@
 <li>Set <code>properties.minimumTlsVersion</code> to <code>1.2</code>.</li>
 </ul>
 <p>For example:</p>
-<div class="highlight"><pre><span></span><code>@description(&#39;The name of the resource.&#39;)
+<div class="highlight"><pre><span></span><code>[@description](https://github.com/description)(&#39;The name of the resource.&#39;)
 param name string
 
-@description(&#39;The location resources will be deployed.&#39;)
+[@description](https://github.com/description)(&#39;The location resources will be deployed.&#39;)
 param location string = resourceGroup().location
 
-resource ns &#39;Microsoft.ServiceBus/namespaces@2022-01-01-preview&#39; = {
+resource ns &#39;Microsoft.ServiceBus/namespaces[@2022-01-01-preview](https://github.com/2022-01-01-preview)&#39; = {
   name: name
   location: location
   identity: {

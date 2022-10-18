@@ -7159,7 +7159,7 @@
 <h1 id="troubleshooting">Troubleshooting<a class="headerlink" href="#troubleshooting" title="Permanent link">#</a></h1>
 <p>This article provides troubleshooting instructions for common errors.</p>
 <h2 id="an-earlier-version-of-azaccounts-is-imported">An earlier version of Az.Accounts is imported<a class="headerlink" href="#an-earlier-version-of-azaccounts-is-imported" title="Permanent link">#</a></h2>
-<p>When running PSRule for Azure in Azure DevOps within the <code>AzurePowerShell@5</code> task,
+<p>When running PSRule for Azure in Azure DevOps within the <code>AzurePowerShell[@5](https://github.com/5)</code> task,
 you may see the following error.</p>
 <div class="admonition error">
 <p class="admonition-title">Error</p>
@@ -7172,7 +7172,7 @@ information.</p>
 </div>
 <p>This error is raised by a chained dependency failure importing a newer version of <code>Az.Accounts</code>.
 To avoid this issue attempt to install the exact versions of <code>Az.Resources</code>.
-In the <code>AzurePowerShell@5</code> task before installing PSRule.</p>
+In the <code>AzurePowerShell[@5](https://github.com/5)</code> task before installing PSRule.</p>
 <div class="highlight"><pre><span></span><code><span class="nb">Install-Module</span> <span class="n">Az</span><span class="p">.</span><span class="n">Resources</span> <span class="n">-RequiredVersion</span> <span class="s1">&#39;5.6.0&#39;</span> <span class="n">-Force</span> <span class="n">-Scope</span> <span class="n">CurrentUser</span>
 </code></pre></div>
 <p>From PSRule for Azure v1.16.0, <code>Az.Accounts</code> and <code>Az.Resources</code> are no longer installed as dependencies.
@@ -7279,7 +7279,7 @@ The PSRule for Azure <strong>&lt;1.3.1</strong> uses an older version of this li
 </code></pre></div>
 <p>For the PSRule GitHub Action, use <strong>&gt;=1.4.0</strong>.</p>
 <div class="highlight"><pre><span></span><code><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Run PSRule analysis</span><span class="w"></span>
-<span class="w">  </span><span class="nt">uses</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">microsoft/ps-rule@v2.4.2</span><span class="w"></span>
+<span class="w">  </span><span class="nt">uses</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">microsoft/ps-rule[@v2](https://github.com/v2).4.2</span><span class="w"></span>
 </code></pre></div>
 
   <hr>

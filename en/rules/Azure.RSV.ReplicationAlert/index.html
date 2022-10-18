@@ -7204,7 +7204,7 @@ Alerts can be configured to send notifications when replication issues occur.</p
 alert via ARM templates either configure the <code>sendToOwners</code> or <code>CustomerEmailAddress</code> properties:</p>
 <ul>
 <li>Set <code>properties.sendToOwners</code> to <code>Send</code>.</li>
-<li>Set <code>properties.customEmailAddresses</code> to <code>[ "example@email.com" ]</code></li>
+<li>Set <code>properties.customEmailAddresses</code> to <code>[ "example[@email](https://github.com/email).com" ]</code></li>
 </ul>
 <p>For example:</p>
 <div class="highlight"><pre><span></span><code><span class="p">{</span><span class="w"></span>
@@ -7214,7 +7214,7 @@ alert via ARM templates either configure the <code>sendToOwners</code> or <code>
 <span class="w">  </span><span class="nt">&quot;properties&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
 <span class="w">    </span><span class="nt">&quot;sendToOwners&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Send&quot;</span><span class="p">,</span><span class="w"></span>
 <span class="w">    </span><span class="nt">&quot;customEmailAddresses&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w"></span>
-<span class="w">      </span><span class="s2">&quot;example@email.com&quot;</span><span class="w"></span>
+<span class="w">      </span><span class="s2">&quot;example[@email](https://github.com/email).com&quot;</span><span class="w"></span>
 <span class="w">    </span><span class="p">]</span><span class="w"></span>
 <span class="w">  </span><span class="p">}</span><span class="w"></span>
 <span class="p">}</span><span class="w"></span>
@@ -7224,16 +7224,16 @@ alert via ARM templates either configure the <code>sendToOwners</code> or <code>
 alert via a Bicep either configure the <code>sendToOwners</code> or <code>CustomerEmailAddress</code> properties:</p>
 <ul>
 <li>Set <code>properties.sendToOwners</code> to <code>Send</code>.</li>
-<li>Set <code>properties.customEmailAddresses</code> to <code>[ "example@email.com" ]</code></li>
+<li>Set <code>properties.customEmailAddresses</code> to <code>[ "example[@email](https://github.com/email).com" ]</code></li>
 </ul>
 <p>For example:</p>
-<div class="highlight"><pre><span></span><code>resource testRecoveryServices &#39;Microsoft.RecoveryServices/vaults/replicationAlertSettings@2021-08-01&#39; = {
+<div class="highlight"><pre><span></span><code>resource testRecoveryServices &#39;Microsoft.RecoveryServices/vaults/replicationAlertSettings[@2021-08-01](https://github.com/2021-08-01)&#39; = {
   name: &#39;replicationAlert&#39;
   parent: resourceSymbolicName
   properties: {
     sendToOwners: &#39;Sender&#39;
     customEmailAddresses: [
-      &#39;example@email.com&#39;
+      &#39;example[@email](https://github.com/email).com&#39;
     ]
   }
 }

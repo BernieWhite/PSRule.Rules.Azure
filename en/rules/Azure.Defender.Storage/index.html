@@ -7261,7 +7261,7 @@ Based on Microsoft Threat Intelligence, it continuously monitor the telemetry st
 <li>Set the <code>Standard</code> pricing tier for Microsoft Defender for Storage.</li>
 </ul>
 <p>For example:</p>
-<div class="highlight"><pre><span></span><code>resource defenderForStorage &#39;Microsoft.Security/pricings@2022-03-01&#39; = {
+<div class="highlight"><pre><span></span><code>resource defenderForStorage &#39;Microsoft.Security/pricings[@2022-03-01](https://github.com/2022-03-01)&#39; = {
   name: &#39;StorageAccounts&#39;
   properties: {
     pricingTier: &#39;Standard&#39;

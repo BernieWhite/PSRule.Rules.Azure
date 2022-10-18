@@ -7222,7 +7222,7 @@ To limit access to Event Grid topics and domains, disable public access.</p>
 <li>Set the <code>properties.publicNetworkAccess</code> property to <code>Disabled</code>.</li>
 </ul>
 <p>For example:</p>
-<div class="highlight"><pre><span></span><code>resource eventGrid &#39;Microsoft.EventGrid/topics@2021-06-01-preview&#39; = {
+<div class="highlight"><pre><span></span><code>resource eventGrid &#39;Microsoft.EventGrid/topics[@2021-06-01-preview](https://github.com/2021-06-01-preview)&#39; = {
   name: topicName
   location: location
   identity: {

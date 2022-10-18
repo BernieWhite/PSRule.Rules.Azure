@@ -7245,7 +7245,7 @@ This secure by default behaviour can be overriden by allowing insecure HTTP traf
 <li>Set <code>properties.configuration.ingress.allowInsecure</code> to <code>false</code>.</li>
 </ul>
 <p>For example:</p>
-<div class="highlight"><pre><span></span><code>resource containerApp &#39;Microsoft.App/containerApps@2021-03-01&#39; = {
+<div class="highlight"><pre><span></span><code>resource containerApp &#39;Microsoft.App/containerApps[@2021-03-01](https://github.com/2021-03-01)&#39; = {
   name: appName
   location: location
   properties: {

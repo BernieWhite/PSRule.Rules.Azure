@@ -7254,7 +7254,7 @@ Para habilitar la confianza en el contenido, el registro del contenedor debe usa
 <li>Establezca <code>properties.trustPolicy.type</code> a <code>Notary</code>.</li>
 </ul>
 <p>Por ejemplo:</p>
-<div class="highlight"><pre><span></span><code>resource acr &#39;Microsoft.ContainerRegistry/registries@2021-06-01-preview&#39; = {
+<div class="highlight"><pre><span></span><code>resource acr &#39;Microsoft.ContainerRegistry/registries[@2021-06-01-preview](https://github.com/2021-06-01-preview)&#39; = {
   name: registryName
   location: location
   sku: {

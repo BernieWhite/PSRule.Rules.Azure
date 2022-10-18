@@ -7249,7 +7249,7 @@ Also consider enforcing this setting using Azure Policy.</p>
 <li>Set the <code>properties.networkAcls.defaultAction</code> property to <code>Deny</code>.</li>
 </ul>
 <p>For example:</p>
-<div class="highlight"><pre><span></span><code>resource st0000001 &#39;Microsoft.Storage/storageAccounts@2021-04-01&#39; = {
+<div class="highlight"><pre><span></span><code>resource st0000001 &#39;Microsoft.Storage/storageAccounts[@2021-04-01](https://github.com/2021-04-01)&#39; = {
   name: &#39;st0000001&#39;
   location: location
   sku: {

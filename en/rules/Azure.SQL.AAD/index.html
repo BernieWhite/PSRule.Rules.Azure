@@ -7298,7 +7298,7 @@ To deploy <code>Microsoft.Sql/servers/administrators</code> sub-resources that p
 <li>Set the <code>properties.administrators.sid</code> to the object ID GUID of the administrator user, group, or application.</li>
 </ul>
 <p>For example:</p>
-<div class="highlight"><pre><span></span><code>resource server &#39;Microsoft.Sql/servers@2022-02-01-preview&#39; = {
+<div class="highlight"><pre><span></span><code>resource server &#39;Microsoft.Sql/servers[@2022-02-01-preview](https://github.com/2022-02-01-preview)&#39; = {
   name: name
   location: location
   properties: {
@@ -7321,7 +7321,7 @@ To deploy <code>Microsoft.Sql/servers/administrators</code> sub-resources that p
 <li>Set the <code>properties.sid</code> to the object ID GUID of the administrator user, group, or application.</li>
 </ul>
 <p>For example:</p>
-<div class="highlight"><pre><span></span><code>resource sqlAdministrator &#39;Microsoft.Sql/servers/administrators@2022-02-01-preview&#39; = {
+<div class="highlight"><pre><span></span><code>resource sqlAdministrator &#39;Microsoft.Sql/servers/administrators[@2022-02-01-preview](https://github.com/2022-02-01-preview)&#39; = {
   parent: server
   name: &#39;ActiveDirectory&#39;
   properties: {

@@ -7254,7 +7254,7 @@ When configuring diagnostics settings enable <code>FrontdoorAccessLog</code> log
 </ul>
 <p>For example:</p>
 <div class="highlight"><pre><span></span><code>targetScope = &#39;resourceGroup&#39;
-resource frontDoorResource &#39;Microsoft.Cdn/profiles@2021-06-01&#39; = {
+resource frontDoorResource &#39;Microsoft.Cdn/profiles[@2021-06-01](https://github.com/2021-06-01)&#39; = {
   name: frontDoorName
   location: &#39;Global&#39;
   sku: {
@@ -7262,7 +7262,7 @@ resource frontDoorResource &#39;Microsoft.Cdn/profiles@2021-06-01&#39; = {
   }
 }
 
-resource frontDoorInsightsResource &#39;Microsoft.Insights/diagnosticSettings@2020-05-01-preview&#39; = {
+resource frontDoorInsightsResource &#39;Microsoft.Insights/diagnosticSettings[@2020-05-01-preview](https://github.com/2020-05-01-preview)&#39; = {
   name: &#39;frontDoorInsights&#39;
   scope: frontDoorResource
   location: &#39;Global&#39;

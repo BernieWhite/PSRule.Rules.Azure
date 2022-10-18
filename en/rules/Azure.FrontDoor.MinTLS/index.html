@@ -7270,14 +7270,14 @@ By default, a minimum of TLS 1.2 is enforced.</p>
 <li>Set the minTlsVersion to be '1.2'</li>
 </ul>
 <p>For example:</p>
-<div class="highlight"><pre><span></span><code>resource frontDoorResource &#39;Microsoft.Cdn/profiles@2021-06-01&#39; = {
+<div class="highlight"><pre><span></span><code>resource frontDoorResource &#39;Microsoft.Cdn/profiles[@2021-06-01](https://github.com/2021-06-01)&#39; = {
   name: frontDoorName
   location: &#39;Global&#39;
   sku: {
     name: &#39;Standard_AzureFrontDoor&#39;
   }
 }
-resource appServicePlanResource &#39;Microsoft.Web/serverFarms@2020-06-01&#39; = {
+resource appServicePlanResource &#39;Microsoft.Web/serverFarms[@2020-06-01](https://github.com/2020-06-01)&#39; = {
   name: frontDoorAppServicePlanName
   location: location
   sku: {
@@ -7287,7 +7287,7 @@ resource appServicePlanResource &#39;Microsoft.Web/serverFarms@2020-06-01&#39; =
   kind: &#39;app&#39;
 }
 
-resource appResource &#39;Microsoft.Web/sites@2020-06-01&#39; = {
+resource appResource &#39;Microsoft.Web/sites[@2020-06-01](https://github.com/2020-06-01)&#39; = {
   name: frontDoorAppName
   location: location
   kind: &#39;app&#39;

@@ -7292,22 +7292,22 @@ También puede usar una función <code>uniqueString()</code> para asegurarse de 
 <p>Puede asegurarse de que el parámetro <code>acrName</code> cumpla con los requisitos de nomenclatura utilizando las propiedades de los parámetros <code>MinLength</code> y <code>maxLength</code>.
 También puede usar una función <code>uniqueString()</code> para asegurarse de que el nombre sea globalmente único.</p>
 <p>Por ejemplo:</p>
-<div class="highlight"><pre><span></span><code>@description(&#39;Globally unique name of your Azure Container Registry&#39;)
-@minLength(5)
-@maxLength(50)
+<div class="highlight"><pre><span></span><code>[@description](https://github.com/description)(&#39;Globally unique name of your Azure Container Registry&#39;)
+[@minLength](https://github.com/minLength)(5)
+[@maxLength](https://github.com/maxLength)(50)
 param acrName string = &#39;acr${uniqueString(resourceGroup().id)}&#39;
 
-@description(&#39;Location for registry home replica.&#39;)
+[@description](https://github.com/description)(&#39;Location for registry home replica.&#39;)
 param location string = resourceGroup().location
 
-@description(&#39;Tier of your Azure Container Registry. Geo-replication requires Premium SKU.&#39;)
-@allowed([
+[@description](https://github.com/description)(&#39;Tier of your Azure Container Registry. Geo-replication requires Premium SKU.&#39;)
+[@allowed](https://github.com/allowed)([
   &#39;Standard&#39;
   &#39;Premium&#39;
 ])
 param acrSku string = &#39;Premium&#39;
 
-resource containerRegistry &#39;Microsoft.ContainerRegistry/registries@2019-12-01-preview&#39; = {
+resource containerRegistry &#39;Microsoft.ContainerRegistry/registries[@2019-12-01-preview](https://github.com/2019-12-01-preview)&#39; = {
   name: acrName
   location: location
   sku: {

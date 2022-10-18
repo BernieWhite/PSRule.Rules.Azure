@@ -7247,7 +7247,7 @@ Also consider, storing the access data into Azure Monitor and using Key Vault An
 <li>Enable logging for the <code>AuditEvent</code> category.</li>
 </ul>
 <p>For example:</p>
-<div class="highlight"><pre><span></span><code>resource keyVaultResource &#39;Microsoft.KeyVault/vaults@2019-09-01&#39; = {
+<div class="highlight"><pre><span></span><code>resource keyVaultResource &#39;Microsoft.KeyVault/vaults[@2019-09-01](https://github.com/2019-09-01)&#39; = {
   name: parmVaultName
   location: parmLocation
   properties: {
@@ -7260,7 +7260,7 @@ Also consider, storing the access data into Azure Monitor and using Key Vault An
   }
 }
 
-resource keyVaultInsightsResource &#39;Microsoft.KeyVault/vaults/providers/diagnosticSettings@2016-09-01&#39; = {
+resource keyVaultInsightsResource &#39;Microsoft.KeyVault/vaults/providers/diagnosticSettings[@2016-09-01](https://github.com/2016-09-01)&#39; = {
   name: &#39;${parmVaultName}/Microsoft.Insights/service&#39;
   dependsOn: [
     keyVaultResource

@@ -7297,7 +7297,7 @@ By spreading node pools across multiple zones, nodes in one node pool will conti
 </li>
 </ul>
 <p>For example:</p>
-<div class="highlight"><pre><span></span><code>resource testrediscache &#39;Microsoft.Cache/redisEnterprise@2021-02-01-preview&#39; = {
+<div class="highlight"><pre><span></span><code>resource testrediscache &#39;Microsoft.Cache/redisEnterprise[@2021-02-01-preview](https://github.com/2021-02-01-preview)&#39; = {
   name: &#39;testrediscache&#39;
   properties: {}
   location: &#39;australiaeast&#39;
@@ -7314,7 +7314,7 @@ By spreading node pools across multiple zones, nodes in one node pool will conti
   dependsOn: []
 }
 
-resource testrediscache_default &#39;Microsoft.Cache/redisEnterprise/databases@2021-02-01-preview&#39; = {
+resource testrediscache_default &#39;Microsoft.Cache/redisEnterprise/databases[@2021-02-01-preview](https://github.com/2021-02-01-preview)&#39; = {
   parent: testrediscache
   name: &#39;default&#39;
   properties: {

@@ -35,7 +35,7 @@ def replace_maml(markdown: str, page: mkdocs.structure.nav.Page, config: mkdocs.
         markdown = markdown.replace("## LONG DESCRIPTION", "## Description")
         markdown = re.sub("(\#\#\s+(NOTE|KEYWORDS)\s+(.|\s{1,2}(?!\#))+)", "", markdown)
 
-    if page.meta.get('link_users', 'false') == 'true':
+    if page.meta.get('link_users', 'false'):
         markdown = re.sub(r"\@([\w-]*)", r"[@\g<1>](https://github.com/\g<1>)", markdown)
 
     markdown = add_tags(markdown)

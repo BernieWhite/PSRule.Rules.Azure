@@ -3019,6 +3019,10 @@
         
           
         
+          
+        
+          
+        
       
       
         <label class="md-nav__link" for="__nav_4_5">
@@ -7029,6 +7033,20 @@
   
   
     <li class="md-nav__item">
+      <a href="../en/rules/Azure.VM.MigrateAMA/" class="md-nav__link">
+        Azure.VM.MigrateAMA
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
       <a href="../en/rules/Azure.VM.NICAttached/" class="md-nav__link">
         Azure.VM.NICAttached
       </a>
@@ -7185,6 +7203,20 @@
     <li class="md-nav__item">
       <a href="../en/rules/Azure.VMSS.ComputerName/" class="md-nav__link">
         Azure.VMSS.ComputerName
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../en/rules/Azure.VMSS.MigrateAMA/" class="md-nav__link">
+        Azure.VMSS.MigrateAMA
       </a>
     </li>
   
@@ -9136,6 +9168,36 @@
   See <a href="../upgrade-notes/">upgrade notes</a> for more information.</li>
 </ul>
 <h2 id="unreleased">Unreleased<a class="headerlink" href="#unreleased" title="Permanent link">#</a></h2>
+<ul>
+<li>New rules:<ul>
+<li>Virtual Machine:<ul>
+<li>Check virtual machines uses Azure Monitor Agent instead of old legacy Log Analytics Agent by <a href="https://github.com/bengeset96">@bengeset96</a>.
+  <a href="https://github.com/Azure/PSRule.Rules.Azure/issues/1792">#1792</a></li>
+</ul>
+</li>
+<li>Virtual Machine Scale Sets:<ul>
+<li>Check virtual machine scale sets uses Azure Monitor Agent instead of old legacy Log Analytics Agent by <a href="https://github.com/bengeset96">@bengeset96</a>.
+  <a href="https://github.com/Azure/PSRule.Rules.Azure/issues/1792">#1792</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<p>What's changed since pre-release v1.21.0-B0027:</p>
+<ul>
+<li>Engineering:<ul>
+<li>Bump PSRule to v2.5.3.
+  <a href="https://github.com/Azure/PSRule.Rules.Azure/pull/1800">#1800</a></li>
+<li>Bump Az.Resources to v6.3.1.
+  <a href="https://github.com/Azure/PSRule.Rules.Azure/pull/1800">#1800</a></li>
+</ul>
+</li>
+<li>Bug fixes:<ul>
+<li>Fixed contains function unable to match array by <a href="https://github.com/BernieWhite">@BernieWhite</a>.
+  <a href="https://github.com/Azure/PSRule.Rules.Azure/issues/1793">#1793</a></li>
+</ul>
+</li>
+</ul>
 <h2 id="v1210-b0027-pre-release">v1.21.0-B0027 (pre-release)<a class="headerlink" href="#v1210-b0027-pre-release" title="Permanent link">#</a></h2>
 <p>What's changed since pre-release v1.21.0-B0011:</p>
 <ul>
@@ -12647,7 +12709,7 @@
   <small>
     
       Last update:
-      2022-10-20
+      2022-10-23
     
   </small>
 </div>

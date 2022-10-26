@@ -606,6 +606,11 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
+         <loc>https://azure.github.io/PSRule.Rules.Azure/en/rules/Azure.ASE.MigrateV3/</loc>
+         <lastmod>2022-10-26</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
          <loc>https://azure.github.io/PSRule.Rules.Azure/en/rules/Azure.ASG.Name/</loc>
          <lastmod>2022-10-26</lastmod>
          <changefreq>daily</changefreq>

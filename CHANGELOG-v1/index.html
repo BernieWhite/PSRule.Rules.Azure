@@ -1026,6 +1026,13 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#v1210" class="md-nav__link">
+    v1.21.0
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#v1210-b0050-pre-release" class="md-nav__link">
     v1.21.0-B0050 (pre-release)
   </a>
@@ -8121,6 +8128,13 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#v1210" class="md-nav__link">
+    v1.21.0
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#v1210-b0050-pre-release" class="md-nav__link">
     v1.21.0-B0050 (pre-release)
   </a>
@@ -9182,6 +9196,62 @@
   See <a href="../upgrade-notes/">upgrade notes</a> for more information.</li>
 </ul>
 <h2 id="unreleased">Unreleased<a class="headerlink" href="#unreleased" title="Permanent link">#</a></h2>
+<h2 id="v1210">v1.21.0<a class="headerlink" href="#v1210" title="Permanent link">#</a></h2>
+<p>What's changed since v1.20.2:</p>
+<ul>
+<li>New features:<ul>
+<li>Mapping of Azure Security Benchmark v3 to security rules by <a href="https://github.com/jagoodwin">@jagoodwin</a>.
+  <a href="https://github.com/Azure/PSRule.Rules.Azure/issues/1610">#1610</a></li>
+</ul>
+</li>
+<li>New rules:<ul>
+<li>Deployment:<ul>
+<li>Check sensitive resource values use secure parameters by <a href="https://github.com/VeraBE">@VeraBE</a> <a href="https://github.com/BernieWhite">@BernieWhite</a>.
+  <a href="https://github.com/Azure/PSRule.Rules.Azure/issues/1773">#1773</a></li>
+</ul>
+</li>
+<li>Service Bus:<ul>
+<li>Check service bus namespaces uses TLS 1.2 version by <a href="https://github.com/bengeset96">@bengeset96</a>.
+  <a href="https://github.com/Azure/PSRule.Rules.Azure/issues/1777">#1777</a></li>
+</ul>
+</li>
+<li>Virtual Machine:<ul>
+<li>Check virtual machines uses Azure Monitor Agent instead of old legacy Log Analytics Agent by <a href="https://github.com/bengeset96">@bengeset96</a>.
+  <a href="https://github.com/Azure/PSRule.Rules.Azure/issues/1792">#1792</a></li>
+</ul>
+</li>
+<li>Virtual Machine Scale Sets:<ul>
+<li>Check virtual machine scale sets uses Azure Monitor Agent instead of old legacy Log Analytics Agent by <a href="https://github.com/bengeset96">@bengeset96</a>.
+  <a href="https://github.com/Azure/PSRule.Rules.Azure/issues/1792">#1792</a></li>
+</ul>
+</li>
+<li>Virtual Network:<ul>
+<li>Check VNETs with a GatewaySubnet also has a AzureBastionSubnet by <a href="https://github.com/bengeset96">@bengeset96</a>.
+  <a href="https://github.com/Azure/PSRule.Rules.Azure/issues/1761">#1761</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li>General improvements:<ul>
+<li>Added built-in list of ignored policy definitions by <a href="https://github.com/BernieWhite">@BernieWhite</a>.
+  <a href="https://github.com/Azure/PSRule.Rules.Azure/issues/1730">#1730</a><ul>
+<li>To ignore additional policy definitions, use the <code>AZURE_POLICY_IGNORE_LIST</code> configuration option.</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>Engineering:<ul>
+<li>Bump PSRule to v2.5.3.
+  <a href="https://github.com/Azure/PSRule.Rules.Azure/pull/1800">#1800</a></li>
+<li>Bump Az.Resources to v6.3.1.
+  <a href="https://github.com/Azure/PSRule.Rules.Azure/pull/1800">#1800</a></li>
+</ul>
+</li>
+</ul>
+<p>What's changed since pre-release v1.21.0-B0050:</p>
+<ul>
+<li>No additional changes.</li>
+</ul>
 <h2 id="v1210-b0050-pre-release">v1.21.0-B0050 (pre-release)<a class="headerlink" href="#v1210-b0050-pre-release" title="Permanent link">#</a></h2>
 <p>What's changed since pre-release v1.21.0-B0027:</p>
 <ul>
@@ -12722,7 +12792,7 @@
   <small>
     
       Last update:
-      2022-10-23
+      2022-10-26
     
   </small>
 </div>

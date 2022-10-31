@@ -7432,7 +7432,7 @@
 <div class="highlight"><pre><span></span><code>param vmssName string = &#39;vmss-01&#39;
 param location string
 
-resource vmScaleSet &#39;Microsoft.Compute/virtualMachineScaleSets[@2022-08-01](https://github.com/2022-08-01)&#39; = {
+resource vmScaleSet &#39;Microsoft.Compute/virtualMachineScaleSets@2022-08-01&#39; = {
   name: vmssName
   location: location
   sku: {
@@ -7536,7 +7536,7 @@ resource vmScaleSet &#39;Microsoft.Compute/virtualMachineScaleSets[@2022-08-01](
 param location string
 param userAssignedManagedIdentity string
 
-resource linuxAgent &#39;Microsoft.Compute/virtualMachineScaleSets/extensions[@2022-08-01](https://github.com/2022-08-01)&#39; = {
+resource linuxAgent &#39;Microsoft.Compute/virtualMachineScaleSets/extensions@2022-08-01&#39; = {
   name: &#39;${vmssName}/AzureMonitorLinuxAgent&#39;
   location: location
   properties: {

@@ -7307,7 +7307,7 @@ or prevention of malicious attacks. Two rule set versions are available; OWASP 2
 <li>Set the <code>properties.webApplicationFirewallConfiguration.ruleSetVersion</code> property to a minimum of <code>3.2</code>.</li>
 </ul>
 <p>For example:</p>
-<div class="highlight"><pre><span></span><code>resource appGw &#39;Microsoft.Network/applicationGateways[@2021-02-01](https://github.com/2021-02-01)&#39; = {
+<div class="highlight"><pre><span></span><code>resource appGw &#39;Microsoft.Network/applicationGateways@2021-02-01&#39; = {
   name: &#39;appGw-001&#39;
   location: location
   properties: {

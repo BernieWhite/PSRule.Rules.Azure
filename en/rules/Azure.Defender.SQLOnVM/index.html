@@ -7309,7 +7309,7 @@ A Log Analytics agent must be deployed on the machine and the Log Analytics work
 <li>Set the <code>Standard</code> pricing tier for Microsoft Defender for SQL servers on machines.</li>
 </ul>
 <p>For example:</p>
-<div class="highlight"><pre><span></span><code>resource defenderForSQLOnVM &#39;Microsoft.Security/pricings[@2022-03-01](https://github.com/2022-03-01)&#39; = {
+<div class="highlight"><pre><span></span><code>resource defenderForSQLOnVM &#39;Microsoft.Security/pricings@2022-03-01&#39; = {
   name: &#39;SqlServerVirtualMachines&#39;
   properties: {
     pricingTier: &#39;Standard&#39;

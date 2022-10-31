@@ -7317,15 +7317,15 @@ Avoid using deterministic values for sensitive properties.</p>
 <li>steps</li>
 </ul>
 <p>For example:</p>
-<div class="highlight"><pre><span></span><code>[@secure](https://github.com/secure)()
-[@description](https://github.com/description)(&#39;The name of the local administrator account.&#39;)
+<div class="highlight"><pre><span></span><code>@secure()
+@description(&#39;The name of the local administrator account.&#39;)
 param adminUsername string
 
-[@secure](https://github.com/secure)()
-[@description](https://github.com/description)(&#39;A password for the local administrator account.&#39;)
+@secure()
+@description(&#39;A password for the local administrator account.&#39;)
 param adminPassword string
 
-resource vm1 &#39;Microsoft.Compute/virtualMachines[@2022-03-01](https://github.com/2022-03-01)&#39; = {
+resource vm1 &#39;Microsoft.Compute/virtualMachines@2022-03-01&#39; = {
   name: name
   location: location
   zones: [

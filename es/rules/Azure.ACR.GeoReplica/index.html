@@ -7376,7 +7376,7 @@ Opcionalmente, se puede habilitar la replicación geográfica en una o más regi
 <li>Agrega el recurso secundario <code>replications</code> con <code>location</code> establecida en la región para replicar.</li>
 </ul>
 <p>Por ejemplo:</p>
-<div class="highlight"><pre><span></span><code>resource containerRegistry &#39;Microsoft.ContainerRegistry/registries[@2019-12-01-preview](https://github.com/2019-12-01-preview)&#39; = {
+<div class="highlight"><pre><span></span><code>resource containerRegistry &#39;Microsoft.ContainerRegistry/registries@2019-12-01-preview&#39; = {
   name: acrName
   location: location
   sku: {
@@ -7391,7 +7391,7 @@ Opcionalmente, se puede habilitar la replicación geográfica en una o más regi
   }
 }
 
-resource containerRegistryReplica &#39;Microsoft.ContainerRegistry/registries/replications[@2019-12-01-preview](https://github.com/2019-12-01-preview)&#39; = {
+resource containerRegistryReplica &#39;Microsoft.ContainerRegistry/registries/replications@2019-12-01-preview&#39; = {
   parent: containerRegistry
   name: &#39;${acrReplicaLocation}&#39;
   location: acrReplicaLocation

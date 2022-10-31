@@ -7307,7 +7307,7 @@ prevention of malicious attacks does not occur.</p>
 <li>Set the <code>properties.webApplicationFirewallConfiguration.enabled</code> property to <code>true</code>.</li>
 </ul>
 <p>For example:</p>
-<div class="highlight"><pre><span></span><code>resource appGw &#39;Microsoft.Network/applicationGateways[@2021-02-01](https://github.com/2021-02-01)&#39; = {
+<div class="highlight"><pre><span></span><code>resource appGw &#39;Microsoft.Network/applicationGateways@2021-02-01&#39; = {
   name: &#39;appGw-001&#39;
   location: location
   properties: {

@@ -7346,7 +7346,7 @@ Azure Network Policies are supported by Azure support and engineering teams.</p>
 <li>Set <code>Properties.networkProfile.networkPolicy</code> to <code>azure</code> or <code>calico</code>.</li>
 </ul>
 <p>For example:</p>
-<div class="highlight"><pre><span></span><code>resource cluster &#39;Microsoft.ContainerService/managedClusters[@2021-07-01](https://github.com/2021-07-01)&#39; = {
+<div class="highlight"><pre><span></span><code>resource cluster &#39;Microsoft.ContainerService/managedClusters@2021-07-01&#39; = {
   location: location
   name: clusterName
   identity: {

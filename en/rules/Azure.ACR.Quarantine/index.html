@@ -7301,7 +7301,7 @@ Enable image quarantine on the container registry to ensure each image is verifi
 <li>Set <code>properties.quarantinePolicy.status</code> to <code>enabled</code>.</li>
 </ul>
 <p>For example:</p>
-<div class="highlight"><pre><span></span><code>resource acr &#39;Microsoft.ContainerRegistry/registries[@2021-06-01-preview](https://github.com/2021-06-01-preview)&#39; = {
+<div class="highlight"><pre><span></span><code>resource acr &#39;Microsoft.ContainerRegistry/registries@2021-06-01-preview&#39; = {
   name: registryName
   location: location
   sku: {

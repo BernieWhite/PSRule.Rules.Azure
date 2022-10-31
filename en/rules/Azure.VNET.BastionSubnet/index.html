@@ -7299,7 +7299,7 @@
 <li>Configure an <code>AzureBastionSubnet</code> defined in <code>properties.subnets</code>.</li>
 </ul>
 <p>For example:</p>
-<div class="highlight"><pre><span></span><code>resource vnet &#39;Microsoft.Network/virtualNetworks[@2022-01-01](https://github.com/2022-01-01)&#39; = {
+<div class="highlight"><pre><span></span><code>resource vnet &#39;Microsoft.Network/virtualNetworks@2022-01-01&#39; = {
   name: &#39;vnet-01&#39;
   location: location
   properties: {
@@ -7330,7 +7330,7 @@
 <li>Configure an <code>AzureBastionSubnet</code> sub-resource.</li>
 </ul>
 <p>For example:</p>
-<div class="highlight"><pre><span></span><code>resource bastionSubnet &#39;Microsoft.Network/virtualNetworks/subnets[@2022-01-01](https://github.com/2022-01-01)&#39; = {
+<div class="highlight"><pre><span></span><code>resource bastionSubnet &#39;Microsoft.Network/virtualNetworks/subnets@2022-01-01&#39; = {
   name: &#39;AzureBastionSubnet&#39;
   parent: vnet
   properties: {

@@ -7284,7 +7284,7 @@ Azure automatically generates tokens and performs rotation.</li>
 <li>If <code>identity.type</code> is <code>UserAssigned</code>, reference the identity with <code>identity.userAssignedIdentities</code>.</li>
 </ul>
 <p>For example:</p>
-<div class="highlight"><pre><span></span><code>resource account &#39;Microsoft.CognitiveServices/accounts[@2022-03-01](https://github.com/2022-03-01)&#39; = {
+<div class="highlight"><pre><span></span><code>resource account &#39;Microsoft.CognitiveServices/accounts@2022-03-01&#39; = {
   name: name
   location: location
   identity: {

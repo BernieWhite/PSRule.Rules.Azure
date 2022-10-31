@@ -7344,7 +7344,7 @@ For example:</p>
 <li>Set the <code>sourceAddressPrefix</code> or <code>sourceAddressPrefixes</code> to a value other then <code>*</code> for inbound allow rules.</li>
 </ul>
 <p>For example:</p>
-<div class="highlight"><pre><span></span><code>resource nsg &#39;Microsoft.Network/networkSecurityGroups[@2022-01-01](https://github.com/2022-01-01)&#39; = {
+<div class="highlight"><pre><span></span><code>resource nsg &#39;Microsoft.Network/networkSecurityGroups@2022-01-01&#39; = {
   name: nsgName
   location: location
   properties: {
@@ -7414,7 +7414,7 @@ For example:</p>
 </code></pre></div>
 <p>To create an Application Security Group, use the <code>Microsoft.Network/applicationSecurityGroups</code> resource.
 For example:</p>
-<div class="highlight"><pre><span></span><code>resource asg &#39;Microsoft.Network/applicationSecurityGroups[@2022-01-01](https://github.com/2022-01-01)&#39; = {
+<div class="highlight"><pre><span></span><code>resource asg &#39;Microsoft.Network/applicationSecurityGroups@2022-01-01&#39; = {
   name: asgName
   location:location
   properties: {}

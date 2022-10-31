@@ -7319,7 +7319,7 @@
 param location string
 param userAssignedManagedIdentity string
 
-resource windowsAgent &#39;Microsoft.Compute/virtualMachines/extensions[@2022-08-01](https://github.com/2022-08-01)&#39; = {
+resource windowsAgent &#39;Microsoft.Compute/virtualMachines/extensions@2022-08-01&#39; = {
   name: &#39;${vmName}/AzureMonitorWindowsAgent&#39;
   location: location
   properties: {

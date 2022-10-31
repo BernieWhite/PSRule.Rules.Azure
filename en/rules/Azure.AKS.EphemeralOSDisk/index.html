@@ -7325,7 +7325,7 @@
 <li>Set <code>properties.agentPoolProfiles.osDiskType</code> to <code>Ephemeral</code>.</li>
 </ul>
 <p>For example:</p>
-<div class="highlight"><pre><span></span><code>resource aks &#39;Microsoft.ContainerService/managedClusters[@2022-06-02-preview](https://github.com/2022-06-02-preview)&#39; = {
+<div class="highlight"><pre><span></span><code>resource aks &#39;Microsoft.ContainerService/managedClusters@2022-06-02-preview&#39; = {
   name: clusterName
   location: location
   sku: {
@@ -7366,7 +7366,7 @@
 <li>Set <code>properties.osDiskType</code> to <code>Ephemeral</code>.</li>
 </ul>
 <p>For example:</p>
-<div class="highlight"><pre><span></span><code>resource userPool &#39;Microsoft.ContainerService/managedClusters/agentPools[@2022-07-01](https://github.com/2022-07-01)&#39; = {
+<div class="highlight"><pre><span></span><code>resource userPool &#39;Microsoft.ContainerService/managedClusters/agentPools@2022-07-01&#39; = {
   parent: cluster
   name: poolName
   properties: {

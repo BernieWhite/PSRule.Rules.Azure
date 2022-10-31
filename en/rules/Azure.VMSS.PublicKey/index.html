@@ -7334,7 +7334,7 @@
 <li>Set <code>properties.virtualMachineProfile.OsProfile.linuxConfiguration.disablePasswordAuthentication</code> to <code>true</code>.</li>
 </ul>
 <p>For example:</p>
-<div class="highlight"><pre><span></span><code>resource vmScaleSet &#39;Microsoft.Compute/virtualMachineScaleSets[@2021-11-01](https://github.com/2021-11-01)&#39; = {
+<div class="highlight"><pre><span></span><code>resource vmScaleSet &#39;Microsoft.Compute/virtualMachineScaleSets@2021-11-01&#39; = {
   name: &#39;vmss-01&#39;
   location: resourceGroup().location
   sku: {

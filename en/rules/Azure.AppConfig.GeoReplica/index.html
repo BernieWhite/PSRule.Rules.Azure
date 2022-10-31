@@ -7323,19 +7323,19 @@ During the preview geo-replication has additional limitations including support 
 <li>Set <code>location</code> on replica sub-resource to a different location than the app configuration store.</li>
 </ul>
 <p>For example:</p>
-<div class="highlight"><pre><span></span><code>[@description](https://github.com/description)(&#39;The name of the app configuration store.&#39;)
+<div class="highlight"><pre><span></span><code>@description(&#39;The name of the app configuration store.&#39;)
 param appConfigName string = &#39;configstore01&#39;
 
-[@description](https://github.com/description)(&#39;The name of the replica.&#39;)
+@description(&#39;The name of the replica.&#39;)
 param replicaName string = &#39;replica01&#39;
 
-[@description](https://github.com/description)(&#39;The location resources will be deployed.&#39;)
+@description(&#39;The location resources will be deployed.&#39;)
 param appConfigLocation string = resourceGroup().location
 
-[@description](https://github.com/description)(&#39;The location where the replica will be deployed.&#39;)
+@description(&#39;The location where the replica will be deployed.&#39;)
 param replicaLocation string = &#39;northeurope&#39; 
 
-resource store &#39;Microsoft.AppConfiguration/configurationStores[@2022-05-01](https://github.com/2022-05-01)&#39; = {
+resource store &#39;Microsoft.AppConfiguration/configurationStores@2022-05-01&#39; = {
   name: appConfigName
   location: appConfigLocation
   sku: {
@@ -7347,7 +7347,7 @@ resource store &#39;Microsoft.AppConfiguration/configurationStores[@2022-05-01](
   }
 }
 
-resource replica &#39;Microsoft.AppConfiguration/configurationStores/replicas[@2022-03-01-preview](https://github.com/2022-03-01-preview)&#39; = {
+resource replica &#39;Microsoft.AppConfiguration/configurationStores/replicas@2022-03-01-preview&#39; = {
   name: replicaName
   location: replicaLocation
   parent: store

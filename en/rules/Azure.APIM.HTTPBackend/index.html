@@ -7301,7 +7301,7 @@ When using HTTP, sensitive information may be exposed to an untrusted party.</p>
 <li>Set the <code>properties.serviceUrl</code> property to a URL that starts with <code>https://</code>.</li>
 </ul>
 <p>For example:</p>
-<div class="highlight"><pre><span></span><code>resource api &#39;Microsoft.ApiManagement/service/apis[@2021-08-01](https://github.com/2021-08-01)&#39; = {
+<div class="highlight"><pre><span></span><code>resource api &#39;Microsoft.ApiManagement/service/apis@2021-08-01&#39; = {
   parent: service
   name: &#39;echo-v1&#39;
   properties: {
@@ -7323,7 +7323,7 @@ When using HTTP, sensitive information may be exposed to an untrusted party.</p>
 <li>Set the <code>properties.url</code> property to a URL that starts with <code>https://</code>.</li>
 </ul>
 <p>For example:</p>
-<div class="highlight"><pre><span></span><code>resource backend &#39;Microsoft.ApiManagement/service/backends[@2021-08-01](https://github.com/2021-08-01)&#39; = {
+<div class="highlight"><pre><span></span><code>resource backend &#39;Microsoft.ApiManagement/service/backends@2021-08-01&#39; = {
   parent: service
   name: &#39;echo&#39;
   properties: {

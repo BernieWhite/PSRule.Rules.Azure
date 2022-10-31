@@ -7292,12 +7292,12 @@ The output from a template is stored in the deployment history, so a malicious u
 <h3 id="configure-with-bicep">Configure with Bicep<a class="headerlink" href="#configure-with-bicep" title="Permanent link">#</a></h3>
 <p>To deploy securely pass secrets within Infrastructure as Code:</p>
 <ul>
-<li>Mark secrets with the <code>[@secure](https://github.com/secure)()</code> annotation.</li>
+<li>Mark secrets with the <code>@secure()</code> annotation.</li>
 <li>Avoid returning a secret in output values.</li>
 </ul>
-<p>Example using <code>[@secure](https://github.com/secure)()</code> annotation:</p>
-<div class="highlight"><pre><span></span><code>[@secure](https://github.com/secure)()
-[@description](https://github.com/description)(&#39;Local administrator password for virtual machine.&#39;)
+<p>Example using <code>@secure()</code> annotation:</p>
+<div class="highlight"><pre><span></span><code>@secure()
+@description(&#39;Local administrator password for virtual machine.&#39;)
 param adminPassword string
 </code></pre></div>
 <p>The following example fails because it returns a secret:</p>

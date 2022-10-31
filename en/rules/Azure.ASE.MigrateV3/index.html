@@ -7336,32 +7336,32 @@
 <li>Set <code>kind</code> to <code>'ASEV3'</code>.</li>
 </ul>
 <p>For example:</p>
-<div class="highlight"><pre><span></span><code>[@description](https://github.com/description)(&#39;Name of the App Service Environment&#39;)
+<div class="highlight"><pre><span></span><code>@description(&#39;Name of the App Service Environment&#39;)
 param aseName string = &#39;001-ase&#39;
 
-[@description](https://github.com/description)(&#39;The name of the vnet&#39;)
+@description(&#39;The name of the vnet&#39;)
 param virtualNetworkName string = &#39;ase-001-vnet&#39;
 
-[@description](https://github.com/description)(&#39;The resource group name that contains the vnet&#39;)
+@description(&#39;The resource group name that contains the vnet&#39;)
 param vnetResourceGroupName string = &#39;ase-001-rg&#39;
 
-[@description](https://github.com/description)(&#39;Subnet name that will contain the App Service Environment&#39;)
+@description(&#39;Subnet name that will contain the App Service Environment&#39;)
 param subnetName string = &#39;ase-001-sn&#39;
 
-[@description](https://github.com/description)(&#39;Location for the resources&#39;)
+@description(&#39;Location for the resources&#39;)
 param location string = resourceGroup().location
 
-resource virtualNetwork &#39;Microsoft.Network/virtualNetworks[@2022-05-01](https://github.com/2022-05-01)&#39; existing = {
+resource virtualNetwork &#39;Microsoft.Network/virtualNetworks@2022-05-01&#39; existing = {
   scope: resourceGroup(vnetResourceGroupName)
   name: virtualNetworkName
 }
 
-resource subnet &#39;Microsoft.Network/virtualNetworks/subnets[@2022-05-01](https://github.com/2022-05-01)&#39; existing = {
+resource subnet &#39;Microsoft.Network/virtualNetworks/subnets@2022-05-01&#39; existing = {
   parent: virtualNetwork
   name: subnetName
 }
 
-resource hostingEnvironment &#39;Microsoft.Web/hostingEnvironments[@2022-03-01](https://github.com/2022-03-01)&#39; = {
+resource hostingEnvironment &#39;Microsoft.Web/hostingEnvironments@2022-03-01&#39; = {
   name: aseName
   location: location
   kind: &#39;ASEV3&#39;

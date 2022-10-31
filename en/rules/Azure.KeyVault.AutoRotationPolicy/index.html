@@ -7297,7 +7297,7 @@ It's critical that the rotation of keys be scheduled and automated to ensure eff
 after key creation to rotate.</li>
 </ul>
 <p>For example:</p>
-<div class="highlight"><pre><span></span><code>resource vaultName_key1 &#39;Microsoft.KeyVault/vaults/keys[@2021-06-01-preview](https://github.com/2021-06-01-preview)&#39; = {
+<div class="highlight"><pre><span></span><code>resource vaultName_key1 &#39;Microsoft.KeyVault/vaults/keys@2021-06-01-preview&#39; = {
   parent: vaultName_resource
   name: &#39;key1&#39;
   properties: {

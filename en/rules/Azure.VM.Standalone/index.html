@@ -7317,7 +7317,7 @@ Taking advantage of some of the features of Azure can further increase the avail
 <li>Deploy the VM using only premium disks for OS and data disks by specifying <code>storageAccountType</code> as <code>Premium_LRS</code>.</li>
 </ul>
 <p>For example:</p>
-<div class="highlight"><pre><span></span><code>resource vm1 &#39;Microsoft.Compute/virtualMachines[@2022-03-01](https://github.com/2022-03-01)&#39; = {
+<div class="highlight"><pre><span></span><code>resource vm1 &#39;Microsoft.Compute/virtualMachines@2022-03-01&#39; = {
   name: name
   location: location
   zones: [

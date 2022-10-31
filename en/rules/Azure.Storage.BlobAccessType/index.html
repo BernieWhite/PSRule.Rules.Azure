@@ -7272,7 +7272,7 @@ Also consider, disabling public access for the storage account.</p>
 <li>Set the <code>properties.publicAccess</code> property to <code>None</code>.</li>
 </ul>
 <p>For example:</p>
-<div class="highlight"><pre><span></span><code>resource container &#39;Microsoft.Storage/storageAccounts/blobServices/containers[@2021-06-01](https://github.com/2021-06-01)&#39; = {
+<div class="highlight"><pre><span></span><code>resource container &#39;Microsoft.Storage/storageAccounts/blobServices/containers@2021-06-01&#39; = {
   parent: blobService
   name: containerName
   properties: {

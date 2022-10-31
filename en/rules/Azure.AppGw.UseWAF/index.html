@@ -7306,7 +7306,7 @@ When configured, every incoming request is filtered by the WAF policy.</p>
 <li>Deploy an Application Gateway with the <code>WAF</code> or <code>WAF_v2</code> SKU.</li>
 </ul>
 <p>For example:</p>
-<div class="highlight"><pre><span></span><code>resource appGw &#39;Microsoft.Network/applicationGateways[@2021-02-01](https://github.com/2021-02-01)&#39; = {
+<div class="highlight"><pre><span></span><code>resource appGw &#39;Microsoft.Network/applicationGateways@2021-02-01&#39; = {
   name: &#39;appGw-001&#39;
   location: location
   properties: {

@@ -7321,7 +7321,7 @@ Any detected vulnerabilities are reported to Microsoft Defender for Cloud.</p>
 <li>Set the <code>Standard</code> pricing tier for Microsoft Defender for Containers.</li>
 </ul>
 <p>For example:</p>
-<div class="highlight"><pre><span></span><code>resource defenderForContainers &#39;Microsoft.Security/pricings[@2022-03-01](https://github.com/2022-03-01)&#39; = {
+<div class="highlight"><pre><span></span><code>resource defenderForContainers &#39;Microsoft.Security/pricings@2022-03-01&#39; = {
   name: &#39;Containers&#39;
   properties: {
     pricingTier: &#39;Standard&#39;

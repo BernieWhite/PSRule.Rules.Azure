@@ -15,7 +15,7 @@
         <link rel="canonical" href="https://azure.github.io/PSRule.Rules.Azure/CHANGELOG-v1/">
       
       <link rel="icon" href="../assets/ms_icon.png">
-      <meta name="generator" content="mkdocs-1.4.1, mkdocs-material-8.5.7">
+      <meta name="generator" content="mkdocs-1.4.1, mkdocs-material-8.5.8">
     
     
       
@@ -26,7 +26,7 @@
       <link rel="stylesheet" href="../assets/stylesheets/main.20d9efc8.min.css">
       
         
-        <link rel="stylesheet" href="../assets/stylesheets/palette.cbb835fc.min.css">
+        <link rel="stylesheet" href="../assets/stylesheets/palette.815d1a91.min.css">
         
           
           
@@ -1021,6 +1021,13 @@
         <li class="md-nav__item">
   <a href="#unreleased" class="md-nav__link">
     Unreleased
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#v1211" class="md-nav__link">
+    v1.21.1
   </a>
   
 </li>
@@ -2380,6 +2387,8 @@
       
       
       
+        
+          
         
           
         
@@ -5007,6 +5016,20 @@
     <li class="md-nav__item">
       <a href="../en/rules/Azure.FrontDoor.State/" class="md-nav__link">
         Azure.FrontDoor.State
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../en/rules/Azure.FrontDoor.UseCaching/" class="md-nav__link">
+        Azure.FrontDoor.UseCaching
       </a>
     </li>
   
@@ -8144,6 +8167,13 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#v1211" class="md-nav__link">
+    v1.21.1
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#v1210" class="md-nav__link">
     v1.21.0
   </a>
@@ -9212,6 +9242,16 @@
   See <a href="../upgrade-notes/">upgrade notes</a> for more information.</li>
 </ul>
 <h2 id="unreleased">Unreleased<a class="headerlink" href="#unreleased" title="Permanent link">#</a></h2>
+<ul>
+<li>New rules:<ul>
+<li>Front Door:<ul>
+<li>Check front door uses caching by <a href="https://github.com/bengeset96">@bengeset96</a>.
+<a href="https://github.com/Azure/PSRule.Rules.Azure/issues/548">#548</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
 <p>What's changed since v1.21.0:</p>
 <ul>
 <li>New rules:<ul>
@@ -9220,6 +9260,17 @@
 <a href="https://github.com/Azure/PSRule.Rules.Azure/issues/1805">#1805</a></li>
 </ul>
 </li>
+</ul>
+</li>
+</ul>
+<h2 id="v1211">v1.21.1<a class="headerlink" href="#v1211" title="Permanent link">#</a></h2>
+<p>What's changed since v1.21.0:</p>
+<ul>
+<li>Bug fixes:<ul>
+<li>Fixed multiple nested parameter loops returns stack empty exception by <a href="https://github.com/BernieWhite">@BernieWhite</a>.
+  <a href="https://github.com/Azure/PSRule.Rules.Azure/issues/1811">#1811</a></li>
+<li>Fixed <code>Azure.ACR.ContentTrust</code> when customer managed keys are enabled by <a href="https://github.com/BernieWhite">@BernieWhite</a>.
+  <a href="https://github.com/Azure/PSRule.Rules.Azure/issues/1810">#1810</a></li>
 </ul>
 </li>
 </ul>
@@ -12819,7 +12870,7 @@
   <small>
     
       Last update:
-      2022-10-26
+      2022-11-05
     
   </small>
 </div>
@@ -12918,7 +12969,7 @@
     <script id="__config" type="application/json">{"base": "..", "features": ["navigation.instant", "navigation.indexes", {"navigation.sections": {"level": 1}}, "navigation.tabs", "content.code.annotate", "content.tabs.link"], "search": "../assets/javascripts/workers/search.16e2a7d4.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version.title": "Select version"}, "version": {"provider": "mike"}}</script>
     
     
-      <script src="../assets/javascripts/bundle.8492ddcf.min.js"></script>
+      <script src="../assets/javascripts/bundle.d6c3db9e.min.js"></script>
       
     
   </body>

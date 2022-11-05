@@ -4,8 +4,8 @@
   "metadata": {
     "_generator": {
       "name": "bicep",
-      "version": "0.11.1.770",
-      "templateHash": "15198332329239055628"
+      "version": "0.12.1.58429",
+      "templateHash": "10916983340852253317"
     }
   },
   "parameters": {
@@ -174,7 +174,7 @@
             "properties": {
               "privateIPAllocationMethod": "Dynamic",
               "subnet": {
-                "id": "[reference(resourceId('Microsoft.Network/virtualNetworks', 'vnet-001')).subnets[1].id]"
+                "id": "[reference(resourceId('Microsoft.Network/virtualNetworks', 'vnet-001'), '2022-01-01').subnets[1].id]"
               }
             },
             "zones": [
@@ -191,7 +191,7 @@
     },
     {
       "type": "Microsoft.Network/virtualNetworks",
-      "apiVersion": "2022-01-01",
+      "apiVersion": "2022-05-01",
       "name": "vnet-01",
       "location": "[parameters('location')]",
       "properties": {
@@ -214,9 +214,15 @@
             }
           },
           {
+            "name": "AzureFirewallSubnet",
+            "properties": {
+              "addressPrefix": "10.0.1.0/26"
+            }
+          },
+          {
             "name": "AzureBastionSubnet",
             "properties": {
-              "addressPrefix": "10.0.0.0/26"
+              "addressPrefix": "10.0.1.64/26"
             }
           }
         ]
@@ -224,7 +230,7 @@
     },
     {
       "type": "Microsoft.Network/virtualNetworks",
-      "apiVersion": "2022-01-01",
+      "apiVersion": "2022-05-01",
       "name": "vnet-02",
       "location": "[parameters('location')]",
       "properties": {
@@ -243,7 +249,7 @@
     },
     {
       "type": "Microsoft.Network/virtualNetworks/subnets",
-      "apiVersion": "2022-01-01",
+      "apiVersion": "2022-05-01",
       "name": "[format('{0}/{1}', 'vnet-02', 'GatewaySubnet')]",
       "properties": {
         "addressPrefix": "10.0.0.0/27"
@@ -254,7 +260,7 @@
     },
     {
       "type": "Microsoft.Network/virtualNetworks/subnets",
-      "apiVersion": "2022-01-01",
+      "apiVersion": "2022-05-01",
       "name": "[format('{0}/{1}', 'vnet-02', 'AzureBastionSubnet')]",
       "properties": {
         "addressPrefix": "10.0.0.0/26"

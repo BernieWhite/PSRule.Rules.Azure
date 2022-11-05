@@ -161,8 +161,8 @@ resource lb_001 'Microsoft.Network/loadBalancers@2022-01-01' = {
   }
 }
 
-// An example VNET with a GatewaySubnet and an AzureBastionSubnet
-resource virtualnetwork01 'Microsoft.Network/virtualNetworks@2022-01-01' = {
+// An example VNET with a GatewaySubnet, AzureBastionSubnet, and AzureBastionSubnet.
+resource virtualnetwork01 'Microsoft.Network/virtualNetworks@2022-05-01' = {
   name: 'vnet-01'
   location: location
   properties: {
@@ -185,9 +185,15 @@ resource virtualnetwork01 'Microsoft.Network/virtualNetworks@2022-01-01' = {
         }
       }
       {
+        name: 'AzureFirewallSubnet'
+        properties: {
+          addressPrefix: '10.0.1.0/26'
+        }
+      }
+      {
         name: 'AzureBastionSubnet'
         properties: {
-          addressPrefix: '10.0.0.0/26'
+          addressPrefix: '10.0.1.64/26'
         }
       }
     ]
@@ -195,7 +201,7 @@ resource virtualnetwork01 'Microsoft.Network/virtualNetworks@2022-01-01' = {
 }
 
 // An example VNET with subnet sub-resources GatewaySubnet and AzureBastionSubnet
-resource virtualnetwork02 'Microsoft.Network/virtualNetworks@2022-01-01' = {
+resource virtualnetwork02 'Microsoft.Network/virtualNetworks@2022-05-01' = {
   name: 'vnet-02'
   location: location
   properties: {
@@ -213,7 +219,7 @@ resource virtualnetwork02 'Microsoft.Network/virtualNetworks@2022-01-01' = {
   }
 }
 
-resource subnet01 'Microsoft.Network/virtualNetworks/subnets@2022-01-01' = {
+resource subnet01 'Microsoft.Network/virtualNetworks/subnets@2022-05-01' = {
   name: 'GatewaySubnet'
   parent: virtualnetwork02
   properties: {
@@ -221,7 +227,7 @@ resource subnet01 'Microsoft.Network/virtualNetworks/subnets@2022-01-01' = {
   }
 }
 
-resource subnet02 'Microsoft.Network/virtualNetworks/subnets@2022-01-01' = {
+resource subnet02 'Microsoft.Network/virtualNetworks/subnets@2022-05-01' = {
   name: 'AzureBastionSubnet'
   parent: virtualnetwork02
   properties: {

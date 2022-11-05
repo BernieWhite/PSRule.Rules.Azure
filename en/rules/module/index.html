@@ -1479,7 +1479,7 @@
         
           <li class="md-nav__item">
   <a href="#data-management" class="md-nav__link">
-    Data management
+    Data Management
   </a>
   
 </li>
@@ -1727,6 +1727,8 @@
       
       
       
+        
+          
         
           
         
@@ -6664,6 +6666,20 @@
   
   
     <li class="md-nav__item">
+      <a href="../Azure.VNET.FirewallSubnet/" class="md-nav__link">
+        Azure.VNET.FirewallSubnet
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
       <a href="../Azure.VNET.LocalDNS/" class="md-nav__link">
         Azure.VNET.LocalDNS
       </a>
@@ -7688,7 +7704,7 @@
         
           <li class="md-nav__item">
   <a href="#data-management" class="md-nav__link">
-    Data management
+    Data Management
   </a>
   
 </li>
@@ -8977,18 +8993,6 @@
 <td>Important</td>
 <td>Error</td>
 </tr>
-<tr>
-<td><a href="../Azure.VNET.LocalDNS/">Azure.VNET.LocalDNS</a></td>
-<td>Virtual networks (VNETs) should use Azure local DNS servers.</td>
-<td>Important</td>
-<td>Error</td>
-</tr>
-<tr>
-<td><a href="../Azure.VNET.SingleDNS/">Azure.VNET.SingleDNS</a></td>
-<td>VNETs should have at least two DNS servers assigned.</td>
-<td>Important</td>
-<td>Error</td>
-</tr>
 </tbody>
 </table>
 <h3 id="best-practices">Best practices<a class="headerlink" href="#best-practices" title="Permanent link">#</a></h3>
@@ -9010,7 +9014,7 @@
 </tr>
 </tbody>
 </table>
-<h3 id="data-management">Data management<a class="headerlink" href="#data-management" title="Permanent link">#</a></h3>
+<h3 id="data-management">Data Management<a class="headerlink" href="#data-management" title="Permanent link">#</a></h3>
 <table>
 <thead>
 <tr>
@@ -9331,6 +9335,18 @@
 <td>Important</td>
 <td>Error</td>
 </tr>
+<tr>
+<td><a href="../Azure.VNET.LocalDNS/">Azure.VNET.LocalDNS</a></td>
+<td>Virtual networks (VNETs) should use Azure local DNS servers.</td>
+<td>Important</td>
+<td>Error</td>
+</tr>
+<tr>
+<td><a href="../Azure.VNET.SingleDNS/">Azure.VNET.SingleDNS</a></td>
+<td>VNETs should have at least two DNS servers assigned.</td>
+<td>Important</td>
+<td>Error</td>
+</tr>
 </tbody>
 </table>
 <h3 id="resource-deployment">Resource deployment<a class="headerlink" href="#resource-deployment" title="Permanent link">#</a></h3>
@@ -9391,6 +9407,12 @@
 <tr>
 <td><a href="../Azure.FrontDoor.WAF.Enabled/">Azure.FrontDoor.WAF.Enabled</a></td>
 <td>Front Door Web Application Firewall (WAF) policy must be enabled to protect back end resources.</td>
+<td>Critical</td>
+<td>Error</td>
+</tr>
+<tr>
+<td><a href="../Azure.NSG.AnyInboundSource/">Azure.NSG.AnyInboundSource</a></td>
+<td>Network security groups (NSGs) should avoid rules that allow "any" as an inbound source.</td>
 <td>Critical</td>
 <td>Error</td>
 </tr>
@@ -10218,12 +10240,6 @@
 <td>Error</td>
 </tr>
 <tr>
-<td><a href="../Azure.NSG.AnyInboundSource/">Azure.NSG.AnyInboundSource</a></td>
-<td>Network security groups (NSGs) should avoid rules that allow "any" as an inbound source.</td>
-<td>Critical</td>
-<td>Error</td>
-</tr>
-<tr>
 <td><a href="../Azure.PostgreSQL.AllowAzureAccess/">Azure.PostgreSQL.AllowAzureAccess</a></td>
 <td>Determine if access from Azure services is required.</td>
 <td>Important</td>
@@ -10287,6 +10303,12 @@
 <tr>
 <td><a href="../Azure.NSG.LateralTraversal/">Azure.NSG.LateralTraversal</a></td>
 <td>Deny outbound management connections from non-management hosts.</td>
+<td>Important</td>
+<td>Error</td>
+</tr>
+<tr>
+<td><a href="../Azure.VNET.FirewallSubnet/">Azure.VNET.FirewallSubnet</a></td>
+<td>Use Azure Firewall to filter network traffic to and from Azure resources.</td>
 <td>Important</td>
 <td>Error</td>
 </tr>
@@ -10444,7 +10466,7 @@
   <small>
     
       Last update:
-      2022-11-01
+      2022-11-06
     
   </small>
 </div>

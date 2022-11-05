@@ -110,7 +110,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#virtual-networks-with-a-gatewaysubnet-should-have-an-azurebastionsubnet" class="md-skip">
+        <a href="#configure-vnets-with-a-azurebastionsubnet-subnet" class="md-skip">
           Skip to content
         </a>
       
@@ -1310,6 +1310,8 @@
       
       
       
+        
+          
         
           
         
@@ -6329,6 +6331,20 @@
   
   
     <li class="md-nav__item">
+      <a href="../Azure.VNET.FirewallSubnet/" class="md-nav__link">
+        Azure.VNET.FirewallSubnet
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
       <a href="../Azure.VNET.LocalDNS/" class="md-nav__link">
         Azure.VNET.LocalDNS
       </a>
@@ -7246,21 +7262,23 @@
   
 
   <!-- Markdown content -->
-  <h1 id="virtual-networks-with-a-gatewaysubnet-should-have-an-azurebastionsubnet">Virtual networks with a GatewaySubnet should have an AzureBastionSubnet<a class="headerlink" href="#virtual-networks-with-a-gatewaysubnet-should-have-an-azurebastionsubnet" title="Permanent link">#</a></h1>
+  <h1 id="configure-vnets-with-a-azurebastionsubnet-subnet">Configure VNETs with a AzureBastionSubnet subnet<a class="headerlink" href="#configure-vnets-with-a-azurebastionsubnet-subnet" title="Permanent link">#</a></h1>
 <nav class="md-tags"><span class="md-tag">Azure.VNET.BastionSubnet</span><span class="md-tag">AZR-000314</span><span class="md-tag">Error</span></nav>
 <p><a href="../module/#reliability"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path fill-rule="evenodd" d="M1.527 13.237a1.75 1.75 0 0 1 0-2.474l9.272-9.273a1.75 1.75 0 0 1 2.475 0l9.272 9.273a1.75 1.75 0 0 1 0 2.474l-9.272 9.272a1.75 1.75 0 0 1-2.475 0l-9.272-9.272zm1.06-1.414a.25.25 0 0 0 0 .354l9.273 9.272a.25.25 0 0 0 .353 0l9.272-9.272a.25.25 0 0 0 0-.354l-9.272-9.272a.25.25 0 0 0-.353 0l-9.273 9.272z"/></svg></span> Reliability</a>
  · <a href="../resource/#virtual-network"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path fill-rule="evenodd" d="M13.152.682a2.25 2.25 0 0 1 2.269 0l.007.004 6.957 4.276a2.276 2.276 0 0 1 1.126 1.964v7.516c0 .81-.432 1.56-1.133 1.968l-.002.001-11.964 7.037-.004.003a2.276 2.276 0 0 1-2.284 0l-.026-.015-6.503-4.502a2.268 2.268 0 0 1-1.096-1.943V9.438c0-.392.1-.77.284-1.1l.003-.006.014-.026a2.28 2.28 0 0 1 .82-.827h.002L13.152.681zm.757 1.295h-.001L2.648 8.616l6.248 4.247a.776.776 0 0 0 .758-.01h.001l11.633-6.804-6.629-4.074a.75.75 0 0 0-.75.003zM18 9.709l-3.25 1.9v7.548L18 17.245V9.709zm1.5-.878v7.532l2.124-1.25a.777.777 0 0 0 .387-.671V7.363L19.5 8.831zm-9.09 5.316 2.84-1.66v7.552l-3.233 1.902v-7.612c.134-.047.265-.107.391-.18l.002-.002zm-1.893 7.754V14.33a2.277 2.277 0 0 1-.393-.18l-.023-.014-6.102-4.147v7.003c0 .275.145.528.379.664l.025.014 6.114 4.232z"/></svg></span> Virtual Network</a>
  · <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M7.75 6.5a1.25 1.25 0 1 0 0 2.5 1.25 1.25 0 0 0 0-2.5z"/><path fill-rule="evenodd" d="M2.5 1A1.5 1.5 0 0 0 1 2.5v8.44c0 .397.158.779.44 1.06l10.25 10.25a1.5 1.5 0 0 0 2.12 0l8.44-8.44a1.5 1.5 0 0 0 0-2.12L12 1.44A1.5 1.5 0 0 0 10.94 1H2.5zm0 1.5h8.44l10.25 10.25-8.44 8.44L2.5 10.94V2.5z"/></svg></span> 2022_12</p>
 <p>VNETs with a GatewaySubnet should have an AzureBastionSubnet to allow for out of band remote access to VMs.</p>
 <h2 id="description">Description<a class="headerlink" href="#description" title="Permanent link">#</a></h2>
-<p>Azure Bastion lets you securely connect to a virtual machine using your browser or native SSH/RDP client on Windows workstations or the Azure portal. An Azure Bastion host is deployed inside an Azure Virtual Network and can access virtual machines in the virtual network (VNet), or virtual machines in peered VNets.</p>
+<p>Azure Bastion lets you securely connect to a virtual machine using your browser or native SSH/RDP client on Windows workstations or the Azure portal.
+An Azure Bastion host is deployed inside an Azure Virtual Network and can access virtual machines in the virtual network (VNet), or virtual machines in peered VNets.</p>
 <p>Azure Bastion is a fully managed service that provides more secure and seamless Remote Desktop Protocol (RDP) and Secure Shell Protocol (SSH) access to virtual machines (VMs), without any exposure through public IP addresses.</p>
 <p>This is a recommended pattern for virtual machine remote access.</p>
 <p>Adding Azure Bastion in your configuration adds the following benefits:</p>
 <ul>
 <li>Added resiliency (out of band remote access).</li>
 <li>Negates the need for hybrid connectivity.</li>
-<li>Provides an extra layer of control. It enables secure and seamless RDP/SSH connectivity to your VMs directly from the Azure portal or native client in preview over a secure TLS channel.</li>
+<li>Provides an extra layer of control.
+  It enables secure and seamless RDP/SSH connectivity to your VMs directly from the Azure portal or native client in preview over a secure TLS channel.</li>
 </ul>
 <h2 id="recommendation">Recommendation<a class="headerlink" href="#recommendation" title="Permanent link">#</a></h2>
 <p>Consider an Azure Bastion Subnet to allow for out of band remote access to VMs and provide an extra layer of control.</p>
@@ -7280,14 +7298,17 @@
 <span class="w">    </span><span class="nt">&quot;addressSpace&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
 <span class="w">      </span><span class="nt">&quot;addressPrefixes&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="s2">&quot;10.0.0.0/16&quot;</span><span class="p">]</span><span class="w"></span>
 <span class="w">    </span><span class="p">},</span><span class="w"></span>
-<span class="w">    </span><span class="nt">&quot;dhcpOptions&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
-<span class="w">      </span><span class="nt">&quot;dnsServers&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="s2">&quot;10.0.1.4&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;10.0.1.5&quot;</span><span class="p">]</span><span class="w"></span>
-<span class="w">    </span><span class="p">},</span><span class="w"></span>
 <span class="w">    </span><span class="nt">&quot;subnets&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w"></span>
+<span class="w">      </span><span class="p">{</span><span class="w"></span>
+<span class="w">        </span><span class="nt">&quot;name&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;GatewaySubnet&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">        </span><span class="nt">&quot;properties&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">          </span><span class="nt">&quot;addressPrefix&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;10.0.0.0/27&quot;</span><span class="w"></span>
+<span class="w">        </span><span class="p">}</span><span class="w"></span>
+<span class="w">      </span><span class="p">},</span><span class="w"></span>
 <span class="w">      </span><span class="p">{</span><span class="w"></span>
 <span class="w">        </span><span class="nt">&quot;name&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;AzureBastionSubnet&quot;</span><span class="p">,</span><span class="w"></span>
 <span class="w">        </span><span class="nt">&quot;properties&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
-<span class="w">          </span><span class="nt">&quot;addressPrefix&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;10.0.0.0/26&quot;</span><span class="w"></span>
+<span class="w">          </span><span class="nt">&quot;addressPrefix&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;10.0.1.64/26&quot;</span><span class="w"></span>
 <span class="w">        </span><span class="p">}</span><span class="w"></span>
 <span class="w">      </span><span class="p">}</span><span class="w"></span>
 <span class="w">    </span><span class="p">]</span><span class="w"></span>
@@ -7304,7 +7325,7 @@
 <span class="w">  </span><span class="nt">&quot;type&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Microsoft.Network/virtualNetworks/subnets&quot;</span><span class="p">,</span><span class="w"></span>
 <span class="w">  </span><span class="nt">&quot;name&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;[format(&#39;{0}/{1}&#39;, &#39;vnet-01&#39;, &#39;AzureBastionSubnet&#39;)]&quot;</span><span class="p">,</span><span class="w"></span>
 <span class="w">  </span><span class="nt">&quot;properties&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
-<span class="w">    </span><span class="nt">&quot;addressPrefix&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;10.0.0.0/26&quot;</span><span class="w"></span>
+<span class="w">    </span><span class="nt">&quot;addressPrefix&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;10.0.1.64/26&quot;</span><span class="w"></span>
 <span class="w">  </span><span class="p">},</span><span class="w"></span>
 <span class="w">  </span><span class="nt">&quot;dependsOn&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="s2">&quot;[resourceId(&#39;Microsoft.Network/virtualNetworks&#39;, &#39;vnet-02&#39;)]&quot;</span><span class="p">]</span><span class="w"></span>
 <span class="p">}</span><span class="w"></span>
@@ -7324,17 +7345,17 @@
         &#39;10.0.0.0/16&#39;
       ]
     }
-    dhcpOptions: {
-      dnsServers: [
-        &#39;10.0.1.4&#39;
-        &#39;10.0.1.5&#39;
-      ]
-    }
     subnets: [
+      {
+        name: &#39;GatewaySubnet&#39;
+        properties: {
+          addressPrefix: &#39;10.0.0.0/27&#39;
+        }
+      }
       {
         name: &#39;AzureBastionSubnet&#39;
         properties: {
-          addressPrefix: &#39;10.0.0.0/26&#39;
+          addressPrefix: &#39;10.0.1.64/26&#39;
         }
       }
     ]
@@ -7350,7 +7371,7 @@
   name: &#39;AzureBastionSubnet&#39;
   parent: vnet
   properties: {
-    addressPrefix: &#39;10.0.0.0/26&#39;
+    addressPrefix: &#39;10.0.1.64/26&#39;
   }
 }
 </code></pre></div>
@@ -7359,8 +7380,8 @@
 <li><a href="https://learn.microsoft.com/azure/architecture/framework/resiliency/design-best-practices">Best practices</a></li>
 <li><a href="https://learn.microsoft.com/azure/cloud-adoption-framework/ready/azure-best-practices/plan-for-virtual-machine-remote-access">Plan for virtual machine remote access</a></li>
 <li><a href="https://learn.microsoft.com/azure/architecture/reference-architectures/hybrid-networking/hub-spoke">Hub-spoke network topology in Azure</a></li>
-<li><a href="https://learn.microsoft.com/azure/templates/microsoft.network/virtualnetworks">Azure template reference</a></li>
-<li><a href="https://learn.microsoft.com/azure/templates/microsoft.network/virtualnetworks/subnets">Azure template reference</a></li>
+<li><a href="https://learn.microsoft.com/azure/templates/microsoft.network/virtualnetworks">Azure VNET deployment reference</a></li>
+<li><a href="https://learn.microsoft.com/azure/templates/microsoft.network/virtualnetworks/subnets">Azure subnet deployment reference</a></li>
 </ul>
 
   <!-- Last update of source file -->
@@ -7371,7 +7392,7 @@
   <small>
     
       Last update:
-      2022-10-17
+      2022-11-06
     
   </small>
 </div>

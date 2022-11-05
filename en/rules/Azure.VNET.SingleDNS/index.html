@@ -1971,6 +1971,8 @@
         
           
         
+          
+        
       
       
         <label class="md-nav__link" for="__nav_4_5">
@@ -6247,6 +6249,20 @@
   
   
     <li class="md-nav__item">
+      <a href="../Azure.VNET.FirewallSubnet/" class="md-nav__link">
+        Azure.VNET.FirewallSubnet
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
       <a href="../Azure.VNET.LocalDNS/" class="md-nav__link">
         Azure.VNET.LocalDNS
       </a>
@@ -6332,6 +6348,40 @@
         <li class="md-nav__item">
   <a href="#recommendation" class="md-nav__link">
     Recommendation
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#examples" class="md-nav__link">
+    Examples
+  </a>
+  
+    <nav class="md-nav" aria-label="Examples">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#configure-with-azure-template" class="md-nav__link">
+    Configure with Azure template
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#configure-with-bicep" class="md-nav__link">
+    Configure with Bicep
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#links" class="md-nav__link">
+    Links
   </a>
   
 </li>
@@ -7144,6 +7194,40 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#examples" class="md-nav__link">
+    Examples
+  </a>
+  
+    <nav class="md-nav" aria-label="Examples">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#configure-with-azure-template" class="md-nav__link">
+    Configure with Azure template
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#configure-with-bicep" class="md-nav__link">
+    Configure with Bicep
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#links" class="md-nav__link">
+    Links
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -7185,10 +7269,70 @@
  · <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M7.75 6.5a1.25 1.25 0 1 0 0 2.5 1.25 1.25 0 0 0 0-2.5z"/><path fill-rule="evenodd" d="M2.5 1A1.5 1.5 0 0 0 1 2.5v8.44c0 .397.158.779.44 1.06l10.25 10.25a1.5 1.5 0 0 0 2.12 0l8.44-8.44a1.5 1.5 0 0 0 0-2.12L12 1.44A1.5 1.5 0 0 0 10.94 1H2.5zm0 1.5h8.44l10.25 10.25-8.44 8.44L2.5 10.94V2.5z"/></svg></span> 2020_06</p>
 <p>VNETs should have at least two DNS servers assigned.</p>
 <h2 id="description">Description<a class="headerlink" href="#description" title="Permanent link">#</a></h2>
-<p>Virtual networks (VNETs) should have at least two (2) DNS servers assigned.</p>
+<p>Virtual networks (VNETs) should have at least two (2) DNS servers assigned.
+Using a single DNS server may indicate a single point of failure where the DNS IP address is not load balanced.</p>
 <h2 id="recommendation">Recommendation<a class="headerlink" href="#recommendation" title="Permanent link">#</a></h2>
 <p>Virtual networks should have at least two (2) DNS servers set when not using Azure-provided DNS.</p>
-<p>Using a single DNS server may indicate a single point of failure where the DNS IP address is not load balanced.</p>
+<h2 id="examples">Examples<a class="headerlink" href="#examples" title="Permanent link">#</a></h2>
+<h3 id="configure-with-azure-template">Configure with Azure template<a class="headerlink" href="#configure-with-azure-template" title="Permanent link">#</a></h3>
+<p>To deploy Virtual Networks that pass this rule:</p>
+<ul>
+<li>Set <code>properties.dhcpOptions.dnsServers</code> to at least two DNS server addresses. OR</li>
+<li>Use the default Azure DNS servers.</li>
+</ul>
+<p>For example:</p>
+<div class="highlight"><pre><span></span><code><span class="p">{</span><span class="w"></span>
+<span class="w">  </span><span class="nt">&quot;type&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Microsoft.Network/virtualNetworks&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">  </span><span class="nt">&quot;apiVersion&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;2022-05-01&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">  </span><span class="nt">&quot;name&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;vnet-01&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">  </span><span class="nt">&quot;location&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;[parameters(&#39;location&#39;)]&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">  </span><span class="nt">&quot;properties&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">    </span><span class="nt">&quot;addressSpace&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">      </span><span class="nt">&quot;addressPrefixes&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w"></span>
+<span class="w">        </span><span class="s2">&quot;10.0.0.0/16&quot;</span><span class="w"></span>
+<span class="w">      </span><span class="p">]</span><span class="w"></span>
+<span class="w">    </span><span class="p">},</span><span class="w"></span>
+<span class="w">    </span><span class="nt">&quot;dhcpOptions&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">      </span><span class="nt">&quot;dnsServers&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w"></span>
+<span class="w">        </span><span class="s2">&quot;10.0.1.4&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">        </span><span class="s2">&quot;10.0.1.5&quot;</span><span class="w"></span>
+<span class="w">      </span><span class="p">]</span><span class="w"></span>
+<span class="w">    </span><span class="p">}</span><span class="w"></span>
+<span class="w">  </span><span class="p">}</span><span class="w"></span>
+<span class="p">}</span><span class="w"></span>
+</code></pre></div>
+<h3 id="configure-with-bicep">Configure with Bicep<a class="headerlink" href="#configure-with-bicep" title="Permanent link">#</a></h3>
+<p>To deploy Virtual Networks that pass this rule:</p>
+<ul>
+<li>Set <code>properties.dhcpOptions.dnsServers</code> to at least two DNS server addresses. OR</li>
+<li>Use the default Azure DNS servers.</li>
+</ul>
+<p>For example:</p>
+<div class="highlight"><pre><span></span><code>resource virtualnetwork01 &#39;Microsoft.Network/virtualNetworks@2022-05-01&#39; = {
+  name: &#39;vnet-01&#39;
+  location: location
+  properties: {
+    addressSpace: {
+      addressPrefixes: [
+        &#39;10.0.0.0/16&#39;
+      ]
+    }
+    dhcpOptions: {
+      dnsServers: [
+        &#39;10.0.1.4&#39;
+        &#39;10.0.1.5&#39;
+      ]
+    }
+  }
+}
+</code></pre></div>
+<h2 id="links">Links<a class="headerlink" href="#links" title="Permanent link">#</a></h2>
+<ul>
+<li><a href="https://learn.microsoft.com/azure/architecture/framework/resiliency/design-resiliency#understand-the-impact-of-dependencies">Understand the impact of dependencies</a></li>
+<li><a href="https://learn.microsoft.com/azure/architecture/reference-architectures/hybrid-networking/hub-spoke">Hub-spoke network topology in Azure</a></li>
+<li><a href="https://learn.microsoft.com/azure/cloud-adoption-framework/ready/landing-zone/#azure-landing-zone-conceptual-architecture">Azure landing zone conceptual architecture</a></li>
+<li><a href="https://learn.microsoft.com/azure/templates/microsoft.network/virtualnetworks">Azure deployment reference</a></li>
+</ul>
 
   <!-- Last update of source file -->
   
@@ -7198,7 +7342,7 @@
   <small>
     
       Last update:
-      2021-07-04
+      2022-11-06
     
   </small>
 </div>

@@ -1136,6 +1136,11 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
+         <loc>https://azure.github.io/PSRule.Rules.Azure/en/rules/Azure.MariaDB.DefenderCloud/</loc>
+         <lastmod>2022-11-16</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
          <loc>https://azure.github.io/PSRule.Rules.Azure/en/rules/Azure.MariaDB.GeoRedundantBackup/</loc>
          <lastmod>2022-11-16</lastmod>
          <changefreq>daily</changefreq>

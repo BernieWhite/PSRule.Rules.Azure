@@ -15,7 +15,7 @@
         <link rel="canonical" href="https://azure.github.io/PSRule.Rules.Azure/en/baselines/Azure.Default/">
       
       <link rel="icon" href="../../../assets/ms_icon.png">
-      <meta name="generator" content="mkdocs-1.4.2, mkdocs-material-8.5.8">
+      <meta name="generator" content="mkdocs-1.4.2, mkdocs-material-8.5.9">
     
     
       
@@ -26,7 +26,7 @@
       <link rel="stylesheet" href="../../../assets/stylesheets/main.20d9efc8.min.css">
       
         
-        <link rel="stylesheet" href="../../../assets/stylesheets/palette.815d1a91.min.css">
+        <link rel="stylesheet" href="../../../assets/stylesheets/palette.08040f6c.min.css">
         
           
           
@@ -98,7 +98,7 @@
     
     
     
-    <body dir="ltr" data-md-color-scheme="" data-md-color-primary="black" data-md-color-accent="blue">
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="black" data-md-color-accent="blue">
   
     
     
@@ -1306,6 +1306,18 @@
       
       
       
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
         
           
         
@@ -3727,6 +3739,20 @@
   
   
     <li class="md-nav__item">
+      <a href="../../rules/Azure.Deployment.OuterSecret/" class="md-nav__link">
+        Azure.Deployment.OuterSecret
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
       <a href="../../rules/Azure.Deployment.OutputSecretValue/" class="md-nav__link">
         Azure.Deployment.OutputSecretValue
       </a>
@@ -4287,6 +4313,20 @@
   
   
     <li class="md-nav__item">
+      <a href="../../rules/Azure.MariaDB.GeoRedundantBackup/" class="md-nav__link">
+        Azure.MariaDB.GeoRedundantBackup
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
       <a href="../../rules/Azure.Monitor.ServiceHealth/" class="md-nav__link">
         Azure.Monitor.ServiceHealth
       </a>
@@ -4343,6 +4383,20 @@
   
   
     <li class="md-nav__item">
+      <a href="../../rules/Azure.MySQL.GeoRedundantBackup/" class="md-nav__link">
+        Azure.MySQL.GeoRedundantBackup
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
       <a href="../../rules/Azure.MySQL.MinTLS/" class="md-nav__link">
         Azure.MySQL.MinTLS
       </a>
@@ -4359,6 +4413,20 @@
     <li class="md-nav__item">
       <a href="../../rules/Azure.MySQL.ServerName/" class="md-nav__link">
         Azure.MySQL.ServerName
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../rules/Azure.MySQL.UseFlexible/" class="md-nav__link">
+        Azure.MySQL.UseFlexible
       </a>
     </li>
   
@@ -4569,6 +4637,20 @@
     <li class="md-nav__item">
       <a href="../../rules/Azure.PostgreSQL.FirewallRuleCount/" class="md-nav__link">
         Azure.PostgreSQL.FirewallRuleCount
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../rules/Azure.PostgreSQL.GeoRedundantBackup/" class="md-nav__link">
+        Azure.PostgreSQL.GeoRedundantBackup
       </a>
     </li>
   
@@ -6121,6 +6203,20 @@
   
   
     <li class="md-nav__item">
+      <a href="../../rules/Azure.VM.SQLServerDisk/" class="md-nav__link">
+        Azure.VM.SQLServerDisk
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
       <a href="../../rules/Azure.VM.Standalone/" class="md-nav__link">
         Azure.VM.Standalone
       </a>
@@ -7187,7 +7283,7 @@
   <h1 id="azuredefault">Azure.Default<a class="headerlink" href="#azuredefault" title="Permanent link">#</a></h1>
 <p>Default baseline for Azure rules.</p>
 <h2 id="rules">Rules<a class="headerlink" href="#rules" title="Permanent link">#</a></h2>
-<p>The following rules are included within <code>Azure.Default</code>. This baseline includes a total of 315 rules.</p>
+<p>The following rules are included within <code>Azure.Default</code>. This baseline includes a total of 321 rules.</p>
 <table>
 <thead>
 <tr>
@@ -7783,6 +7879,11 @@
 <td>Awareness</td>
 </tr>
 <tr>
+<td><a href="../../rules/Azure.Deployment.OuterSecret/">Azure.Deployment.OuterSecret</a></td>
+<td>Do not use Outer deployments when references SecureString or SecureObject parameters.</td>
+<td>Critical</td>
+</tr>
+<tr>
 <td><a href="../../rules/Azure.Deployment.OutputSecretValue/">Azure.Deployment.OutputSecretValue</a></td>
 <td>Avoid outputting sensitive deployment values.</td>
 <td>Critical</td>
@@ -7983,6 +8084,11 @@
 <td>Critical</td>
 </tr>
 <tr>
+<td><a href="../../rules/Azure.MariaDB.GeoRedundantBackup/">Azure.MariaDB.GeoRedundantBackup</a></td>
+<td>Azure Database for MariaDB should store backups in a geo-redundant storage.</td>
+<td>Important</td>
+</tr>
+<tr>
 <td><a href="../../rules/Azure.Monitor.ServiceHealth/">Azure.Monitor.ServiceHealth</a></td>
 <td>Configure Service Health alerts to notify administrators.</td>
 <td>Important</td>
@@ -8003,6 +8109,11 @@
 <td>Awareness</td>
 </tr>
 <tr>
+<td><a href="../../rules/Azure.MySQL.GeoRedundantBackup/">Azure.MySQL.GeoRedundantBackup</a></td>
+<td>Azure Database for MySQL should store backups in a geo-redundant storage.</td>
+<td>Important</td>
+</tr>
+<tr>
 <td><a href="../../rules/Azure.MySQL.MinTLS/">Azure.MySQL.MinTLS</a></td>
 <td>MySQL DB servers should reject TLS versions older than 1.2.</td>
 <td>Critical</td>
@@ -8011,6 +8122,11 @@
 <td><a href="../../rules/Azure.MySQL.ServerName/">Azure.MySQL.ServerName</a></td>
 <td>Azure MySQL DB server names should meet naming requirements.</td>
 <td>Awareness</td>
+</tr>
+<tr>
+<td><a href="../../rules/Azure.MySQL.UseFlexible/">Azure.MySQL.UseFlexible</a></td>
+<td>Use Azure Database for MySQL Flexible Server deployment model.</td>
+<td>Important</td>
 </tr>
 <tr>
 <td><a href="../../rules/Azure.MySQL.UseSSL/">Azure.MySQL.UseSSL</a></td>
@@ -8086,6 +8202,11 @@
 <td><a href="../../rules/Azure.PostgreSQL.FirewallRuleCount/">Azure.PostgreSQL.FirewallRuleCount</a></td>
 <td>Determine if there is an excessive number of firewall rules.</td>
 <td>Awareness</td>
+</tr>
+<tr>
+<td><a href="../../rules/Azure.PostgreSQL.GeoRedundantBackup/">Azure.PostgreSQL.GeoRedundantBackup</a></td>
+<td>Azure Database for PostgreSQL should store backups in a geo-redundant storage.</td>
+<td>Important</td>
 </tr>
 <tr>
 <td><a href="../../rules/Azure.PostgreSQL.MinTLS/">Azure.PostgreSQL.MinTLS</a></td>
@@ -8635,6 +8756,11 @@
 <tr>
 <td><a href="../../rules/Azure.VM.PublicKey/">Azure.VM.PublicKey</a></td>
 <td>Linux virtual machines should use public keys.</td>
+<td>Important</td>
+</tr>
+<tr>
+<td><a href="../../rules/Azure.VM.SQLServerDisk/">Azure.VM.SQLServerDisk</a></td>
+<td>Use Premium SSD disks or greater for data and log files for production SQL Server workloads.</td>
 <td>Important</td>
 </tr>
 <tr>

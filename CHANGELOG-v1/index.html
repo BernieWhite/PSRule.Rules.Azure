@@ -15,7 +15,7 @@
         <link rel="canonical" href="https://azure.github.io/PSRule.Rules.Azure/CHANGELOG-v1/">
       
       <link rel="icon" href="../assets/ms_icon.png">
-      <meta name="generator" content="mkdocs-1.4.2, mkdocs-material-8.5.9">
+      <meta name="generator" content="mkdocs-1.4.2, mkdocs-material-8.5.10">
     
     
       
@@ -23,7 +23,7 @@
       
     
     
-      <link rel="stylesheet" href="../assets/stylesheets/main.20d9efc8.min.css">
+      <link rel="stylesheet" href="../assets/stylesheets/main.472b142f.min.css">
       
         
         <link rel="stylesheet" href="../assets/stylesheets/palette.08040f6c.min.css">
@@ -3087,6 +3087,16 @@
         
           
         
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
       
       
         <label class="md-nav__link" for="__nav_4_5">
@@ -5445,6 +5455,20 @@
   
   
     <li class="md-nav__item">
+      <a href="../en/rules/Azure.MariaDB.UseSSL/" class="md-nav__link">
+        Azure.MariaDB.UseSSL
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
       <a href="../en/rules/Azure.Monitor.ServiceHealth/" class="md-nav__link">
         Azure.Monitor.ServiceHealth
       </a>
@@ -5461,6 +5485,20 @@
     <li class="md-nav__item">
       <a href="../en/rules/Azure.MySQL.AllowAzureAccess/" class="md-nav__link">
         Azure.MySQL.AllowAzureAccess
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../en/rules/Azure.MySQL.DefenderCloud/" class="md-nav__link">
+        Azure.MySQL.DefenderCloud
       </a>
     </li>
   
@@ -5727,6 +5765,20 @@
     <li class="md-nav__item">
       <a href="../en/rules/Azure.PostgreSQL.AllowAzureAccess/" class="md-nav__link">
         Azure.PostgreSQL.AllowAzureAccess
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../en/rules/Azure.PostgreSQL.DefenderCloud/" class="md-nav__link">
+        Azure.PostgreSQL.DefenderCloud
       </a>
     </li>
   
@@ -7335,6 +7387,20 @@
   
   
     <li class="md-nav__item">
+      <a href="../en/rules/Azure.VM.ScriptExtensions/" class="md-nav__link">
+        Azure.VM.ScriptExtensions
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
       <a href="../en/rules/Azure.VM.Standalone/" class="md-nav__link">
         Azure.VM.Standalone
       </a>
@@ -7449,6 +7515,20 @@
     <li class="md-nav__item">
       <a href="../en/rules/Azure.VMSS.PublicKey/" class="md-nav__link">
         Azure.VMSS.PublicKey
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../en/rules/Azure.VMSS.ScriptExtensions/" class="md-nav__link">
+        Azure.VMSS.ScriptExtensions
       </a>
     </li>
   
@@ -9431,20 +9511,24 @@
 <ul>
 <li>New rules:<ul>
 <li>Azure Database for MariaDB:<ul>
+<li>Check Azure Database for MariaDB servers only accept encrypted connections by <a href="https://github.com/bengeset96">@bengeset96</a>.
+  <a href="https://github.com/Azure/PSRule.Rules.Azure/issues/1852">#1852</a></li>
 <li>Check Azure Database for MariaDB servers have Microsoft Defender configured by <a href="https://github.com/bengeset96">@bengeset96</a>.
   <a href="https://github.com/Azure/PSRule.Rules.Azure/issues/1850">#1850</a></li>
-<li>Check Azure Database for MariaDB servers have geo-redundant backup configured by <a href="https://github.com/bengeset96">@bengeset96</a>.
-  <a href="https://github.com/Azure/PSRule.Rules.Azure/issues/1848">#1848</a></li>
 <li>Check Azure Database for MariaDB servers have geo-redundant backup configured by <a href="https://github.com/bengeset96">@bengeset96</a>.
   <a href="https://github.com/Azure/PSRule.Rules.Azure/issues/1848">#1848</a></li>
 </ul>
 </li>
 <li>Azure Database for PostgreSQL:<ul>
+<li>Check Azure Database for PostgreSQL servers have Microsoft Defender configured by <a href="https://github.com/bengeset96">@bengeset96</a>.
+  <a href="https://github.com/Azure/PSRule.Rules.Azure/issues/286">#286</a></li>
 <li>Check Azure Database for PostgreSQL servers have geo-redundant backup configured by <a href="https://github.com/bengeset96">@bengeset96</a>.
   <a href="https://github.com/Azure/PSRule.Rules.Azure/issues/285">#285</a></li>
 </ul>
 </li>
 <li>Azure Database for MySQL:<ul>
+<li>Check Azure Database for MySQL servers have Microsoft Defender configured by <a href="https://github.com/bengeset96">@bengeset96</a>.
+  <a href="https://github.com/Azure/PSRule.Rules.Azure/issues/287">#287</a></li>
 <li>Check Azure Database for MySQL servers uses the flexible deployment model by <a href="https://github.com/bengeset96">@bengeset96</a>.
   <a href="https://github.com/Azure/PSRule.Rules.Azure/issues/1841">#1841</a></li>
 <li>Check Azure Database for MySQL Flexible Servers have geo-redundant backup configured by <a href="https://github.com/bengeset96">@bengeset96</a>.
@@ -9456,6 +9540,8 @@
 <li>Azure Resource Deployments:<ul>
 <li>Check for nested deployment that are scoped to <code>outer</code> and passing secure values by <a href="https://github.com/ms-sambell">@ms-sambell</a>.
   <a href="https://github.com/Azure/PSRule.Rules.Azure/issues/1475">#1475</a></li>
+<li>Check custom script extension uses protected settings for secure values by <a href="https://github.com/ms-sambell">@ms-sambell</a>.
+  <a href="https://github.com/Azure/PSRule.Rules.Azure/issues/1478">#1478</a></li>
 </ul>
 </li>
 <li>Virtual Machine:<ul>
@@ -9463,6 +9549,11 @@
   <a href="https://github.com/Azure/PSRule.Rules.Azure/issues/9">#9</a></li>
 </ul>
 </li>
+</ul>
+</li>
+<li>Engineering:<ul>
+<li>Bump Microsoft.NET.Test.Sdk to v17.4.0
+  <a href="https://github.com/Azure/PSRule.Rules.Azure/pull/1838">#1838</a></li>
 </ul>
 </li>
 </ul>
@@ -13130,7 +13221,7 @@
   <small>
     
       Last update:
-      2022-11-16
+      2022-11-19
     
   </small>
 </div>

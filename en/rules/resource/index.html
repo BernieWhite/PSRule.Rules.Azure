@@ -15,7 +15,7 @@
         <link rel="canonical" href="https://azure.github.io/PSRule.Rules.Azure/en/rules/resource/">
       
       <link rel="icon" href="../../../assets/ms_icon.png">
-      <meta name="generator" content="mkdocs-1.4.2, mkdocs-material-8.5.9">
+      <meta name="generator" content="mkdocs-1.4.2, mkdocs-material-8.5.10">
     
     
       
@@ -23,7 +23,7 @@
       
     
     
-      <link rel="stylesheet" href="../../../assets/stylesheets/main.20d9efc8.min.css">
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.472b142f.min.css">
       
         
         <link rel="stylesheet" href="../../../assets/stylesheets/palette.08040f6c.min.css">
@@ -1732,6 +1732,16 @@
       
       
       
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
         
           
         
@@ -4769,6 +4779,20 @@
   
   
     <li class="md-nav__item">
+      <a href="../Azure.MariaDB.UseSSL/" class="md-nav__link">
+        Azure.MariaDB.UseSSL
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
       <a href="../Azure.Monitor.ServiceHealth/" class="md-nav__link">
         Azure.Monitor.ServiceHealth
       </a>
@@ -4785,6 +4809,20 @@
     <li class="md-nav__item">
       <a href="../Azure.MySQL.AllowAzureAccess/" class="md-nav__link">
         Azure.MySQL.AllowAzureAccess
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Azure.MySQL.DefenderCloud/" class="md-nav__link">
+        Azure.MySQL.DefenderCloud
       </a>
     </li>
   
@@ -5051,6 +5089,20 @@
     <li class="md-nav__item">
       <a href="../Azure.PostgreSQL.AllowAzureAccess/" class="md-nav__link">
         Azure.PostgreSQL.AllowAzureAccess
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Azure.PostgreSQL.DefenderCloud/" class="md-nav__link">
+        Azure.PostgreSQL.DefenderCloud
       </a>
     </li>
   
@@ -6659,6 +6711,20 @@
   
   
     <li class="md-nav__item">
+      <a href="../Azure.VM.ScriptExtensions/" class="md-nav__link">
+        Azure.VM.ScriptExtensions
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
       <a href="../Azure.VM.Standalone/" class="md-nav__link">
         Azure.VM.Standalone
       </a>
@@ -6773,6 +6839,20 @@
     <li class="md-nav__item">
       <a href="../Azure.VMSS.PublicKey/" class="md-nav__link">
         Azure.VMSS.PublicKey
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Azure.VMSS.ScriptExtensions/" class="md-nav__link">
+        Azure.VMSS.ScriptExtensions
       </a>
     </li>
   
@@ -8802,6 +8882,12 @@
 <td>Important</td>
 <td>Error</td>
 </tr>
+<tr>
+<td><a href="../Azure.MariaDB.UseSSL/">Azure.MariaDB.UseSSL</a></td>
+<td>Azure Database for MariaDB servers should only accept encrypted connections.</td>
+<td>Critical</td>
+<td>Error</td>
+</tr>
 </tbody>
 </table>
 <h2 id="azure-database-for-mysql">Azure Database for MySQL<a class="headerlink" href="#azure-database-for-mysql" title="Permanent link">#</a></h2>
@@ -8818,6 +8904,12 @@
 <tr>
 <td><a href="../Azure.MySQL.AllowAzureAccess/">Azure.MySQL.AllowAzureAccess</a></td>
 <td>Determine if access from Azure services is required.</td>
+<td>Important</td>
+<td>Error</td>
+</tr>
+<tr>
+<td><a href="../Azure.MySQL.DefenderCloud/">Azure.MySQL.DefenderCloud</a></td>
+<td>Enable Microsoft Defender for Cloud for Azure Database for MySQL.</td>
 <td>Important</td>
 <td>Error</td>
 </tr>
@@ -8879,6 +8971,12 @@
 <tr>
 <td><a href="../Azure.PostgreSQL.AllowAzureAccess/">Azure.PostgreSQL.AllowAzureAccess</a></td>
 <td>Determine if access from Azure services is required.</td>
+<td>Important</td>
+<td>Error</td>
+</tr>
+<tr>
+<td><a href="../Azure.PostgreSQL.DefenderCloud/">Azure.PostgreSQL.DefenderCloud</a></td>
+<td>Enable Microsoft Defender for Cloud for Azure Database for PostgreSQL.</td>
 <td>Important</td>
 <td>Error</td>
 </tr>
@@ -10540,6 +10638,12 @@
 <td>Error</td>
 </tr>
 <tr>
+<td><a href="../Azure.VM.ScriptExtensions/">Azure.VM.ScriptExtensions</a></td>
+<td>Custom Script Extensions scripts that reference secret values must use the protectedSettings.</td>
+<td>Important</td>
+<td>Error</td>
+</tr>
+<tr>
 <td><a href="../Azure.VM.SQLServerDisk/">Azure.VM.SQLServerDisk</a></td>
 <td>Use Premium SSD disks or greater for data and log files for production SQL Server workloads.</td>
 <td>Important</td>
@@ -10604,6 +10708,12 @@
 <td><a href="../Azure.VMSS.Name/">Azure.VMSS.Name</a></td>
 <td>Virtual Machine Scale Set (VMSS) names should meet naming requirements.</td>
 <td>Awareness</td>
+<td>Error</td>
+</tr>
+<tr>
+<td><a href="../Azure.VMSS.ScriptExtensions/">Azure.VMSS.ScriptExtensions</a></td>
+<td>Custom Script Extensions scripts that reference secret values must use the protectedSettings.</td>
+<td>Important</td>
 <td>Error</td>
 </tr>
 </tbody>

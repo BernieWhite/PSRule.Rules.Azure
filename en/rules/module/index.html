@@ -15,7 +15,7 @@
         <link rel="canonical" href="https://azure.github.io/PSRule.Rules.Azure/en/rules/module/">
       
       <link rel="icon" href="../../../assets/ms_icon.png">
-      <meta name="generator" content="mkdocs-1.4.2, mkdocs-material-8.5.9">
+      <meta name="generator" content="mkdocs-1.4.2, mkdocs-material-8.5.10">
     
     
       
@@ -23,7 +23,7 @@
       
     
     
-      <link rel="stylesheet" href="../../../assets/stylesheets/main.20d9efc8.min.css">
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.472b142f.min.css">
       
         
         <link rel="stylesheet" href="../../../assets/stylesheets/palette.08040f6c.min.css">
@@ -1666,6 +1666,13 @@
 </li>
         
           <li class="md-nav__item">
+  <a href="#secrets" class="md-nav__link">
+    Secrets
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#security-configuration" class="md-nav__link">
     Security configuration
   </a>
@@ -1741,6 +1748,16 @@
       
       
       
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
         
           
         
@@ -4778,6 +4795,20 @@
   
   
     <li class="md-nav__item">
+      <a href="../Azure.MariaDB.UseSSL/" class="md-nav__link">
+        Azure.MariaDB.UseSSL
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
       <a href="../Azure.Monitor.ServiceHealth/" class="md-nav__link">
         Azure.Monitor.ServiceHealth
       </a>
@@ -4794,6 +4825,20 @@
     <li class="md-nav__item">
       <a href="../Azure.MySQL.AllowAzureAccess/" class="md-nav__link">
         Azure.MySQL.AllowAzureAccess
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Azure.MySQL.DefenderCloud/" class="md-nav__link">
+        Azure.MySQL.DefenderCloud
       </a>
     </li>
   
@@ -5060,6 +5105,20 @@
     <li class="md-nav__item">
       <a href="../Azure.PostgreSQL.AllowAzureAccess/" class="md-nav__link">
         Azure.PostgreSQL.AllowAzureAccess
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Azure.PostgreSQL.DefenderCloud/" class="md-nav__link">
+        Azure.PostgreSQL.DefenderCloud
       </a>
     </li>
   
@@ -6668,6 +6727,20 @@
   
   
     <li class="md-nav__item">
+      <a href="../Azure.VM.ScriptExtensions/" class="md-nav__link">
+        Azure.VM.ScriptExtensions
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
       <a href="../Azure.VM.Standalone/" class="md-nav__link">
         Azure.VM.Standalone
       </a>
@@ -6782,6 +6855,20 @@
     <li class="md-nav__item">
       <a href="../Azure.VMSS.PublicKey/" class="md-nav__link">
         Azure.VMSS.PublicKey
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Azure.VMSS.ScriptExtensions/" class="md-nav__link">
+        Azure.VMSS.ScriptExtensions
       </a>
     </li>
   
@@ -8028,6 +8115,13 @@
           <li class="md-nav__item">
   <a href="#review-and-remediate" class="md-nav__link">
     Review and remediate
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#secrets" class="md-nav__link">
+    Secrets
   </a>
   
 </li>
@@ -9885,6 +9979,12 @@
 <td>Error</td>
 </tr>
 <tr>
+<td><a href="../Azure.MariaDB.UseSSL/">Azure.MariaDB.UseSSL</a></td>
+<td>Azure Database for MariaDB servers should only accept encrypted connections.</td>
+<td>Critical</td>
+<td>Error</td>
+</tr>
+<tr>
 <td><a href="../Azure.MySQL.UseSSL/">Azure.MySQL.UseSSL</a></td>
 <td>Enforce encrypted MySQL connections.</td>
 <td>Critical</td>
@@ -10582,6 +10682,31 @@
 </tr>
 </tbody>
 </table>
+<h3 id="secrets">Secrets<a class="headerlink" href="#secrets" title="Permanent link">#</a></h3>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Synopsis</th>
+<th>Severity</th>
+<th>Level</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="../Azure.VM.ScriptExtensions/">Azure.VM.ScriptExtensions</a></td>
+<td>Custom Script Extensions scripts that reference secret values must use the protectedSettings.</td>
+<td>Important</td>
+<td>Error</td>
+</tr>
+<tr>
+<td><a href="../Azure.VMSS.ScriptExtensions/">Azure.VMSS.ScriptExtensions</a></td>
+<td>Custom Script Extensions scripts that reference secret values must use the protectedSettings.</td>
+<td>Important</td>
+<td>Error</td>
+</tr>
+</tbody>
+</table>
 <h3 id="security-configuration">Security configuration<a class="headerlink" href="#security-configuration" title="Permanent link">#</a></h3>
 <table>
 <thead>
@@ -10651,6 +10776,18 @@
 <tr>
 <td><a href="../Azure.MariaDB.DefenderCloud/">Azure.MariaDB.DefenderCloud</a></td>
 <td>Enable Microsoft Defender for Cloud for Azure Database for MariaDB.</td>
+<td>Important</td>
+<td>Error</td>
+</tr>
+<tr>
+<td><a href="../Azure.MySQL.DefenderCloud/">Azure.MySQL.DefenderCloud</a></td>
+<td>Enable Microsoft Defender for Cloud for Azure Database for MySQL.</td>
+<td>Important</td>
+<td>Error</td>
+</tr>
+<tr>
+<td><a href="../Azure.PostgreSQL.DefenderCloud/">Azure.PostgreSQL.DefenderCloud</a></td>
+<td>Enable Microsoft Defender for Cloud for Azure Database for PostgreSQL.</td>
 <td>Important</td>
 <td>Error</td>
 </tr>

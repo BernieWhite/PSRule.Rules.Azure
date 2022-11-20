@@ -3097,6 +3097,8 @@
         
           
         
+          
+        
       
       
         <label class="md-nav__link" for="__nav_4_5">
@@ -5443,6 +5445,20 @@
     <li class="md-nav__item">
       <a href="../en/rules/Azure.MariaDB.GeoRedundantBackup/" class="md-nav__link">
         Azure.MariaDB.GeoRedundantBackup
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../en/rules/Azure.MariaDB.MinTLS/" class="md-nav__link">
+        Azure.MariaDB.MinTLS
       </a>
     </li>
   
@@ -9509,8 +9525,15 @@
 </ul>
 <h2 id="unreleased">Unreleased<a class="headerlink" href="#unreleased" title="Permanent link">#</a></h2>
 <ul>
+<li>Bug fixes:<ul>
+<li>Fixed missing support for diagnostic settings category groups by <a href="https://github.com/bengeset96">@bengeset96</a>.
+  <a href="https://github.com/Azure/PSRule.Rules.Azure/issues/1873">#1873</a></li>
+</ul>
+</li>
 <li>New rules:<ul>
 <li>Azure Database for MariaDB:<ul>
+<li>Check Azure Database for MariaDB servers only uses TLS 1.2 version by <a href="https://github.com/bengeset96">@bengeset96</a>.
+  <a href="https://github.com/Azure/PSRule.Rules.Azure/issues/1853">#1853</a></li>
 <li>Check Azure Database for MariaDB servers only accept encrypted connections by <a href="https://github.com/bengeset96">@bengeset96</a>.
   <a href="https://github.com/Azure/PSRule.Rules.Azure/issues/1852">#1852</a></li>
 <li>Check Azure Database for MariaDB servers have Microsoft Defender configured by <a href="https://github.com/bengeset96">@bengeset96</a>.
@@ -13221,7 +13244,7 @@
   <small>
     
       Last update:
-      2022-11-19
+      2022-11-20
     
   </small>
 </div>

@@ -576,6 +576,11 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
+         <loc>https://azure.github.io/PSRule.Rules.Azure/en/rules/Azure.APIM.MultiRegion/</loc>
+         <lastmod>2022-11-23</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
          <loc>https://azure.github.io/PSRule.Rules.Azure/en/rules/Azure.APIM.Name/</loc>
          <lastmod>2022-11-23</lastmod>
          <changefreq>daily</changefreq>

@@ -3114,6 +3114,8 @@
         
           
         
+          
+        
       
       
         <label class="md-nav__link" for="__nav_4_5">
@@ -3864,6 +3866,20 @@
     <li class="md-nav__item">
       <a href="../en/rules/Azure.APIM.MinAPIVersion/" class="md-nav__link">
         Azure.APIM.MinAPIVersion
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../en/rules/Azure.APIM.MultiRegion/" class="md-nav__link">
+        Azure.APIM.MultiRegion
       </a>
     </li>
   
@@ -9602,8 +9618,14 @@
   See <a href="../upgrade-notes/">upgrade notes</a> for more information.</li>
 </ul>
 <h2 id="unreleased">Unreleased<a class="headerlink" href="#unreleased" title="Permanent link">#</a></h2>
+<p>What's changed since pre-release v1.22.0-B0062:</p>
 <ul>
 <li>New rules:<ul>
+<li>API Management:<ul>
+<li>Check API management instances uses multi-region deployment by <a href="https://github.com/BenjaminEngeset">@BenjaminEngeset</a>.
+  <a href="https://github.com/Azure/PSRule.Rules.Azure/issues/1030">#1030</a></li>
+</ul>
+</li>
 <li>Azure Database for MariaDB:<ul>
 <li>Check Azure Database for MariaDB servers, databases, firewall rules and VNET rules names meet naming requirements by <a href="https://github.com/BenjaminEngeset">@BenjaminEngeset</a>.
   <a href="https://github.com/Azure/PSRule.Rules.Azure/issues/1854">#1854</a></li>
@@ -9623,6 +9645,10 @@
   <a href="https://github.com/Azure/PSRule.Rules.Azure/issues/1876">#1876</a></li>
 <li>Fixed an item with the same key for parameters by <a href="https://github.com/BernieWhite">@BernieWhite</a>
   <a href="https://github.com/Azure/PSRule.Rules.Azure/issues/1871">#1871</a></li>
+<li>Fixed policy parse of <code>requestContext</code> function by <a href="https://github.com/BernieWhite">@BernieWhite</a>.
+  <a href="https://github.com/Azure/PSRule.Rules.Azure/issues/1654">#1654</a></li>
+<li>Fixed handling of policy type field by <a href="https://github.com/BernieWhite">@BernieWhite</a>.
+  <a href="https://github.com/Azure/PSRule.Rules.Azure/issues/1323">#1323</a></li>
 </ul>
 </li>
 </ul>
@@ -13350,7 +13376,7 @@
   <small>
     
       Last update:
-      2022-11-23
+      2022-11-24
     
   </small>
 </div>

@@ -1026,6 +1026,13 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#v1220" class="md-nav__link">
+    v1.22.0
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#v1220-b0203-pre-release" class="md-nav__link">
     v1.22.0-B0203 (pre-release)
   </a>
@@ -8536,6 +8543,13 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#v1220" class="md-nav__link">
+    v1.22.0
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#v1220-b0203-pre-release" class="md-nav__link">
     v1.22.0-B0203 (pre-release)
   </a>
@@ -9660,6 +9674,116 @@
   See <a href="../upgrade-notes/">upgrade notes</a> for more information.</li>
 </ul>
 <h2 id="unreleased">Unreleased<a class="headerlink" href="#unreleased" title="Permanent link">#</a></h2>
+<h2 id="v1220">v1.22.0<a class="headerlink" href="#v1220" title="Permanent link">#</a></h2>
+<p>What's changed since v1.21.2:</p>
+<ul>
+<li>New rules:<ul>
+<li>API Management:<ul>
+<li>Check API management instances uses multi-region deployment by <a href="https://github.com/BenjaminEngeset">@BenjaminEngeset</a>.
+  <a href="https://github.com/Azure/PSRule.Rules.Azure/issues/1030">#1030</a></li>
+<li>Check api management instances limits control plane API calls to apim with version <code>'2021-08-01'</code> or newer by <a href="https://github.com/BenjaminEngeset">@BenjaminEngeset</a>.
+  <a href="https://github.com/Azure/PSRule.Rules.Azure/issues/1819">#1819</a></li>
+</ul>
+</li>
+<li>App Service Environment:<ul>
+<li>Check app service environments uses version 3 (ASEv3) instead of classic version 1 (ASEv1) and version 2 (ASEv2) by <a href="https://github.com/BenjaminEngeset">@BenjaminEngeset</a>.
+  <a href="https://github.com/Azure/PSRule.Rules.Azure/issues/1805">#1805</a></li>
+</ul>
+</li>
+<li>Azure Database for MariaDB:<ul>
+<li>Check Azure Database for MariaDB servers, databases, firewall rules and VNET rules names meet naming requirements by <a href="https://github.com/BenjaminEngeset">@BenjaminEngeset</a>.
+  <a href="https://github.com/Azure/PSRule.Rules.Azure/issues/1854">#1854</a></li>
+<li>Check Azure Database for MariaDB servers only uses TLS 1.2 version by <a href="https://github.com/BenjaminEngeset">@BenjaminEngeset</a>.
+  <a href="https://github.com/Azure/PSRule.Rules.Azure/issues/1853">#1853</a></li>
+<li>Check Azure Database for MariaDB servers only accept encrypted connections by <a href="https://github.com/BenjaminEngeset">@BenjaminEngeset</a>.
+  <a href="https://github.com/Azure/PSRule.Rules.Azure/issues/1852">#1852</a></li>
+<li>Check Azure Database for MariaDB servers have Microsoft Defender configured by <a href="https://github.com/BenjaminEngeset">@BenjaminEngeset</a>.
+  <a href="https://github.com/Azure/PSRule.Rules.Azure/issues/1850">#1850</a></li>
+<li>Check Azure Database for MariaDB servers have geo-redundant backup configured by <a href="https://github.com/BenjaminEngeset">@BenjaminEngeset</a>.
+  <a href="https://github.com/Azure/PSRule.Rules.Azure/issues/1848">#1848</a></li>
+</ul>
+</li>
+<li>Azure Database for PostgreSQL:<ul>
+<li>Check Azure Database for PostgreSQL servers have Microsoft Defender configured by <a href="https://github.com/BenjaminEngeset">@BenjaminEngeset</a>.
+  <a href="https://github.com/Azure/PSRule.Rules.Azure/issues/286">#286</a></li>
+<li>Check Azure Database for PostgreSQL servers have geo-redundant backup configured by <a href="https://github.com/BenjaminEngeset">@BenjaminEngeset</a>.
+  <a href="https://github.com/Azure/PSRule.Rules.Azure/issues/285">#285</a></li>
+</ul>
+</li>
+<li>Azure Database for MySQL:<ul>
+<li>Check Azure Database for MySQL servers have Microsoft Defender configured by <a href="https://github.com/BenjaminEngeset">@BenjaminEngeset</a>.
+  <a href="https://github.com/Azure/PSRule.Rules.Azure/issues/287">#287</a></li>
+<li>Check Azure Database for MySQL servers uses the flexible deployment model by <a href="https://github.com/BenjaminEngeset">@BenjaminEngeset</a>.
+  <a href="https://github.com/Azure/PSRule.Rules.Azure/issues/1841">#1841</a></li>
+<li>Check Azure Database for MySQL Flexible Servers have geo-redundant backup configured by <a href="https://github.com/BenjaminEngeset">@BenjaminEngeset</a>.
+  <a href="https://github.com/Azure/PSRule.Rules.Azure/issues/1840">#1840</a></li>
+<li>Check Azure Database for MySQL servers have geo-redundant backup configured by <a href="https://github.com/BenjaminEngeset">@BenjaminEngeset</a>.
+  <a href="https://github.com/Azure/PSRule.Rules.Azure/issues/284">#284</a></li>
+</ul>
+</li>
+<li>Azure Resource Deployments:<ul>
+<li>Check for nested deployment that are scoped to <code>outer</code> and passing secure values by <a href="https://github.com/ms-sambell">@ms-sambell</a>.
+  <a href="https://github.com/Azure/PSRule.Rules.Azure/issues/1475">#1475</a></li>
+<li>Check custom script extension uses protected settings for secure values by <a href="https://github.com/ms-sambell">@ms-sambell</a>.
+  <a href="https://github.com/Azure/PSRule.Rules.Azure/issues/1478">#1478</a></li>
+</ul>
+</li>
+<li>Front Door:<ul>
+<li>Check front door uses caching by <a href="https://github.com/BenjaminEngeset">@BenjaminEngeset</a>.
+  <a href="https://github.com/Azure/PSRule.Rules.Azure/issues/548">#548</a></li>
+</ul>
+</li>
+<li>Virtual Machine:<ul>
+<li>Check virtual machines running SQL Server uses Premium disks or above by <a href="https://github.com/BenjaminEngeset">@BenjaminEngeset</a>.
+  <a href="https://github.com/Azure/PSRule.Rules.Azure/issues/9">#9</a></li>
+</ul>
+</li>
+<li>Virtual Network:<ul>
+<li>Check VNETs with a GatewaySubnet also has an AzureFirewallSubnet by <a href="https://github.com/BernieWhite">@BernieWhite</a>.
+  <a href="https://github.com/Azure/PSRule.Rules.Azure/issues/875">#875</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li>General improvements:<ul>
+<li>Added debug logging improvements for Bicep expansion by <a href="https://github.com/BernieWhite">@BernieWhite</a>.
+  <a href="https://github.com/Azure/PSRule.Rules.Azure/issues/1901">#1901</a></li>
+</ul>
+</li>
+<li>Engineering:<ul>
+<li>Bump PSRule to v2.6.0.
+  <a href="https://github.com/Azure/PSRule.Rules.Azure/pull/1883">#1883</a></li>
+<li>Bump Az.Resources to v6.4.1.
+  <a href="https://github.com/Azure/PSRule.Rules.Azure/pull/1883">#1883</a></li>
+<li>Bump Microsoft.NET.Test.Sdk to v17.4.0
+  <a href="https://github.com/Azure/PSRule.Rules.Azure/pull/1838">#1838</a></li>
+<li>Bump coverlet.collector to v3.2.0.
+  <a href="https://github.com/Azure/PSRule.Rules.Azure/pull/1814">#1814</a></li>
+</ul>
+</li>
+<li>Bug fixes:<ul>
+<li>Fixed ref and name duplicated by <a href="https://github.com/BernieWhite">@BernieWhite</a>.
+  <a href="https://github.com/Azure/PSRule.Rules.Azure/issues/1876">#1876</a></li>
+<li>Fixed an item with the same key for parameters by <a href="https://github.com/BernieWhite">@BernieWhite</a>
+  <a href="https://github.com/Azure/PSRule.Rules.Azure/issues/1871">#1871</a></li>
+<li>Fixed policy parse of <code>requestContext</code> function by <a href="https://github.com/BernieWhite">@BernieWhite</a>.
+  <a href="https://github.com/Azure/PSRule.Rules.Azure/issues/1654">#1654</a></li>
+<li>Fixed handling of policy type field by <a href="https://github.com/BernieWhite">@BernieWhite</a>.
+  <a href="https://github.com/Azure/PSRule.Rules.Azure/issues/1323">#1323</a></li>
+<li>Fixed <code>Azure.AppService.WebProbe</code> with non-boolean value set by <a href="https://github.com/BernieWhite">@BernieWhite</a>.
+  <a href="https://github.com/Azure/PSRule.Rules.Azure/issues/1906">#1906</a></li>
+<li>Fixed managed identity flagged as secret by <code>Azure.Deployment.OutputSecretValue</code> by <a href="https://github.com/BernieWhite">@BernieWhite</a>.
+  <a href="https://github.com/Azure/PSRule.Rules.Azure/issues/1826">#1826</a>
+  <a href="https://github.com/Azure/PSRule.Rules.Azure/issues/1886">#1886</a></li>
+<li>Fixed missing support for diagnostic settings category groups by <a href="https://github.com/BenjaminEngeset">@BenjaminEngeset</a>.
+  <a href="https://github.com/Azure/PSRule.Rules.Azure/issues/1873">#1873</a></li>
+</ul>
+</li>
+</ul>
+<p>What's changed since pre-release v1.22.0-B0203:</p>
+<ul>
+<li>No additional changes.</li>
+</ul>
 <h2 id="v1220-b0203-pre-release">v1.22.0-B0203 (pre-release)<a class="headerlink" href="#v1220-b0203-pre-release" title="Permanent link">#</a></h2>
 <p>What's changed since pre-release v1.22.0-B0153:</p>
 <ul>
@@ -13443,7 +13567,7 @@
   <small>
     
       Last update:
-      2022-11-27
+      2022-11-29
     
   </small>
 </div>

@@ -6,20 +6,20 @@
       <meta charset="utf-8">
       <meta name="viewport" content="width=device-width,initial-scale=1">
       
-        <meta name="description" content="Public IP addresses deployed with Standard SKU should use availability zones in supported regions for high availability.">
+        <meta name="description" content="Determine if there is an excessive number of firewall rules.">
       
       
         <meta name="author" content="Microsoft">
       
       
-        <link rel="canonical" href="https://azure.github.io/PSRule.Rules.Azure/en/rules/Azure.PublicIP.AvailabilityZone/">
+        <link rel="canonical" href="https://azure.github.io/PSRule.Rules.Azure/en/rules/Azure.MariaDB.FirewallRuleCount/">
       
       <link rel="icon" href="../../../assets/ms_icon.png">
       <meta name="generator" content="mkdocs-1.4.2, mkdocs-material-8.5.10">
     
     
       
-        <title>Azure.PublicIP.AvailabilityZone - PSRule for Azure</title>
+        <title>Azure.MariaDB.FirewallRuleCount - PSRule for Azure</title>
       
     
     
@@ -75,20 +75,20 @@
   <!-- Open graph meta tags -->
   <meta property="og:site_name" content="PSRule for Azure" />
   <meta property="og:type" content="website" />
-  <meta property="og:title" content="PSRule for Azure - Azure.PublicIP.AvailabilityZone" />
-  <meta property="og:description" content="Public IP addresses deployed with Standard SKU should use availability zones in supported regions for high availability." />
-  <meta property="og:url" content="https://azure.github.io/PSRule.Rules.Azure/en/rules/Azure.PublicIP.AvailabilityZone/" />
+  <meta property="og:title" content="PSRule for Azure - Azure.MariaDB.FirewallRuleCount" />
+  <meta property="og:description" content="Determine if there is an excessive number of firewall rules." />
+  <meta property="og:url" content="https://azure.github.io/PSRule.Rules.Azure/en/rules/Azure.MariaDB.FirewallRuleCount/" />
   <meta property="og:image" content="https://repository-images.githubusercontent.com/184154668/58818c00-d496-11eb-9b77-016145022654" />
   <meta property="og:image:type" content="image/png" />
   <meta property="og:image:width" content="1280" />
   <meta property="og:image:height" content="640" />
-  <meta property="og:image:alt" content="Public IP addresses deployed with Standard SKU should use availability zones in supported regions for high availability." />
+  <meta property="og:image:alt" content="Determine if there is an excessive number of firewall rules." />
 
   <!-- Twitter meta tags -->
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:site" content="@github" />
-  <meta name="twitter:title" content="PSRule for Azure - Azure.PublicIP.AvailabilityZone" />
-  <meta name="twitter:description" content="Public IP addresses deployed with Standard SKU should use availability zones in supported regions for high availability." />
+  <meta name="twitter:title" content="PSRule for Azure - Azure.MariaDB.FirewallRuleCount" />
+  <meta name="twitter:description" content="Determine if there is an excessive number of firewall rules." />
   <meta name="twitter:image" content="https://repository-images.githubusercontent.com/184154668/58818c00-d496-11eb-9b77-016145022654" />
 
 
@@ -110,7 +110,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#public-ip-addresses-should-use-availability-zones" class="md-skip">
+        <a href="#review-azure-mariadb-server-firewall-rules" class="md-skip">
           Skip to content
         </a>
       
@@ -146,7 +146,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Azure.PublicIP.AvailabilityZone
+              Azure.MariaDB.FirewallRuleCount
             
           </span>
         </div>
@@ -4415,11 +4415,73 @@
               
   
   
+    
   
-    <li class="md-nav__item">
-      <a href="../Azure.MariaDB.FirewallRuleCount/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          Azure.MariaDB.FirewallRuleCount
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         Azure.MariaDB.FirewallRuleCount
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#description" class="md-nav__link">
+    Description
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#recommendation" class="md-nav__link">
+    Recommendation
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#notes" class="md-nav__link">
+    Notes
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#links" class="md-nav__link">
+    Links
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -4933,100 +4995,11 @@
               
   
   
-    
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          Azure.PublicIP.AvailabilityZone
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../Azure.PublicIP.AvailabilityZone/" class="md-nav__link">
         Azure.PublicIP.AvailabilityZone
       </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#description" class="md-nav__link">
-    Description
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#recommendation" class="md-nav__link">
-    Recommendation
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#notes" class="md-nav__link">
-    Notes
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#examples" class="md-nav__link">
-    Examples
-  </a>
-  
-    <nav class="md-nav" aria-label="Examples">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#configure-with-azure-template" class="md-nav__link">
-    Configure with Azure template
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#configure-with-bicep" class="md-nav__link">
-    Configure with Bicep
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#links" class="md-nav__link">
-    Links
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -7561,33 +7534,6 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#examples" class="md-nav__link">
-    Examples
-  </a>
-  
-    <nav class="md-nav" aria-label="Examples">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#configure-with-azure-template" class="md-nav__link">
-    Configure with Azure template
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#configure-with-bicep" class="md-nav__link">
-    Configure with Bicep
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
   <a href="#links" class="md-nav__link">
     Links
   </a>
@@ -7611,7 +7557,7 @@
   
     
       <a
-        href="https://github.com/Azure/PSRule.Rules.Azure/blob/main/docs/en/rules/Azure.PublicIP.AvailabilityZone.md"
+        href="https://github.com/Azure/PSRule.Rules.Azure/blob/main/docs/en/rules/Azure.MariaDB.FirewallRuleCount.md"
         title="Edit this page"
         class="md-content__button md-icon"
       >
@@ -7628,96 +7574,26 @@
   
 
   <!-- Markdown content -->
-  <h1 id="public-ip-addresses-should-use-availability-zones">Public IP addresses should use availability zones<a class="headerlink" href="#public-ip-addresses-should-use-availability-zones" title="Permanent link">#</a></h1>
-<nav class="md-tags"><span class="md-tag">Azure.PublicIP.AvailabilityZone</span><span class="md-tag">AZR-000157</span><span class="md-tag">Error</span></nav>
-<p><a href="../module/#reliability"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path fill-rule="evenodd" d="M1.527 13.237a1.75 1.75 0 0 1 0-2.474l9.272-9.273a1.75 1.75 0 0 1 2.475 0l9.272 9.273a1.75 1.75 0 0 1 0 2.474l-9.272 9.272a1.75 1.75 0 0 1-2.475 0l-9.272-9.272zm1.06-1.414a.25.25 0 0 0 0 .354l9.273 9.272a.25.25 0 0 0 .353 0l9.272-9.272a.25.25 0 0 0 0-.354l-9.272-9.272a.25.25 0 0 0-.353 0l-9.273 9.272z"/></svg></span> Reliability</a>
- · <a href="../resource/#public-ip-address"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path fill-rule="evenodd" d="M13.152.682a2.25 2.25 0 0 1 2.269 0l.007.004 6.957 4.276a2.276 2.276 0 0 1 1.126 1.964v7.516c0 .81-.432 1.56-1.133 1.968l-.002.001-11.964 7.037-.004.003a2.276 2.276 0 0 1-2.284 0l-.026-.015-6.503-4.502a2.268 2.268 0 0 1-1.096-1.943V9.438c0-.392.1-.77.284-1.1l.003-.006.014-.026a2.28 2.28 0 0 1 .82-.827h.002L13.152.681zm.757 1.295h-.001L2.648 8.616l6.248 4.247a.776.776 0 0 0 .758-.01h.001l11.633-6.804-6.629-4.074a.75.75 0 0 0-.75.003zM18 9.709l-3.25 1.9v7.548L18 17.245V9.709zm1.5-.878v7.532l2.124-1.25a.777.777 0 0 0 .387-.671V7.363L19.5 8.831zm-9.09 5.316 2.84-1.66v7.552l-3.233 1.902v-7.612c.134-.047.265-.107.391-.18l.002-.002zm-1.893 7.754V14.33a2.277 2.277 0 0 1-.393-.18l-.023-.014-6.102-4.147v7.003c0 .275.145.528.379.664l.025.014 6.114 4.232z"/></svg></span> Public IP address</a>
- · <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M7.75 6.5a1.25 1.25 0 1 0 0 2.5 1.25 1.25 0 0 0 0-2.5z"/><path fill-rule="evenodd" d="M2.5 1A1.5 1.5 0 0 0 1 2.5v8.44c0 .397.158.779.44 1.06l10.25 10.25a1.5 1.5 0 0 0 2.12 0l8.44-8.44a1.5 1.5 0 0 0 0-2.12L12 1.44A1.5 1.5 0 0 0 10.94 1H2.5zm0 1.5h8.44l10.25 10.25-8.44 8.44L2.5 10.94V2.5z"/></svg></span> 2021_12</p>
-<p>Public IP addresses deployed with Standard SKU should use availability zones in supported regions for high availability.</p>
+  <h1 id="review-azure-mariadb-server-firewall-rules">Review Azure MariaDB server firewall rules<a class="headerlink" href="#review-azure-mariadb-server-firewall-rules" title="Permanent link">#</a></h1>
+<nav class="md-tags"><span class="md-tag">Azure.MariaDB.FirewallRuleCount</span><span class="md-tag">AZR-000343</span><span class="md-tag">Error</span></nav>
+<p><a href="../module/#security"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path fill-rule="evenodd" d="M1.527 13.237a1.75 1.75 0 0 1 0-2.474l9.272-9.273a1.75 1.75 0 0 1 2.475 0l9.272 9.273a1.75 1.75 0 0 1 0 2.474l-9.272 9.272a1.75 1.75 0 0 1-2.475 0l-9.272-9.272zm1.06-1.414a.25.25 0 0 0 0 .354l9.273 9.272a.25.25 0 0 0 .353 0l9.272-9.272a.25.25 0 0 0 0-.354l-9.272-9.272a.25.25 0 0 0-.353 0l-9.273 9.272z"/></svg></span> Security</a>
+ · <a href="../resource/#azure-database-for-mariadb"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path fill-rule="evenodd" d="M13.152.682a2.25 2.25 0 0 1 2.269 0l.007.004 6.957 4.276a2.276 2.276 0 0 1 1.126 1.964v7.516c0 .81-.432 1.56-1.133 1.968l-.002.001-11.964 7.037-.004.003a2.276 2.276 0 0 1-2.284 0l-.026-.015-6.503-4.502a2.268 2.268 0 0 1-1.096-1.943V9.438c0-.392.1-.77.284-1.1l.003-.006.014-.026a2.28 2.28 0 0 1 .82-.827h.002L13.152.681zm.757 1.295h-.001L2.648 8.616l6.248 4.247a.776.776 0 0 0 .758-.01h.001l11.633-6.804-6.629-4.074a.75.75 0 0 0-.75.003zM18 9.709l-3.25 1.9v7.548L18 17.245V9.709zm1.5-.878v7.532l2.124-1.25a.777.777 0 0 0 .387-.671V7.363L19.5 8.831zm-9.09 5.316 2.84-1.66v7.552l-3.233 1.902v-7.612c.134-.047.265-.107.391-.18l.002-.002zm-1.893 7.754V14.33a2.277 2.277 0 0 1-.393-.18l-.023-.014-6.102-4.147v7.003c0 .275.145.528.379.664l.025.014 6.114 4.232z"/></svg></span> Azure Database for MariaDB</a>
+ · <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M7.75 6.5a1.25 1.25 0 1 0 0 2.5 1.25 1.25 0 0 0 0-2.5z"/><path fill-rule="evenodd" d="M2.5 1A1.5 1.5 0 0 0 1 2.5v8.44c0 .397.158.779.44 1.06l10.25 10.25a1.5 1.5 0 0 0 2.12 0l8.44-8.44a1.5 1.5 0 0 0 0-2.12L12 1.44A1.5 1.5 0 0 0 10.94 1H2.5zm0 1.5h8.44l10.25 10.25-8.44 8.44L2.5 10.94V2.5z"/></svg></span> 2022_12</p>
+<p>Determine if there is an excessive number of firewall rules.</p>
 <h2 id="description">Description<a class="headerlink" href="#description" title="Permanent link">#</a></h2>
-<p>Public IP addresses using availability zones improve reliability and ensure availability during failure scenarios affecting a data center within a region.
-A zone redundant Public IP address can spread across multiple availability zones, which ensures the Public IP address will continue running even if another zone has gone down.
-Furthermore, this ensures Public Standard Load balancer frontend IPs using a zone-redundant Public IP address can survive zone failure.</p>
+<p>Typically the number of firewall rules required is minimal, with management connectivity from on-premises and cloud application connectivity.</p>
+<p>Server-level firewall rules apply to all databases on the Azure Database for MariaDB server.</p>
 <h2 id="recommendation">Recommendation<a class="headerlink" href="#recommendation" title="Permanent link">#</a></h2>
-<p>Consider using zone-redundant Public IP addresses deployed with Standard SKU.</p>
+<p>Review the number of Azure for MariaDB server firewall rules configured.
+Consider to removing rules that are no longer needed.</p>
 <h2 id="notes">Notes<a class="headerlink" href="#notes" title="Permanent link">#</a></h2>
-<p>This rule is not applicable for public IP addresses used for Azure Bastion.
-Azure Bastion does not currently support Availability Zones.
-Public IP addresses with the following tags are automatically excluded from this rule:</p>
-<ul>
-<li><code>resource-usage</code> tag set to <code>azure-bastion</code>.</li>
-</ul>
-<p>This rule fails when <code>"zones"</code> is constrained to a single(zonal) zone, or set to <code>null</code>, <code>[]</code> when there are supported availability zones for the given region.</p>
-<p>This rule passes if no zones exist for a given region or <code>"zones"</code> is set to <code>["1", "2", "3"]</code>.</p>
-<p>Configure <code>AZURE_PUBLICIP_ADDITIONAL_REGION_AVAILABILITY_ZONE_LIST</code> to set additional availability zones that need to be supported which are not in the existing <a href="https://github.com/Azure/PSRule.Rules.Azure/blob/main/data/providers/">providers</a> for namespace <code>Microsoft.Network</code> and resource type <code>publicIpAddresses</code>.</p>
-<div class="highlight"><pre><span></span><code><span class="c1"># YAML: The default AZURE_PUBLICIP_ADDITIONAL_REGION_AVAILABILITY_ZONE_LIST configuration option</span><span class="w"></span>
-<span class="nt">configuration</span><span class="p">:</span><span class="w"></span>
-<span class="w">  </span><span class="nt">AZURE_PUBLICIP_ADDITIONAL_REGION_AVAILABILITY_ZONE_LIST</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">[]</span><span class="w"></span>
-</code></pre></div>
-<h2 id="examples">Examples<a class="headerlink" href="#examples" title="Permanent link">#</a></h2>
-<h3 id="configure-with-azure-template">Configure with Azure template<a class="headerlink" href="#configure-with-azure-template" title="Permanent link">#</a></h3>
-<p>To configure zone-redundancy for a Public IP address.</p>
-<ul>
-<li>Set <code>sku.name</code> to <code>Standard</code>.</li>
-<li>Set <code>zones</code> to <code>["1", "2", "3"]</code>.</li>
-</ul>
-<p>For example:</p>
-<div class="highlight"><pre><span></span><code><span class="p">{</span><span class="w"></span>
-<span class="w">    </span><span class="nt">&quot;type&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Microsoft.Network/publicIPAddresses&quot;</span><span class="p">,</span><span class="w"></span>
-<span class="w">    </span><span class="nt">&quot;apiVersion&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;2020-11-01&quot;</span><span class="p">,</span><span class="w"></span>
-<span class="w">    </span><span class="nt">&quot;name&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;[parameters(&#39;publicIPAddresses_test_ip_name&#39;)]&quot;</span><span class="p">,</span><span class="w"></span>
-<span class="w">    </span><span class="nt">&quot;location&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;australiaeast&quot;</span><span class="p">,</span><span class="w"></span>
-<span class="w">    </span><span class="nt">&quot;sku&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
-<span class="w">        </span><span class="nt">&quot;name&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Standard&quot;</span><span class="p">,</span><span class="w"></span>
-<span class="w">        </span><span class="nt">&quot;tier&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Regional&quot;</span><span class="w"></span>
-<span class="w">    </span><span class="p">},</span><span class="w"></span>
-<span class="w">    </span><span class="nt">&quot;zones&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w"></span>
-<span class="w">        </span><span class="s2">&quot;2&quot;</span><span class="p">,</span><span class="w"></span>
-<span class="w">        </span><span class="s2">&quot;3&quot;</span><span class="p">,</span><span class="w"></span>
-<span class="w">        </span><span class="s2">&quot;1&quot;</span><span class="w"></span>
-<span class="w">    </span><span class="p">],</span><span class="w"></span>
-<span class="w">    </span><span class="nt">&quot;properties&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
-<span class="w">        </span><span class="nt">&quot;ipAddress&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;[parameters(&#39;publicIPAddresses_ip_address&#39;)]&quot;</span><span class="p">,</span><span class="w"></span>
-<span class="w">        </span><span class="nt">&quot;publicIPAddressVersion&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;IPv4&quot;</span><span class="p">,</span><span class="w"></span>
-<span class="w">        </span><span class="nt">&quot;publicIPAllocationMethod&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Static&quot;</span><span class="p">,</span><span class="w"></span>
-<span class="w">        </span><span class="nt">&quot;idleTimeoutInMinutes&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">4</span><span class="p">,</span><span class="w"></span>
-<span class="w">        </span><span class="nt">&quot;ipTags&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[]</span><span class="w"></span>
-<span class="w">    </span><span class="p">}</span><span class="w"></span>
-<span class="p">}</span><span class="w"></span>
-</code></pre></div>
-<h3 id="configure-with-bicep">Configure with Bicep<a class="headerlink" href="#configure-with-bicep" title="Permanent link">#</a></h3>
-<p>To configure zone-redundancy for a Public IP address.</p>
-<ul>
-<li>Set <code>sku.name</code> to <code>Standard</code>.</li>
-<li>Set <code>zones</code> to <code>['1', '2', '3']</code>.</li>
-</ul>
-<p>For example:</p>
-<div class="highlight"><pre><span></span><code>resource publicIPAddresses_resource &#39;Microsoft.Network/publicIPAddresses@2020-11-01&#39; = {
-  name: name
-  location: location
-  sku: {
-    name: &#39;Standard&#39;
-    tier: &#39;Regional&#39;
-  }
-  zones: [
-    &#39;2&#39;
-    &#39;3&#39;
-    &#39;1&#39;
-  ]
-  properties: {
-    ipAddress: ipAddress
-    publicIPAddressVersion: &#39;IPv4&#39;
-    publicIPAllocationMethod: &#39;Static&#39;
-    idleTimeoutInMinutes: 4
-    ipTags: []
-  }
-}
-</code></pre></div>
+<p>This rule fails when the number of configured firewall rules exceeds ten (10).</p>
 <h2 id="links">Links<a class="headerlink" href="#links" title="Permanent link">#</a></h2>
 <ul>
-<li><a href="https://docs.microsoft.com/azure/templates/microsoft.network/publicipaddresses?tabs=json">Azure template reference</a></li>
-<li><a href="https://docs.microsoft.com/azure/load-balancer/load-balancer-standard-availability-zones">Load Balancer and Availability Zones</a></li>
-<li><a href="https://learn.microsoft.com/azure/architecture/framework/resiliency/design-best-practices#use-zone-aware-services">Use zone-aware services</a></li>
+<li><a href="https://learn.microsoft.com/azure/architecture/framework/security/design-network">Network security and containment</a></li>
+<li><a href="https://learn.microsoft.com/azure/mariadb/concepts-firewall-rules">Azure Database for MariaDB server firewall rules</a></li>
+<li><a href="https://learn.microsoft.com/azure/mariadb/howto-manage-firewall-portal">Create and manage Azure Database for MariaDB firewall rules by using the Azure portal</a></li>
+<li><a href="https://learn.microsoft.com/azure/templates/microsoft.dbformariadb/servers/firewallrules">Azure deployment reference</a></li>
 </ul>
 
   <!-- Last update of source file -->
@@ -7728,7 +7604,7 @@ Public IP addresses with the following tags are automatically excluded from this
   <small>
     
       Last update:
-      2022-10-17
+      2022-12-02
     
   </small>
 </div>
@@ -7751,7 +7627,7 @@ Public IP addresses with the following tags are automatically excluded from this
       data-category="Documentation"
       data-category-id="DIC_kwDOCvn6LM4CQqE6"
       data-mapping="specific"
-      data-term="Azure.PublicIP.AvailabilityZone"
+      data-term="Azure.MariaDB.FirewallRuleCount"
       data-strict="0"
       data-reactions-enabled="1"
       data-emit-metadata="0"

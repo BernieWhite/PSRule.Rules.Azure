@@ -1791,6 +1791,11 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
+         <loc>https://azure.github.io/PSRule.Rules.Azure/en/rules/Azure.VM.AMA/</loc>
+         <lastmod>2022-12-07</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
          <loc>https://azure.github.io/PSRule.Rules.Azure/en/rules/Azure.VM.ASAlignment/</loc>
          <lastmod>2022-12-07</lastmod>
          <changefreq>daily</changefreq>

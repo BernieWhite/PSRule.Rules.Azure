@@ -1416,6 +1416,11 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
+         <loc>https://azure.github.io/PSRule.Rules.Azure/en/rules/Azure.RSV.Name/</loc>
+         <lastmod>2022-12-13</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
          <loc>https://azure.github.io/PSRule.Rules.Azure/en/rules/Azure.RSV.ReplicationAlert/</loc>
          <lastmod>2022-12-13</lastmod>
          <changefreq>daily</changefreq>

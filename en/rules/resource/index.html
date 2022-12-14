@@ -1410,20 +1410,6 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#azure-recovery-services-vault-rsv" class="md-nav__link">
-    Azure Recovery Services Vault (RSV)
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#azure-virtual-machine-scale-sets" class="md-nav__link">
-    Azure Virtual Machine Scale Sets
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
   <a href="#bastion" class="md-nav__link">
     Bastion
   </a>
@@ -8104,20 +8090,6 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#azure-recovery-services-vault-rsv" class="md-nav__link">
-    Azure Recovery Services Vault (RSV)
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#azure-virtual-machine-scale-sets" class="md-nav__link">
-    Azure Virtual Machine Scale Sets
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
   <a href="#bastion" class="md-nav__link">
     Bastion
   </a>
@@ -9561,50 +9533,6 @@
 </tr>
 </tbody>
 </table>
-<h2 id="azure-recovery-services-vault-rsv">Azure Recovery Services Vault (RSV)<a class="headerlink" href="#azure-recovery-services-vault-rsv" title="Permanent link">#</a></h2>
-<table>
-<thead>
-<tr>
-<th>Name</th>
-<th>Synopsis</th>
-<th>Severity</th>
-<th>Level</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><a href="../Azure.RSV.ReplicationAlert/">Azure.RSV.ReplicationAlert</a></td>
-<td>Recovery Services Vaults (RSV) without replication alerts configured may be at risk.</td>
-<td>Important</td>
-<td>Error</td>
-</tr>
-<tr>
-<td><a href="../Azure.RSV.StorageType/">Azure.RSV.StorageType</a></td>
-<td>Recovery Services Vaults (RSV) not using geo-replicated storage (GRS) may be at risk.</td>
-<td>Important</td>
-<td>Error</td>
-</tr>
-</tbody>
-</table>
-<h2 id="azure-virtual-machine-scale-sets">Azure Virtual Machine Scale Sets<a class="headerlink" href="#azure-virtual-machine-scale-sets" title="Permanent link">#</a></h2>
-<table>
-<thead>
-<tr>
-<th>Name</th>
-<th>Synopsis</th>
-<th>Severity</th>
-<th>Level</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><a href="../Azure.VMSS.PublicKey/">Azure.VMSS.PublicKey</a></td>
-<td>Use SSH keys instead of common credentials to secure virtual machine scale sets against malicious activities.</td>
-<td>Important</td>
-<td>Error</td>
-</tr>
-</tbody>
-</table>
 <h2 id="bastion">Bastion<a class="headerlink" href="#bastion" title="Permanent link">#</a></h2>
 <table>
 <thead>
@@ -10521,6 +10449,18 @@
 <td>Awareness</td>
 <td>Error</td>
 </tr>
+<tr>
+<td><a href="../Azure.RSV.ReplicationAlert/">Azure.RSV.ReplicationAlert</a></td>
+<td>Recovery Services Vaults (RSV) without replication alerts configured may be at risk.</td>
+<td>Important</td>
+<td>Error</td>
+</tr>
+<tr>
+<td><a href="../Azure.RSV.StorageType/">Azure.RSV.StorageType</a></td>
+<td>Recovery Services Vaults (RSV) not using geo-replicated storage (GRS) may be at risk.</td>
+<td>Important</td>
+<td>Error</td>
+</tr>
 </tbody>
 </table>
 <h2 id="resource-group">Resource Group<a class="headerlink" href="#resource-group" title="Permanent link">#</a></h2>
@@ -11117,6 +11057,12 @@
 <td>Error</td>
 </tr>
 <tr>
+<td><a href="../Azure.VMSS.PublicKey/">Azure.VMSS.PublicKey</a></td>
+<td>Use SSH keys instead of common credentials to secure virtual machine scale sets against malicious activities.</td>
+<td>Important</td>
+<td>Error</td>
+</tr>
+<tr>
 <td><a href="../Azure.VMSS.ScriptExtensions/">Azure.VMSS.ScriptExtensions</a></td>
 <td>Custom Script Extensions scripts that reference secret values must use the protectedSettings.</td>
 <td>Important</td>
@@ -11293,7 +11239,7 @@
   <small>
     
       Last update:
-      2022-12-03
+      2022-12-14
     
   </small>
 </div>

@@ -8310,6 +8310,10 @@
         
           
         
+          
+        
+          
+        
       
       
         <label class="md-nav__link" for="__nav_4_6">
@@ -8498,6 +8502,20 @@
   
   
     <li class="md-nav__item">
+      <a href="../en/baselines/Azure.GA_2022_12/" class="md-nav__link">
+        Azure.GA_2022_12
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
       <a href="../en/baselines/Azure.Preview/" class="md-nav__link">
         Azure.Preview
       </a>
@@ -8570,6 +8588,20 @@
     <li class="md-nav__item">
       <a href="../en/baselines/Azure.Preview_2022_09/" class="md-nav__link">
         Azure.Preview_2022_09
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../en/baselines/Azure.Preview_2022_12/" class="md-nav__link">
+        Azure.Preview_2022_12
       </a>
     </li>
   
@@ -9904,6 +9936,29 @@
   See <a href="../upgrade-notes/">upgrade notes</a> for more information.</li>
 </ul>
 <h2 id="unreleased">Unreleased<a class="headerlink" href="#unreleased" title="Permanent link">#</a></h2>
+<p>What's changed since pre-release v1.23.0-B0046:</p>
+<ul>
+<li>New features:<ul>
+<li>Added December 2022 baselines <code>Azure.GA_2022_12</code> and <code>Azure.Preview_2022_12</code> by <a href="https://github.com/BernieWhite">@BernieWhite</a>.
+  <a href="https://github.com/Azure/PSRule.Rules.Azure/issues/1961">#1961</a><ul>
+<li>Includes rules released before or during December 2022.</li>
+<li>Marked <code>Azure.GA_2022_09</code> and <code>Azure.Preview_2022_09</code> baselines as obsolete.</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>Updated rules:<ul>
+<li>Azure Kubernetes Service:<ul>
+<li>Updated <code>Azure.AKS.Version</code> to use latest stable version <code>1.25.4</code> by <a href="https://github.com/BernieWhite">@BernieWhite</a>.
+  <a href="https://github.com/Azure/PSRule.Rules.Azure/issues/1960">#1960</a><ul>
+<li>Use <code>AZURE_AKS_CLUSTER_MINIMUM_VERSION</code> to configure the minimum version of the cluster.</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
 <h2 id="v1230-b0046-pre-release">v1.23.0-B0046 (pre-release)<a class="headerlink" href="#v1230-b0046-pre-release" title="Permanent link">#</a></h2>
 <p>What's changed since pre-release v1.23.0-B0025:</p>
 <ul>
@@ -13902,7 +13957,7 @@
   <small>
     
       Last update:
-      2022-12-14
+      2022-12-16
     
   </small>
 </div>

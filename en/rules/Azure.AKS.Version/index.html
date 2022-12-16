@@ -7245,6 +7245,10 @@
         
           
         
+          
+        
+          
+        
       
       
         <label class="md-nav__link" for="__nav_4_6">
@@ -7433,6 +7437,20 @@
   
   
     <li class="md-nav__item">
+      <a href="../../baselines/Azure.GA_2022_12/" class="md-nav__link">
+        Azure.GA_2022_12
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
       <a href="../../baselines/Azure.Preview/" class="md-nav__link">
         Azure.Preview
       </a>
@@ -7505,6 +7523,20 @@
     <li class="md-nav__item">
       <a href="../../baselines/Azure.Preview_2022_09/" class="md-nav__link">
         Azure.Preview_2022_09
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../baselines/Azure.Preview_2022_12/" class="md-nav__link">
+        Azure.Preview_2022_12
       </a>
     </li>
   
@@ -7798,7 +7830,7 @@ Additionally two patch releases for each minor version are supported.</p>
 <span class="w">        </span><span class="p">}</span><span class="w"></span>
 <span class="w">    </span><span class="p">},</span><span class="w"></span>
 <span class="w">    </span><span class="nt">&quot;properties&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
-<span class="w">        </span><span class="nt">&quot;kubernetesVersion&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;1.23.8&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">        </span><span class="nt">&quot;kubernetesVersion&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;1.25.4&quot;</span><span class="p">,</span><span class="w"></span>
 <span class="w">        </span><span class="nt">&quot;enableRBAC&quot;</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span><span class="w"></span>
 <span class="w">        </span><span class="nt">&quot;dnsPrefix&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;[parameters(&#39;dnsPrefix&#39;)]&quot;</span><span class="p">,</span><span class="w"></span>
 <span class="w">        </span><span class="nt">&quot;agentPoolProfiles&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;[variables(&#39;allPools&#39;)]&quot;</span><span class="p">,</span><span class="w"></span>
@@ -7871,7 +7903,7 @@ Additionally two patch releases for each minor version are supported.</p>
     }
   }
   properties: {
-    kubernetesVersion: &#39;1.23.8&#39;
+    kubernetesVersion: &#39;1.25.4&#39;
     enableRBAC: true
     dnsPrefix: dnsPrefix
     agentPoolProfiles: allPools
@@ -7928,10 +7960,10 @@ Additionally two patch releases for each minor version are supported.</p>
 <h3 id="configure-with-azure-cli">Configure with Azure CLI<a class="headerlink" href="#configure-with-azure-cli" title="Permanent link">#</a></h3>
 <div class="highlight"><span class="filename">Azure CLI snippet</span><pre><span></span><code>az aks update -n <span class="s1">&#39;&lt;name&gt;&#39;</span> -g <span class="s1">&#39;&lt;resource_group&gt;&#39;</span> --auto-upgrade-channel <span class="s1">&#39;stable&#39;</span>
 </code></pre></div>
-<div class="highlight"><span class="filename">Azure CLI snippet</span><pre><span></span><code>az aks upgrade -n <span class="s1">&#39;&lt;name&gt;&#39;</span> -g <span class="s1">&#39;&lt;resource_group&gt;&#39;</span> --kubernetes-version <span class="s1">&#39;1.23.8&#39;</span>
+<div class="highlight"><span class="filename">Azure CLI snippet</span><pre><span></span><code>az aks upgrade -n <span class="s1">&#39;&lt;name&gt;&#39;</span> -g <span class="s1">&#39;&lt;resource_group&gt;&#39;</span> --kubernetes-version <span class="s1">&#39;1.25.4&#39;</span>
 </code></pre></div>
 <h3 id="configure-with-azure-powershell">Configure with Azure PowerShell<a class="headerlink" href="#configure-with-azure-powershell" title="Permanent link">#</a></h3>
-<div class="highlight"><span class="filename">Azure PowerShell snippet</span><pre><span></span><code><span class="nb">Set-AzAksCluster</span> <span class="n">-Name</span> <span class="s1">&#39;&lt;name&gt;&#39;</span> <span class="n">-ResourceGroupName</span> <span class="s1">&#39;&lt;resource_group&gt;&#39;</span> <span class="n">-KubernetesVersion</span> <span class="s1">&#39;1.23.8&#39;</span>
+<div class="highlight"><span class="filename">Azure PowerShell snippet</span><pre><span></span><code><span class="nb">Set-AzAksCluster</span> <span class="n">-Name</span> <span class="s1">&#39;&lt;name&gt;&#39;</span> <span class="n">-ResourceGroupName</span> <span class="s1">&#39;&lt;resource_group&gt;&#39;</span> <span class="n">-KubernetesVersion</span> <span class="s1">&#39;1.25.4&#39;</span>
 </code></pre></div>
 <h2 id="notes">Notes<a class="headerlink" href="#notes" title="Permanent link">#</a></h2>
 <p>A list of available Kubernetes versions can be found using the <code>az aks get-versions -o table --location &lt;location&gt;</code> CLI command.
@@ -7956,7 +7988,7 @@ To configure this rule:</p>
   <small>
     
       Last update:
-      2022-12-07
+      2022-12-16
     
   </small>
 </div>

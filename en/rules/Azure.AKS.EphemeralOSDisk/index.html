@@ -7224,6 +7224,10 @@
         
           
         
+          
+        
+          
+        
       
       
         <label class="md-nav__link" for="__nav_4_6">
@@ -7412,6 +7416,20 @@
   
   
     <li class="md-nav__item">
+      <a href="../../baselines/Azure.GA_2022_12/" class="md-nav__link">
+        Azure.GA_2022_12
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
       <a href="../../baselines/Azure.Preview/" class="md-nav__link">
         Azure.Preview
       </a>
@@ -7484,6 +7502,20 @@
     <li class="md-nav__item">
       <a href="../../baselines/Azure.Preview_2022_09/" class="md-nav__link">
         Azure.Preview_2022_09
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../baselines/Azure.Preview_2022_12/" class="md-nav__link">
+        Azure.Preview_2022_12
       </a>
     </li>
   
@@ -7733,16 +7765,20 @@
  · <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M7.75 6.5a1.25 1.25 0 1 0 0 2.5 1.25 1.25 0 0 0 0-2.5z"/><path fill-rule="evenodd" d="M2.5 1A1.5 1.5 0 0 0 1 2.5v8.44c0 .397.158.779.44 1.06l10.25 10.25a1.5 1.5 0 0 0 2.12 0l8.44-8.44a1.5 1.5 0 0 0 0-2.12L12 1.44A1.5 1.5 0 0 0 10.94 1H2.5zm0 1.5h8.44l10.25 10.25-8.44 8.44L2.5 10.94V2.5z"/></svg></span> 2022_09</p>
 <p>AKS clusters should use ephemeral OS disks which can provide lower read/write latency, along with faster node scaling and cluster upgrades.</p>
 <h2 id="description">Description<a class="headerlink" href="#description" title="Permanent link">#</a></h2>
-<p>By default, Azure automatically replicates the operating system disk for a virtual machine to Azure storage to avoid data loss if the VM needs to be relocated to another host. However, since containers aren't designed to have local state persisted, this behavior offers limited value while providing some drawbacks, including slower node provisioning and higher read/write latency.</p>
-<p>By contrast, ephemeral OS disks are stored only on the host machine, just like a temporary disk. This provides lower read/write latency, along with faster node scaling and cluster upgrades.</p>
+<p>By default, Azure automatically replicates the operating system disk for a virtual machine to Azure storage to avoid data loss if the VM needs to be relocated to another host.
+However, since containers aren't designed to have local state persisted, this behavior offers limited value while providing some drawbacks, including slower node provisioning and higher read/write latency.</p>
+<p>By contrast, ephemeral OS disks are stored only on the host machine, just like a temporary disk.
+This provides lower read/write latency, along with faster node scaling and cluster upgrades.</p>
 <p>Like the temporary disk, an ephemeral OS disk is included in the price of the virtual machine, so you incur no additional storage costs.</p>
-<p>NB: When a user does not explicitly request managed disks for the OS, AKS will default to ephemeral OS if possible for a given node pool configuration. The rule is therefore configured with <code>-Level Warning</code> as it can give inaccurate information.</p>
-<p>When using ephemeral OS, the OS disk must fit in the VM cache. The sizes for VM cache are available in the <a href="https://docs.microsoft.com/azure/virtual-machines/dv2-dsv2-series">Azure documentation</a> in parentheses next to IO throughput ("cache size in GiB").</p>
+<p>NB: When a user does not explicitly request managed disks for the OS, AKS will default to ephemeral OS if possible for a given node pool configuration.
+The rule is therefore configured with <code>-Level Warning</code> as it can give inaccurate information.</p>
+<p>When using ephemeral OS, the OS disk must fit in the VM cache.
+The sizes for VM cache are available in the <a href="https://docs.microsoft.com/azure/virtual-machines/dv2-dsv2-series">Azure documentation</a> in parentheses next to IO throughput ("cache size in GiB").</p>
 <p>Examples:</p>
 <ul>
-<li>Using the AKS default VM size Standard_DS2_v2 with the default OS disk size of 100GB as an example, this VM size supports ephemeral OS but only has 86GB of cache size. This configuration would default to managed disks if the user does not specify explicitly. If a user explicitly requested ephemeral OS, they would receive a validation error.</li>
-</ul>
-<ul>
+<li>Using the AKS default VM size Standard_DS2_v2 with the default OS disk size of 100GB as an example, this VM size supports ephemeral OS but only has 86GB of cache size.
+  This configuration would default to managed disks if the user does not specify explicitly.
+  If a user explicitly requested ephemeral OS, they would receive a validation error.</li>
 <li>If a user requests the same Standard_DS2_v2 with a 60GB OS disk, this configuration would default to ephemeral OS: the requested size of 60GB is smaller than the maximum cache size of 86GB.</li>
 </ul>
 <h2 id="recommendation">Recommendation<a class="headerlink" href="#recommendation" title="Permanent link">#</a></h2>
@@ -7880,8 +7916,8 @@
 <ul>
 <li><a href="https://learn.microsoft.com/azure/architecture/framework/scalability/performance-efficiency">Performance efficiency checklist</a></li>
 <li><a href="https://docs.microsoft.com/azure/aks/cluster-configuration#ephemeral-os">Azure Kubernetes Service (AKS) Ephemeral OS</a></li>
-<li><a href="https://docs.microsoft.com/azure/templates/microsoft.containerservice/managedclusters">Azure deployment reference</a></li>
-<li><a href="https://docs.microsoft.com/azure/templates/microsoft.containerservice/managedclusters/agentpools">Azure deployment reference</a></li>
+<li><a href="https://docs.microsoft.com/azure/templates/microsoft.containerservice/managedclusters">Azure deployment reference (managedclusters)</a></li>
+<li><a href="https://docs.microsoft.com/azure/templates/microsoft.containerservice/managedclusters/agentpools">Azure deployment reference (agentpools)</a></li>
 </ul>
 
   <!-- Last update of source file -->
@@ -7892,7 +7928,7 @@
   <small>
     
       Last update:
-      2022-12-03
+      2022-12-16
     
   </small>
 </div>

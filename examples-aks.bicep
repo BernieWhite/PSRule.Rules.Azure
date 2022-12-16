@@ -46,7 +46,7 @@ param systemPoolMin int
 param systemPoolMax int = 3
 
 @description('The version of Kubernetes.')
-param kubernetesVersion string = '1.22.6'
+param kubernetesVersion string = '1.25.4'
 
 @description('Maximum number of pods that can run on nodes in the system pool.')
 @minValue(30)
@@ -148,7 +148,7 @@ resource identity 'Microsoft.ManagedIdentity/userAssignedIdentities@2018-11-30' 
 }
 
 // Cluster
-resource cluster 'Microsoft.ContainerService/managedClusters@2022-01-01' = {
+resource cluster 'Microsoft.ContainerService/managedClusters@2022-09-01' = {
   location: location
   name: clusterName
   identity: {
@@ -180,15 +180,15 @@ resource cluster 'Microsoft.ContainerService/managedClusters@2022-01-01' = {
     autoUpgradeProfile: {
       upgradeChannel: 'stable'
     }
+    oidcIssuerProfile: {
+      enabled: true
+    }
     addonProfiles: {
       httpApplicationRouting: {
         enabled: false
       }
       azurepolicy: {
         enabled: true
-        config: {
-          version: 'v2'
-        }
       }
       omsagent: {
         enabled: true
@@ -205,9 +205,6 @@ resource cluster 'Microsoft.ContainerService/managedClusters@2022-01-01' = {
           enableSecretRotation: 'true'
         }
       }
-    }
-    podIdentityProfile: {
-      enabled: true
     }
   }
   tags: tags

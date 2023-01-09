@@ -14,8 +14,14 @@
       
         <link rel="canonical" href="https://azure.github.io/PSRule.Rules.Azure/expanding-source-files/">
       
+      
+        <link rel="prev" href="../install-instructions/">
+      
+      
+        <link rel="next" href="../using-templates/">
+      
       <link rel="icon" href="../assets/ms_icon.png">
-      <meta name="generator" content="mkdocs-1.4.2, mkdocs-material-8.5.10">
+      <meta name="generator" content="mkdocs-1.4.2, mkdocs-material-9.0.2">
     
     
       
@@ -23,15 +29,10 @@
       
     
     
-      <link rel="stylesheet" href="../assets/stylesheets/main.975780f9.min.css">
+      <link rel="stylesheet" href="../assets/stylesheets/main.f56500e0.min.css">
       
         
         <link rel="stylesheet" href="../assets/stylesheets/palette.2505c338.min.css">
-        
-          
-          
-          <meta name="theme-color" content="#000000">
-        
       
       
 
@@ -7794,10 +7795,9 @@
 
 
 
-  <a href="https://github.com/Azure/PSRule.Rules.Azure/blob/main/docs/expanding-source-files.md" title="Edit this page" class="md-content__button md-icon">
-    
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75L3 17.25Z"/></svg>
-  </a>
+  
+  
+
 
 
 <h1 id="expanding-source-files">Expanding source files<a class="headerlink" href="#expanding-source-files" title="Permanent link">#</a></h1>
@@ -7891,19 +7891,19 @@ The strong type will be set to the resource type that the parameter will accept,
 <div class="tabbed-set tabbed-alternate" data-tabs="1:2"><input checked="checked" id="__tabbed_1_1" name="__tabbed_1" type="radio" /><input id="__tabbed_1_2" name="__tabbed_1" type="radio" /><div class="tabbed-labels"><label for="__tabbed_1_1">Template</label><label for="__tabbed_1_2">Bicep</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
-<div class="highlight"><pre><span></span><code><span class="p">{</span><span class="w"></span>
-<span class="w">    </span><span class="nt">&quot;$schema&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;https://schema.management.azure.com/schemas/2019-04-01/deploymentTemplate.json#&quot;</span><span class="p">,</span><span class="w"></span>
-<span class="w">    </span><span class="nt">&quot;contentVersion&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;1.0.0.0&quot;</span><span class="p">,</span><span class="w"></span>
-<span class="w">    </span><span class="nt">&quot;parameters&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
-<span class="w">        </span><span class="nt">&quot;workspaceId&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
-<span class="w">            </span><span class="nt">&quot;type&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;string&quot;</span><span class="p">,</span><span class="w"></span>
-<span class="w">            </span><span class="nt">&quot;metadata&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
-<span class="w">                </span><span class="nt">&quot;description&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;The resource identifier for a Log Analytics workspace.&quot;</span><span class="p">,</span><span class="w"></span>
-<span class="w">                </span><span class="nt">&quot;strongType&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Microsoft.OperationalInsights/workspaces&quot;</span><span class="w"></span>
-<span class="w">            </span><span class="p">}</span><span class="w"></span>
-<span class="w">        </span><span class="p">}</span><span class="w"></span>
-<span class="w">    </span><span class="p">}</span><span class="w"></span>
-<span class="p">}</span><span class="w"></span>
+<div class="highlight"><pre><span></span><code><span class="p">{</span>
+<span class="w">    </span><span class="nt">&quot;$schema&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;https://schema.management.azure.com/schemas/2019-04-01/deploymentTemplate.json#&quot;</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">&quot;contentVersion&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;1.0.0.0&quot;</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">&quot;parameters&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="nt">&quot;workspaceId&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">            </span><span class="nt">&quot;type&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;string&quot;</span><span class="p">,</span>
+<span class="w">            </span><span class="nt">&quot;metadata&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">                </span><span class="nt">&quot;description&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;The resource identifier for a Log Analytics workspace.&quot;</span><span class="p">,</span>
+<span class="w">                </span><span class="nt">&quot;strongType&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Microsoft.OperationalInsights/workspaces&quot;</span>
+<span class="w">            </span><span class="p">}</span>
+<span class="w">        </span><span class="p">}</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="p">}</span>
 </code></pre></div>
 </div>
 <div class="tabbed-block">
@@ -7927,32 +7927,32 @@ When using PSRule for Azure, these functions have a default meaning that can be 
 Unspecified properties will inherit from the defaults.</p>
 <h3 id="subscription">Subscription<a class="headerlink" href="#subscription" title="Permanent link">#</a></h3>
 <p>The <code>subscription()</code> function will return the following unless overridden:</p>
-<div class="highlight"><pre><span></span><code><span class="nt">subscriptionId</span><span class="p">:</span><span class="w"> </span><span class="s">&#39;ffffffff-ffff-ffff-ffff-ffffffffffff&#39;</span><span class="w"></span>
-<span class="nt">displayName</span><span class="p">:</span><span class="w"> </span><span class="s">&#39;PSRule</span><span class="nv"> </span><span class="s">Test</span><span class="nv"> </span><span class="s">Subscription&#39;</span><span class="w"></span>
-<span class="nt">state</span><span class="p">:</span><span class="w"> </span><span class="s">&#39;NotDefined&#39;</span><span class="w"></span>
+<div class="highlight"><pre><span></span><code><span class="nt">subscriptionId</span><span class="p">:</span><span class="w"> </span><span class="s">&#39;ffffffff-ffff-ffff-ffff-ffffffffffff&#39;</span>
+<span class="nt">displayName</span><span class="p">:</span><span class="w"> </span><span class="s">&#39;PSRule</span><span class="nv"> </span><span class="s">Test</span><span class="nv"> </span><span class="s">Subscription&#39;</span>
+<span class="nt">state</span><span class="p">:</span><span class="w"> </span><span class="s">&#39;NotDefined&#39;</span>
 </code></pre></div>
 <p>To override, configure <a href="../setup/configuring-expansion/#deployment-subscription"><code>AZURE_SUBSCRIPTION</code></a>.</p>
 <h3 id="resource-group">Resource Group<a class="headerlink" href="#resource-group" title="Permanent link">#</a></h3>
 <p>The <code>resourceGroup()</code> function will return the following unless overridden:</p>
-<div class="highlight"><pre><span></span><code><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="s">&#39;ps-rule-test-rg&#39;</span><span class="w"></span>
-<span class="nt">location</span><span class="p">:</span><span class="w"> </span><span class="s">&#39;eastus&#39;</span><span class="w"></span>
-<span class="nt">tags</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">{</span><span class="w"> </span><span class="p p-Indicator">}</span><span class="w"></span>
-<span class="nt">properties</span><span class="p">:</span><span class="w"></span>
-<span class="w">  </span><span class="nt">provisioningState</span><span class="p">:</span><span class="w"> </span><span class="s">&#39;Succeeded&#39;</span><span class="w"></span>
+<div class="highlight"><pre><span></span><code><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="s">&#39;ps-rule-test-rg&#39;</span>
+<span class="nt">location</span><span class="p">:</span><span class="w"> </span><span class="s">&#39;eastus&#39;</span>
+<span class="nt">tags</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">{</span><span class="w"> </span><span class="p p-Indicator">}</span>
+<span class="nt">properties</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">provisioningState</span><span class="p">:</span><span class="w"> </span><span class="s">&#39;Succeeded&#39;</span>
 </code></pre></div>
 <p>To override, configure <a href="../setup/configuring-expansion/#deployment-resource-group"><code>AZURE_RESOURCE_GROUP</code></a>.</p>
 <h3 id="tenant">Tenant<a class="headerlink" href="#tenant" title="Permanent link">#</a></h3>
 <p>The <code>tenant()</code> function will return the following unless overridden:</p>
-<div class="highlight"><pre><span></span><code><span class="nt">countryCode</span><span class="p">:</span><span class="w"> </span><span class="s">&#39;US&#39;</span><span class="w"></span>
-<span class="nt">tenantId</span><span class="p">:</span><span class="w"> </span><span class="s">&#39;ffffffff-ffff-ffff-ffff-ffffffffffff&#39;</span><span class="w"></span>
-<span class="nt">displayName</span><span class="p">:</span><span class="w"> </span><span class="s">&#39;PSRule&#39;</span><span class="w"></span>
+<div class="highlight"><pre><span></span><code><span class="nt">countryCode</span><span class="p">:</span><span class="w"> </span><span class="s">&#39;US&#39;</span>
+<span class="nt">tenantId</span><span class="p">:</span><span class="w"> </span><span class="s">&#39;ffffffff-ffff-ffff-ffff-ffffffffffff&#39;</span>
+<span class="nt">displayName</span><span class="p">:</span><span class="w"> </span><span class="s">&#39;PSRule&#39;</span>
 </code></pre></div>
 <p>To override, configure <a href="../setup/configuring-expansion/#deployment-tenant"><code>AZURE_TENANT</code></a>.</p>
 <h3 id="management-group">Management Group<a class="headerlink" href="#management-group" title="Permanent link">#</a></h3>
 <p>The <code>managementGroup()</code> function will return the following unless overridden:</p>
-<div class="highlight"><pre><span></span><code><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="s">&#39;psrule-test&#39;</span><span class="w"></span>
-<span class="nt">properties</span><span class="p">:</span><span class="w"></span>
-<span class="w">  </span><span class="nt">displyName</span><span class="p">:</span><span class="w"> </span><span class="s">&#39;PSRule</span><span class="nv"> </span><span class="s">Test</span><span class="nv"> </span><span class="s">Management</span><span class="nv"> </span><span class="s">Group&#39;</span><span class="w"></span>
+<div class="highlight"><pre><span></span><code><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="s">&#39;psrule-test&#39;</span>
+<span class="nt">properties</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">displyName</span><span class="p">:</span><span class="w"> </span><span class="s">&#39;PSRule</span><span class="nv"> </span><span class="s">Test</span><span class="nv"> </span><span class="s">Management</span><span class="nv"> </span><span class="s">Group&#39;</span>
 </code></pre></div>
 <p>To override, configure <a href="../setup/configuring-expansion/#deployment-management-group"><code>AZURE_MANAGEMENT_GROUP</code></a>.</p>
 
@@ -8041,42 +8041,6 @@ Unspecified properties will inherit from the defaults.</p>
       
         <footer class="md-footer">
   
-    
-    <nav class="md-footer__inner md-grid" aria-label="Footer" >
-      
-        
-        <a href="../install-instructions/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Installation" rel="prev">
-          <div class="md-footer__button md-icon">
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
-          </div>
-          <div class="md-footer__title">
-            <div class="md-ellipsis">
-              <span class="md-footer__direction">
-                Previous
-              </span>
-              Installation
-            </div>
-          </div>
-        </a>
-      
-      
-        
-        <a href="../using-templates/" class="md-footer__link md-footer__link--next" aria-label="Next: Using templates" rel="next">
-          <div class="md-footer__title">
-            <div class="md-ellipsis">
-              <span class="md-footer__direction">
-                Next
-              </span>
-              Using templates
-            </div>
-          </div>
-          <div class="md-footer__button md-icon">
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4Z"/></svg>
-          </div>
-        </a>
-      
-    </nav>
-  
   <div class="md-footer-meta md-typeset">
     <div class="md-footer-meta__inner md-grid">
       <div class="md-copyright">
@@ -8111,12 +8075,11 @@ Unspecified properties will inherit from the defaults.</p>
       <div class="md-dialog__inner md-typeset"></div>
     </div>
     
-    <script id="__config" type="application/json">{"base": "..", "features": ["navigation.instant", "navigation.indexes", {"navigation.sections": {"level": 1}}, "navigation.tabs", "content.code.annotate", "content.tabs.link"], "search": "../assets/javascripts/workers/search.16e2a7d4.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version.title": "Select version"}, "version": {"provider": "mike"}}</script>
+    <script id="__config" type="application/json">{"base": "..", "features": ["navigation.instant", "navigation.indexes", {"navigation.sections": {"level": 1}}, "navigation.tabs", "content.code.annotate", "content.tabs.link"], "search": "../assets/javascripts/workers/search.12658920.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": {"provider": "mike"}}</script>
     
     
-      <script src="../assets/javascripts/bundle.5a2dcb6a.min.js"></script>
+      <script src="../assets/javascripts/bundle.5cf534bf.min.js"></script>
       
-    
     
   </body>
 </html>

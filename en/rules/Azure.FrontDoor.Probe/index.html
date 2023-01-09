@@ -14,8 +14,10 @@
       
         <link rel="canonical" href="https://azure.github.io/PSRule.Rules.Azure/en/rules/Azure.FrontDoor.Probe/">
       
+      
+      
       <link rel="icon" href="../../../assets/ms_icon.png">
-      <meta name="generator" content="mkdocs-1.4.2, mkdocs-material-8.5.10">
+      <meta name="generator" content="mkdocs-1.4.2, mkdocs-material-9.0.2">
     
     
       
@@ -23,15 +25,10 @@
       
     
     
-      <link rel="stylesheet" href="../../../assets/stylesheets/main.975780f9.min.css">
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.f56500e0.min.css">
       
         
         <link rel="stylesheet" href="../../../assets/stylesheets/palette.2505c338.min.css">
-        
-          
-          
-          <meta name="theme-color" content="#000000">
-        
       
       
 
@@ -7770,7 +7767,7 @@
     
       <a
         href="https://github.com/Azure/PSRule.Rules.Azure/blob/main/docs/en/rules/Azure.FrontDoor.Probe.md"
-        title="Edit this page"
+        title=""
         class="md-content__button md-icon"
       >
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75L3 17.25Z"/></svg>
@@ -7803,7 +7800,7 @@ If all endpoints in a pool is unhealthy Front Door sends the request to any enab
 <p>Consider enabling a health probe for each Front Door backend endpoint.</p>
 <h2 id="examples">Examples<a class="headerlink" href="#examples" title="Permanent link">#</a></h2>
 <h3 id="configure-with-azure-cli">Configure with Azure CLI<a class="headerlink" href="#configure-with-azure-cli" title="Permanent link">#</a></h3>
-<div class="highlight"><span class="filename">Azure CLI snippet</span><pre><span></span><code>az network front-door probe update --front-door-name <span class="s1">&#39;&lt;front_door&gt;&#39;</span> -n <span class="s1">&#39;&lt;probe_name&gt;&#39;</span> -g <span class="s1">&#39;&lt;resource_group&gt;&#39;</span> --enabled <span class="s1">&#39;Enabled&#39;</span>
+<div class="highlight"><span class="filename">Azure CLI snippet</span><pre><span></span><code>az<span class="w"> </span>network<span class="w"> </span>front-door<span class="w"> </span>probe<span class="w"> </span>update<span class="w"> </span>--front-door-name<span class="w"> </span><span class="s1">&#39;&lt;front_door&gt;&#39;</span><span class="w"> </span>-n<span class="w"> </span><span class="s1">&#39;&lt;probe_name&gt;&#39;</span><span class="w"> </span>-g<span class="w"> </span><span class="s1">&#39;&lt;resource_group&gt;&#39;</span><span class="w"> </span>--enabled<span class="w"> </span><span class="s1">&#39;Enabled&#39;</span>
 </code></pre></div>
 <h3 id="configure-with-azure-powershell">Configure with Azure PowerShell<a class="headerlink" href="#configure-with-azure-powershell" title="Permanent link">#</a></h3>
 <div class="highlight"><span class="filename">Azure PowerShell snippet</span><pre><span></span><code><span class="nv">$probeSetting</span> <span class="p">=</span> <span class="nb">New-AzFrontDoorHealthProbeSettingObject</span> <span class="n">-Name</span> <span class="s1">&#39;&lt;probe_name&gt;&#39;</span> <span class="n">-EnabledState</span> <span class="s1">&#39;Enabled&#39;</span>
@@ -7819,93 +7816,93 @@ If all endpoints in a pool is unhealthy Front Door sends the request to any enab
 <li>Configure the healthProbeSettings on the OriginGroup</li>
 </ul>
 <p>For example:</p>
-<div class="highlight"><span class="filename">Azure Template snippet</span><pre><span></span><code><span class="w">  </span><span class="nt">&quot;resources&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w"></span>
-<span class="w">    </span><span class="p">{</span><span class="w"></span>
-<span class="w">      </span><span class="nt">&quot;type&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Microsoft.Cdn/profiles&quot;</span><span class="p">,</span><span class="w"></span>
-<span class="w">      </span><span class="nt">&quot;apiVersion&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;2021-06-01&quot;</span><span class="p">,</span><span class="w"></span>
-<span class="w">      </span><span class="nt">&quot;name&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;[parameters(&#39;frontDoorName&#39;)]&quot;</span><span class="p">,</span><span class="w"></span>
-<span class="w">      </span><span class="nt">&quot;location&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Global&quot;</span><span class="p">,</span><span class="w"></span>
-<span class="w">      </span><span class="nt">&quot;sku&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
-<span class="w">        </span><span class="nt">&quot;name&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Standard_AzureFrontDoor&quot;</span><span class="w"></span>
-<span class="w">      </span><span class="p">}</span><span class="w"></span>
-<span class="w">    </span><span class="p">},</span><span class="w"></span>
-<span class="w">    </span><span class="p">{</span><span class="w"></span>
-<span class="w">      </span><span class="nt">&quot;type&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Microsoft.Cdn/profiles/afdEndpoints&quot;</span><span class="p">,</span><span class="w"></span>
-<span class="w">      </span><span class="nt">&quot;apiVersion&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;2021-06-01&quot;</span><span class="p">,</span><span class="w"></span>
-<span class="w">      </span><span class="nt">&quot;name&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;[format(&#39;{0}/{1}&#39;, parameters(&#39;frontDoorName&#39;), variables(&#39;frontDoorEndpointName&#39;))]&quot;</span><span class="p">,</span><span class="w"></span>
-<span class="w">      </span><span class="nt">&quot;location&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Global&quot;</span><span class="p">,</span><span class="w"></span>
-<span class="w">      </span><span class="nt">&quot;properties&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
-<span class="w">        </span><span class="nt">&quot;enabledState&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Enabled&quot;</span><span class="w"></span>
-<span class="w">      </span><span class="p">},</span><span class="w"></span>
-<span class="w">      </span><span class="nt">&quot;dependsOn&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w"></span>
-<span class="w">        </span><span class="s2">&quot;[resourceId(&#39;Microsoft.Cdn/profiles&#39;, parameters(&#39;frontDoorName&#39;))]&quot;</span><span class="w"></span>
-<span class="w">      </span><span class="p">]</span><span class="w"></span>
-<span class="w">    </span><span class="p">},</span><span class="w"></span>
-<span class="w">    </span><span class="p">{</span><span class="w"></span>
-<span class="w">      </span><span class="nt">&quot;type&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Microsoft.Cdn/profiles/originGroups&quot;</span><span class="p">,</span><span class="w"></span>
-<span class="w">      </span><span class="nt">&quot;apiVersion&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;2021-06-01&quot;</span><span class="p">,</span><span class="w"></span>
-<span class="w">      </span><span class="nt">&quot;name&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;[format(&#39;{0}/{1}&#39;, parameters(&#39;frontDoorName&#39;), variables(&#39;frontDoorDefaultOriginGroupName&#39;))]&quot;</span><span class="p">,</span><span class="w"></span>
-<span class="w">      </span><span class="nt">&quot;properties&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
-<span class="w">        </span><span class="nt">&quot;loadBalancingSettings&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
-<span class="w">          </span><span class="nt">&quot;sampleSize&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">4</span><span class="p">,</span><span class="w"></span>
-<span class="w">          </span><span class="nt">&quot;successfulSamplesRequired&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">3</span><span class="w"></span>
-<span class="w">        </span><span class="p">},</span><span class="w"></span>
-<span class="w">        </span><span class="nt">&quot;healthProbeSettings&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
-<span class="w">          </span><span class="nt">&quot;probePath&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;/&quot;</span><span class="p">,</span><span class="w"></span>
-<span class="w">          </span><span class="nt">&quot;probeRequestType&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;HEAD&quot;</span><span class="p">,</span><span class="w"></span>
-<span class="w">          </span><span class="nt">&quot;probeProtocol&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Http&quot;</span><span class="p">,</span><span class="w"></span>
-<span class="w">          </span><span class="nt">&quot;probeIntervalInSeconds&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">100</span><span class="w"></span>
-<span class="w">        </span><span class="p">}</span><span class="w"></span>
-<span class="w">      </span><span class="p">},</span><span class="w"></span>
-<span class="w">      </span><span class="nt">&quot;dependsOn&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w"></span>
-<span class="w">        </span><span class="s2">&quot;[resourceId(&#39;Microsoft.Cdn/profiles&#39;, parameters(&#39;frontDoorName&#39;))]&quot;</span><span class="w"></span>
-<span class="w">      </span><span class="p">]</span><span class="w"></span>
-<span class="w">    </span><span class="p">}</span><span class="w"></span>
-<span class="w">  </span><span class="p">]</span><span class="w"></span>
-<span class="w">  </span><span class="err">```</span><span class="w"></span>
+<div class="highlight"><span class="filename">Azure Template snippet</span><pre><span></span><code><span class="w">  </span><span class="nt">&quot;resources&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
+<span class="w">    </span><span class="p">{</span>
+<span class="w">      </span><span class="nt">&quot;type&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Microsoft.Cdn/profiles&quot;</span><span class="p">,</span>
+<span class="w">      </span><span class="nt">&quot;apiVersion&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;2021-06-01&quot;</span><span class="p">,</span>
+<span class="w">      </span><span class="nt">&quot;name&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;[parameters(&#39;frontDoorName&#39;)]&quot;</span><span class="p">,</span>
+<span class="w">      </span><span class="nt">&quot;location&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Global&quot;</span><span class="p">,</span>
+<span class="w">      </span><span class="nt">&quot;sku&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="nt">&quot;name&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Standard_AzureFrontDoor&quot;</span>
+<span class="w">      </span><span class="p">}</span>
+<span class="w">    </span><span class="p">},</span>
+<span class="w">    </span><span class="p">{</span>
+<span class="w">      </span><span class="nt">&quot;type&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Microsoft.Cdn/profiles/afdEndpoints&quot;</span><span class="p">,</span>
+<span class="w">      </span><span class="nt">&quot;apiVersion&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;2021-06-01&quot;</span><span class="p">,</span>
+<span class="w">      </span><span class="nt">&quot;name&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;[format(&#39;{0}/{1}&#39;, parameters(&#39;frontDoorName&#39;), variables(&#39;frontDoorEndpointName&#39;))]&quot;</span><span class="p">,</span>
+<span class="w">      </span><span class="nt">&quot;location&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Global&quot;</span><span class="p">,</span>
+<span class="w">      </span><span class="nt">&quot;properties&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="nt">&quot;enabledState&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Enabled&quot;</span>
+<span class="w">      </span><span class="p">},</span>
+<span class="w">      </span><span class="nt">&quot;dependsOn&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
+<span class="w">        </span><span class="s2">&quot;[resourceId(&#39;Microsoft.Cdn/profiles&#39;, parameters(&#39;frontDoorName&#39;))]&quot;</span>
+<span class="w">      </span><span class="p">]</span>
+<span class="w">    </span><span class="p">},</span>
+<span class="w">    </span><span class="p">{</span>
+<span class="w">      </span><span class="nt">&quot;type&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Microsoft.Cdn/profiles/originGroups&quot;</span><span class="p">,</span>
+<span class="w">      </span><span class="nt">&quot;apiVersion&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;2021-06-01&quot;</span><span class="p">,</span>
+<span class="w">      </span><span class="nt">&quot;name&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;[format(&#39;{0}/{1}&#39;, parameters(&#39;frontDoorName&#39;), variables(&#39;frontDoorDefaultOriginGroupName&#39;))]&quot;</span><span class="p">,</span>
+<span class="w">      </span><span class="nt">&quot;properties&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="nt">&quot;loadBalancingSettings&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">          </span><span class="nt">&quot;sampleSize&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">4</span><span class="p">,</span>
+<span class="w">          </span><span class="nt">&quot;successfulSamplesRequired&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">3</span>
+<span class="w">        </span><span class="p">},</span>
+<span class="w">        </span><span class="nt">&quot;healthProbeSettings&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">          </span><span class="nt">&quot;probePath&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;/&quot;</span><span class="p">,</span>
+<span class="w">          </span><span class="nt">&quot;probeRequestType&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;HEAD&quot;</span><span class="p">,</span>
+<span class="w">          </span><span class="nt">&quot;probeProtocol&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Http&quot;</span><span class="p">,</span>
+<span class="w">          </span><span class="nt">&quot;probeIntervalInSeconds&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">100</span>
+<span class="w">        </span><span class="p">}</span>
+<span class="w">      </span><span class="p">},</span>
+<span class="w">      </span><span class="nt">&quot;dependsOn&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
+<span class="w">        </span><span class="s2">&quot;[resourceId(&#39;Microsoft.Cdn/profiles&#39;, parameters(&#39;frontDoorName&#39;))]&quot;</span>
+<span class="w">      </span><span class="p">]</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="w">  </span><span class="p">]</span>
+<span class="w">  </span><span class="err">```</span>
 
-<span class="err">###</span><span class="w"> </span><span class="err">Co</span><span class="kc">nf</span><span class="err">igure</span><span class="w"> </span><span class="err">wi</span><span class="kc">t</span><span class="err">h</span><span class="w"> </span><span class="err">Bicep</span><span class="w"></span>
+<span class="err">###</span><span class="w"> </span><span class="err">Co</span><span class="kc">nf</span><span class="err">igure</span><span class="w"> </span><span class="err">wi</span><span class="kc">t</span><span class="err">h</span><span class="w"> </span><span class="err">Bicep</span>
 
-<span class="err">To</span><span class="w"> </span><span class="err">deploy</span><span class="w"> </span><span class="err">a</span><span class="w"> </span><span class="err">Fro</span><span class="kc">nt</span><span class="w"> </span><span class="err">Door</span><span class="w"> </span><span class="err">resource</span><span class="w"> </span><span class="kc">t</span><span class="err">ha</span><span class="kc">t</span><span class="w"> </span><span class="err">passes</span><span class="w"> </span><span class="kc">t</span><span class="err">his</span><span class="w"> </span><span class="err">rule</span><span class="p">:</span><span class="w"></span>
+<span class="err">To</span><span class="w"> </span><span class="err">deploy</span><span class="w"> </span><span class="err">a</span><span class="w"> </span><span class="err">Fro</span><span class="kc">nt</span><span class="w"> </span><span class="err">Door</span><span class="w"> </span><span class="err">resource</span><span class="w"> </span><span class="kc">t</span><span class="err">ha</span><span class="kc">t</span><span class="w"> </span><span class="err">passes</span><span class="w"> </span><span class="kc">t</span><span class="err">his</span><span class="w"> </span><span class="err">rule</span><span class="p">:</span>
 
-<span class="mi">-</span><span class="w"> </span><span class="err">Co</span><span class="kc">nf</span><span class="err">igure</span><span class="w"> </span><span class="kc">t</span><span class="err">he</span><span class="w"> </span><span class="err">heal</span><span class="kc">t</span><span class="err">hProbeSe</span><span class="kc">tt</span><span class="err">i</span><span class="kc">n</span><span class="err">gs</span><span class="w"> </span><span class="err">o</span><span class="kc">n</span><span class="w"> </span><span class="kc">t</span><span class="err">he</span><span class="w"> </span><span class="err">Origi</span><span class="kc">n</span><span class="err">Group</span><span class="w"></span>
+<span class="mi">-</span><span class="w"> </span><span class="err">Co</span><span class="kc">nf</span><span class="err">igure</span><span class="w"> </span><span class="kc">t</span><span class="err">he</span><span class="w"> </span><span class="err">heal</span><span class="kc">t</span><span class="err">hProbeSe</span><span class="kc">tt</span><span class="err">i</span><span class="kc">n</span><span class="err">gs</span><span class="w"> </span><span class="err">o</span><span class="kc">n</span><span class="w"> </span><span class="kc">t</span><span class="err">he</span><span class="w"> </span><span class="err">Origi</span><span class="kc">n</span><span class="err">Group</span>
 
-<span class="err">For</span><span class="w"> </span><span class="err">example</span><span class="p">:</span><span class="w"></span>
+<span class="err">For</span><span class="w"> </span><span class="err">example</span><span class="p">:</span>
 
-<span class="err">```bicep</span><span class="w"> </span><span class="kc">t</span><span class="err">i</span><span class="kc">tle</span><span class="err">=</span><span class="s2">&quot;Azure Bicep snippet&quot;</span><span class="w"></span>
-<span class="err">resource</span><span class="w"> </span><span class="kc">fr</span><span class="err">o</span><span class="kc">nt</span><span class="err">DoorResource</span><span class="w"> </span><span class="err">&#39;Microso</span><span class="kc">ft</span><span class="err">.Cd</span><span class="kc">n</span><span class="err">/pro</span><span class="kc">f</span><span class="err">iles@</span><span class="mi">2021-06-01</span><span class="err">&#39;</span><span class="w"> </span><span class="err">=</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
-<span class="w">  </span><span class="kc">na</span><span class="err">me</span><span class="p">:</span><span class="w"> </span><span class="kc">fr</span><span class="err">o</span><span class="kc">nt</span><span class="err">DoorName</span><span class="w"></span>
-<span class="w">  </span><span class="err">loca</span><span class="kc">t</span><span class="err">io</span><span class="kc">n</span><span class="p">:</span><span class="w"> </span><span class="err">&#39;Global&#39;</span><span class="w"></span>
-<span class="w">  </span><span class="err">sku</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
-<span class="w">    </span><span class="kc">na</span><span class="err">me</span><span class="p">:</span><span class="w"> </span><span class="err">&#39;S</span><span class="kc">tan</span><span class="err">dard_AzureFro</span><span class="kc">nt</span><span class="err">Door&#39;</span><span class="w"></span>
-<span class="w">  </span><span class="p">}</span><span class="w"></span>
-<span class="p">}</span><span class="w"></span>
+<span class="err">```bicep</span><span class="w"> </span><span class="kc">t</span><span class="err">i</span><span class="kc">tle</span><span class="err">=</span><span class="s2">&quot;Azure Bicep snippet&quot;</span>
+<span class="err">resource</span><span class="w"> </span><span class="kc">fr</span><span class="err">o</span><span class="kc">nt</span><span class="err">DoorResource</span><span class="w"> </span><span class="err">&#39;Microso</span><span class="kc">ft</span><span class="err">.Cd</span><span class="kc">n</span><span class="err">/pro</span><span class="kc">f</span><span class="err">iles@</span><span class="mi">2021-06-01</span><span class="err">&#39;</span><span class="w"> </span><span class="err">=</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="kc">na</span><span class="err">me</span><span class="p">:</span><span class="w"> </span><span class="kc">fr</span><span class="err">o</span><span class="kc">nt</span><span class="err">DoorName</span>
+<span class="w">  </span><span class="err">loca</span><span class="kc">t</span><span class="err">io</span><span class="kc">n</span><span class="p">:</span><span class="w"> </span><span class="err">&#39;Global&#39;</span>
+<span class="w">  </span><span class="err">sku</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="kc">na</span><span class="err">me</span><span class="p">:</span><span class="w"> </span><span class="err">&#39;S</span><span class="kc">tan</span><span class="err">dard_AzureFro</span><span class="kc">nt</span><span class="err">Door&#39;</span>
+<span class="w">  </span><span class="p">}</span>
+<span class="p">}</span>
 
-<span class="err">resource</span><span class="w"> </span><span class="kc">fr</span><span class="err">o</span><span class="kc">nt</span><span class="err">DoorE</span><span class="kc">n</span><span class="err">dpoi</span><span class="kc">nt</span><span class="w"> </span><span class="err">&#39;Microso</span><span class="kc">ft</span><span class="err">.Cd</span><span class="kc">n</span><span class="err">/pro</span><span class="kc">f</span><span class="err">iles/a</span><span class="kc">f</span><span class="err">de</span><span class="kc">n</span><span class="err">dpoi</span><span class="kc">nts</span><span class="err">@</span><span class="mi">2021-06-01</span><span class="err">&#39;</span><span class="w"> </span><span class="err">=</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
-<span class="w">  </span><span class="err">pare</span><span class="kc">nt</span><span class="p">:</span><span class="w"> </span><span class="kc">fr</span><span class="err">o</span><span class="kc">nt</span><span class="err">DoorResource</span><span class="w"></span>
-<span class="w">  </span><span class="kc">na</span><span class="err">me</span><span class="p">:</span><span class="w"> </span><span class="kc">fr</span><span class="err">o</span><span class="kc">nt</span><span class="err">DoorE</span><span class="kc">n</span><span class="err">dpoi</span><span class="kc">nt</span><span class="err">Name</span><span class="w"></span>
-<span class="w">  </span><span class="err">loca</span><span class="kc">t</span><span class="err">io</span><span class="kc">n</span><span class="p">:</span><span class="w"> </span><span class="err">&#39;Global&#39;</span><span class="w"></span>
-<span class="w">  </span><span class="err">proper</span><span class="kc">t</span><span class="err">ies</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="err">resource</span><span class="w"> </span><span class="kc">fr</span><span class="err">o</span><span class="kc">nt</span><span class="err">DoorE</span><span class="kc">n</span><span class="err">dpoi</span><span class="kc">nt</span><span class="w"> </span><span class="err">&#39;Microso</span><span class="kc">ft</span><span class="err">.Cd</span><span class="kc">n</span><span class="err">/pro</span><span class="kc">f</span><span class="err">iles/a</span><span class="kc">f</span><span class="err">de</span><span class="kc">n</span><span class="err">dpoi</span><span class="kc">nts</span><span class="err">@</span><span class="mi">2021-06-01</span><span class="err">&#39;</span><span class="w"> </span><span class="err">=</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="err">pare</span><span class="kc">nt</span><span class="p">:</span><span class="w"> </span><span class="kc">fr</span><span class="err">o</span><span class="kc">nt</span><span class="err">DoorResource</span>
+<span class="w">  </span><span class="kc">na</span><span class="err">me</span><span class="p">:</span><span class="w"> </span><span class="kc">fr</span><span class="err">o</span><span class="kc">nt</span><span class="err">DoorE</span><span class="kc">n</span><span class="err">dpoi</span><span class="kc">nt</span><span class="err">Name</span>
+<span class="w">  </span><span class="err">loca</span><span class="kc">t</span><span class="err">io</span><span class="kc">n</span><span class="p">:</span><span class="w"> </span><span class="err">&#39;Global&#39;</span>
+<span class="w">  </span><span class="err">proper</span><span class="kc">t</span><span class="err">ies</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
 <span class="w">    </span><span class="err">e</span><span class="kc">na</span><span class="err">bledS</span><span class="kc">tate</span><span class="p">:</span><span class="w"> </span><span class="err">&#39;E</span><span class="kc">na</span><span class="err">bled&#39;</span><span class="w"> </span>
-<span class="w">  </span><span class="p">}</span><span class="w"></span>
-<span class="p">}</span><span class="w"></span>
+<span class="w">  </span><span class="p">}</span>
+<span class="p">}</span>
 
-<span class="err">resource</span><span class="w"> </span><span class="kc">fr</span><span class="err">o</span><span class="kc">nt</span><span class="err">DoorOrigi</span><span class="kc">n</span><span class="err">Group</span><span class="w"> </span><span class="err">&#39;Microso</span><span class="kc">ft</span><span class="err">.Cd</span><span class="kc">n</span><span class="err">/pro</span><span class="kc">f</span><span class="err">iles/origi</span><span class="kc">n</span><span class="err">groups@</span><span class="mi">2021-06-01</span><span class="err">&#39;</span><span class="w"> </span><span class="err">=</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
-<span class="w">  </span><span class="kc">na</span><span class="err">me</span><span class="p">:</span><span class="w"> </span><span class="kc">fr</span><span class="err">o</span><span class="kc">nt</span><span class="err">DoorDe</span><span class="kc">fault</span><span class="err">Origi</span><span class="kc">n</span><span class="err">GroupName</span><span class="w"></span>
-<span class="w">  </span><span class="err">pare</span><span class="kc">nt</span><span class="p">:</span><span class="w"> </span><span class="kc">fr</span><span class="err">o</span><span class="kc">nt</span><span class="err">DoorResource</span><span class="w"></span>
-<span class="w">  </span><span class="err">proper</span><span class="kc">t</span><span class="err">ies</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
-<span class="w">    </span><span class="err">loadBala</span><span class="kc">n</span><span class="err">ci</span><span class="kc">n</span><span class="err">gSe</span><span class="kc">tt</span><span class="err">i</span><span class="kc">n</span><span class="err">gs</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
-<span class="w">      </span><span class="err">sampleSize</span><span class="p">:</span><span class="w"> </span><span class="mi">4</span><span class="w"></span>
-<span class="w">      </span><span class="err">success</span><span class="kc">ful</span><span class="err">SamplesRequired</span><span class="p">:</span><span class="w"> </span><span class="mi">3</span><span class="w"></span>
-<span class="w">    </span><span class="p">}</span><span class="w"></span>
-<span class="w">    </span><span class="err">heal</span><span class="kc">t</span><span class="err">hProbeSe</span><span class="kc">tt</span><span class="err">i</span><span class="kc">n</span><span class="err">gs</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
-<span class="w">      </span><span class="err">probePa</span><span class="kc">t</span><span class="err">h</span><span class="p">:</span><span class="w"> </span><span class="err">&#39;/&#39;</span><span class="w"></span>
-<span class="w">      </span><span class="err">probeReques</span><span class="kc">t</span><span class="err">Type</span><span class="p">:</span><span class="w"> </span><span class="err">&#39;HEAD&#39;</span><span class="w"></span>
-<span class="w">      </span><span class="err">probePro</span><span class="kc">t</span><span class="err">ocol</span><span class="p">:</span><span class="w"> </span><span class="err">&#39;H</span><span class="kc">tt</span><span class="err">p&#39;</span><span class="w"></span>
-<span class="w">      </span><span class="err">probeI</span><span class="kc">nter</span><span class="err">valI</span><span class="kc">n</span><span class="err">Seco</span><span class="kc">n</span><span class="err">ds</span><span class="p">:</span><span class="w"> </span><span class="mi">100</span><span class="w"></span>
-<span class="w">    </span><span class="p">}</span><span class="w"></span>
-<span class="w">  </span><span class="p">}</span><span class="w"></span>
-<span class="p">}</span><span class="w"></span>
+<span class="err">resource</span><span class="w"> </span><span class="kc">fr</span><span class="err">o</span><span class="kc">nt</span><span class="err">DoorOrigi</span><span class="kc">n</span><span class="err">Group</span><span class="w"> </span><span class="err">&#39;Microso</span><span class="kc">ft</span><span class="err">.Cd</span><span class="kc">n</span><span class="err">/pro</span><span class="kc">f</span><span class="err">iles/origi</span><span class="kc">n</span><span class="err">groups@</span><span class="mi">2021-06-01</span><span class="err">&#39;</span><span class="w"> </span><span class="err">=</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="kc">na</span><span class="err">me</span><span class="p">:</span><span class="w"> </span><span class="kc">fr</span><span class="err">o</span><span class="kc">nt</span><span class="err">DoorDe</span><span class="kc">fault</span><span class="err">Origi</span><span class="kc">n</span><span class="err">GroupName</span>
+<span class="w">  </span><span class="err">pare</span><span class="kc">nt</span><span class="p">:</span><span class="w"> </span><span class="kc">fr</span><span class="err">o</span><span class="kc">nt</span><span class="err">DoorResource</span>
+<span class="w">  </span><span class="err">proper</span><span class="kc">t</span><span class="err">ies</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="err">loadBala</span><span class="kc">n</span><span class="err">ci</span><span class="kc">n</span><span class="err">gSe</span><span class="kc">tt</span><span class="err">i</span><span class="kc">n</span><span class="err">gs</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">      </span><span class="err">sampleSize</span><span class="p">:</span><span class="w"> </span><span class="mi">4</span>
+<span class="w">      </span><span class="err">success</span><span class="kc">ful</span><span class="err">SamplesRequired</span><span class="p">:</span><span class="w"> </span><span class="mi">3</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="w">    </span><span class="err">heal</span><span class="kc">t</span><span class="err">hProbeSe</span><span class="kc">tt</span><span class="err">i</span><span class="kc">n</span><span class="err">gs</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">      </span><span class="err">probePa</span><span class="kc">t</span><span class="err">h</span><span class="p">:</span><span class="w"> </span><span class="err">&#39;/&#39;</span>
+<span class="w">      </span><span class="err">probeReques</span><span class="kc">t</span><span class="err">Type</span><span class="p">:</span><span class="w"> </span><span class="err">&#39;HEAD&#39;</span>
+<span class="w">      </span><span class="err">probePro</span><span class="kc">t</span><span class="err">ocol</span><span class="p">:</span><span class="w"> </span><span class="err">&#39;H</span><span class="kc">tt</span><span class="err">p&#39;</span>
+<span class="w">      </span><span class="err">probeI</span><span class="kc">nter</span><span class="err">valI</span><span class="kc">n</span><span class="err">Seco</span><span class="kc">n</span><span class="err">ds</span><span class="p">:</span><span class="w"> </span><span class="mi">100</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="w">  </span><span class="p">}</span>
+<span class="p">}</span>
 </code></pre></div>
 <h2 id="links">Links<a class="headerlink" href="#links" title="Permanent link">#</a></h2>
 <ul>
@@ -8037,12 +8034,11 @@ If all endpoints in a pool is unhealthy Front Door sends the request to any enab
       <div class="md-dialog__inner md-typeset"></div>
     </div>
     
-    <script id="__config" type="application/json">{"base": "../../..", "features": ["navigation.instant", "navigation.indexes", {"navigation.sections": {"level": 1}}, "navigation.tabs", "content.code.annotate", "content.tabs.link"], "search": "../../../assets/javascripts/workers/search.16e2a7d4.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version.title": "Select version"}, "version": {"provider": "mike"}}</script>
+    <script id="__config" type="application/json">{"base": "../../..", "features": ["navigation.instant", "navigation.indexes", {"navigation.sections": {"level": 1}}, "navigation.tabs", "content.code.annotate", "content.tabs.link"], "search": "../../../assets/javascripts/workers/search.12658920.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": {"provider": "mike"}}</script>
     
     
-      <script src="../../../assets/javascripts/bundle.5a2dcb6a.min.js"></script>
+      <script src="../../../assets/javascripts/bundle.5cf534bf.min.js"></script>
       
-    
     
   </body>
 </html>

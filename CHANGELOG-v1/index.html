@@ -9979,6 +9979,16 @@
 <h2 id="unreleased">Unreleased<a class="headerlink" href="#unreleased" title="Permanent link">#</a></h2>
 <p>What's changed since v1.23.0:</p>
 <ul>
+<li>General improvements:<ul>
+<li>Updated <code>Export-AzRuleData</code> to improve export performance by <a href="https://github.com/BernieWhite">@BernieWhite</a>.
+  <a href="https://github.com/Azure/PSRule.Rules.Azure/issues/1341">#1341</a><ul>
+<li>Removed <code>Az.Resources</code> dependency.</li>
+<li>Added async threading for export concurrency.</li>
+<li>Improved performance by using automatic look up of API versions by using provider cache.</li>
+</ul>
+</li>
+</ul>
+</li>
 <li>Engineering:<ul>
 <li>Bump PSRule to v2.7.0.
   <a href="https://github.com/Azure/PSRule.Rules.Azure/pull/1973">#1973</a></li>
@@ -9988,6 +9998,11 @@
   <a href="https://github.com/Azure/PSRule.Rules.Azure/pull/1903">#1903</a></li>
 <li>Bump Pester to v5.4.0.
   <a href="https://github.com/Azure/PSRule.Rules.Azure/pull/1994">#1994</a></li>
+</ul>
+</li>
+<li>Bug fixes:<ul>
+<li>Fixed <code>Export-AzRuleData</code> may not export all data if throttled by <a href="https://github.com/BernieWhite">@BernieWhite</a>.
+  <a href="https://github.com/Azure/PSRule.Rules.Azure/issues/1341">#1341</a></li>
 </ul>
 </li>
 </ul>
@@ -14119,7 +14134,7 @@
   <small>
     
       Last update:
-      2023-01-18
+      2023-01-25
     
   </small>
 </div>

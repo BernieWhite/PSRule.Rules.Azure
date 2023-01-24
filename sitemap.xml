@@ -2225,4 +2225,9 @@
          <lastmod>2023-01-24</lastmod>
          <changefreq>daily</changefreq>
     </url>
+    <url>
+         <loc>https://azure.github.io/PSRule.Rules.Azure/specs/inflight-export-spec/</loc>
+         <lastmod>2023-01-24</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
 </urlset>

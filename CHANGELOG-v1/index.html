@@ -9993,6 +9993,15 @@
 <h2 id="unreleased">Unreleased<a class="headerlink" href="#unreleased" title="Permanent link">#</a></h2>
 <p>What's changed since pre-release v1.24.0-B0013:</p>
 <ul>
+<li>General improvements:<ul>
+<li>Added support for Bicep lambda functions by <a href="https://github.com/BernieWhite">@BernieWhite</a>.
+  <a href="https://github.com/Azure/PSRule.Rules.Azure/issues/1536">#1536</a><ul>
+<li>Bicep <code>filter</code>, <code>map</code>, <code>reduce</code>, and <code>sort</code> are supported.</li>
+<li>Support for <code>flatten</code> was previously added in v1.23.0.</li>
+</ul>
+</li>
+</ul>
+</li>
 <li>Engineering:<ul>
 <li>Updated resource providers and policy aliases.
   <a href="https://github.com/Azure/PSRule.Rules.Azure/pull/1736">#1736</a></li>
@@ -10001,6 +10010,8 @@
 <li>Bug fixes:<ul>
 <li>Fixed failed to expand nested deployment with runtime shallow parameter by <a href="https://github.com/BernieWhite">@BernieWhite</a>.
   <a href="https://github.com/Azure/PSRule.Rules.Azure/issues/2004">#2004</a></li>
+<li>Fixed <code>apiVersion</code> comparison of <code>requestContext</code> by <a href="https://github.com/BernieWhite">@BernieWhite</a>.
+  <a href="https://github.com/Azure/PSRule.Rules.Azure/issues/1654">#1654</a></li>
 </ul>
 </li>
 </ul>
@@ -14162,7 +14173,7 @@
   <small>
     
       Last update:
-      2023-01-27
+      2023-01-29
     
   </small>
 </div>

@@ -21,7 +21,7 @@
         <link rel="next" href="../CHANGELOG-v0/">
       
       <link rel="icon" href="../assets/ms_icon.png">
-      <meta name="generator" content="mkdocs-1.4.2, mkdocs-material-9.0.10">
+      <meta name="generator" content="mkdocs-1.4.2, mkdocs-material-9.0.11">
     
     
       
@@ -1030,6 +1030,13 @@
         <li class="md-nav__item">
   <a href="#unreleased" class="md-nav__link">
     Unreleased
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#v1240" class="md-nav__link">
+    v1.24.0
   </a>
   
 </li>
@@ -8812,6 +8819,13 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#v1240" class="md-nav__link">
+    v1.24.0
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#v1240-b0035-pre-release" class="md-nav__link">
     v1.24.0-B0035 (pre-release)
   </a>
@@ -10005,6 +10019,56 @@
   See <a href="../upgrade-notes/">upgrade notes</a> for more information.</li>
 </ul>
 <h2 id="unreleased">Unreleased<a class="headerlink" href="#unreleased" title="Permanent link">#</a></h2>
+<h2 id="v1240">v1.24.0<a class="headerlink" href="#v1240" title="Permanent link">#</a></h2>
+<p>What's changed since v1.23.0:</p>
+<ul>
+<li>General improvements:<ul>
+<li>Updated <code>Export-AzRuleData</code> to improve export performance by <a href="https://github.com/BernieWhite">@BernieWhite</a>.
+  <a href="https://github.com/Azure/PSRule.Rules.Azure/issues/1341">#1341</a><ul>
+<li>Removed <code>Az.Resources</code> dependency.</li>
+<li>Added async threading for export concurrency.</li>
+<li>Improved performance by using automatic look up of API versions by using provider cache.</li>
+</ul>
+</li>
+<li>Added support for Bicep lambda functions by <a href="https://github.com/BernieWhite">@BernieWhite</a>.
+  <a href="https://github.com/Azure/PSRule.Rules.Azure/issues/1536">#1536</a><ul>
+<li>Bicep <code>filter</code>, <code>map</code>, <code>reduce</code>, and <code>sort</code> are supported.</li>
+<li>Support for <code>flatten</code> was previously added in v1.23.0.</li>
+</ul>
+</li>
+<li>Added optimization for policy type conditions by <a href="https://github.com/BernieWhite">@BernieWhite</a>.
+  <a href="https://github.com/Azure/PSRule.Rules.Azure/issues/1966">#1966</a></li>
+</ul>
+</li>
+<li>Engineering:<ul>
+<li>Bump PSRule to v2.7.0.
+  <a href="https://github.com/Azure/PSRule.Rules.Azure/pull/1973">#1973</a></li>
+<li>Updated resource providers and policy aliases.
+  <a href="https://github.com/Azure/PSRule.Rules.Azure/pull/1736">#1736</a></li>
+<li>Bump Az.Resources to v6.5.1.
+  <a href="https://github.com/Azure/PSRule.Rules.Azure/pull/1973">#1973</a></li>
+<li>Bump Newtonsoft.Json to v13.0.2.
+  <a href="https://github.com/Azure/PSRule.Rules.Azure/pull/1903">#1903</a></li>
+<li>Bump Pester to v5.4.0.
+  <a href="https://github.com/Azure/PSRule.Rules.Azure/pull/1994">#1994</a></li>
+</ul>
+</li>
+<li>Bug fixes:<ul>
+<li>Fixed <code>Export-AzRuleData</code> may not export all data if throttled by <a href="https://github.com/BernieWhite">@BernieWhite</a>.
+  <a href="https://github.com/Azure/PSRule.Rules.Azure/issues/1341">#1341</a></li>
+<li>Fixed failed to expand nested deployment with runtime shallow parameter by <a href="https://github.com/BernieWhite">@BernieWhite</a>.
+  <a href="https://github.com/Azure/PSRule.Rules.Azure/issues/2004">#2004</a></li>
+<li>Fixed <code>apiVersion</code> comparison of <code>requestContext</code> by <a href="https://github.com/BernieWhite">@BernieWhite</a>.
+  <a href="https://github.com/Azure/PSRule.Rules.Azure/issues/1654">#1654</a></li>
+<li>Fixed simple cases for field type expressions by <a href="https://github.com/BernieWhite">@BernieWhite</a>.
+  <a href="https://github.com/Azure/PSRule.Rules.Azure/issues/1323">#1323</a></li>
+</ul>
+</li>
+</ul>
+<p>What's changed since pre-release v1.24.0-B0035:</p>
+<ul>
+<li>No additional changes.</li>
+</ul>
 <h2 id="v1240-b0035-pre-release">v1.24.0-B0035 (pre-release)<a class="headerlink" href="#v1240-b0035-pre-release" title="Permanent link">#</a></h2>
 <p>What's changed since pre-release v1.24.0-B0013:</p>
 <ul>
@@ -14192,7 +14256,7 @@
   <small>
     
       Last update:
-      2023-01-30
+      2023-02-06
     
   </small>
 </div>
@@ -14232,6 +14296,8 @@
       
         <div class="md-social">
   
+    
+    
     
     
       

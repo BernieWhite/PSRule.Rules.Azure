@@ -283,6 +283,22 @@
   
 
       
+        
+  
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../learn/learn-video-series/" class="md-tabs__link">
+        Learn
+      </a>
+    </li>
+  
+
+      
     </ul>
   </div>
 </nav>
@@ -691,6 +707,13 @@
           <li class="md-nav__item">
   <a href="#ignoring-rules" class="md-nav__link">
     Ignoring rules
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ignoring-files" class="md-nav__link">
+    Ignoring files
   </a>
   
 </li>
@@ -7719,6 +7742,59 @@
   
 
     
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" >
+      
+      
+        
+          
+        
+      
+      
+        <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="0">
+          Learn
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_5">
+          <span class="md-nav__icon md-icon"></span>
+          Learn
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../learn/learn-video-series/" class="md-nav__link">
+        Learn PSRule for Azure series
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
   </ul>
 </nav>
                   </div>
@@ -7823,6 +7899,13 @@
 </li>
         
           <li class="md-nav__item">
+  <a href="#ignoring-files" class="md-nav__link">
+    Ignoring files
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#advanced-configuration" class="md-nav__link">
     Advanced configuration
   </a>
@@ -7922,7 +8005,8 @@ In addition, many of these parameters are also available as configuration option
 <p>Some of the most common parameters are listed below.
 For a full list of parameters see the readme for <a href="https://github.com/microsoft/ps-rule#inputs">GitHub Actions</a> or <a href="https://github.com/microsoft/PSRule-pipelines/blob/main/docs/tasks.md#ps-rule-assert">Azure Pipelines</a>.</p>
 <h3 id="limiting-input-to-a-specific-path">Limiting input to a specific path<a class="headerlink" href="#limiting-input-to-a-specific-path" title="Permanent link">#</a></h3>
-<p>You can use the <code>inputPath</code> parameter to limit the analysis to a specific path.</p>
+<p>By default, PSRule will scan all files and folders within the repository or current working path.
+You can use the <code>inputPath</code> parameter to limit the analysis to a specific path.</p>
 <div class="admonition tip">
 <p class="admonition-title">Tip</p>
 <p>The <code>inputPath</code> parameter only accepts a relative path.
@@ -8126,7 +8210,7 @@ This option can be set within the <code>ps-rule.yaml</code> file.</p>
 <li><strong>Suppress</strong> &mdash; The rule is not executed for a specific resource by name.</li>
 </ul>
 <p>To exclude a rule, set <code>Rule.Exclude</code> option within the <code>ps-rule.yaml</code> file.</p>
-<p><a href="https://microsoft.github.io/PSRule/v2/concepts/PSRule/en-US/about_PSRule_Options/#ruleexclude"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M0 3.75A.75.75 0 0 1 .75 3h7.497c1.566 0 2.945.8 3.751 2.014A4.495 4.495 0 0 1 15.75 3h7.5a.75.75 0 0 1 .75.75v15.063a.752.752 0 0 1-.755.75l-7.682-.052a3 3 0 0 0-2.142.878l-.89.891a.75.75 0 0 1-1.061 0l-.902-.901a2.996 2.996 0 0 0-2.121-.879H.75a.75.75 0 0 1-.75-.75Zm12.75 15.232a4.503 4.503 0 0 1 2.823-.971l6.927.047V4.5h-6.75a3 3 0 0 0-3 3ZM11.247 7.497a3 3 0 0 0-3-2.997H1.5V18h6.947c1.018 0 2.006.346 2.803.98Z"/></svg></span> Docs</a></p>
+<p><a href="https://aka.ms/ps-rule/options#ruleexclude"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M0 3.75A.75.75 0 0 1 .75 3h7.497c1.566 0 2.945.8 3.751 2.014A4.495 4.495 0 0 1 15.75 3h7.5a.75.75 0 0 1 .75.75v15.063a.752.752 0 0 1-.755.75l-7.682-.052a3 3 0 0 0-2.142.878l-.89.891a.75.75 0 0 1-1.061 0l-.902-.901a2.996 2.996 0 0 0-2.121-.879H.75a.75.75 0 0 1-.75-.75Zm12.75 15.232a4.503 4.503 0 0 1 2.823-.971l6.927.047V4.5h-6.75a3 3 0 0 0-3 3ZM11.247 7.497a3 3 0 0 0-3-2.997H1.5V18h6.947c1.018 0 2.006.346 2.803.98Z"/></svg></span> Docs</a></p>
 <div class="highlight"><span class="filename">ps-rule.yaml</span><pre><span></span><code><span class="nt">rule</span><span class="p">:</span>
 <span class="w">  </span><span class="nt">exclude</span><span class="p">:</span>
 <span class="w">  </span><span class="c1"># Ignore the following rules for all resources</span>
@@ -8134,7 +8218,7 @@ This option can be set within the <code>ps-rule.yaml</code> file.</p>
 <span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Azure.VM.Standalone</span>
 </code></pre></div>
 <p>To suppress a rule, set <code>Suppression</code> option within the <code>ps-rule.yaml</code> file.</p>
-<p><a href="https://microsoft.github.io/PSRule/v2/concepts/PSRule/en-US/about_PSRule_Options/#suppression"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M0 3.75A.75.75 0 0 1 .75 3h7.497c1.566 0 2.945.8 3.751 2.014A4.495 4.495 0 0 1 15.75 3h7.5a.75.75 0 0 1 .75.75v15.063a.752.752 0 0 1-.755.75l-7.682-.052a3 3 0 0 0-2.142.878l-.89.891a.75.75 0 0 1-1.061 0l-.902-.901a2.996 2.996 0 0 0-2.121-.879H.75a.75.75 0 0 1-.75-.75Zm12.75 15.232a4.503 4.503 0 0 1 2.823-.971l6.927.047V4.5h-6.75a3 3 0 0 0-3 3ZM11.247 7.497a3 3 0 0 0-3-2.997H1.5V18h6.947c1.018 0 2.006.346 2.803.98Z"/></svg></span> Docs</a></p>
+<p><a href="https://aka.ms/ps-rule/options#suppression"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M0 3.75A.75.75 0 0 1 .75 3h7.497c1.566 0 2.945.8 3.751 2.014A4.495 4.495 0 0 1 15.75 3h7.5a.75.75 0 0 1 .75.75v15.063a.752.752 0 0 1-.755.75l-7.682-.052a3 3 0 0 0-2.142.878l-.89.891a.75.75 0 0 1-1.061 0l-.902-.901a2.996 2.996 0 0 0-2.121-.879H.75a.75.75 0 0 1-.75-.75Zm12.75 15.232a4.503 4.503 0 0 1 2.823-.971l6.927.047V4.5h-6.75a3 3 0 0 0-3 3ZM11.247 7.497a3 3 0 0 0-3-2.997H1.5V18h6.947c1.018 0 2.006.346 2.803.98Z"/></svg></span> Docs</a></p>
 <div class="highlight"><span class="filename">ps-rule.yaml</span><pre><span></span><code><span class="nt">suppression</span><span class="p">:</span>
 <span class="w">  </span><span class="nt">Azure.AKS.AuthorizedIPs</span><span class="p">:</span>
 <span class="w">  </span><span class="c1"># Exclude the following externally managed AKS clusters</span>
@@ -8150,6 +8234,32 @@ This option can be set within the <code>ps-rule.yaml</code> file.</p>
 Meaningful comments help during peer review within a Pull Request (PR).
 Also consider including a date if the exclusions or suppressions are temporary.</p>
 </div>
+<h3 id="ignoring-files">Ignoring files<a class="headerlink" href="#ignoring-files" title="Permanent link">#</a></h3>
+<p><a href="https://aka.ms/ps-rule/options#inputpathignore"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M0 3.75A.75.75 0 0 1 .75 3h7.497c1.566 0 2.945.8 3.751 2.014A4.495 4.495 0 0 1 15.75 3h7.5a.75.75 0 0 1 .75.75v15.063a.752.752 0 0 1-.755.75l-7.682-.052a3 3 0 0 0-2.142.878l-.89.891a.75.75 0 0 1-1.061 0l-.902-.901a2.996 2.996 0 0 0-2.121-.879H.75a.75.75 0 0 1-.75-.75Zm12.75 15.232a4.503 4.503 0 0 1 2.823-.971l6.927.047V4.5h-6.75a3 3 0 0 0-3 3ZM11.247 7.497a3 3 0 0 0-3-2.997H1.5V18h6.947c1.018 0 2.006.346 2.803.98Z"/></svg></span> Docs</a></p>
+<p>To exclude or ignore files from being processed, configure the <a href="https://aka.ms/ps-rule/options#inputpathignore">Input.PathIgnore</a> option.
+This option allows you to ignore files using a path spec.</p>
+<p>To ignore files with common extensions, set the <code>Input.PathIgnore</code> option within the <code>ps-rule.yaml</code> file.</p>
+<div class="highlight"><span class="filename">ps-rule.yaml</span><pre><span></span><code><span class="nt">input</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">pathIgnore</span><span class="p">:</span>
+<span class="w">  </span><span class="c1"># Exclude files with these extensions</span>
+<span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="s">&#39;*.md&#39;</span>
+<span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="s">&#39;*.png&#39;</span>
+<span class="w">  </span><span class="c1"># Exclude specific configuration files</span>
+<span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="s">&#39;bicepconfig.json&#39;</span>
+</code></pre></div>
+<p>To ignore all files with some exceptions, set the <code>Input.PathIgnore</code> option within the <code>ps-rule.yaml</code> file.</p>
+<div class="highlight"><span class="filename">ps-rule.yaml</span><pre><span></span><code><span class="nt">input</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">pathIgnore</span><span class="p">:</span>
+<span class="w">  </span><span class="c1"># Exclude all files</span>
+<span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="s">&#39;*&#39;</span>
+<span class="w">  </span><span class="c1"># Only process deploy.bicep files</span>
+<span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="s">&#39;!**/deploy.bicep&#39;</span>
+</code></pre></div>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>Some common file exclusions are recommended for working with Azure Bicep source files.
+See <a href="../using-bicep/#configuring-path-exclusions">Configuring path exclusions</a> for details.</p>
+</div>
 <h3 id="advanced-configuration">Advanced configuration<a class="headerlink" href="#advanced-configuration" title="Permanent link">#</a></h3>
 <p><a href="../setup/configuring-options/"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M0 3.75A.75.75 0 0 1 .75 3h7.497c1.566 0 2.945.8 3.751 2.014A4.495 4.495 0 0 1 15.75 3h7.5a.75.75 0 0 1 .75.75v15.063a.752.752 0 0 1-.755.75l-7.682-.052a3 3 0 0 0-2.142.878l-.89.891a.75.75 0 0 1-1.061 0l-.902-.901a2.996 2.996 0 0 0-2.121-.879H.75a.75.75 0 0 1-.75-.75Zm12.75 15.232a4.503 4.503 0 0 1 2.823-.971l6.927.047V4.5h-6.75a3 3 0 0 0-3 3ZM11.247 7.497a3 3 0 0 0-3-2.997H1.5V18h6.947c1.018 0 2.006.346 2.803.98Z"/></svg></span> Docs</a></p>
 <p>PSRule for Azure comes with many configuration options.
@@ -8160,7 +8270,7 @@ The setup section explains in detail how to configure each option.</p>
   <small>
     
       Last update:
-      2023-02-06
+      2023-02-12
     
   </small>
 </div>

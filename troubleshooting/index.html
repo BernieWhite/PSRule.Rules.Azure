@@ -855,8 +855,8 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#an-earlier-version-of-azaccounts-is-imported" class="md-nav__link">
-    An earlier version of Az.Accounts is imported
+  <a href="#bicep-compile-errors" class="md-nav__link">
+    Bicep compile errors
   </a>
   
 </li>
@@ -885,6 +885,13 @@
         <li class="md-nav__item">
   <a href="#parameter-file-warns-of-metadata-property" class="md-nav__link">
     Parameter file warns of metadata property
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#an-earlier-version-of-azaccounts-is-imported" class="md-nav__link">
+    An earlier version of Az.Accounts is imported
   </a>
   
 </li>
@@ -7851,8 +7858,8 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#an-earlier-version-of-azaccounts-is-imported" class="md-nav__link">
-    An earlier version of Az.Accounts is imported
+  <a href="#bicep-compile-errors" class="md-nav__link">
+    Bicep compile errors
   </a>
   
 </li>
@@ -7881,6 +7888,13 @@
         <li class="md-nav__item">
   <a href="#parameter-file-warns-of-metadata-property" class="md-nav__link">
     Parameter file warns of metadata property
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#an-earlier-version-of-azaccounts-is-imported" class="md-nav__link">
+    An earlier version of Az.Accounts is imported
   </a>
   
 </li>
@@ -7917,28 +7931,27 @@
 
 <h1 id="troubleshooting">Troubleshooting<a class="headerlink" href="#troubleshooting" title="Permanent link">#</a></h1>
 <p>This article provides troubleshooting instructions for common errors.</p>
-<h2 id="an-earlier-version-of-azaccounts-is-imported">An earlier version of Az.Accounts is imported<a class="headerlink" href="#an-earlier-version-of-azaccounts-is-imported" title="Permanent link">#</a></h2>
-<p>When running PSRule for Azure in Azure DevOps within the <code>AzurePowerShell@5</code> task,
-you may see the following error.</p>
+<h2 id="bicep-compile-errors">Bicep compile errors<a class="headerlink" href="#bicep-compile-errors" title="Permanent link">#</a></h2>
+<p>When expanding Bicep source files you may get an error including a <em>BCPnnn</em> code similar to the following:</p>
 <div class="admonition error">
 <p class="admonition-title">Error</p>
-<p>This module requires Az.Accounts version 2.8.0. An earlier version of
-Az.Accounts is imported in the current PowerShell session. Please open a new
-session before importing this module. This error could indicate that multiple
-incompatible versions of the Azure PowerShell cmdlets are installed on your
-system. Please see https://aka.ms/azps-version-error for troubleshooting
-information.</p>
+<p>Exception calling "GetResources" with "3" argument(s): "Bicep (0.14.46) compilation of '<file>' failed with: Error BCP057: The name "storageAccountName" does not exist in the current context.</p>
 </div>
-<p>This error is raised by a chained dependency failure importing a newer version of <code>Az.Accounts</code>.
-To avoid this issue attempt to install the exact versions of <code>Az.Resources</code>.
-In the <code>AzurePowerShell@5</code> task before installing PSRule.</p>
-<div class="highlight"><pre><span></span><code><span class="nb">Install-Module</span> <span class="n">Az</span><span class="p">.</span><span class="n">Resources</span> <span class="n">-RequiredVersion</span> <span class="s1">&#39;5.6.0&#39;</span> <span class="n">-Force</span> <span class="n">-Scope</span> <span class="n">CurrentUser</span>
-</code></pre></div>
-<p>From PSRule for Azure v1.16.0, <code>Az.Accounts</code> and <code>Az.Resources</code> are no longer installed as dependencies.
-When using export commands from PSRule, you may need to install these modules.</p>
-<p>To install these modules, use the following PowerShell command:</p>
-<div class="highlight"><pre><span></span><code><span class="nb">Install-Module</span> <span class="n">Az</span><span class="p">.</span><span class="n">Resources</span> <span class="n">-Force</span> <span class="n">-Scope</span> <span class="n">CurrentUser</span>
-</code></pre></div>
+<p>This error is raised when Bicep fails to compile a source file.
+To resolve this issue:</p>
+<ul>
+<li>You may need to update your Bicep source file before PSRule can expand it.
+  Use guidance from the Bicep error message to help resolve the issue.</li>
+<li>Check that you are using a version of Bicep that supports the Bicep features you are using.
+  It may not always be clear which version of Bicep CLI PSRule for Azure is using if you have multiple versions installed.
+  Using the Bicep CLI via <code>az bicep</code> is not the default, and you may need to <a href="../setup/setup-bicep/#using-azure-cli">set additional options to use it</a>.</li>
+</ul>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>From PSRule for Azure v1.25.0 you can configure the minimum version of Bicep CLI required.
+If an earlier version is detected, PSRule for Azure will generate a warning.
+See <a href="../setup/setup-bicep/#configuring-minimum-version">Configuring minimum version</a> for details on how to configure this option.</p>
+</div>
 <h2 id="bicep-compilation-timeout">Bicep compilation timeout<a class="headerlink" href="#bicep-compilation-timeout" title="Permanent link">#</a></h2>
 <p>When expanding Bicep source files you may get an error similar to the following:</p>
 <div class="admonition error">
@@ -7991,7 +8004,7 @@ See <a href="../setup/configuring-expansion/#bicep-compilation-timeout">Bicep co
   On case-sensitive file systems such as Linux, this directory name is case-sensitive.
   See <a href="https://aka.ms/ps-rule/naming">Storing and naming rules</a> for more information.</li>
 <li><strong>Check file name suffix</strong> &mdash; PSRule only looks for files with the <code>.Rule.ps1</code>, <code>.Rule.yaml</code>, or <code>.Rule.jsonc</code> suffix.
-  On case-sensitive file systems such as Linux, this file siffix is case-sensitive.
+  On case-sensitive file systems such as Linux, this file suffix is case-sensitive.
   See <a href="https://aka.ms/ps-rule/naming">Storing and naming rules</a> for more information.</li>
 <li><strong>Check binding configuration</strong> &mdash; PSRule uses <em>binding</em> to work out which property to use for a resource type.
   To be able to use the <code>-Type</code> parameter or <code>type</code> properties in rules definitions, binding must be set.
@@ -8004,7 +8017,7 @@ See <a href="../setup/configuring-expansion/#bicep-compilation-timeout">Bicep co
 </ul>
 <div class="admonition tip">
 <p class="admonition-title">Tip</p>
-<p>You may be able to use <code>git mv</code> to change the case of a file if it is commited to the repository inorrectly.</p>
+<p>You may be able to use <code>git mv</code> to change the case of a file if it is committed to the repository incorrectly.</p>
 </div>
 <h2 id="parameter-file-warns-of-metadata-property">Parameter file warns of metadata property<a class="headerlink" href="#parameter-file-warns-of-metadata-property" title="Permanent link">#</a></h2>
 <p>You may find while editing a <code>.json</code> parameter file the root <code>metadata</code> property is flagged with a warning.</p>
@@ -8025,6 +8038,28 @@ See <a href="../setup/configuring-expansion/#bicep-compilation-timeout">Bicep co
 <p>This doesn't affect the workings of the parameter file or deployment.
 The reason for the warning is that the <code>metadata</code> property has not been added to the parameter file JSON schema.
 However, the top level <code>metadata</code> property is ignored by Azure Resource Manager when deploying a template.</p>
+<h2 id="an-earlier-version-of-azaccounts-is-imported">An earlier version of Az.Accounts is imported<a class="headerlink" href="#an-earlier-version-of-azaccounts-is-imported" title="Permanent link">#</a></h2>
+<p>When running PSRule for Azure in Azure DevOps within the <code>AzurePowerShell@5</code> task,
+you may see the following error.</p>
+<div class="admonition error">
+<p class="admonition-title">Error</p>
+<p>This module requires Az.Accounts version 2.8.0. An earlier version of
+Az.Accounts is imported in the current PowerShell session. Please open a new
+session before importing this module. This error could indicate that multiple
+incompatible versions of the Azure PowerShell cmdlets are installed on your
+system. Please see https://aka.ms/azps-version-error for troubleshooting
+information.</p>
+</div>
+<p>This error is raised by a chained dependency failure importing a newer version of <code>Az.Accounts</code>.
+To avoid this issue attempt to install the exact versions of <code>Az.Resources</code>.
+In the <code>AzurePowerShell@5</code> task before installing PSRule.</p>
+<div class="highlight"><pre><span></span><code><span class="nb">Install-Module</span> <span class="n">Az</span><span class="p">.</span><span class="n">Resources</span> <span class="n">-RequiredVersion</span> <span class="s1">&#39;5.6.0&#39;</span> <span class="n">-Force</span> <span class="n">-Scope</span> <span class="n">CurrentUser</span>
+</code></pre></div>
+<p>From PSRule for Azure v1.16.0, <code>Az.Accounts</code> and <code>Az.Resources</code> are no longer installed as dependencies.
+When using export commands from PSRule, you may need to install these modules.</p>
+<p>To install these modules, use the following PowerShell command:</p>
+<div class="highlight"><pre><span></span><code><span class="nb">Install-Module</span> <span class="n">Az</span><span class="p">.</span><span class="n">Resources</span> <span class="n">-Force</span> <span class="n">-Scope</span> <span class="n">CurrentUser</span>
+</code></pre></div>
 <h2 id="could-not-load-file-or-assembly-yamldotnet">Could not load file or assembly YamlDotNet<a class="headerlink" href="#could-not-load-file-or-assembly-yamldotnet" title="Permanent link">#</a></h2>
 <p>PSRule <strong>&gt;=1.3.0</strong> uses an updated version of the YamlDotNet library.
 The PSRule for Azure <strong>&lt;1.3.1</strong> uses an older version of this library which may conflict.</p>
@@ -8046,7 +8081,7 @@ The PSRule for Azure <strong>&lt;1.3.1</strong> uses an older version of this li
   <small>
     
       Last update:
-      2023-02-06
+      2023-02-20
     
   </small>
 </div>

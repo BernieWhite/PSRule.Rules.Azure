@@ -1268,6 +1268,13 @@
   
 </li>
         
+          <li class="md-nav__item">
+  <a href="#configuring-minimum-version" class="md-nav__link">
+    Configuring minimum version
+  </a>
+  
+</li>
+        
       </ul>
     </nav>
   
@@ -7918,6 +7925,13 @@
   
 </li>
         
+          <li class="md-nav__item">
+  <a href="#configuring-minimum-version" class="md-nav__link">
+    Configuring minimum version
+  </a>
+  
+</li>
+        
       </ul>
     </nav>
   
@@ -7961,7 +7975,8 @@ The Bicep CLI is already installed on hosted runners and agents used by GitHub A
 <p>This topic covers setting up support for analyzing Azure resources within Bicep source files.</p>
 </div>
 <h2 id="installing-bicep-cli">Installing Bicep CLI<a class="headerlink" href="#installing-bicep-cli" title="Permanent link">#</a></h2>
-<p>PSRule for Azure requires a minimum of Bicep CLI version <strong>0.4.451</strong>.</p>
+<p>PSRule for Azure requires a minimum of Bicep CLI version <strong>0.4.451</strong>.
+However the features you use within Bicep may require a newer version of the Bicep CLI.</p>
 <p>You may need to install or upgrade the Bicep CLI in the following scenarios:</p>
 <ul>
 <li>Your Bicep source files require a newer version of the CLI then supported by hosted agents.
@@ -8048,7 +8063,7 @@ This can occur if your Bicep deployments are:</p>
 <li>Use nested modules.</li>
 <li>Use modules restored from a registry.</li>
 </ul>
-<p>If you are experincing timeout errors you can increase the default timeout of 5 seconds.
+<p>If you are experiencing timeout errors you can increase the default timeout of 5 seconds.
 To configure the timeout, set <code>Configuration.AZURE_BICEP_FILE_EXPANSION_TIMEOUT</code> to the timeout in seconds.</p>
 <div class="highlight"><span class="filename">ps-rule.yaml</span><pre><span></span><code><span class="nt">configuration</span><span class="p">:</span>
 <span class="w">  </span><span class="c1"># Enable automatic expansion of bicep source files.</span>
@@ -8057,6 +8072,24 @@ To configure the timeout, set <code>Configuration.AZURE_BICEP_FILE_EXPANSION_TIM
 <span class="w">  </span><span class="c1"># Configure the timeout for bicep build to 15 seconds.</span>
 <span class="w">  </span><span class="nt">AZURE_BICEP_FILE_EXPANSION_TIMEOUT</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">15</span>
 </code></pre></div>
+<h3 id="configuring-minimum-version">Configuring minimum version<a class="headerlink" href="#configuring-minimum-version" title="Permanent link">#</a></h3>
+<p><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M11.75 1a.75.75 0 0 1 .75.75V4h6.532c.42 0 .826.15 1.143.425l3.187 2.75a1.75 1.75 0 0 1 0 2.65l-3.187 2.75a1.75 1.75 0 0 1-1.143.425H12.5v9.25a.75.75 0 0 1-1.5 0V13H3.75A1.75 1.75 0 0 1 2 11.25v-5.5C2 4.783 2.784 4 3.75 4H11V1.75a.75.75 0 0 1 .75-.75Zm7.282 4.5H3.75a.25.25 0 0 0-.25.25v5.5c0 .138.112.25.25.25h15.282c.06 0 .118-.021.163-.06l3.188-2.75a.248.248 0 0 0 0-.38l-3.188-2.75a.249.249 0 0 0-.163-.06Z"/></svg></span> v1.25.0</p>
+<p>The Azure Bicep CLI is updated regularly, with new features and bug fixes.
+You must use a version of the Bicep CLI that supports the features you are using.
+If you attempt to use a feature that is not supported by the Bicep CLI, expansion will fail with a <em>BCP</em> error.</p>
+<p>It may not always be clear which version of Bicep CLI PSRule for Azure is using if you have multiple versions installed.
+Using the Bicep CLI via <code>az bicep</code> is not the default, and you may need to <a href="#using-azure-cli">set additional options to use it</a>.</p>
+<p>To ensure you are using the correct version of the Bicep CLI, you can configure the minimum version required.
+If an earlier version is detected, PSRule for Azure will generate a warning.
+To configure the minimum version, set the <code>Configuration.AZURE_BICEP_MINIMUM_VERSION</code> option.</p>
+<div class="highlight"><span class="filename">ps-rule.yaml</span><pre><span></span><code><span class="nt">configuration</span><span class="p">:</span>
+<span class="w">  </span><span class="c1"># Configure the minimum version of the Bicep CLI.</span>
+<span class="w">  </span><span class="nt">AZURE_BICEP_MINIMUM_VERSION</span><span class="p">:</span><span class="w"> </span><span class="s">&#39;0.13.0&#39;</span>
+</code></pre></div>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>For troubleshooting Bicep compilation errors see <a href="../../troubleshooting/#bicep-compile-errors">Bicep compile errors</a>.</p>
+</div>
 <h2 id="recommended-content">Recommended content<a class="headerlink" href="#recommended-content" title="Permanent link">#</a></h2>
 <ul>
 <li><a href="../../using-bicep/">Using Bicep source</a></li>
@@ -8068,7 +8101,7 @@ To configure the timeout, set <code>Configuration.AZURE_BICEP_FILE_EXPANSION_TIM
   <small>
     
       Last update:
-      2023-02-14
+      2023-02-20
     
   </small>
 </div>

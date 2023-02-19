@@ -3290,6 +3290,12 @@
         
           
         
+          
+        
+          
+        
+          
+        
       
       
         <label class="md-nav__link" for="__nav_4_5" id="__nav_4_5_label" tabindex="0">
@@ -4990,8 +4996,50 @@
   
   
     <li class="md-nav__item">
+      <a href="../en/rules/Azure.Defender.Arm/" class="md-nav__link">
+        Azure.Defender.Arm
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
       <a href="../en/rules/Azure.Defender.Containers/" class="md-nav__link">
         Azure.Defender.Containers
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../en/rules/Azure.Defender.Dns/" class="md-nav__link">
+        Azure.Defender.Dns
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../en/rules/Azure.Defender.KeyVault/" class="md-nav__link">
+        Azure.Defender.KeyVault
       </a>
     </li>
   
@@ -10183,11 +10231,31 @@
   See <a href="../upgrade-notes/">upgrade notes</a> for more information.</li>
 </ul>
 <h2 id="unreleased">Unreleased<a class="headerlink" href="#unreleased" title="Permanent link">#</a></h2>
+<p>What's changed since pre-release v1.25.0-B0013:</p>
+<ul>
+<li>New rules:<ul>
+<li>Defender for Cloud:<ul>
+<li>Check Microsoft Defender for Key Vault is enabled by <a href="https://github.com/BernieWhite">@BernieWhite</a>.
+  <a href="https://github.com/Azure/PSRule.Rules.Azure/issues/1632">#1632</a></li>
+<li>Check Microsoft Defender for DNS is enabled by <a href="https://github.com/BernieWhite">@BernieWhite</a>.
+  <a href="https://github.com/Azure/PSRule.Rules.Azure/issues/1632">#1632</a></li>
+<li>Check Microsoft Defender for ARM is enabled by <a href="https://github.com/BernieWhite">@BernieWhite</a>.
+  <a href="https://github.com/Azure/PSRule.Rules.Azure/issues/1632">#1632</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li>Engineering:<ul>
+<li>Bump Az.Resources to v6.5.2.
+  <a href="https://github.com/Azure/PSRule.Rules.Azure/pull/2037">#2037</a></li>
+</ul>
+</li>
+</ul>
 <h2 id="v1250-b0013-pre-release">v1.25.0-B0013 (pre-release)<a class="headerlink" href="#v1250-b0013-pre-release" title="Permanent link">#</a></h2>
 <p>What's changed since v1.24.2:</p>
 <ul>
 <li>New features:<ul>
-<li>Added <code>Azure.MCSB.v1</code> which include rules aligned to the Microsoft Cloud Security Benchmark by <a href="https://github.com/BernieWhite">@BernieWhite</a>.
+<li><strong>Experimental</strong>: Added <code>Azure.MCSB.v1</code> which include rules aligned to the Microsoft Cloud Security Benchmark by <a href="https://github.com/BernieWhite">@BernieWhite</a>.
   <a href="https://github.com/Azure/PSRule.Rules.Azure/issues/1634">#1634</a></li>
 </ul>
 </li>
@@ -10215,7 +10283,7 @@
 </li>
 </ul>
 <h2 id="v1242">v1.24.2<a class="headerlink" href="#v1242" title="Permanent link">#</a></h2>
-<p>This is republished v1.24.1 to fix a release issue.
+<p>This is a republish of v1.24.1 to fix a release issue.
 What's changed since v1.24.0:</p>
 <ul>
 <li>Bug fixes:<ul>
@@ -11084,18 +11152,18 @@ What's changed since v1.24.0:</p>
 </ul>
 </li>
 <li>Defender for Cloud:<ul>
-<li>Check Microsoft Defender for Cloud is enabled for Containers by <a href="https://github.com/jdewisscher">@jdewisscher</a>.
-  <a href="hhttps://github.com/Azure/PSRule.Rules.Azure/issues/1632">#1632</a></li>
-<li>Check Microsoft Defender for Cloud is enabled for Virtual Machines by <a href="https://github.com/jdewisscher">@jdewisscher</a>.
-  <a href="hhttps://github.com/Azure/PSRule.Rules.Azure/issues/1632">#1632</a></li>
-<li>Check Microsoft Defender for Cloud is enabled for SQL Servers by <a href="https://github.com/jdewisscher">@jdewisscher</a>.
-  <a href="hhttps://github.com/Azure/PSRule.Rules.Azure/issues/1632">#1632</a></li>
-<li>Check Microsoft Defender for Cloud is enabled for App Services by <a href="https://github.com/jdewisscher">@jdewisscher</a>.
-  <a href="hhttps://github.com/Azure/PSRule.Rules.Azure/issues/1632">#1632</a></li>
-<li>Check Microsoft Defender for Cloud is enabled for Storage Accounts by <a href="https://github.com/jdewisscher">@jdewisscher</a>.
-  <a href="hhttps://github.com/Azure/PSRule.Rules.Azure/issues/1632">#1632</a></li>
-<li>Check Microsoft Defender for Cloud is enabled for SQL Servers on machines by <a href="https://github.com/jdewisscher">@jdewisscher</a>.
-  <a href="hhttps://github.com/Azure/PSRule.Rules.Azure/issues/1632">#1632</a></li>
+<li>Check Microsoft Defender for Containers is enable by <a href="https://github.com/jdewisscher">@jdewisscher</a>.
+  <a href="https://github.com/Azure/PSRule.Rules.Azure/issues/1632">#1632</a></li>
+<li>Check Microsoft Defender for Servers is enabled by <a href="https://github.com/jdewisscher">@jdewisscher</a>.
+  <a href="https://github.com/Azure/PSRule.Rules.Azure/issues/1632">#1632</a></li>
+<li>Check Microsoft Defender for SQL is enabled by <a href="https://github.com/jdewisscher">@jdewisscher</a>.
+  <a href="https://github.com/Azure/PSRule.Rules.Azure/issues/1632">#1632</a></li>
+<li>Check Microsoft Defender for App Services is enabled by <a href="https://github.com/jdewisscher">@jdewisscher</a>.
+  <a href="https://github.com/Azure/PSRule.Rules.Azure/issues/1632">#1632</a></li>
+<li>Check Microsoft Defender for Storage is enabled by <a href="https://github.com/jdewisscher">@jdewisscher</a>.
+  <a href="https://github.com/Azure/PSRule.Rules.Azure/issues/1632">#1632</a></li>
+<li>Check Microsoft Defender for SQL Servers on VMs is enabled by <a href="https://github.com/jdewisscher">@jdewisscher</a>.
+  <a href="https://github.com/Azure/PSRule.Rules.Azure/issues/1632">#1632</a></li>
 </ul>
 </li>
 <li>Deployment:<ul>
@@ -11363,17 +11431,17 @@ What's changed since v1.24.0:</p>
 </li>
 <li>Defender for Cloud:<ul>
 <li>Check Microsoft Defender for Cloud is enabled for Containers by <a href="https://github.com/jdewisscher">@jdewisscher</a>.
-  <a href="hhttps://github.com/Azure/PSRule.Rules.Azure/issues/1632">#1632</a></li>
+  <a href="https://github.com/Azure/PSRule.Rules.Azure/issues/1632">#1632</a></li>
 <li>Check Microsoft Defender for Cloud is enabled for Virtual Machines by <a href="https://github.com/jdewisscher">@jdewisscher</a>.
-  <a href="hhttps://github.com/Azure/PSRule.Rules.Azure/issues/1632">#1632</a></li>
+  <a href="https://github.com/Azure/PSRule.Rules.Azure/issues/1632">#1632</a></li>
 <li>Check Microsoft Defender for Cloud is enabled for SQL Servers by <a href="https://github.com/jdewisscher">@jdewisscher</a>.
-  <a href="hhttps://github.com/Azure/PSRule.Rules.Azure/issues/1632">#1632</a></li>
+  <a href="https://github.com/Azure/PSRule.Rules.Azure/issues/1632">#1632</a></li>
 <li>Check Microsoft Defender for Cloud is enabled for App Services by <a href="https://github.com/jdewisscher">@jdewisscher</a>.
-  <a href="hhttps://github.com/Azure/PSRule.Rules.Azure/issues/1632">#1632</a></li>
+  <a href="https://github.com/Azure/PSRule.Rules.Azure/issues/1632">#1632</a></li>
 <li>Check Microsoft Defender for Cloud is enabled for Storage Accounts by <a href="https://github.com/jdewisscher">@jdewisscher</a>.
-  <a href="hhttps://github.com/Azure/PSRule.Rules.Azure/issues/1632">#1632</a></li>
+  <a href="https://github.com/Azure/PSRule.Rules.Azure/issues/1632">#1632</a></li>
 <li>Check Microsoft Defender for Cloud is enabled for SQL Servers on machines by <a href="https://github.com/jdewisscher">@jdewisscher</a>.
-  <a href="hhttps://github.com/Azure/PSRule.Rules.Azure/issues/1632">#1632</a></li>
+  <a href="https://github.com/Azure/PSRule.Rules.Azure/issues/1632">#1632</a></li>
 </ul>
 </li>
 <li>Network Security Group:<ul>
@@ -14470,7 +14538,7 @@ What's changed since v1.24.0:</p>
   <small>
     
       Last update:
-      2023-02-18
+      2023-02-19
     
   </small>
 </div>

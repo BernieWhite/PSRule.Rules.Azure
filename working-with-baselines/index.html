@@ -2146,6 +2146,12 @@
         
           
         
+          
+        
+          
+        
+          
+        
       
       
         <label class="md-nav__link" for="__nav_4_5" id="__nav_4_5_label" tabindex="0">
@@ -3846,8 +3852,50 @@
   
   
     <li class="md-nav__item">
+      <a href="../en/rules/Azure.Defender.Arm/" class="md-nav__link">
+        Azure.Defender.Arm
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
       <a href="../en/rules/Azure.Defender.Containers/" class="md-nav__link">
         Azure.Defender.Containers
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../en/rules/Azure.Defender.Dns/" class="md-nav__link">
+        Azure.Defender.Dns
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../en/rules/Azure.Defender.KeyVault/" class="md-nav__link">
+        Azure.Defender.KeyVault
       </a>
     </li>
   
@@ -7920,7 +7968,7 @@ This is described further in <a href="#including-custom-rules">including custom 
 </div>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
-<p>The preview quarterly baselines includes Azure features relased under preview only.
+<p>The preview quarterly baselines includes Azure features released under preview only.
 This is different from the <code>Azure.Preview</code> baseline which contains <abbr title="generally available">GA</abbr> and preview features.</p>
 </div>
 <h3 id="limitations">Limitations<a class="headerlink" href="#limitations" title="Permanent link">#</a></h3>
@@ -7946,6 +7994,11 @@ This is different from the <code>Azure.Preview</code> baseline which contains <a
 <li><code>Azure.Preview</code> - Includes rules for <abbr title="generally available">GA</abbr> and preview Azure features.</li>
 <li><code>Azure.All</code> - Includes all Azure rules shipped with PSRule for Azure.
   This is functionally the same as <code>Azure.Preview</code> however intended for internal use only.</li>
+<li>
+<p><code>Azure.MCSB.v1</code> - Includes rules related to Microsoft cloud security benchmark (MCSB) controls.
+  This baseline is currently experimental and may change in future releases.
+  You can learn more about MCSB within PSRule for Azure in the <a href="../en/mcsb-v1/">Microsoft cloud security benchmark (MCSB)</a> topic.</p>
+</li>
 </ul>
 <h2 id="using-baselines">Using baselines<a class="headerlink" href="#using-baselines" title="Permanent link">#</a></h2>
 <p>To use a baseline within a CI pipeline specify the baseline by name.
@@ -7999,7 +8052,7 @@ This option can be set in <code>ps-rule.yaml</code>.</p>
   <small>
     
       Last update:
-      2023-02-06
+      2023-02-19
     
   </small>
 </div>

@@ -40,6 +40,9 @@ def replace_maml(markdown: str, page: mkdocs.structure.nav.Page, config: mkdocs.
 
     markdown = add_tags(markdown)
 
+    if markdown.__contains__("<!-- EXPERIMENTAL -->"):
+        page.meta['experimental'] = 'true'
+
     if markdown.__contains__("<!-- OBSOLETE -->"):
         page.meta['obsolete'] = 'true'
 
@@ -47,8 +50,11 @@ def replace_maml(markdown: str, page: mkdocs.structure.nav.Page, config: mkdocs.
         page.meta['template'] = 'reference.html'
         page.meta['generated'] = 'true'
         page.meta['type'] = 'baseline'
+        if page.meta.get('experimental', 'false') == 'true':
+            markdown = markdown.replace("<!-- EXPERIMENTAL -->", "!!! Experimental\r    This baseline is experimental and subject to change.")
+
         if page.meta.get('obsolete', 'false') == 'true':
-            markdown = markdown.replace("<!-- OBSOLETE -->", "!!! Warning\r    The baseline is obsolete.\r    Consider switching to a newer baseline.")
+            markdown = markdown.replace("<!-- OBSOLETE -->", "!!! Warning\r    This baseline is obsolete.\r    Consider switching to a newer baseline.")
 
     if page.canonical_url.__contains__("/rules/"):
         page.meta['template'] = 'reference.html'

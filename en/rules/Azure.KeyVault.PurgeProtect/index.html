@@ -66,12 +66,19 @@
     
   
 
+  <!-- Determine type -->
+  
+  
+    
+  
+  
+
   <!-- The image needs to have an absolute URL -->
   
 
   <!-- Open graph meta tags -->
   <meta property="og:site_name" content="PSRule for Azure" />
-  <meta property="og:type" content="website" />
+  <meta property="og:type" content="article" />
   <meta property="og:title" content="PSRule for Azure - Azure.KeyVault.PurgeProtect" />
   <meta property="og:description" content="Enable Purge Protection on Key Vaults to prevent early purge of vaults and vault items." />
   <meta property="og:url" content="https://azure.github.io/PSRule.Rules.Azure/en/rules/Azure.KeyVault.PurgeProtect/" />
@@ -4400,6 +4407,13 @@
   
 </li>
         
+          <li class="md-nav__item">
+  <a href="#configure-with-azure-cli" class="md-nav__link">
+    Configure with Azure CLI
+  </a>
+  
+</li>
+        
       </ul>
     </nav>
   
@@ -7839,6 +7853,13 @@
   
 </li>
         
+          <li class="md-nav__item">
+  <a href="#configure-with-azure-cli" class="md-nav__link">
+    Configure with Azure CLI
+  </a>
+  
+</li>
+        
       </ul>
     </nav>
   
@@ -7946,11 +7967,14 @@ By default, the retention period is 90 days.</p>
   }
 }
 </code></pre></div>
+<h3 id="configure-with-azure-cli">Configure with Azure CLI<a class="headerlink" href="#configure-with-azure-cli" title="Permanent link">#</a></h3>
+<div class="highlight"><span class="filename">Azure CLI snippet</span><pre><span></span><code>az<span class="w"> </span>keyvault<span class="w"> </span>update<span class="w"> </span>-n<span class="w"> </span><span class="s1">&#39;&lt;name&gt;&#39;</span><span class="w"> </span>-g<span class="w"> </span><span class="s1">&#39;&lt;resource_group&gt;&#39;</span><span class="w"> </span>--enable-purge-protection
+</code></pre></div>
 <h2 id="links">Links<a class="headerlink" href="#links" title="Permanent link">#</a></h2>
 <ul>
-<li><a href="https://docs.microsoft.com/azure/key-vault/general/soft-delete-overview">Azure Key Vault soft-delete overview</a></li>
-<li><a href="https://docs.microsoft.com/azure/key-vault/general/security-overview#backup-and-recovery">Azure Key Vault security</a></li>
-<li><a href="https://docs.microsoft.com/azure/templates/microsoft.keyvault/vaults">Azure deployment reference</a></li>
+<li><a href="https://learn.microsoft.com/azure/key-vault/general/soft-delete-overview">Azure Key Vault soft-delete overview</a></li>
+<li><a href="https://learn.microsoft.com/azure/key-vault/general/security-features#backup-and-recovery">Azure Key Vault security</a></li>
+<li><a href="https://learn.microsoft.com/azure/templates/microsoft.keyvault/vaults">Azure deployment reference</a></li>
 </ul>
 
   <!-- Last update of source file -->
@@ -7961,7 +7985,7 @@ By default, the retention period is 90 days.</p>
   <small>
     
       Last update:
-      2022-12-03
+      2023-02-18
     
   </small>
 </div>
@@ -8076,7 +8100,7 @@ By default, the retention period is 90 days.</p>
       <div class="md-dialog__inner md-typeset"></div>
     </div>
     
-    <script id="__config" type="application/json">{"base": "../../..", "features": ["navigation.instant", "navigation.indexes", {"navigation.sections": {"level": 1}}, "navigation.tabs", "content.code.annotate", "content.tabs.link"], "search": "../../../assets/javascripts/workers/search.db81ec45.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": {"provider": "mike"}}</script>
+    <script id="__config" type="application/json">{"base": "../../..", "features": ["navigation.instant", "navigation.indexes", {"navigation.sections": {"level": 1}}, "navigation.tabs", "content.code.annotate", "content.tabs.link", "content.code.copy"], "search": "../../../assets/javascripts/workers/search.db81ec45.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": {"provider": "mike"}}</script>
     
     
       <script src="../../../assets/javascripts/bundle.4b2c34cd.min.js"></script>

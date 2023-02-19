@@ -68,12 +68,19 @@
   
   
 
+  <!-- Determine type -->
+  
+  
+    
+  
+  
+
   <!-- The image needs to have an absolute URL -->
   
 
   <!-- Open graph meta tags -->
   <meta property="og:site_name" content="PSRule for Azure" />
-  <meta property="og:type" content="website" />
+  <meta property="og:type" content="article" />
   <meta property="og:title" content="PSRule for Azure - By pillar" />
   <meta property="og:description" content="Ready to go rules for testing Azure Infrastructure as Code (IaC)." />
   <meta property="og:url" content="https://azure.github.io/PSRule.Rules.Azure/en/rules/module/" />
@@ -1326,6 +1333,13 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
+  <a href="#optimize" class="md-nav__link">
+    Optimize
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#pricing-and-billing-model" class="md-nav__link">
     Pricing and billing model
   </a>
@@ -1700,7 +1714,7 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#optimize" class="md-nav__link">
+  <a href="#optimize_1" class="md-nav__link">
     Optimize
   </a>
   
@@ -8193,6 +8207,13 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
+  <a href="#optimize" class="md-nav__link">
+    Optimize
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#pricing-and-billing-model" class="md-nav__link">
     Pricing and billing model
   </a>
@@ -8567,7 +8588,7 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#optimize" class="md-nav__link">
+  <a href="#optimize_1" class="md-nav__link">
     Optimize
   </a>
   
@@ -8640,6 +8661,25 @@
   <h1 id="rules-by-pillar">Rules by pillar<a class="headerlink" href="#rules-by-pillar" title="Permanent link">#</a></h1>
 <p>PSRule for Azure includes the following rules across five pillars of the Microsoft Azure Well-Architected Framework.</p>
 <h2 id="cost-optimization">Cost Optimization<a class="headerlink" href="#cost-optimization" title="Permanent link">#</a></h2>
+<h3 id="optimize">Optimize<a class="headerlink" href="#optimize" title="Permanent link">#</a></h3>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Synopsis</th>
+<th>Severity</th>
+<th>Level</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="../Azure.FrontDoor.State/">Azure.FrontDoor.State</a></td>
+<td>Enable Azure Front Door Classic instance.</td>
+<td>Important</td>
+<td>Error</td>
+</tr>
+</tbody>
+</table>
 <h3 id="pricing-and-billing-model">Pricing and billing model<a class="headerlink" href="#pricing-and-billing-model" title="Permanent link">#</a></h3>
 <table>
 <thead>
@@ -8717,12 +8757,6 @@
 <td><a href="../Azure.ACR.Retention/">Azure.ACR.Retention</a></td>
 <td>Use a retention policy to cleanup untagged manifests.</td>
 <td>Important</td>
-<td>Error</td>
-</tr>
-<tr>
-<td><a href="../Azure.FrontDoor.State/">Azure.FrontDoor.State</a></td>
-<td>Enable Azure Front Door instance.</td>
-<td>Awareness</td>
 <td>Error</td>
 </tr>
 <tr>
@@ -9997,6 +10031,24 @@
 <td>Important</td>
 <td>Error</td>
 </tr>
+<tr>
+<td><a href="../Azure.FrontDoor.Probe/">Azure.FrontDoor.Probe</a></td>
+<td>Use health probes to check the health of each backend.</td>
+<td>Important</td>
+<td>Error</td>
+</tr>
+<tr>
+<td><a href="../Azure.FrontDoor.ProbeMethod/">Azure.FrontDoor.ProbeMethod</a></td>
+<td>Configure health probes to use HEAD requests to reduce performance overhead.</td>
+<td>Important</td>
+<td>Error</td>
+</tr>
+<tr>
+<td><a href="../Azure.FrontDoor.ProbePath/">Azure.FrontDoor.ProbePath</a></td>
+<td>Configure a dedicated path for health probe requests.</td>
+<td>Important</td>
+<td>Error</td>
+</tr>
 </tbody>
 </table>
 <h3 id="load-balancing-and-failover">Load balancing and failover<a class="headerlink" href="#load-balancing-and-failover" title="Permanent link">#</a></h3>
@@ -10019,24 +10071,6 @@
 <tr>
 <td><a href="../Azure.AppGw.MinInstance/">Azure.AppGw.MinInstance</a></td>
 <td>Application Gateways should use a minimum of two instances.</td>
-<td>Important</td>
-<td>Error</td>
-</tr>
-<tr>
-<td><a href="../Azure.FrontDoor.Probe/">Azure.FrontDoor.Probe</a></td>
-<td>Configure and enable health probes for each backend pool.</td>
-<td>Important</td>
-<td>Error</td>
-</tr>
-<tr>
-<td><a href="../Azure.FrontDoor.ProbeMethod/">Azure.FrontDoor.ProbeMethod</a></td>
-<td>Configure health probes to use HEAD instead of GET requests.</td>
-<td>Important</td>
-<td>Error</td>
-</tr>
-<tr>
-<td><a href="../Azure.FrontDoor.ProbePath/">Azure.FrontDoor.ProbePath</a></td>
-<td>Configure a dedicated path for health probe requests.</td>
 <td>Important</td>
 <td>Error</td>
 </tr>
@@ -10711,7 +10745,7 @@
 </tr>
 <tr>
 <td><a href="../Azure.FrontDoor.MinTLS/">Azure.FrontDoor.MinTLS</a></td>
-<td>Front Door should reject TLS versions older than 1.2.</td>
+<td>Front Door Classic instances should reject TLS versions older than 1.2.</td>
 <td>Critical</td>
 <td>Error</td>
 </tr>
@@ -11246,7 +11280,7 @@
 </tr>
 </tbody>
 </table>
-<h3 id="optimize">Optimize<a class="headerlink" href="#optimize" title="Permanent link">#</a></h3>
+<h3 id="optimize_1">Optimize<a class="headerlink" href="#optimize_1" title="Permanent link">#</a></h3>
 <table>
 <thead>
 <tr>
@@ -11435,7 +11469,7 @@
   <small>
     
       Last update:
-      2022-12-16
+      2023-02-18
     
   </small>
 </div>
@@ -11493,7 +11527,7 @@
       <div class="md-dialog__inner md-typeset"></div>
     </div>
     
-    <script id="__config" type="application/json">{"base": "../../..", "features": ["navigation.instant", "navigation.indexes", {"navigation.sections": {"level": 1}}, "navigation.tabs", "content.code.annotate", "content.tabs.link"], "search": "../../../assets/javascripts/workers/search.db81ec45.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": {"provider": "mike"}}</script>
+    <script id="__config" type="application/json">{"base": "../../..", "features": ["navigation.instant", "navigation.indexes", {"navigation.sections": {"level": 1}}, "navigation.tabs", "content.code.annotate", "content.tabs.link", "content.code.copy"], "search": "../../../assets/javascripts/workers/search.db81ec45.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": {"provider": "mike"}}</script>
     
     
       <script src="../../../assets/javascripts/bundle.4b2c34cd.min.js"></script>

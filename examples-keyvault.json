@@ -1,11 +1,13 @@
 {
   "$schema": "https://schema.management.azure.com/schemas/2019-04-01/deploymentTemplate.json#",
+  "languageVersion": "1.9-experimental",
   "contentVersion": "1.0.0.0",
   "metadata": {
+    "_EXPERIMENTAL_WARNING": "Symbolic name support in ARM is experimental, and should be enabled for testing purposes only. Do not enable this setting for any production usage, or you may be unexpectedly broken at any time!",
     "_generator": {
       "name": "bicep",
-      "version": "0.6.18.56646",
-      "templateHash": "18260890349087263285"
+      "version": "0.14.46.61228",
+      "templateHash": "12140694463378877969"
     }
   },
   "parameters": {
@@ -21,12 +23,18 @@
       "metadata": {
         "description": "The location resources will be deployed."
       }
+    },
+    "objectId": {
+      "type": "string",
+      "metadata": {
+        "description": "The principal GUID of the object to assign to the access policy."
+      }
     }
   },
-  "resources": [
-    {
+  "resources": {
+    "vault": {
       "type": "Microsoft.KeyVault/vaults",
-      "apiVersion": "2021-10-01",
+      "apiVersion": "2022-07-01",
       "name": "[parameters('name')]",
       "location": "[parameters('location')]",
       "properties": {
@@ -34,11 +42,24 @@
           "family": "A",
           "name": "premium"
         },
-        "tenantId": "[subscription().tenantId]",
-        "enableSoftDelete": true,
+        "tenantId": "[tenant().tenantId]",
         "softDeleteRetentionInDays": 90,
-        "enablePurgeProtection": true
+        "enableSoftDelete": true,
+        "enablePurgeProtection": true,
+        "accessPolicies": [
+          {
+            "objectId": "[parameters('objectId')]",
+            "permissions": {
+              "secrets": [
+                "get",
+                "list",
+                "set"
+              ]
+            },
+            "tenantId": "[tenant().tenantId]"
+          }
+        ]
       }
     }
-  ]
+  }
 }

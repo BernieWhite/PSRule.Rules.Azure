@@ -46,11 +46,13 @@ def replace_maml(markdown: str, page: mkdocs.structure.nav.Page, config: mkdocs.
     if page.canonical_url.__contains__("/baselines/"):
         page.meta['template'] = 'reference.html'
         page.meta['generated'] = 'true'
+        page.meta['type'] = 'baseline'
         if page.meta.get('obsolete', 'false') == 'true':
             markdown = markdown.replace("<!-- OBSOLETE -->", "!!! Warning\r    The baseline is obsolete.\r    Consider switching to a newer baseline.")
 
     if page.canonical_url.__contains__("/rules/"):
         page.meta['template'] = 'reference.html'
+        page.meta['type'] = 'rule'
         markdown = markdown.replace("```bicep\r", "```bicep title=\"Azure Bicep snippet\"\r")
         markdown = markdown.replace("```json\r", "```json title=\"Azure Template snippet\"\r")
         markdown = markdown.replace("```powershell\r", "```powershell title=\"Azure PowerShell snippet\"\r")

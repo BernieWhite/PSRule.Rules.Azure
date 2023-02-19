@@ -6,7 +6,7 @@
       <meta charset="utf-8">
       <meta name="viewport" content="width=device-width,initial-scale=1">
       
-        <meta name="description" content="Front Door should reject TLS versions older than 1.2.">
+        <meta name="description" content="Front Door Classic instances should reject TLS versions older than 1.2.">
       
       
         <meta name="author" content="Microsoft">
@@ -66,26 +66,33 @@
     
   
 
+  <!-- Determine type -->
+  
+  
+    
+  
+  
+
   <!-- The image needs to have an absolute URL -->
   
 
   <!-- Open graph meta tags -->
   <meta property="og:site_name" content="PSRule for Azure" />
-  <meta property="og:type" content="website" />
+  <meta property="og:type" content="article" />
   <meta property="og:title" content="PSRule for Azure - Azure.FrontDoor.MinTLS" />
-  <meta property="og:description" content="Front Door should reject TLS versions older than 1.2." />
+  <meta property="og:description" content="Front Door Classic instances should reject TLS versions older than 1.2." />
   <meta property="og:url" content="https://azure.github.io/PSRule.Rules.Azure/en/rules/Azure.FrontDoor.MinTLS/" />
   <meta property="og:image" content="https://repository-images.githubusercontent.com/184154668/58818c00-d496-11eb-9b77-016145022654" />
   <meta property="og:image:type" content="image/png" />
   <meta property="og:image:width" content="1280" />
   <meta property="og:image:height" content="640" />
-  <meta property="og:image:alt" content="Front Door should reject TLS versions older than 1.2." />
+  <meta property="og:image:alt" content="Front Door Classic instances should reject TLS versions older than 1.2." />
 
   <!-- Twitter meta tags -->
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:site" content="@github" />
   <meta name="twitter:title" content="PSRule for Azure - Azure.FrontDoor.MinTLS" />
-  <meta name="twitter:description" content="Front Door should reject TLS versions older than 1.2." />
+  <meta name="twitter:description" content="Front Door Classic instances should reject TLS versions older than 1.2." />
   <meta name="twitter:image" content="https://repository-images.githubusercontent.com/184154668/58818c00-d496-11eb-9b77-016145022654" />
 
 
@@ -7890,137 +7897,75 @@
 <p><a href="../module/#security"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M1.527 13.237a1.75 1.75 0 0 1 0-2.474l9.272-9.273a1.75 1.75 0 0 1 2.475 0l9.272 9.273a1.75 1.75 0 0 1 0 2.474l-9.272 9.272a1.75 1.75 0 0 1-2.475 0Zm1.06-1.414a.25.25 0 0 0 0 .354l9.273 9.272a.25.25 0 0 0 .353 0l9.272-9.272a.25.25 0 0 0 0-.354l-9.272-9.272a.25.25 0 0 0-.353 0Z"/></svg></span> Security</a>
  · <a href="../resource/#front-door"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13.152.682a2.251 2.251 0 0 1 2.269 0l.007.004 6.957 4.276a2.277 2.277 0 0 1 1.126 1.964v7.516c0 .81-.432 1.56-1.133 1.968l-.002.001-11.964 7.037-.004.003c-.706.41-1.578.41-2.284 0l-.026-.015-6.503-4.502a2.268 2.268 0 0 1-1.096-1.943V9.438c0-.392.1-.77.284-1.1l.003-.006.014-.026c.197-.342.48-.627.82-.827h.002L13.152.681Zm.757 1.295h-.001L2.648 8.616l6.248 4.247a.775.775 0 0 0 .758-.01h.001l11.633-6.804-6.629-4.074a.75.75 0 0 0-.75.003ZM8.517 14.33a2.286 2.286 0 0 1-.393-.18l-.023-.014-6.102-4.147v7.003c0 .275.145.528.379.664l.025.014 6.114 4.232V14.33ZM18 9.709l-3.25 1.9v7.548L18 17.245Zm-7.59 4.438-.002.002a2.296 2.296 0 0 1-.391.18v7.612l3.233-1.902v-7.552Zm9.09-5.316v7.532l2.124-1.25a.776.776 0 0 0 .387-.671V7.363Z"/></svg></span> Front Door</a>
  · <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M7.75 6.5a1.25 1.25 0 1 0 0 2.5 1.25 1.25 0 0 0 0-2.5Z"/><path d="M2.5 1h8.44a1.5 1.5 0 0 1 1.06.44l10.25 10.25a1.5 1.5 0 0 1 0 2.12l-8.44 8.44a1.5 1.5 0 0 1-2.12 0L1.44 12A1.497 1.497 0 0 1 1 10.94V2.5A1.5 1.5 0 0 1 2.5 1Zm0 1.5v8.44l10.25 10.25 8.44-8.44L10.94 2.5Z"/></svg></span> 2020_06</p>
-<p>Front Door should reject TLS versions older than 1.2.</p>
+<p>Front Door Classic instances should reject TLS versions older than 1.2.</p>
 <h2 id="description">Description<a class="headerlink" href="#description" title="Permanent link">#</a></h2>
 <p>The minimum version of TLS that Azure Front Door accepts is configurable.
 Older TLS versions are no longer considered secure by industry standards, such as PCI DSS.</p>
 <p>Front Door lets you disable outdated protocols and enforce TLS 1.2.
 By default, a minimum of TLS 1.2 is enforced.</p>
 <h2 id="recommendation">Recommendation<a class="headerlink" href="#recommendation" title="Permanent link">#</a></h2>
-<p>Consider configuring the minimum supported TLS version to be 1.2.</p>
+<p>Consider configuring the minimum supported TLS version to be 1.2 for each endpoint.
+This applies to Azure Front Door Classic instances only.</p>
 <h2 id="examples">Examples<a class="headerlink" href="#examples" title="Permanent link">#</a></h2>
 <h3 id="configure-with-azure-template">Configure with Azure template<a class="headerlink" href="#configure-with-azure-template" title="Permanent link">#</a></h3>
 <p>To deploy a Front Door resource that passes this rule:</p>
 <ul>
-<li>Set the minTlsVersion to be '1.2'</li>
+<li>Set each <code>properties.frontendEndpoints[*].properties.customHttpsConfiguration.minimumTlsVersion</code> property to <code>1.2</code>.</li>
 </ul>
 <p>For example:</p>
-<div class="highlight"><span class="filename">Azure Template snippet</span><pre><span></span><code><span class="w">  </span><span class="nt">&quot;resources&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
-<span class="w">    </span><span class="p">{</span>
-<span class="w">      </span><span class="nt">&quot;type&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Microsoft.Cdn/profiles&quot;</span><span class="p">,</span>
-<span class="w">      </span><span class="nt">&quot;apiVersion&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;2021-06-01&quot;</span><span class="p">,</span>
-<span class="w">      </span><span class="nt">&quot;name&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;[parameters(&#39;frontDoorName&#39;)]&quot;</span><span class="p">,</span>
-<span class="w">      </span><span class="nt">&quot;location&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Global&quot;</span><span class="p">,</span>
-<span class="w">      </span><span class="nt">&quot;sku&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
-<span class="w">        </span><span class="nt">&quot;name&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Standard_AzureFrontDoor&quot;</span>
-<span class="w">      </span><span class="p">}</span>
-<span class="w">    </span><span class="p">},</span>
-<span class="w">    </span><span class="p">{</span>
-<span class="w">      </span><span class="nt">&quot;type&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Microsoft.Web/serverfarms&quot;</span><span class="p">,</span>
-<span class="w">      </span><span class="nt">&quot;apiVersion&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;2020-06-01&quot;</span><span class="p">,</span>
-<span class="w">      </span><span class="nt">&quot;name&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;[variables(&#39;frontDoorAppServicePlanName&#39;)]&quot;</span><span class="p">,</span>
-<span class="w">      </span><span class="nt">&quot;location&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;[parameters(&#39;location&#39;)]&quot;</span><span class="p">,</span>
-<span class="w">      </span><span class="nt">&quot;sku&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
-<span class="w">        </span><span class="nt">&quot;name&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;S1&quot;</span><span class="p">,</span>
-<span class="w">        </span><span class="nt">&quot;capacity&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span>
-<span class="w">      </span><span class="p">},</span>
-<span class="w">      </span><span class="nt">&quot;kind&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;app&quot;</span>
-<span class="w">    </span><span class="p">},</span>
-<span class="w">    </span><span class="p">{</span>
-<span class="w">      </span><span class="nt">&quot;type&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Microsoft.Web/sites&quot;</span><span class="p">,</span>
-<span class="w">      </span><span class="nt">&quot;apiVersion&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;2020-06-01&quot;</span><span class="p">,</span>
-<span class="w">      </span><span class="nt">&quot;name&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;[variables(&#39;frontDoorAppName&#39;)]&quot;</span><span class="p">,</span>
-<span class="w">      </span><span class="nt">&quot;location&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;[parameters(&#39;location&#39;)]&quot;</span><span class="p">,</span>
-<span class="w">      </span><span class="nt">&quot;kind&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;app&quot;</span><span class="p">,</span>
-<span class="w">      </span><span class="nt">&quot;identity&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
-<span class="w">        </span><span class="nt">&quot;type&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;SystemAssigned&quot;</span>
-<span class="w">      </span><span class="p">},</span>
-<span class="w">      </span><span class="nt">&quot;properties&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
-<span class="w">        </span><span class="nt">&quot;serverFarmId&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;[resourceId(&#39;Microsoft.Web/serverfarms&#39;, variables(&#39;frontDoorAppServicePlanName&#39;))]&quot;</span><span class="p">,</span>
-<span class="w">        </span><span class="nt">&quot;httpsOnly&quot;</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span>
-<span class="w">        </span><span class="nt">&quot;siteConfig&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
-<span class="w">          </span><span class="nt">&quot;detailedErrorLoggingEnabled&quot;</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span>
-<span class="w">          </span><span class="nt">&quot;httpLoggingEnabled&quot;</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span>
-<span class="w">          </span><span class="nt">&quot;requestTracingEnabled&quot;</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span>
-<span class="w">          </span><span class="nt">&quot;ftpsState&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Disabled&quot;</span><span class="p">,</span>
-<span class="w">          </span><span class="nt">&quot;minTlsVersion&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;1.2&quot;</span><span class="p">,</span>
-<span class="w">          </span><span class="nt">&quot;ipSecurityRestrictions&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
-<span class="w">            </span><span class="p">{</span>
-<span class="w">              </span><span class="nt">&quot;tag&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;ServiceTag&quot;</span><span class="p">,</span>
-<span class="w">              </span><span class="nt">&quot;ipAddress&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;AzureFrontDoor.Backend&quot;</span><span class="p">,</span>
-<span class="w">              </span><span class="nt">&quot;action&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Allow&quot;</span><span class="p">,</span>
-<span class="w">              </span><span class="nt">&quot;priority&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">100</span><span class="p">,</span>
-<span class="w">              </span><span class="nt">&quot;headers&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
-<span class="w">                </span><span class="nt">&quot;x-azure-fdid&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
-<span class="w">                  </span><span class="s2">&quot;[reference(resourceId(&#39;Microsoft.Cdn/profiles&#39;, parameters(&#39;frontDoorName&#39;))).frontDoorId]&quot;</span>
-<span class="w">                </span><span class="p">]</span>
-<span class="w">              </span><span class="p">},</span>
-<span class="w">              </span><span class="nt">&quot;name&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Allow traffic from Front Door&quot;</span>
-<span class="w">            </span><span class="p">}</span>
-<span class="w">          </span><span class="p">]</span>
+<div class="highlight"><span class="filename">Azure Template snippet</span><pre><span></span><code><span class="p">{</span>
+<span class="w">  </span><span class="nt">&quot;type&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Microsoft.Network/frontDoors&quot;</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">&quot;apiVersion&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;2021-06-01&quot;</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">&quot;name&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;[parameters(&#39;name&#39;)]&quot;</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">&quot;location&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;global&quot;</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">&quot;properties&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="nt">&quot;enabledState&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Enabled&quot;</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">&quot;frontendEndpoints&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
+<span class="w">      </span><span class="p">{</span>
+<span class="w">        </span><span class="nt">&quot;name&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;[variables(&#39;frontEndEndpointName&#39;)]&quot;</span><span class="p">,</span>
+<span class="w">        </span><span class="nt">&quot;properties&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">          </span><span class="nt">&quot;hostName&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;[format(&#39;{0}.azurefd.net&#39;, parameters(&#39;name&#39;))]&quot;</span><span class="p">,</span>
+<span class="w">          </span><span class="nt">&quot;sessionAffinityEnabledState&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Disabled&quot;</span><span class="p">,</span>
+<span class="w">          </span><span class="nt">&quot;customHttpsConfiguration&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">            </span><span class="nt">&quot;minimumTlsVersion&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;1.2&quot;</span>
+<span class="w">          </span><span class="p">}</span>
 <span class="w">        </span><span class="p">}</span>
-<span class="w">      </span><span class="p">},</span>
-<span class="w">      </span><span class="nt">&quot;dependsOn&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
-<span class="w">        </span><span class="s2">&quot;[resourceId(&#39;Microsoft.Web/serverfarms&#39;, variables(&#39;frontDoorAppServicePlanName&#39;))]&quot;</span><span class="p">,</span>
-<span class="w">        </span><span class="s2">&quot;[resourceId(&#39;Microsoft.Cdn/profiles&#39;, parameters(&#39;frontDoorName&#39;))]&quot;</span>
-<span class="w">      </span><span class="p">]</span>
-<span class="w">    </span><span class="p">}</span>
-<span class="w">  </span><span class="p">]</span>
+<span class="w">      </span><span class="p">}</span>
+<span class="w">    </span><span class="p">],</span>
+<span class="w">    </span><span class="nt">&quot;loadBalancingSettings&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;[variables(&#39;loadBalancingSettings&#39;)]&quot;</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">&quot;backendPools&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;[variables(&#39;backendPools&#39;)]&quot;</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">&quot;healthProbeSettings&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;[variables(&#39;healthProbeSettings&#39;)]&quot;</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">&quot;routingRules&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;[variables(&#39;routingRules&#39;)]&quot;</span>
+<span class="w">  </span><span class="p">}</span>
+<span class="p">}</span>
 </code></pre></div>
 <h3 id="configure-with-bicep">Configure with Bicep<a class="headerlink" href="#configure-with-bicep" title="Permanent link">#</a></h3>
 <p>To deploy a Front Door resource that passes this rule:</p>
 <ul>
-<li>Set the minTlsVersion to be '1.2'</li>
+<li>Set each <code>properties.frontendEndpoints[*].properties.customHttpsConfiguration.minimumTlsVersion</code> property to <code>1.2</code>.</li>
 </ul>
 <p>For example:</p>
-<div class="highlight"><span class="filename">Azure Bicep snippet</span><pre><span></span><code>resource frontDoorResource &#39;Microsoft.Cdn/profiles@2021-06-01&#39; = {
-  name: frontDoorName
-  location: &#39;Global&#39;
-  sku: {
-    name: &#39;Standard_AzureFrontDoor&#39;
-  }
-}
-resource appServicePlanResource &#39;Microsoft.Web/serverFarms@2020-06-01&#39; = {
-  name: frontDoorAppServicePlanName
-  location: location
-  sku: {
-    name: &#39;S1&#39;
-    capacity: 1
-  }
-  kind: &#39;app&#39;
-}
-
-resource appResource &#39;Microsoft.Web/sites@2020-06-01&#39; = {
-  name: frontDoorAppName
-  location: location
-  kind: &#39;app&#39;
-  identity: {
-    type: &#39;SystemAssigned&#39;
-  }
+<div class="highlight"><span class="filename">Azure Bicep snippet</span><pre><span></span><code>resource afd_classic &#39;Microsoft.Network/frontDoors@2021-06-01&#39; = {
+  name: name
+  location: &#39;global&#39;
   properties: {
-    serverFarmId: appServicePlanResource.id
-    httpsOnly: true
-    siteConfig: {
-      detailedErrorLoggingEnabled: true
-      httpLoggingEnabled: true
-      requestTracingEnabled: true
-      ftpsState: &#39;Disabled&#39;
-      minTlsVersion: &#39;1.2&#39;
-      ipSecurityRestrictions: [
-        {
-          tag: &#39;ServiceTag&#39;
-          ipAddress: &#39;AzureFrontDoor.Backend&#39;
-          action: &#39;Allow&#39;
-          priority: 100
-          headers: {
-            &#39;x-azure-fdid&#39;: [
-              frontDoorResource.properties.frontDoorId
-            ]
+    enabledState: &#39;Enabled&#39;
+    frontendEndpoints: [
+      {
+        name: frontEndEndpointName
+        properties: {
+          hostName: &#39;${name}.azurefd.net&#39;
+          sessionAffinityEnabledState: &#39;Disabled&#39;
+          customHttpsConfiguration: {
+            minimumTlsVersion: &#39;1.2&#39;
           }
-          name: &#39;Allow traffic from Front Door&#39;
         }
-      ]
-    }
+      }
+    ]
+    loadBalancingSettings: loadBalancingSettings
+    backendPools: backendPools
+    healthProbeSettings: healthProbeSettings
+    routingRules: routingRules
   }
 }
 </code></pre></div>
@@ -8028,8 +7973,8 @@ resource appResource &#39;Microsoft.Web/sites@2020-06-01&#39; = {
 <ul>
 <li><a href="https://learn.microsoft.com/azure/architecture/framework/security/design-storage-encryption#data-in-transit">Data encryption in Azure</a></li>
 <li><a href="https://azure.microsoft.com/updates/azuretls12/">Preparing for TLS 1.2 in Microsoft Azure</a></li>
-<li><a href="https://docs.microsoft.com/azure/frontdoor/front-door-faq#what-tls-versions-are-supported-by-azure-front-door-service">What TLS versions are supported by Azure Front Door Service?</a></li>
-<li><a href="https://docs.microsoft.com/azure/templates/microsoft.network/frontdoors/frontendendpoints">Azure deployment reference</a></li>
+<li><a href="https://learn.microsoft.com/azure/frontdoor/end-to-end-tls?pivots=front-door-classic#supported-tls-versions">Supported TLS versions</a></li>
+<li><a href="https://learn.microsoft.com/azure/templates/microsoft.network/frontdoors/frontendendpoints">Azure deployment reference</a></li>
 </ul>
 
   <!-- Last update of source file -->
@@ -8040,7 +7985,7 @@ resource appResource &#39;Microsoft.Web/sites@2020-06-01&#39; = {
   <small>
     
       Last update:
-      2022-10-17
+      2023-02-18
     
   </small>
 </div>
@@ -8155,7 +8100,7 @@ resource appResource &#39;Microsoft.Web/sites@2020-06-01&#39; = {
       <div class="md-dialog__inner md-typeset"></div>
     </div>
     
-    <script id="__config" type="application/json">{"base": "../../..", "features": ["navigation.instant", "navigation.indexes", {"navigation.sections": {"level": 1}}, "navigation.tabs", "content.code.annotate", "content.tabs.link"], "search": "../../../assets/javascripts/workers/search.db81ec45.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": {"provider": "mike"}}</script>
+    <script id="__config" type="application/json">{"base": "../../..", "features": ["navigation.instant", "navigation.indexes", {"navigation.sections": {"level": 1}}, "navigation.tabs", "content.code.annotate", "content.tabs.link", "content.code.copy"], "search": "../../../assets/javascripts/workers/search.db81ec45.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": {"provider": "mike"}}</script>
     
     
       <script src="../../../assets/javascripts/bundle.4b2c34cd.min.js"></script>

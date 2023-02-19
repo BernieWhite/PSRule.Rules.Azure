@@ -64,12 +64,19 @@
   
   
 
+  <!-- Determine type -->
+  
+  
+    
+  
+  
+
   <!-- The image needs to have an absolute URL -->
   
 
   <!-- Open graph meta tags -->
   <meta property="og:site_name" content="PSRule for Azure" />
-  <meta property="og:type" content="website" />
+  <meta property="og:type" content="article" />
   <meta property="og:title" content="PSRule for Azure - Azure.GA_2022_03" />
   <meta property="og:description" content="Ready to go rules for testing Azure Infrastructure as Code (IaC)." />
   <meta property="og:url" content="https://azure.github.io/PSRule.Rules.Azure/en/baselines/Azure.GA_2022_03/" />
@@ -8306,7 +8313,7 @@ Consider switching to a newer baseline.</p>
 </tr>
 <tr>
 <td><a href="../../rules/Azure.FrontDoor.MinTLS/">Azure.FrontDoor.MinTLS</a></td>
-<td>Front Door should reject TLS versions older than 1.2.</td>
+<td>Front Door Classic instances should reject TLS versions older than 1.2.</td>
 <td>Critical</td>
 </tr>
 <tr>
@@ -8316,12 +8323,12 @@ Consider switching to a newer baseline.</p>
 </tr>
 <tr>
 <td><a href="../../rules/Azure.FrontDoor.Probe/">Azure.FrontDoor.Probe</a></td>
-<td>Configure and enable health probes for each backend pool.</td>
+<td>Use health probes to check the health of each backend.</td>
 <td>Important</td>
 </tr>
 <tr>
 <td><a href="../../rules/Azure.FrontDoor.ProbeMethod/">Azure.FrontDoor.ProbeMethod</a></td>
-<td>Configure health probes to use HEAD instead of GET requests.</td>
+<td>Configure health probes to use HEAD requests to reduce performance overhead.</td>
 <td>Important</td>
 </tr>
 <tr>
@@ -8331,8 +8338,8 @@ Consider switching to a newer baseline.</p>
 </tr>
 <tr>
 <td><a href="../../rules/Azure.FrontDoor.State/">Azure.FrontDoor.State</a></td>
-<td>Enable Azure Front Door instance.</td>
-<td>Awareness</td>
+<td>Enable Azure Front Door Classic instance.</td>
+<td>Important</td>
 </tr>
 <tr>
 <td><a href="../../rules/Azure.FrontDoor.UseWAF/">Azure.FrontDoor.UseWAF</a></td>
@@ -9160,7 +9167,7 @@ Consider switching to a newer baseline.</p>
   <small>
     
       Last update:
-      2022-11-27
+      2023-02-18
     
   </small>
 </div>
@@ -9218,7 +9225,7 @@ Consider switching to a newer baseline.</p>
       <div class="md-dialog__inner md-typeset"></div>
     </div>
     
-    <script id="__config" type="application/json">{"base": "../../..", "features": ["navigation.instant", "navigation.indexes", {"navigation.sections": {"level": 1}}, "navigation.tabs", "content.code.annotate", "content.tabs.link"], "search": "../../../assets/javascripts/workers/search.db81ec45.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": {"provider": "mike"}}</script>
+    <script id="__config" type="application/json">{"base": "../../..", "features": ["navigation.instant", "navigation.indexes", {"navigation.sections": {"level": 1}}, "navigation.tabs", "content.code.annotate", "content.tabs.link", "content.code.copy"], "search": "../../../assets/javascripts/workers/search.db81ec45.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": {"provider": "mike"}}</script>
     
     
       <script src="../../../assets/javascripts/bundle.4b2c34cd.min.js"></script>

@@ -956,6 +956,8 @@
         
           
         
+          
+        
       
       
         <label class="md-nav__link" for="__nav_2_11" id="__nav_2_11_label" tabindex="0">
@@ -1060,6 +1062,20 @@
     <li class="md-nav__item">
       <a href="../deprecations/" class="md-nav__link">
         Deprecations
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../versioning/" class="md-nav__link">
+        Changes and versioning
       </a>
     </li>
   
@@ -1263,8 +1279,8 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#template-best-practice-analyzer-bpa" class="md-nav__link">
-    Template Best Practice Analyzer (BPA)
+  <a href="#template-analyzer" class="md-nav__link">
+    Template Analyzer
   </a>
   
 </li>
@@ -7858,8 +7874,8 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#template-best-practice-analyzer-bpa" class="md-nav__link">
-    Template Best Practice Analyzer (BPA)
+  <a href="#template-analyzer" class="md-nav__link">
+    Template Analyzer
   </a>
   
 </li>
@@ -7908,10 +7924,10 @@
 Additionally you can view recommendations from PSRule as you navigate to each level in your hierarchy.</p>
 <p>You can include PSRule recommendations in AzGovViz output by adding the <code>-DoPSRule</code> command-line switch.
 This and more is included in the <a href="https://aka.ms/AzGovViz">documentation</a>.</p>
-<h3 id="template-best-practice-analyzer-bpa">Template Best Practice Analyzer (BPA)<a class="headerlink" href="#template-best-practice-analyzer-bpa" title="Permanent link">#</a></h3>
+<h3 id="template-analyzer">Template Analyzer<a class="headerlink" href="#template-analyzer" title="Permanent link">#</a></h3>
 <p><a href="https://github.com/Azure/template-analyzer"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M0 3.75A.75.75 0 0 1 .75 3h7.497c1.566 0 2.945.8 3.751 2.014A4.495 4.495 0 0 1 15.75 3h7.5a.75.75 0 0 1 .75.75v15.063a.752.752 0 0 1-.755.75l-7.682-.052a3 3 0 0 0-2.142.878l-.89.891a.75.75 0 0 1-1.061 0l-.902-.901a2.996 2.996 0 0 0-2.121-.879H.75a.75.75 0 0 1-.75-.75Zm12.75 15.232a4.503 4.503 0 0 1 2.823-.971l6.927.047V4.5h-6.75a3 3 0 0 0-3 3ZM11.247 7.497a3 3 0 0 0-3-2.997H1.5V18h6.947c1.018 0 2.006.346 2.803.98Z"/></svg></span> Docs</a> · <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M11.75 1a.75.75 0 0 1 .75.75V4h6.532c.42 0 .826.15 1.143.425l3.187 2.75a1.75 1.75 0 0 1 0 2.65l-3.187 2.75a1.75 1.75 0 0 1-1.143.425H12.5v9.25a.75.75 0 0 1-1.5 0V13H3.75A1.75 1.75 0 0 1 2 11.25v-5.5C2 4.783 2.784 4 3.75 4H11V1.75a.75.75 0 0 1 .75-.75Zm7.282 4.5H3.75a.25.25 0 0 0-.25.25v5.5c0 .138.112.25.25.25h15.282c.06 0 .118-.021.163-.06l3.188-2.75a.248.248 0 0 0 0-.38l-3.188-2.75a.249.249 0 0 0-.163-.06Z"/></svg></span> v0.3.0</p>
-<p>BPA scans Azure templates and Bicep code to ensure security and best practice checks are being followed before deployment.</p>
-<p>By default, BPA will only include rules aligned to the Security Well-Architected Framework pillar.
+<p>Template Analyzer scans Azure templates and Bicep code to ensure security and best practice checks are being followed before deployment.</p>
+<p>By default, Template Analyzer will only include rules aligned to the Security Well-Architected Framework pillar.
 To include rules from other pillars, use the <code>--include-non-security-rules</code> command-line switch.</p>
 <h3 id="microsoft-defender-for-devops">Microsoft Defender for DevOps<a class="headerlink" href="#microsoft-defender-for-devops" title="Permanent link">#</a></h3>
 <p><a href="https://www.microsoft.com/security/business/cloud-security/microsoft-defender-devops"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M0 3.75A.75.75 0 0 1 .75 3h7.497c1.566 0 2.945.8 3.751 2.014A4.495 4.495 0 0 1 15.75 3h7.5a.75.75 0 0 1 .75.75v15.063a.752.752 0 0 1-.755.75l-7.682-.052a3 3 0 0 0-2.142.878l-.89.891a.75.75 0 0 1-1.061 0l-.902-.901a2.996 2.996 0 0 0-2.121-.879H.75a.75.75 0 0 1-.75-.75Zm12.75 15.232a4.503 4.503 0 0 1 2.823-.971l6.927.047V4.5h-6.75a3 3 0 0 0-3 3ZM11.247 7.497a3 3 0 0 0-3-2.997H1.5V18h6.947c1.018 0 2.006.346 2.803.98Z"/></svg></span> Docs</a> · <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M11.75 1a.75.75 0 0 1 .75.75V4h6.532c.42 0 .826.15 1.143.425l3.187 2.75a1.75 1.75 0 0 1 0 2.65l-3.187 2.75a1.75 1.75 0 0 1-1.143.425H12.5v9.25a.75.75 0 0 1-1.5 0V13H3.75A1.75 1.75 0 0 1 2 11.25v-5.5C2 4.783 2.784 4 3.75 4H11V1.75a.75.75 0 0 1 .75-.75Zm7.282 4.5H3.75a.25.25 0 0 0-.25.25v5.5c0 .138.112.25.25.25h15.282c.06 0 .118-.021.163-.06l3.188-2.75a.248.248 0 0 0 0-.38l-3.188-2.75a.249.249 0 0 0-.163-.06Z"/></svg></span> Public Preview</p>
@@ -7923,7 +7939,7 @@ To include rules from other pillars, use the <code>--include-non-security-rules<
   <small>
     
       Last update:
-      2022-10-21
+      2023-02-22
     
   </small>
 </div>

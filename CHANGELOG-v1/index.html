@@ -10249,8 +10249,10 @@
 <li>Added support for configuring a minimum version of Bicep by <a href="https://github.com/BernieWhite">@BernieWhite</a>.
   <a href="https://github.com/Azure/PSRule.Rules.Azure/issues/1935">#1935</a><ul>
 <li>Configure this option to increase the visibility of the version of the Bicep CLI used by PSRule for Azure.</li>
+<li>Set <code>AZURE_BICEP_CHECK_TOOL</code> to <code>true</code> to check the Bicep CLI.</li>
 <li>Set <code>AZURE_BICEP_MINIMUM_VERSION</code> to configure the minimum version.</li>
-<li>By default, this option default to <code>0.4.451</code>.</li>
+<li>If the Bicep CLI is not installed or the version is less than the minimum version an error will be reported.</li>
+<li>By default, the minimum Bicep version defaults to <code>0.4.451</code>.</li>
 </ul>
 </li>
 </ul>
@@ -10258,6 +10260,11 @@
 <li>Engineering:<ul>
 <li>Bump Az.Resources to v6.5.2.
   <a href="https://github.com/Azure/PSRule.Rules.Azure/pull/2037">#2037</a></li>
+</ul>
+</li>
+<li>Bug fixes:<ul>
+<li>Fixed cases of exit code 5 with path probing by <a href="https://github.com/BernieWhite">@BernieWhite</a>.
+  <a href="https://github.com/Azure/PSRule.Rules.Azure/issues/1901">#1901</a></li>
 </ul>
 </li>
 </ul>
@@ -10297,7 +10304,7 @@
 What's changed since v1.24.0:</p>
 <ul>
 <li>Bug fixes:<ul>
-<li>Fixes Bicep expand object or null by <a href="https://github.com/BernieWhite">@BernieWhite</a>.
+<li>Fixed Bicep expand object or null by <a href="https://github.com/BernieWhite">@BernieWhite</a>.
   <a href="https://github.com/Azure/PSRule.Rules.Azure/issues/2021">#2021</a></li>
 </ul>
 </li>
@@ -10306,7 +10313,7 @@ What's changed since v1.24.0:</p>
 <p>What's changed since v1.24.0:</p>
 <ul>
 <li>Bug fixes:<ul>
-<li>Fixes Bicep expand object or null by <a href="https://github.com/BernieWhite">@BernieWhite</a>.
+<li>Fixed Bicep expand object or null by <a href="https://github.com/BernieWhite">@BernieWhite</a>.
   <a href="https://github.com/Azure/PSRule.Rules.Azure/issues/2021">#2021</a></li>
 </ul>
 </li>
@@ -14548,7 +14555,7 @@ What's changed since v1.24.0:</p>
   <small>
     
       Last update:
-      2023-02-20
+      2023-02-22
     
   </small>
 </div>

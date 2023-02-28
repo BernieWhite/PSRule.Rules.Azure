@@ -17,7 +17,7 @@
       
       
       <link rel="icon" href="../../../assets/ms_icon.png">
-      <meta name="generator" content="mkdocs-1.4.2, mkdocs-material-9.0.13">
+      <meta name="generator" content="mkdocs-1.4.2, mkdocs-material-9.0.15">
     
     
       
@@ -25,7 +25,7 @@
       
     
     
-      <link rel="stylesheet" href="../../../assets/stylesheets/main.ffa9267a.min.css">
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.113286f1.min.css">
       
         
         <link rel="stylesheet" href="../../../assets/stylesheets/palette.a0c5b2b5.min.css">
@@ -7953,9 +7953,23 @@
 <h2 id="recommendation">Recommendation<a class="headerlink" href="#recommendation" title="Permanent link">#</a></h2>
 <p>Consider configuring Application Gateway to accept a minimum of TLS 1.2.</p>
 <h3 id="configure-with-azure-template">Configure with Azure template<a class="headerlink" href="#configure-with-azure-template" title="Permanent link">#</a></h3>
-<p>To deploy Application Gateways that pass this rule:</p>
+<p>To deploy Application Gateways that pass this rule use a predefined or custom policy:</p>
 <ul>
+<li><strong>Custom</strong> &mdash; Set the <code>properties.sslPolicy.policyType</code> property to <code>Custom</code>.<ul>
 <li>Set the <code>properties.sslPolicy.minProtocolVersion</code> property to <code>TLSv1_2</code>.</li>
+<li>Set the <code>properties.sslPolicy.cipherSuites</code> property to a list of supported ciphers. For example:<ul>
+<li><code>TLS_ECDHE_ECDSA_WITH_AES_256_GCM_SHA384</code></li>
+<li><code>TLS_ECDHE_ECDSA_WITH_AES_128_GCM_SHA256</code></li>
+<li><code>TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384</code></li>
+<li><code>TLS_ECDHE_RSA_WITH_AES_128_GCM_SHA256</code></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><strong>Predefined</strong> &mdash; Set the <code>properties.sslPolicy.policyType</code> property to <code>Predefined</code>.<ul>
+<li>Set the <code>properties.sslPolicy.policyName</code> property to a supported predefined policy such as <code>AppGwSslPolicy20220101S</code>.</li>
+</ul>
+</li>
 </ul>
 <p>For example:</p>
 <div class="highlight"><span class="filename">Azure Template snippet</span><pre><span></span><code><span class="p">{</span>
@@ -7969,15 +7983,36 @@
 <span class="w">            </span><span class="nt">&quot;tier&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;WAF_v2&quot;</span>
 <span class="w">        </span><span class="p">},</span>
 <span class="w">        </span><span class="nt">&quot;sslPolicy&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
-<span class="w">          </span><span class="nt">&quot;minProtocolVersion&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;TLSv1_2&quot;</span>
+<span class="w">          </span><span class="nt">&quot;policyType&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Custom&quot;</span><span class="p">,</span>
+<span class="w">          </span><span class="nt">&quot;minProtocolVersion&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;TLSv1_2&quot;</span><span class="p">,</span>
+<span class="w">          </span><span class="nt">&quot;cipherSuites&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
+<span class="w">                  </span><span class="s2">&quot;TLS_ECDHE_ECDSA_WITH_AES_256_GCM_SHA384&quot;</span><span class="p">,</span>
+<span class="w">                  </span><span class="s2">&quot;TLS_ECDHE_ECDSA_WITH_AES_128_GCM_SHA256&quot;</span><span class="p">,</span>
+<span class="w">                  </span><span class="s2">&quot;TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384&quot;</span><span class="p">,</span>
+<span class="w">                  </span><span class="s2">&quot;TLS_ECDHE_RSA_WITH_AES_128_GCM_SHA256&quot;</span>
+<span class="w">          </span><span class="p">]</span>
 <span class="w">        </span><span class="p">}</span>
 <span class="w">    </span><span class="p">}</span>
 <span class="p">}</span>
 </code></pre></div>
 <h3 id="configure-with-bicep">Configure with Bicep<a class="headerlink" href="#configure-with-bicep" title="Permanent link">#</a></h3>
-<p>To deploy Application Gateways that pass this rule:</p>
+<p>To deploy Application Gateways that pass this rule use a predefined or custom policy:</p>
 <ul>
+<li><strong>Custom</strong> &mdash; Set the <code>properties.sslPolicy.policyType</code> property to <code>Custom</code>.<ul>
 <li>Set the <code>properties.sslPolicy.minProtocolVersion</code> property to <code>TLSv1_2</code>.</li>
+<li>Set the <code>properties.sslPolicy.cipherSuites</code> property to a list of supported ciphers. For example:<ul>
+<li><code>TLS_ECDHE_ECDSA_WITH_AES_256_GCM_SHA384</code></li>
+<li><code>TLS_ECDHE_ECDSA_WITH_AES_128_GCM_SHA256</code></li>
+<li><code>TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384</code></li>
+<li><code>TLS_ECDHE_RSA_WITH_AES_128_GCM_SHA256</code></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><strong>Predefined</strong> &mdash; Set the <code>properties.sslPolicy.policyType</code> property to <code>Predefined</code>.<ul>
+<li>Set the <code>properties.sslPolicy.policyName</code> property to a supported predefined policy such as <code>AppGwSslPolicy20220101S</code>.</li>
+</ul>
+</li>
 </ul>
 <p>For example:</p>
 <div class="highlight"><span class="filename">Azure Bicep snippet</span><pre><span></span><code>resource name_resource &#39;Microsoft.Network/applicationGateways@2019-09-01&#39; = {
@@ -7989,7 +8024,14 @@
       tier: &#39;WAF_v2&#39;
     }
     sslPolicy: {
+      policyType: &#39;Custom&#39;
       minProtocolVersion: &#39;TLSv1_2&#39;
+      cipherSuites: [
+        &#39;TLS_ECDHE_ECDSA_WITH_AES_256_GCM_SHA384&#39;
+        &#39;TLS_ECDHE_ECDSA_WITH_AES_128_GCM_SHA256&#39;
+        &#39;TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384&#39;
+        &#39;TLS_ECDHE_RSA_WITH_AES_128_GCM_SHA256&#39;
+      ]
     }
   }
 }
@@ -8001,6 +8043,9 @@
 <li><a href="https://docs.microsoft.com/azure/application-gateway/application-gateway-configure-ssl-policy-powershell">Configure SSL policy versions and cipher suites on Application Gateway</a></li>
 <li><a href="https://docs.microsoft.com/azure/application-gateway/ssl-overview">Overview of TLS termination and end to end TLS with Application Gateway</a></li>
 <li><a href="https://docs.microsoft.com/azure/templates/microsoft.network/applicationgateways">Azure deployment reference</a></li>
+<li><a href="https://learn.microsoft.com/azure/application-gateway/application-gateway-ssl-policy-overview#predefined-tls-policy">Predefined TLS policy</a></li>
+<li><a href="https://learn.microsoft.com/azure/application-gateway/application-gateway-ssl-policy-overview#cipher-suites">Cipher suites</a></li>
+<li><a href="https://learn.microsoft.com/azure/application-gateway/application-gateway-ssl-policy-overview#limitations">Limitations</a></li>
 </ul>
 
   <!-- Last update of source file -->
@@ -8011,7 +8056,7 @@
   <small>
     
       Last update:
-      2022-10-17
+      2023-03-01
     
   </small>
 </div>

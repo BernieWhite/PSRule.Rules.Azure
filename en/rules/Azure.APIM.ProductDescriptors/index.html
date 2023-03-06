@@ -17,7 +17,7 @@
       
       
       <link rel="icon" href="../../../assets/ms_icon.png">
-      <meta name="generator" content="mkdocs-1.4.2, mkdocs-material-9.0.15">
+      <meta name="generator" content="mkdocs-1.4.2, mkdocs-material-9.1.1">
     
     
       
@@ -25,7 +25,7 @@
       
     
     
-      <link rel="stylesheet" href="../../../assets/stylesheets/main.113286f1.min.css">
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.402914a4.min.css">
       
         
         <link rel="stylesheet" href="../../../assets/stylesheets/palette.a0c5b2b5.min.css">
@@ -2086,6 +2086,8 @@
         
           
         
+          
+        
       
       
         <label class="md-nav__link" for="__nav_4_5" id="__nav_4_5_label" tabindex="0">
@@ -2948,6 +2950,33 @@
   <a href="#recommendation" class="md-nav__link">
     Recommendation
   </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#examples" class="md-nav__link">
+    Examples
+  </a>
+  
+    <nav class="md-nav" aria-label="Examples">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#configure-with-azure-template" class="md-nav__link">
+    Configure with Azure template
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#configure-with-bicep" class="md-nav__link">
+    Configure with Bicep
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -4403,6 +4432,20 @@
     <li class="md-nav__item">
       <a href="../Azure.KeyVault.AutoRotationPolicy/" class="md-nav__link">
         Azure.KeyVault.AutoRotationPolicy
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Azure.KeyVault.Firewall/" class="md-nav__link">
+        Azure.KeyVault.Firewall
       </a>
     </li>
   
@@ -7862,6 +7905,33 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#examples" class="md-nav__link">
+    Examples
+  </a>
+  
+    <nav class="md-nav" aria-label="Examples">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#configure-with-azure-template" class="md-nav__link">
+    Configure with Azure template
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#configure-with-bicep" class="md-nav__link">
+    Configure with Bicep
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#links" class="md-nav__link">
     Links
   </a>
@@ -7910,14 +7980,63 @@
 <p>API Management products should have a display name and description.</p>
 <h2 id="description">Description<a class="headerlink" href="#description" title="Permanent link">#</a></h2>
 <p>Each product created in API Management can have a display name and description set.
-This information is visible within the developer portal.</p>
+Using easy to understand descriptions and metadata greatly assist identification for management and usage.</p>
+<p>During monitoring from service provider perspective:</p>
+<ul>
+<li>Having a clear understanding of the purpose of a product is often important to during analysis.</li>
+<li>Allows for accurate management and clean up of unused or old products.</li>
+<li>Allows for accurate access control decisions.</li>
+</ul>
+<p>This information is visible within the developer portal.</p>
 <h2 id="recommendation">Recommendation<a class="headerlink" href="#recommendation" title="Permanent link">#</a></h2>
 <p>Consider using display name and description fields on products to convey intended purpose and usage.
 Display name and description fields should be human readable and easy to understand.</p>
+<h2 id="examples">Examples<a class="headerlink" href="#examples" title="Permanent link">#</a></h2>
+<h3 id="configure-with-azure-template">Configure with Azure template<a class="headerlink" href="#configure-with-azure-template" title="Permanent link">#</a></h3>
+<p>To deploy API Management Products that pass this rule:</p>
+<ul>
+<li>Set the <code>properties.displayName</code> with a human readable name.</li>
+<li>Set the <code>properties.description</code> with an description of the APIs purpose.</li>
+</ul>
+<p>For example:</p>
+<div class="highlight"><span class="filename">Azure Template snippet</span><pre><span></span><code><span class="p">{</span>
+<span class="w">  </span><span class="nt">&quot;type&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Microsoft.ApiManagement/service/products&quot;</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">&quot;apiVersion&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;2021-08-01&quot;</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">&quot;name&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;[format(&#39;{0}/{1}&#39;, parameters(&#39;name&#39;), &#39;echo&#39;)]&quot;</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">&quot;properties&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="nt">&quot;displayName&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Echo&quot;</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">&quot;description&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Echo API services for Contoso.&quot;</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">&quot;approvalRequired&quot;</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">&quot;subscriptionRequired&quot;</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span>
+<span class="w">  </span><span class="p">},</span>
+<span class="w">  </span><span class="nt">&quot;dependsOn&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
+<span class="w">    </span><span class="s2">&quot;[resourceId(&#39;Microsoft.ApiManagement/service&#39;, parameters(&#39;name&#39;))]&quot;</span>
+<span class="w">  </span><span class="p">]</span>
+<span class="p">}</span>
+</code></pre></div>
+<h3 id="configure-with-bicep">Configure with Bicep<a class="headerlink" href="#configure-with-bicep" title="Permanent link">#</a></h3>
+<p>To deploy API Management Products that pass this rule:</p>
+<ul>
+<li>Set the <code>properties.displayName</code> with a human readable name.</li>
+<li>Set the <code>properties.description</code> with an description of the APIs purpose.</li>
+</ul>
+<p>For example:</p>
+<div class="highlight"><span class="filename">Azure Bicep snippet</span><pre><span></span><code>resource product &#39;Microsoft.ApiManagement/service/products@2021-08-01&#39; = {
+  parent: service
+  name: &#39;echo&#39;
+  properties: {
+    displayName: &#39;Echo&#39;
+    description: &#39;Echo API services for Contoso.&#39;
+    approvalRequired: true
+    subscriptionRequired: true
+  }
+}
+</code></pre></div>
 <h2 id="links">Links<a class="headerlink" href="#links" title="Permanent link">#</a></h2>
 <ul>
-<li><a href="https://docs.microsoft.com/azure/api-management/api-management-howto-add-products">Create and publish a product</a></li>
-<li><a href="https://docs.microsoft.com/azure/templates/microsoft.apimanagement/service/products#ProductContractProperties">Azure deployment reference</a></li>
+<li><a href="https://learn.microsoft.com/azure/architecture/framework/devops/monitor-instrument#human-readable-data">Human-readable data</a></li>
+<li><a href="https://learn.microsoft.com/azure/api-management/api-management-howto-add-products?tabs=azure-portal">Create and publish a product</a></li>
+<li><a href="https://learn.microsoft.com/azure/templates/microsoft.apimanagement/service/products">Azure deployment reference</a></li>
 </ul>
 
   <!-- Last update of source file -->
@@ -7928,7 +8047,7 @@ Display name and description fields should be human readable and easy to underst
   <small>
     
       Last update:
-      2022-12-03
+      2023-03-07
     
   </small>
 </div>
@@ -8046,7 +8165,7 @@ Display name and description fields should be human readable and easy to underst
     <script id="__config" type="application/json">{"base": "../../..", "features": ["navigation.instant", "navigation.indexes", {"navigation.sections": {"level": 1}}, "navigation.tabs", "content.code.annotate", "content.tabs.link", "content.code.copy"], "search": "../../../assets/javascripts/workers/search.208ed371.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": {"provider": "mike"}}</script>
     
     
-      <script src="../../../assets/javascripts/bundle.2a6f1dda.min.js"></script>
+      <script src="../../../assets/javascripts/bundle.b78d2936.min.js"></script>
       
     
   </body>

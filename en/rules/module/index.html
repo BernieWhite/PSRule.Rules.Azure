@@ -21,7 +21,7 @@
         <link rel="next" href="../resource/">
       
       <link rel="icon" href="../../../assets/ms_icon.png">
-      <meta name="generator" content="mkdocs-1.4.2, mkdocs-material-9.0.15">
+      <meta name="generator" content="mkdocs-1.4.2, mkdocs-material-9.1.1">
     
     
       
@@ -29,7 +29,7 @@
       
     
     
-      <link rel="stylesheet" href="../../../assets/stylesheets/main.113286f1.min.css">
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.402914a4.min.css">
       
         
         <link rel="stylesheet" href="../../../assets/stylesheets/palette.a0c5b2b5.min.css">
@@ -1418,6 +1418,13 @@
 </li>
         
           <li class="md-nav__item">
+  <a href="#instrumentation" class="md-nav__link">
+    Instrumentation
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#monitoring" class="md-nav__link">
     Monitoring
   </a>
@@ -1827,6 +1834,8 @@
       <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_5" >
       
       
+        
+          
         
           
         
@@ -4818,6 +4827,20 @@
     <li class="md-nav__item">
       <a href="../Azure.KeyVault.AutoRotationPolicy/" class="md-nav__link">
         Azure.KeyVault.AutoRotationPolicy
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Azure.KeyVault.Firewall/" class="md-nav__link">
+        Azure.KeyVault.Firewall
       </a>
     </li>
   
@@ -8340,6 +8363,13 @@
 </li>
         
           <li class="md-nav__item">
+  <a href="#instrumentation" class="md-nav__link">
+    Instrumentation
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#monitoring" class="md-nav__link">
     Monitoring
   </a>
@@ -8991,12 +9021,6 @@
 </thead>
 <tbody>
 <tr>
-<td><a href="../Azure.APIM.MinAPIVersion/">Azure.APIM.MinAPIVersion</a></td>
-<td>API Management instances should limit control plane API calls to API Management with version '2021-08-01' or newer.</td>
-<td>Important</td>
-<td>Error</td>
-</tr>
-<tr>
 <td><a href="../Azure.ASE.MigrateV3/">Azure.ASE.MigrateV3</a></td>
 <td>Use ASEv3 as replacement for the classic app service environment versions ASEv1 and ASEv2.</td>
 <td>Important</td>
@@ -9006,6 +9030,31 @@
 <td><a href="../Azure.MySQL.UseFlexible/">Azure.MySQL.UseFlexible</a></td>
 <td>Use Azure Database for MySQL Flexible Server deployment model.</td>
 <td>Important</td>
+<td>Warning</td>
+</tr>
+</tbody>
+</table>
+<h3 id="instrumentation">Instrumentation<a class="headerlink" href="#instrumentation" title="Permanent link">#</a></h3>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Synopsis</th>
+<th>Severity</th>
+<th>Level</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="../Azure.APIM.APIDescriptors/">Azure.APIM.APIDescriptors</a></td>
+<td>API Management APIs should have a display name and description.</td>
+<td>Awareness</td>
+<td>Warning</td>
+</tr>
+<tr>
+<td><a href="../Azure.APIM.ProductDescriptors/">Azure.APIM.ProductDescriptors</a></td>
+<td>API Management products should have a display name and description.</td>
+<td>Awareness</td>
 <td>Warning</td>
 </tr>
 </tbody>
@@ -9202,6 +9251,12 @@
 <td><a href="../Azure.AKS.Name/">Azure.AKS.Name</a></td>
 <td>Azure Kubernetes Service (AKS) cluster names should meet naming requirements.</td>
 <td>Awareness</td>
+<td>Error</td>
+</tr>
+<tr>
+<td><a href="../Azure.APIM.MinAPIVersion/">Azure.APIM.MinAPIVersion</a></td>
+<td>API Management instances should limit control plane API calls to API Management with version '2021-08-01' or newer.</td>
+<td>Important</td>
 <td>Error</td>
 </tr>
 <tr>
@@ -9618,18 +9673,6 @@
 <td>Azure Kubernetes Service (AKS) cluster DNS prefix should meet naming requirements.</td>
 <td>Awareness</td>
 <td>Error</td>
-</tr>
-<tr>
-<td><a href="../Azure.APIM.APIDescriptors/">Azure.APIM.APIDescriptors</a></td>
-<td>API Management APIs should have a display name and description.</td>
-<td>Awareness</td>
-<td>Warning</td>
-</tr>
-<tr>
-<td><a href="../Azure.APIM.ProductDescriptors/">Azure.APIM.ProductDescriptors</a></td>
-<td>API Management products should have a display name and description.</td>
-<td>Awareness</td>
-<td>Warning</td>
 </tr>
 <tr>
 <td><a href="../Azure.PublicIP.DNSLabel/">Azure.PublicIP.DNSLabel</a></td>
@@ -10380,6 +10423,12 @@
 <td>Error</td>
 </tr>
 <tr>
+<td><a href="../Azure.KeyVault.Firewall/">Azure.KeyVault.Firewall</a></td>
+<td>Key Vault should only accept explicitly allowed traffic.</td>
+<td>Important</td>
+<td>Error</td>
+</tr>
+<tr>
 <td><a href="../Azure.NSG.AnyInboundSource/">Azure.NSG.AnyInboundSource</a></td>
 <td>Network security groups (NSGs) should avoid rules that allow "any" as an inbound source.</td>
 <td>Critical</td>
@@ -10425,6 +10474,12 @@
 <tr>
 <td><a href="../Azure.AKS.PodIdentity/">Azure.AKS.PodIdentity</a></td>
 <td>Configure AKS clusters to use AAD pod identities to access Azure resources securely.</td>
+<td>Important</td>
+<td>Error</td>
+</tr>
+<tr>
+<td><a href="../Azure.APIM.ManagedIdentity/">Azure.APIM.ManagedIdentity</a></td>
+<td>Configure managed identities to access Azure resources.</td>
 <td>Important</td>
 <td>Error</td>
 </tr>
@@ -10583,12 +10638,6 @@
 <td>Error</td>
 </tr>
 <tr>
-<td><a href="../Azure.APIM.Ciphers/">Azure.APIM.Ciphers</a></td>
-<td>API Management should not accept weak or deprecated ciphers.</td>
-<td>Important</td>
-<td>Error</td>
-</tr>
-<tr>
 <td><a href="../Azure.APIM.EncryptValues/">Azure.APIM.EncryptValues</a></td>
 <td>API Management named values should be encrypted.</td>
 <td>Important</td>
@@ -10597,12 +10646,6 @@
 <tr>
 <td><a href="../Azure.APIM.HTTPEndpoint/">Azure.APIM.HTTPEndpoint</a></td>
 <td>Enforce HTTPS for communication to API clients.</td>
-<td>Important</td>
-<td>Error</td>
-</tr>
-<tr>
-<td><a href="../Azure.APIM.Protocols/">Azure.APIM.Protocols</a></td>
-<td>API Management should only accept a minimum of TLS 1.2.</td>
 <td>Important</td>
 <td>Error</td>
 </tr>
@@ -10784,8 +10827,20 @@
 <td>Error</td>
 </tr>
 <tr>
+<td><a href="../Azure.APIM.Ciphers/">Azure.APIM.Ciphers</a></td>
+<td>API Management should not accept weak or deprecated ciphers for client or backend communication.</td>
+<td>Critical</td>
+<td>Error</td>
+</tr>
+<tr>
 <td><a href="../Azure.APIM.HTTPBackend/">Azure.APIM.HTTPBackend</a></td>
 <td>Use HTTPS for communication to backend services.</td>
+<td>Critical</td>
+<td>Error</td>
+</tr>
+<tr>
+<td><a href="../Azure.APIM.Protocols/">Azure.APIM.Protocols</a></td>
+<td>API Management should only accept a minimum of TLS 1.2 for client and backend communication.</td>
 <td>Critical</td>
 <td>Error</td>
 </tr>
@@ -10883,12 +10938,6 @@
 <tr>
 <td><a href="../Azure.AKS.UseRBAC/">Azure.AKS.UseRBAC</a></td>
 <td>Deploy AKS cluster with role-based access control (RBAC) enabled.</td>
-<td>Important</td>
-<td>Error</td>
-</tr>
-<tr>
-<td><a href="../Azure.APIM.ManagedIdentity/">Azure.APIM.ManagedIdentity</a></td>
-<td>Configure managed identities to access Azure resources.</td>
 <td>Important</td>
 <td>Error</td>
 </tr>
@@ -11612,7 +11661,7 @@
     <script id="__config" type="application/json">{"base": "../../..", "features": ["navigation.instant", "navigation.indexes", {"navigation.sections": {"level": 1}}, "navigation.tabs", "content.code.annotate", "content.tabs.link", "content.code.copy"], "search": "../../../assets/javascripts/workers/search.208ed371.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": {"provider": "mike"}}</script>
     
     
-      <script src="../../../assets/javascripts/bundle.2a6f1dda.min.js"></script>
+      <script src="../../../assets/javascripts/bundle.b78d2936.min.js"></script>
       
     
   </body>

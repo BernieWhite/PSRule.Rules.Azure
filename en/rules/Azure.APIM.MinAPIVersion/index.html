@@ -17,7 +17,7 @@
       
       
       <link rel="icon" href="../../../assets/ms_icon.png">
-      <meta name="generator" content="mkdocs-1.4.2, mkdocs-material-9.0.15">
+      <meta name="generator" content="mkdocs-1.4.2, mkdocs-material-9.1.1">
     
     
       
@@ -25,7 +25,7 @@
       
     
     
-      <link rel="stylesheet" href="../../../assets/stylesheets/main.113286f1.min.css">
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.402914a4.min.css">
       
         
         <link rel="stylesheet" href="../../../assets/stylesheets/palette.a0c5b2b5.min.css">
@@ -1357,6 +1357,8 @@
       <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_5" checked>
       
       
+        
+          
         
           
         
@@ -4437,6 +4439,20 @@
     <li class="md-nav__item">
       <a href="../Azure.KeyVault.AutoRotationPolicy/" class="md-nav__link">
         Azure.KeyVault.AutoRotationPolicy
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Azure.KeyVault.Firewall/" class="md-nav__link">
+        Azure.KeyVault.Firewall
       </a>
     </li>
   
@@ -7977,49 +7993,96 @@
  · <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M7.75 6.5a1.25 1.25 0 1 0 0 2.5 1.25 1.25 0 0 0 0-2.5Z"/><path d="M2.5 1h8.44a1.5 1.5 0 0 1 1.06.44l10.25 10.25a1.5 1.5 0 0 1 0 2.12l-8.44 8.44a1.5 1.5 0 0 1-2.12 0L1.44 12A1.497 1.497 0 0 1 1 10.94V2.5A1.5 1.5 0 0 1 2.5 1Zm0 1.5v8.44l10.25 10.25 8.44-8.44L10.94 2.5Z"/></svg></span> 2022_12</p>
 <p>API Management instances should limit control plane API calls to API Management with version '2021-08-01' or newer.</p>
 <h2 id="description">Description<a class="headerlink" href="#description" title="Permanent link">#</a></h2>
-<p>On 30 September 2023, all API versions prior to 2021-08-01 will be retired and API calls using those API versions will fail. This means you'll no longer be able to create or manage your API Management services using your existing templates, tools, scripts, and programs until they've been updated. Data operations (such as accessing the APIs or Products configured on Azure API Management) will be unaffected by this update, including after 30 September 2023.</p>
-<p>From now through 30 September 2023, you can continue to use the templates, tools, and programs without impact. You can transition to API version 2021-08-01 or later at any point prior to 30 September 2023.</p>
+<p>On 30 September 2023, all API versions prior to 2021-08-01 will be retired and API calls using those API versions will fail.
+This means you'll no longer be able to create or manage your API Management services using your existing templates, tools, scripts, and programs until they've been updated.
+Data operations (such as accessing the APIs or Products configured on Azure API Management) will be unaffected by this update, including after 30 September 2023.</p>
+<p>From now through 30 September 2023, you can continue to use the templates, tools, and programs without impact.
+You can transition to API version 2021-08-01 or later at any point prior to 30 September 2023.</p>
 <h2 id="recommendation">Recommendation<a class="headerlink" href="#recommendation" title="Permanent link">#</a></h2>
 <p>Limit control plane API calls to API Management with version '2021-08-01' or newer.</p>
 <h2 id="examples">Examples<a class="headerlink" href="#examples" title="Permanent link">#</a></h2>
 <h3 id="configure-with-azure-template">Configure with Azure template<a class="headerlink" href="#configure-with-azure-template" title="Permanent link">#</a></h3>
-<p>To deploy API Management instances that pass this rule:</p>
+<p>To deploy API Management services that pass this rule:</p>
 <ul>
 <li>Set the <code>apiVersion</code> property to <code>'2021-08-01'</code> or newer.</li>
 <li>Set the <code>properties.apiVersionConstraint.minApiVersion</code> property to <code>'2021-08-01'</code> or newer.</li>
 </ul>
 <p>For example:</p>
 <div class="highlight"><span class="filename">Azure Template snippet</span><pre><span></span><code><span class="p">{</span>
-<span class="w">  </span><span class="nt">&quot;type&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Microsoft.ApiManagement/service&quot;</span><span class="p">,</span>
-<span class="w">  </span><span class="nt">&quot;apiVersion&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;2021-12-01-preview&quot;</span><span class="p">,</span>
-<span class="w">  </span><span class="nt">&quot;name&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;[parameters(&#39;apiManagementServiceName&#39;)]&quot;</span><span class="p">,</span>
-<span class="w">  </span><span class="nt">&quot;location&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;[parameters(&#39;location&#39;)]&quot;</span><span class="p">,</span>
-<span class="w">  </span><span class="nt">&quot;sku&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
-<span class="w">    </span><span class="nt">&quot;name&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;[parameters(&#39;sku&#39;)]&quot;</span><span class="p">,</span>
-<span class="w">    </span><span class="nt">&quot;capacity&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;[parameters(&#39;skuCount&#39;)]&quot;</span>
-<span class="w">  </span><span class="p">},</span>
-<span class="w">  </span><span class="nt">&quot;properties&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
-<span class="w">    </span><span class="nt">&quot;apiVersionConstraint&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
-<span class="w">      </span><span class="nt">&quot;minApiVersion&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;2021-08-01&quot;</span>
+<span class="w">    </span><span class="nt">&quot;type&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Microsoft.ApiManagement/service&quot;</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">&quot;apiVersion&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;2021-08-01&quot;</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">&quot;name&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;[parameters(&#39;name&#39;)]&quot;</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">&quot;location&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;[parameters(&#39;location&#39;)]&quot;</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">&quot;sku&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="nt">&quot;name&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Premium&quot;</span><span class="p">,</span>
+<span class="w">        </span><span class="nt">&quot;capacity&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span>
+<span class="w">    </span><span class="p">},</span>
+<span class="w">    </span><span class="nt">&quot;identity&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="nt">&quot;type&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;SystemAssigned&quot;</span>
+<span class="w">    </span><span class="p">},</span>
+<span class="w">    </span><span class="nt">&quot;properties&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="nt">&quot;publisherEmail&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;[parameters(&#39;publisherEmail&#39;)]&quot;</span><span class="p">,</span>
+<span class="w">        </span><span class="nt">&quot;publisherName&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;[parameters(&#39;publisherName&#39;)]&quot;</span><span class="p">,</span>
+<span class="w">        </span><span class="nt">&quot;customProperties&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">            </span><span class="nt">&quot;Microsoft.WindowsAzure.ApiManagement.Gateway.Security.Protocols.Tls10&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;False&quot;</span><span class="p">,</span>
+<span class="w">            </span><span class="nt">&quot;Microsoft.WindowsAzure.ApiManagement.Gateway.Security.Protocols.Tls11&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;False&quot;</span><span class="p">,</span>
+<span class="w">            </span><span class="nt">&quot;Microsoft.WindowsAzure.ApiManagement.Gateway.Security.Protocols.Ssl30&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;False&quot;</span><span class="p">,</span>
+<span class="w">            </span><span class="nt">&quot;Microsoft.WindowsAzure.ApiManagement.Gateway.Security.Backend.Protocols.Tls10&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;False&quot;</span><span class="p">,</span>
+<span class="w">            </span><span class="nt">&quot;Microsoft.WindowsAzure.ApiManagement.Gateway.Security.Backend.Protocols.Tls11&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;False&quot;</span><span class="p">,</span>
+<span class="w">            </span><span class="nt">&quot;Microsoft.WindowsAzure.ApiManagement.Gateway.Security.Backend.Protocols.Ssl30&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;False&quot;</span><span class="p">,</span>
+<span class="w">            </span><span class="nt">&quot;Microsoft.WindowsAzure.ApiManagement.Gateway.Protocols.Server.Http2&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;True&quot;</span><span class="p">,</span>
+<span class="w">            </span><span class="nt">&quot;Microsoft.WindowsAzure.ApiManagement.Gateway.Security.Ciphers.TripleDes168&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;False&quot;</span><span class="p">,</span>
+<span class="w">            </span><span class="nt">&quot;Microsoft.WindowsAzure.ApiManagement.Gateway.Security.Ciphers.TLS_RSA_WITH_AES_128_CBC_SHA&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;False&quot;</span><span class="p">,</span>
+<span class="w">            </span><span class="nt">&quot;Microsoft.WindowsAzure.ApiManagement.Gateway.Security.Ciphers.TLS_RSA_WITH_AES_256_CBC_SHA&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;False&quot;</span><span class="p">,</span>
+<span class="w">            </span><span class="nt">&quot;Microsoft.WindowsAzure.ApiManagement.Gateway.Security.Ciphers.TLS_RSA_WITH_AES_128_CBC_SHA256&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;False&quot;</span><span class="p">,</span>
+<span class="w">            </span><span class="nt">&quot;Microsoft.WindowsAzure.ApiManagement.Gateway.Security.Ciphers.TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;False&quot;</span><span class="p">,</span>
+<span class="w">            </span><span class="nt">&quot;Microsoft.WindowsAzure.ApiManagement.Gateway.Security.Ciphers.TLS_RSA_WITH_AES_256_CBC_SHA256&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;False&quot;</span><span class="p">,</span>
+<span class="w">            </span><span class="nt">&quot;Microsoft.WindowsAzure.ApiManagement.Gateway.Security.Ciphers.TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;False&quot;</span><span class="p">,</span>
+<span class="w">            </span><span class="nt">&quot;Microsoft.WindowsAzure.ApiManagement.Gateway.Security.Ciphers.TLS_RSA_WITH_AES_128_GCM_SHA256&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;False&quot;</span>
+<span class="w">        </span><span class="p">},</span>
+<span class="w">        </span><span class="nt">&quot;apiVersionConstraint&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">            </span><span class="nt">&quot;minApiVersion&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;2021-08-01&quot;</span>
+<span class="w">        </span><span class="p">}</span>
 <span class="w">    </span><span class="p">}</span>
-<span class="w">  </span><span class="p">}</span>
 <span class="p">}</span>
 </code></pre></div>
 <h3 id="configure-with-bicep">Configure with Bicep<a class="headerlink" href="#configure-with-bicep" title="Permanent link">#</a></h3>
-<p>To deploy API Management instances that pass this rule:</p>
+<p>To deploy API Management services that pass this rule:</p>
 <ul>
-<li>Set the <code>apiVersion</code> property to <code>'2021-08-01'</code> or newer.</li>
+<li>Use the API Version <code>Microsoft.ApiManagement/service@2021-08-01</code> or newer.</li>
 <li>Set the <code>properties.apiVersionConstraint.minApiVersion</code> property to <code>'2021-08-01'</code> or newer.</li>
 </ul>
 <p>For example:</p>
-<div class="highlight"><span class="filename">Azure Bicep snippet</span><pre><span></span><code>resource apiManagementService &#39;Microsoft.ApiManagement/service@2021-12-01-preview&#39; = {
-  name: apiManagementServiceName
+<div class="highlight"><span class="filename">Azure Bicep snippet</span><pre><span></span><code>resource service &#39;Microsoft.ApiManagement/service@2021-08-01&#39; = {
+  name: name
   location: location
   sku: {
-    name: sku
-    capacity: skuCount
+    name: &#39;Premium&#39;
+    capacity: 1
+  }
+  identity: {
+    type: &#39;SystemAssigned&#39;
   }
   properties: {
+    publisherEmail: publisherEmail
+    publisherName: publisherName
+    customProperties: {
+      &#39;Microsoft.WindowsAzure.ApiManagement.Gateway.Security.Protocols.Tls10&#39;: &#39;False&#39;
+      &#39;Microsoft.WindowsAzure.ApiManagement.Gateway.Security.Protocols.Tls11&#39;: &#39;False&#39;
+      &#39;Microsoft.WindowsAzure.ApiManagement.Gateway.Security.Protocols.Ssl30&#39;: &#39;False&#39;
+      &#39;Microsoft.WindowsAzure.ApiManagement.Gateway.Security.Backend.Protocols.Tls10&#39;: &#39;False&#39;
+      &#39;Microsoft.WindowsAzure.ApiManagement.Gateway.Security.Backend.Protocols.Tls11&#39;: &#39;False&#39;
+      &#39;Microsoft.WindowsAzure.ApiManagement.Gateway.Security.Backend.Protocols.Ssl30&#39;: &#39;False&#39;
+      &#39;Microsoft.WindowsAzure.ApiManagement.Gateway.Protocols.Server.Http2&#39;: &#39;True&#39;
+      &#39;Microsoft.WindowsAzure.ApiManagement.Gateway.Security.Ciphers.TripleDes168&#39;: &#39;False&#39;
+      &#39;Microsoft.WindowsAzure.ApiManagement.Gateway.Security.Ciphers.TLS_RSA_WITH_AES_128_CBC_SHA&#39;: &#39;False&#39;
+      &#39;Microsoft.WindowsAzure.ApiManagement.Gateway.Security.Ciphers.TLS_RSA_WITH_AES_256_CBC_SHA&#39;: &#39;False&#39;
+      &#39;Microsoft.WindowsAzure.ApiManagement.Gateway.Security.Ciphers.TLS_RSA_WITH_AES_128_CBC_SHA256&#39;: &#39;False&#39;
+      &#39;Microsoft.WindowsAzure.ApiManagement.Gateway.Security.Ciphers.TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA&#39;: &#39;False&#39;
+      &#39;Microsoft.WindowsAzure.ApiManagement.Gateway.Security.Ciphers.TLS_RSA_WITH_AES_256_CBC_SHA256&#39;: &#39;False&#39;
+      &#39;Microsoft.WindowsAzure.ApiManagement.Gateway.Security.Ciphers.TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA&#39;: &#39;False&#39;
+      &#39;Microsoft.WindowsAzure.ApiManagement.Gateway.Security.Ciphers.TLS_RSA_WITH_AES_128_GCM_SHA256&#39;: &#39;False&#39;
+    }
     apiVersionConstraint: {
       minApiVersion: &#39;2021-08-01&#39;
     }
@@ -8045,9 +8108,9 @@
 </code></pre></div>
 <h2 id="links">Links<a class="headerlink" href="#links" title="Permanent link">#</a></h2>
 <ul>
-<li><a href="https://learn.microsoft.com/azure/architecture/framework/devops/automation-infrastructure">Infrastructure provisioning</a></li>
+<li><a href="https://learn.microsoft.com/azure/architecture/framework/devops/automation-infrastructure">Repeatable Infrastructure</a></li>
 <li><a href="https://learn.microsoft.com/azure/api-management/breaking-changes/api-version-retirement-sep-2023">Azure API Management API version retirements</a></li>
-<li><a href="https://learn.microsoft.com/azure/api-management/soft-delete">Azure API Management soft-delete REST API versions behaviour</a></li>
+<li><a href="https://learn.microsoft.com/azure/api-management/soft-delete">Azure API Management soft-delete API versions</a></li>
 <li><a href="https://learn.microsoft.com/azure/templates/microsoft.apimanagement/service">Azure deployment reference</a></li>
 </ul>
 
@@ -8059,7 +8122,7 @@
   <small>
     
       Last update:
-      2022-12-03
+      2023-03-07
     
   </small>
 </div>
@@ -8177,7 +8240,7 @@
     <script id="__config" type="application/json">{"base": "../../..", "features": ["navigation.instant", "navigation.indexes", {"navigation.sections": {"level": 1}}, "navigation.tabs", "content.code.annotate", "content.tabs.link", "content.code.copy"], "search": "../../../assets/javascripts/workers/search.208ed371.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": {"provider": "mike"}}</script>
     
     
-      <script src="../../../assets/javascripts/bundle.2a6f1dda.min.js"></script>
+      <script src="../../../assets/javascripts/bundle.b78d2936.min.js"></script>
       
     
   </body>

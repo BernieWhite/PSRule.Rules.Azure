@@ -4,8 +4,8 @@
   "metadata": {
     "_generator": {
       "name": "bicep",
-      "version": "0.9.1.41621",
-      "templateHash": "12511286077090340745"
+      "version": "0.14.85.62628",
+      "templateHash": "15764725433071649409"
     }
   },
   "parameters": {
@@ -70,7 +70,13 @@
           "Microsoft.WindowsAzure.ApiManagement.Gateway.Security.Ciphers.TLS_RSA_WITH_AES_256_CBC_SHA256": "False",
           "Microsoft.WindowsAzure.ApiManagement.Gateway.Security.Ciphers.TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA": "False",
           "Microsoft.WindowsAzure.ApiManagement.Gateway.Security.Ciphers.TLS_RSA_WITH_AES_128_GCM_SHA256": "False"
+        },
+        "apiVersionConstraint": {
+          "minApiVersion": "2021-08-01"
         }
+      },
+      "metadata": {
+        "description": "An example API Management service."
       }
     },
     {
@@ -85,7 +91,10 @@
       },
       "dependsOn": [
         "[resourceId('Microsoft.ApiManagement/service', parameters('name'))]"
-      ]
+      ],
+      "metadata": {
+        "description": "An example product."
+      }
     },
     {
       "type": "Microsoft.ApiManagement/service/apiVersionSets",
@@ -98,7 +107,10 @@
       },
       "dependsOn": [
         "[resourceId('Microsoft.ApiManagement/service', parameters('name'))]"
-      ]
+      ],
+      "metadata": {
+        "description": "An example API Version."
+      }
     },
     {
       "type": "Microsoft.ApiManagement/service/apis",
@@ -107,6 +119,7 @@
       "properties": {
         "displayName": "Echo API",
         "description": "An echo API service.",
+        "type": "http",
         "path": "echo",
         "serviceUrl": "https://echo.contoso.com",
         "protocols": [
@@ -119,7 +132,10 @@
       "dependsOn": [
         "[resourceId('Microsoft.ApiManagement/service', parameters('name'))]",
         "[resourceId('Microsoft.ApiManagement/service/apiVersionSets', parameters('name'), 'echo')]"
-      ]
+      ],
+      "metadata": {
+        "description": "An example API."
+      }
     },
     {
       "type": "Microsoft.ApiManagement/service/backends",
@@ -133,7 +149,10 @@
       },
       "dependsOn": [
         "[resourceId('Microsoft.ApiManagement/service', parameters('name'))]"
-      ]
+      ],
+      "metadata": {
+        "description": "An example API backend."
+      }
     }
   ]
 }

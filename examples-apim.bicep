@@ -15,7 +15,7 @@ param publisherEmail string = 'noreply@contoso.com'
 @description('The display name of the publisher.')
 param publisherName string = 'Contoso'
 
-// An example API Management service
+@description('An example API Management service.')
 resource service 'Microsoft.ApiManagement/service@2021-08-01' = {
   name: name
   location: location
@@ -46,10 +46,13 @@ resource service 'Microsoft.ApiManagement/service@2021-08-01' = {
       'Microsoft.WindowsAzure.ApiManagement.Gateway.Security.Ciphers.TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA': 'False'
       'Microsoft.WindowsAzure.ApiManagement.Gateway.Security.Ciphers.TLS_RSA_WITH_AES_128_GCM_SHA256': 'False'
     }
+    apiVersionConstraint: {
+      minApiVersion: '2021-08-01'
+    }
   }
 }
 
-// An example product
+@description('An example product.')
 resource product 'Microsoft.ApiManagement/service/products@2021-08-01' = {
   parent: service
   name: 'echo'
@@ -61,7 +64,7 @@ resource product 'Microsoft.ApiManagement/service/products@2021-08-01' = {
   }
 }
 
-// An example API Version
+@description('An example API Version.')
 resource version 'Microsoft.ApiManagement/service/apiVersionSets@2021-08-01' = {
   parent: service
   name: 'echo'
@@ -72,13 +75,14 @@ resource version 'Microsoft.ApiManagement/service/apiVersionSets@2021-08-01' = {
   }
 }
 
-// An example API
+@description('An example API.')
 resource api 'Microsoft.ApiManagement/service/apis@2021-08-01' = {
   parent: service
   name: 'echo-v1'
   properties: {
     displayName: 'Echo API'
     description: 'An echo API service.'
+    type: 'http'
     path: 'echo'
     serviceUrl: 'https://echo.contoso.com'
     protocols: [
@@ -90,7 +94,7 @@ resource api 'Microsoft.ApiManagement/service/apis@2021-08-01' = {
   }
 }
 
-// An example API backend
+@description('An example API backend.')
 resource backend 'Microsoft.ApiManagement/service/backends@2021-08-01' = {
   parent: service
   name: 'echo'

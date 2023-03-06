@@ -6,7 +6,7 @@
       <meta charset="utf-8">
       <meta name="viewport" content="width=device-width,initial-scale=1">
       
-        <meta name="description" content="API Management should not accept weak or deprecated ciphers.">
+        <meta name="description" content="API Management should not accept weak or deprecated ciphers for client or backend communication.">
       
       
         <meta name="author" content="Microsoft">
@@ -17,7 +17,7 @@
       
       
       <link rel="icon" href="../../../assets/ms_icon.png">
-      <meta name="generator" content="mkdocs-1.4.2, mkdocs-material-9.0.15">
+      <meta name="generator" content="mkdocs-1.4.2, mkdocs-material-9.1.1">
     
     
       
@@ -25,7 +25,7 @@
       
     
     
-      <link rel="stylesheet" href="../../../assets/stylesheets/main.113286f1.min.css">
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.402914a4.min.css">
       
         
         <link rel="stylesheet" href="../../../assets/stylesheets/palette.a0c5b2b5.min.css">
@@ -80,19 +80,19 @@
   <meta property="og:site_name" content="PSRule for Azure" />
   <meta property="og:type" content="article" />
   <meta property="og:title" content="PSRule for Azure - Azure.APIM.Ciphers" />
-  <meta property="og:description" content="API Management should not accept weak or deprecated ciphers." />
+  <meta property="og:description" content="API Management should not accept weak or deprecated ciphers for client or backend communication." />
   <meta property="og:url" content="https://azure.github.io/PSRule.Rules.Azure/en/rules/Azure.APIM.Ciphers/" />
   <meta property="og:image" content="https://repository-images.githubusercontent.com/184154668/58818c00-d496-11eb-9b77-016145022654" />
   <meta property="og:image:type" content="image/png" />
   <meta property="og:image:width" content="1280" />
   <meta property="og:image:height" content="640" />
-  <meta property="og:image:alt" content="API Management should not accept weak or deprecated ciphers." />
+  <meta property="og:image:alt" content="API Management should not accept weak or deprecated ciphers for client or backend communication." />
 
   <!-- Twitter meta tags -->
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:site" content="@github" />
   <meta name="twitter:title" content="PSRule for Azure - Azure.APIM.Ciphers" />
-  <meta name="twitter:description" content="API Management should not accept weak or deprecated ciphers." />
+  <meta name="twitter:description" content="API Management should not accept weak or deprecated ciphers for client or backend communication." />
   <meta name="twitter:image" content="https://repository-images.githubusercontent.com/184154668/58818c00-d496-11eb-9b77-016145022654" />
 
 
@@ -114,7 +114,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#use-secure-protocols" class="md-skip">
+        <a href="#use-secure-ciphers-for-api-management" class="md-skip">
           Skip to content
         </a>
       
@@ -2086,6 +2086,8 @@
         
           
         
+          
+        
       
       
         <label class="md-nav__link" for="__nav_4_5" id="__nav_4_5_label" tabindex="0">
@@ -2808,6 +2810,33 @@
   <a href="#recommendation" class="md-nav__link">
     Recommendation
   </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#examples" class="md-nav__link">
+    Examples
+  </a>
+  
+    <nav class="md-nav" aria-label="Examples">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#configure-with-azure-template" class="md-nav__link">
+    Configure with Azure template
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#configure-with-bicep" class="md-nav__link">
+    Configure with Bicep
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -4403,6 +4432,20 @@
     <li class="md-nav__item">
       <a href="../Azure.KeyVault.AutoRotationPolicy/" class="md-nav__link">
         Azure.KeyVault.AutoRotationPolicy
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Azure.KeyVault.Firewall/" class="md-nav__link">
+        Azure.KeyVault.Firewall
       </a>
     </li>
   
@@ -7862,6 +7905,33 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#examples" class="md-nav__link">
+    Examples
+  </a>
+  
+    <nav class="md-nav" aria-label="Examples">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#configure-with-azure-template" class="md-nav__link">
+    Configure with Azure template
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#configure-with-bicep" class="md-nav__link">
+    Configure with Bicep
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#links" class="md-nav__link">
     Links
   </a>
@@ -7902,23 +7972,143 @@
   
 
   <!-- Markdown content -->
-  <h1 id="use-secure-protocols">Use secure protocols<a class="headerlink" href="#use-secure-protocols" title="Permanent link">#</a></h1>
+  <h1 id="use-secure-ciphers-for-api-management">Use secure ciphers for API Management<a class="headerlink" href="#use-secure-ciphers-for-api-management" title="Permanent link">#</a></h1>
 <nav class="md-tags"><span class="md-tag">Azure.APIM.Ciphers</span><span class="md-tag">AZR-000055</span><span class="md-tag">Error</span></nav>
 <p><a href="../module/#security"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M1.527 13.237a1.75 1.75 0 0 1 0-2.474l9.272-9.273a1.75 1.75 0 0 1 2.475 0l9.272 9.273a1.75 1.75 0 0 1 0 2.474l-9.272 9.272a1.75 1.75 0 0 1-2.475 0Zm1.06-1.414a.25.25 0 0 0 0 .354l9.273 9.272a.25.25 0 0 0 .353 0l9.272-9.272a.25.25 0 0 0 0-.354l-9.272-9.272a.25.25 0 0 0-.353 0Z"/></svg></span> Security</a>
  · <a href="../resource/#api-management"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13.152.682a2.251 2.251 0 0 1 2.269 0l.007.004 6.957 4.276a2.277 2.277 0 0 1 1.126 1.964v7.516c0 .81-.432 1.56-1.133 1.968l-.002.001-11.964 7.037-.004.003c-.706.41-1.578.41-2.284 0l-.026-.015-6.503-4.502a2.268 2.268 0 0 1-1.096-1.943V9.438c0-.392.1-.77.284-1.1l.003-.006.014-.026c.197-.342.48-.627.82-.827h.002L13.152.681Zm.757 1.295h-.001L2.648 8.616l6.248 4.247a.775.775 0 0 0 .758-.01h.001l11.633-6.804-6.629-4.074a.75.75 0 0 0-.75.003ZM8.517 14.33a2.286 2.286 0 0 1-.393-.18l-.023-.014-6.102-4.147v7.003c0 .275.145.528.379.664l.025.014 6.114 4.232V14.33ZM18 9.709l-3.25 1.9v7.548L18 17.245Zm-7.59 4.438-.002.002a2.296 2.296 0 0 1-.391.18v7.612l3.233-1.902v-7.552Zm9.09-5.316v7.532l2.124-1.25a.776.776 0 0 0 .387-.671V7.363Z"/></svg></span> API Management</a>
  · <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M7.75 6.5a1.25 1.25 0 1 0 0 2.5 1.25 1.25 0 0 0 0-2.5Z"/><path d="M2.5 1h8.44a1.5 1.5 0 0 1 1.06.44l10.25 10.25a1.5 1.5 0 0 1 0 2.12l-8.44 8.44a1.5 1.5 0 0 1-2.12 0L1.44 12A1.497 1.497 0 0 1 1 10.94V2.5A1.5 1.5 0 0 1 2.5 1Zm0 1.5v8.44l10.25 10.25 8.44-8.44L10.94 2.5Z"/></svg></span> 2022_03</p>
-<p>API Management should not accept weak or deprecated ciphers.</p>
+<p>API Management should not accept weak or deprecated ciphers for client or backend communication.</p>
 <h2 id="description">Description<a class="headerlink" href="#description" title="Permanent link">#</a></h2>
 <p>API Management provides support for weak or deprecated ciphers.
-These older versions are provided for compatibility but are not consider secure.
-These Ciphers are enabled by default and need to be set to False.</p>
+These older versions are provided for compatibility with clients and backends but are not consider secure.
+These many of these ciphers are enabled by default and need to be set to <code>'False'</code>.</p>
+<p>The following ciphers are considered weak or deprecated:</p>
+<ul>
+<li><code>TripleDes168</code></li>
+<li><code>TLS_RSA_WITH_AES_128_CBC_SHA</code></li>
+<li><code>TLS_RSA_WITH_AES_256_CBC_SHA</code></li>
+<li><code>TLS_RSA_WITH_AES_128_CBC_SHA256</code></li>
+<li><code>TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA</code></li>
+<li><code>TLS_RSA_WITH_AES_256_CBC_SHA256</code></li>
+<li><code>TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA</code></li>
+<li><code>TLS_RSA_WITH_AES_128_GCM_SHA256</code></li>
+</ul>
 <h2 id="recommendation">Recommendation<a class="headerlink" href="#recommendation" title="Permanent link">#</a></h2>
-<p>Consider disabling weak or deprecated ciphers.</p>
+<p>Consider disabling weak or deprecated ciphers from API Management Services.
+Also consider disabling weak or deprecated protocols.</p>
+<h2 id="examples">Examples<a class="headerlink" href="#examples" title="Permanent link">#</a></h2>
+<h3 id="configure-with-azure-template">Configure with Azure template<a class="headerlink" href="#configure-with-azure-template" title="Permanent link">#</a></h3>
+<p>To deploy API Management Services that pass this rule:</p>
+<ul>
+<li>Set the following keys to <code>"False"</code> <em>(as a string)</em> within the <code>properties.customProperties</code> property:<ul>
+<li><code>Microsoft.WindowsAzure.ApiManagement.Gateway.Security.Ciphers.TripleDes168</code></li>
+<li><code>Microsoft.WindowsAzure.ApiManagement.Gateway.Security.Ciphers.TLS_RSA_WITH_AES_128_CBC_SHA</code></li>
+<li><code>Microsoft.WindowsAzure.ApiManagement.Gateway.Security.Ciphers.TLS_RSA_WITH_AES_256_CBC_SHA</code></li>
+<li><code>Microsoft.WindowsAzure.ApiManagement.Gateway.Security.Ciphers.TLS_RSA_WITH_AES_128_CBC_SHA256</code></li>
+<li><code>Microsoft.WindowsAzure.ApiManagement.Gateway.Security.Ciphers.TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA</code></li>
+<li><code>Microsoft.WindowsAzure.ApiManagement.Gateway.Security.Ciphers.TLS_RSA_WITH_AES_256_CBC_SHA256</code></li>
+<li><code>Microsoft.WindowsAzure.ApiManagement.Gateway.Security.Ciphers.TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA</code></li>
+<li><code>Microsoft.WindowsAzure.ApiManagement.Gateway.Security.Ciphers.TLS_RSA_WITH_AES_128_GCM_SHA256</code></li>
+</ul>
+</li>
+</ul>
+<p>For example:</p>
+<div class="highlight"><span class="filename">Azure Template snippet</span><pre><span></span><code><span class="p">{</span>
+<span class="w">    </span><span class="nt">&quot;type&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Microsoft.ApiManagement/service&quot;</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">&quot;apiVersion&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;2021-08-01&quot;</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">&quot;name&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;[parameters(&#39;name&#39;)]&quot;</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">&quot;location&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;[parameters(&#39;location&#39;)]&quot;</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">&quot;sku&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="nt">&quot;name&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Premium&quot;</span><span class="p">,</span>
+<span class="w">        </span><span class="nt">&quot;capacity&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span>
+<span class="w">    </span><span class="p">},</span>
+<span class="w">    </span><span class="nt">&quot;identity&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="nt">&quot;type&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;SystemAssigned&quot;</span>
+<span class="w">    </span><span class="p">},</span>
+<span class="w">    </span><span class="nt">&quot;properties&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="nt">&quot;publisherEmail&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;[parameters(&#39;publisherEmail&#39;)]&quot;</span><span class="p">,</span>
+<span class="w">        </span><span class="nt">&quot;publisherName&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;[parameters(&#39;publisherName&#39;)]&quot;</span><span class="p">,</span>
+<span class="w">        </span><span class="nt">&quot;customProperties&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">            </span><span class="nt">&quot;Microsoft.WindowsAzure.ApiManagement.Gateway.Security.Protocols.Tls10&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;False&quot;</span><span class="p">,</span>
+<span class="w">            </span><span class="nt">&quot;Microsoft.WindowsAzure.ApiManagement.Gateway.Security.Protocols.Tls11&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;False&quot;</span><span class="p">,</span>
+<span class="w">            </span><span class="nt">&quot;Microsoft.WindowsAzure.ApiManagement.Gateway.Security.Protocols.Ssl30&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;False&quot;</span><span class="p">,</span>
+<span class="w">            </span><span class="nt">&quot;Microsoft.WindowsAzure.ApiManagement.Gateway.Security.Backend.Protocols.Tls10&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;False&quot;</span><span class="p">,</span>
+<span class="w">            </span><span class="nt">&quot;Microsoft.WindowsAzure.ApiManagement.Gateway.Security.Backend.Protocols.Tls11&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;False&quot;</span><span class="p">,</span>
+<span class="w">            </span><span class="nt">&quot;Microsoft.WindowsAzure.ApiManagement.Gateway.Security.Backend.Protocols.Ssl30&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;False&quot;</span><span class="p">,</span>
+<span class="w">            </span><span class="nt">&quot;Microsoft.WindowsAzure.ApiManagement.Gateway.Protocols.Server.Http2&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;True&quot;</span><span class="p">,</span>
+<span class="w">            </span><span class="nt">&quot;Microsoft.WindowsAzure.ApiManagement.Gateway.Security.Ciphers.TripleDes168&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;False&quot;</span><span class="p">,</span>
+<span class="w">            </span><span class="nt">&quot;Microsoft.WindowsAzure.ApiManagement.Gateway.Security.Ciphers.TLS_RSA_WITH_AES_128_CBC_SHA&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;False&quot;</span><span class="p">,</span>
+<span class="w">            </span><span class="nt">&quot;Microsoft.WindowsAzure.ApiManagement.Gateway.Security.Ciphers.TLS_RSA_WITH_AES_256_CBC_SHA&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;False&quot;</span><span class="p">,</span>
+<span class="w">            </span><span class="nt">&quot;Microsoft.WindowsAzure.ApiManagement.Gateway.Security.Ciphers.TLS_RSA_WITH_AES_128_CBC_SHA256&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;False&quot;</span><span class="p">,</span>
+<span class="w">            </span><span class="nt">&quot;Microsoft.WindowsAzure.ApiManagement.Gateway.Security.Ciphers.TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;False&quot;</span><span class="p">,</span>
+<span class="w">            </span><span class="nt">&quot;Microsoft.WindowsAzure.ApiManagement.Gateway.Security.Ciphers.TLS_RSA_WITH_AES_256_CBC_SHA256&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;False&quot;</span><span class="p">,</span>
+<span class="w">            </span><span class="nt">&quot;Microsoft.WindowsAzure.ApiManagement.Gateway.Security.Ciphers.TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;False&quot;</span><span class="p">,</span>
+<span class="w">            </span><span class="nt">&quot;Microsoft.WindowsAzure.ApiManagement.Gateway.Security.Ciphers.TLS_RSA_WITH_AES_128_GCM_SHA256&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;False&quot;</span>
+<span class="w">        </span><span class="p">},</span>
+<span class="w">        </span><span class="nt">&quot;apiVersionConstraint&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">            </span><span class="nt">&quot;minApiVersion&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;2021-08-01&quot;</span>
+<span class="w">        </span><span class="p">}</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div>
+<h3 id="configure-with-bicep">Configure with Bicep<a class="headerlink" href="#configure-with-bicep" title="Permanent link">#</a></h3>
+<p>To deploy API Management Services that pass this rule:</p>
+<ul>
+<li>Set the following keys to <code>'False'</code> <em>(as a string)</em> within the <code>properties.customProperties</code> property:<ul>
+<li><code>Microsoft.WindowsAzure.ApiManagement.Gateway.Security.Ciphers.TripleDes168</code></li>
+<li><code>Microsoft.WindowsAzure.ApiManagement.Gateway.Security.Ciphers.TLS_RSA_WITH_AES_128_CBC_SHA</code></li>
+<li><code>Microsoft.WindowsAzure.ApiManagement.Gateway.Security.Ciphers.TLS_RSA_WITH_AES_256_CBC_SHA</code></li>
+<li><code>Microsoft.WindowsAzure.ApiManagement.Gateway.Security.Ciphers.TLS_RSA_WITH_AES_128_CBC_SHA256</code></li>
+<li><code>Microsoft.WindowsAzure.ApiManagement.Gateway.Security.Ciphers.TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA</code></li>
+<li><code>Microsoft.WindowsAzure.ApiManagement.Gateway.Security.Ciphers.TLS_RSA_WITH_AES_256_CBC_SHA256</code></li>
+<li><code>Microsoft.WindowsAzure.ApiManagement.Gateway.Security.Ciphers.TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA</code></li>
+<li><code>Microsoft.WindowsAzure.ApiManagement.Gateway.Security.Ciphers.TLS_RSA_WITH_AES_128_GCM_SHA256</code></li>
+</ul>
+</li>
+</ul>
+<p>For example:</p>
+<div class="highlight"><span class="filename">Azure Bicep snippet</span><pre><span></span><code>resource service &#39;Microsoft.ApiManagement/service@2021-08-01&#39; = {
+  name: name
+  location: location
+  sku: {
+    name: &#39;Premium&#39;
+    capacity: 1
+  }
+  identity: {
+    type: &#39;SystemAssigned&#39;
+  }
+  properties: {
+    publisherEmail: publisherEmail
+    publisherName: publisherName
+    customProperties: {
+      &#39;Microsoft.WindowsAzure.ApiManagement.Gateway.Security.Protocols.Tls10&#39;: &#39;False&#39;
+      &#39;Microsoft.WindowsAzure.ApiManagement.Gateway.Security.Protocols.Tls11&#39;: &#39;False&#39;
+      &#39;Microsoft.WindowsAzure.ApiManagement.Gateway.Security.Protocols.Ssl30&#39;: &#39;False&#39;
+      &#39;Microsoft.WindowsAzure.ApiManagement.Gateway.Security.Backend.Protocols.Tls10&#39;: &#39;False&#39;
+      &#39;Microsoft.WindowsAzure.ApiManagement.Gateway.Security.Backend.Protocols.Tls11&#39;: &#39;False&#39;
+      &#39;Microsoft.WindowsAzure.ApiManagement.Gateway.Security.Backend.Protocols.Ssl30&#39;: &#39;False&#39;
+      &#39;Microsoft.WindowsAzure.ApiManagement.Gateway.Protocols.Server.Http2&#39;: &#39;True&#39;
+      &#39;Microsoft.WindowsAzure.ApiManagement.Gateway.Security.Ciphers.TripleDes168&#39;: &#39;False&#39;
+      &#39;Microsoft.WindowsAzure.ApiManagement.Gateway.Security.Ciphers.TLS_RSA_WITH_AES_128_CBC_SHA&#39;: &#39;False&#39;
+      &#39;Microsoft.WindowsAzure.ApiManagement.Gateway.Security.Ciphers.TLS_RSA_WITH_AES_256_CBC_SHA&#39;: &#39;False&#39;
+      &#39;Microsoft.WindowsAzure.ApiManagement.Gateway.Security.Ciphers.TLS_RSA_WITH_AES_128_CBC_SHA256&#39;: &#39;False&#39;
+      &#39;Microsoft.WindowsAzure.ApiManagement.Gateway.Security.Ciphers.TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA&#39;: &#39;False&#39;
+      &#39;Microsoft.WindowsAzure.ApiManagement.Gateway.Security.Ciphers.TLS_RSA_WITH_AES_256_CBC_SHA256&#39;: &#39;False&#39;
+      &#39;Microsoft.WindowsAzure.ApiManagement.Gateway.Security.Ciphers.TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA&#39;: &#39;False&#39;
+      &#39;Microsoft.WindowsAzure.ApiManagement.Gateway.Security.Ciphers.TLS_RSA_WITH_AES_128_GCM_SHA256&#39;: &#39;False&#39;
+    }
+    apiVersionConstraint: {
+      minApiVersion: &#39;2021-08-01&#39;
+    }
+  }
+}
+</code></pre></div>
 <h2 id="links">Links<a class="headerlink" href="#links" title="Permanent link">#</a></h2>
 <ul>
 <li><a href="https://learn.microsoft.com/azure/architecture/framework/security/design-storage-encryption#data-in-transit">Data encryption in Azure</a></li>
-<li><a href="https://docs.microsoft.com/azure/api-management/api-management-howto-manage-protocols-ciphers">Manage protocols and ciphers in Azure API Management</a></li>
-<li><a href="https://docs.microsoft.com/security/sdl/cryptographic-recommendations">Cryptographic Recommendations</a></li>
+<li><a href="https://learn.microsoft.com/azure/api-management/api-management-howto-manage-protocols-ciphers">Manage protocols and ciphers in Azure API Management</a></li>
+<li><a href="https://learn.microsoft.com/security/sdl/cryptographic-recommendations">Cryptographic Recommendations</a></li>
+<li><a href="https://learn.microsoft.com/azure/templates/microsoft.apimanagement/service">Azure deployment reference</a></li>
 </ul>
 
   <!-- Last update of source file -->
@@ -7929,7 +8119,7 @@ These Ciphers are enabled by default and need to be set to False.</p>
   <small>
     
       Last update:
-      2022-10-17
+      2023-03-07
     
   </small>
 </div>
@@ -8047,7 +8237,7 @@ These Ciphers are enabled by default and need to be set to False.</p>
     <script id="__config" type="application/json">{"base": "../../..", "features": ["navigation.instant", "navigation.indexes", {"navigation.sections": {"level": 1}}, "navigation.tabs", "content.code.annotate", "content.tabs.link", "content.code.copy"], "search": "../../../assets/javascripts/workers/search.208ed371.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": {"provider": "mike"}}</script>
     
     
-      <script src="../../../assets/javascripts/bundle.2a6f1dda.min.js"></script>
+      <script src="../../../assets/javascripts/bundle.b78d2936.min.js"></script>
       
     
   </body>

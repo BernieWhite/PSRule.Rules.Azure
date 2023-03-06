@@ -17,7 +17,7 @@
       
       
       <link rel="icon" href="../../../assets/ms_icon.png">
-      <meta name="generator" content="mkdocs-1.4.2, mkdocs-material-9.0.15">
+      <meta name="generator" content="mkdocs-1.4.2, mkdocs-material-9.1.1">
     
     
       
@@ -25,7 +25,7 @@
       
     
     
-      <link rel="stylesheet" href="../../../assets/stylesheets/main.113286f1.min.css">
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.402914a4.min.css">
       
         
         <link rel="stylesheet" href="../../../assets/stylesheets/palette.a0c5b2b5.min.css">
@@ -1357,6 +1357,8 @@
       <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_5" checked>
       
       
+        
+          
         
           
         
@@ -4430,6 +4432,20 @@
     <li class="md-nav__item">
       <a href="../Azure.KeyVault.AutoRotationPolicy/" class="md-nav__link">
         Azure.KeyVault.AutoRotationPolicy
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Azure.KeyVault.Firewall/" class="md-nav__link">
+        Azure.KeyVault.Firewall
       </a>
     </li>
   
@@ -7970,7 +7986,7 @@ Use Key Vault to store certificates and secrets used within API Management.</p>
 Also consider using managed identities to authenticate to related Azure services.</p>
 <h2 id="examples">Examples<a class="headerlink" href="#examples" title="Permanent link">#</a></h2>
 <h3 id="configure-with-azure-template">Configure with Azure template<a class="headerlink" href="#configure-with-azure-template" title="Permanent link">#</a></h3>
-<p>To deploy App Services that pass this rule:</p>
+<p>To deploy API Management services that pass this rule:</p>
 <ul>
 <li>Set the <code>identity.type</code> to <code>SystemAssigned</code> or <code>UserAssigned</code>.</li>
 <li>If <code>identity.type</code> is <code>UserAssigned</code>, reference the identity with <code>identity.userAssignedIdentities</code>.</li>
@@ -8007,12 +8023,15 @@ Also consider using managed identities to authenticate to related Azure services
 <span class="w">            </span><span class="nt">&quot;Microsoft.WindowsAzure.ApiManagement.Gateway.Security.Ciphers.TLS_RSA_WITH_AES_256_CBC_SHA256&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;False&quot;</span><span class="p">,</span>
 <span class="w">            </span><span class="nt">&quot;Microsoft.WindowsAzure.ApiManagement.Gateway.Security.Ciphers.TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;False&quot;</span><span class="p">,</span>
 <span class="w">            </span><span class="nt">&quot;Microsoft.WindowsAzure.ApiManagement.Gateway.Security.Ciphers.TLS_RSA_WITH_AES_128_GCM_SHA256&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;False&quot;</span>
+<span class="w">        </span><span class="p">},</span>
+<span class="w">        </span><span class="nt">&quot;apiVersionConstraint&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">            </span><span class="nt">&quot;minApiVersion&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;2021-08-01&quot;</span>
 <span class="w">        </span><span class="p">}</span>
 <span class="w">    </span><span class="p">}</span>
 <span class="p">}</span>
 </code></pre></div>
 <h3 id="configure-with-bicep">Configure with Bicep<a class="headerlink" href="#configure-with-bicep" title="Permanent link">#</a></h3>
-<p>To deploy App Services that pass this rule:</p>
+<p>To deploy API Management services that pass this rule:</p>
 <ul>
 <li>Set the <code>identity.type</code> to <code>SystemAssigned</code> or <code>UserAssigned</code>.</li>
 <li>If <code>identity.type</code> is <code>UserAssigned</code>, reference the identity with <code>identity.userAssignedIdentities</code>.</li>
@@ -8048,15 +8067,18 @@ Also consider using managed identities to authenticate to related Azure services
       &#39;Microsoft.WindowsAzure.ApiManagement.Gateway.Security.Ciphers.TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA&#39;: &#39;False&#39;
       &#39;Microsoft.WindowsAzure.ApiManagement.Gateway.Security.Ciphers.TLS_RSA_WITH_AES_128_GCM_SHA256&#39;: &#39;False&#39;
     }
+    apiVersionConstraint: {
+      minApiVersion: &#39;2021-08-01&#39;
+    }
   }
 }
 </code></pre></div>
 <h2 id="links">Links<a class="headerlink" href="#links" title="Permanent link">#</a></h2>
 <ul>
 <li><a href="https://learn.microsoft.com/azure/architecture/framework/security/design-identity-authentication#use-identity-based-authentication">Use identity-based authentication</a></li>
-<li><a href="https://docs.microsoft.com/azure/api-management/api-management-howto-use-managed-service-identity">Use managed identities in Azure API Management</a></li>
-<li><a href="https://docs.microsoft.com/azure/api-management/api-management-authentication-policies#ManagedIdentity">Authenticate with managed identity</a></li>
-<li><a href="https://docs.microsoft.com/azure/templates/microsoft.apimanagement/service">Azure deployment reference</a></li>
+<li><a href="https://learn.microsoft.com/azure/api-management/api-management-howto-use-managed-service-identity">Use managed identities in Azure API Management</a></li>
+<li><a href="https://learn.microsoft.com/azure/api-management/api-management-policies#authentication-policies">Authenticate with managed identity</a></li>
+<li><a href="https://learn.microsoft.com/azure/templates/microsoft.apimanagement/service">Azure deployment reference</a></li>
 </ul>
 
   <!-- Last update of source file -->
@@ -8067,7 +8089,7 @@ Also consider using managed identities to authenticate to related Azure services
   <small>
     
       Last update:
-      2022-12-03
+      2023-03-07
     
   </small>
 </div>
@@ -8185,7 +8207,7 @@ Also consider using managed identities to authenticate to related Azure services
     <script id="__config" type="application/json">{"base": "../../..", "features": ["navigation.instant", "navigation.indexes", {"navigation.sections": {"level": 1}}, "navigation.tabs", "content.code.annotate", "content.tabs.link", "content.code.copy"], "search": "../../../assets/javascripts/workers/search.208ed371.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": {"provider": "mike"}}</script>
     
     
-      <script src="../../../assets/javascripts/bundle.2a6f1dda.min.js"></script>
+      <script src="../../../assets/javascripts/bundle.b78d2936.min.js"></script>
       
     
   </body>

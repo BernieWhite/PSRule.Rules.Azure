@@ -986,6 +986,11 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
+         <loc>https://azure.github.io/PSRule.Rules.Azure/en/rules/Azure.Deployment.Name/</loc>
+         <lastmod>2023-03-15</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
          <loc>https://azure.github.io/PSRule.Rules.Azure/en/rules/Azure.Deployment.OuterSecret/</loc>
          <lastmod>2023-03-15</lastmod>
          <changefreq>daily</changefreq>

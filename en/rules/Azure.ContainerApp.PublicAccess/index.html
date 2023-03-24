@@ -6,13 +6,13 @@
       <meta charset="utf-8">
       <meta name="viewport" content="width=device-width,initial-scale=1">
       
-        <meta name="description" content="Use Azure Monitor Agent as replacement for Log Analytics Agent.">
+        <meta name="description" content="Ensure public network access for Container Apps environment is disabled.">
       
       
         <meta name="author" content="Microsoft">
       
       
-        <link rel="canonical" href="https://azure.github.io/PSRule.Rules.Azure/en/rules/Azure.VMSS.MigrateAMA/">
+        <link rel="canonical" href="https://azure.github.io/PSRule.Rules.Azure/en/rules/Azure.ContainerApp.PublicAccess/">
       
       
       
@@ -21,7 +21,7 @@
     
     
       
-        <title>Azure.VMSS.MigrateAMA - PSRule for Azure</title>
+        <title>Azure.ContainerApp.PublicAccess - PSRule for Azure</title>
       
     
     
@@ -79,20 +79,20 @@
   <!-- Open graph meta tags -->
   <meta property="og:site_name" content="PSRule for Azure" />
   <meta property="og:type" content="article" />
-  <meta property="og:title" content="PSRule for Azure - Azure.VMSS.MigrateAMA" />
-  <meta property="og:description" content="Use Azure Monitor Agent as replacement for Log Analytics Agent." />
-  <meta property="og:url" content="https://azure.github.io/PSRule.Rules.Azure/en/rules/Azure.VMSS.MigrateAMA/" />
+  <meta property="og:title" content="PSRule for Azure - Azure.ContainerApp.PublicAccess" />
+  <meta property="og:description" content="Ensure public network access for Container Apps environment is disabled." />
+  <meta property="og:url" content="https://azure.github.io/PSRule.Rules.Azure/en/rules/Azure.ContainerApp.PublicAccess/" />
   <meta property="og:image" content="https://repository-images.githubusercontent.com/184154668/58818c00-d496-11eb-9b77-016145022654" />
   <meta property="og:image:type" content="image/png" />
   <meta property="og:image:width" content="1280" />
   <meta property="og:image:height" content="640" />
-  <meta property="og:image:alt" content="Use Azure Monitor Agent as replacement for Log Analytics Agent." />
+  <meta property="og:image:alt" content="Ensure public network access for Container Apps environment is disabled." />
 
   <!-- Twitter meta tags -->
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:site" content="@github" />
-  <meta name="twitter:title" content="PSRule for Azure - Azure.VMSS.MigrateAMA" />
-  <meta name="twitter:description" content="Use Azure Monitor Agent as replacement for Log Analytics Agent." />
+  <meta name="twitter:title" content="PSRule for Azure - Azure.ContainerApp.PublicAccess" />
+  <meta name="twitter:description" content="Ensure public network access for Container Apps environment is disabled." />
   <meta name="twitter:image" content="https://repository-images.githubusercontent.com/184154668/58818c00-d496-11eb-9b77-016145022654" />
 
 
@@ -114,7 +114,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#migrate-to-azure-monitor-agent" class="md-skip">
+        <a href="#disable-public-access" class="md-skip">
           Skip to content
         </a>
       
@@ -150,7 +150,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Azure.VMSS.MigrateAMA
+              Azure.ContainerApp.PublicAccess
             
           </span>
         </div>
@@ -3772,11 +3772,93 @@
               
   
   
+    
   
-    <li class="md-nav__item">
-      <a href="../Azure.ContainerApp.PublicAccess/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          Azure.ContainerApp.PublicAccess
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         Azure.ContainerApp.PublicAccess
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#description" class="md-nav__link">
+    Description
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#recommendation" class="md-nav__link">
+    Recommendation
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#examples" class="md-nav__link">
+    Examples
+  </a>
+  
+    <nav class="md-nav" aria-label="Examples">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#configure-with-azure-template" class="md-nav__link">
+    Configure with Azure template
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#configure-with-bicep" class="md-nav__link">
+    Configure with Bicep
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#links" class="md-nav__link">
+    Links
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -6880,93 +6962,11 @@
               
   
   
-    
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          Azure.VMSS.MigrateAMA
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../Azure.VMSS.MigrateAMA/" class="md-nav__link">
         Azure.VMSS.MigrateAMA
       </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#description" class="md-nav__link">
-    Description
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#recommendation" class="md-nav__link">
-    Recommendation
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#examples" class="md-nav__link">
-    Examples
-  </a>
-  
-    <nav class="md-nav" aria-label="Examples">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#configure-with-azure-template" class="md-nav__link">
-    Configure with Azure template
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#configure-with-bicep" class="md-nav__link">
-    Configure with Bicep
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#links" class="md-nav__link">
-    Links
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -8083,7 +8083,7 @@
   
     
       <a
-        href="https://github.com/Azure/PSRule.Rules.Azure/blob/main/docs/en/rules/Azure.VMSS.MigrateAMA.md"
+        href="https://github.com/Azure/PSRule.Rules.Azure/blob/main/docs/en/rules/Azure.ContainerApp.PublicAccess.md"
         title=""
         class="md-content__button md-icon"
       >
@@ -8100,339 +8100,72 @@
   
 
   <!-- Markdown content -->
-  <h1 id="migrate-to-azure-monitor-agent">Migrate to Azure Monitor Agent<a class="headerlink" href="#migrate-to-azure-monitor-agent" title="Permanent link">#</a></h1>
-<nav class="md-tags"><span class="md-tag">Azure.VMSS.MigrateAMA</span><span class="md-tag">AZR-000318</span><span class="md-tag">Error</span></nav>
-<p><a href="../module/#operational-excellence"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M1.527 13.237a1.75 1.75 0 0 1 0-2.474l9.272-9.273a1.75 1.75 0 0 1 2.475 0l9.272 9.273a1.75 1.75 0 0 1 0 2.474l-9.272 9.272a1.75 1.75 0 0 1-2.475 0Zm1.06-1.414a.25.25 0 0 0 0 .354l9.273 9.272a.25.25 0 0 0 .353 0l9.272-9.272a.25.25 0 0 0 0-.354l-9.272-9.272a.25.25 0 0 0-.353 0Z"/></svg></span> Operational Excellence</a>
- · <a href="../resource/#virtual-machine-scale-sets"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13.152.682a2.251 2.251 0 0 1 2.269 0l.007.004 6.957 4.276a2.277 2.277 0 0 1 1.126 1.964v7.516c0 .81-.432 1.56-1.133 1.968l-.002.001-11.964 7.037-.004.003c-.706.41-1.578.41-2.284 0l-.026-.015-6.503-4.502a2.268 2.268 0 0 1-1.096-1.943V9.438c0-.392.1-.77.284-1.1l.003-.006.014-.026c.197-.342.48-.627.82-.827h.002L13.152.681Zm.757 1.295h-.001L2.648 8.616l6.248 4.247a.775.775 0 0 0 .758-.01h.001l11.633-6.804-6.629-4.074a.75.75 0 0 0-.75.003ZM8.517 14.33a2.286 2.286 0 0 1-.393-.18l-.023-.014-6.102-4.147v7.003c0 .275.145.528.379.664l.025.014 6.114 4.232V14.33ZM18 9.709l-3.25 1.9v7.548L18 17.245Zm-7.59 4.438-.002.002a2.296 2.296 0 0 1-.391.18v7.612l3.233-1.902v-7.552Zm9.09-5.316v7.532l2.124-1.25a.776.776 0 0 0 .387-.671V7.363Z"/></svg></span> Virtual Machine Scale Sets</a>
- · <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M7.75 6.5a1.25 1.25 0 1 0 0 2.5 1.25 1.25 0 0 0 0-2.5Z"/><path d="M2.5 1h8.44a1.5 1.5 0 0 1 1.06.44l10.25 10.25a1.5 1.5 0 0 1 0 2.12l-8.44 8.44a1.5 1.5 0 0 1-2.12 0L1.44 12A1.497 1.497 0 0 1 1 10.94V2.5A1.5 1.5 0 0 1 2.5 1Zm0 1.5v8.44l10.25 10.25 8.44-8.44L10.94 2.5Z"/></svg></span> 2022_12</p>
-<p>Use Azure Monitor Agent as replacement for Log Analytics Agent.</p>
+  <h1 id="disable-public-access">Disable public access<a class="headerlink" href="#disable-public-access" title="Permanent link">#</a></h1>
+<nav class="md-tags"><span class="md-tag">Azure.ContainerApp.PublicAccess</span><span class="md-tag">AZR-000363</span><span class="md-tag">Error</span></nav>
+<p><a href="../module/#security"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M1.527 13.237a1.75 1.75 0 0 1 0-2.474l9.272-9.273a1.75 1.75 0 0 1 2.475 0l9.272 9.273a1.75 1.75 0 0 1 0 2.474l-9.272 9.272a1.75 1.75 0 0 1-2.475 0Zm1.06-1.414a.25.25 0 0 0 0 .354l9.273 9.272a.25.25 0 0 0 .353 0l9.272-9.272a.25.25 0 0 0 0-.354l-9.272-9.272a.25.25 0 0 0-.353 0Z"/></svg></span> Security</a>
+ · <a href="../resource/#container-app"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13.152.682a2.251 2.251 0 0 1 2.269 0l.007.004 6.957 4.276a2.277 2.277 0 0 1 1.126 1.964v7.516c0 .81-.432 1.56-1.133 1.968l-.002.001-11.964 7.037-.004.003c-.706.41-1.578.41-2.284 0l-.026-.015-6.503-4.502a2.268 2.268 0 0 1-1.096-1.943V9.438c0-.392.1-.77.284-1.1l.003-.006.014-.026c.197-.342.48-.627.82-.827h.002L13.152.681Zm.757 1.295h-.001L2.648 8.616l6.248 4.247a.775.775 0 0 0 .758-.01h.001l11.633-6.804-6.629-4.074a.75.75 0 0 0-.75.003ZM8.517 14.33a2.286 2.286 0 0 1-.393-.18l-.023-.014-6.102-4.147v7.003c0 .275.145.528.379.664l.025.014 6.114 4.232V14.33ZM18 9.709l-3.25 1.9v7.548L18 17.245Zm-7.59 4.438-.002.002a2.296 2.296 0 0 1-.391.18v7.612l3.233-1.902v-7.552Zm9.09-5.316v7.532l2.124-1.25a.776.776 0 0 0 .387-.671V7.363Z"/></svg></span> Container App</a>
+ · <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M7.75 6.5a1.25 1.25 0 1 0 0 2.5 1.25 1.25 0 0 0 0-2.5Z"/><path d="M2.5 1h8.44a1.5 1.5 0 0 1 1.06.44l10.25 10.25a1.5 1.5 0 0 1 0 2.12l-8.44 8.44a1.5 1.5 0 0 1-2.12 0L1.44 12A1.497 1.497 0 0 1 1 10.94V2.5A1.5 1.5 0 0 1 2.5 1Zm0 1.5v8.44l10.25 10.25 8.44-8.44L10.94 2.5Z"/></svg></span> 2023_03</p>
+<p>Ensure public network access for Container Apps environment is disabled.</p>
 <h2 id="description">Description<a class="headerlink" href="#description" title="Permanent link">#</a></h2>
-<p>The legacy Log Analytics agent will be retired on August 31, 2024. Before that date, you'll need to start using the Azure Monitor agent to monitor your virtual machine scale sets. The Azure Monitor agent provdes the following benefits over legacy agents:</p>
-<ul>
-<li>Security and performance<ul>
-<li>Enhanced security through Managed Identity and Azure Active Directory (Azure AD) tokens (for clients).</li>
-<li>A higher events-per-second (EPS) upload rate.</li>
-</ul>
-</li>
-<li>Cost savings by using data collection rules. Using DCRs is one of the most useful advantages of using Azure Monitor Agent:<ul>
-<li>DCRs let you configure data collection for specific machines connected to a workspace as compared to the "all or nothing" approach of legacy agents.</li>
-<li>With DCRs, you can define which data to ingest and which data to filter out to reduce workspace clutter and save on costs.</li>
-</ul>
-</li>
-<li>Simpler management of data collection, including ease of troubleshooting:<ul>
-<li>Easy multihoming on Windows and Linux.</li>
-<li>Centralized, "in the cloud" agent configuration makes every action simpler and more easily scalable throughout the data collection lifecycle, from onboarding to deployment to updates and changes over time.</li>
-<li>Greater transparency and control of more capabilities and services, such as Microsoft Sentinel, Defender for Cloud, and VM Insights.</li>
-</ul>
-</li>
-<li>A single agent that consolidates all features necessary to address all telemetry data collection needs across servers and client devices running Windows 10 or 11. A single agent is the goal, although Azure Monitor Agent currently converges with the Log Analytics agents.</li>
-</ul>
+<p>Container apps environments allows you to expose your container app to the Internet.</p>
+<p>Container apps environments deployed as external resources are available for public requests. External environments are deployed with a virtual IP on an external, public facing IP address.</p>
+<p>Disable public network access to improve security by exposing the Container Apps environment through an internal load balancer.</p>
+<p>This removes the need for a public IP address and prevents internet access to all Container Apps within the environment.</p>
+<p>To provide secure access, instead consider using an Application Gateway or Azure Front Door premium in front of your Container Apps on your private VNET.</p>
 <h2 id="recommendation">Recommendation<a class="headerlink" href="#recommendation" title="Permanent link">#</a></h2>
-<p>Virtual Machine Scale Sets should migrate to Azure Monitor Agent.</p>
+<p>Consider disabling public network access.</p>
 <h2 id="examples">Examples<a class="headerlink" href="#examples" title="Permanent link">#</a></h2>
 <h3 id="configure-with-azure-template">Configure with Azure template<a class="headerlink" href="#configure-with-azure-template" title="Permanent link">#</a></h3>
-<p>To deploy virtual machine scale sets that pass this rule:</p>
+<p>To deploy Container Apps environments that pass this rule:</p>
 <ul>
-<li>Set <code>properties.virtualMachineProfile.extensionProfile.extensions.properties.publisher</code> to <code>'Microsoft.Azure.Monitor'</code>.</li>
-<li>Set <code>properties.virtualMachineProfile.extensionProfile.extensions.properties.type</code> to <code>'AzureMonitorWindowsAgent'</code> (Windows) or <code>'AzureMonitorLinuxAgent'</code> (Linux).</li>
+<li>Set a custom VNET by configuring <code>properties.vnetConfiguration.infrastructureSubnetId</code> with the resource Id of a subnet.</li>
+<li>Set <code>properties.vnetConfiguration.internal</code> to <code>true</code>.</li>
 </ul>
 <p>For example:</p>
 <div class="highlight"><span class="filename">Azure Template snippet</span><pre><span></span><code><span class="p">{</span>
-<span class="w">  </span><span class="nt">&quot;$schema&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;https://schema.management.azure.com/schemas/2019-04-01/deploymentTemplate.json#&quot;</span><span class="p">,</span>
-<span class="w">  </span><span class="nt">&quot;contentVersion&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;1.0.0.0&quot;</span><span class="p">,</span>
-<span class="w">  </span><span class="nt">&quot;parameters&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
-<span class="w">    </span><span class="nt">&quot;vmssName&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
-<span class="w">      </span><span class="nt">&quot;type&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;string&quot;</span><span class="p">,</span>
-<span class="w">      </span><span class="nt">&quot;defaultValue&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;vmss-01&quot;</span>
-<span class="w">    </span><span class="p">},</span>
-<span class="w">    </span><span class="nt">&quot;location&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
-<span class="w">      </span><span class="nt">&quot;type&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;string&quot;</span>
+<span class="w">  </span><span class="nt">&quot;type&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Microsoft.App/containerApps&quot;</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">&quot;apiVersion&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;2022-10-01&quot;</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">&quot;name&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;[parameters(&#39;envName&#39;)]&quot;</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">&quot;location&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;[parameters(&#39;location&#39;)]&quot;</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">&quot;properties&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="nt">&quot;vnetConfiguration&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">      </span><span class="nt">&quot;dockerBridgeCidr&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;[parameters(&#39;dockerBridgeCidr&#39;)]&quot;</span><span class="p">,</span>
+<span class="w">      </span><span class="nt">&quot;infrastructureSubnetId&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;[parameters(&#39;infrastructureSubnetId&#39;)]&quot;</span><span class="p">,</span>
+<span class="w">      </span><span class="nt">&quot;internal&quot;</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span>
+<span class="w">      </span><span class="nt">&quot;outboundSettings&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{},</span>
+<span class="w">      </span><span class="nt">&quot;platformReservedCidr&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;[parameters(&#39;platformReservedCidr&#39;)]&quot;</span><span class="p">,</span>
+<span class="w">      </span><span class="nt">&quot;platformReservedDnsIP&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;[parameters(&#39;platformReservedDnsIP&#39;)]&quot;</span><span class="p">,</span>
 <span class="w">    </span><span class="p">}</span>
-<span class="w">  </span><span class="p">},</span>
-<span class="w">  </span><span class="nt">&quot;resources&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
-<span class="w">    </span><span class="p">{</span>
-<span class="w">      </span><span class="nt">&quot;type&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Microsoft.Compute/virtualMachineScaleSets&quot;</span><span class="p">,</span>
-<span class="w">      </span><span class="nt">&quot;apiVersion&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;2022-08-01&quot;</span><span class="p">,</span>
-<span class="w">      </span><span class="nt">&quot;name&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;[parameters(&#39;vmssName&#39;)]&quot;</span><span class="p">,</span>
-<span class="w">      </span><span class="nt">&quot;location&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;[parameters(&#39;location&#39;)]&quot;</span><span class="p">,</span>
-<span class="w">      </span><span class="nt">&quot;sku&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
-<span class="w">        </span><span class="nt">&quot;name&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;b2ms&quot;</span><span class="p">,</span>
-<span class="w">        </span><span class="nt">&quot;tier&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Standard&quot;</span><span class="p">,</span>
-<span class="w">        </span><span class="nt">&quot;capacity&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span>
-<span class="w">      </span><span class="p">},</span>
-<span class="w">      </span><span class="nt">&quot;properties&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
-<span class="w">        </span><span class="nt">&quot;overprovision&quot;</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span>
-<span class="w">        </span><span class="nt">&quot;upgradePolicy&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
-<span class="w">          </span><span class="nt">&quot;mode&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Automatic&quot;</span>
-<span class="w">        </span><span class="p">},</span>
-<span class="w">        </span><span class="nt">&quot;singlePlacementGroup&quot;</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span>
-<span class="w">        </span><span class="nt">&quot;platformFaultDomainCount&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">3</span><span class="p">,</span>
-<span class="w">        </span><span class="nt">&quot;virtualMachineProfile&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
-<span class="w">          </span><span class="nt">&quot;extensionProfile&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
-<span class="w">            </span><span class="nt">&quot;extensions&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
-<span class="w">              </span><span class="p">{</span>
-<span class="w">                </span><span class="nt">&quot;name&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;[format(&#39;{0}/AzureMonitorLinuxAgent&#39;, parameters(&#39;vmssName&#39;))]&quot;</span><span class="p">,</span>
-<span class="w">                </span><span class="nt">&quot;properties&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
-<span class="w">                  </span><span class="nt">&quot;autoUpgradeMinorVersion&quot;</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span>
-<span class="w">                  </span><span class="nt">&quot;enableAutomaticUpgrade&quot;</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span>
-<span class="w">                  </span><span class="nt">&quot;publisher&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Microsoft.Azure.Monitor&quot;</span><span class="p">,</span>
-<span class="w">                  </span><span class="nt">&quot;type&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;AzureMonitorLinuxAgent&quot;</span><span class="p">,</span>
-<span class="w">                  </span><span class="nt">&quot;typeHandlerVersion&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;1.21&quot;</span>
-<span class="w">                </span><span class="p">}</span>
-<span class="w">              </span><span class="p">}</span>
-<span class="w">            </span><span class="p">]</span>
-<span class="w">          </span><span class="p">},</span>
-<span class="w">          </span><span class="nt">&quot;storageProfile&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
-<span class="w">            </span><span class="nt">&quot;osDisk&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
-<span class="w">              </span><span class="nt">&quot;caching&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;ReadWrite&quot;</span><span class="p">,</span>
-<span class="w">              </span><span class="nt">&quot;createOption&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;FromImage&quot;</span>
-<span class="w">            </span><span class="p">},</span>
-<span class="w">            </span><span class="nt">&quot;imageReference&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
-<span class="w">              </span><span class="nt">&quot;publisher&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;microsoft-aks&quot;</span><span class="p">,</span>
-<span class="w">              </span><span class="nt">&quot;offer&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;aks&quot;</span><span class="p">,</span>
-<span class="w">              </span><span class="nt">&quot;sku&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;aks-ubuntu-1804-202208&quot;</span><span class="p">,</span>
-<span class="w">              </span><span class="nt">&quot;version&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;2022.08.29&quot;</span>
-<span class="w">            </span><span class="p">}</span>
-<span class="w">          </span><span class="p">},</span>
-<span class="w">          </span><span class="nt">&quot;osProfile&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
-<span class="w">            </span><span class="nt">&quot;adminUsername&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;azureuser&quot;</span><span class="p">,</span>
-<span class="w">            </span><span class="nt">&quot;computerNamePrefix&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;vmss-01&quot;</span><span class="p">,</span>
-<span class="w">            </span><span class="nt">&quot;linuxConfiguration&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
-<span class="w">              </span><span class="nt">&quot;disablePasswordAuthentication&quot;</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span>
-<span class="w">            </span><span class="p">},</span>
-<span class="w">            </span><span class="nt">&quot;provisionVMAgent&quot;</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span>
-<span class="w">            </span><span class="nt">&quot;ssh&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
-<span class="w">              </span><span class="nt">&quot;publicKeys&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
-<span class="w">                </span><span class="p">{</span>
-<span class="w">                  </span><span class="nt">&quot;path&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;/home/azureuser/.ssh/authorized_keys&quot;</span>
-<span class="w">                </span><span class="p">}</span>
-<span class="w">              </span><span class="p">]</span>
-<span class="w">            </span><span class="p">}</span>
-<span class="w">          </span><span class="p">},</span>
-<span class="w">          </span><span class="nt">&quot;networkProfile&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
-<span class="w">            </span><span class="nt">&quot;networkInterfaceConfigurations&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
-<span class="w">              </span><span class="p">{</span>
-<span class="w">                </span><span class="nt">&quot;name&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;vmss-001&quot;</span><span class="p">,</span>
-<span class="w">                </span><span class="nt">&quot;properties&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
-<span class="w">                  </span><span class="nt">&quot;primary&quot;</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span>
-<span class="w">                  </span><span class="nt">&quot;enableAcceleratedNetworking&quot;</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span>
-<span class="w">                  </span><span class="nt">&quot;networkSecurityGroup&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
-<span class="w">                    </span><span class="nt">&quot;id&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/test-rg/providers/Microsoft.Network/networkSecurityGroups/nsg-001&quot;</span>
-<span class="w">                  </span><span class="p">},</span>
-<span class="w">                  </span><span class="nt">&quot;ipConfigurations&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
-<span class="w">                    </span><span class="p">{</span>
-<span class="w">                      </span><span class="nt">&quot;name&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;ipconfig1&quot;</span><span class="p">,</span>
-<span class="w">                      </span><span class="nt">&quot;properties&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
-<span class="w">                        </span><span class="nt">&quot;primary&quot;</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span>
-<span class="w">                        </span><span class="nt">&quot;subnet&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
-<span class="w">                          </span><span class="nt">&quot;id&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/test-rg/providers/Microsoft.Network/virtualNetworks/vnet-001/subnets/subnet-001&quot;</span>
-<span class="w">                        </span><span class="p">},</span>
-<span class="w">                        </span><span class="nt">&quot;privateIPAddressVersion&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;IPv4&quot;</span><span class="p">,</span>
-<span class="w">                        </span><span class="nt">&quot;loadBalancerBackendAddressPools&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
-<span class="w">                          </span><span class="p">{</span>
-<span class="w">                            </span><span class="nt">&quot;id&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/test-rg/providers/Microsoft.Network/loadBalancers/kubernetes/backendAddressPools/kubernetes&quot;</span>
-<span class="w">                          </span><span class="p">}</span>
-<span class="w">                        </span><span class="p">]</span>
-<span class="w">                      </span><span class="p">}</span>
-<span class="w">                    </span><span class="p">}</span>
-<span class="w">                  </span><span class="p">]</span>
-<span class="w">                </span><span class="p">}</span>
-<span class="w">              </span><span class="p">}</span>
-<span class="w">            </span><span class="p">]</span>
-<span class="w">          </span><span class="p">}</span>
-<span class="w">        </span><span class="p">}</span>
-<span class="w">      </span><span class="p">}</span>
-<span class="w">    </span><span class="p">}</span>
-<span class="w">  </span><span class="p">]</span>
-<span class="p">}</span>
-</code></pre></div>
-<p>To deploy virtual machine scale sets with a extension sub resource that pass this rule:</p>
-<ul>
-<li>Deploy a extension sub-resource (extension resource).</li>
-<li>Set <code>properties.publisher</code> to <code>'Microsoft.Azure.Monitor'</code>.</li>
-<li>Set <code>properties.type</code> to <code>'AzureMonitorWindowsAgent'</code> (Windows) or <code>'AzureMonitorLinuxAgent'</code> (Linux).</li>
-</ul>
-<p>For example:</p>
-<div class="highlight"><span class="filename">Azure Template snippet</span><pre><span></span><code><span class="p">{</span>
-<span class="w">  </span><span class="nt">&quot;$schema&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;https://schema.management.azure.com/schemas/2019-04-01/deploymentTemplate.json#&quot;</span><span class="p">,</span>
-<span class="w">  </span><span class="nt">&quot;contentVersion&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;1.0.0.0&quot;</span><span class="p">,</span>
-<span class="w">  </span><span class="nt">&quot;parameters&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
-<span class="w">    </span><span class="nt">&quot;vmssName&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
-<span class="w">      </span><span class="nt">&quot;type&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;string&quot;</span>
-<span class="w">    </span><span class="p">},</span>
-<span class="w">    </span><span class="nt">&quot;location&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
-<span class="w">      </span><span class="nt">&quot;type&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;string&quot;</span>
-<span class="w">    </span><span class="p">},</span>
-<span class="w">    </span><span class="nt">&quot;userAssignedManagedIdentity&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
-<span class="w">      </span><span class="nt">&quot;type&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;string&quot;</span>
-<span class="w">    </span><span class="p">}</span>
-<span class="w">  </span><span class="p">},</span>
-<span class="w">  </span><span class="nt">&quot;resources&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
-<span class="w">    </span><span class="p">{</span>
-<span class="w">      </span><span class="nt">&quot;type&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Microsoft.Compute/virtualMachineScaleSets/extensions&quot;</span><span class="p">,</span>
-<span class="w">      </span><span class="nt">&quot;apiVersion&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;2022-08-01&quot;</span><span class="p">,</span>
-<span class="w">      </span><span class="nt">&quot;name&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;[format(&#39;{0}/AzureMonitorLinuxAgent&#39;, parameters(&#39;vmssName&#39;))]&quot;</span><span class="p">,</span>
-<span class="w">      </span><span class="nt">&quot;location&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;[parameters(&#39;location&#39;)]&quot;</span><span class="p">,</span>
-<span class="w">      </span><span class="nt">&quot;properties&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
-<span class="w">        </span><span class="nt">&quot;publisher&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Microsoft.Azure.Monitor&quot;</span><span class="p">,</span>
-<span class="w">        </span><span class="nt">&quot;type&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;AzureMonitorLinuxAgent&quot;</span><span class="p">,</span>
-<span class="w">        </span><span class="nt">&quot;typeHandlerVersion&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;1.21&quot;</span><span class="p">,</span>
-<span class="w">          </span><span class="nt">&quot;settings&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
-<span class="w">          </span><span class="nt">&quot;authentication&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
-<span class="w">            </span><span class="nt">&quot;managedIdentity&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
-<span class="w">              </span><span class="nt">&quot;identifier-name&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;mi_res_id&quot;</span><span class="p">,</span>
-<span class="w">              </span><span class="nt">&quot;identifier-value&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;[parameters(&#39;userAssignedManagedIdentity&#39;)]&quot;</span>
-<span class="w">            </span><span class="p">}</span>
-<span class="w">          </span><span class="p">}</span>
-<span class="w">        </span><span class="p">},</span>
-<span class="w">        </span><span class="nt">&quot;autoUpgradeMinorVersion&quot;</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span>
-<span class="w">        </span><span class="nt">&quot;enableAutomaticUpgrade&quot;</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span>
-<span class="w">      </span><span class="p">}</span>
-<span class="w">    </span><span class="p">}</span>
-<span class="w">  </span><span class="p">]</span>
+<span class="w">  </span><span class="p">}</span>
 <span class="p">}</span>
 </code></pre></div>
 <h3 id="configure-with-bicep">Configure with Bicep<a class="headerlink" href="#configure-with-bicep" title="Permanent link">#</a></h3>
-<p>To deploy virtual machine scale sets that pass this rule:</p>
+<p>To deploy Container Apps environments that pass this rule:</p>
 <ul>
-<li>Set <code>properties.virtualMachineProfile.extensionProfile.extensions.properties.publisher</code> to <code>'Microsoft.Azure.Monitor'</code>.</li>
-<li>Set <code>properties.virtualMachineProfile.extensionProfile.extensions.properties.type</code> to <code>'AzureMonitorWindowsAgent'</code> (Windows) or <code>'AzureMonitorLinuxAgent'</code> (Linux).</li>
+<li>Set a custom VNET by configuring <code>properties.vnetConfiguration.infrastructureSubnetId</code> with the resource Id of a subnet.</li>
+<li>Set <code>properties.vnetConfiguration.internal</code> to <code>true</code>.</li>
 </ul>
 <p>For example:</p>
-<div class="highlight"><span class="filename">Azure Bicep snippet</span><pre><span></span><code>param vmssName string = &#39;vmss-01&#39;
-param location string
-
-resource vmScaleSet &#39;Microsoft.Compute/virtualMachineScaleSets@2022-08-01&#39; = {
-  name: vmssName
-  location: location
-  sku: {
-    name: &#39;b2ms&#39;
-    tier: &#39;Standard&#39;
-    capacity: 1
-  }
-  properties: {
-    overprovision: true
-    upgradePolicy: {
-      mode: &#39;Automatic&#39;
-    }
-    singlePlacementGroup: true
-    platformFaultDomainCount: 3
-    virtualMachineProfile: {
-      extensionProfile: {
-        extensions: [
-          {
-            name: &#39;${vmssName}/AzureMonitorLinuxAgent&#39;
-
-            properties: {
-              autoUpgradeMinorVersion: true
-              enableAutomaticUpgrade: true
-              publisher: &#39;Microsoft.Azure.Monitor&#39;
-              type: &#39;AzureMonitorLinuxAgent&#39;
-              typeHandlerVersion: &#39;1.21&#39;
-            }
-          }
-        ]
-      }
-      storageProfile: {
-        osDisk: {
-          caching: &#39;ReadWrite&#39;
-          createOption: &#39;FromImage&#39;
-        }
-        imageReference: {
-          publisher: &#39;microsoft-aks&#39;
-          offer: &#39;aks&#39;
-          sku: &#39;aks-ubuntu-1804-202208&#39;
-          version: &#39;2022.08.29&#39;
-        }
-      }
-      osProfile: {
-        adminUsername: &#39;azureuser&#39;
-        computerNamePrefix: &#39;vmss-01&#39;
-        linuxConfiguration: {
-          disablePasswordAuthentication: true
-        }
-        provisionVMAgent: true
-        ssh: {
-          publicKeys: [
-            {
-              path: &#39;/home/azureuser/.ssh/authorized_keys&#39;
-            }
-          ]
-        }
-      }
-      networkProfile: {
-        networkInterfaceConfigurations: [
-          {
-            name: &#39;vmss-001&#39;
-            properties: {
-              primary: true
-              enableAcceleratedNetworking: true
-              networkSecurityGroup: {
-                id: &#39;/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/test-rg/providers/Microsoft.Network/networkSecurityGroups/nsg-001&#39;
-              }
-              ipConfigurations: [
-                {
-                  name: &#39;ipconfig1&#39;
-                  properties: {
-                    primary: true
-                    subnet: {
-                      id: &#39;/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/test-rg/providers/Microsoft.Network/virtualNetworks/vnet-001/subnets/subnet-001&#39;
-                    }
-                    privateIPAddressVersion: &#39;IPv4&#39;
-                    loadBalancerBackendAddressPools: [
-                      {
-                        id: &#39;/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/test-rg/providers/Microsoft.Network/loadBalancers/kubernetes/backendAddressPools/kubernetes&#39;
-                      }
-                    ]
-                  }
-                }
-              ]
-            }
-          }
-        ]
-      }
-    }
-  }
-}
-</code></pre></div>
-<p>To deploy virtual machine scale sets with a extension sub resource that pass this rule:</p>
-<ul>
-<li>Deploy a extension sub-resource (extension resource).</li>
-<li>Set <code>properties.publisher</code> to <code>'Microsoft.Azure.Monitor'</code>.</li>
-<li>Set <code>properties.type</code> to <code>'AzureMonitorWindowsAgent'</code> (Windows) or <code>'AzureMonitorLinuxAgent'</code> (Linux).</li>
-</ul>
-<p>For example:</p>
-<div class="highlight"><span class="filename">Azure Bicep snippet</span><pre><span></span><code>param vmssName string
-param location string
-param userAssignedManagedIdentity string
-
-resource linuxAgent &#39;Microsoft.Compute/virtualMachineScaleSets/extensions@2022-08-01&#39; = {
-  name: &#39;${vmssName}/AzureMonitorLinuxAgent&#39;
+<div class="highlight"><span class="filename">Azure Bicep snippet</span><pre><span></span><code>resource containerAppEnv &#39;Microsoft.App/managedEnvironments@2022-10-01&#39; = {
+  name: envName
   location: location
   properties: {
-    publisher: &#39;Microsoft.Azure.Monitor&#39;
-    type: &#39;AzureMonitorLinuxAgent&#39;
-    typeHandlerVersion: &#39;1.21&#39;
-    autoUpgradeMinorVersion: true
-    enableAutomaticUpgrade: true
-    settings: {
-      authentication: {
-        managedIdentity: {
-          identifier-name: &#39;mi_res_id&#39;
-          identifier-value: userAssignedManagedIdentity
-        }
-      }
+    vnetConfiguration: {
+      dockerBridgeCidr: dockerBridgeCidr
+      infrastructureSubnetId: infrastructureSubnetId
+      internal: true
+      outboundSettings: {}
+      platformReservedCidr: platformReservedCidr
+      platformReservedDnsIP: platformReservedDnsIP
     }
   }
 }
 </code></pre></div>
 <h2 id="links">Links<a class="headerlink" href="#links" title="Permanent link">#</a></h2>
 <ul>
-<li><a href="https://learn.microsoft.com/azure/architecture/framework/devops/checklist">Monitoring</a></li>
-<li><a href="https://azure.microsoft.com/updates/were-retiring-the-log-analytics-agent-in-azure-monitor-on-31-august-2024">Log Analytics agent retiring</a></li>
-<li><a href="https://learn.microsoft.com/azure/azure-monitor/agents/azure-monitor-agent-migration">Migrate to Azure Monitor Agent from Log Analytics Agent</a></li>
-<li><a href="https://learn.microsoft.com/azure/templates/microsoft.compute/virtualmachinescalesets">Azure deployment reference</a></li>
-<li><a href="https://learn.microsoft.com/azure/templates/microsoft.compute/virtualmachinescalesets/extensions">Azure deployment reference</a></li>
+<li><a href="https://learn.microsoft.com/azure/architecture/framework/security/design-network-endpoints">Best practices for endpoint security on Azure</a></li>
+<li><a href="https://learn.microsoft.com/azure/container-apps/networking">Networking architecture in Azure Container Apps</a></li>
+<li><a href="https://learn.microsoft.com/azure/templates/microsoft.app/managedenvironments#vnetconfiguration">Azure deployment reference</a></li>
 </ul>
 
   <!-- Last update of source file -->
@@ -8443,7 +8176,7 @@ resource linuxAgent &#39;Microsoft.Compute/virtualMachineScaleSets/extensions@20
   <small>
     
       Last update:
-      2022-12-03
+      2023-03-24
     
   </small>
 </div>
@@ -8466,7 +8199,7 @@ resource linuxAgent &#39;Microsoft.Compute/virtualMachineScaleSets/extensions@20
       data-category="Documentation"
       data-category-id="DIC_kwDOCvn6LM4CQqE6"
       data-mapping="specific"
-      data-term="Azure.VMSS.MigrateAMA"
+      data-term="Azure.ContainerApp.PublicAccess"
       data-strict="0"
       data-reactions-enabled="1"
       data-emit-metadata="0"

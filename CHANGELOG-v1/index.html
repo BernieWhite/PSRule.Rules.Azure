@@ -3357,6 +3357,10 @@
         
           
         
+          
+        
+          
+        
       
       
         <label class="md-nav__link" for="__nav_4_5" id="__nav_4_5_label" tabindex="0">
@@ -4989,6 +4993,34 @@
     <li class="md-nav__item">
       <a href="../en/rules/Azure.ContainerApp.Insecure/" class="md-nav__link">
         Azure.ContainerApp.Insecure
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../en/rules/Azure.ContainerApp.ManagedIdentity/" class="md-nav__link">
+        Azure.ContainerApp.ManagedIdentity
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../en/rules/Azure.ContainerApp.Name/" class="md-nav__link">
+        Azure.ContainerApp.Name
       </a>
     </li>
   
@@ -8941,6 +8973,8 @@
         
           
         
+          
+        
       
       
         <label class="md-nav__link" for="__nav_4_7" id="__nav_4_7_label" tabindex="0">
@@ -9019,6 +9053,20 @@
     <li class="md-nav__item">
       <a href="../en/selectors/Azure.Resource.SupportsTags/" class="md-nav__link">
         Azure.Resource.SupportsTags
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../en/selectors/Azure.ServiceBus.IsPremium/" class="md-nav__link">
+        Azure.ServiceBus.IsPremium
       </a>
     </li>
   
@@ -10396,6 +10444,18 @@
   See <a href="../upgrade-notes/">upgrade notes</a> for more information.</li>
 </ul>
 <h2 id="unreleased">Unreleased<a class="headerlink" href="#unreleased" title="Permanent link">#</a></h2>
+<ul>
+<li>New rules:<ul>
+<li>Container App:<ul>
+<li>Check that the names of container apps meets the naming requirements by <a href="https://github.com/BenjaminEngeset">@BenjaminEngeset</a>.
+  <a href="https://github.com/Azure/PSRule.Rules.Azure/issues/2094">#2094</a></li>
+<li>Check that managed identity for container apps are configured by <a href="https://github.com/BenjaminEngeset">@BenjaminEngeset</a>.
+  <a href="https://github.com/Azure/PSRule.Rules.Azure/issues/2096">#2096</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
 <p>What's changed since v1.25.0:</p>
 <ul>
 <li>New rules:<ul>
@@ -10414,6 +10474,11 @@
   <a href="https://github.com/Azure/PSRule.Rules.Azure/issues/1862">#1862</a></li>
 </ul>
 </li>
+</ul>
+</li>
+<li>General improvements:<ul>
+<li>Added a selector for premium Service Bus namespaces by <a href="https://github.com/BernieWhite">@BernieWhite</a>.
+  <a href="https://github.com/Azure/PSRule.Rules.Azure/issues/2091">#2091</a></li>
 </ul>
 </li>
 <li>Engineering:<ul>
@@ -14872,7 +14937,7 @@ What's changed since v1.24.0:</p>
   <small>
     
       Last update:
-      2023-03-18
+      2023-03-23
     
   </small>
 </div>

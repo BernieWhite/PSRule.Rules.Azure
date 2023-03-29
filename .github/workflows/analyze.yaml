@@ -37,7 +37,7 @@ jobs:
 
 
     - name: Run PSRule analysis
-      uses: microsoft/ps-rule@v2.7.0
+      uses: microsoft/ps-rule@v2.8.0
       with:
         modules: PSRule.Rules.MSFT.OSS
         prerelease: true

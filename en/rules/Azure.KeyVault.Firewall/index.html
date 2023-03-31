@@ -2102,6 +2102,10 @@
         
           
         
+          
+        
+          
+        
       
       
         <label class="md-nav__link" for="__nav_4_5" id="__nav_4_5_label" tabindex="0">
@@ -3732,6 +3736,20 @@
   
   
     <li class="md-nav__item">
+      <a href="../Azure.ContainerApp.ExternalIngress/" class="md-nav__link">
+        Azure.ContainerApp.ExternalIngress
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
       <a href="../Azure.ContainerApp.Insecure/" class="md-nav__link">
         Azure.ContainerApp.Insecure
       </a>
@@ -3776,6 +3794,20 @@
     <li class="md-nav__item">
       <a href="../Azure.ContainerApp.PublicAccess/" class="md-nav__link">
         Azure.ContainerApp.PublicAccess
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Azure.ContainerApp.Storage/" class="md-nav__link">
+        Azure.ContainerApp.Storage
       </a>
     </li>
   
@@ -4531,13 +4563,6 @@
         
       </ul>
     </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#notes" class="md-nav__link">
-    Notes
-  </a>
   
 </li>
       
@@ -8067,13 +8092,6 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#notes" class="md-nav__link">
-    Notes
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
   <a href="#links" class="md-nav__link">
     Links
   </a>
@@ -8177,7 +8195,7 @@ Also consider enforcing this setting using Azure Policy.</p>
 <li>Set the <code>properties.networkAcls.defaultAction</code> property to <code>Deny</code>.</li>
 </ul>
 <p>For example:</p>
-<div class="highlight"><span class="filename">Azure Bicep snippet</span><pre><span></span><code>resource vault &#39;Microsoft.KeyVault/vaults[@2022-07-01&#39;](https://github.com/2022-07-01&#39;) = {
+<div class="highlight"><span class="filename">Azure Bicep snippet</span><pre><span></span><code>resource vault &#39;Microsoft.KeyVault/vaults@2022-07-01&#39; = {
   name: name
   location: location
   properties: {
@@ -8199,14 +8217,15 @@ Also consider enforcing this setting using Azure Policy.</p>
   }
 }
 </code></pre></div>
-<h2 id="notes">Notes<a class="headerlink" href="#notes" title="Permanent link">#</a></h2>
 <h2 id="links">Links<a class="headerlink" href="#links" title="Permanent link">#</a></h2>
 <ul>
 <li><a href="https://learn.microsoft.com/azure/architecture/framework/security/design-network-endpoints#public-endpoints">Public endpoints</a></li>
-<li><a href="https://docs.microsoft.com/azure/key-vault/general/network-security">Configure Azure Key Vault firewalls and virtual networks</a></li>
+<li><a href="https://learn.microsoft.com/azure/key-vault/general/network-security">Configure Azure Key Vault firewalls and virtual networks</a></li>
 <li><a href="https://learn.microsoft.com/security/benchmark/azure/baselines/key-vault-security-baseline#disable-public-network-access">Azure security baseline for Key Vault - Disable Public Network Access</a></li>
-<li><a href="https://www.azadvertizer.net/azpolicyadvertizer/55615ac9-af46-4a59-874e-391cc3dfb490.html">Azure Policies - Azure Key Vault should have firewall enabled</a>
-<a href="https://portal.azure.com/#view/Microsoft_Azure_Policy/PolicyDetailBlade/definitionId/%2Fproviders%2FMicrosoft.Authorization%2FpolicyDefinitions%2F55615ac9-af46-4a59-874e-391cc3dfb490">Azure Key Vault should have firewall enabled</a></li>
+<li><a href="https://www.azadvertizer.net/azpolicyadvertizer/55615ac9-af46-4a59-874e-391cc3dfb490.html">Azure Policies - Azure Key Vault should have firewall enabled</a></li>
+<li><a href="https://portal.azure.com/#view/Microsoft_Azure_Policy/PolicyDetailBlade/definitionId/%2Fproviders%2FMicrosoft.Authorization%2FpolicyDefinitions%2F55615ac9-af46-4a59-874e-391cc3dfb490">Azure Key Vault should have firewall enabled</a></li>
+<li><a href="https://learn.microsoft.com/azure/key-vault/general/overview-vnet-service-endpoints#trusted-services">Trusted services</a></li>
+<li><a href="https://learn.microsoft.com/azure/templates/microsoft.keyvault/vaults">Azure deployment reference</a></li>
 </ul>
 
   <!-- Last update of source file -->
@@ -8217,7 +8236,7 @@ Also consider enforcing this setting using Azure Policy.</p>
   <small>
     
       Last update:
-      2023-03-06
+      2023-03-28
     
   </small>
 </div>

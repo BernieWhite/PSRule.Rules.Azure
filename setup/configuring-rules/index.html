@@ -1285,6 +1285,13 @@
   
 </li>
         
+          <li class="md-nav__item">
+  <a href="#azure-container-apps-external-ingress" class="md-nav__link">
+    Azure Container Apps external ingress
+  </a>
+  
+</li>
+        
       </ul>
     </nav>
   
@@ -1472,6 +1479,10 @@
       <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_5" >
       
       
+        
+          
+        
+          
         
           
         
@@ -3847,6 +3858,20 @@
   
   
     <li class="md-nav__item">
+      <a href="../../en/rules/Azure.ContainerApp.ExternalIngress/" class="md-nav__link">
+        Azure.ContainerApp.ExternalIngress
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
       <a href="../../en/rules/Azure.ContainerApp.Insecure/" class="md-nav__link">
         Azure.ContainerApp.Insecure
       </a>
@@ -3891,6 +3916,20 @@
     <li class="md-nav__item">
       <a href="../../en/rules/Azure.ContainerApp.PublicAccess/" class="md-nav__link">
         Azure.ContainerApp.PublicAccess
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../en/rules/Azure.ContainerApp.Storage/" class="md-nav__link">
+        Azure.ContainerApp.Storage
       </a>
     </li>
   
@@ -8129,6 +8168,13 @@
   
 </li>
         
+          <li class="md-nav__item">
+  <a href="#azure-container-apps-external-ingress" class="md-nav__link">
+    Azure Container Apps external ingress
+  </a>
+  
+</li>
+        
       </ul>
     </nav>
   
@@ -8385,13 +8431,29 @@ Rules that check if a VM or VMSS has Linux OS also validate against the values s
 <span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="s">&#39;aLinuxOffer&#39;</span>
 <span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="s">&#39;anotherLinuxOffer&#39;</span>
 </code></pre></div>
+<h3 id="azure-container-apps-external-ingress">Azure Container Apps external ingress<a class="headerlink" href="#azure-container-apps-external-ingress" title="Permanent link">#</a></h3>
+<p>This configuration specifies whether if external ingress should be enabled or disabled.</p>
+<p>Syntax:</p>
+<div class="highlight"><pre><span></span><code><span class="nt">configuration</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">AZURE_CONTAINERAPPS_RESTRICT_INGRESS</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">boolean</span><span class="w"> </span><span class="c1"># An boolean value</span>
+</code></pre></div>
+<p>Default:</p>
+<div class="highlight"><pre><span></span><code><span class="c1"># YAML: The default AZURE_CONTAINERAPPS_RESTRICT_INGRESS configuration option</span>
+<span class="nt">configuration</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">AZURE_CONTAINERAPPS_RESTRICT_INGRESS</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">false</span>
+</code></pre></div>
+<p>Example:</p>
+<div class="highlight"><pre><span></span><code><span class="c1"># YAML: Set the AZURE_CONTAINERAPPS_RESTRICT_INGRESS configuration option to enabled</span>
+<span class="nt">configuration</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">AZURE_CONTAINERAPPS_RESTRICT_INGRESS</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
+</code></pre></div>
 
   <hr>
 <div class="md-source-file">
   <small>
     
       Last update:
-      2022-12-17
+      2023-03-29
     
   </small>
 </div>

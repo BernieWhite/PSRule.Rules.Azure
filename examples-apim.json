@@ -4,8 +4,8 @@
   "metadata": {
     "_generator": {
       "name": "bicep",
-      "version": "0.14.85.62628",
-      "templateHash": "15764725433071649409"
+      "version": "0.15.31.15270",
+      "templateHash": "6483689219210108684"
     }
   },
   "parameters": {
@@ -36,7 +36,18 @@
       "metadata": {
         "description": "The display name of the publisher."
       }
+    },
+    "globalPolicy": {
+      "type": "string",
+      "defaultValue": "<policies><inbound><cors allow-credentials=\"true\"><allowed-origins><origin>__APIM__</origin></allowed-origins><allowed-methods preflight-result-max-age=\"300\"><method>*</method></allowed-methods><allowed-headers><header>*</header></allowed-headers><expose-headers><header>*</header></expose-headers></cors></inbound><backend><forward-request /></backend><outbound /><on-error /></policies>",
+      "metadata": {
+        "description": "A global policy to use with the service."
+      }
     }
+  },
+  "variables": {
+    "portalUri": "[format('https://{0}.developer.azure-api.net', toLower(parameters('name')))]",
+    "actualGlobalPolicy": "[replace(parameters('globalPolicy'), '__APIM__', variables('portalUri'))]"
   },
   "resources": [
     {
@@ -77,6 +88,21 @@
       },
       "metadata": {
         "description": "An example API Management service."
+      }
+    },
+    {
+      "type": "Microsoft.ApiManagement/service/policies",
+      "apiVersion": "2021-08-01",
+      "name": "[format('{0}/{1}', parameters('name'), 'policy')]",
+      "properties": {
+        "value": "[variables('actualGlobalPolicy')]",
+        "format": "xml"
+      },
+      "dependsOn": [
+        "[resourceId('Microsoft.ApiManagement/service', parameters('name'))]"
+      ],
+      "metadata": {
+        "description": "Configure the API Management Service global policy."
       }
     },
     {

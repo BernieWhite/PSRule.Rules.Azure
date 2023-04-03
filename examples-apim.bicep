@@ -15,6 +15,12 @@ param publisherEmail string = 'noreply@contoso.com'
 @description('The display name of the publisher.')
 param publisherName string = 'Contoso'
 
+@description('A global policy to use with the service.')
+param globalPolicy string = '<policies><inbound><cors allow-credentials="true"><allowed-origins><origin>__APIM__</origin></allowed-origins><allowed-methods preflight-result-max-age="300"><method>*</method></allowed-methods><allowed-headers><header>*</header></allowed-headers><expose-headers><header>*</header></expose-headers></cors></inbound><backend><forward-request /></backend><outbound /><on-error /></policies>'
+
+var portalUri = 'https://${toLower(name)}.developer.azure-api.net'
+var actualGlobalPolicy = replace(globalPolicy, '__APIM__', portalUri)
+
 @description('An example API Management service.')
 resource service 'Microsoft.ApiManagement/service@2021-08-01' = {
   name: name
@@ -49,6 +55,16 @@ resource service 'Microsoft.ApiManagement/service@2021-08-01' = {
     apiVersionConstraint: {
       minApiVersion: '2021-08-01'
     }
+  }
+}
+
+@description('Configure the API Management Service global policy.')
+resource serviceName_policy 'Microsoft.ApiManagement/service/policies@2021-08-01' = {
+  parent: service
+  name: 'policy'
+  properties: {
+    value: actualGlobalPolicy
+    format: 'xml'
   }
 }
 

@@ -3387,6 +3387,10 @@
         
           
         
+          
+        
+          
+        
       
       
         <label class="md-nav__link" for="__nav_4_5" id="__nav_4_5_label" tabindex="0">
@@ -6949,6 +6953,20 @@
   
   
     <li class="md-nav__item">
+      <a href="../en/rules/Azure.SQL.AADOnly/" class="md-nav__link">
+        Azure.SQL.AADOnly
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
       <a href="../en/rules/Azure.SQL.AllowAzureAccess/" class="md-nav__link">
         Azure.SQL.AllowAzureAccess
       </a>
@@ -7077,6 +7095,20 @@
     <li class="md-nav__item">
       <a href="../en/rules/Azure.SQL.TDE/" class="md-nav__link">
         Azure.SQL.TDE
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../en/rules/Azure.SQLMI.AAD/" class="md-nav__link">
+        Azure.SQLMI.AAD
       </a>
     </li>
   
@@ -10568,8 +10600,14 @@
   See <a href="../upgrade-notes/">upgrade notes</a> for more information.</li>
 </ul>
 <h2 id="unreleased">Unreleased<a class="headerlink" href="#unreleased" title="Permanent link">#</a></h2>
+<p>What's changed since pre-release v1.26.0-B0011:</p>
 <ul>
 <li>New rules:<ul>
+<li>API Management:<ul>
+<li>Check that wildcard <code>*</code> for any configuration option in CORS policies settings is not in use by <a href="https://github.com/BenjaminEngeset">@BenjaminEngeset</a>.
+  <a href="https://github.com/Azure/PSRule.Rules.Azure/issues/2073">#2073</a></li>
+</ul>
+</li>
 <li>Container App:<ul>
 <li>Check that internal-only ingress for container apps are configured by <a href="https://github.com/BenjaminEngeset">@BenjaminEngeset</a>.
   <a href="https://github.com/Azure/PSRule.Rules.Azure/issues/2098">#2098</a></li>
@@ -10577,9 +10615,11 @@
   <a href="https://github.com/Azure/PSRule.Rules.Azure/issues/2101">#2101</a></li>
 </ul>
 </li>
-<li>API Management:<ul>
-<li>Check that wildcard <code>*</code> for any configuration option in CORS policies settings is not in use by <a href="https://github.com/BenjaminEngeset">@BenjaminEngeset</a>.
-  <a href="https://github.com/Azure/PSRule.Rules.Azure/issues/2073">#2073</a></li>
+<li>SQL Database:<ul>
+<li>Check that Azure AD-only authentication is enabled by <a href="https://github.com/BenjaminEngeset">@BenjaminEngeset</a>.
+  <a href="https://github.com/Azure/PSRule.Rules.Azure/issues/2119">#2119</a></li>
+<li>Check that Azure AD authentication is configured for SQL Managed Instances by <a href="https://github.com/BenjaminEngeset">@BenjaminEngeset</a>.
+  <a href="https://github.com/Azure/PSRule.Rules.Azure/issues/2117">#2117</a></li>
 </ul>
 </li>
 <li>SQL Managed Instance:<ul>
@@ -10591,12 +10631,11 @@
 </li>
 </ul>
 </li>
-</ul>
-<p>What's changed since pre-release v1.26.0-B0011:</p>
-<ul>
 <li>Bug fixes:<ul>
 <li>Fixed dependency issue of deployments across resource group scopes by <a href="https://github.com/BernieWhite">@BernieWhite</a>.
   <a href="https://github.com/Azure/PSRule.Rules.Azure/issues/2111">#2111</a></li>
+<li>Fixed false positive with <code>Azure.Deployment.Name</code> by <a href="https://github.com/BernieWhite">@BernieWhite</a>.
+  <a href="https://github.com/Azure/PSRule.Rules.Azure/issues/2109">#2109</a></li>
 </ul>
 </li>
 </ul>
@@ -15100,7 +15139,7 @@ What's changed since v1.24.0:</p>
   <small>
     
       Last update:
-      2023-04-04
+      2023-04-06
     
   </small>
 </div>

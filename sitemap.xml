@@ -1596,6 +1596,11 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
+         <loc>https://azure.github.io/PSRule.Rules.Azure/en/rules/Azure.SQL.AADOnly/</loc>
+         <lastmod>2023-04-05</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
          <loc>https://azure.github.io/PSRule.Rules.Azure/en/rules/Azure.SQL.AllowAzureAccess/</loc>
          <lastmod>2023-04-05</lastmod>
          <changefreq>daily</changefreq>
@@ -1642,6 +1647,11 @@
     </url>
     <url>
          <loc>https://azure.github.io/PSRule.Rules.Azure/en/rules/Azure.SQL.TDE/</loc>
+         <lastmod>2023-04-05</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://azure.github.io/PSRule.Rules.Azure/en/rules/Azure.SQLMI.AAD/</loc>
          <lastmod>2023-04-05</lastmod>
          <changefreq>daily</changefreq>
     </url>

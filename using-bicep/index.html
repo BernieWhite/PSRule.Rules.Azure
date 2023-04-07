@@ -8499,16 +8499,21 @@ This option will discover Bicep files from parameter metadata.</p>
 Storing modules in a private registry gives you a central location to reference modules across your organization.</p>
 <p>To test Bicep deployments which uses modules stored in a private registry, these modules must be restored.
 The restore process automatically occurs when PSRule is run, however some additional steps are required to authenticate.</p>
-<p>To configure authentication to a private registry:</p>
+<p>To prepare your registry for storing Bicep modules see <a href="https://learn.microsoft.com/azure/azure-resource-manager/bicep/private-module-registry">Create private registry for Bicep modules</a>.</p>
+<p>To configure authentication for PSRule to a private registry:</p>
 <ul>
 <li><a href="#configure-bicepconfigjson">Configure <code>bicepconfig.json</code></a></li>
 <li><a href="#granting-access-to-a-private-registry">Granting access to a private registry</a></li>
 <li><a href="#set-pipeline-environment-variables">Set pipeline environment variables</a></li>
 </ul>
+<p>Some organizations may want to expose Bicep modules publically.
+This can be configured by enabling anonymous pull access.
+To configure your registry see <a href="https://learn.microsoft.com/azure/container-registry/anonymous-pull-access">Make your container registry content publicly available</a>.</p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
-<p>Currently it is not possible to connect to a private registry without any authentication.
-See issue <a href="https://github.com/Azure/PSRule.Rules.Azure/issues/2015">#2015</a> for details on annoymous access.</p>
+<p>To use anonymous pull access to a registry you must use a minimum of Bicep CLI version <strong>0.15.31</strong>.
+You can configure PSRule to check for the minimum Bicep version.
+See <a href="../setup/setup-bicep/#configuring-minimum-version">configuring minimum version</a> for information on how to enable this check.</p>
 </div>
 <h3 id="configure-bicepconfigjson">Configure <code>bicepconfig.json</code><a class="headerlink" href="#configure-bicepconfigjson" title="Permanent link">#</a></h3>
 <p>To authenticate to a private registry, configure <code>bicepconfig.json</code> by setting <a href="https://learn.microsoft.com/azure/azure-resource-manager/bicep/bicep-config-modules#configure-profiles-and-credentials">credentialPrecedence</a>.
@@ -8561,7 +8566,7 @@ To see a list visit <a href="https://docs.microsoft.com/dotnet/api/azure.identit
 <div class="tabbed-block">
 <p>Configure the <code>microsoft/ps-rule</code> action with Azure environment variables.</p>
 <div class="highlight"><pre><span></span><code><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Analyze Azure template files</span>
-<span class="w">  </span><span class="nt">uses</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">microsoft/ps-rule@v2.7.0</span>
+<span class="w">  </span><span class="nt">uses</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">microsoft/ps-rule@v2.8.0</span>
 <span class="w">  </span><span class="nt">with</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">modules</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">PSRule.Rules.Azure,PSRule.Monitor</span>
 <span class="w">    </span><span class="nt">conventions</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Monitor.LogAnalytics.Import</span>
@@ -8609,7 +8614,7 @@ To keep <code>BICEPREGISTRYCLIENTSECRET</code> secure, use a <a href="https://do
   <small>
     
       Last update:
-      2023-02-14
+      2023-04-07
     
   </small>
 </div>

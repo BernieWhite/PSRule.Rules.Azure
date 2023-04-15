@@ -3473,6 +3473,13 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#notes" class="md-nav__link">
+    Notes
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#links" class="md-nav__link">
     Links
   </a>
@@ -8220,6 +8227,13 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#notes" class="md-nav__link">
+    Notes
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#links" class="md-nav__link">
     Links
   </a>
@@ -8262,18 +8276,16 @@
   <!-- Markdown content -->
   <h1 id="use-app-service-always-on">Use App Service Always On<a class="headerlink" href="#use-app-service-always-on" title="Permanent link">#</a></h1>
 <nav class="md-tags"><span class="md-tag">Azure.AppService.AlwaysOn</span><span class="md-tag">AZR-000077</span><span class="md-tag">Error</span></nav>
-<p><a href="../module/#performance-efficiency"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M1.527 13.237a1.75 1.75 0 0 1 0-2.474l9.272-9.273a1.75 1.75 0 0 1 2.475 0l9.272 9.273a1.75 1.75 0 0 1 0 2.474l-9.272 9.272a1.75 1.75 0 0 1-2.475 0Zm1.06-1.414a.25.25 0 0 0 0 .354l9.273 9.272a.25.25 0 0 0 .353 0l9.272-9.272a.25.25 0 0 0 0-.354l-9.272-9.272a.25.25 0 0 0-.353 0Z"/></svg></span> Performance Efficiency</a>
+<p><a href="../module/#reliability"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M1.527 13.237a1.75 1.75 0 0 1 0-2.474l9.272-9.273a1.75 1.75 0 0 1 2.475 0l9.272 9.273a1.75 1.75 0 0 1 0 2.474l-9.272 9.272a1.75 1.75 0 0 1-2.475 0Zm1.06-1.414a.25.25 0 0 0 0 .354l9.273 9.272a.25.25 0 0 0 .353 0l9.272-9.272a.25.25 0 0 0 0-.354l-9.272-9.272a.25.25 0 0 0-.353 0Z"/></svg></span> Reliability</a>
  · <a href="../resource/#app-service"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13.152.682a2.251 2.251 0 0 1 2.269 0l.007.004 6.957 4.276a2.277 2.277 0 0 1 1.126 1.964v7.516c0 .81-.432 1.56-1.133 1.968l-.002.001-11.964 7.037-.004.003c-.706.41-1.578.41-2.284 0l-.026-.015-6.503-4.502a2.268 2.268 0 0 1-1.096-1.943V9.438c0-.392.1-.77.284-1.1l.003-.006.014-.026c.197-.342.48-.627.82-.827h.002L13.152.681Zm.757 1.295h-.001L2.648 8.616l6.248 4.247a.775.775 0 0 0 .758-.01h.001l11.633-6.804-6.629-4.074a.75.75 0 0 0-.75.003ZM8.517 14.33a2.286 2.286 0 0 1-.393-.18l-.023-.014-6.102-4.147v7.003c0 .275.145.528.379.664l.025.014 6.114 4.232V14.33ZM18 9.709l-3.25 1.9v7.548L18 17.245Zm-7.59 4.438-.002.002a2.296 2.296 0 0 1-.391.18v7.612l3.233-1.902v-7.552Zm9.09-5.316v7.532l2.124-1.25a.776.776 0 0 0 .387-.671V7.363Z"/></svg></span> App Service</a>
  · <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M7.75 6.5a1.25 1.25 0 1 0 0 2.5 1.25 1.25 0 0 0 0-2.5Z"/><path d="M2.5 1h8.44a1.5 1.5 0 0 1 1.06.44l10.25 10.25a1.5 1.5 0 0 1 0 2.12l-8.44 8.44a1.5 1.5 0 0 1-2.12 0L1.44 12A1.497 1.497 0 0 1 1 10.94V2.5A1.5 1.5 0 0 1 2.5 1Zm0 1.5v8.44l10.25 10.25 8.44-8.44L10.94 2.5Z"/></svg></span> 2020_12</p>
 <p>Configure Always On for App Service apps.</p>
 <h2 id="description">Description<a class="headerlink" href="#description" title="Permanent link">#</a></h2>
 <p>Azure App Service apps are automatically unloaded when there's no traffic.
 Unloading apps reduces resource consumption when apps share a single App Services Plan.
-After an app have been unloaded, the next web request will trigger a cold start of the app.</p>
-<p>A cold start of the app can cause a noticeable performance issues and request timeouts.</p>
-<p>Continuous WebJobs or WebJobs triggered with a CRON expression must use always on to start.</p>
-<p>The Always On feature is implemented by the App Service load balancer,
-periodically sending requests to the application root.</p>
+After an app have been unloaded, the next web request will trigger a cold start of the app.
+A cold start of the app can cause request timeouts.</p>
+<p>Web apps using continuous WebJobs or WebJobs triggered with a CRON expression must use always on to start.</p>
 <h2 id="recommendation">Recommendation<a class="headerlink" href="#recommendation" title="Permanent link">#</a></h2>
 <p>Consider enabling Always On for each App Services app.</p>
 <h2 id="examples">Examples<a class="headerlink" href="#examples" title="Permanent link">#</a></h2>
@@ -8330,10 +8342,20 @@ periodically sending requests to the application root.</p>
   tags: tags
 }
 </code></pre></div>
+<h2 id="notes">Notes<a class="headerlink" href="#notes" title="Permanent link">#</a></h2>
+<p>The Always On feature of App Service is not applicable to Azure Functions and Standard Logic Apps under most circumstances.
+To reduce false positives, this rule ignores apps based on Azure Functions and Standard Logic Apps.</p>
+<p>When running in a Consumption Plan or Premium Plan you should not enable Always On.
+On a Consumption plan the platform activates function apps automatically.
+On a Premium plan the platform keeps your desired number of pre-warmed instances always on automatically.</p>
 <h2 id="links">Links<a class="headerlink" href="#links" title="Permanent link">#</a></h2>
 <ul>
-<li><a href="https://docs.microsoft.com/azure/app-service/configure-common#configure-general-settings">Configure an App Service app</a></li>
-<li><a href="https://docs.microsoft.com/azure/templates/microsoft.web/sites#siteconfig-object">Azure deployment reference</a></li>
+<li><a href="https://learn.microsoft.com/azure/architecture/framework/services/compute/azure-app-service/reliability">Azure App Service and reliability</a></li>
+<li><a href="https://learn.microsoft.com/azure/app-service/configure-common#configure-general-settings">Configure an App Service app</a></li>
+<li><a href="https://azure.github.io/AppService/2020/05/15/Robust-Apps-for-the-cloud.html#update-your-default-settings">The Ultimate Guide to Running Healthy Apps in the Cloud</a></li>
+<li><a href="https://github.com/Azure/Azure-Functions/wiki/Enable-Always-On-when-running-on-dedicated-App-Service-Plan">Always on with Azure Functions</a></li>
+<li><a href="https://learn.microsoft.com/azure/azure-functions/dedicated-plan">Dedicated hosting plans for Azure Functions</a></li>
+<li><a href="https://learn.microsoft.com/azure/templates/microsoft.web/sites#siteconfig-object">Azure deployment reference</a></li>
 </ul>
 
   <!-- Last update of source file -->
@@ -8344,7 +8366,7 @@ periodically sending requests to the application root.</p>
   <small>
     
       Last update:
-      2022-11-27
+      2023-04-15
     
   </small>
 </div>

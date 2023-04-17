@@ -1058,6 +1058,20 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#v1260" class="md-nav__link">
+    v1.26.0
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#v1260-b0078-pre-release" class="md-nav__link">
+    v1.26.0-B0078 (pre-release)
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#v1260-b0040-pre-release" class="md-nav__link">
     v1.26.0-B0040 (pre-release)
   </a>
@@ -9386,6 +9400,20 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#v1260" class="md-nav__link">
+    v1.26.0
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#v1260-b0078-pre-release" class="md-nav__link">
+    v1.26.0-B0078 (pre-release)
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#v1260-b0040-pre-release" class="md-nav__link">
     v1.26.0-B0040 (pre-release)
   </a>
@@ -10662,6 +10690,121 @@
   See <a href="../upgrade-notes/">upgrade notes</a> for more information.</li>
 </ul>
 <h2 id="unreleased">Unreleased<a class="headerlink" href="#unreleased" title="Permanent link">#</a></h2>
+<h2 id="v1260">v1.26.0<a class="headerlink" href="#v1260" title="Permanent link">#</a></h2>
+<p>What's changed since v1.25.0:</p>
+<ul>
+<li>New features:<ul>
+<li>Added March 2023 baselines <code>Azure.GA_2023_03</code> and <code>Azure.Preview_2023_03</code> by <a href="https://github.com/BernieWhite">@BernieWhite</a>.
+  <a href="https://github.com/Azure/PSRule.Rules.Azure/issues/2138">#2138</a><ul>
+<li>Includes rules released before or during March 2023.</li>
+<li>Marked <code>Azure.GA_2022_12</code> and <code>Azure.Preview_2022_12</code> baselines as obsolete.</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>New rules:<ul>
+<li>API Management:<ul>
+<li>Check that wildcard <code>*</code> for any configuration option in CORS policies settings is not in use by <a href="https://github.com/BenjaminEngeset">@BenjaminEngeset</a>.
+  <a href="https://github.com/Azure/PSRule.Rules.Azure/issues/2073">#2073</a></li>
+</ul>
+</li>
+<li>Azure Kubernetes Service:<ul>
+<li>Check that the Defender profile with Azure Kubernetes Service clusters are enabled by <a href="https://github.com/BenjaminEngeset">@BenjaminEngeset</a>.
+  <a href="https://github.com/Azure/PSRule.Rules.Azure/issues/2123">#2123</a></li>
+</ul>
+</li>
+<li>Container App:<ul>
+<li>Check that internal-only ingress for container apps are configured by <a href="https://github.com/BenjaminEngeset">@BenjaminEngeset</a>.
+  <a href="https://github.com/Azure/PSRule.Rules.Azure/issues/2098">#2098</a></li>
+<li>Check that Azure File volumes for container apps are configured by <a href="https://github.com/BenjaminEngeset">@BenjaminEngeset</a>.
+  <a href="https://github.com/Azure/PSRule.Rules.Azure/issues/2101">#2101</a></li>
+<li>Check that the names of container apps meets the naming requirements by <a href="https://github.com/BenjaminEngeset">@BenjaminEngeset</a>.
+  <a href="https://github.com/Azure/PSRule.Rules.Azure/issues/2094">#2094</a></li>
+<li>Check that managed identity for container apps are configured by <a href="https://github.com/BenjaminEngeset">@BenjaminEngeset</a>.
+  <a href="https://github.com/Azure/PSRule.Rules.Azure/issues/2096">#2096</a></li>
+<li>Check that public network access for container apps environments are disabled by <a href="https://github.com/BenjaminEngeset">@BenjaminEngeset</a>.
+  <a href="https://github.com/Azure/PSRule.Rules.Azure/issues/2098">#2098</a></li>
+</ul>
+</li>
+<li>Deployment:<ul>
+<li>Check that the names of nested deployments meets the naming requirements of deployments by <a href="https://github.com/BenjaminEngeset">@BenjaminEngeset</a>.
+  <a href="https://github.com/Azure/PSRule.Rules.Azure/issues/1915">#1915</a></li>
+</ul>
+</li>
+<li>IoT Hub:<ul>
+<li>Check IoT Hubs in supported regions only uses TLS 1.2 version by <a href="https://github.com/BenjaminEngeset">@BenjaminEngeset</a>.
+  <a href="https://github.com/Azure/PSRule.Rules.Azure/issues/1996">#1996</a></li>
+</ul>
+</li>
+<li>Service Bus:<ul>
+<li>Check namespaces audit diagnostic logs are enabled by <a href="https://github.com/BenjaminEngeset">@BenjaminEngeset</a>.
+  <a href="https://github.com/Azure/PSRule.Rules.Azure/issues/1862">#1862</a></li>
+</ul>
+</li>
+<li>SQL Database:<ul>
+<li>Check that Azure AD-only authentication is enabled by <a href="https://github.com/BenjaminEngeset">@BenjaminEngeset</a>.
+  <a href="https://github.com/Azure/PSRule.Rules.Azure/issues/2119">#2119</a></li>
+<li>Check that Azure AD authentication is configured for SQL Managed Instances by <a href="https://github.com/BenjaminEngeset">@BenjaminEngeset</a>.
+  <a href="https://github.com/Azure/PSRule.Rules.Azure/issues/2117">#2117</a></li>
+</ul>
+</li>
+<li>SQL Managed Instance:<ul>
+<li>Check that managed identity for SQL Managed Instances are configured by <a href="https://github.com/BenjaminEngeset">@BenjaminEngeset</a>.
+  <a href="https://github.com/Azure/PSRule.Rules.Azure/issues/2120">#2120</a></li>
+<li>Check that Azure AD-only authentication is enabled by <a href="https://github.com/BenjaminEngeset">@BenjaminEngeset</a>.
+  <a href="https://github.com/Azure/PSRule.Rules.Azure/issues/2118">#2118</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li>Updated rules:<ul>
+<li>Azure Kubernetes Service:<ul>
+<li>Updated <code>Azure.AKS.Version</code> to use latest stable version <code>1.25.6</code> by <a href="https://github.com/BernieWhite">@BernieWhite</a>.
+  <a href="https://github.com/Azure/PSRule.Rules.Azure/issues/2136">#2136</a><ul>
+<li>Use <code>AZURE_AKS_CLUSTER_MINIMUM_VERSION</code> to configure the minimum version of the cluster.</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>General improvements:<ul>
+<li>Added a selector for premium Service Bus namespaces by <a href="https://github.com/BernieWhite">@BernieWhite</a>.
+  <a href="https://github.com/Azure/PSRule.Rules.Azure/issues/2091">#2091</a></li>
+<li>Improved export of in-flight deeply nested API Management policies by <a href="https://github.com/BernieWhite">@BernieWhite</a>.
+  <a href="https://github.com/Azure/PSRule.Rules.Azure/issues/2153">#2153</a></li>
+</ul>
+</li>
+<li>Engineering:<ul>
+<li>Bump Microsoft.CodeAnalysis.NetAnalyzers to v7.0.1.
+  <a href="https://github.com/Azure/PSRule.Rules.Azure/pull/2082">#2082</a></li>
+<li>Bump Newtonsoft.Json to v13.0.3.
+  <a href="https://github.com/Azure/PSRule.Rules.Azure/pull/2080">#2080</a></li>
+<li>Updated resource providers and policy aliases.
+  <a href="https://github.com/Azure/PSRule.Rules.Azure/pull/2144">#2144</a></li>
+<li>Bump PSRule to v2.8.1.
+  <a href="https://github.com/Azure/PSRule.Rules.Azure/pull/2155">#2155</a></li>
+<li>Bump Az.Resources to v6.6.0.
+  <a href="https://github.com/Azure/PSRule.Rules.Azure/pull/2155">#2155</a></li>
+<li>Bump Pester to v5.4.1.
+  <a href="https://github.com/Azure/PSRule.Rules.Azure/pull/2155">#2155</a></li>
+</ul>
+</li>
+<li>Bug fixes:<ul>
+<li>Fixed dependency issue of deployments across resource group scopes by <a href="https://github.com/BernieWhite">@BernieWhite</a>.
+  <a href="https://github.com/Azure/PSRule.Rules.Azure/issues/2111">#2111</a></li>
+<li>Fixed false positive with <code>Azure.Deployment.Name</code> by <a href="https://github.com/BernieWhite">@BernieWhite</a>.
+  <a href="https://github.com/Azure/PSRule.Rules.Azure/issues/2109">#2109</a></li>
+<li>Fixed false positives for <code>Azure.AppService.AlwaysOn</code> with Functions and Workflows by <a href="https://github.com/BernieWhite">@BernieWhite</a>.
+  <a href="https://github.com/Azure/PSRule.Rules.Azure/issues/943">#943</a></li>
+</ul>
+</li>
+</ul>
+<p>What's changed since pre-release v1.26.0-B0078:</p>
+<ul>
+<li>No additional changes.</li>
+</ul>
+<h2 id="v1260-b0078-pre-release">v1.26.0-B0078 (pre-release)<a class="headerlink" href="#v1260-b0078-pre-release" title="Permanent link">#</a></h2>
 <p>What's changed since pre-release v1.26.0-B0040:</p>
 <ul>
 <li>General improvements:<ul>
@@ -15251,7 +15394,7 @@ What's changed since v1.24.0:</p>
   <small>
     
       Last update:
-      2023-04-15
+      2023-04-17
     
   </small>
 </div>

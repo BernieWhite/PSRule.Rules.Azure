@@ -6,7 +6,7 @@
       <meta charset="utf-8">
       <meta name="viewport" content="width=device-width,initial-scale=1">
       
-        <meta name="description" content="API Management named values should be encrypted.">
+        <meta name="description" content="Encrypt all API Management named values with Key Vault secrets.">
       
       
         <meta name="author" content="Microsoft">
@@ -80,19 +80,19 @@
   <meta property="og:site_name" content="PSRule for Azure" />
   <meta property="og:type" content="article" />
   <meta property="og:title" content="PSRule for Azure - Azure.APIM.EncryptValues" />
-  <meta property="og:description" content="API Management named values should be encrypted." />
+  <meta property="og:description" content="Encrypt all API Management named values with Key Vault secrets." />
   <meta property="og:url" content="https://azure.github.io/PSRule.Rules.Azure/en/rules/Azure.APIM.EncryptValues/" />
   <meta property="og:image" content="https://repository-images.githubusercontent.com/184154668/58818c00-d496-11eb-9b77-016145022654" />
   <meta property="og:image:type" content="image/png" />
   <meta property="og:image:width" content="1280" />
   <meta property="og:image:height" content="640" />
-  <meta property="og:image:alt" content="API Management named values should be encrypted." />
+  <meta property="og:image:alt" content="Encrypt all API Management named values with Key Vault secrets." />
 
   <!-- Twitter meta tags -->
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:site" content="@github" />
   <meta name="twitter:title" content="PSRule for Azure - Azure.APIM.EncryptValues" />
-  <meta name="twitter:description" content="API Management named values should be encrypted." />
+  <meta name="twitter:description" content="Encrypt all API Management named values with Key Vault secrets." />
   <meta name="twitter:image" content="https://repository-images.githubusercontent.com/184154668/58818c00-d496-11eb-9b77-016145022654" />
 
 
@@ -2881,6 +2881,33 @@
         <li class="md-nav__item">
   <a href="#recommendation" class="md-nav__link">
     Recommendation
+  </a>
+  
+    <nav class="md-nav" aria-label="Recommendation">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#configure-with-azure-template" class="md-nav__link">
+    Configure with Azure template
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#configure-with-bicep" class="md-nav__link">
+    Configure with Bicep
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#notes" class="md-nav__link">
+    Notes
   </a>
   
 </li>
@@ -8163,6 +8190,33 @@
     Recommendation
   </a>
   
+    <nav class="md-nav" aria-label="Recommendation">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#configure-with-azure-template" class="md-nav__link">
+    Configure with Azure template
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#configure-with-bicep" class="md-nav__link">
+    Configure with Bicep
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#notes" class="md-nav__link">
+    Notes
+  </a>
+  
 </li>
       
         <li class="md-nav__item">
@@ -8210,19 +8264,74 @@
 <nav class="md-tags"><span class="md-tag">Azure.APIM.EncryptValues</span><span class="md-tag">AZR-000045</span><span class="md-tag">Error</span></nav>
 <p><a href="../module/#security"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M1.527 13.237a1.75 1.75 0 0 1 0-2.474l9.272-9.273a1.75 1.75 0 0 1 2.475 0l9.272 9.273a1.75 1.75 0 0 1 0 2.474l-9.272 9.272a1.75 1.75 0 0 1-2.475 0Zm1.06-1.414a.25.25 0 0 0 0 .354l9.273 9.272a.25.25 0 0 0 .353 0l9.272-9.272a.25.25 0 0 0 0-.354l-9.272-9.272a.25.25 0 0 0-.353 0Z"/></svg></span> Security</a>
  · <a href="../resource/#api-management"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13.152.682a2.251 2.251 0 0 1 2.269 0l.007.004 6.957 4.276a2.277 2.277 0 0 1 1.126 1.964v7.516c0 .81-.432 1.56-1.133 1.968l-.002.001-11.964 7.037-.004.003c-.706.41-1.578.41-2.284 0l-.026-.015-6.503-4.502a2.268 2.268 0 0 1-1.096-1.943V9.438c0-.392.1-.77.284-1.1l.003-.006.014-.026c.197-.342.48-.627.82-.827h.002L13.152.681Zm.757 1.295h-.001L2.648 8.616l6.248 4.247a.775.775 0 0 0 .758-.01h.001l11.633-6.804-6.629-4.074a.75.75 0 0 0-.75.003ZM8.517 14.33a2.286 2.286 0 0 1-.393-.18l-.023-.014-6.102-4.147v7.003c0 .275.145.528.379.664l.025.014 6.114 4.232V14.33ZM18 9.709l-3.25 1.9v7.548L18 17.245Zm-7.59 4.438-.002.002a2.296 2.296 0 0 1-.391.18v7.612l3.233-1.902v-7.552Zm9.09-5.316v7.532l2.124-1.25a.776.776 0 0 0 .387-.671V7.363Z"/></svg></span> API Management</a>
- · <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M7.75 6.5a1.25 1.25 0 1 0 0 2.5 1.25 1.25 0 0 0 0-2.5Z"/><path d="M2.5 1h8.44a1.5 1.5 0 0 1 1.06.44l10.25 10.25a1.5 1.5 0 0 1 0 2.12l-8.44 8.44a1.5 1.5 0 0 1-2.12 0L1.44 12A1.497 1.497 0 0 1 1 10.94V2.5A1.5 1.5 0 0 1 2.5 1Zm0 1.5v8.44l10.25 10.25 8.44-8.44L10.94 2.5Z"/></svg></span> 2020_06</p>
-<p>API Management named values should be encrypted.</p>
+ · <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M7.75 6.5a1.25 1.25 0 1 0 0 2.5 1.25 1.25 0 0 0 0-2.5Z"/><path d="M2.5 1h8.44a1.5 1.5 0 0 1 1.06.44l10.25 10.25a1.5 1.5 0 0 1 0 2.12l-8.44 8.44a1.5 1.5 0 0 1-2.12 0L1.44 12A1.497 1.497 0 0 1 1 10.94V2.5A1.5 1.5 0 0 1 2.5 1Zm0 1.5v8.44l10.25 10.25 8.44-8.44L10.94 2.5Z"/></svg></span> 2023_06</p>
+<p>Encrypt all API Management named values with Key Vault secrets.</p>
 <h2 id="description">Description<a class="headerlink" href="#description" title="Permanent link">#</a></h2>
-<p>API Management allows configuration properties to be saved as named values.
-Named values are a key/ value pairs, which may contain sensitive information.</p>
-<p>When named values are marked as secret they are masked by default in the portal.</p>
+<p>Named values can be used to manage constant string values and secrets across all API configurations and policies.</p>
+<p>Named values are a global collection of name/value pairs in each API Management instance, which may contain sensitive information.</p>
+<p>Secret values can be stored either as encrypted strings in API Management (custom secrets) or by referencing secrets in Azure Key Vault.</p>
+<p>All secrets in Key Vault are stored encrypted.</p>
+<p>Using Key Vault secrets is recommended because it helps improve API Management security by:</p>
+<ul>
+<li>Granular access policies and audit logs can be used with secrets.</li>
+<li>Making it easier to rotate secrets within Key Vault.</li>
+<li>Secrets that are rotated in Key Vault are automatically refreshed within API Management within 4 hours.
+  You can also manually refresh the secret using the Azure portal or via the management REST API.</li>
+</ul>
 <h2 id="recommendation">Recommendation<a class="headerlink" href="#recommendation" title="Permanent link">#</a></h2>
-<p>Consider encrypting all API Management named values.</p>
-<p>Additionally consider, using Key Vault to store secrets.
-Key Vault improves security by tightly controlling access to secrets and improving management controls.</p>
+<p>Consider encrypting all API Management named values with Key Vault secrets.</p>
+<h3 id="configure-with-azure-template">Configure with Azure template<a class="headerlink" href="#configure-with-azure-template" title="Permanent link">#</a></h3>
+<p>To deploy API Management named values that pass this rule:</p>
+<ul>
+<li>Configure a named value sub-resource.</li>
+<li>Configure the <code>properties.keyVault.secretIdentifier</code> property.</li>
+</ul>
+<p>For example:</p>
+<div class="highlight"><span class="filename">Azure Template snippet</span><pre><span></span><code><span class="p">{</span>
+<span class="w">  </span><span class="nt">&quot;type&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Microsoft.ApiManagement/service/namedValues&quot;</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">&quot;apiVersion&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;2022-08-01&quot;</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">&quot;name&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;[format(&#39;{0}/{1}&#39;, parameters(&#39;name&#39;), parameters(&#39;namedValue&#39;))]&quot;</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">&quot;properties&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="nt">&quot;displayName&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;[parameters(&#39;namedValue&#39;)]&quot;</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">&quot;keyVault&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">      </span><span class="nt">&quot;identityClientId&quot;</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span>
+<span class="w">      </span><span class="nt">&quot;secretIdentifier&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;[format(&#39;https://myVault.vault.azure.net/secrets/{0}&#39;, parameters(&#39;namedValue&#39;))]&quot;</span>
+<span class="w">    </span><span class="p">},</span>
+<span class="w">    </span><span class="nt">&quot;tags&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[]</span>
+<span class="w">  </span><span class="p">},</span>
+<span class="w">  </span><span class="nt">&quot;dependsOn&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
+<span class="w">    </span><span class="s2">&quot;[resourceId(&#39;Microsoft.ApiManagement/service&#39;, parameters(&#39;name&#39;))]&quot;</span>
+<span class="w">  </span><span class="p">]</span>
+<span class="p">}</span>
+</code></pre></div>
+<h3 id="configure-with-bicep">Configure with Bicep<a class="headerlink" href="#configure-with-bicep" title="Permanent link">#</a></h3>
+<p>To deploy API Management named values that pass this rule:</p>
+<ul>
+<li>Configure a named value sub-resource.</li>
+<li>Configure the <code>properties.keyVault.secretIdentifier</code> property.</li>
+</ul>
+<p>For example:</p>
+<div class="highlight"><span class="filename">Azure Bicep snippet</span><pre><span></span><code>resource apimNamedValue &#39;Microsoft.ApiManagement/service/namedValues@2022-08-01&#39; = {
+  name: namedValue
+  parent: apim
+  properties: {
+    displayName: namedValue
+    keyVault: {
+      identityClientId: null
+      secretIdentifier: &#39;https://myVault.vault.azure.net/secrets/${namedValue}&#39;
+    }
+    tags: []
+  }
+}
+</code></pre></div>
+<h2 id="notes">Notes<a class="headerlink" href="#notes" title="Permanent link">#</a></h2>
+<p>Using Key Vault secrets requires a system-assigned or user-assigned managed identity assigned to the API Management instance.
+The identity needs permissions to get and list secrets from the Key Vault. Also make sure to read the <code>Prerequisites for key vault integration</code> section in links.</p>
 <h2 id="links">Links<a class="headerlink" href="#links" title="Permanent link">#</a></h2>
 <ul>
-<li><a href="https://docs.microsoft.com/azure/api-management/api-management-howto-properties">Manage secrets using properties</a></li>
+<li><a href="https://learn.microsoft.com/azure/architecture/framework/security/design-storage-keys#key-storage">Key storage</a></li>
+<li><a href="https://learn.microsoft.com/azure/api-management/api-management-howto-properties?tabs=azure-portal#prerequisites-for-key-vault-integration">Prerequisites for key vault integration</a></li>
+<li><a href="https://learn.microsoft.com/azure/templates/microsoft.apimanagement/service/namedvalues#keyvaultcontractcreatepropertiesorkeyvaultcontractpr">Azure deployment reference</a></li>
 </ul>
 
   <!-- Last update of source file -->
@@ -8233,7 +8342,7 @@ Key Vault improves security by tightly controlling access to secrets and improvi
   <small>
     
       Last update:
-      2021-07-25
+      2023-04-19
     
   </small>
 </div>

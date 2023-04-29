@@ -5607,6 +5607,13 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#notes" class="md-nav__link">
+    Notes
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#links" class="md-nav__link">
     Links
   </a>
@@ -8254,6 +8261,13 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#notes" class="md-nav__link">
+    Notes
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#links" class="md-nav__link">
     Links
   </a>
@@ -8315,7 +8329,7 @@ Some rules may not be needed.</p>
 </ul>
 <div class="highlight"><span class="filename">Azure Template snippet</span><pre><span></span><code><span class="p">{</span>
 <span class="w">  </span><span class="nt">&quot;type&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Microsoft.Cache/redis/firewallRules&quot;</span><span class="p">,</span>
-<span class="w">  </span><span class="nt">&quot;apiVersion&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;2022-05-01&quot;</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">&quot;apiVersion&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;2022-06-01&quot;</span><span class="p">,</span>
 <span class="w">  </span><span class="nt">&quot;name&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;string&quot;</span><span class="p">,</span>
 <span class="w">  </span><span class="nt">&quot;properties&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
 <span class="w">    </span><span class="nt">&quot;startIP&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;string&quot;</span><span class="p">,</span>
@@ -8329,7 +8343,7 @@ Some rules may not be needed.</p>
 <li>Set the <code>properties.startIP</code> property to the start of the IP address range.</li>
 <li>Set the <code>properties.endIP</code> property to the end of the IP address range.</li>
 </ul>
-<div class="highlight"><span class="filename">Azure Bicep snippet</span><pre><span></span><code>resource symbolicname &#39;Microsoft.Cache/redis/firewallRules@2022-05-01&#39; = {
+<div class="highlight"><span class="filename">Azure Bicep snippet</span><pre><span></span><code>resource symbolicname &#39;Microsoft.Cache/redis/firewallRules@2022-06-01&#39; = {
   name: &#39;string&#39;
   parent: resourceSymbolicName
   properties: {
@@ -8338,10 +8352,14 @@ Some rules may not be needed.</p>
   }
 }
 </code></pre></div>
+<h2 id="notes">Notes<a class="headerlink" href="#notes" title="Permanent link">#</a></h2>
+<p>This rule is not applicable when Redis is configured to allow private connectivity by setting <code>properties.publicNetworkAccess</code> to <code>Disabled</code>.
+Firewall rules can be used with VNet injected caches, but not private endpoints.</p>
 <h2 id="links">Links<a class="headerlink" href="#links" title="Permanent link">#</a></h2>
 <ul>
-<li><a href="https://docs.microsoft.com/azure/azure-cache-for-redis/cache-configure#default-redis-server-configuration#firewall">How to configure Azure Cache for Redis - Firewall</a></li>
-<li><a href="https://learn.microsoft.com/azure/templates/microsoft.cache/redis">Azure deployment reference</a></li>
+<li><a href="https://learn.microsoft.com/azure/azure-cache-for-redis/cache-configure#default-redis-server-configuration#firewall">How to configure Azure Cache for Redis - Firewall</a></li>
+<li><a href="https://learn.microsoft.com/azure/azure-cache-for-redis/cache-network-isolation#limitations-of-firewall-rules">Limitations of firewall rules</a></li>
+<li><a href="https://learn.microsoft.com/azure/templates/microsoft.cache/redis/firewallrules">Azure deployment reference</a></li>
 </ul>
 
   <!-- Last update of source file -->
@@ -8352,7 +8370,7 @@ Some rules may not be needed.</p>
   <small>
     
       Last update:
-      2022-10-03
+      2023-04-29
     
   </small>
 </div>

@@ -2114,6 +2114,8 @@
         
           
         
+          
+        
       
       
         <label class="md-nav__link" for="__nav_4_5" id="__nav_4_5_label" tabindex="0">
@@ -2934,6 +2936,20 @@
     <li class="md-nav__item">
       <a href="../../../en/rules/Azure.APIM.Name/" class="md-nav__link">
         Azure.APIM.Name
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../en/rules/Azure.APIM.PolicyBase/" class="md-nav__link">
+        Azure.APIM.PolicyBase
       </a>
     </li>
   
@@ -8552,13 +8568,6 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#security-design-principles" class="md-nav__link">
-    Security design principles
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
   <a href="#security-operations" class="md-nav__link">
     Security operations
   </a>
@@ -10726,6 +10735,24 @@
 <td>Error</td>
 </tr>
 <tr>
+<td><a href="Azure.APIM.CORSPolicy.md">Azure.APIM.CORSPolicy</a></td>
+<td>Avoid using wildcard for any configuration option in CORS policies.</td>
+<td>Important</td>
+<td>Error</td>
+</tr>
+<tr>
+<td><a href="Azure.APIM.PolicyBase.md">Azure.APIM.PolicyBase</a></td>
+<td>Base element for any policy element in a section should be configured.</td>
+<td>Important</td>
+<td>Error</td>
+</tr>
+<tr>
+<td><a href="Azure.ContainerApp.Insecure.md">Azure.ContainerApp.Insecure</a></td>
+<td>Ensure insecure inbound traffic is not permitted to the container app.</td>
+<td>Important</td>
+<td>Error</td>
+</tr>
+<tr>
 <td><a href="Azure.Resource.AllowedRegions.md">Azure.Resource.AllowedRegions</a></td>
 <td>Resources should be deployed to allowed regions.</td>
 <td>Awareness</td>
@@ -10777,12 +10804,6 @@
 <tr>
 <td><a href="Azure.CDN.MinTLS.md">Azure.CDN.MinTLS</a></td>
 <td>Azure CDN endpoints should reject TLS versions older than 1.2.</td>
-<td>Important</td>
-<td>Error</td>
-</tr>
-<tr>
-<td><a href="Azure.ContainerApp.Insecure.md">Azure.ContainerApp.Insecure</a></td>
-<td>Ensure insecure inbound traffic is not permitted to the container app.</td>
 <td>Important</td>
 <td>Error</td>
 </tr>
@@ -11447,25 +11468,6 @@
 </tr>
 </tbody>
 </table>
-<h3 id="security-design-principles">Security design principles<a class="headerlink" href="#security-design-principles" title="Permanent link">#</a></h3>
-<table>
-<thead>
-<tr>
-<th>Name</th>
-<th>Synopsis</th>
-<th>Severity</th>
-<th>Level</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><a href="Azure.APIM.CORSPolicy.md">Azure.APIM.CORSPolicy</a></td>
-<td>Wildcard * for any configuration option in CORS policies settings should not be used.</td>
-<td>Important</td>
-<td>Error</td>
-</tr>
-</tbody>
-</table>
 <h3 id="security-operations">Security operations<a class="headerlink" href="#security-operations" title="Permanent link">#</a></h3>
 <table>
 <thead>
@@ -11597,7 +11599,7 @@
   <small>
     
       Last update:
-      2023-04-23
+      2023-04-29
     
   </small>
 </div>

@@ -2118,6 +2118,8 @@
         
           
         
+          
+        
       
       
         <label class="md-nav__link" for="__nav_4_5" id="__nav_4_5_label" tabindex="0">
@@ -2938,6 +2940,20 @@
     <li class="md-nav__item">
       <a href="../../rules/Azure.APIM.Name/" class="md-nav__link">
         Azure.APIM.Name
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../rules/Azure.APIM.PolicyBase/" class="md-nav__link">
+        Azure.APIM.PolicyBase
       </a>
     </li>
   
@@ -8187,7 +8203,7 @@
   <h1 id="azuredefault">Azure.Default<a class="headerlink" href="#azuredefault" title="Permanent link">#</a></h1>
 <p>Default baseline for Azure rules.</p>
 <h2 id="rules">Rules<a class="headerlink" href="#rules" title="Permanent link">#</a></h2>
-<p>The following rules are included within <code>Azure.Default</code>. This baseline includes a total of 364 rules.</p>
+<p>The following rules are included within <code>Azure.Default</code>. This baseline includes a total of 366 rules.</p>
 <table>
 <thead>
 <tr>
@@ -8419,7 +8435,7 @@
 </tr>
 <tr>
 <td><a href="../../rules/Azure.APIM.CORSPolicy/">Azure.APIM.CORSPolicy</a></td>
-<td>Wildcard * for any configuration option in CORS policies settings should not be used.</td>
+<td>Avoid using wildcard for any configuration option in CORS policies.</td>
 <td>Important</td>
 </tr>
 <tr>
@@ -8461,6 +8477,11 @@
 <td><a href="../../rules/Azure.APIM.Name/">Azure.APIM.Name</a></td>
 <td>API Management service names should meet naming requirements.</td>
 <td>Awareness</td>
+</tr>
+<tr>
+<td><a href="../../rules/Azure.APIM.PolicyBase/">Azure.APIM.PolicyBase</a></td>
+<td>Base element for any policy element in a section should be configured.</td>
+<td>Important</td>
 </tr>
 <tr>
 <td><a href="../../rules/Azure.APIM.ProductApproval/">Azure.APIM.ProductApproval</a></td>
@@ -8755,6 +8776,11 @@
 <tr>
 <td><a href="../../rules/Azure.ContainerApp.ExternalIngress/">Azure.ContainerApp.ExternalIngress</a></td>
 <td>Limit inbound communication for Container Apps is limited to callers within the Container Apps Environment.</td>
+<td>Important</td>
+</tr>
+<tr>
+<td><a href="../../rules/Azure.ContainerApp.Insecure/">Azure.ContainerApp.Insecure</a></td>
+<td>Ensure insecure inbound traffic is not permitted to the container app.</td>
 <td>Important</td>
 </tr>
 <tr>
@@ -10028,7 +10054,7 @@
   <small>
     
       Last update:
-      2023-04-23
+      2023-04-29
     
   </small>
 </div>

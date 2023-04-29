@@ -1,0 +1,29 @@
+<policies>
+  <inbound>
+    <cors allow-credentials="true">
+      <allowed-origins>
+        <origin>https://contoso.developer.azure-api.net</origin>
+        <origin>https://developer.contoso.com</origin>
+      </allowed-origins>
+      <allowed-methods preflight-result-max-age="300">
+        <method>GET</method>
+        <method>PUT</method>
+        <method>POST</method>
+        <method>PATCH</method>
+        <method>HEAD</method>
+        <method>DELETE</method>
+        <method>OPTIONS</method>
+      </allowed-methods>
+      <allowed-headers>
+        <header>Content-Type</header>
+        <header>Cache-Control</header>
+        <header>Authorization</header>
+      </allowed-headers>
+    </cors>
+  </inbound>
+  <backend>
+    <forward-request />
+  </backend>
+  <outbound />
+  <on-error />
+</policies>

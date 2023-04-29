@@ -6,7 +6,7 @@
       <meta charset="utf-8">
       <meta name="viewport" content="width=device-width,initial-scale=1">
       
-        <meta name="description" content="Wildcard * for any configuration option in CORS policies settings should not be used.">
+        <meta name="description" content="Avoid using wildcard for any configuration option in CORS policies.">
       
       
         <meta name="author" content="Microsoft">
@@ -80,19 +80,19 @@
   <meta property="og:site_name" content="PSRule for Azure" />
   <meta property="og:type" content="article" />
   <meta property="og:title" content="PSRule for Azure - Azure.APIM.CORSPolicy" />
-  <meta property="og:description" content="Wildcard * for any configuration option in CORS policies settings should not be used." />
+  <meta property="og:description" content="Avoid using wildcard for any configuration option in CORS policies." />
   <meta property="og:url" content="https://azure.github.io/PSRule.Rules.Azure/en/rules/Azure.APIM.CORSPolicy/" />
   <meta property="og:image" content="https://repository-images.githubusercontent.com/184154668/58818c00-d496-11eb-9b77-016145022654" />
   <meta property="og:image:type" content="image/png" />
   <meta property="og:image:width" content="1280" />
   <meta property="og:image:height" content="640" />
-  <meta property="og:image:alt" content="Wildcard * for any configuration option in CORS policies settings should not be used." />
+  <meta property="og:image:alt" content="Avoid using wildcard for any configuration option in CORS policies." />
 
   <!-- Twitter meta tags -->
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:site" content="@github" />
   <meta name="twitter:title" content="PSRule for Azure - Azure.APIM.CORSPolicy" />
-  <meta name="twitter:description" content="Wildcard * for any configuration option in CORS policies settings should not be used." />
+  <meta name="twitter:description" content="Avoid using wildcard for any configuration option in CORS policies." />
   <meta name="twitter:image" content="https://repository-images.githubusercontent.com/184154668/58818c00-d496-11eb-9b77-016145022654" />
 
 
@@ -114,7 +114,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#cors-policy" class="md-skip">
+        <a href="#avoid-wildcards-in-apim-cors-policies" class="md-skip">
           Skip to content
         </a>
       
@@ -2122,6 +2122,8 @@
         
           
         
+          
+        
       
       
         <label class="md-nav__link" for="__nav_4_5" id="__nav_4_5_label" tabindex="0">
@@ -2856,6 +2858,13 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
+  <a href="#configure-api-management-policy" class="md-nav__link">
+    Configure API Management policy
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#configure-with-azure-template" class="md-nav__link">
     Configure with Azure template
   </a>
@@ -3031,6 +3040,20 @@
     <li class="md-nav__item">
       <a href="../Azure.APIM.Name/" class="md-nav__link">
         Azure.APIM.Name
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Azure.APIM.PolicyBase/" class="md-nav__link">
+        Azure.APIM.PolicyBase
       </a>
     </li>
   
@@ -8226,6 +8249,13 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
+  <a href="#configure-api-management-policy" class="md-nav__link">
+    Configure API Management policy
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#configure-with-azure-template" class="md-nav__link">
     Configure with Azure template
   </a>
@@ -8292,17 +8322,64 @@
   
 
   <!-- Markdown content -->
-  <h1 id="cors-policy">CORS Policy<a class="headerlink" href="#cors-policy" title="Permanent link">#</a></h1>
+  <h1 id="avoid-wildcards-in-apim-cors-policies">Avoid wildcards in APIM CORS policies<a class="headerlink" href="#avoid-wildcards-in-apim-cors-policies" title="Permanent link">#</a></h1>
 <nav class="md-tags"><span class="md-tag">Azure.APIM.CORSPolicy</span><span class="md-tag">AZR-000365</span><span class="md-tag">Error</span></nav>
 <p><a href="../module/#security"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M1.527 13.237a1.75 1.75 0 0 1 0-2.474l9.272-9.273a1.75 1.75 0 0 1 2.475 0l9.272 9.273a1.75 1.75 0 0 1 0 2.474l-9.272 9.272a1.75 1.75 0 0 1-2.475 0Zm1.06-1.414a.25.25 0 0 0 0 .354l9.273 9.272a.25.25 0 0 0 .353 0l9.272-9.272a.25.25 0 0 0 0-.354l-9.272-9.272a.25.25 0 0 0-.353 0Z"/></svg></span> Security</a>
  · <a href="../resource/#api-management"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13.152.682a2.251 2.251 0 0 1 2.269 0l.007.004 6.957 4.276a2.277 2.277 0 0 1 1.126 1.964v7.516c0 .81-.432 1.56-1.133 1.968l-.002.001-11.964 7.037-.004.003c-.706.41-1.578.41-2.284 0l-.026-.015-6.503-4.502a2.268 2.268 0 0 1-1.096-1.943V9.438c0-.392.1-.77.284-1.1l.003-.006.014-.026c.197-.342.48-.627.82-.827h.002L13.152.681Zm.757 1.295h-.001L2.648 8.616l6.248 4.247a.775.775 0 0 0 .758-.01h.001l11.633-6.804-6.629-4.074a.75.75 0 0 0-.75.003ZM8.517 14.33a2.286 2.286 0 0 1-.393-.18l-.023-.014-6.102-4.147v7.003c0 .275.145.528.379.664l.025.014 6.114 4.232V14.33ZM18 9.709l-3.25 1.9v7.548L18 17.245Zm-7.59 4.438-.002.002a2.296 2.296 0 0 1-.391.18v7.612l3.233-1.902v-7.552Zm9.09-5.316v7.532l2.124-1.25a.776.776 0 0 0 .387-.671V7.363Z"/></svg></span> API Management</a>
  · <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M7.75 6.5a1.25 1.25 0 1 0 0 2.5 1.25 1.25 0 0 0 0-2.5Z"/><path d="M2.5 1h8.44a1.5 1.5 0 0 1 1.06.44l10.25 10.25a1.5 1.5 0 0 1 0 2.12l-8.44 8.44a1.5 1.5 0 0 1-2.12 0L1.44 12A1.497 1.497 0 0 1 1 10.94V2.5A1.5 1.5 0 0 1 2.5 1Zm0 1.5v8.44l10.25 10.25 8.44-8.44L10.94 2.5Z"/></svg></span> 2023_03</p>
-<p>Wildcard * for any configuration option in CORS policies settings should not be used.</p>
+<p>Avoid using wildcard for any configuration option in CORS policies.</p>
 <h2 id="description">Description<a class="headerlink" href="#description" title="Permanent link">#</a></h2>
-<p>Using wildcard * with CORS policies is overly permissive and may make an API more vulnerable to certain API security threats.</p>
+<p>The API Management <code>cors</code> policy adds cross-origin resource sharing (CORS) support to an operation or APIs.</p>
+<p>CORS is not a security feature.
+CORS is a W3C standard that allows a server to relax the same-origin policy enforced by modern browsers.
+CORS uses HTTP headers that allows API Management (and other HTTP servers) to indicate any allowed origins.</p>
+<p>Using wildcard (<code>*</code>) in any policy is overly permissive and may reduce the effectiveness of browser same-origin policy enforcement.</p>
 <h2 id="recommendation">Recommendation<a class="headerlink" href="#recommendation" title="Permanent link">#</a></h2>
-<p>Consider configuring the CORS policy and don't use wildcard * for any configuration option. Instead, explicitly list allowed values.</p>
+<p>Consider configuring the CORS policy by specifying explicit values for each property.</p>
 <h2 id="examples">Examples<a class="headerlink" href="#examples" title="Permanent link">#</a></h2>
+<h3 id="configure-api-management-policy">Configure API Management policy<a class="headerlink" href="#configure-api-management-policy" title="Permanent link">#</a></h3>
+<p>To deploy API Management CORS policies that pass this rule:</p>
+<ul>
+<li>When configuring <code>cors</code> policies provide the exact values for all propeties.</li>
+<li>Avoid using wildcards for any property of the <code>cors</code> policy including:<ul>
+<li><code>allowed-origins</code></li>
+<li><code>allowed-methods</code></li>
+<li><code>allowed-headers</code></li>
+<li><code>expose-headers</code></li>
+</ul>
+</li>
+</ul>
+<p>For example a global scoped policy:</p>
+<div class="highlight"><span class="filename">API Management policy</span><pre><span></span><code><span class="nt">&lt;policies&gt;</span>
+<span class="w">  </span><span class="nt">&lt;inbound&gt;</span>
+<span class="w">    </span><span class="nt">&lt;cors</span><span class="w"> </span><span class="na">allow-credentials=</span><span class="s">&quot;true&quot;</span><span class="nt">&gt;</span>
+<span class="w">      </span><span class="nt">&lt;allowed-origins&gt;</span>
+<span class="w">        </span><span class="nt">&lt;origin&gt;</span>https://contoso.developer.azure-api.net<span class="nt">&lt;/origin&gt;</span>
+<span class="w">        </span><span class="nt">&lt;origin&gt;</span>https://developer.contoso.com<span class="nt">&lt;/origin&gt;</span>
+<span class="w">      </span><span class="nt">&lt;/allowed-origins&gt;</span>
+<span class="w">      </span><span class="nt">&lt;allowed-methods</span><span class="w"> </span><span class="na">preflight-result-max-age=</span><span class="s">&quot;300&quot;</span><span class="nt">&gt;</span>
+<span class="w">        </span><span class="nt">&lt;method&gt;</span>GET<span class="nt">&lt;/method&gt;</span>
+<span class="w">        </span><span class="nt">&lt;method&gt;</span>PUT<span class="nt">&lt;/method&gt;</span>
+<span class="w">        </span><span class="nt">&lt;method&gt;</span>POST<span class="nt">&lt;/method&gt;</span>
+<span class="w">        </span><span class="nt">&lt;method&gt;</span>PATCH<span class="nt">&lt;/method&gt;</span>
+<span class="w">        </span><span class="nt">&lt;method&gt;</span>HEAD<span class="nt">&lt;/method&gt;</span>
+<span class="w">        </span><span class="nt">&lt;method&gt;</span>DELETE<span class="nt">&lt;/method&gt;</span>
+<span class="w">        </span><span class="nt">&lt;method&gt;</span>OPTIONS<span class="nt">&lt;/method&gt;</span>
+<span class="w">      </span><span class="nt">&lt;/allowed-methods&gt;</span>
+<span class="w">      </span><span class="nt">&lt;allowed-headers&gt;</span>
+<span class="w">        </span><span class="nt">&lt;header&gt;</span>Content-Type<span class="nt">&lt;/header&gt;</span>
+<span class="w">        </span><span class="nt">&lt;header&gt;</span>Cache-Control<span class="nt">&lt;/header&gt;</span>
+<span class="w">        </span><span class="nt">&lt;header&gt;</span>Authorization<span class="nt">&lt;/header&gt;</span>
+<span class="w">      </span><span class="nt">&lt;/allowed-headers&gt;</span>
+<span class="w">    </span><span class="nt">&lt;/cors&gt;</span>
+<span class="w">  </span><span class="nt">&lt;/inbound&gt;</span>
+<span class="w">  </span><span class="nt">&lt;backend&gt;</span>
+<span class="w">    </span><span class="nt">&lt;forward-request</span><span class="w"> </span><span class="nt">/&gt;</span>
+<span class="w">  </span><span class="nt">&lt;/backend&gt;</span>
+<span class="w">  </span><span class="nt">&lt;outbound</span><span class="w"> </span><span class="nt">/&gt;</span>
+<span class="w">  </span><span class="nt">&lt;on-error</span><span class="w"> </span><span class="nt">/&gt;</span>
+<span class="nt">&lt;/policies&gt;</span>
+</code></pre></div>
 <h3 id="configure-with-azure-template">Configure with Azure template<a class="headerlink" href="#configure-with-azure-template" title="Permanent link">#</a></h3>
 <p>To deploy API Management CORS policies that pass this rule:</p>
 <ul>
@@ -8310,21 +8387,18 @@
 <li>Avoid using wildcards <code>*</code> for any CORS policy element in <code>properties.value</code> property.
   Instead provide exact values.</li>
 </ul>
-<p>For example an global CORS policy:</p>
+<p>For example a global scoped policy:</p>
 <div class="highlight"><span class="filename">Azure Template snippet</span><pre><span></span><code><span class="p">{</span>
 <span class="w">  </span><span class="nt">&quot;type&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Microsoft.ApiManagement/service/policies&quot;</span><span class="p">,</span>
-<span class="w">  </span><span class="nt">&quot;apiVersion&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;2021-08-01&quot;</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">&quot;apiVersion&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;2022-08-01&quot;</span><span class="p">,</span>
 <span class="w">  </span><span class="nt">&quot;name&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;[format(&#39;{0}/{1}&#39;, parameters(&#39;name&#39;), &#39;policy&#39;)]&quot;</span><span class="p">,</span>
 <span class="w">  </span><span class="nt">&quot;properties&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
-<span class="w">    </span><span class="nt">&quot;value&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;&lt;policies&gt;&lt;inbound&gt;&lt;cors allow-credentials=\&quot;true\&quot;&gt;&lt;allowed-origins&gt;&lt;origin&gt;__APIM__&lt;/origin&gt;&lt;/allowed-origins&gt;&lt;allowed-methods preflight-result-max-age=\&quot;300\&quot;&gt;&lt;method&gt;GET&lt;/method&gt;&lt;/allowed-methods&gt;&lt;allowed-headers&gt;&lt;header&gt;x-application&lt;/header&gt;&lt;/allowed-headers&gt;&lt;expose-headers&gt;&lt;header&gt;x-application-id&lt;/header&gt;&lt;/expose-headers&gt;&lt;/cors&gt;&lt;/inbound&gt;&lt;backend&gt;&lt;forward-request /&gt;&lt;/backend&gt;&lt;outbound /&gt;&lt;on-error /&gt;&lt;/policies&gt;&quot;</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">&quot;value&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;&lt;policies&gt;&lt;inbound&gt;&lt;cors allow-credentials=\&quot;true\&quot;&gt;&lt;allowed-origins&gt;&lt;origin&gt;https://contoso.developer.azure-api.net&lt;/origin&gt;&lt;origin&gt;https://developer.contoso.com&lt;/origin&gt;&lt;/allowed-origins&gt;&lt;allowed-methods preflight-result-max-age=\&quot;300\&quot;&gt;&lt;method&gt;GET&lt;/method&gt;&lt;method&gt;PUT&lt;/method&gt;&lt;method&gt;POST&lt;/method&gt;&lt;method&gt;PATCH&lt;/method&gt;&lt;method&gt;HEAD&lt;/method&gt;&lt;method&gt;DELETE&lt;/method&gt;&lt;method&gt;OPTIONS&lt;/method&gt;&lt;/allowed-methods&gt;&lt;allowed-headers&gt;&lt;header&gt;Content-Type&lt;/header&gt;&lt;header&gt;Cache-Control&lt;/header&gt;&lt;header&gt;Authorization&lt;/header&gt;&lt;/allowed-headers&gt;&lt;/cors&gt;&lt;/inbound&gt;&lt;backend&gt;&lt;forward-request /&gt;&lt;/backend&gt;&lt;outbound /&gt;&lt;on-error /&gt;&lt;/policies&gt;&quot;</span><span class="p">,</span>
 <span class="w">    </span><span class="nt">&quot;format&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;xml&quot;</span>
 <span class="w">  </span><span class="p">},</span>
 <span class="w">  </span><span class="nt">&quot;dependsOn&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
 <span class="w">    </span><span class="s2">&quot;[resourceId(&#39;Microsoft.ApiManagement/service&#39;, parameters(&#39;name&#39;))]&quot;</span>
-<span class="w">  </span><span class="p">],</span>
-<span class="w">  </span><span class="nt">&quot;metadata&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
-<span class="w">    </span><span class="nt">&quot;description&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Configure the API Management Service global policy.&quot;</span>
-<span class="w">  </span><span class="p">}</span>
+<span class="w">  </span><span class="p">]</span>
 <span class="p">}</span>
 </code></pre></div>
 <h3 id="configure-with-bicep">Configure with Bicep<a class="headerlink" href="#configure-with-bicep" title="Permanent link">#</a></h3>
@@ -8334,23 +8408,27 @@
 <li>Avoid using wildcards <code>*</code> for any CORS policy element in <code>properties.value</code> property.
   Instead provide exact values.</li>
 </ul>
-<p>For example:</p>
-<div class="highlight"><span class="filename">Azure Bicep snippet</span><pre><span></span><code>resource serviceName_policy &#39;Microsoft.ApiManagement/service/policies@2021-08-01&#39; = {
+<p>For example a global scoped policy:</p>
+<div class="highlight"><span class="filename">Azure Bicep snippet</span><pre><span></span><code>resource globalPolicy &#39;Microsoft.ApiManagement/service/policies@2022-08-01&#39; = {
   parent: service
   name: &#39;policy&#39;
   properties: {
-    value: &#39;&lt;policies&gt;&lt;inbound&gt;&lt;cors allow-credentials=&quot;true&quot;&gt;&lt;allowed-origins&gt;&lt;origin&gt;__APIM__&lt;/origin&gt;&lt;/allowed-origins&gt;&lt;allowed-methods preflight-result-max-age=&quot;300&quot;&gt;&lt;method&gt;GET&lt;/method&gt;&lt;/allowed-methods&gt;&lt;allowed-headers&gt;&lt;header&gt;x-application&lt;/header&gt;&lt;/allowed-headers&gt;&lt;expose-headers&gt;&lt;header&gt;x-application-id&lt;/header&gt;&lt;/expose-headers&gt;&lt;/cors&gt;&lt;/inbound&gt;&lt;backend&gt;&lt;forward-request /&gt;&lt;/backend&gt;&lt;outbound /&gt;&lt;on-error /&gt;&lt;/policies&gt;&#39;
+    value: &#39;&lt;policies&gt;&lt;inbound&gt;&lt;cors allow-credentials=&quot;true&quot;&gt;&lt;allowed-origins&gt;&lt;origin&gt;https://contoso.developer.azure-api.net&lt;/origin&gt;&lt;origin&gt;https://developer.contoso.com&lt;/origin&gt;&lt;/allowed-origins&gt;&lt;allowed-methods preflight-result-max-age=&quot;300&quot;&gt;&lt;method&gt;GET&lt;/method&gt;&lt;method&gt;PUT&lt;/method&gt;&lt;method&gt;POST&lt;/method&gt;&lt;method&gt;PATCH&lt;/method&gt;&lt;method&gt;HEAD&lt;/method&gt;&lt;method&gt;DELETE&lt;/method&gt;&lt;method&gt;OPTIONS&lt;/method&gt;&lt;/allowed-methods&gt;&lt;allowed-headers&gt;&lt;header&gt;Content-Type&lt;/header&gt;&lt;header&gt;Cache-Control&lt;/header&gt;&lt;header&gt;Authorization&lt;/header&gt;&lt;/allowed-headers&gt;&lt;/cors&gt;&lt;/inbound&gt;&lt;backend&gt;&lt;forward-request /&gt;&lt;/backend&gt;&lt;outbound /&gt;&lt;on-error /&gt;&lt;/policies&gt;&#39;
     format: &#39;xml&#39;
   }
 }
 </code></pre></div>
 <h2 id="notes">Notes<a class="headerlink" href="#notes" title="Permanent link">#</a></h2>
 <p>The rule only checks against <code>rawxml</code> and <code>xml</code> policy formatted content.</p>
+<p>When using Azure Bicep, the policy XML can be loaded from an external file by using the <code>loadTextContent</code> function.</p>
 <h2 id="links">Links<a class="headerlink" href="#links" title="Permanent link">#</a></h2>
 <ul>
 <li><a href="https://learn.microsoft.com/azure/architecture/framework/security/design-threat-model#2--evaluate-the-application-design-progressively">Application threat analysis</a></li>
 <li><a href="https://learn.microsoft.com/azure/api-management/cors-policy">CORS policy</a></li>
 <li><a href="https://learn.microsoft.com/azure/api-management/mitigate-owasp-api-threats#recommendations-6">Mitigate OWASP API threats</a></li>
+<li><a href="https://learn.microsoft.com/aspnet/core/security/cors?view=aspnetcore-7.0#how-cors">How CORS works</a></li>
+<li><a href="https://learn.microsoft.com/azure/api-management/api-management-howto-policies">Policies in Azure API Management</a></li>
+<li><a href="https://learn.microsoft.com/azure/azure-resource-manager/bicep/bicep-functions-files#loadtextcontent">File functions for Bicep</a></li>
 <li><a href="https://learn.microsoft.com/azure/templates/microsoft.apimanagement/service">Azure deployment reference</a></li>
 </ul>
 
@@ -8362,7 +8440,7 @@
   <small>
     
       Last update:
-      2023-03-31
+      2023-04-29
     
   </small>
 </div>

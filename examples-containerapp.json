@@ -4,8 +4,8 @@
   "metadata": {
     "_generator": {
       "name": "bicep",
-      "version": "0.4.1272.37030",
-      "templateHash": "11720533163741448301"
+      "version": "0.16.2.56959",
+      "templateHash": "12316369736007793712"
     }
   },
   "parameters": {
@@ -49,29 +49,27 @@
   },
   "resources": [
     {
-      "type": "Microsoft.Web/kubeEnvironments",
-      "apiVersion": "2021-03-01",
+      "type": "Microsoft.App/managedEnvironments",
+      "apiVersion": "2022-10-01",
       "name": "[parameters('envName')]",
       "location": "[parameters('location')]",
       "properties": {
-        "type": "managed",
-        "internalLoadBalancerEnabled": false,
         "appLogsConfiguration": {
           "destination": "log-analytics",
           "logAnalyticsConfiguration": {
-            "customerId": "[reference(resourceId('Microsoft.OperationalInsights/workspaces', parameters('workspaceId')), '2021-06-01').customerId]",
-            "sharedKey": "[listKeys(resourceId('Microsoft.OperationalInsights/workspaces', parameters('workspaceId')), '2021-06-01').primarySharedKey]"
+            "customerId": "[reference(resourceId('Microsoft.OperationalInsights/workspaces', parameters('workspaceId')), '2022-10-01').customerId]",
+            "sharedKey": "[listKeys(resourceId('Microsoft.OperationalInsights/workspaces', parameters('workspaceId')), '2022-10-01').primarySharedKey]"
           }
         }
       }
     },
     {
-      "type": "Microsoft.Web/containerApps",
-      "apiVersion": "2021-03-01",
+      "type": "Microsoft.App/containerApps",
+      "apiVersion": "2022-10-01",
       "name": "[parameters('appName')]",
       "location": "[parameters('location')]",
       "properties": {
-        "kubeEnvironmentId": "[resourceId('Microsoft.Web/kubeEnvironments', parameters('envName'))]",
+        "managedEnvironmentId": "[resourceId('Microsoft.App/managedEnvironments', parameters('envName'))]",
         "template": {
           "revisionSuffix": "",
           "containers": "[variables('containers')]"
@@ -83,7 +81,7 @@
         }
       },
       "dependsOn": [
-        "[resourceId('Microsoft.Web/kubeEnvironments', parameters('envName'))]"
+        "[resourceId('Microsoft.App/managedEnvironments', parameters('envName'))]"
       ]
     }
   ]

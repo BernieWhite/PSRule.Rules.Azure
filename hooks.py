@@ -63,6 +63,7 @@ def replace_maml(markdown: str, page: mkdocs.structure.nav.Page, config: mkdocs.
         markdown = markdown.replace("```json\r", "```json title=\"Azure Template snippet\"\r")
         markdown = markdown.replace("```powershell\r", "```powershell title=\"Azure PowerShell snippet\"\r")
         markdown = markdown.replace("```bash\r", "```bash title=\"Azure CLI snippet\"\r")
+        markdown = markdown.replace("```xml\r", "```xml title=\"API Management policy\"\r")
 
     if page.canonical_url.__contains__("/rules/") and page.meta.get("pillar", "None") != "None":
         page.meta['rule'] = page.canonical_url.split("/")[-2]

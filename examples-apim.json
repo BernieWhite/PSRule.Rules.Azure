@@ -4,8 +4,8 @@
   "metadata": {
     "_generator": {
       "name": "bicep",
-      "version": "0.15.31.15270",
-      "templateHash": "6483689219210108684"
+      "version": "0.16.2.56959",
+      "templateHash": "16845623836162815611"
     }
   },
   "parameters": {
@@ -39,20 +39,21 @@
     },
     "globalPolicy": {
       "type": "string",
-      "defaultValue": "<policies><inbound><cors allow-credentials=\"true\"><allowed-origins><origin>__APIM__</origin></allowed-origins><allowed-methods preflight-result-max-age=\"300\"><method>*</method></allowed-methods><allowed-headers><header>*</header></allowed-headers><expose-headers><header>*</header></expose-headers></cors></inbound><backend><forward-request /></backend><outbound /><on-error /></policies>",
+      "defaultValue": "[variables('$fxv#0')]",
       "metadata": {
         "description": "A global policy to use with the service."
       }
     }
   },
   "variables": {
+    "$fxv#0": "<policies>\n  <inbound>\n    <cors allow-credentials=\"true\">\n      <allowed-origins>\n        <origin>https://contoso.developer.azure-api.net</origin>\n        <origin>https://developer.contoso.com</origin>\n      </allowed-origins>\n      <allowed-methods preflight-result-max-age=\"300\">\n        <method>GET</method>\n        <method>PUT</method>\n        <method>POST</method>\n        <method>PATCH</method>\n        <method>HEAD</method>\n        <method>DELETE</method>\n        <method>OPTIONS</method>\n      </allowed-methods>\n      <allowed-headers>\n        <header>Content-Type</header>\n        <header>Cache-Control</header>\n        <header>Authorization</header>\n      </allowed-headers>\n    </cors>\n  </inbound>\n  <backend>\n    <forward-request />\n  </backend>\n  <outbound />\n  <on-error />\n</policies>\n",
     "portalUri": "[format('https://{0}.developer.azure-api.net', toLower(parameters('name')))]",
     "actualGlobalPolicy": "[replace(parameters('globalPolicy'), '__APIM__', variables('portalUri'))]"
   },
   "resources": [
     {
       "type": "Microsoft.ApiManagement/service",
-      "apiVersion": "2021-08-01",
+      "apiVersion": "2022-08-01",
       "name": "[parameters('name')]",
       "location": "[parameters('location')]",
       "sku": {
@@ -92,7 +93,7 @@
     },
     {
       "type": "Microsoft.ApiManagement/service/policies",
-      "apiVersion": "2021-08-01",
+      "apiVersion": "2022-08-01",
       "name": "[format('{0}/{1}', parameters('name'), 'policy')]",
       "properties": {
         "value": "[variables('actualGlobalPolicy')]",
@@ -107,7 +108,7 @@
     },
     {
       "type": "Microsoft.ApiManagement/service/products",
-      "apiVersion": "2021-08-01",
+      "apiVersion": "2022-08-01",
       "name": "[format('{0}/{1}', parameters('name'), 'echo')]",
       "properties": {
         "displayName": "Echo",
@@ -124,7 +125,7 @@
     },
     {
       "type": "Microsoft.ApiManagement/service/apiVersionSets",
-      "apiVersion": "2021-08-01",
+      "apiVersion": "2022-08-01",
       "name": "[format('{0}/{1}', parameters('name'), 'echo')]",
       "properties": {
         "displayName": "Echo API",
@@ -140,7 +141,7 @@
     },
     {
       "type": "Microsoft.ApiManagement/service/apis",
-      "apiVersion": "2021-08-01",
+      "apiVersion": "2022-08-01",
       "name": "[format('{0}/{1}', parameters('name'), 'echo-v1')]",
       "properties": {
         "displayName": "Echo API",
@@ -165,7 +166,7 @@
     },
     {
       "type": "Microsoft.ApiManagement/service/backends",
-      "apiVersion": "2021-08-01",
+      "apiVersion": "2022-08-01",
       "name": "[format('{0}/{1}', parameters('name'), 'echo')]",
       "properties": {
         "title": "echo",

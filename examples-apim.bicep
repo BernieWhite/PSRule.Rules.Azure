@@ -16,13 +16,13 @@ param publisherEmail string = 'noreply@contoso.com'
 param publisherName string = 'Contoso'
 
 @description('A global policy to use with the service.')
-param globalPolicy string = '<policies><inbound><cors allow-credentials="true"><allowed-origins><origin>__APIM__</origin></allowed-origins><allowed-methods preflight-result-max-age="300"><method>*</method></allowed-methods><allowed-headers><header>*</header></allowed-headers><expose-headers><header>*</header></expose-headers></cors></inbound><backend><forward-request /></backend><outbound /><on-error /></policies>'
+param globalPolicy string = loadTextContent('examples-apim-policy.xml')
 
 var portalUri = 'https://${toLower(name)}.developer.azure-api.net'
 var actualGlobalPolicy = replace(globalPolicy, '__APIM__', portalUri)
 
 @description('An example API Management service.')
-resource service 'Microsoft.ApiManagement/service@2021-08-01' = {
+resource service 'Microsoft.ApiManagement/service@2022-08-01' = {
   name: name
   location: location
   sku: {
@@ -59,7 +59,7 @@ resource service 'Microsoft.ApiManagement/service@2021-08-01' = {
 }
 
 @description('Configure the API Management Service global policy.')
-resource serviceName_policy 'Microsoft.ApiManagement/service/policies@2021-08-01' = {
+resource serviceName_policy 'Microsoft.ApiManagement/service/policies@2022-08-01' = {
   parent: service
   name: 'policy'
   properties: {
@@ -69,7 +69,7 @@ resource serviceName_policy 'Microsoft.ApiManagement/service/policies@2021-08-01
 }
 
 @description('An example product.')
-resource product 'Microsoft.ApiManagement/service/products@2021-08-01' = {
+resource product 'Microsoft.ApiManagement/service/products@2022-08-01' = {
   parent: service
   name: 'echo'
   properties: {
@@ -81,7 +81,7 @@ resource product 'Microsoft.ApiManagement/service/products@2021-08-01' = {
 }
 
 @description('An example API Version.')
-resource version 'Microsoft.ApiManagement/service/apiVersionSets@2021-08-01' = {
+resource version 'Microsoft.ApiManagement/service/apiVersionSets@2022-08-01' = {
   parent: service
   name: 'echo'
   properties: {
@@ -92,7 +92,7 @@ resource version 'Microsoft.ApiManagement/service/apiVersionSets@2021-08-01' = {
 }
 
 @description('An example API.')
-resource api 'Microsoft.ApiManagement/service/apis@2021-08-01' = {
+resource api 'Microsoft.ApiManagement/service/apis@2022-08-01' = {
   parent: service
   name: 'echo-v1'
   properties: {
@@ -111,7 +111,7 @@ resource api 'Microsoft.ApiManagement/service/apis@2021-08-01' = {
 }
 
 @description('An example API backend.')
-resource backend 'Microsoft.ApiManagement/service/backends@2021-08-01' = {
+resource backend 'Microsoft.ApiManagement/service/backends@2022-08-01' = {
   parent: service
   name: 'echo'
   properties: {

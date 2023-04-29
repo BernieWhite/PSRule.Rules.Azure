@@ -631,6 +631,11 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
+         <loc>https://azure.github.io/PSRule.Rules.Azure/en/rules/Azure.APIM.PolicyBase/</loc>
+         <lastmod>2023-04-29</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
          <loc>https://azure.github.io/PSRule.Rules.Azure/en/rules/Azure.APIM.ProductApproval/</loc>
          <lastmod>2023-04-29</lastmod>
          <changefreq>daily</changefreq>

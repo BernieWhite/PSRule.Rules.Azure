@@ -8392,6 +8392,11 @@ See <a href="../setup/configuring-expansion/#bicep-compilation-timeout">Bicep co
   Expansion occurs automatically in memory when enabled.
   For this to work, the module <code>PSRule.Rules.Azure</code> must be run with any custom rules.
   See <a href="../using-templates/">using templates</a> and <a href="../using-bicep/">using Bicep source</a> for details on how to enable expansion.</li>
+<li><strong>Check include local option</strong> &mdash; When running PSRule for Azure with a baseline.
+  Baselines such as <a href="../working-with-baselines/#quarterly-baseline">quarterly baselines</a> may use filters to limit the rules that are included.
+  As a result, custom rules may not be included.
+  To include custom rules set the <a href="https://aka.ms/ps-rule/options#ruleincludelocal">Rule.IncludeLocal</a> option to <code>true</code>.
+  See <a href="../working-with-baselines/#including-custom-rules">Including custom rules</a> for more information.</li>
 </ul>
 <div class="admonition tip">
 <p class="admonition-title">Tip</p>
@@ -8459,7 +8464,7 @@ The PSRule for Azure <strong>&lt;1.3.1</strong> uses an older version of this li
   <small>
     
       Last update:
-      2023-04-23
+      2023-04-30
     
   </small>
 </div>

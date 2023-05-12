@@ -10846,8 +10846,14 @@
   See <a href="../upgrade-notes/">upgrade notes</a> for more information.</li>
 </ul>
 <h2 id="unreleased">Unreleased<a class="headerlink" href="#unreleased" title="Permanent link">#</a></h2>
+<p>What's changed since pre-release v1.27.0-B0015:</p>
 <ul>
 <li>New rules:<ul>
+<li>Application Gateway:<ul>
+<li>Check that Application Gateways uses a v2 SKU by <a href="https://github.com/BenjaminEngeset">@BenjaminEngeset</a>.
+  <a href="https://github.com/Azure/PSRule.Rules.Azure/issues/2185">#2185</a></li>
+</ul>
+</li>
 <li>Arc-enabled Kubernetes cluster:<ul>
 <li>Check that Microsoft Defender for Containers extension for Arc-enabled Kubernetes clusters is configured by <a href="https://github.com/BenjaminEngeset">@BenjaminEngeset</a>.
   <a href="https://github.com/Azure/PSRule.Rules.Azure/issues/2124">#2124</a></li>
@@ -10868,11 +10874,11 @@
   <a href="https://github.com/Azure/PSRule.Rules.Azure/issues/2121">#2121</a></li>
 </ul>
 </li>
-<li>Application Gateway:<ul>
-<li>Check that Application Gateways uses a v2 SKU by <a href="https://github.com/BenjaminEngeset">@BenjaminEngeset</a>.
-  <a href="https://github.com/Azure/PSRule.Rules.Azure/issues/2185">#2185</a></li>
 </ul>
 </li>
+<li>Bug fixes:<ul>
+<li>Fixed handling of database name in <code>Azure.MariaDB.Database</code> by <a href="https://github.com/BernieWhite">@BernieWhite</a>.
+  <a href="https://github.com/Azure/PSRule.Rules.Azure/issues/2191">#2191</a></li>
 </ul>
 </li>
 </ul>
@@ -15638,7 +15644,7 @@ What's changed since v1.24.0:</p>
   <small>
     
       Last update:
-      2023-05-11
+      2023-05-12
     
   </small>
 </div>

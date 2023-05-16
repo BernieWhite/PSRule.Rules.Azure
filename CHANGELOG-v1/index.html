@@ -21,7 +21,7 @@
         <link rel="next" href="../CHANGELOG-v0/">
       
       <link rel="icon" href="../assets/ms_icon.png">
-      <meta name="generator" content="mkdocs-1.4.2, mkdocs-material-9.1.11">
+      <meta name="generator" content="mkdocs-1.4.2, mkdocs-material-9.1.12">
     
     
       
@@ -3451,6 +3451,8 @@
         
           
         
+          
+        
       
       
         <label class="md-nav__link" for="__nav_4_5" id="__nav_4_5_label" tabindex="0">
@@ -5153,6 +5155,20 @@
     <li class="md-nav__item">
       <a href="../en/rules/Azure.Cognitive.PublicAccess/" class="md-nav__link">
         Azure.Cognitive.PublicAccess
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../en/rules/Azure.ContainerApp.DisableAffinity/" class="md-nav__link">
+        Azure.ContainerApp.DisableAffinity
       </a>
     </li>
   
@@ -10864,6 +10880,11 @@
   <a href="https://github.com/Azure/PSRule.Rules.Azure/issues/2122">#2122</a></li>
 </ul>
 </li>
+<li>Container App:<ul>
+<li>Check that container apps has disabled session affinity to prevent unbalanced distribution by <a href="https://github.com/BenjaminEngeset">@BenjaminEngeset</a>.
+  <a href="https://github.com/Azure/PSRule.Rules.Azure/issues/2188">#2188</a></li>
+</ul>
+</li>
 <li>Defender for Cloud:<ul>
 <li>Check that Microsoft Defender for APIs is enabled by <a href="https://github.com/BenjaminEngeset">@BenjaminEngeset</a>.
   <a href="https://github.com/Azure/PSRule.Rules.Azure/issues/2186">#2186</a></li>
@@ -10878,7 +10899,11 @@
 </li>
 <li>Bug fixes:<ul>
 <li>Fixed handling of database name in <code>Azure.MariaDB.Database</code> by <a href="https://github.com/BernieWhite">@BernieWhite</a>.
-  <a href="https://github.com/Azure/PSRule.Rules.Azure/issues/2191">#2191</a></li>
+  <a href="https://github.com/Azure/PSRule.Rules.Azure/issues/2191">#2191</a><ul>
+<li>Fixed typing error in <code>Azure.Defender.Api</code> documentation by <a href="https://github.com/BenjaminEngeset">@BenjaminEngeset</a>.
+<a href="https://github.com/Azure/PSRule.Rules.Azure/issues/2209">#2209</a></li>
+</ul>
+</li>
 </ul>
 </li>
 </ul>
@@ -15644,7 +15669,7 @@ What's changed since v1.24.0:</p>
   <small>
     
       Last update:
-      2023-05-12
+      2023-05-16
     
   </small>
 </div>
@@ -15709,7 +15734,7 @@ What's changed since v1.24.0:</p>
     <script id="__config" type="application/json">{"base": "..", "features": ["navigation.instant", "navigation.indexes", {"navigation.sections": {"level": 1}}, "navigation.tabs", "content.code.annotate", "content.tabs.link", "content.code.copy"], "search": "../assets/javascripts/workers/search.208ed371.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": {"provider": "mike"}}</script>
     
     
-      <script src="../assets/javascripts/bundle.fac441b0.min.js"></script>
+      <script src="../assets/javascripts/bundle.c2be25ad.min.js"></script>
       
     
   </body>

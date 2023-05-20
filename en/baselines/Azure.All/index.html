@@ -17,7 +17,7 @@
       
       
       <link rel="icon" href="../../../assets/ms_icon.png">
-      <meta name="generator" content="mkdocs-1.4.2, mkdocs-material-9.1.12">
+      <meta name="generator" content="mkdocs-1.4.3, mkdocs-material-9.1.13">
     
     
       
@@ -1355,6 +1355,12 @@
       <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_5" >
       
       
+        
+          
+        
+          
+        
+          
         
           
         
@@ -3930,6 +3936,20 @@
   
   
     <li class="md-nav__item">
+      <a href="../../rules/Azure.ContainerApp.RestrictIngress/" class="md-nav__link">
+        Azure.ContainerApp.RestrictIngress
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
       <a href="../../rules/Azure.ContainerApp.Storage/" class="md-nav__link">
         Azure.ContainerApp.Storage
       </a>
@@ -4042,6 +4062,20 @@
   
   
     <li class="md-nav__item">
+      <a href="../../rules/Azure.Defender.CosmosDb/" class="md-nav__link">
+        Azure.Defender.CosmosDb
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
       <a href="../../rules/Azure.Defender.Cspm/" class="md-nav__link">
         Azure.Defender.Cspm
       </a>
@@ -4072,6 +4106,20 @@
     <li class="md-nav__item">
       <a href="../../rules/Azure.Defender.KeyVault/" class="md-nav__link">
         Azure.Defender.KeyVault
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../rules/Azure.Defender.OssRdb/" class="md-nav__link">
+        Azure.Defender.OssRdb
       </a>
     </li>
   
@@ -8299,7 +8347,7 @@
   <h1 id="azureall">Azure.All<a class="headerlink" href="#azureall" title="Permanent link">#</a></h1>
 <p>Includes all Azure rules.</p>
 <h2 id="rules">Rules<a class="headerlink" href="#rules" title="Permanent link">#</a></h2>
-<p>The following rules are included within <code>Azure.All</code>. This baseline includes a total of 378 rules.</p>
+<p>The following rules are included within <code>Azure.All</code>. This baseline includes a total of 381 rules.</p>
 <table>
 <thead>
 <tr>
@@ -8521,7 +8569,7 @@
 </tr>
 <tr>
 <td><a href="../../rules/Azure.AKS.UptimeSLA/">Azure.AKS.UptimeSLA</a></td>
-<td>AKS clusters should have Uptime SLA enabled to ensure availability of control plane components for production workloads.</td>
+<td>AKS clusters should have Uptime SLA enabled for a financially backed SLA.</td>
 <td>Important</td>
 </tr>
 <tr>
@@ -8945,6 +8993,11 @@
 <td>Important</td>
 </tr>
 <tr>
+<td><a href="../../rules/Azure.ContainerApp.RestrictIngress/">Azure.ContainerApp.RestrictIngress</a></td>
+<td>IP ingress restrictions mode should be set to allow action for all rules defined.</td>
+<td>Important</td>
+</tr>
+<tr>
 <td><a href="../../rules/Azure.ContainerApp.Storage/">Azure.ContainerApp.Storage</a></td>
 <td>Use of Azure Files volume mounts to persistent storage container data.</td>
 <td>Awareness</td>
@@ -8985,6 +9038,11 @@
 <td>Critical</td>
 </tr>
 <tr>
+<td><a href="../../rules/Azure.Defender.CosmosDb/">Azure.Defender.CosmosDb</a></td>
+<td>Enable Microsoft Defender for Azure Cosmos DB.</td>
+<td>Critical</td>
+</tr>
+<tr>
 <td><a href="../../rules/Azure.Defender.Cspm/">Azure.Defender.Cspm</a></td>
 <td>Enable Microsoft Defender Cloud Security Posture Management Standard plan.</td>
 <td>Critical</td>
@@ -8997,6 +9055,11 @@
 <tr>
 <td><a href="../../rules/Azure.Defender.KeyVault/">Azure.Defender.KeyVault</a></td>
 <td>Enable Microsoft Defender for Key Vault.</td>
+<td>Critical</td>
+</tr>
+<tr>
+<td><a href="../../rules/Azure.Defender.OssRdb/">Azure.Defender.OssRdb</a></td>
+<td>Enable Microsoft Defender for open-source relational databases.</td>
 <td>Critical</td>
 </tr>
 <tr>
@@ -10271,7 +10334,7 @@
     <script id="__config" type="application/json">{"base": "../../..", "features": ["navigation.instant", "navigation.indexes", {"navigation.sections": {"level": 1}}, "navigation.tabs", "content.code.annotate", "content.tabs.link", "content.code.copy"], "search": "../../../assets/javascripts/workers/search.208ed371.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": {"provider": "mike"}}</script>
     
     
-      <script src="../../../assets/javascripts/bundle.c2be25ad.min.js"></script>
+      <script src="../../../assets/javascripts/bundle.b4d07000.min.js"></script>
       
     
   </body>

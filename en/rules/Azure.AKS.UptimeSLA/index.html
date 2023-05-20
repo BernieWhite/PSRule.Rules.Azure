@@ -6,7 +6,7 @@
       <meta charset="utf-8">
       <meta name="viewport" content="width=device-width,initial-scale=1">
       
-        <meta name="description" content="AKS clusters should have Uptime SLA enabled to ensure availability of control plane components for production workloads.">
+        <meta name="description" content="Ready to go rules for testing Azure Infrastructure as Code (IaC).">
       
       
         <meta name="author" content="Microsoft">
@@ -17,7 +17,7 @@
       
       
       <link rel="icon" href="../../../assets/ms_icon.png">
-      <meta name="generator" content="mkdocs-1.4.2, mkdocs-material-9.1.12">
+      <meta name="generator" content="mkdocs-1.4.3, mkdocs-material-9.1.13">
     
     
       
@@ -63,8 +63,6 @@
   <!-- Determine description -->
   
   
-    
-  
 
   <!-- Determine type -->
   
@@ -80,19 +78,19 @@
   <meta property="og:site_name" content="PSRule for Azure" />
   <meta property="og:type" content="article" />
   <meta property="og:title" content="PSRule for Azure - Azure.AKS.UptimeSLA" />
-  <meta property="og:description" content="AKS clusters should have Uptime SLA enabled to ensure availability of control plane components for production workloads." />
+  <meta property="og:description" content="Ready to go rules for testing Azure Infrastructure as Code (IaC)." />
   <meta property="og:url" content="https://azure.github.io/PSRule.Rules.Azure/en/rules/Azure.AKS.UptimeSLA/" />
   <meta property="og:image" content="https://repository-images.githubusercontent.com/184154668/58818c00-d496-11eb-9b77-016145022654" />
   <meta property="og:image:type" content="image/png" />
   <meta property="og:image:width" content="1280" />
   <meta property="og:image:height" content="640" />
-  <meta property="og:image:alt" content="AKS clusters should have Uptime SLA enabled to ensure availability of control plane components for production workloads." />
+  <meta property="og:image:alt" content="Ready to go rules for testing Azure Infrastructure as Code (IaC)." />
 
   <!-- Twitter meta tags -->
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:site" content="@github" />
   <meta name="twitter:title" content="PSRule for Azure - Azure.AKS.UptimeSLA" />
-  <meta name="twitter:description" content="AKS clusters should have Uptime SLA enabled to ensure availability of control plane components for production workloads." />
+  <meta name="twitter:description" content="Ready to go rules for testing Azure Infrastructure as Code (IaC)." />
   <meta name="twitter:image" content="https://repository-images.githubusercontent.com/184154668/58818c00-d496-11eb-9b77-016145022654" />
 
 
@@ -114,7 +112,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#use-aks-uptime-sla" class="md-skip">
+        <a href="#online-version-httpsazuregithubiopsrulerulesazureenrulesazureaksuptimesla" class="md-skip">
           Skip to content
         </a>
       
@@ -2136,6 +2134,12 @@
         
           
         
+          
+        
+          
+        
+          
+        
       
       
         <label class="md-nav__link" for="__nav_4_5" id="__nav_4_5_label" tabindex="0">
@@ -2750,8 +2754,6 @@
       <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
       
       
-        
-      
       
         <label class="md-nav__link md-nav__link--active" for="__toc">
           Azure.AKS.UptimeSLA
@@ -2768,8 +2770,6 @@
   
   
   
-    
-  
   
     <label class="md-nav__title" for="__toc">
       <span class="md-nav__icon md-icon"></span>
@@ -2778,20 +2778,35 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
+  <a href="#online-version-httpsazuregithubiopsrulerulesazureenrulesazureaksuptimesla" class="md-nav__link">
+    online version: https://azure.github.io/PSRule.Rules.Azure/en/rules/Azure.AKS.UptimeSLA/
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#use-aks-uptime-sla" class="md-nav__link">
+    Use AKS Uptime SLA
+  </a>
+  
+    <nav class="md-nav" aria-label="Use AKS Uptime SLA">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
   <a href="#description" class="md-nav__link">
     Description
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
+        
+          <li class="md-nav__item">
   <a href="#recommendation" class="md-nav__link">
     Recommendation
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
+        
+          <li class="md-nav__item">
   <a href="#examples" class="md-nav__link">
     Examples
   </a>
@@ -2817,11 +2832,23 @@
     </nav>
   
 </li>
-      
-        <li class="md-nav__item">
+        
+          <li class="md-nav__item">
+  <a href="#notes" class="md-nav__link">
+    Notes
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#links" class="md-nav__link">
     Links
   </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -4016,6 +4043,20 @@
   
   
     <li class="md-nav__item">
+      <a href="../Azure.ContainerApp.RestrictIngress/" class="md-nav__link">
+        Azure.ContainerApp.RestrictIngress
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
       <a href="../Azure.ContainerApp.Storage/" class="md-nav__link">
         Azure.ContainerApp.Storage
       </a>
@@ -4128,6 +4169,20 @@
   
   
     <li class="md-nav__item">
+      <a href="../Azure.Defender.CosmosDb/" class="md-nav__link">
+        Azure.Defender.CosmosDb
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
       <a href="../Azure.Defender.Cspm/" class="md-nav__link">
         Azure.Defender.Cspm
       </a>
@@ -4158,6 +4213,20 @@
     <li class="md-nav__item">
       <a href="../Azure.Defender.KeyVault/" class="md-nav__link">
         Azure.Defender.KeyVault
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Azure.Defender.OssRdb/" class="md-nav__link">
+        Azure.Defender.OssRdb
       </a>
     </li>
   
@@ -8299,8 +8368,6 @@
   
   
   
-    
-  
   
     <label class="md-nav__title" for="__toc">
       <span class="md-nav__icon md-icon"></span>
@@ -8309,20 +8376,35 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
+  <a href="#online-version-httpsazuregithubiopsrulerulesazureenrulesazureaksuptimesla" class="md-nav__link">
+    online version: https://azure.github.io/PSRule.Rules.Azure/en/rules/Azure.AKS.UptimeSLA/
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#use-aks-uptime-sla" class="md-nav__link">
+    Use AKS Uptime SLA
+  </a>
+  
+    <nav class="md-nav" aria-label="Use AKS Uptime SLA">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
   <a href="#description" class="md-nav__link">
     Description
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
+        
+          <li class="md-nav__item">
   <a href="#recommendation" class="md-nav__link">
     Recommendation
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
+        
+          <li class="md-nav__item">
   <a href="#examples" class="md-nav__link">
     Examples
   </a>
@@ -8348,11 +8430,23 @@
     </nav>
   
 </li>
-      
-        <li class="md-nav__item">
+        
+          <li class="md-nav__item">
+  <a href="#notes" class="md-nav__link">
+    Notes
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#links" class="md-nav__link">
     Links
   </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -8390,37 +8484,38 @@
   
 
   <!-- Markdown content -->
-  <h1 id="use-aks-uptime-sla">Use AKS Uptime SLA<a class="headerlink" href="#use-aks-uptime-sla" title="Permanent link">#</a></h1>
-<nav class="md-tags"><span class="md-tag">Azure.AKS.UptimeSLA</span><span class="md-tag">AZR-000285</span><span class="md-tag">Error</span></nav>
-<p><a href="../module/#reliability"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M1.527 13.237a1.75 1.75 0 0 1 0-2.474l9.272-9.273a1.75 1.75 0 0 1 2.475 0l9.272 9.273a1.75 1.75 0 0 1 0 2.474l-9.272 9.272a1.75 1.75 0 0 1-2.475 0Zm1.06-1.414a.25.25 0 0 0 0 .354l9.273 9.272a.25.25 0 0 0 .353 0l9.272-9.272a.25.25 0 0 0 0-.354l-9.272-9.272a.25.25 0 0 0-.353 0Z"/></svg></span> Reliability</a>
- · <a href="../resource/#azure-kubernetes-service"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13.152.682a2.251 2.251 0 0 1 2.269 0l.007.004 6.957 4.276a2.277 2.277 0 0 1 1.126 1.964v7.516c0 .81-.432 1.56-1.133 1.968l-.002.001-11.964 7.037-.004.003c-.706.41-1.578.41-2.284 0l-.026-.015-6.503-4.502a2.268 2.268 0 0 1-1.096-1.943V9.438c0-.392.1-.77.284-1.1l.003-.006.014-.026c.197-.342.48-.627.82-.827h.002L13.152.681Zm.757 1.295h-.001L2.648 8.616l6.248 4.247a.775.775 0 0 0 .758-.01h.001l11.633-6.804-6.629-4.074a.75.75 0 0 0-.75.003ZM8.517 14.33a2.286 2.286 0 0 1-.393-.18l-.023-.014-6.102-4.147v7.003c0 .275.145.528.379.664l.025.014 6.114 4.232V14.33ZM18 9.709l-3.25 1.9v7.548L18 17.245Zm-7.59 4.438-.002.002a2.296 2.296 0 0 1-.391.18v7.612l3.233-1.902v-7.552Zm9.09-5.316v7.532l2.124-1.25a.776.776 0 0 0 .387-.671V7.363Z"/></svg></span> Azure Kubernetes Service</a>
- · <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M7.75 6.5a1.25 1.25 0 1 0 0 2.5 1.25 1.25 0 0 0 0-2.5Z"/><path d="M2.5 1h8.44a1.5 1.5 0 0 1 1.06.44l10.25 10.25a1.5 1.5 0 0 1 0 2.12l-8.44 8.44a1.5 1.5 0 0 1-2.12 0L1.44 12A1.497 1.497 0 0 1 1 10.94V2.5A1.5 1.5 0 0 1 2.5 1Zm0 1.5v8.44l10.25 10.25 8.44-8.44L10.94 2.5Z"/></svg></span> 2022_09</p>
-<p>AKS clusters should have Uptime SLA enabled to ensure availability of control plane components for production workloads.</p>
+  <h2 id="online-version-httpsazuregithubiopsrulerulesazureenrulesazureaksuptimesla">online version: https://azure.github.io/PSRule.Rules.Azure/en/rules/Azure.AKS.UptimeSLA/<a class="headerlink" href="#online-version-httpsazuregithubiopsrulerulesazureenrulesazureaksuptimesla" title="Permanent link">#</a></h2>
+<h1 id="use-aks-uptime-sla">Use AKS Uptime SLA<a class="headerlink" href="#use-aks-uptime-sla" title="Permanent link">#</a></h1>
+<p>AKS clusters should have Uptime SLA enabled for a financially backed SLA.</p>
 <h2 id="description">Description<a class="headerlink" href="#description" title="Permanent link">#</a></h2>
-<p>Uptime SLA is a tier to enable a financially backed, higher SLA for an AKS cluster.
-Clusters with Uptime SLA, come with greater amount of control plane resources and automatically scaling.
-Uptime SLA guarantees 99.95% availability of the Kubernetes API server endpoint for clusters that use Availability Zones.
-Uptime SLA guarantees 99.9% of availability for clusters that don't use Availability Zones.
-AKS uses master node replicas across update and fault domains to ensure SLA requirements are met.</p>
-<p>AKS recommends use of Uptime SLA in production workloads to ensure availability of control plane components.
-Clusters on the Free SKU tier support fewer replicas and limited resources for the control plane.</p>
+<p>Azure Kubernetes Service (AKS) offers two pricing tiers for cluster management.</p>
+<p>The <code>Standard</code> tier is suitable for financially backed SLA scenarios as it enables Uptime SLA by default on the cluster.</p>
+<p>Benefits:</p>
+<ul>
+<li>The Free tier SKU imposes in-flight request limits of 50 mutating and 100 read-only calls. The Standard tier SKU automatically scales out based on the load.</li>
+<li>The Free tier SKU is recommended only for cost-sensitive non-production workloads with 10 or fewer agent nodes. The Standard tier SKU configures more resources for the control plane and will dynamically scale to handle the request load from more nodes.</li>
+<li>AKS recommends the use of the Standard tier for production workloads to ensure availability of control plane components. Clusters on the Free tier, by contrast come with limited resources for the control plane and are not suitable for production workloads.</li>
+<li>Uptime SLA guarantees 99.95% availability of the Kubernetes API server endpoint for clusters that use Availability Zones.</li>
+<li>Uptime SLA guarantees 99.9% of availability for clusters that don't use Availability Zones.</li>
+<li>AKS uses master node replicas across update and fault domains to ensure SLA requirements are met.</li>
+</ul>
 <h2 id="recommendation">Recommendation<a class="headerlink" href="#recommendation" title="Permanent link">#</a></h2>
-<p>Consider enabling Uptime SLA for production deployments.</p>
+<p>Consider enabling Uptime SLA for a financially backed SLA.</p>
 <h2 id="examples">Examples<a class="headerlink" href="#examples" title="Permanent link">#</a></h2>
 <h3 id="configure-with-azure-template">Configure with Azure template<a class="headerlink" href="#configure-with-azure-template" title="Permanent link">#</a></h3>
 <p>To deploy an AKS cluster that pass this rule:</p>
 <ul>
-<li>Set <code>sku.tier</code> to <code>Paid</code>.</li>
+<li>Set <code>sku.tier</code> to <code>Standard</code>.</li>
 </ul>
 <p>For example:</p>
 <div class="highlight"><span class="filename">Azure Template snippet</span><pre><span></span><code><span class="p">{</span>
 <span class="w">  </span><span class="nt">&quot;type&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Microsoft.ContainerService/managedClusters&quot;</span><span class="p">,</span>
-<span class="w">  </span><span class="nt">&quot;apiVersion&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;2022-06-02-preview&quot;</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">&quot;apiVersion&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;2023-02-01&quot;</span><span class="p">,</span>
 <span class="w">  </span><span class="nt">&quot;name&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;[parameters(&#39;clusterName&#39;)]&quot;</span><span class="p">,</span>
 <span class="w">  </span><span class="nt">&quot;location&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;[parameters(&#39;location&#39;)]&quot;</span><span class="p">,</span>
 <span class="w">  </span><span class="nt">&quot;sku&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
 <span class="w">    </span><span class="nt">&quot;name&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Basic&quot;</span><span class="p">,</span>
-<span class="w">    </span><span class="nt">&quot;tier&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Paid&quot;</span>
+<span class="w">    </span><span class="nt">&quot;tier&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Standard&quot;</span>
 <span class="w">  </span><span class="p">},</span>
 <span class="w">  </span><span class="nt">&quot;identity&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
 <span class="w">    </span><span class="nt">&quot;type&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;SystemAssigned&quot;</span>
@@ -8453,15 +8548,15 @@ Clusters on the Free SKU tier support fewer replicas and limited resources for t
 <h3 id="configure-with-bicep">Configure with Bicep<a class="headerlink" href="#configure-with-bicep" title="Permanent link">#</a></h3>
 <p>To deploy an AKS cluster that pass this rule:</p>
 <ul>
-<li>Set <code>sku.tier</code> to <code>Paid</code>.</li>
+<li>Set <code>sku.tier</code> to <code>Standard</code>.</li>
 </ul>
 <p>For example:</p>
-<div class="highlight"><span class="filename">Azure Bicep snippet</span><pre><span></span><code>resource aks &#39;Microsoft.ContainerService/managedClusters@2022-06-02-preview&#39; = {
+<div class="highlight"><span class="filename">Azure Bicep snippet</span><pre><span></span><code>resource aks &#39;Microsoft.ContainerService/managedClusters@2023-02-01&#39; = {
   name: clusterName
   location: location
   sku: {
     name: &#39;Basic&#39;
-    tier: &#39;Paid&#39;
+    tier: &#39;Standard&#39;
   }
   identity: {
     type: &#39;SystemAssigned&#39;
@@ -8491,11 +8586,14 @@ Clusters on the Free SKU tier support fewer replicas and limited resources for t
   }
 }
 </code></pre></div>
+<h2 id="notes">Notes<a class="headerlink" href="#notes" title="Permanent link">#</a></h2>
+<p><code>Basic</code> and <code>Paid</code> are removed in the <code>2023-02-01</code> and <code>2023-02-02 Preview</code> API version, and this will be a breaking change in API versions <code>2023-02-01</code> and <code>2023-02-02 Preview</code> or newer.</p>
 <h2 id="links">Links<a class="headerlink" href="#links" title="Permanent link">#</a></h2>
 <ul>
 <li><a href="https://learn.microsoft.com/azure/architecture/framework/resiliency/design-requirements">Target and non-functional requirements</a></li>
-<li><a href="https://docs.microsoft.com/azure/aks/uptime-sla">Azure Kubernetes Service (AKS) Uptime SLA</a></li>
-<li><a href="https://docs.microsoft.com/azure/templates/microsoft.containerservice/managedclusters">Azure deployment reference</a></li>
+<li><a href="https://learn.microsoft.com/azure/aks/free-standard-pricing-tiers#uptime-sla-terms-and-conditions">Azure Kubernetes Service (AKS) Uptime SLA</a></li>
+<li><a href="https://learn.microsoft.com/azure/aks/free-standard-pricing-tiers">Free and Standard pricing tiers for Azure Kubernetes Service (AKS) cluster management</a></li>
+<li><a href="https://learn.microsoft.com/azure/templates/microsoft.containerservice/managedclusters#managedclustersku">Azure deployment reference</a></li>
 </ul>
 
   <!-- Last update of source file -->
@@ -8506,7 +8604,7 @@ Clusters on the Free SKU tier support fewer replicas and limited resources for t
   <small>
     
       Last update:
-      2022-12-03
+      2023-05-16
     
   </small>
 </div>
@@ -8519,8 +8617,6 @@ Clusters on the Free SKU tier support fewer replicas and limited resources for t
   <!-- Giscus -->
   <h2 id="__comments">Comments</h2>
   
-    
-  
 
   
     <script src="https://giscus.app/client.js"
@@ -8528,8 +8624,7 @@ Clusters on the Free SKU tier support fewer replicas and limited resources for t
       data-repo-id="MDEwOlJlcG9zaXRvcnkxODQxNTQ2Njg="
       data-category="Documentation"
       data-category-id="DIC_kwDOCvn6LM4CQqE6"
-      data-mapping="specific"
-      data-term="Azure.AKS.UptimeSLA"
+      data-mapping="pathname"
       data-strict="0"
       data-reactions-enabled="1"
       data-emit-metadata="0"
@@ -8624,7 +8719,7 @@ Clusters on the Free SKU tier support fewer replicas and limited resources for t
     <script id="__config" type="application/json">{"base": "../../..", "features": ["navigation.instant", "navigation.indexes", {"navigation.sections": {"level": 1}}, "navigation.tabs", "content.code.annotate", "content.tabs.link", "content.code.copy"], "search": "../../../assets/javascripts/workers/search.208ed371.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": {"provider": "mike"}}</script>
     
     
-      <script src="../../../assets/javascripts/bundle.c2be25ad.min.js"></script>
+      <script src="../../../assets/javascripts/bundle.b4d07000.min.js"></script>
       
     
   </body>

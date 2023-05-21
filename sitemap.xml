@@ -1066,6 +1066,11 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
+         <loc>https://azure.github.io/PSRule.Rules.Azure/en/rules/Azure.Defender.Storage.MalwareScan/</loc>
+         <lastmod>2023-05-21</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
          <loc>https://azure.github.io/PSRule.Rules.Azure/en/rules/Azure.Defender.Storage/</loc>
          <lastmod>2023-05-21</lastmod>
          <changefreq>daily</changefreq>

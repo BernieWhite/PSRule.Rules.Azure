@@ -2132,6 +2132,8 @@
         
           
         
+          
+        
       
       
         <label class="md-nav__link" for="__nav_4_5" id="__nav_4_5_label" tabindex="0">
@@ -3960,6 +3962,20 @@
     <li class="md-nav__item">
       <a href="../../en/rules/Azure.Cosmos.AccountName/" class="md-nav__link">
         Azure.Cosmos.AccountName
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../en/rules/Azure.Cosmos.DefenderCloud/" class="md-nav__link">
+        Azure.Cosmos.DefenderCloud
       </a>
     </li>
   
@@ -8349,6 +8365,13 @@
   
 </li>
         
+          <li class="md-nav__item">
+  <a href="#azure_cosmos_defender_per_account" class="md-nav__link">
+    AZURE_COSMOS_DEFENDER_PER_ACCOUNT
+  </a>
+  
+</li>
+        
       </ul>
     </nav>
   
@@ -8396,8 +8419,9 @@ For details of setting configuration options see <a href="https://aka.ms/ps-rule
 <li><a href="#azure_subscription">AZURE_SUBSCRIPTION</a></li>
 <li><a href="#azure_policy_ignore_list">AZURE_POLICY_IGNORE_LIST</a></li>
 <li><a href="#azure_policy_rule_prefix">AZURE_POLICY_RULE_PREFIX</a></li>
+<li><a href="#azure_apim_min_api_version">AZURE_APIM_MIN_API_VERSION</a></li>
 <li>
-<p><a href="#azure_apim_min_api_version">AZURE_APIM_MIN_API_VERSION</a></p>
+<p><a href="#azure_cosmos_defender_per_account">AZURE_COSMOS_DEFENDER_PER_ACCOUNT</a></p>
 </li>
 </ul>
 <h3 id="azure_aksminimumversion">Azure_AKSMinimumVersion<a class="headerlink" href="#azure_aksminimumversion" title="Permanent link">#</a></h3>
@@ -8623,13 +8647,30 @@ Configure this option to change the minimum API version, which defaults to <code
 <span class="nt">configuration</span><span class="p">:</span>
 <span class="w">  </span><span class="nt">AZURE_APIM_MIN_API_VERSION</span><span class="p">:</span><span class="w"> </span><span class="s">&#39;2021-12-01-preview&#39;</span>
 </code></pre></div>
+<h3 id="azure_cosmos_defender_per_account">AZURE_COSMOS_DEFENDER_PER_ACCOUNT<a class="headerlink" href="#azure_cosmos_defender_per_account" title="Permanent link">#</a></h3>
+<p>This configuration option enables validation for that each Cosmos DB account is associated with a Microsoft Defender for Cosmos DB resource level plan.
+Configure this option to enable the per account validation, which defaults to <code>false</code>.</p>
+<p>Syntax:</p>
+<div class="highlight"><pre><span></span><code><span class="nt">configuration</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">AZURE_COSMOS_DEFENDER_PER_ACCOUNT</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">boolean</span>
+</code></pre></div>
+<p>Default:</p>
+<div class="highlight"><pre><span></span><code><span class="c1"># YAML: The default AZURE_COSMOS_DEFENDER_PER_ACCOUNT configuration option</span>
+<span class="nt">configuration</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">AZURE_COSMOS_DEFENDER_PER_ACCOUNT</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">false</span>
+</code></pre></div>
+<p>Example:</p>
+<div class="highlight"><pre><span></span><code><span class="c1"># YAML: Set the AZURE_COSMOS_DEFENDER_PER_ACCOUNT configuration option to true</span>
+<span class="nt">configuration</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">AZURE_COSMOS_DEFENDER_PER_ACCOUNT</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
+</code></pre></div>
 
   <hr>
 <div class="md-source-file">
   <small>
     
       Last update:
-      2022-11-07
+      2023-05-21
     
   </small>
 </div>

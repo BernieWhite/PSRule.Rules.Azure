@@ -3470,6 +3470,8 @@
         
           
         
+          
+        
       
       
         <label class="md-nav__link" for="__nav_4_5" id="__nav_4_5_label" tabindex="0">
@@ -7648,6 +7650,20 @@
   
   
     <li class="md-nav__item">
+      <a href="../en/rules/Azure.Storage.DefenderCloud.MalwareScan/" class="md-nav__link">
+        Azure.Storage.DefenderCloud.MalwareScan
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
       <a href="../en/rules/Azure.Storage.FileShareSoftDelete/" class="md-nav__link">
         Azure.Storage.FileShareSoftDelete
       </a>
@@ -10959,11 +10975,22 @@
 <p>What's changed since pre-release v1.27.0-B0050:</p>
 <ul>
 <li>New rules:<ul>
+<li>Storage Account:<ul>
+<li>Check that Malware Scanning in Microsoft Defender for Storage is enabled for storage accounts by <a href="https://github.com/BenjaminEngeset">@BenjaminEngeset</a>.</li>
+</ul>
+</li>
 <li>Defender for Cloud:<ul>
 <li>Check that Malware Scanning in Microsoft Defender for Storage is enabled by <a href="https://github.com/BenjaminEngeset">@BenjaminEngeset</a>.
   <a href="https://github.com/Azure/PSRule.Rules.Azure/issues/2206">#2206</a></li>
 </ul>
 </li>
+</ul>
+</li>
+<li>Bug fixes:<ul>
+<li>Fixed left-side <code>or</code> function evaluation by <a href="https://github.com/BernieWhite">@BernieWhite</a>.
+  <a href="https://github.com/Azure/PSRule.Rules.Azure/issues/2220">#2220</a></li>
+<li>Fixed interdependent variable copy loop count by <a href="https://github.com/BernieWhite">@BernieWhite</a>.
+  <a href="https://github.com/Azure/PSRule.Rules.Azure/issues/2221">#2221</a></li>
 </ul>
 </li>
 </ul>
@@ -15800,7 +15827,7 @@ What's changed since v1.24.0:</p>
   <small>
     
       Last update:
-      2023-05-21
+      2023-05-22
     
   </small>
 </div>

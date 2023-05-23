@@ -17,7 +17,7 @@
       
       
       <link rel="icon" href="../../assets/ms_icon.png">
-      <meta name="generator" content="mkdocs-1.4.3, mkdocs-material-9.1.13">
+      <meta name="generator" content="mkdocs-1.4.3, mkdocs-material-9.1.14">
     
     
       
@@ -8317,19 +8317,6 @@
     SYNTAX
   </a>
   
-    <nav class="md-nav" aria-label="SYNTAX">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#default-default" class="md-nav__link">
-    Default (Default)
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
 </li>
       
         <li class="md-nav__item">
@@ -8528,8 +8515,9 @@
 <h1 id="export-azpolicyassignmentruledata">Export-AzPolicyAssignmentRuleData<a class="headerlink" href="#export-azpolicyassignmentruledata" title="Permanent link">#</a></h1>
 <p>Export JSON based rules from policy assignment data.</p>
 <h2 id="syntax">SYNTAX<a class="headerlink" href="#syntax" title="Permanent link">#</a></h2>
-<h3 id="default-default">Default (Default)<a class="headerlink" href="#default-default" title="Permanent link">#</a></h3>
-<div class="highlight"><pre><span></span><code>Export-AzPolicyAssignmentRuleData [[-Name] &lt;string&gt;] [-AssignmentFile] &lt;string&gt; [[-ResourceGroup] &lt;ResourceGroupReference&gt;] [[-Subscription] &lt;SubscriptionReference&gt;] [[-OutputPath] &lt;string&gt;] [[-RulePrefix] &lt;string&gt;] [-PassThru] [&lt;CommonParameters&gt;]
+<div class="highlight"><pre><span></span><code>Export-AzPolicyAssignmentRuleData [-Name &lt;String&gt;] -AssignmentFile &lt;String&gt;
+ [-ResourceGroup &lt;ResourceGroupReference&gt;] [-Subscription &lt;SubscriptionReference&gt;] [-OutputPath &lt;String&gt;]
+ [-RulePrefix &lt;String&gt;] [-PassThru] [&lt;CommonParameters&gt;]
 </code></pre></div>
 <h2 id="description">Description<a class="headerlink" href="#description" title="Permanent link">#</a></h2>
 <p>This is an <strong>experimental</strong> cmdlet.</p>
@@ -8601,7 +8589,7 @@ current working directory.</p>
 <p>The name of the assignment.
 If not specified <code>export-&lt;xxxxxxxx&gt;</code> will be used as the name of the assignment.</p>
 <div class="highlight"><pre><span></span><code><span class="nt">Type</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">String</span>
-<span class="nt">Parameter Sets</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Default</span>
+<span class="nt">Parameter Sets</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">(All)</span>
 <span class="nt">Aliases</span><span class="p">:</span>
 
 <span class="nt">Required</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">False</span>
@@ -8613,7 +8601,7 @@ If not specified <code>export-&lt;xxxxxxxx&gt;</code> will be used as the name o
 <h3 id="-assignmentfile">-AssignmentFile<a class="headerlink" href="#-assignmentfile" title="Permanent link">#</a></h3>
 <p>The absolute or relative path to an assignment data file.</p>
 <div class="highlight"><pre><span></span><code><span class="nt">Type</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">String</span>
-<span class="nt">Parameter Sets</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Default</span>
+<span class="nt">Parameter Sets</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">(All)</span>
 <span class="nt">Aliases</span><span class="p">:</span>
 
 <span class="nt">Required</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">True</span>
@@ -8630,7 +8618,7 @@ is specified.
 Where <code>&lt;name&gt;</code> is the name of the assignment specified by <code>-Name</code>.</p>
 <p>This parameter has no affect when <code>-PassThru</code> is used.</p>
 <div class="highlight"><pre><span></span><code><span class="nt">Type</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">String</span>
-<span class="nt">Parameter Sets</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Default</span>
+<span class="nt">Parameter Sets</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">(All)</span>
 <span class="nt">Aliases</span><span class="p">:</span>
 
 <span class="nt">Required</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">False</span>
@@ -8644,7 +8632,7 @@ Where <code>&lt;name&gt;</code> is the name of the assignment specified by <code
 <p>When <code>-RulePrefix</code> is specified, the default prefix is overridden.</p>
 <p>For example, with <code>-RulePrefix 'CustomPolicyPrefix'</code> this would generate the policy rule name <code>CustomPolicyPrefix.Policy.e749c2d003da</code>.</p>
 <div class="highlight"><pre><span></span><code><span class="nt">Type</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">String</span>
-<span class="nt">Parameter Sets</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Default</span>
+<span class="nt">Parameter Sets</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">(All)</span>
 <span class="nt">Aliases</span><span class="p">:</span>
 
 <span class="nt">Required</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">False</span>
@@ -8658,7 +8646,7 @@ Where <code>&lt;name&gt;</code> is the name of the assignment specified by <code
 When <code>-PassThru</code> is specified, JSON files are not created and Azure resource objects are returned to
 the pipeline instead.</p>
 <div class="highlight"><pre><span></span><code><span class="nt">Type</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">SwitchParameter</span>
-<span class="nt">Parameter Sets</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Default</span>
+<span class="nt">Parameter Sets</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">(All)</span>
 <span class="nt">Aliases</span><span class="p">:</span>
 
 <span class="nt">Required</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">False</span>
@@ -8677,7 +8665,7 @@ This option does not require an authenticated Azure connection.
 The hashtable will override the defaults for any specified properties.</p>
 <p>For more details see about_PSRule_Azure_Configuration.</p>
 <div class="highlight"><pre><span></span><code><span class="nt">Type</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">ResourceGroupReference</span>
-<span class="nt">Parameter Sets</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Default</span>
+<span class="nt">Parameter Sets</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">(All)</span>
 <span class="nt">Aliases</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">ResourceGroupName</span>
 
 <span class="nt">Required</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">False</span>
@@ -8696,7 +8684,7 @@ This option does not require an authenticated Azure connection.
 The hashtable will override the defaults for any specified properties.</p>
 <p>For more details see about_PSRule_Azure_Configuration.</p>
 <div class="highlight"><pre><span></span><code><span class="nt">Type</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">SubscriptionReference</span>
-<span class="nt">Parameter Sets</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Default</span>
+<span class="nt">Parameter Sets</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">(All)</span>
 <span class="nt">Aliases</span><span class="p">:</span>
 
 <span class="nt">Required</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">False</span>
@@ -8706,9 +8694,7 @@ The hashtable will override the defaults for any specified properties.</p>
 <span class="nt">Accept wildcard characters</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">False</span>
 </code></pre></div>
 <h3 id="commonparameters">CommonParameters<a class="headerlink" href="#commonparameters" title="Permanent link">#</a></h3>
-<p>This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction,
--InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable.
-For more information, see <a href="https://docs.microsoft.com/powershell/module/microsoft.powershell.core/about/about_commonparameters">about_CommonParameters</a>.</p>
+<p>This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see <a href="https://go.microsoft.com/fwlink/?LinkID=113216">about_CommonParameters</a>.</p>
 <h2 id="inputs">INPUTS<a class="headerlink" href="#inputs" title="Permanent link">#</a></h2>
 <h3 id="systemstring">System.String<a class="headerlink" href="#systemstring" title="Permanent link">#</a></h3>
 <h2 id="outputs">OUTPUTS<a class="headerlink" href="#outputs" title="Permanent link">#</a></h2>
@@ -8722,7 +8708,7 @@ For more information, see <a href="https://docs.microsoft.com/powershell/module/
   <small>
     
       Last update:
-      2022-10-08
+      2023-05-23
     
   </small>
 </div>

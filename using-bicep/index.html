@@ -21,7 +21,7 @@
         <link rel="next" href="../creating-your-pipeline/">
       
       <link rel="icon" href="../assets/ms_icon.png">
-      <meta name="generator" content="mkdocs-1.4.3, mkdocs-material-9.1.13">
+      <meta name="generator" content="mkdocs-1.4.3, mkdocs-material-9.1.14">
     
     
       
@@ -669,9 +669,29 @@
   
 </li>
         
-          <li class="md-nav__item">
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#using-parameter-files" class="md-nav__link">
     Using parameter files
+  </a>
+  
+    <nav class="md-nav" aria-label="Using parameter files">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#using-json-parameter-files" class="md-nav__link">
+    Using JSON parameter files
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#using-bicep-parameter-files" class="md-nav__link">
+    Using Bicep parameter files
   </a>
   
 </li>
@@ -8493,9 +8513,29 @@
   
 </li>
         
-          <li class="md-nav__item">
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#using-parameter-files" class="md-nav__link">
     Using parameter files
+  </a>
+  
+    <nav class="md-nav" aria-label="Using parameter files">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#using-json-parameter-files" class="md-nav__link">
+    Using JSON parameter files
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#using-bicep-parameter-files" class="md-nav__link">
+    Using Bicep parameter files
   </a>
   
 </li>
@@ -8677,10 +8717,17 @@ Instead expand resources from deployments or tests.</p>
 <p class="admonition-title">Note</p>
 <p>In this example, Bicep files such as <code>deploy.bicep</code> in other directories will be expanded.</p>
 </div>
-<h3 id="using-parameter-files">Using parameter files<a class="headerlink" href="#using-parameter-files" title="Permanent link">#</a></h3>
+<h2 id="using-parameter-files">Using parameter files<a class="headerlink" href="#using-parameter-files" title="Permanent link">#</a></h2>
 <p>When using Bicep, you don't need to use parameter files.
-You can call <code>.bicep</code> files directly from other <code>.bicep</code> files with modules by using the <code>module</code> keyword.
-Alternatively, you can choose to expand and test a Bicep module from JSON parameter files <a href="../using-templates/#by-metadata">by metadata</a>.</p>
+You can call <code>.bicep</code> files directly from other <code>.bicep</code> files with modules by using the <code>module</code> keyword.</p>
+<p>Alternatively, Bicep supports two options for parameter files:</p>
+<ul>
+<li><strong>JSON parameter files</strong> &mdash; This format uses conventional JSON syntax compatible with <abbr title="Azure Resource Manager">ARM</abbr> templates.</li>
+<li><strong>Bicep parameter files</strong> &mdash; This format uses Bicep language from a <code>.bicepparam</code> file to reference a Bicep module.</li>
+</ul>
+<p>Each option is described in more detail in the following sections.</p>
+<h3 id="using-json-parameter-files">Using JSON parameter files<a class="headerlink" href="#using-json-parameter-files" title="Permanent link">#</a></h3>
+<p>You can choose to expand and test a Bicep module from JSON parameter files <a href="../using-templates/#by-metadata">by metadata</a>.</p>
 <p>When using parameter files exclusively,
 the <code>AZURE_BICEP_FILE_EXPANSION</code> configuration option does not need to be set.
 Instead set the <code>AZURE_PARAMETER_FILE_EXPANSION</code> configuration option to <code>true</code>.
@@ -8720,6 +8767,38 @@ This option will discover Bicep files from parameter metadata.</p>
 <span class="p">}</span>
 </code></pre></div>
 </div>
+<h3 id="using-bicep-parameter-files">Using Bicep parameter files<a class="headerlink" href="#using-bicep-parameter-files" title="Permanent link">#</a></h3>
+<p><span class="twemoji experimental"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8 8.807V3.5h-.563a.75.75 0 0 1 0-1.5h9.125a.75.75 0 0 1 0 1.5H16v5.307l5.125 9.301c.964 1.75-.302 3.892-2.299 3.892H5.174c-1.998 0-3.263-2.142-2.3-3.892ZM4.189 18.832a1.123 1.123 0 0 0 .985 1.668h13.652a1.123 1.123 0 0 0 .985-1.668L17.7 15H6.3ZM14.5 3.5h-5V9a.75.75 0 0 1-.093.362L7.127 13.5h9.746l-2.28-4.138A.75.75 0 0 1 14.5 9Z"/></svg></span> Experimental · <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M11.75 1a.75.75 0 0 1 .75.75V4h6.532c.42 0 .826.15 1.143.425l3.187 2.75a1.75 1.75 0 0 1 0 2.65l-3.187 2.75a1.75 1.75 0 0 1-1.143.425H12.5v9.25a.75.75 0 0 1-1.5 0V13H3.75A1.75 1.75 0 0 1 2 11.25v-5.5C2 4.783 2.784 4 3.75 4H11V1.75a.75.75 0 0 1 .75-.75Zm7.282 4.5H3.75a.25.25 0 0 0-.25.25v5.5c0 .138.112.25.25.25h15.282c.06 0 .118-.021.163-.06l3.188-2.75a.248.248 0 0 0 0-.38l-3.188-2.75a.249.249 0 0 0-.163-.06Z"/></svg></span> v1.27.0</p>
+<p>You can use <code>.bicepparam</code> files to reference your Bicep modules as a method for providing parameters.
+Using the Bicep parameter file format, allows you to get many of the benefits of the Bicep language.</p>
+<p>For example:</p>
+<div class="highlight"><pre><span></span><code>using &#39;template.bicep&#39;
+
+param storageAccountName = &#39;bicepstorage001&#39;
+param tags = {
+  env: &#39;test&#39;
+}
+</code></pre></div>
+<p>Presently, to use this feature you must:</p>
+<ol>
+<li>Enable the experimental feature in <code>bicepconfig.json</code>.</li>
+<li>Enable expansion of Bicep parameter files in <code>ps-rule.yaml</code>.</li>
+</ol>
+<p>For example:</p>
+<div class="highlight"><span class="filename">bicepconfig.json</span><pre><span></span><code><span class="p">{</span>
+<span class="w">  </span><span class="nt">&quot;experimentalFeaturesEnabled&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="nt">&quot;paramsFiles&quot;</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span>
+<span class="w">  </span><span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div>
+<div class="highlight"><span class="filename">ps-rule.yaml</span><pre><span></span><code><span class="nt">configuration</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">AZURE_BICEP_PARAMS_FILE_EXPANSION</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
+</code></pre></div>
+<div class="admonition experimental">
+<p class="admonition-title">Experimental - <a href="https://learn.microsoft.com/azure/azure-resource-manager/bicep/private-module-registry">Learn more</a></p>
+<p>Bicep parameter files are a work in progress.
+This feature will be transitioned to stable after the Bicep CLI support is finalized.</p>
+</div>
 <h2 id="restoring-modules-from-a-private-registry">Restoring modules from a private registry<a class="headerlink" href="#restoring-modules-from-a-private-registry" title="Permanent link">#</a></h2>
 <p>Bicep modules can be stored in a private registry.
 Storing modules in a private registry gives you a central location to reference modules across your organization.</p>
@@ -8732,7 +8811,7 @@ The restore process automatically occurs when PSRule is run, however some additi
 <li><a href="#granting-access-to-a-private-registry">Granting access to a private registry</a></li>
 <li><a href="#set-pipeline-environment-variables">Set pipeline environment variables</a></li>
 </ul>
-<p>Some organizations may want to expose Bicep modules publically.
+<p>Some organizations may want to expose Bicep modules publicly.
 This can be configured by enabling anonymous pull access.
 To configure your registry see <a href="https://learn.microsoft.com/azure/container-registry/anonymous-pull-access">Make your container registry content publicly available</a>.</p>
 <div class="admonition note">
@@ -8840,7 +8919,7 @@ To keep <code>BICEPREGISTRYCLIENTSECRET</code> secure, use a <a href="https://do
   <small>
     
       Last update:
-      2023-04-23
+      2023-05-23
     
   </small>
 </div>

@@ -17,7 +17,7 @@
       
       
       <link rel="icon" href="../../assets/ms_icon.png">
-      <meta name="generator" content="mkdocs-1.4.3, mkdocs-material-9.1.13">
+      <meta name="generator" content="mkdocs-1.4.3, mkdocs-material-9.1.14">
     
     
       
@@ -8550,16 +8550,19 @@
 <p>Export policy assignment data.</p>
 <h2 id="syntax">SYNTAX<a class="headerlink" href="#syntax" title="Permanent link">#</a></h2>
 <h3 id="default-default">Default (Default)<a class="headerlink" href="#default-default" title="Permanent link">#</a></h3>
-<div class="highlight"><pre><span></span><code>Export-AzPolicyAssignmentData [-OutputPath &lt;string&gt;] [-PassThru] [-WhatIf] [-Confirm] [&lt;CommonParameters&gt;]
+<div class="highlight"><pre><span></span><code>Export-AzPolicyAssignmentData [-OutputPath &lt;String&gt;] [-PassThru] [-WhatIf] [-Confirm] [&lt;CommonParameters&gt;]
 </code></pre></div>
 <h3 id="name">Name<a class="headerlink" href="#name" title="Permanent link">#</a></h3>
-<div class="highlight"><pre><span></span><code>Export-AzPolicyAssignmentData [-Name &lt;string&gt;] [-Scope &lt;string&gt;] [-PolicyDefinitionId &lt;string&gt;] [-OutputPath &lt;string&gt;] [-PassThru] [-WhatIf] [-Confirm] [&lt;CommonParameters&gt;]
+<div class="highlight"><pre><span></span><code>Export-AzPolicyAssignmentData [-Name &lt;String&gt;] [-Scope &lt;String&gt;] [-PolicyDefinitionId &lt;String&gt;]
+ [-OutputPath &lt;String&gt;] [-PassThru] [-WhatIf] [-Confirm] [&lt;CommonParameters&gt;]
 </code></pre></div>
 <h3 id="id">Id<a class="headerlink" href="#id" title="Permanent link">#</a></h3>
-<div class="highlight"><pre><span></span><code>Export-AzPolicyAssignmentData -Id &lt;string&gt; [-PolicyDefinitionId &lt;string&gt;] [-OutputPath &lt;string&gt;] [-PassThru] [-WhatIf] [-Confirm] [&lt;CommonParameters&gt;]
+<div class="highlight"><pre><span></span><code>Export-AzPolicyAssignmentData -Id &lt;String&gt; [-PolicyDefinitionId &lt;String&gt;] [-OutputPath &lt;String&gt;] [-PassThru]
+ [-WhatIf] [-Confirm] [&lt;CommonParameters&gt;]
 </code></pre></div>
 <h3 id="includedescendent">IncludeDescendent<a class="headerlink" href="#includedescendent" title="Permanent link">#</a></h3>
-<div class="highlight"><pre><span></span><code>Export-AzPolicyAssignmentData -IncludeDescendent [-Scope &lt;string&gt;] [-OutputPath &lt;string&gt;] [-PassThru] [-WhatIf] [-Confirm] [&lt;CommonParameters&gt;]
+<div class="highlight"><pre><span></span><code>Export-AzPolicyAssignmentData [-Scope &lt;String&gt;] [-IncludeDescendent] [-OutputPath &lt;String&gt;] [-PassThru]
+ [-WhatIf] [-Confirm] [&lt;CommonParameters&gt;]
 </code></pre></div>
 <h2 id="description">Description<a class="headerlink" href="#description" title="Permanent link">#</a></h2>
 <p>This is an <strong>experimental</strong> cmdlet.</p>
@@ -8606,7 +8609,7 @@ Mode                LastWriteTime         Length Name
 <h3 id="-name">-Name<a class="headerlink" href="#-name" title="Permanent link">#</a></h3>
 <p>Specifies the name of the policy assignment.</p>
 <div class="highlight"><pre><span></span><code><span class="nt">Type</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">String</span>
-<span class="nt">Parameter Sets</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">(Name)</span>
+<span class="nt">Parameter Sets</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Name</span>
 <span class="nt">Aliases</span><span class="p">:</span>
 
 <span class="nt">Required</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">False</span>
@@ -8618,7 +8621,7 @@ Mode                LastWriteTime         Length Name
 <h3 id="-id">-Id<a class="headerlink" href="#-id" title="Permanent link">#</a></h3>
 <p>Specifies the fully qualified resource ID for the policy assignment.</p>
 <div class="highlight"><pre><span></span><code><span class="nt">Type</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">String</span>
-<span class="nt">Parameter Sets</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">(Id)</span>
+<span class="nt">Parameter Sets</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Id</span>
 <span class="nt">Aliases</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">AssignmentId</span>
 
 <span class="nt">Required</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">True</span>
@@ -8630,7 +8633,7 @@ Mode                LastWriteTime         Length Name
 <h3 id="-scope">-Scope<a class="headerlink" href="#-scope" title="Permanent link">#</a></h3>
 <p>Specifies the scope at which the policy is applied for the assignment.</p>
 <div class="highlight"><pre><span></span><code><span class="nt">Type</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">String</span>
-<span class="nt">Parameter Sets</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">(Name, IncludeDescendent)</span>
+<span class="nt">Parameter Sets</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Name, IncludeDescendent</span>
 <span class="nt">Aliases</span><span class="p">:</span>
 
 <span class="nt">Required</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">False</span>
@@ -8642,7 +8645,7 @@ Mode                LastWriteTime         Length Name
 <h3 id="-policydefinitionid">-PolicyDefinitionId<a class="headerlink" href="#-policydefinitionid" title="Permanent link">#</a></h3>
 <p>Specifies the ID of the policy definition of the policy assignment.</p>
 <div class="highlight"><pre><span></span><code><span class="nt">Type</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">String</span>
-<span class="nt">Parameter Sets</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">(Name, Id)</span>
+<span class="nt">Parameter Sets</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Name, Id</span>
 <span class="nt">Aliases</span><span class="p">:</span>
 
 <span class="nt">Required</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">False</span>
@@ -8654,8 +8657,8 @@ Mode                LastWriteTime         Length Name
 <h3 id="-includedescendent">-IncludeDescendent<a class="headerlink" href="#-includedescendent" title="Permanent link">#</a></h3>
 <p>Causes the list of returned policy assignments to include all assignments related to the given scope,
 including those from ancestor scopes and those from descendent scopes.</p>
-<div class="highlight"><pre><span></span><code><span class="nt">Type</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">String</span>
-<span class="nt">Parameter Sets</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">(IncludeDescendent)</span>
+<div class="highlight"><pre><span></span><code><span class="nt">Type</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">SwitchParameter</span>
+<span class="nt">Parameter Sets</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">IncludeDescendent</span>
 <span class="nt">Aliases</span><span class="p">:</span>
 
 <span class="nt">Required</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">True</span>
@@ -8667,10 +8670,10 @@ including those from ancestor scopes and those from descendent scopes.</p>
 <h3 id="-outputpath">-OutputPath<a class="headerlink" href="#-outputpath" title="Permanent link">#</a></h3>
 <p>The path to store generated JSON files containing policy assignment data.</p>
 <div class="highlight"><pre><span></span><code><span class="nt">Type</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">String</span>
-<span class="nt">Parameter Sets</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Default</span>
+<span class="nt">Parameter Sets</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">(All)</span>
 <span class="nt">Aliases</span><span class="p">:</span>
 
-<span class="nt">Required</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">True</span>
+<span class="nt">Required</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">False</span>
 <span class="nt">Position</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Named</span>
 <span class="nt">Default value</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">$PWD</span>
 <span class="nt">Accept pipeline input</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">False</span>
@@ -8681,7 +8684,7 @@ including those from ancestor scopes and those from descendent scopes.</p>
 When <code>-PassThru</code> is specified, JSON files are not created and Azure resource objects are returned to
 the pipeline instead.</p>
 <div class="highlight"><pre><span></span><code><span class="nt">Type</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">SwitchParameter</span>
-<span class="nt">Parameter Sets</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Default</span>
+<span class="nt">Parameter Sets</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">(All)</span>
 <span class="nt">Aliases</span><span class="p">:</span>
 
 <span class="nt">Required</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">False</span>
@@ -8691,9 +8694,7 @@ the pipeline instead.</p>
 <span class="nt">Accept wildcard characters</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">False</span>
 </code></pre></div>
 <h3 id="commonparameters">CommonParameters<a class="headerlink" href="#commonparameters" title="Permanent link">#</a></h3>
-<p>This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction,
--InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable.
-For more information, see <a href="https://docs.microsoft.com/powershell/module/microsoft.powershell.core/about/about_commonparameters">about_CommonParameters</a>.</p>
+<p>This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see <a href="https://go.microsoft.com/fwlink/?LinkID=113216">about_CommonParameters</a>.</p>
 <h2 id="inputs">INPUTS<a class="headerlink" href="#inputs" title="Permanent link">#</a></h2>
 <h3 id="none">None<a class="headerlink" href="#none" title="Permanent link">#</a></h3>
 <h2 id="outputs">OUTPUTS<a class="headerlink" href="#outputs" title="Permanent link">#</a></h2>
@@ -8711,7 +8712,7 @@ This is returned when the <code>-PassThru</code> switch is used.</p>
   <small>
     
       Last update:
-      2022-03-30
+      2023-05-23
     
   </small>
 </div>

@@ -21,7 +21,7 @@
         <link rel="next" href="../CHANGELOG-v0/">
       
       <link rel="icon" href="../assets/ms_icon.png">
-      <meta name="generator" content="mkdocs-1.4.3, mkdocs-material-9.1.13">
+      <meta name="generator" content="mkdocs-1.4.3, mkdocs-material-9.1.14">
     
     
       
@@ -10974,6 +10974,14 @@
 <h2 id="unreleased">Unreleased<a class="headerlink" href="#unreleased" title="Permanent link">#</a></h2>
 <p>What's changed since pre-release v1.27.0-B0050:</p>
 <ul>
+<li>New features:<ul>
+<li><strong>Experimental:</strong> Added support for expanding deployments from <code>.bicepparam</code> files by <a href="https://github.com/BernieWhite">@BernieWhite</a>.
+  <a href="https://github.com/Azure/PSRule.Rules.Azure/issues/2132">#2132</a><ul>
+<li>See <a href="https://aka.ms/ps-rule-azure/bicep">Using Bicep source</a> for details.</li>
+</ul>
+</li>
+</ul>
+</li>
 <li>New rules:<ul>
 <li>Storage Account:<ul>
 <li>Check that Malware Scanning in Microsoft Defender for Storage is enabled for storage accounts by <a href="https://github.com/BenjaminEngeset">@BenjaminEngeset</a>.</li>
@@ -11383,7 +11391,7 @@
 <p>What's changed since v1.24.2:</p>
 <ul>
 <li>New features:<ul>
-<li><strong>Experimental</strong>: Added <code>Azure.MCSB.v1</code> which include rules aligned to the Microsoft Cloud Security Benchmark by <a href="https://github.com/BernieWhite">@BernieWhite</a>.
+<li><strong>Experimental:</strong> Added <code>Azure.MCSB.v1</code> which include rules aligned to the Microsoft Cloud Security Benchmark by <a href="https://github.com/BernieWhite">@BernieWhite</a>.
   <a href="https://github.com/Azure/PSRule.Rules.Azure/issues/1634">#1634</a></li>
 </ul>
 </li>
@@ -11544,7 +11552,7 @@
 <p>What's changed since v1.24.2:</p>
 <ul>
 <li>New features:<ul>
-<li><strong>Experimental</strong>: Added <code>Azure.MCSB.v1</code> which include rules aligned to the Microsoft Cloud Security Benchmark by <a href="https://github.com/BernieWhite">@BernieWhite</a>.
+<li><strong>Experimental:</strong> Added <code>Azure.MCSB.v1</code> which include rules aligned to the Microsoft Cloud Security Benchmark by <a href="https://github.com/BernieWhite">@BernieWhite</a>.
   <a href="https://github.com/Azure/PSRule.Rules.Azure/issues/1634">#1634</a></li>
 </ul>
 </li>
@@ -13577,7 +13585,7 @@ What's changed since v1.24.0:</p>
 <li>Marked <code>Azure.GA_2021_12</code> and <code>Azure.Preview_2021_12</code> baselines as obsolete.</li>
 </ul>
 </li>
-<li><strong>Experimental</strong>: Cmdlets to validate objects with Azure policy conditions:<ul>
+<li><strong>Experimental:</strong> Cmdlets to validate objects with Azure policy conditions:<ul>
 <li><code>Export-AzPolicyAssignmentData</code> - Exports policy assignment data. <a href="https://github.com/Azure/PSRule.Rules.Azure/issues/1266">#1266</a></li>
 <li><code>Export-AzPolicyAssignmentRuleData</code> - Exports JSON rules from policy assignment data. <a href="https://github.com/Azure/PSRule.Rules.Azure/issues/1278">#1278</a></li>
 <li><code>Get-AzPolicyAssignmentDataSource</code> - Discovers policy assignment data. <a href="https://github.com/Azure/PSRule.Rules.Azure/issues/1340">#1340</a></li>
@@ -13649,7 +13657,7 @@ What's changed since v1.24.0:</p>
 <p>What's changed since pre-release v1.14.0-B2203088:</p>
 <ul>
 <li>New features:<ul>
-<li><strong>Experimental</strong>: Cmdlets to validate objects with Azure policy conditions:<ul>
+<li><strong>Experimental:</strong> Cmdlets to validate objects with Azure policy conditions:<ul>
 <li><code>Export-AzPolicyAssignmentData</code> - Exports policy assignment data. <a href="https://github.com/Azure/PSRule.Rules.Azure/issues/1266">#1266</a></li>
 <li><code>Export-AzPolicyAssignmentRuleData</code> - Exports JSON rules from policy assignment data. <a href="https://github.com/Azure/PSRule.Rules.Azure/issues/1278">#1278</a></li>
 <li><code>Get-AzPolicyAssignmentDataSource</code> - Discovers policy assignment data. <a href="https://github.com/Azure/PSRule.Rules.Azure/issues/1340">#1340</a></li>
@@ -14992,7 +15000,7 @@ What's changed since v1.24.0:</p>
 <p>What's changed since v1.5.1:</p>
 <ul>
 <li>New features:<ul>
-<li><strong>Experimental</strong>: Added support for expansion from Bicep source files. <a href="https://github.com/Azure/PSRule.Rules.Azure/issues/848">#848</a> <a href="https://github.com/Azure/PSRule.Rules.Azure/issues/670">#670</a> <a href="https://github.com/Azure/PSRule.Rules.Azure/issues/858">#858</a><ul>
+<li><strong>Experimental:</strong> Added support for expansion from Bicep source files. <a href="https://github.com/Azure/PSRule.Rules.Azure/issues/848">#848</a> <a href="https://github.com/Azure/PSRule.Rules.Azure/issues/670">#670</a> <a href="https://github.com/Azure/PSRule.Rules.Azure/issues/858">#858</a><ul>
 <li>Bicep support is currently experimental.</li>
 <li>To opt-in set the <code>AZURE_BICEP_FILE_EXPANSION</code> configuration to <code>true</code>.</li>
 <li>For more information see <a href="https://azure.github.io/PSRule.Rules.Azure/using-bicep/">Using Bicep</a>.</li>
@@ -15032,7 +15040,7 @@ What's changed since v1.24.0:</p>
 <p>What's changed since pre-release v1.6.0-B2107028:</p>
 <ul>
 <li>New features:<ul>
-<li><strong>Experimental</strong>: Added support for expansion from Bicep source files. <a href="https://github.com/Azure/PSRule.Rules.Azure/issues/848">#848</a> <a href="https://github.com/Azure/PSRule.Rules.Azure/issues/670">#670</a><ul>
+<li><strong>Experimental:</strong> Added support for expansion from Bicep source files. <a href="https://github.com/Azure/PSRule.Rules.Azure/issues/848">#848</a> <a href="https://github.com/Azure/PSRule.Rules.Azure/issues/670">#670</a><ul>
 <li>Bicep support is currently experimental.</li>
 <li>To opt-in set the <code>AZURE_BICEP_FILE_EXPANSION</code> configuration to <code>true</code>.</li>
 <li>For more information see <a href="https://azure.github.io/PSRule.Rules.Azure/using-bicep/">Using Bicep</a>.</li>
@@ -15827,7 +15835,7 @@ What's changed since v1.24.0:</p>
   <small>
     
       Last update:
-      2023-05-22
+      2023-05-23
     
   </small>
 </div>

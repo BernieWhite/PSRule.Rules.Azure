@@ -591,6 +591,11 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
+         <loc>https://azure.github.io/PSRule.Rules.Azure/en/rules/Azure.APIM.DefenderCloud/</loc>
+         <lastmod>2023-05-28</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
          <loc>https://azure.github.io/PSRule.Rules.Azure/en/rules/Azure.APIM.EncryptValues/</loc>
          <lastmod>2023-05-28</lastmod>
          <changefreq>daily</changefreq>

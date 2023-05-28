@@ -6,13 +6,13 @@
       <meta charset="utf-8">
       <meta name="viewport" content="width=device-width,initial-scale=1">
       
-        <meta name="description" content="Migrate from legacy SKUs to improve reliability and performance of VPN gateways.">
+        <meta name="description" content="Enable sensitive data threat detection in Microsoft Defender for Storage.">
       
       
         <meta name="author" content="Microsoft">
       
       
-        <link rel="canonical" href="https://azure.github.io/PSRule.Rules.Azure/en/rules/Azure.VNG.VPNLegacySKU/">
+        <link rel="canonical" href="https://azure.github.io/PSRule.Rules.Azure/en/rules/Azure.Storage.DefenderCloud.SensitiveData/">
       
       
       
@@ -21,7 +21,7 @@
     
     
       
-        <title>Azure.VNG.VPNLegacySKU - PSRule for Azure</title>
+        <title>Azure.Storage.DefenderCloud.SensitiveData - PSRule for Azure</title>
       
     
     
@@ -79,20 +79,20 @@
   <!-- Open graph meta tags -->
   <meta property="og:site_name" content="PSRule for Azure" />
   <meta property="og:type" content="article" />
-  <meta property="og:title" content="PSRule for Azure - Azure.VNG.VPNLegacySKU" />
-  <meta property="og:description" content="Migrate from legacy SKUs to improve reliability and performance of VPN gateways." />
-  <meta property="og:url" content="https://azure.github.io/PSRule.Rules.Azure/en/rules/Azure.VNG.VPNLegacySKU/" />
+  <meta property="og:title" content="PSRule for Azure - Azure.Storage.DefenderCloud.SensitiveData" />
+  <meta property="og:description" content="Enable sensitive data threat detection in Microsoft Defender for Storage." />
+  <meta property="og:url" content="https://azure.github.io/PSRule.Rules.Azure/en/rules/Azure.Storage.DefenderCloud.SensitiveData/" />
   <meta property="og:image" content="https://repository-images.githubusercontent.com/184154668/58818c00-d496-11eb-9b77-016145022654" />
   <meta property="og:image:type" content="image/png" />
   <meta property="og:image:width" content="1280" />
   <meta property="og:image:height" content="640" />
-  <meta property="og:image:alt" content="Migrate from legacy SKUs to improve reliability and performance of VPN gateways." />
+  <meta property="og:image:alt" content="Enable sensitive data threat detection in Microsoft Defender for Storage." />
 
   <!-- Twitter meta tags -->
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:site" content="@github" />
-  <meta name="twitter:title" content="PSRule for Azure - Azure.VNG.VPNLegacySKU" />
-  <meta name="twitter:description" content="Migrate from legacy SKUs to improve reliability and performance of VPN gateways." />
+  <meta name="twitter:title" content="PSRule for Azure - Azure.Storage.DefenderCloud.SensitiveData" />
+  <meta name="twitter:description" content="Enable sensitive data threat detection in Microsoft Defender for Storage." />
   <meta name="twitter:image" content="https://repository-images.githubusercontent.com/184154668/58818c00-d496-11eb-9b77-016145022654" />
 
 
@@ -114,7 +114,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#migrate-from-legacy-vpn-gateway-skus" class="md-skip">
+        <a href="#sensitive-data-threat-detection" class="md-skip">
           Skip to content
         </a>
       
@@ -150,7 +150,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Azure.VNG.VPNLegacySKU
+              Azure.Storage.DefenderCloud.SensitiveData
             
           </span>
         </div>
@@ -6390,11 +6390,100 @@
               
   
   
+    
   
-    <li class="md-nav__item">
-      <a href="../Azure.Storage.DefenderCloud.SensitiveData/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          Azure.Storage.DefenderCloud.SensitiveData
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         Azure.Storage.DefenderCloud.SensitiveData
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#description" class="md-nav__link">
+    Description
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#recommendation" class="md-nav__link">
+    Recommendation
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#examples" class="md-nav__link">
+    Examples
+  </a>
+  
+    <nav class="md-nav" aria-label="Examples">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#configure-with-azure-template" class="md-nav__link">
+    Configure with Azure template
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#configure-with-bicep" class="md-nav__link">
+    Configure with Bicep
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#notes" class="md-nav__link">
+    Notes
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#links" class="md-nav__link">
+    Links
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -7566,66 +7655,11 @@
               
   
   
-    
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          Azure.VNG.VPNLegacySKU
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../Azure.VNG.VPNLegacySKU/" class="md-nav__link">
         Azure.VNG.VPNLegacySKU
       </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#description" class="md-nav__link">
-    Description
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#recommendation" class="md-nav__link">
-    Recommendation
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#links" class="md-nav__link">
-    Links
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -8472,6 +8506,40 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#examples" class="md-nav__link">
+    Examples
+  </a>
+  
+    <nav class="md-nav" aria-label="Examples">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#configure-with-azure-template" class="md-nav__link">
+    Configure with Azure template
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#configure-with-bicep" class="md-nav__link">
+    Configure with Bicep
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#notes" class="md-nav__link">
+    Notes
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#links" class="md-nav__link">
     Links
   </a>
@@ -8495,7 +8563,7 @@
   
     
       <a
-        href="https://github.com/Azure/PSRule.Rules.Azure/blob/main/docs/en/rules/Azure.VNG.VPNLegacySKU.md"
+        href="https://github.com/Azure/PSRule.Rules.Azure/blob/main/docs/en/rules/Azure.Storage.DefenderCloud.SensitiveData.md"
         title=""
         class="md-content__button md-icon"
       >
@@ -8512,27 +8580,89 @@
   
 
   <!-- Markdown content -->
-  <h1 id="migrate-from-legacy-vpn-gateway-skus">Migrate from legacy VPN gateway SKUs<a class="headerlink" href="#migrate-from-legacy-vpn-gateway-skus" title="Permanent link">#</a></h1>
-<nav class="md-tags"><span class="md-tag">Azure.VNG.VPNLegacySKU</span><span class="md-tag">AZR-000269</span><span class="md-tag">Error</span></nav>
-<p><a href="../module/#operational-excellence"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M1.527 13.237a1.75 1.75 0 0 1 0-2.474l9.272-9.273a1.75 1.75 0 0 1 2.475 0l9.272 9.273a1.75 1.75 0 0 1 0 2.474l-9.272 9.272a1.75 1.75 0 0 1-2.475 0Zm1.06-1.414a.25.25 0 0 0 0 .354l9.273 9.272a.25.25 0 0 0 .353 0l9.272-9.272a.25.25 0 0 0 0-.354l-9.272-9.272a.25.25 0 0 0-.353 0Z"/></svg></span> Operational Excellence</a>
- · <a href="../resource/#virtual-network-gateway"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13.152.682a2.251 2.251 0 0 1 2.269 0l.007.004 6.957 4.276a2.277 2.277 0 0 1 1.126 1.964v7.516c0 .81-.432 1.56-1.133 1.968l-.002.001-11.964 7.037-.004.003c-.706.41-1.578.41-2.284 0l-.026-.015-6.503-4.502a2.268 2.268 0 0 1-1.096-1.943V9.438c0-.392.1-.77.284-1.1l.003-.006.014-.026c.197-.342.48-.627.82-.827h.002L13.152.681Zm.757 1.295h-.001L2.648 8.616l6.248 4.247a.775.775 0 0 0 .758-.01h.001l11.633-6.804-6.629-4.074a.75.75 0 0 0-.75.003ZM8.517 14.33a2.286 2.286 0 0 1-.393-.18l-.023-.014-6.102-4.147v7.003c0 .275.145.528.379.664l.025.014 6.114 4.232V14.33ZM18 9.709l-3.25 1.9v7.548L18 17.245Zm-7.59 4.438-.002.002a2.296 2.296 0 0 1-.391.18v7.612l3.233-1.902v-7.552Zm9.09-5.316v7.532l2.124-1.25a.776.776 0 0 0 .387-.671V7.363Z"/></svg></span> Virtual Network Gateway</a>
- · <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M7.75 6.5a1.25 1.25 0 1 0 0 2.5 1.25 1.25 0 0 0 0-2.5Z"/><path d="M2.5 1h8.44a1.5 1.5 0 0 1 1.06.44l10.25 10.25a1.5 1.5 0 0 1 0 2.12l-8.44 8.44a1.5 1.5 0 0 1-2.12 0L1.44 12A1.497 1.497 0 0 1 1 10.94V2.5A1.5 1.5 0 0 1 2.5 1Zm0 1.5v8.44l10.25 10.25 8.44-8.44L10.94 2.5Z"/></svg></span> 2020_06</p>
-<p>Migrate from legacy SKUs to improve reliability and performance of VPN gateways.</p>
+  <h1 id="sensitive-data-threat-detection">Sensitive data threat detection<a class="headerlink" href="#sensitive-data-threat-detection" title="Permanent link">#</a></h1>
+<nav class="md-tags"><span class="md-tag">Azure.Storage.DefenderCloud.SensitiveData</span><span class="md-tag">AZR-000391</span><span class="md-tag">Error</span></nav>
+<p><a href="../module/#security"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M1.527 13.237a1.75 1.75 0 0 1 0-2.474l9.272-9.273a1.75 1.75 0 0 1 2.475 0l9.272 9.273a1.75 1.75 0 0 1 0 2.474l-9.272 9.272a1.75 1.75 0 0 1-2.475 0Zm1.06-1.414a.25.25 0 0 0 0 .354l9.273 9.272a.25.25 0 0 0 .353 0l9.272-9.272a.25.25 0 0 0 0-.354l-9.272-9.272a.25.25 0 0 0-.353 0Z"/></svg></span> Security</a>
+ · <a href="../resource/#storage-account"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13.152.682a2.251 2.251 0 0 1 2.269 0l.007.004 6.957 4.276a2.277 2.277 0 0 1 1.126 1.964v7.516c0 .81-.432 1.56-1.133 1.968l-.002.001-11.964 7.037-.004.003c-.706.41-1.578.41-2.284 0l-.026-.015-6.503-4.502a2.268 2.268 0 0 1-1.096-1.943V9.438c0-.392.1-.77.284-1.1l.003-.006.014-.026c.197-.342.48-.627.82-.827h.002L13.152.681Zm.757 1.295h-.001L2.648 8.616l6.248 4.247a.775.775 0 0 0 .758-.01h.001l11.633-6.804-6.629-4.074a.75.75 0 0 0-.75.003ZM8.517 14.33a2.286 2.286 0 0 1-.393-.18l-.023-.014-6.102-4.147v7.003c0 .275.145.528.379.664l.025.014 6.114 4.232V14.33ZM18 9.709l-3.25 1.9v7.548L18 17.245Zm-7.59 4.438-.002.002a2.296 2.296 0 0 1-.391.18v7.612l3.233-1.902v-7.552Zm9.09-5.316v7.532l2.124-1.25a.776.776 0 0 0 .387-.671V7.363Z"/></svg></span> Storage Account</a>
+ · <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M7.75 6.5a1.25 1.25 0 1 0 0 2.5 1.25 1.25 0 0 0 0-2.5Z"/><path d="M2.5 1h8.44a1.5 1.5 0 0 1 1.06.44l10.25 10.25a1.5 1.5 0 0 1 0 2.12l-8.44 8.44a1.5 1.5 0 0 1-2.12 0L1.44 12A1.497 1.497 0 0 1 1 10.94V2.5A1.5 1.5 0 0 1 2.5 1Zm0 1.5v8.44l10.25 10.25 8.44-8.44L10.94 2.5Z"/></svg></span> 2023_06</p>
+<p>Enable sensitive data threat detection in Microsoft Defender for Storage.</p>
 <h2 id="description">Description<a class="headerlink" href="#description" title="Permanent link">#</a></h2>
-<p>When deploying a VPN gateway a number of options are available including SKU/ size.
-The gateway SKU affects the reliance and performance of the underlying gateway instances.
-Previously the following SKUs were available however have been depreciated.</p>
+<p>Sensitive data threat detection is an additional security feature for Microsoft Defender for Storage.
+When enabled Defender for Storage provides alerts when sensitive data is discovered.</p>
+<p>The sensitive data threat detection capability helps teams:</p>
 <ul>
-<li>Basic</li>
-<li>Standard</li>
-<li>HighPerformance</li>
+<li>Identity where sensitive data is stored.</li>
+<li>Detect possible security incidents resulting is data exposure.</li>
 </ul>
+<p>When enabling sensitive data threat detection, the sensitive data categories include built-in sensitive information types (SITs) in the default list of Microsoft Purview.
+It is possible to customize the Data Sensitivity Discovery for a organization, by creating custom sensitive information types (SITs).</p>
+<p>Sensitive data threat detection in Microsoft Defender for Storage can be enabled at the subscription level and by doing so ensures all storage accounts in the subscription will be protected, including future ones.</p>
+<p>When overriding sensitive data threat detection on individual Storage Account it is possible to configure custom sensitive data threat detection settings that differ from the settings configured at the subscription level.</p>
 <h2 id="recommendation">Recommendation<a class="headerlink" href="#recommendation" title="Permanent link">#</a></h2>
-<p>Consider redeploying VPN gateways using new SKUs to improve reliability and performance of gateways.</p>
+<p>Consider enabling sensitive data threat detection using Microsoft Defender for Storage on the Storage Account.
+Additionally, consider enabling sensitive data threat detection for all Storage Accounts within a subscription.</p>
+<h2 id="examples">Examples<a class="headerlink" href="#examples" title="Permanent link">#</a></h2>
+<h3 id="configure-with-azure-template">Configure with Azure template<a class="headerlink" href="#configure-with-azure-template" title="Permanent link">#</a></h3>
+<p>To deploy Storage Accounts that pass this rule:</p>
+<ul>
+<li>Deploy a <code>Microsoft.Security/DefenderForStorageSettings</code> sub-resource (extension resource).</li>
+<li>Set the <code>properties.sensitiveDataDiscovery.isEnabled</code> property to <code>true</code>.</li>
+</ul>
+<p>For example:</p>
+<div class="highlight"><span class="filename">Azure Template snippet</span><pre><span></span><code><span class="p">{</span>
+<span class="w">    </span><span class="nt">&quot;type&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Microsoft.Security/DefenderForStorageSettings&quot;</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">&quot;apiVersion&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;2022-12-01-preview&quot;</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">&quot;name&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;current&quot;</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">&quot;properties&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="nt">&quot;sensitiveDataDiscovery&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">            </span><span class="nt">&quot;isEnabled&quot;</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span>
+<span class="w">        </span><span class="p">},</span>
+<span class="w">        </span><span class="nt">&quot;overrideSubscriptionLevelSettings&quot;</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span>
+<span class="w">    </span><span class="p">},</span>
+<span class="w">    </span><span class="nt">&quot;scope&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;[resourceId(&#39;Microsoft.Storage/storageAccounts&#39;, parameters(&#39;StorageAccountName&#39;))]&quot;</span>
+<span class="p">}</span>
+</code></pre></div>
+<h3 id="configure-with-bicep">Configure with Bicep<a class="headerlink" href="#configure-with-bicep" title="Permanent link">#</a></h3>
+<p>To deploy Storage Accounts that pass this rule:</p>
+<ul>
+<li>Deploy a <code>Microsoft.Security/DefenderForStorageSettings</code> sub-resource (extension resource).</li>
+<li>Set the <code>properties.sensitiveDataDiscovery.isEnabled</code> property to <code>true</code>.</li>
+</ul>
+<p>For example:</p>
+<div class="highlight"><span class="filename">Azure Bicep snippet</span><pre><span></span><code>resource defenderForStorageSettings &#39;Microsoft.Security/DefenderForStorageSettings@2022-12-01-preview&#39; = {
+  name: &#39;current&#39;
+  scope: storageAccount
+  properties: {
+    sensitiveDataDiscovery: {
+      isEnabled: true
+    }
+    overrideSubscriptionLevelSettings: false
+  }
+}
+</code></pre></div>
+<h2 id="notes">Notes<a class="headerlink" href="#notes" title="Permanent link">#</a></h2>
+<p>This feature is currently in preview.
+The following limitations currently apply for Microsoft Defender for Storage:</p>
+<ul>
+<li>Only Storage Accounts with public network access set to enabled are supported.</li>
+<li>Not all storage services within Storage Accounts are currently supported.</li>
+<li>When Microsoft Defender is enabled at subscription and resource level, the subscription configuration will take priority.
+  To override settings on a Storage Account, set the <code>properties.overrideSubscriptionLevelSettings</code> property to <code>true</code>.</li>
+<li>If there is no plan at the subcription level, Microsoft Defender for Storage can be configured without an override.</li>
+</ul>
 <h2 id="links">Links<a class="headerlink" href="#links" title="Permanent link">#</a></h2>
 <ul>
-<li><a href="https://docs.microsoft.com/azure/vpn-gateway/vpn-gateway-about-skus-legacy#change">Change to the new gateway SKUs</a></li>
-<li><a href="https://docs.microsoft.com/azure/templates/microsoft.network/virtualnetworkgateways">Azure deployment reference</a></li>
+<li><a href="https://learn.microsoft.com/azure/architecture/framework/security/monitor-security-operations">Security operations in Azure</a></li>
+<li><a href="https://learn.microsoft.com/azure/defender-for-cloud/defender-for-cloud-introduction">What is Microsoft Defender for Cloud?</a></li>
+<li><a href="https://learn.microsoft.com/azure/defender-for-cloud/defender-for-storage-data-sensitivity">Sensitive data threat detection in Defender for Storage</a></li>
+<li><a href="https://learn.microsoft.com/azure/defender-for-cloud/concept-data-security-posture-prepare">Support and prerequisites for data-aware security posture</a></li>
+<li><a href="https://learn.microsoft.com/azure/defender-for-cloud/defender-for-storage-introduction">Overview of Microsoft Defender for Storage</a></li>
+<li><a href="https://learn.microsoft.com/azure/storage/common/azure-defender-storage-configure">Enable and configure Microsoft Defender for Storage</a></li>
+<li><a href="https://learn.microsoft.com/azure/defender-for-cloud/enable-enhanced-security">Quickstart: Enable enhanced security features</a></li>
+<li><a href="https://learn.microsoft.com/security/benchmark/azure/baselines/storage-security-baseline">Azure security baseline for Storage</a></li>
+<li><a href="https://learn.microsoft.com/security/benchmark/azure/baselines/storage-security-baseline#dp-2-monitor-anomalies-and-threats-targeting-sensitive-data">DP-2: Monitor anomalies and threats targeting sensitive data</a></li>
+<li><a href="https://learn.microsoft.com/security/benchmark/azure/baselines/storage-security-baseline#lt-1-enable-threat-detection-capabilities">LT-1: Enable threat detection capabilities</a></li>
+<li><a href="https://learn.microsoft.com/azure/governance/policy/samples/built-in-policies#security-center">Azure Policy built-in policy definitions</a></li>
 </ul>
 
   <!-- Last update of source file -->
@@ -8543,7 +8673,7 @@ Previously the following SKUs were available however have been depreciated.</p>
   <small>
     
       Last update:
-      2022-12-03
+      2023-05-29
     
   </small>
 </div>
@@ -8566,7 +8696,7 @@ Previously the following SKUs were available however have been depreciated.</p>
       data-category="Documentation"
       data-category-id="DIC_kwDOCvn6LM4CQqE6"
       data-mapping="specific"
-      data-term="Azure.VNG.VPNLegacySKU"
+      data-term="Azure.Storage.DefenderCloud.SensitiveData"
       data-strict="0"
       data-reactions-enabled="1"
       data-emit-metadata="0"

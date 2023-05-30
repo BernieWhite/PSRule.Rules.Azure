@@ -1060,6 +1060,13 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#v1270" class="md-nav__link">
+    v1.27.0
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#v1270-b0186-pre-release" class="md-nav__link">
     v1.27.0-B0186 (pre-release)
   </a>
@@ -9755,6 +9762,13 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#v1270" class="md-nav__link">
+    v1.27.0
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#v1270-b0186-pre-release" class="md-nav__link">
     v1.27.0-B0186 (pre-release)
   </a>
@@ -11094,12 +11108,147 @@
   See <a href="../upgrade-notes/">upgrade notes</a> for more information.</li>
 </ul>
 <h2 id="unreleased">Unreleased<a class="headerlink" href="#unreleased" title="Permanent link">#</a></h2>
+<h2 id="v1270">v1.27.0<a class="headerlink" href="#v1270" title="Permanent link">#</a></h2>
+<p>What's changed since v1.26.1:</p>
+<ul>
+<li>New features:<ul>
+<li><strong>Experimental:</strong> Added support for expanding deployments from <code>.bicepparam</code> files by <a href="https://github.com/BernieWhite">@BernieWhite</a>.
+  <a href="https://github.com/Azure/PSRule.Rules.Azure/issues/2132">#2132</a><ul>
+<li>See <a href="https://aka.ms/ps-rule-azure/bicep">Using Bicep source</a> for details.</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>New rules:<ul>
+<li>Application Gateway:<ul>
+<li>Check that Application Gateways uses a v2 SKU by <a href="https://github.com/BenjaminEngeset">@BenjaminEngeset</a>.
+  <a href="https://github.com/Azure/PSRule.Rules.Azure/issues/2185">#2185</a></li>
+</ul>
+</li>
+<li>API Management:<ul>
+<li>Check that APIs published in Azure API Management are on-boarded to Microsoft Defender for APIs by <a href="https://github.com/BenjaminEngeset">@BenjaminEngeset</a>.
+  <a href="https://github.com/Azure/PSRule.Rules.Azure/issues/2187">#2187</a></li>
+<li>Check that base element for any policy element in a section is configured by <a href="https://github.com/BenjaminEngeset">@BenjaminEngeset</a>.
+  <a href="https://github.com/Azure/PSRule.Rules.Azure/issues/2072">#2072</a></li>
+</ul>
+</li>
+<li>Arc-enabled Kubernetes cluster:<ul>
+<li>Check that Microsoft Defender for Containers extension for Arc-enabled Kubernetes clusters is configured by <a href="https://github.com/BenjaminEngeset">@BenjaminEngeset</a>.
+  <a href="https://github.com/Azure/PSRule.Rules.Azure/issues/2124">#2124</a></li>
+</ul>
+</li>
+<li>Arc-enabled server:<ul>
+<li>Check that a maintenance configuration for Arc-enabled servers is associated by <a href="https://github.com/BenjaminEngeset">@BenjaminEngeset</a>.
+  <a href="https://github.com/Azure/PSRule.Rules.Azure/issues/2122">#2122</a></li>
+</ul>
+</li>
+<li>Container App:<ul>
+<li>Check that container apps has disabled session affinity to prevent unbalanced distribution by <a href="https://github.com/BenjaminEngeset">@BenjaminEngeset</a>.
+  <a href="https://github.com/Azure/PSRule.Rules.Azure/issues/2188">#2188</a></li>
+<li>Check that container apps with IP ingress restrictions mode configured is set to allow for all rules defined by <a href="https://github.com/BenjaminEngeset">@BenjaminEngeset</a>.
+  <a href="https://github.com/Azure/PSRule.Rules.Azure/issues/2189">#2189</a></li>
+</ul>
+</li>
+<li>Cosmos DB:<ul>
+<li>Check that Cosmos DB accounts has enabled Microsoft Defender by <a href="https://github.com/BenjaminEngeset">@BenjaminEngeset</a>.
+  <a href="https://github.com/Azure/PSRule.Rules.Azure/issues/2203">#2203</a></li>
+</ul>
+</li>
+<li>Defender for Cloud:<ul>
+<li>Check that sensitive data threat detection in Microsoft Defender for Storage is enabled by <a href="https://github.com/BenjaminEngeset">@BenjaminEngeset</a>.
+  <a href="https://github.com/Azure/PSRule.Rules.Azure/issues/2207">#2207</a></li>
+<li>Check that Malware Scanning in Microsoft Defender for Storage is enabled by <a href="https://github.com/BenjaminEngeset">@BenjaminEngeset</a>.
+  <a href="https://github.com/Azure/PSRule.Rules.Azure/issues/2206">#2206</a></li>
+<li>Check that Microsoft Defender for APIs is enabled by <a href="https://github.com/BenjaminEngeset">@BenjaminEngeset</a>.
+  <a href="https://github.com/Azure/PSRule.Rules.Azure/issues/2186">#2186</a></li>
+<li>Check that Microsoft Defender for Azure Cosmos DB is enabled by <a href="https://github.com/BenjaminEngeset">@BenjaminEngeset</a>.
+  <a href="https://github.com/Azure/PSRule.Rules.Azure/issues/2204">#2204</a></li>
+<li>Check that Microsoft Defender for open-source relational databases is enabled by <a href="https://github.com/BenjaminEngeset">@BenjaminEngeset</a>.
+  <a href="https://github.com/Azure/PSRule.Rules.Azure/issues/1632">#1632</a></li>
+<li>Check that Microsoft Defender Cloud Security Posture Management is using <code>Standard</code> plan by <a href="https://github.com/BenjaminEngeset">@BenjaminEngeset</a>.
+  <a href="https://github.com/Azure/PSRule.Rules.Azure/issues/2151">#2151</a></li>
+</ul>
+</li>
+<li>Key Vault:<ul>
+<li>Check that key vaults uses Azure RBAC as the authorization system for the data plane by <a href="https://github.com/BenjaminEngeset">@BenjaminEngeset</a>.
+  <a href="https://github.com/Azure/PSRule.Rules.Azure/issues/1916">#1916</a></li>
+</ul>
+</li>
+<li>Storage Account:<ul>
+<li>Check that Microsoft Defender for Storage is enabled for storage accounts by <a href="https://github.com/BenjaminEngeset">@BenjaminEngeset</a>.
+  <a href="https://github.com/Azure/PSRule.Rules.Azure/issues/2225">#2225</a></li>
+<li>Check that sensitive data threat detection in Microsoft Defender for Storage is enabled for storage accounts by <a href="https://github.com/BenjaminEngeset">@BenjaminEngeset</a>.
+  <a href="https://github.com/Azure/PSRule.Rules.Azure/issues/2207">#2207</a></li>
+<li>Check that Malware Scanning in Microsoft Defender for Storage is enabled for storage accounts by <a href="https://github.com/BenjaminEngeset">@BenjaminEngeset</a>.
+  <a href="https://github.com/Azure/PSRule.Rules.Azure/issues/2206">#2206</a></li>
+</ul>
+</li>
+<li>Virtual Machine:<ul>
+<li>Check that a maintenance configuration for virtual machines is associated by <a href="https://github.com/BenjaminEngeset">@BenjaminEngeset</a>.
+  <a href="https://github.com/Azure/PSRule.Rules.Azure/issues/2121">#2121</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li>General improvements:<ul>
+<li>Added support for Bicep symbolic names by <a href="https://github.com/BernieWhite">@BernieWhite</a>.
+  <a href="https://github.com/Azure/PSRule.Rules.Azure/issues/2238">#2238</a></li>
+</ul>
+</li>
+<li>Updated rules:<ul>
+<li>API Management:<ul>
+<li>Updated <code>Azure.APIM.EncryptValues</code> to check all API Management named values are encrypted with Key Vault secrets <a href="https://github.com/BenjaminEngeset">@BenjaminEngeset</a>.
+  <a href="https://github.com/Azure/PSRule.Rules.Azure/issues/2146">#2146</a></li>
+</ul>
+</li>
+<li>Container App:<ul>
+<li>Promoted <code>Azure.ContainerApp.Insecure</code> to GA rule set by <a href="https://github.com/BernieWhite">@BernieWhite</a>.
+  <a href="https://github.com/Azure/PSRule.Rules.Azure/issues/2174">#2174</a></li>
+</ul>
+</li>
+<li>Defender for Cloud:<ul>
+<li>Check that Microsoft Defender for Storage v2 is enabled by <a href="https://github.com/BenjaminEngeset">@BenjaminEngeset</a>.
+  <a href="https://github.com/Azure/PSRule.Rules.Azure/issues/2205">#2205</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li>Engineering:<ul>
+<li>Bump Microsoft.NET.Test.Sdk to 17.6.0.
+  <a href="https://github.com/Azure/PSRule.Rules.Azure/pull/2216">#2216</a></li>
+</ul>
+</li>
+<li>Bug fixes:<ul>
+<li>Fixed ignoring Redis firewall rules when Redis is configured to allow private connectivity by <a href="https://github.com/BenjaminEngeset">@BenjaminEngeset</a>.
+  <a href="https://github.com/Azure/PSRule.Rules.Azure/issues/2171">#2171</a></li>
+<li>Fixed left-side <code>or</code> function evaluation by <a href="https://github.com/BernieWhite">@BernieWhite</a>.
+  <a href="https://github.com/Azure/PSRule.Rules.Azure/issues/2220">#2220</a></li>
+<li>Fixed interdependent variable copy loop count by <a href="https://github.com/BernieWhite">@BernieWhite</a>.
+  <a href="https://github.com/Azure/PSRule.Rules.Azure/issues/2221">#2221</a></li>
+<li>Fixed handling of database name in <code>Azure.MariaDB.Database</code> by <a href="https://github.com/BernieWhite">@BernieWhite</a>.
+  <a href="https://github.com/Azure/PSRule.Rules.Azure/issues/2191">#2191</a></li>
+<li>Fixed typing error in <code>Azure.Defender.Api</code> documentation by <a href="https://github.com/BenjaminEngeset">@BenjaminEngeset</a>.
+  <a href="https://github.com/Azure/PSRule.Rules.Azure/issues/2209">#2209</a></li>
+<li>Fixed <code>Azure.AKS.UptimeSLA</code> with new pricing by <a href="https://github.com/BenjaminEngeset">@BenjaminEngeset</a>.
+  <a href="https://github.com/Azure/PSRule.Rules.Azure/issues/2065">#2065</a>
+  <a href="https://github.com/Azure/PSRule.Rules.Azure/issues/2202">#2202</a></li>
+<li>Fixed false positive on managed identity without space by <a href="https://github.com/BernieWhite">@BernieWhite</a>.
+  <a href="https://github.com/Azure/PSRule.Rules.Azure/issues/2235">#2235</a></li>
+<li>Fixed reference for runtime subnet ID property by <a href="https://github.com/BernieWhite">@BernieWhite</a>.
+  <a href="https://github.com/Azure/PSRule.Rules.Azure/issues/2159">#2159</a></li>
+</ul>
+</li>
+</ul>
+<p>What's changed since pre-release v1.27.0-B0186:</p>
+<ul>
+<li>No additional changes.</li>
+</ul>
 <h2 id="v1270-b0186-pre-release">v1.27.0-B0186 (pre-release)<a class="headerlink" href="#v1270-b0186-pre-release" title="Permanent link">#</a></h2>
 <p>What's changed since pre-release v1.27.0-B0136:</p>
 <ul>
 <li>New rules:<ul>
 <li>API Management:<ul>
-<li>Check that APIs published in Azure API Management are onboarded to Microsoft Defender for APIs by <a href="https://github.com/BenjaminEngeset">@BenjaminEngeset</a>.
+<li>Check that APIs published in Azure API Management are on-boarded to Microsoft Defender for APIs by <a href="https://github.com/BenjaminEngeset">@BenjaminEngeset</a>.
   <a href="https://github.com/Azure/PSRule.Rules.Azure/issues/2187">#2187</a></li>
 </ul>
 </li>
@@ -11220,7 +11369,7 @@
 </li>
 <li>Updated rules:<ul>
 <li>Defender for Cloud:<ul>
-<li>Check that Microsoft Defender for Storage (new) is enabled by <a href="https://github.com/BenjaminEngeset">@BenjaminEngeset</a>.
+<li>Check that Microsoft Defender for Storage v2 is enabled by <a href="https://github.com/BenjaminEngeset">@BenjaminEngeset</a>.
   <a href="https://github.com/Azure/PSRule.Rules.Azure/issues/2205">#2205</a></li>
 </ul>
 </li>
@@ -16004,7 +16153,7 @@ What's changed since v1.24.0:</p>
   <small>
     
       Last update:
-      2023-05-29
+      2023-05-31
     
   </small>
 </div>

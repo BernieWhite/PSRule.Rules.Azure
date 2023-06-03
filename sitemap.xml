@@ -1496,6 +1496,11 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
+         <loc>https://azure.github.io/PSRule.Rules.Azure/en/rules/Azure.PostgreSQL.AAD/</loc>
+         <lastmod>2023-06-03</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
          <loc>https://azure.github.io/PSRule.Rules.Azure/en/rules/Azure.PostgreSQL.AADOnly/</loc>
          <lastmod>2023-06-03</lastmod>
          <changefreq>daily</changefreq>

@@ -3542,8 +3542,6 @@
         
           
         
-          
-        
       
       
         <label class="md-nav__link" for="__nav_4_5" id="__nav_4_5_label" tabindex="0">
@@ -4056,20 +4054,6 @@
     <li class="md-nav__item">
       <a href="../en/rules/Azure.AKS.PlatformLogs/" class="md-nav__link">
         Azure.AKS.PlatformLogs
-      </a>
-    </li>
-  
-
-            
-          
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../en/rules/Azure.AKS.PodIdentity/" class="md-nav__link">
-        Azure.AKS.PodIdentity
       </a>
     </li>
   
@@ -11214,9 +11198,19 @@
 <h2 id="unreleased">Unreleased<a class="headerlink" href="#unreleased" title="Permanent link">#</a></h2>
 <p>What's changed since pre-release v1.28.0-B0024:</p>
 <ul>
+<li>Removed rules:<ul>
+<li>Azure Kubernetes Service:<ul>
+<li>Removed <code>Azure.AKS.PodIdentity</code> as pod identities has been replaced by workload identities by <a href="https://github.com/BernieWhite">@BernieWhite</a>.
+  <a href="https://github.com/Azure/PSRule.Rules.Azure/issues/2273">#2273</a></li>
+</ul>
+</li>
+</ul>
+</li>
 <li>Engineering:<ul>
 <li>Bump Microsoft.NET.Test.Sdk to v17.6.2.
   <a href="https://github.com/Azure/PSRule.Rules.Azure/pull/2266">#2266</a></li>
+<li>Bump Az.Resources to v6.7.0.
+  <a href="https://github.com/Azure/PSRule.Rules.Azure/pull/2274">#2274</a></li>
 </ul>
 </li>
 </ul>
@@ -16322,7 +16316,7 @@ What's changed since v1.24.0:</p>
   <small>
     
       Last update:
-      2023-06-08
+      2023-06-09
     
   </small>
 </div>

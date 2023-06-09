@@ -10,7 +10,7 @@ param registryName string
 param location string = resourceGroup().location
 
 // An example container registry
-resource acr 'Microsoft.ContainerRegistry/registries@2022-02-01-preview' = {
+resource acr 'Microsoft.ContainerRegistry/registries@2023-01-01-preview' = {
   name: registryName
   location: location
   sku: {
@@ -28,6 +28,10 @@ resource acr 'Microsoft.ContainerRegistry/registries@2022-02-01-preview' = {
       trustPolicy: {
         status: 'enabled'
         type: 'Notary'
+      }
+      retentionPolicy: {
+        days: 30
+        status: 'enabled'
       }
       softDeletePolicy: {
         retentionDays: 90

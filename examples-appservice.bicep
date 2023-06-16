@@ -16,7 +16,7 @@ param tags object
 param location string = resourceGroup().location
 
 // An example App Services Plan
-resource plan 'Microsoft.Web/serverfarms@2022-03-01' = {
+resource plan 'Microsoft.Web/serverfarms@2022-09-01' = {
   name: planName
   location: location
   sku: {
@@ -27,7 +27,7 @@ resource plan 'Microsoft.Web/serverfarms@2022-03-01' = {
 }
 
 // An example .NET Framework Web App
-resource webApp 'Microsoft.Web/sites@2022-03-01' = {
+resource webApp 'Microsoft.Web/sites@2022-09-01' = {
   name: name
   location: location
   identity: {
@@ -51,7 +51,7 @@ resource webApp 'Microsoft.Web/sites@2022-03-01' = {
 }
 
 // An example PHP Web App
-resource webAppPHP 'Microsoft.Web/sites@2022-03-01' = {
+resource webAppPHP 'Microsoft.Web/sites@2022-09-01' = {
   name: name
   location: location
   identity: {

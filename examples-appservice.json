@@ -4,8 +4,8 @@
   "metadata": {
     "_generator": {
       "name": "bicep",
-      "version": "0.6.18.56646",
-      "templateHash": "12759065809954852530"
+      "version": "0.18.4.5664",
+      "templateHash": "820772923620432801"
     }
   },
   "parameters": {
@@ -38,7 +38,7 @@
   "resources": [
     {
       "type": "Microsoft.Web/serverfarms",
-      "apiVersion": "2021-03-01",
+      "apiVersion": "2022-09-01",
       "name": "[parameters('planName')]",
       "location": "[parameters('location')]",
       "sku": {
@@ -49,7 +49,7 @@
     },
     {
       "type": "Microsoft.Web/sites",
-      "apiVersion": "2021-03-01",
+      "apiVersion": "2022-09-01",
       "name": "[parameters('name')]",
       "location": "[parameters('location')]",
       "identity": {
@@ -76,7 +76,7 @@
     },
     {
       "type": "Microsoft.Web/sites",
-      "apiVersion": "2021-03-01",
+      "apiVersion": "2022-09-01",
       "name": "[parameters('name')]",
       "location": "[parameters('location')]",
       "identity": {

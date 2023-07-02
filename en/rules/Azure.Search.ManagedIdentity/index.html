@@ -6262,6 +6262,13 @@
   
 </li>
         
+          <li class="md-nav__item">
+  <a href="#configure-with-bicep" class="md-nav__link">
+    Configure with Bicep
+  </a>
+  
+</li>
+        
       </ul>
     </nav>
   
@@ -8538,6 +8545,13 @@
   
 </li>
         
+          <li class="md-nav__item">
+  <a href="#configure-with-bicep" class="md-nav__link">
+    Configure with Bicep
+  </a>
+  
+</li>
+        
       </ul>
     </nav>
   
@@ -8611,31 +8625,52 @@ Also consider using managed identities to authenticate to related Azure services
 </ul>
 <p>For example:</p>
 <div class="highlight"><span class="filename">Azure Template snippet</span><pre><span></span><code><span class="p">{</span>
-<span class="w">    </span><span class="nt">&quot;apiVersion&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;2020-08-01&quot;</span><span class="p">,</span>
-<span class="w">    </span><span class="nt">&quot;name&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;[parameters(&#39;serviceName&#39;)]&quot;</span><span class="p">,</span>
-<span class="w">    </span><span class="nt">&quot;location&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;[parameters(&#39;location&#39;)]&quot;</span><span class="p">,</span>
-<span class="w">    </span><span class="nt">&quot;type&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Microsoft.Search/searchServices&quot;</span><span class="p">,</span>
-<span class="w">    </span><span class="nt">&quot;identity&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
-<span class="w">        </span><span class="nt">&quot;type&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;SystemAssigned&quot;</span>
-<span class="w">    </span><span class="p">},</span>
-<span class="w">    </span><span class="nt">&quot;sku&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
-<span class="w">        </span><span class="nt">&quot;name&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;[parameters(&#39;sku&#39;)]&quot;</span>
-<span class="w">    </span><span class="p">},</span>
-<span class="w">    </span><span class="nt">&quot;properties&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
-<span class="w">        </span><span class="nt">&quot;replicaCount&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">3</span><span class="p">,</span>
-<span class="w">        </span><span class="nt">&quot;partitionCount&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span>
-<span class="w">        </span><span class="nt">&quot;hostingMode&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;default&quot;</span>
-<span class="w">    </span><span class="p">},</span>
-<span class="w">    </span><span class="nt">&quot;tags&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{},</span>
-<span class="w">    </span><span class="nt">&quot;dependsOn&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[]</span>
+<span class="w">  </span><span class="nt">&quot;type&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Microsoft.Search/searchServices&quot;</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">&quot;apiVersion&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;2022-09-01&quot;</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">&quot;name&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;[parameters(&#39;name&#39;)]&quot;</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">&quot;location&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;[parameters(&#39;location&#39;)]&quot;</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">&quot;identity&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="nt">&quot;type&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;SystemAssigned&quot;</span>
+<span class="w">  </span><span class="p">},</span>
+<span class="w">  </span><span class="nt">&quot;sku&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="nt">&quot;name&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;standard&quot;</span>
+<span class="w">  </span><span class="p">},</span>
+<span class="w">  </span><span class="nt">&quot;properties&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="nt">&quot;replicaCount&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">3</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">&quot;partitionCount&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">&quot;hostingMode&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;default&quot;</span>
+<span class="w">  </span><span class="p">}</span>
 <span class="p">}</span>
+</code></pre></div>
+<h3 id="configure-with-bicep">Configure with Bicep<a class="headerlink" href="#configure-with-bicep" title="Permanent link">#</a></h3>
+<p>To deploy Cognitive Search services that pass this rule:</p>
+<ul>
+<li>Set the <code>identity.type</code> to <code>SystemAssigned</code>.</li>
+</ul>
+<p>For example:</p>
+<div class="highlight"><span class="filename">Azure Bicep snippet</span><pre><span></span><code>resource search &#39;Microsoft.Search/searchServices@2022-09-01&#39; = {
+  name: name
+  location: location
+  identity: {
+    type: &#39;SystemAssigned&#39;
+  }
+  sku: {
+    name: &#39;standard&#39;
+  }
+  properties: {
+    replicaCount: 3
+    partitionCount: 1
+    hostingMode: &#39;default&#39;
+  }
+}
 </code></pre></div>
 <h2 id="links">Links<a class="headerlink" href="#links" title="Permanent link">#</a></h2>
 <ul>
 <li><a href="https://learn.microsoft.com/azure/architecture/framework/security/design-identity-authentication#use-identity-based-authentication">Use identity-based authentication</a></li>
-<li><a href="https://docs.microsoft.com/azure/active-directory/managed-identities-azure-resources/overview">What are managed identities for Azure resources?</a></li>
-<li><a href="https://docs.microsoft.com/azure/search/search-howto-managed-identities-data-sources">Set up an indexer connection to a data source using a managed identity</a></li>
-<li><a href="https://docs.microsoft.com/azure/search/search-indexer-howto-access-trusted-service-exception">Indexer access to Azure Storage using the trusted service exception (Azure Cognitive Search)</a></li>
+<li><a href="https://learn.microsoft.com/azure/active-directory/managed-identities-azure-resources/overview">What are managed identities for Azure resources?</a></li>
+<li><a href="https://learn.microsoft.com/azure/search/search-howto-managed-identities-data-sources">Connect a search service to other Azure resources using a managed identity</a></li>
+<li><a href="https://learn.microsoft.com/azure/search/search-indexer-howto-access-trusted-service-exception">Make indexer connections to Azure Storage as a trusted service</a></li>
+<li><a href="https://learn.microsoft.com/azure/templates/microsoft.search/searchservices">Azure deployment reference</a></li>
 </ul>
 
   <!-- Last update of source file -->
@@ -8646,7 +8681,7 @@ Also consider using managed identities to authenticate to related Azure services
   <small>
     
       Last update:
-      2022-10-17
+      2023-07-03
     
   </small>
 </div>

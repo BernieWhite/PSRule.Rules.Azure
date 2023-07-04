@@ -21,7 +21,7 @@
         <link rel="next" href="../faq/">
       
       <link rel="icon" href="../assets/ms_icon.png">
-      <meta name="generator" content="mkdocs-1.4.3, mkdocs-material-9.1.17">
+      <meta name="generator" content="mkdocs-1.4.3, mkdocs-material-9.1.18">
     
     
       
@@ -122,10 +122,6 @@
     <div data-md-component="announce">
       
     </div>
-    
-      <div data-md-color-scheme="default" data-md-component="outdated" hidden>
-        
-      </div>
     
     
       
@@ -496,18 +492,32 @@
         Features
       </a>
       
-        
+        <!-- Determine title -->
 
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+
+
+
+
+<!-- Table of contents -->
+<nav class="md-nav md-nav--secondary" aria-label="In this article">
   
+
+  <!--
+    Check whether the content starts with a level 1 headline. If it does, the
+    top-level anchor must be skipped, since it would be redundant to the link
+    to the current page that is located just above the anchor. Therefore we
+    directly continue with the children of the anchor.
+  -->
   
   
     
   
+
+  <!-- Table of contents title and list -->
   
     <label class="md-nav__title" for="__toc">
       <span class="md-nav__icon md-icon"></span>
-      Table of contents
+      In this article
     </label>
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
@@ -582,8 +592,8 @@
   
   
     <li class="md-nav__item">
-      <a href="../install-instructions/" class="md-nav__link">
-        Installation
+      <a href="../install/" class="md-nav__link">
+        Install
       </a>
     </li>
   
@@ -779,10 +789,48 @@
   
   
   
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_5" >
+      
+      
+        
+          
+        
+      
+      
+        <label class="md-nav__link" for="__nav_2_5" id="__nav_2_5_label" tabindex="0">
+          Concepts
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_5_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_2_5">
+          <span class="md-nav__icon md-icon"></span>
+          Concepts
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
     <li class="md-nav__item">
-      <a href="../validating-locally/" class="md-nav__link">
-        Validating locally
+      <a href="../concepts/suppression/" class="md-nav__link">
+        Suppression
       </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
     </li>
   
 
@@ -8488,18 +8536,32 @@
               <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
                 <div class="md-sidebar__scrollwrap">
                   <div class="md-sidebar__inner">
-                    
+                    <!-- Determine title -->
 
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+
+
+
+
+<!-- Table of contents -->
+<nav class="md-nav md-nav--secondary" aria-label="In this article">
   
+
+  <!--
+    Check whether the content starts with a level 1 headline. If it does, the
+    top-level anchor must be skipped, since it would be redundant to the link
+    to the current page that is located just above the anchor. Therefore we
+    directly continue with the children of the anchor.
+  -->
   
   
     
   
+
+  <!-- Table of contents title and list -->
   
     <label class="md-nav__title" for="__toc">
       <span class="md-nav__icon md-icon"></span>
-      Table of contents
+      In this article
     </label>
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
@@ -8565,6 +8627,10 @@
 <p>PSRule for Azure helps you quickly identify and fix issues to improve the quality of solutions deployed on Azure.
 Tests include documentation with official documentation references and examples.
 Use the Azure Bicep or template examples to adapt your solution to recommendations.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Start exploring the list of <a href="../en/rules/">rules included with PSRule for Azure</a>.</p>
+</div>
 <h2 id="framework-aligned">Framework aligned<a class="headerlink" href="#framework-aligned" title="Permanent link">#</a></h2>
 <p>PSRule for Azure is aligned to the <a href="https://learn.microsoft.com/azure/architecture/framework/">Azure Well-Architected Framework (<abbr title="Well-Architected Framework">WAF</abbr>)</a>.
 Tests called <em>rules</em> check the configuration of Azure resources against <abbr title="Well-Architected Framework">WAF</abbr> principles.
@@ -8604,6 +8670,14 @@ Start testing your Bicep and <abbr title="Azure Resource Manager">ARM</abbr> tem
 <li><strong>Quality gates</strong> &mdash; Implement quality gates between environments such as dev, test, and production.</li>
 <li><strong>Monitor continuously</strong> &mdash; Perform ongoing checks for configuration optimization opportunities.</li>
 </ul>
+<div class="admonition learn">
+<p class="admonition-title">Learn</p>
+<p>You can learn more about Azure Bicep with the following links:</p>
+<ul>
+<li><a href="https://learn.microsoft.com/azure/azure-resource-manager/bicep/overview?tabs=bicep">What is Bicep?</a></li>
+<li><a href="https://learn.microsoft.com/azure/azure-resource-manager/bicep/learn-bicep">Learn modules for Azure Bicep</a></li>
+</ul>
+</div>
 <h2 id="cross-platform">Cross-platform<a class="headerlink" href="#cross-platform" title="Permanent link">#</a></h2>
 <p>PSRule for Azure uses modern PowerShell libraries at its core,
 allowing it to go anywhere PowerShell can go.
@@ -8617,14 +8691,14 @@ PSRule has native extensions for:</p>
 <li><a href="https://marketplace.visualstudio.com/items?itemName=bewhite.psrule-vscode">Visual Studio Code</a></li>
 </ul>
 <p>Additionally, PSRule for Azure can be installed locally or within Azure Cloud Shell.
-For installation options see <a href="../install-instructions/">installation</a>.</p>
+For installation options see <a href="../install/">installation</a>.</p>
 
   <hr>
 <div class="md-source-file">
   <small>
     
       Last update:
-      2023-06-28
+      2023-07-04
     
   </small>
 </div>
@@ -8686,10 +8760,10 @@ For installation options see <a href="../install-instructions/">installation</a>
       <div class="md-dialog__inner md-typeset"></div>
     </div>
     
-    <script id="__config" type="application/json">{"base": "..", "features": ["navigation.instant", "navigation.indexes", {"navigation.sections": {"level": 1}}, "navigation.tabs", "content.code.annotate", "content.tabs.link", "content.code.copy"], "search": "../assets/javascripts/workers/search.208ed371.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": {"provider": "mike"}}</script>
+    <script id="__config" type="application/json">{"base": "..", "features": ["navigation.instant", "navigation.indexes", {"navigation.sections": {"level": 1}}, "navigation.tabs", "content.code.annotate", "content.tabs.link", "content.code.copy"], "search": "../assets/javascripts/workers/search.74e28a9f.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
     
     
-      <script src="../assets/javascripts/bundle.b425cdc4.min.js"></script>
+      <script src="../assets/javascripts/bundle.220ee61c.min.js"></script>
       
     
   </body>

@@ -21,7 +21,7 @@
         <link rel="next" href="../features/">
       
       <link rel="icon" href="../assets/ms_icon.png">
-      <meta name="generator" content="mkdocs-1.4.3, mkdocs-material-9.1.17">
+      <meta name="generator" content="mkdocs-1.4.3, mkdocs-material-9.1.18">
     
     
       
@@ -122,10 +122,6 @@
     <div data-md-component="announce">
       
     </div>
-    
-      <div data-md-color-scheme="default" data-md-component="outdated" hidden>
-        
-      </div>
     
     
       
@@ -482,18 +478,32 @@
         About
       </a>
       
-        
+        <!-- Determine title -->
 
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+
+
+
+
+<!-- Table of contents -->
+<nav class="md-nav md-nav--secondary" aria-label="In this article">
   
+
+  <!--
+    Check whether the content starts with a level 1 headline. If it does, the
+    top-level anchor must be skipped, since it would be redundant to the link
+    to the current page that is located just above the anchor. Therefore we
+    directly continue with the children of the anchor.
+  -->
   
   
     
   
+
+  <!-- Table of contents title and list -->
   
     <label class="md-nav__title" for="__toc">
       <span class="md-nav__icon md-icon"></span>
-      Table of contents
+      In this article
     </label>
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
@@ -568,8 +578,8 @@
   
   
     <li class="md-nav__item">
-      <a href="../install-instructions/" class="md-nav__link">
-        Installation
+      <a href="../install/" class="md-nav__link">
+        Install
       </a>
     </li>
   
@@ -765,10 +775,48 @@
   
   
   
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_5" >
+      
+      
+        
+          
+        
+      
+      
+        <label class="md-nav__link" for="__nav_2_5" id="__nav_2_5_label" tabindex="0">
+          Concepts
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_5_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_2_5">
+          <span class="md-nav__icon md-icon"></span>
+          Concepts
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
     <li class="md-nav__item">
-      <a href="../validating-locally/" class="md-nav__link">
-        Validating locally
+      <a href="../concepts/suppression/" class="md-nav__link">
+        Suppression
       </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
     </li>
   
 
@@ -8474,18 +8522,32 @@
               <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
                 <div class="md-sidebar__scrollwrap">
                   <div class="md-sidebar__inner">
-                    
+                    <!-- Determine title -->
 
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+
+
+
+
+<!-- Table of contents -->
+<nav class="md-nav md-nav--secondary" aria-label="In this article">
   
+
+  <!--
+    Check whether the content starts with a level 1 headline. If it does, the
+    top-level anchor must be skipped, since it would be redundant to the link
+    to the current page that is located just above the anchor. Therefore we
+    directly continue with the children of the anchor.
+  -->
   
   
     
   
+
+  <!-- Table of contents title and list -->
   
     <label class="md-nav__title" for="__toc">
       <span class="md-nav__icon md-icon"></span>
-      Table of contents
+      In this article
     </label>
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
@@ -8545,7 +8607,7 @@ PSRule for Azure uses the principles of the Azure Well-Architected Framework (WA
 <li><strong>Demonstrate</strong> &mdash; how you can implement the change with examples.</li>
 </ul>
 <p>If you want to write your own tests, you can do that too in your choice of YAML, JSON, or PowerShell.
-However with over 360 tests already built, you can identify and fix issues day one.</p>
+However with over 390 tests already built, you can identify and fix issues day one.</p>
 <h2 id="introducing-psrule-for-azure">Introducing PSRule for Azure<a class="headerlink" href="#introducing-psrule-for-azure" title="Permanent link">#</a></h2>
 <p>An introduction to PSRule for Azure and how it relates to the Azure Well-Architected Framework.
 We also give an quick overview of baselines, handling exceptions, and reporting options.</p>
@@ -8565,7 +8627,7 @@ Here's a few you may be familiar with:</p>
   <small>
     
       Last update:
-      2023-06-03
+      2023-07-04
     
   </small>
 </div>
@@ -8627,10 +8689,10 @@ Here's a few you may be familiar with:</p>
       <div class="md-dialog__inner md-typeset"></div>
     </div>
     
-    <script id="__config" type="application/json">{"base": "..", "features": ["navigation.instant", "navigation.indexes", {"navigation.sections": {"level": 1}}, "navigation.tabs", "content.code.annotate", "content.tabs.link", "content.code.copy"], "search": "../assets/javascripts/workers/search.208ed371.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": {"provider": "mike"}}</script>
+    <script id="__config" type="application/json">{"base": "..", "features": ["navigation.instant", "navigation.indexes", {"navigation.sections": {"level": 1}}, "navigation.tabs", "content.code.annotate", "content.tabs.link", "content.code.copy"], "search": "../assets/javascripts/workers/search.74e28a9f.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
     
     
-      <script src="../assets/javascripts/bundle.b425cdc4.min.js"></script>
+      <script src="../assets/javascripts/bundle.220ee61c.min.js"></script>
       
     
   </body>

@@ -21,7 +21,7 @@
         <link rel="next" href="../creating-your-pipeline/">
       
       <link rel="icon" href="../assets/ms_icon.png">
-      <meta name="generator" content="mkdocs-1.4.3, mkdocs-material-9.1.17">
+      <meta name="generator" content="mkdocs-1.4.3, mkdocs-material-9.1.18">
     
     
       
@@ -122,10 +122,6 @@
     <div data-md-component="announce">
       
     </div>
-    
-      <div data-md-color-scheme="default" data-md-component="outdated" hidden>
-        
-      </div>
     
     
       
@@ -511,8 +507,8 @@
   
   
     <li class="md-nav__item">
-      <a href="../install-instructions/" class="md-nav__link">
-        Installation
+      <a href="../install/" class="md-nav__link">
+        Install
       </a>
     </li>
   
@@ -612,18 +608,32 @@
         Using Bicep source
       </a>
       
-        
+        <!-- Determine title -->
 
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+
+
+
+
+<!-- Table of contents -->
+<nav class="md-nav md-nav--secondary" aria-label="In this article">
   
+
+  <!--
+    Check whether the content starts with a level 1 headline. If it does, the
+    top-level anchor must be skipped, since it would be redundant to the link
+    to the current page that is located just above the anchor. Therefore we
+    directly continue with the children of the anchor.
+  -->
   
   
     
   
+
+  <!-- Table of contents title and list -->
   
     <label class="md-nav__title" for="__toc">
       <span class="md-nav__icon md-icon"></span>
-      Table of contents
+      In this article
     </label>
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
@@ -859,10 +869,48 @@
   
   
   
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_5" >
+      
+      
+        
+          
+        
+      
+      
+        <label class="md-nav__link" for="__nav_2_5" id="__nav_2_5_label" tabindex="0">
+          Concepts
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_5_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_2_5">
+          <span class="md-nav__icon md-icon"></span>
+          Concepts
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
     <li class="md-nav__item">
-      <a href="../validating-locally/" class="md-nav__link">
-        Validating locally
+      <a href="../concepts/suppression/" class="md-nav__link">
+        Suppression
       </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
     </li>
   
 
@@ -8568,18 +8616,32 @@
               <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
                 <div class="md-sidebar__scrollwrap">
                   <div class="md-sidebar__inner">
-                    
+                    <!-- Determine title -->
 
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+
+
+
+
+<!-- Table of contents -->
+<nav class="md-nav md-nav--secondary" aria-label="In this article">
   
+
+  <!--
+    Check whether the content starts with a level 1 headline. If it does, the
+    top-level anchor must be skipped, since it would be redundant to the link
+    to the current page that is located just above the anchor. Therefore we
+    directly continue with the children of the anchor.
+  -->
   
   
     
   
+
+  <!-- Table of contents title and list -->
   
     <label class="md-nav__title" for="__toc">
       <span class="md-nav__icon md-icon"></span>
-      Table of contents
+      In this article
     </label>
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
@@ -8907,9 +8969,13 @@ param tags = {
 <span class="w">  </span><span class="nt">AZURE_BICEP_PARAMS_FILE_EXPANSION</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
 </code></pre></div>
 <div class="admonition experimental">
-<p class="admonition-title">Experimental - <a href="https://learn.microsoft.com/azure/azure-resource-manager/bicep/private-module-registry">Learn more</a></p>
+<p class="admonition-title">Experimental - <a href="../versioning/#experimental-features">Learn more</a></p>
 <p>Bicep parameter files are a work in progress.
 This feature will be transitioned to stable after the Bicep CLI support is finalized.</p>
+</div>
+<div class="admonition learn">
+<p class="admonition-title">Learn</p>
+<p>To learn more about Bicep parameter files see <a href="https://learn.microsoft.com/azure/azure-resource-manager/bicep/parameter-files?tabs=Bicep">Create parameters files for Bicep deployment</a>.</p>
 </div>
 <h2 id="restoring-modules-from-a-private-registry">Restoring modules from a private registry<a class="headerlink" href="#restoring-modules-from-a-private-registry" title="Permanent link">#</a></h2>
 <p>Bicep modules can be stored in a private registry.
@@ -9031,7 +9097,7 @@ To keep <code>BICEPREGISTRYCLIENTSECRET</code> secure, use a <a href="https://do
   <small>
     
       Last update:
-      2023-06-28
+      2023-07-04
     
   </small>
 </div>
@@ -9147,10 +9213,10 @@ To keep <code>BICEPREGISTRYCLIENTSECRET</code> secure, use a <a href="https://do
       <div class="md-dialog__inner md-typeset"></div>
     </div>
     
-    <script id="__config" type="application/json">{"base": "..", "features": ["navigation.instant", "navigation.indexes", {"navigation.sections": {"level": 1}}, "navigation.tabs", "content.code.annotate", "content.tabs.link", "content.code.copy"], "search": "../assets/javascripts/workers/search.208ed371.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": {"provider": "mike"}}</script>
+    <script id="__config" type="application/json">{"base": "..", "features": ["navigation.instant", "navigation.indexes", {"navigation.sections": {"level": 1}}, "navigation.tabs", "content.code.annotate", "content.tabs.link", "content.code.copy"], "search": "../assets/javascripts/workers/search.74e28a9f.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
     
     
-      <script src="../assets/javascripts/bundle.b425cdc4.min.js"></script>
+      <script src="../assets/javascripts/bundle.220ee61c.min.js"></script>
       
     
   </body>

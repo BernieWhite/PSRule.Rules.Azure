@@ -5904,6 +5904,33 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#examples" class="md-nav__link">
+    Examples
+  </a>
+  
+    <nav class="md-nav" aria-label="Examples">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#configure-with-azure-template" class="md-nav__link">
+    Configure with Azure template
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#configure-with-bicep" class="md-nav__link">
+    Configure with Bicep
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#links" class="md-nav__link">
     Links
   </a>
@@ -8566,6 +8593,33 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#examples" class="md-nav__link">
+    Examples
+  </a>
+  
+    <nav class="md-nav" aria-label="Examples">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#configure-with-azure-template" class="md-nav__link">
+    Configure with Azure template
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#configure-with-bicep" class="md-nav__link">
+    Configure with Bicep
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#links" class="md-nav__link">
     Links
   </a>
@@ -8621,12 +8675,77 @@ Basic tier or Standard C0 caches are not suitable for production workloads.</p>
 </ul>
 <h2 id="recommendation">Recommendation<a class="headerlink" href="#recommendation" title="Permanent link">#</a></h2>
 <p>Consider using a minimum of a Standard C1 instance for production workloads.</p>
+<h2 id="examples">Examples<a class="headerlink" href="#examples" title="Permanent link">#</a></h2>
+<h3 id="configure-with-azure-template">Configure with Azure template<a class="headerlink" href="#configure-with-azure-template" title="Permanent link">#</a></h3>
+<p>To deploy caches that pass this rule:</p>
+<ul>
+<li>Set the <code>properties.sku.name</code> property to <code>Premium</code> or <code>Standard</code>.</li>
+<li>Set the <code>properties.sku.family</code> property to <code>P</code> or <code>C</code>.</li>
+<li>Set the <code>properties.sku.capacity</code> property to a capacity valid for the SKU <code>1</code> or higher.</li>
+</ul>
+<p>For example:</p>
+<div class="highlight"><span class="filename">Azure Template snippet</span><pre><span></span><code><span class="p">{</span>
+<span class="w">  </span><span class="nt">&quot;type&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Microsoft.Cache/redis&quot;</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">&quot;apiVersion&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;2023-04-01&quot;</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">&quot;name&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;[parameters(&#39;name&#39;)]&quot;</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">&quot;location&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;[parameters(&#39;location&#39;)]&quot;</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">&quot;properties&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="nt">&quot;minimumTlsVersion&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;1.2&quot;</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">&quot;redisVersion&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;latest&quot;</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">&quot;sku&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">      </span><span class="nt">&quot;name&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Premium&quot;</span><span class="p">,</span>
+<span class="w">      </span><span class="nt">&quot;family&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;P&quot;</span><span class="p">,</span>
+<span class="w">      </span><span class="nt">&quot;capacity&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span>
+<span class="w">    </span><span class="p">},</span>
+<span class="w">    </span><span class="nt">&quot;redisConfiguration&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">      </span><span class="nt">&quot;maxmemory-reserved&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;615&quot;</span>
+<span class="w">    </span><span class="p">},</span>
+<span class="w">    </span><span class="nt">&quot;enableNonSslPort&quot;</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span>
+<span class="w">  </span><span class="p">},</span>
+<span class="w">  </span><span class="nt">&quot;zones&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
+<span class="w">    </span><span class="s2">&quot;1&quot;</span><span class="p">,</span>
+<span class="w">    </span><span class="s2">&quot;2&quot;</span><span class="p">,</span>
+<span class="w">    </span><span class="s2">&quot;3&quot;</span>
+<span class="w">  </span><span class="p">]</span>
+<span class="p">}</span>
+</code></pre></div>
+<h3 id="configure-with-bicep">Configure with Bicep<a class="headerlink" href="#configure-with-bicep" title="Permanent link">#</a></h3>
+<p>To deploy caches that pass this rule:</p>
+<ul>
+<li>Set the <code>properties.sku.name</code> property to <code>Premium</code> or <code>Standard</code>.</li>
+<li>Set the <code>properties.sku.family</code> property to <code>P</code> or <code>C</code>.</li>
+<li>Set the <code>properties.sku.capacity</code> property to a capacity valid for the SKU <code>1</code> or higher.</li>
+</ul>
+<p>For example:</p>
+<div class="highlight"><span class="filename">Azure Bicep snippet</span><pre><span></span><code>resource cache &#39;Microsoft.Cache/redis@2023-04-01&#39; = {
+  name: name
+  location: location
+  properties: {
+    minimumTlsVersion: &#39;1.2&#39;
+    redisVersion: &#39;latest&#39;
+    sku: {
+      name: &#39;Premium&#39;
+      family: &#39;P&#39;
+      capacity: 1
+    }
+    redisConfiguration: {
+      &#39;maxmemory-reserved&#39;: &#39;615&#39;
+    }
+    enableNonSslPort: false
+  }
+  zones: [
+    &#39;1&#39;
+    &#39;2&#39;
+    &#39;3&#39;
+  ]
+}
+</code></pre></div>
 <h2 id="links">Links<a class="headerlink" href="#links" title="Permanent link">#</a></h2>
 <ul>
 <li><a href="https://docs.microsoft.com/azure/azure-cache-for-redis/cache-best-practices">Best practices for Azure Cache for Redis</a></li>
 <li><a href="https://azure.microsoft.com/pricing/details/cache/">Azure Cache for Redis pricing</a></li>
-<li><a href="https://docs.microsoft.com/azure/templates/microsoft.cache/redis#sku-object">Azure deployment reference</a></li>
 <li><a href="https://learn.microsoft.com/azure/architecture/framework/scalability/capacity#choosing-the-right-resources">Choosing the right resources</a></li>
+<li><a href="https://learn.microsoft.com/azure/templates/microsoft.cache/redis">Azure deployment reference</a></li>
 </ul>
 
   <!-- Last update of source file -->
@@ -8637,7 +8756,7 @@ Basic tier or Standard C0 caches are not suitable for production workloads.</p>
   <small>
     
       Last update:
-      2022-12-03
+      2023-07-08
     
   </small>
 </div>

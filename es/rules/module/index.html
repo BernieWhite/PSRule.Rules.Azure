@@ -8815,6 +8815,13 @@
 </li>
         
           <li class="md-nav__item">
+  <a href="#connectivity" class="md-nav__link">
+    Connectivity
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#data-flow" class="md-nav__link">
     Data flow
   </a>
@@ -10752,12 +10759,6 @@
 <td>Error</td>
 </tr>
 <tr>
-<td><a href="Azure.Redis.PublicNetworkAccess.md">Azure.Redis.PublicNetworkAccess</a></td>
-<td>Redis cache should disable public network access.</td>
-<td>Critical</td>
-<td>Error</td>
-</tr>
-<tr>
 <td><a href="Azure.Storage.Firewall.md">Azure.Storage.Firewall</a></td>
 <td>Storage Accounts should only accept explicitly allowed traffic.</td>
 <td>Important</td>
@@ -10930,6 +10931,37 @@
 </tr>
 </tbody>
 </table>
+<h3 id="connectivity">Connectivity<a class="headerlink" href="#connectivity" title="Permanent link">#</a></h3>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Synopsis</th>
+<th>Severity</th>
+<th>Level</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="Azure.Redis.FirewallIPRange.md">Azure.Redis.FirewallIPRange</a></td>
+<td>Determine if there is an excessive number of permitted IP addresses for the Redis cache.</td>
+<td>Critical</td>
+<td>Error</td>
+</tr>
+<tr>
+<td><a href="Azure.Redis.FirewallRuleCount.md">Azure.Redis.FirewallRuleCount</a></td>
+<td>Determine if there is an excessive number of firewall rules for the Redis cache.</td>
+<td>Awareness</td>
+<td>Error</td>
+</tr>
+<tr>
+<td><a href="Azure.Redis.PublicNetworkAccess.md">Azure.Redis.PublicNetworkAccess</a></td>
+<td>Redis cache should disable public network access.</td>
+<td>Critical</td>
+<td>Error</td>
+</tr>
+</tbody>
+</table>
 <h3 id="data-flow">Data flow<a class="headerlink" href="#data-flow" title="Permanent link">#</a></h3>
 <table>
 <thead>
@@ -11059,12 +11091,6 @@
 <tr>
 <td><a href="Azure.PostgreSQL.UseSSL.md">Azure.PostgreSQL.UseSSL</a></td>
 <td>Enforce encrypted PostgreSQL connections.</td>
-<td>Critical</td>
-<td>Error</td>
-</tr>
-<tr>
-<td><a href="Azure.Redis.FirewallIPRange.md">Azure.Redis.FirewallIPRange</a></td>
-<td>Determine if there is an excessive nunber of permitted IP addresses for the Redis cache.</td>
 <td>Critical</td>
 <td>Error</td>
 </tr>
@@ -11770,12 +11796,6 @@
 <tr>
 <td><a href="Azure.PostgreSQL.FirewallRuleCount.md">Azure.PostgreSQL.FirewallRuleCount</a></td>
 <td>Determine if there is an excessive number of firewall rules.</td>
-<td>Awareness</td>
-<td>Error</td>
-</tr>
-<tr>
-<td><a href="Azure.Redis.FirewallRuleCount.md">Azure.Redis.FirewallRuleCount</a></td>
-<td>Determine if there is an excessive number of firewall rules for the Redis cache.</td>
 <td>Awareness</td>
 <td>Error</td>
 </tr>

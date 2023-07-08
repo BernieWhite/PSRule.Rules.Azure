@@ -8681,51 +8681,70 @@
  · <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M7.75 6.5a1.25 1.25 0 1 0 0 2.5 1.25 1.25 0 0 0 0-2.5Z"/><path d="M2.5 1h8.44a1.5 1.5 0 0 1 1.06.44l10.25 10.25a1.5 1.5 0 0 1 0 2.12l-8.44 8.44a1.5 1.5 0 0 1-2.12 0L1.44 12A1.497 1.497 0 0 1 1 10.94V2.5A1.5 1.5 0 0 1 2.5 1Zm0 1.5v8.44l10.25 10.25 8.44-8.44L10.94 2.5Z"/></svg></span> 2022_12</p>
 <p>Azure Cache for Redis should use the latest supported version of Redis.</p>
 <h2 id="description">Description<a class="headerlink" href="#description" title="Permanent link">#</a></h2>
-<p>Azure Cache for Redis supports Redis 6. Redis 6 brings new security features and better performance.</p>
+<p>Azure Cache for Redis supports Redis 6.
+Redis 6 brings new security features and better performance.</p>
 <p>Version 4 for Azure Cache for Redis instances will be retired on June 30, 3023.</p>
 <h2 id="recommendation">Recommendation<a class="headerlink" href="#recommendation" title="Permanent link">#</a></h2>
 <p>Consider upgrading Redis version for Azure Cache for Redis to the latest supported version (&gt;=6.0).</p>
 <h2 id="examples">Examples<a class="headerlink" href="#examples" title="Permanent link">#</a></h2>
 <h3 id="configure-with-azure-template">Configure with Azure template<a class="headerlink" href="#configure-with-azure-template" title="Permanent link">#</a></h3>
-<p>To deploy Azure Cache for Redis instances that pass this rule:</p>
+<p>To deploy caches that pass this rule:</p>
 <ul>
 <li>Set the <code>properties.redisVersion</code> property to <code>latest</code> or <code>6</code>.</li>
 </ul>
 <p>For example:</p>
 <div class="highlight"><span class="filename">Azure Template snippet</span><pre><span></span><code><span class="p">{</span>
 <span class="w">  </span><span class="nt">&quot;type&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Microsoft.Cache/redis&quot;</span><span class="p">,</span>
-<span class="w">  </span><span class="nt">&quot;apiVersion&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;2022-06-01&quot;</span><span class="p">,</span>
-<span class="w">  </span><span class="nt">&quot;name&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;[parameters(&#39;redisCacheName&#39;)]&quot;</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">&quot;apiVersion&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;2023-04-01&quot;</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">&quot;name&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;[parameters(&#39;name&#39;)]&quot;</span><span class="p">,</span>
 <span class="w">  </span><span class="nt">&quot;location&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;[parameters(&#39;location&#39;)]&quot;</span><span class="p">,</span>
 <span class="w">  </span><span class="nt">&quot;properties&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="nt">&quot;minimumTlsVersion&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;1.2&quot;</span><span class="p">,</span>
 <span class="w">    </span><span class="nt">&quot;redisVersion&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;latest&quot;</span><span class="p">,</span>
-<span class="w">    </span><span class="nt">&quot;minimumTlsVersion&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;[parameters(&#39;minTlsVersion&#39;)]&quot;</span><span class="p">,</span>
 <span class="w">    </span><span class="nt">&quot;sku&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
-<span class="w">      </span><span class="nt">&quot;capacity&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;[parameters(&#39;redisCacheCapacity&#39;)]&quot;</span><span class="p">,</span>
-<span class="w">      </span><span class="nt">&quot;family&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;[parameters(&#39;redisCacheFamily&#39;)]&quot;</span><span class="p">,</span>
-<span class="w">      </span><span class="nt">&quot;name&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;[parameters(&#39;redisCacheSKU&#39;)]&quot;</span>
-<span class="w">    </span><span class="p">}</span>
-<span class="w">  </span><span class="p">}</span>
+<span class="w">      </span><span class="nt">&quot;name&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Premium&quot;</span><span class="p">,</span>
+<span class="w">      </span><span class="nt">&quot;family&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;P&quot;</span><span class="p">,</span>
+<span class="w">      </span><span class="nt">&quot;capacity&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span>
+<span class="w">    </span><span class="p">},</span>
+<span class="w">    </span><span class="nt">&quot;redisConfiguration&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">      </span><span class="nt">&quot;maxmemory-reserved&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;615&quot;</span>
+<span class="w">    </span><span class="p">},</span>
+<span class="w">    </span><span class="nt">&quot;enableNonSslPort&quot;</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span>
+<span class="w">  </span><span class="p">},</span>
+<span class="w">  </span><span class="nt">&quot;zones&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
+<span class="w">    </span><span class="s2">&quot;1&quot;</span><span class="p">,</span>
+<span class="w">    </span><span class="s2">&quot;2&quot;</span><span class="p">,</span>
+<span class="w">    </span><span class="s2">&quot;3&quot;</span>
+<span class="w">  </span><span class="p">]</span>
 <span class="p">}</span>
 </code></pre></div>
 <h3 id="configure-with-bicep">Configure with Bicep<a class="headerlink" href="#configure-with-bicep" title="Permanent link">#</a></h3>
-<p>To deploy Azure Cache for Redis instances that pass this rule:</p>
+<p>To deploy caches that pass this rule:</p>
 <ul>
 <li>Set the <code>properties.redisVersion</code> property to <code>latest</code> or <code>6</code>.</li>
 </ul>
 <p>For example:</p>
-<div class="highlight"><span class="filename">Azure Bicep snippet</span><pre><span></span><code>resource redisCache &#39;Microsoft.Cache/Redis@2022-06-01&#39; = {
-  name: redisCacheName
+<div class="highlight"><span class="filename">Azure Bicep snippet</span><pre><span></span><code>resource cache &#39;Microsoft.Cache/redis@2023-04-01&#39; = {
+  name: name
   location: location
   properties: {
-    minimumTlsVersion: minTlsVersion
+    minimumTlsVersion: &#39;1.2&#39;
     redisVersion: &#39;latest&#39;
     sku: {
-      capacity: redisCacheCapacity
-      family: redisCacheFamily
-      name: redisCacheSKU
+      name: &#39;Premium&#39;
+      family: &#39;P&#39;
+      capacity: 1
     }
+    redisConfiguration: {
+      &#39;maxmemory-reserved&#39;: &#39;615&#39;
+    }
+    enableNonSslPort: false
   }
+  zones: [
+    &#39;1&#39;
+    &#39;2&#39;
+    &#39;3&#39;
+  ]
 }
 </code></pre></div>
 <h2 id="notes">Notes<a class="headerlink" href="#notes" title="Permanent link">#</a></h2>
@@ -8748,7 +8767,7 @@
   <small>
     
       Last update:
-      2022-12-11
+      2023-07-08
     
   </small>
 </div>

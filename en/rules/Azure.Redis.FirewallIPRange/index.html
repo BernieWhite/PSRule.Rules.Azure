@@ -6,7 +6,7 @@
       <meta charset="utf-8">
       <meta name="viewport" content="width=device-width,initial-scale=1">
       
-        <meta name="description" content="Determine if there is an excessive nunber of permitted IP addresses for the Redis cache.">
+        <meta name="description" content="Determine if there is an excessive number of permitted IP addresses for the Redis cache.">
       
       
         <meta name="author" content="Microsoft">
@@ -80,19 +80,19 @@
   <meta property="og:site_name" content="PSRule for Azure" />
   <meta property="og:type" content="article" />
   <meta property="og:title" content="PSRule for Azure - Azure.Redis.FirewallIPRange" />
-  <meta property="og:description" content="Determine if there is an excessive nunber of permitted IP addresses for the Redis cache." />
+  <meta property="og:description" content="Determine if there is an excessive number of permitted IP addresses for the Redis cache." />
   <meta property="og:url" content="https://azure.github.io/PSRule.Rules.Azure/en/rules/Azure.Redis.FirewallIPRange/" />
   <meta property="og:image" content="https://repository-images.githubusercontent.com/184154668/58818c00-d496-11eb-9b77-016145022654" />
   <meta property="og:image:type" content="image/png" />
   <meta property="og:image:width" content="1280" />
   <meta property="og:image:height" content="640" />
-  <meta property="og:image:alt" content="Determine if there is an excessive nunber of permitted IP addresses for the Redis cache." />
+  <meta property="og:image:alt" content="Determine if there is an excessive number of permitted IP addresses for the Redis cache." />
 
   <!-- Twitter meta tags -->
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:site" content="@github" />
   <meta name="twitter:title" content="PSRule for Azure - Azure.Redis.FirewallIPRange" />
-  <meta name="twitter:description" content="Determine if there is an excessive nunber of permitted IP addresses for the Redis cache." />
+  <meta name="twitter:description" content="Determine if there is an excessive number of permitted IP addresses for the Redis cache." />
   <meta name="twitter:image" content="https://repository-images.githubusercontent.com/184154668/58818c00-d496-11eb-9b77-016145022654" />
 
 
@@ -5862,6 +5862,33 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#examples" class="md-nav__link">
+    Examples
+  </a>
+  
+    <nav class="md-nav" aria-label="Examples">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#configure-with-azure-template" class="md-nav__link">
+    Configure with Azure template
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#configure-with-bicep" class="md-nav__link">
+    Configure with Bicep
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#notes" class="md-nav__link">
     Notes
   </a>
@@ -8573,6 +8600,33 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#examples" class="md-nav__link">
+    Examples
+  </a>
+  
+    <nav class="md-nav" aria-label="Examples">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#configure-with-azure-template" class="md-nav__link">
+    Configure with Azure template
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#configure-with-bicep" class="md-nav__link">
+    Configure with Bicep
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#notes" class="md-nav__link">
     Notes
   </a>
@@ -8625,20 +8679,70 @@
 <p><a href="../module/#security"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M1.527 13.237a1.75 1.75 0 0 1 0-2.474l9.272-9.273a1.75 1.75 0 0 1 2.475 0l9.272 9.273a1.75 1.75 0 0 1 0 2.474l-9.272 9.272a1.75 1.75 0 0 1-2.475 0Zm1.06-1.414a.25.25 0 0 0 0 .354l9.273 9.272a.25.25 0 0 0 .353 0l9.272-9.272a.25.25 0 0 0 0-.354l-9.272-9.272a.25.25 0 0 0-.353 0Z"/></svg></span> Security</a>
  · <a href="../resource/#azure-cache-for-redis"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13.152.682a2.251 2.251 0 0 1 2.269 0l.007.004 6.957 4.276a2.277 2.277 0 0 1 1.126 1.964v7.516c0 .81-.432 1.56-1.133 1.968l-.002.001-11.964 7.037-.004.003c-.706.41-1.578.41-2.284 0l-.026-.015-6.503-4.502a2.268 2.268 0 0 1-1.096-1.943V9.438c0-.392.1-.77.284-1.1l.003-.006.014-.026c.197-.342.48-.627.82-.827h.002L13.152.681Zm.757 1.295h-.001L2.648 8.616l6.248 4.247a.775.775 0 0 0 .758-.01h.001l11.633-6.804-6.629-4.074a.75.75 0 0 0-.75.003ZM8.517 14.33a2.286 2.286 0 0 1-.393-.18l-.023-.014-6.102-4.147v7.003c0 .275.145.528.379.664l.025.014 6.114 4.232V14.33ZM18 9.709l-3.25 1.9v7.548L18 17.245Zm-7.59 4.438-.002.002a2.296 2.296 0 0 1-.391.18v7.612l3.233-1.902v-7.552Zm9.09-5.316v7.532l2.124-1.25a.776.776 0 0 0 .387-.671V7.363Z"/></svg></span> Azure Cache for Redis</a>
  · <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M7.75 6.5a1.25 1.25 0 1 0 0 2.5 1.25 1.25 0 0 0 0-2.5Z"/><path d="M2.5 1h8.44a1.5 1.5 0 0 1 1.06.44l10.25 10.25a1.5 1.5 0 0 1 0 2.12l-8.44 8.44a1.5 1.5 0 0 1-2.12 0L1.44 12A1.497 1.497 0 0 1 1 10.94V2.5A1.5 1.5 0 0 1 2.5 1Zm0 1.5v8.44l10.25 10.25 8.44-8.44L10.94 2.5Z"/></svg></span> 2022_09</p>
-<p>Determine if there is an excessive nunber of permitted IP addresses for the Redis cache.</p>
+<p>Determine if there is an excessive number of permitted IP addresses for the Redis cache.</p>
 <h2 id="description">Description<a class="headerlink" href="#description" title="Permanent link">#</a></h2>
-<p>Azure Cache for Redis provides the functionality to create firewall rules, limiting the IP addresses that can access the resources.
-Normally, you want to limit the number of IP addresses permitted through the firewall.</p>
+<p>When using Azure Cache for Redis, injected into a VNET you are able to create firewall rules to limit access to the cache.
+Each firewall rules specifies a range of IP addresses that are allowed to access the cache.</p>
+<p>If no firewall rules are set and public access is not disabled, then all IP addresses are allowed to access the cache.
+By default, the cache is configured to allow access from all IP addresses.</p>
+<p>Consider using private endpoints to limit access to the cache.
+If this is not possible, use firewall rules to limit access to the cache.
+However, avoid using overly permissive firewall rules that are:</p>
+<ul>
+<li>Not needed.</li>
+<li>Too broad.</li>
+<li>Too many.</li>
+</ul>
 <h2 id="recommendation">Recommendation<a class="headerlink" href="#recommendation" title="Permanent link">#</a></h2>
 <p>The Redis cache has greater than ten (10) public IP addresses that are permitted network access.
 Some rules may not be needed or can be reduced.</p>
+<h2 id="examples">Examples<a class="headerlink" href="#examples" title="Permanent link">#</a></h2>
+<h3 id="configure-with-azure-template">Configure with Azure template<a class="headerlink" href="#configure-with-azure-template" title="Permanent link">#</a></h3>
+<p>To deploy caches that pass this rule:</p>
+<ul>
+<li>Set the <code>properties.startIP</code> property to the start of the IP address range.</li>
+<li>Set the <code>properties.endIP</code> property to the end of the IP address range.</li>
+<li>Limit the range of public IP address included in rules.</li>
+</ul>
+<div class="highlight"><span class="filename">Azure Template snippet</span><pre><span></span><code><span class="p">{</span>
+<span class="w">  </span><span class="nt">&quot;type&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Microsoft.Cache/redis/firewallRules&quot;</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">&quot;apiVersion&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;2023-04-01&quot;</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">&quot;name&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;[format(&#39;{0}/{1}&#39;, parameters(&#39;name&#39;), &#39;allow-on-premises&#39;)]&quot;</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">&quot;properties&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="nt">&quot;startIP&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;10.0.1.1&quot;</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">&quot;endIP&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;10.0.1.31&quot;</span>
+<span class="w">  </span><span class="p">},</span>
+<span class="w">  </span><span class="nt">&quot;dependsOn&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
+<span class="w">    </span><span class="s2">&quot;cache&quot;</span>
+<span class="w">  </span><span class="p">]</span>
+<span class="p">}</span>
+</code></pre></div>
+<h3 id="configure-with-bicep">Configure with Bicep<a class="headerlink" href="#configure-with-bicep" title="Permanent link">#</a></h3>
+<p>To deploy caches that pass this rule:</p>
+<ul>
+<li>Set the <code>properties.startIP</code> property to the start of the IP address range.</li>
+<li>Set the <code>properties.endIP</code> property to the end of the IP address range.</li>
+<li>Limit the range of public IP address included in rules.</li>
+</ul>
+<div class="highlight"><span class="filename">Azure Bicep snippet</span><pre><span></span><code>resource rule &#39;Microsoft.Cache/redis/firewallRules@2023-04-01&#39; = {
+  parent: cache
+  name: &#39;allow-on-premises&#39;
+  properties: {
+    startIP: &#39;10.0.1.1&#39;
+    endIP: &#39;10.0.1.31&#39;
+  }
+}
+</code></pre></div>
 <h2 id="notes">Notes<a class="headerlink" href="#notes" title="Permanent link">#</a></h2>
 <p>This rule is not applicable when Redis is configured to allow private connectivity by setting <code>properties.publicNetworkAccess</code> to <code>Disabled</code>.
-Firewall rules can be used with VNet injected caches, but not private endpoints.</p>
+Firewall rules can be used with VNET injected caches, but not private endpoints.</p>
 <h2 id="links">Links<a class="headerlink" href="#links" title="Permanent link">#</a></h2>
 <ul>
-<li><a href="https://learn.microsoft.com/azure/azure-cache-for-redis/cache-configure#default-redis-server-configuration#firewall">How to configure Azure Cache for Redis - Firewall</a></li>
+<li><a href="https://learn.microsoft.com/azure/well-architected/security/design-network-connectivity">Azure services for securing network connectivity</a></li>
+<li><a href="https://learn.microsoft.com/azure/security/fundamentals/network-best-practices">Azure best practices for network security</a></li>
+<li><a href="https://learn.microsoft.com/azure/azure-cache-for-redis/cache-network-isolation">Azure Cache for Redis network isolation options</a></li>
 <li><a href="https://learn.microsoft.com/azure/azure-cache-for-redis/cache-network-isolation#limitations-of-firewall-rules">Limitations of firewall rules</a></li>
+<li><a href="https://learn.microsoft.com/azure/azure-cache-for-redis/cache-vnet-migration">Migrate from VNet injection caches to Private Link caches</a></li>
 <li><a href="https://learn.microsoft.com/azure/templates/microsoft.cache/redis/firewallrules">Azure deployment reference</a></li>
 </ul>
 
@@ -8650,7 +8754,7 @@ Firewall rules can be used with VNet injected caches, but not private endpoints.
   <small>
     
       Last update:
-      2023-04-29
+      2023-07-08
     
   </small>
 </div>

@@ -6,7 +6,7 @@
 // Define parameters
 
 @description('The name of the AKS cluster.')
-param clusterName string
+param name string
 
 @metadata({
   description: 'Optional. The Azure region to deploy to.'
@@ -58,14 +58,8 @@ param systemPoolMaxPods int = 50
 })
 param workspaceId string
 
-@metadata({
-  description: 'The resource Id for the virtual network where the cluster and ACI will be deployed into.'
-  strongType: 'Microsoft.Network/virtualNetworks'
-})
-param vnetId string
-
-@description('The name of the subnet do deploy cluster resources.')
-param systemPoolSubnet string
+@description('A reference to the subnet to deploy the cluster into.')
+param clusterSubnetId string
 
 @description('The object Ids of groups that will be added with the cluster admin role.')
 param clusterAdmins array = []
@@ -85,21 +79,10 @@ param clusterAdmins array = []
 })
 param pools array = []
 
-@metadata({
-  description: 'Tags to apply to the resource.'
-  example: {
-    service: 'container-platform'
-    env: 'prod'
-  }
-})
-param tags object
-
 // Define variables
 
 var serviceCidr = '192.168.0.0/16'
 var dnsServiceIP = '192.168.0.4'
-var dockerBridgeCidr = '172.17.0.1/16'
-var clusterSubnetId = '${vnetId}/subnets/${systemPoolSubnet}'
 
 // Define pools
 var allPools = union(systemPools, userPools)
@@ -144,13 +127,12 @@ var userPools = [for i in range(0, length(pools)): {
 resource identity 'Microsoft.ManagedIdentity/userAssignedIdentities@2018-11-30' = {
   name: identityName
   location: location
-  tags: tags
 }
 
-// Cluster
-resource cluster 'Microsoft.ContainerService/managedClusters@2022-09-01' = {
+// An example AKS cluster
+resource cluster 'Microsoft.ContainerService/managedClusters@2023-04-01' = {
   location: location
-  name: clusterName
+  name: name
   identity: {
     type: 'UserAssigned'
     userAssignedIdentities: {
@@ -175,7 +157,6 @@ resource cluster 'Microsoft.ContainerService/managedClusters@2022-09-01' = {
       loadBalancerSku: 'standard'
       serviceCidr: serviceCidr
       dnsServiceIP: dnsServiceIP
-      dockerBridgeCidr: dockerBridgeCidr
     }
     autoUpgradeProfile: {
       upgradeChannel: 'stable'
@@ -184,9 +165,6 @@ resource cluster 'Microsoft.ContainerService/managedClusters@2022-09-01' = {
       enabled: true
     }
     addonProfiles: {
-      httpApplicationRouting: {
-        enabled: false
-      }
       azurepolicy: {
         enabled: true
       }
@@ -196,8 +174,87 @@ resource cluster 'Microsoft.ContainerService/managedClusters@2022-09-01' = {
           logAnalyticsWorkspaceResourceID: workspaceId
         }
       }
-      kubeDashboard: {
-        enabled: false
+      azureKeyvaultSecretsProvider: {
+        enabled: true
+        config: {
+          enableSecretRotation: 'true'
+        }
+      }
+    }
+  }
+}
+
+// An example AKS cluster with pools defined.
+resource clusterWithPools 'Microsoft.ContainerService/managedClusters@2023-04-01' = {
+  location: location
+  name: name
+  identity: {
+    type: 'UserAssigned'
+    userAssignedIdentities: {
+      '${identity.id}': {}
+    }
+  }
+  properties: {
+    kubernetesVersion: kubernetesVersion
+    disableLocalAccounts: true
+    enableRBAC: true
+    dnsPrefix: dnsPrefix
+    agentPoolProfiles: [
+      {
+        name: 'system'
+        osDiskSizeGB: 0
+        minCount: 3
+        maxCount: 5
+        enableAutoScaling: true
+        maxPods: 50
+        vmSize: 'Standard_D4s_v5'
+        type: 'VirtualMachineScaleSets'
+        vnetSubnetID: clusterSubnetId
+        mode: 'System'
+        osDiskType: 'Ephemeral'
+      }
+      {
+        name: 'user'
+        osDiskSizeGB: 0
+        minCount: 3
+        maxCount: 20
+        enableAutoScaling: true
+        maxPods: 50
+        vmSize: 'Standard_D4s_v5'
+        type: 'VirtualMachineScaleSets'
+        vnetSubnetID: clusterSubnetId
+        mode: 'User'
+        osDiskType: 'Ephemeral'
+      }
+    ]
+    aadProfile: {
+      managed: true
+      enableAzureRBAC: true
+      adminGroupObjectIDs: clusterAdmins
+      tenantID: subscription().tenantId
+    }
+    networkProfile: {
+      networkPlugin: 'azure'
+      networkPolicy: 'azure'
+      loadBalancerSku: 'standard'
+      serviceCidr: serviceCidr
+      dnsServiceIP: dnsServiceIP
+    }
+    autoUpgradeProfile: {
+      upgradeChannel: 'stable'
+    }
+    oidcIssuerProfile: {
+      enabled: true
+    }
+    addonProfiles: {
+      azurepolicy: {
+        enabled: true
+      }
+      omsagent: {
+        enabled: true
+        config: {
+          logAnalyticsWorkspaceResourceID: workspaceId
+        }
       }
       azureKeyvaultSecretsProvider: {
         enabled: true
@@ -207,5 +264,4 @@ resource cluster 'Microsoft.ContainerService/managedClusters@2022-09-01' = {
       }
     }
   }
-  tags: tags
 }

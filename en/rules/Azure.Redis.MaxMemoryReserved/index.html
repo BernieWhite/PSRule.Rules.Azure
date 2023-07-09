@@ -7988,6 +7988,10 @@
         
           
         
+          
+        
+          
+        
       
       
         <label class="md-nav__link" for="__nav_4_6" id="__nav_4_6_label" tabindex="0">
@@ -8204,6 +8208,20 @@
   
   
     <li class="md-nav__item">
+      <a href="../../baselines/Azure.GA_2023_06/" class="md-nav__link">
+        Azure.GA_2023_06
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
       <a href="../../baselines/Azure.MCSB.v1/" class="md-nav__link">
         Azure.MCSB.v1
       </a>
@@ -8318,6 +8336,20 @@
     <li class="md-nav__item">
       <a href="../../baselines/Azure.Preview_2023_03/" class="md-nav__link">
         Azure.Preview_2023_03
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../baselines/Azure.Preview_2023_06/" class="md-nav__link">
+        Azure.Preview_2023_06
       </a>
     </li>
   
@@ -8669,7 +8701,10 @@
 <h2 id="description">Description<a class="headerlink" href="#description" title="Permanent link">#</a></h2>
 <p>Azure Cache for Redis supports configuration of the <code>maxmemory-reserved</code> setting.
 The <code>maxmemory-reserved</code> setting configures the amount of memory reserved for non-cache operations.
-Setting this value allows you to have a more consistent experience when your load varies.
+Non-cache operations include background tasks, eviction, and compaction.</p>
+<p>By reserving memory for these operations, you prevent Redis cache from using all available memory for cache.
+If enough memory is not reserved for these operations it can lead to performance degradation and instability.</p>
+<p>Setting this value allows you to have a more consistent experience when your load varies.
 This value should be set higher for workloads that are write heavy.</p>
 <p>When memory reserved by <code>maxmemory-reserved</code>, it is unavailable for storage of cached data.</p>
 <h2 id="recommendation">Recommendation<a class="headerlink" href="#recommendation" title="Permanent link">#</a></h2>
@@ -8678,7 +8713,7 @@ This value should be set higher for workloads that are write heavy.</p>
 <h3 id="configure-with-azure-template">Configure with Azure template<a class="headerlink" href="#configure-with-azure-template" title="Permanent link">#</a></h3>
 <p>To deploy caches that pass this rule:</p>
 <ul>
-<li>Set the <code>properties.redisConfiguration.maxmemory-reserved</code> property to at least 10% of the cache size.</li>
+<li>Set the <code>properties.redisConfiguration.maxmemory-reserved</code> property to at least 10% of the cache memory.</li>
 </ul>
 <p>For example:</p>
 <div class="highlight"><span class="filename">Azure Template snippet</span><pre><span></span><code><span class="p">{</span>
@@ -8709,7 +8744,7 @@ This value should be set higher for workloads that are write heavy.</p>
 <h3 id="configure-with-bicep">Configure with Bicep<a class="headerlink" href="#configure-with-bicep" title="Permanent link">#</a></h3>
 <p>To deploy caches that pass this rule:</p>
 <ul>
-<li>Set the <code>properties.redisConfiguration.maxmemory-reserved</code> property to at least 10% of the cache size.</li>
+<li>Set the <code>properties.redisConfiguration.maxmemory-reserved</code> property to at least 10% of the cache memory.</li>
 </ul>
 <p>For example:</p>
 <div class="highlight"><span class="filename">Azure Bicep snippet</span><pre><span></span><code>resource cache &#39;Microsoft.Cache/redis@2023-04-01&#39; = {
@@ -8737,7 +8772,9 @@ This value should be set higher for workloads that are write heavy.</p>
 </code></pre></div>
 <h2 id="links">Links<a class="headerlink" href="#links" title="Permanent link">#</a></h2>
 <ul>
-<li><a href="https://learn.microsoft.com/azure/well-architected/scalability/capacity#choosing-the-right-resources">Choosing the right resources</a></li>
+<li><a href="https://learn.microsoft.com/azure/well-architected/scalability/design-capacity#choose-the-right-resources">Choose the right resources</a></li>
+<li><a href="https://learn.microsoft.com/azure/azure-cache-for-redis/cache-overview#choosing-the-right-tier">Choosing the right tier</a></li>
+<li><a href="https://learn.microsoft.com/azure/azure-cache-for-redis/cache-best-practices-scale#scaling-and-memory">Scaling and memory</a></li>
 <li><a href="https://learn.microsoft.com/azure/azure-cache-for-redis/cache-best-practices-memory-management">Memory management</a></li>
 <li><a href="https://azure.microsoft.com/pricing/details/cache/">SKU sizes</a></li>
 <li><a href="https://learn.microsoft.com/azure/templates/microsoft.cache/redis">Azure deployment reference</a></li>
@@ -8751,7 +8788,7 @@ This value should be set higher for workloads that are write heavy.</p>
   <small>
     
       Last update:
-      2023-07-08
+      2023-07-09
     
   </small>
 </div>

@@ -1,15 +1,17 @@
 {
   "$schema": "https://schema.management.azure.com/schemas/2019-04-01/deploymentTemplate.json#",
+  "languageVersion": "1.10-experimental",
   "contentVersion": "1.0.0.0",
   "metadata": {
+    "_EXPERIMENTAL_WARNING": "Symbolic name support in ARM is experimental, and should be enabled for testing purposes only. Do not enable this setting for any production usage, or you may be unexpectedly broken at any time!",
     "_generator": {
       "name": "bicep",
-      "version": "0.5.6.12127",
-      "templateHash": "2737926357004416265"
+      "version": "0.18.4.5664",
+      "templateHash": "12666421165921150827"
     }
   },
   "parameters": {
-    "clusterName": {
+    "name": {
       "type": "string",
       "metadata": {
         "description": "The name of the AKS cluster."
@@ -73,7 +75,7 @@
     },
     "kubernetesVersion": {
       "type": "string",
-      "defaultValue": "1.22.6",
+      "defaultValue": "1.25.6",
       "metadata": {
         "description": "The version of Kubernetes."
       }
@@ -93,17 +95,10 @@
         "strongType": "Microsoft.OperationalInsights/workspaces"
       }
     },
-    "vnetId": {
+    "clusterSubnetId": {
       "type": "string",
       "metadata": {
-        "description": "The resource Id for the virtual network where the cluster and ACI will be deployed into.",
-        "strongType": "Microsoft.Network/virtualNetworks"
-      }
-    },
-    "systemPoolSubnet": {
-      "type": "string",
-      "metadata": {
-        "description": "The name of the subnet do deploy cluster resources."
+        "description": "A reference to the subnet to deploy the cluster into."
       }
     },
     "clusterAdmins": {
@@ -129,16 +124,6 @@
           }
         ]
       }
-    },
-    "tags": {
-      "type": "object",
-      "metadata": {
-        "description": "Tags to apply to the resource.",
-        "example": {
-          "service": "container-platform",
-          "env": "prod"
-        }
-      }
     }
   },
   "variables": {
@@ -157,7 +142,7 @@
           "vmSize": "[parameters('pools')[range(0, length(parameters('pools')))[copyIndex('userPools')]].vmSize]",
           "osType": "[parameters('pools')[range(0, length(parameters('pools')))[copyIndex('userPools')]].osType]",
           "type": "VirtualMachineScaleSets",
-          "vnetSubnetID": "[variables('clusterSubnetId')]",
+          "vnetSubnetID": "[parameters('clusterSubnetId')]",
           "mode": "User",
           "osDiskType": "Ephemeral",
           "scaleSetPriority": "[parameters('pools')[range(0, length(parameters('pools')))[copyIndex('userPools')]].priority]"
@@ -166,8 +151,6 @@
     ],
     "serviceCidr": "192.168.0.0/16",
     "dnsServiceIP": "192.168.0.4",
-    "dockerBridgeCidr": "172.17.0.1/16",
-    "clusterSubnetId": "[format('{0}/subnets/{1}', parameters('vnetId'), parameters('systemPoolSubnet'))]",
     "allPools": "[union(variables('systemPools'), variables('userPools'))]",
     "systemPools": [
       {
@@ -181,25 +164,24 @@
         "vmSize": "[parameters('systemVMSize')]",
         "osType": "Linux",
         "type": "VirtualMachineScaleSets",
-        "vnetSubnetID": "[variables('clusterSubnetId')]",
+        "vnetSubnetID": "[parameters('clusterSubnetId')]",
         "mode": "System",
         "osDiskType": "Ephemeral",
         "scaleSetPriority": "Regular"
       }
     ]
   },
-  "resources": [
-    {
+  "resources": {
+    "identity": {
       "type": "Microsoft.ManagedIdentity/userAssignedIdentities",
       "apiVersion": "2018-11-30",
       "name": "[parameters('identityName')]",
-      "location": "[parameters('location')]",
-      "tags": "[parameters('tags')]"
+      "location": "[parameters('location')]"
     },
-    {
+    "cluster": {
       "type": "Microsoft.ContainerService/managedClusters",
-      "apiVersion": "2022-01-01",
-      "name": "[parameters('clusterName')]",
+      "apiVersion": "2023-04-01",
+      "name": "[parameters('name')]",
       "location": "[parameters('location')]",
       "identity": {
         "type": "UserAssigned",
@@ -224,21 +206,17 @@
           "networkPolicy": "azure",
           "loadBalancerSku": "standard",
           "serviceCidr": "[variables('serviceCidr')]",
-          "dnsServiceIP": "[variables('dnsServiceIP')]",
-          "dockerBridgeCidr": "[variables('dockerBridgeCidr')]"
+          "dnsServiceIP": "[variables('dnsServiceIP')]"
         },
         "autoUpgradeProfile": {
           "upgradeChannel": "stable"
         },
+        "oidcIssuerProfile": {
+          "enabled": true
+        },
         "addonProfiles": {
-          "httpApplicationRouting": {
-            "enabled": false
-          },
           "azurepolicy": {
-            "enabled": true,
-            "config": {
-              "version": "v2"
-            }
+            "enabled": true
           },
           "omsagent": {
             "enabled": true,
@@ -246,8 +224,90 @@
               "logAnalyticsWorkspaceResourceID": "[parameters('workspaceId')]"
             }
           },
-          "kubeDashboard": {
-            "enabled": false
+          "azureKeyvaultSecretsProvider": {
+            "enabled": true,
+            "config": {
+              "enableSecretRotation": "true"
+            }
+          }
+        }
+      },
+      "dependsOn": [
+        "identity"
+      ]
+    },
+    "clusterWithPools": {
+      "type": "Microsoft.ContainerService/managedClusters",
+      "apiVersion": "2023-04-01",
+      "name": "[parameters('name')]",
+      "location": "[parameters('location')]",
+      "identity": {
+        "type": "UserAssigned",
+        "userAssignedIdentities": {
+          "[format('{0}', resourceId('Microsoft.ManagedIdentity/userAssignedIdentities', parameters('identityName')))]": {}
+        }
+      },
+      "properties": {
+        "kubernetesVersion": "[parameters('kubernetesVersion')]",
+        "disableLocalAccounts": true,
+        "enableRBAC": true,
+        "dnsPrefix": "[parameters('dnsPrefix')]",
+        "agentPoolProfiles": [
+          {
+            "name": "system",
+            "osDiskSizeGB": 0,
+            "minCount": 3,
+            "maxCount": 5,
+            "enableAutoScaling": true,
+            "maxPods": 50,
+            "vmSize": "Standard_D4s_v5",
+            "type": "VirtualMachineScaleSets",
+            "vnetSubnetID": "[parameters('clusterSubnetId')]",
+            "mode": "System",
+            "osDiskType": "Ephemeral"
+          },
+          {
+            "name": "user",
+            "osDiskSizeGB": 0,
+            "minCount": 3,
+            "maxCount": 20,
+            "enableAutoScaling": true,
+            "maxPods": 50,
+            "vmSize": "Standard_D4s_v5",
+            "type": "VirtualMachineScaleSets",
+            "vnetSubnetID": "[parameters('clusterSubnetId')]",
+            "mode": "User",
+            "osDiskType": "Ephemeral"
+          }
+        ],
+        "aadProfile": {
+          "managed": true,
+          "enableAzureRBAC": true,
+          "adminGroupObjectIDs": "[parameters('clusterAdmins')]",
+          "tenantID": "[subscription().tenantId]"
+        },
+        "networkProfile": {
+          "networkPlugin": "azure",
+          "networkPolicy": "azure",
+          "loadBalancerSku": "standard",
+          "serviceCidr": "[variables('serviceCidr')]",
+          "dnsServiceIP": "[variables('dnsServiceIP')]"
+        },
+        "autoUpgradeProfile": {
+          "upgradeChannel": "stable"
+        },
+        "oidcIssuerProfile": {
+          "enabled": true
+        },
+        "addonProfiles": {
+          "azurepolicy": {
+            "enabled": true
+          },
+          "omsagent": {
+            "enabled": true,
+            "config": {
+              "logAnalyticsWorkspaceResourceID": "[parameters('workspaceId')]"
+            }
           },
           "azureKeyvaultSecretsProvider": {
             "enabled": true,
@@ -255,15 +315,11 @@
               "enableSecretRotation": "true"
             }
           }
-        },
-        "podIdentityProfile": {
-          "enabled": true
         }
       },
-      "tags": "[parameters('tags')]",
       "dependsOn": [
-        "[resourceId('Microsoft.ManagedIdentity/userAssignedIdentities', parameters('identityName'))]"
+        "identity"
       ]
     }
-  ]
+  }
 }

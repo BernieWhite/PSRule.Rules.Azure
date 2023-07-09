@@ -7988,6 +7988,10 @@
         
           
         
+          
+        
+          
+        
       
       
         <label class="md-nav__link" for="__nav_4_6" id="__nav_4_6_label" tabindex="0">
@@ -8204,6 +8208,20 @@
   
   
     <li class="md-nav__item">
+      <a href="../../baselines/Azure.GA_2023_06/" class="md-nav__link">
+        Azure.GA_2023_06
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
       <a href="../../baselines/Azure.MCSB.v1/" class="md-nav__link">
         Azure.MCSB.v1
       </a>
@@ -8318,6 +8336,20 @@
     <li class="md-nav__item">
       <a href="../../baselines/Azure.Preview_2023_03/" class="md-nav__link">
         Azure.Preview_2023_03
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../baselines/Azure.Preview_2023_06/" class="md-nav__link">
+        Azure.Preview_2023_06
       </a>
     </li>
   
@@ -8675,7 +8707,7 @@ Use a minimum of Standard for production container registries.</p>
 <p>The Premium SKU provides higher image throughput and included storage, and is required for:</p>
 <ul>
 <li>Geo-replication</li>
-<li>Availablity zones</li>
+<li>Availability zones</li>
 <li>Private Endpoints</li>
 <li>Firewall restrictions</li>
 <li>Tokens and scope-maps</li>
@@ -8684,9 +8716,9 @@ Use a minimum of Standard for production container registries.</p>
 <p>Consider using the Premium Container Registry SKU for production deployments.</p>
 <h2 id="examples">Examples<a class="headerlink" href="#examples" title="Permanent link">#</a></h2>
 <h3 id="configure-with-azure-template">Configure with Azure template<a class="headerlink" href="#configure-with-azure-template" title="Permanent link">#</a></h3>
-<p>To deploy Container Registries that pass this rule:</p>
+<p>To deploy registries that pass this rule:</p>
 <ul>
-<li>Set <code>sku.name</code> to <code>Premium</code> or <code>Standard</code>.</li>
+<li>Set the <code>sku.name</code> property to <code>Premium</code> or <code>Standard</code>.</li>
 </ul>
 <p>For example:</p>
 <div class="highlight"><span class="filename">Azure Template snippet</span><pre><span></span><code><span class="p">{</span>
@@ -8723,9 +8755,9 @@ Use a minimum of Standard for production container registries.</p>
 <span class="p">}</span>
 </code></pre></div>
 <h3 id="configure-with-bicep">Configure with Bicep<a class="headerlink" href="#configure-with-bicep" title="Permanent link">#</a></h3>
-<p>To deploy Container Registries that pass this rule:</p>
+<p>To deploy registries that pass this rule:</p>
 <ul>
-<li>Set <code>sku.name</code> to <code>Premium</code> or <code>Standard</code>.</li>
+<li>Set the <code>sku.name</code> property to <code>Premium</code> or <code>Standard</code>.</li>
 </ul>
 <p>For example:</p>
 <div class="highlight"><span class="filename">Azure Bicep snippet</span><pre><span></span><code>resource acr &#39;Microsoft.ContainerRegistry/registries@2023-01-01-preview&#39; = {
@@ -8776,7 +8808,7 @@ Use a minimum of Standard for production container registries.</p>
   <small>
     
       Last update:
-      2023-06-09
+      2023-07-09
     
   </small>
 </div>

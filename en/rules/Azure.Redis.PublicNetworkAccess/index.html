@@ -114,7 +114,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#limit-public-network-access-to-redis-cache-instances" class="md-skip">
+        <a href="#use-private-endpoints-with-azure-cache-for-redis" class="md-skip">
           Skip to content
         </a>
       
@@ -7988,6 +7988,10 @@
         
           
         
+          
+        
+          
+        
       
       
         <label class="md-nav__link" for="__nav_4_6" id="__nav_4_6_label" tabindex="0">
@@ -8204,6 +8208,20 @@
   
   
     <li class="md-nav__item">
+      <a href="../../baselines/Azure.GA_2023_06/" class="md-nav__link">
+        Azure.GA_2023_06
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
       <a href="../../baselines/Azure.MCSB.v1/" class="md-nav__link">
         Azure.MCSB.v1
       </a>
@@ -8318,6 +8336,20 @@
     <li class="md-nav__item">
       <a href="../../baselines/Azure.Preview_2023_03/" class="md-nav__link">
         Azure.Preview_2023_03
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../baselines/Azure.Preview_2023_06/" class="md-nav__link">
+        Azure.Preview_2023_06
       </a>
     </li>
   
@@ -8660,24 +8692,31 @@
   
 
   <!-- Markdown content -->
-  <h1 id="limit-public-network-access-to-redis-cache-instances">Limit public network access to Redis cache instances<a class="headerlink" href="#limit-public-network-access-to-redis-cache-instances" title="Permanent link">#</a></h1>
+  <h1 id="use-private-endpoints-with-azure-cache-for-redis">Use private endpoints with Azure Cache for Redis<a class="headerlink" href="#use-private-endpoints-with-azure-cache-for-redis" title="Permanent link">#</a></h1>
 <nav class="md-tags"><span class="md-tag">Azure.Redis.PublicNetworkAccess</span><span class="md-tag">AZR-000165</span><span class="md-tag">Error</span></nav>
 <p><a href="../module/#security"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M1.527 13.237a1.75 1.75 0 0 1 0-2.474l9.272-9.273a1.75 1.75 0 0 1 2.475 0l9.272 9.273a1.75 1.75 0 0 1 0 2.474l-9.272 9.272a1.75 1.75 0 0 1-2.475 0Zm1.06-1.414a.25.25 0 0 0 0 .354l9.273 9.272a.25.25 0 0 0 .353 0l9.272-9.272a.25.25 0 0 0 0-.354l-9.272-9.272a.25.25 0 0 0-.353 0Z"/></svg></span> Security</a>
  · <a href="../resource/#azure-cache-for-redis"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13.152.682a2.251 2.251 0 0 1 2.269 0l.007.004 6.957 4.276a2.277 2.277 0 0 1 1.126 1.964v7.516c0 .81-.432 1.56-1.133 1.968l-.002.001-11.964 7.037-.004.003c-.706.41-1.578.41-2.284 0l-.026-.015-6.503-4.502a2.268 2.268 0 0 1-1.096-1.943V9.438c0-.392.1-.77.284-1.1l.003-.006.014-.026c.197-.342.48-.627.82-.827h.002L13.152.681Zm.757 1.295h-.001L2.648 8.616l6.248 4.247a.775.775 0 0 0 .758-.01h.001l11.633-6.804-6.629-4.074a.75.75 0 0 0-.75.003ZM8.517 14.33a2.286 2.286 0 0 1-.393-.18l-.023-.014-6.102-4.147v7.003c0 .275.145.528.379.664l.025.014 6.114 4.232V14.33ZM18 9.709l-3.25 1.9v7.548L18 17.245Zm-7.59 4.438-.002.002a2.296 2.296 0 0 1-.391.18v7.612l3.233-1.902v-7.552Zm9.09-5.316v7.532l2.124-1.25a.776.776 0 0 0 .387-.671V7.363Z"/></svg></span> Azure Cache for Redis</a>
  · <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M7.75 6.5a1.25 1.25 0 1 0 0 2.5 1.25 1.25 0 0 0 0-2.5Z"/><path d="M2.5 1h8.44a1.5 1.5 0 0 1 1.06.44l10.25 10.25a1.5 1.5 0 0 1 0 2.12l-8.44 8.44a1.5 1.5 0 0 1-2.12 0L1.44 12A1.497 1.497 0 0 1 1 10.94V2.5A1.5 1.5 0 0 1 2.5 1Zm0 1.5v8.44l10.25 10.25 8.44-8.44L10.94 2.5Z"/></svg></span> 2022_03</p>
 <p>Redis cache should disable public network access.</p>
 <h2 id="description">Description<a class="headerlink" href="#description" title="Permanent link">#</a></h2>
-<p>Public access to redis instances can be disabled.
-This ensures secure and private connectivity to redis instances using private endpoints instead.</p>
-<p>Private endpoint is a network interface that connects you privately and securely to Azure Cache for
-Redis powered by Azure Private Link.</p>
+<p>When using Azure Cache for Redis, you can configure the cache to be private or accessible from the public Internet.
+By default, the cache is configured to be accessible from the public Internet.</p>
+<p>To limit network access to the cache you can use firewall rules or private endpoints.
+Using private endpoints with Azure Cache for Redis is the recommend approach for most scenarios.</p>
+<p>Use private endpoints to improve the security posture of your Redis cache and reduce the risk of data breaches.</p>
+<p>A private endpoint provides secure and private connectivity to Redis instances by:</p>
+<ul>
+<li>Using a private IP address from your VNET.</li>
+<li>Blocking all traffic from public networks.</li>
+</ul>
+<p>If you are using VNET injection, it is recommended to migrate to private endpoints.</p>
 <h2 id="recommendation">Recommendation<a class="headerlink" href="#recommendation" title="Permanent link">#</a></h2>
-<p>Redis cache should disable public network access when public connectivity is not required.</p>
+<p>Consider using private endpoints to limit network connectivity to the cache and help reduce data exfiltration risks.</p>
 <h2 id="examples">Examples<a class="headerlink" href="#examples" title="Permanent link">#</a></h2>
 <h3 id="configure-with-azure-template">Configure with Azure template<a class="headerlink" href="#configure-with-azure-template" title="Permanent link">#</a></h3>
 <p>To deploy caches that pass this rule:</p>
 <ul>
-<li>Set <code>properties.publicNetworkAccess</code> property to <code>Disabled</code>.</li>
+<li>Set the <code>properties.publicNetworkAccess</code> property to <code>Disabled</code>.</li>
 </ul>
 <p>For example:</p>
 <div class="highlight"><span class="filename">Azure Template snippet</span><pre><span></span><code><span class="p">{</span>
@@ -8709,7 +8748,7 @@ Redis powered by Azure Private Link.</p>
 <h3 id="configure-with-bicep">Configure with Bicep<a class="headerlink" href="#configure-with-bicep" title="Permanent link">#</a></h3>
 <p>To deploy caches that pass this rule:</p>
 <ul>
-<li>Set <code>properties.publicNetworkAccess</code> property to <code>Disabled</code>.</li>
+<li>Set the <code>properties.publicNetworkAccess</code> property to <code>Disabled</code>.</li>
 </ul>
 <p>For example:</p>
 <div class="highlight"><span class="filename">Azure Bicep snippet</span><pre><span></span><code>resource cache &#39;Microsoft.Cache/redis@2023-04-01&#39; = {
@@ -8741,7 +8780,10 @@ Redis powered by Azure Private Link.</p>
 <li><a href="https://learn.microsoft.com/azure/well-architected/security/design-network-connectivity">Azure services for securing network connectivity</a></li>
 <li><a href="https://learn.microsoft.com/azure/azure-cache-for-redis/cache-private-link">Azure Cache for Redis with Azure Private Link</a></li>
 <li><a href="https://learn.microsoft.com/azure/architecture/framework/security/design-network-endpoints">Best practices for endpoint security on Azure</a></li>
+<li><a href="https://learn.microsoft.com/azure/azure-cache-for-redis/cache-vnet-migration">Migrate from VNet injection caches to Private Link caches</a></li>
 <li><a href="https://learn.microsoft.com/azure/private-link/private-endpoint-overview">What is Azure Private Endpoint?</a></li>
+<li><a href="https://learn.microsoft.com/security/benchmark/azure/baselines/azure-cache-for-redis-security-baseline#ns-2-secure-cloud-services-with-network-controls">NS-2: Secure cloud services with network controls</a></li>
+<li><a href="https://learn.microsoft.com/azure/azure-cache-for-redis/security-controls-policy">Azure Policy Regulatory Compliance controls for Azure Cache for Redis</a></li>
 <li><a href="https://learn.microsoft.com/azure/templates/microsoft.cache/redis">Azure deployment reference</a></li>
 </ul>
 
@@ -8753,7 +8795,7 @@ Redis powered by Azure Private Link.</p>
   <small>
     
       Last update:
-      2023-07-08
+      2023-07-09
     
   </small>
 </div>

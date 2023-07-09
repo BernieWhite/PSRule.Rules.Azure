@@ -5939,6 +5939,20 @@
   
 </li>
         
+          <li class="md-nav__item">
+  <a href="#configure-with-azure-cli" class="md-nav__link">
+    Configure with Azure CLI
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#configure-with-azure-powershell" class="md-nav__link">
+    Configure with Azure PowerShell
+  </a>
+  
+</li>
+        
       </ul>
     </nav>
   
@@ -7988,6 +8002,10 @@
         
           
         
+          
+        
+          
+        
       
       
         <label class="md-nav__link" for="__nav_4_6" id="__nav_4_6_label" tabindex="0">
@@ -8204,6 +8222,20 @@
   
   
     <li class="md-nav__item">
+      <a href="../../baselines/Azure.GA_2023_06/" class="md-nav__link">
+        Azure.GA_2023_06
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
       <a href="../../baselines/Azure.MCSB.v1/" class="md-nav__link">
         Azure.MCSB.v1
       </a>
@@ -8318,6 +8350,20 @@
     <li class="md-nav__item">
       <a href="../../baselines/Azure.Preview_2023_03/" class="md-nav__link">
         Azure.Preview_2023_03
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../baselines/Azure.Preview_2023_06/" class="md-nav__link">
+        Azure.Preview_2023_06
       </a>
     </li>
   
@@ -8614,6 +8660,20 @@
   
 </li>
         
+          <li class="md-nav__item">
+  <a href="#configure-with-azure-cli" class="md-nav__link">
+    Configure with Azure CLI
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#configure-with-azure-powershell" class="md-nav__link">
+    Configure with Azure PowerShell
+  </a>
+  
+</li>
+        
       </ul>
     </nav>
   
@@ -8735,12 +8795,29 @@ Support for TLS 1.0/ 1.1 version will be removed.</p>
   ]
 }
 </code></pre></div>
+<h3 id="configure-with-azure-cli">Configure with Azure CLI<a class="headerlink" href="#configure-with-azure-cli" title="Permanent link">#</a></h3>
+<p>To deploy caches that pass this rule:</p>
+<ul>
+<li>Use the <code>--set</code> parameter.</li>
+</ul>
+<p>For example:</p>
+<div class="highlight"><span class="filename">Azure CLI snippet</span><pre><span></span><code>az<span class="w"> </span>redis<span class="w"> </span>update<span class="w"> </span>-n<span class="w"> </span><span class="s1">&#39;&lt;name&gt;&#39;</span><span class="w"> </span>-g<span class="w"> </span><span class="s1">&#39;&lt;resource_group&gt;&#39;</span><span class="w"> </span>--set<span class="w"> </span><span class="nv">minimumTlsVersion</span><span class="o">=</span><span class="m">1</span>.2
+</code></pre></div>
+<h3 id="configure-with-azure-powershell">Configure with Azure PowerShell<a class="headerlink" href="#configure-with-azure-powershell" title="Permanent link">#</a></h3>
+<p>To deploy caches that pass this rule:</p>
+<ul>
+<li>Use the <code>-MinimumTlsVersion</code> parameter.</li>
+</ul>
+<p>For example:</p>
+<div class="highlight"><span class="filename">Azure PowerShell snippet</span><pre><span></span><code><span class="nb">Set-AzRedisCache</span> <span class="n">-Name</span> <span class="s1">&#39;&lt;name&gt;&#39;</span> <span class="n">-MinimumTlsVersion</span> <span class="s1">&#39;1.2&#39;</span>
+</code></pre></div>
 <h2 id="links">Links<a class="headerlink" href="#links" title="Permanent link">#</a></h2>
 <ul>
 <li><a href="https://learn.microsoft.com/azure/architecture/framework/security/design-storage-encryption#data-in-transit">Data encryption in Azure</a></li>
 <li><a href="https://docs.microsoft.com/azure/azure-cache-for-redis/cache-remove-tls-10-11">Remove TLS 1.0 and 1.1 from use with Azure Cache for Redis</a></li>
 <li><a href="https://docs.microsoft.com/azure/azure-cache-for-redis/cache-configure#access-ports">Configure Azure Cache for Redis settings</a></li>
 <li><a href="https://azure.microsoft.com/updates/azuretls12/">Preparing for TLS 1.2 in Microsoft Azure</a></li>
+<li><a href="https://learn.microsoft.com/security/benchmark/azure/baselines/azure-cache-for-redis-security-baseline#dp-3-encrypt-sensitive-data-in-transit">DP-3: Encrypt sensitive data in transit</a></li>
 <li><a href="https://learn.microsoft.com/azure/templates/microsoft.cache/redis">Azure deployment reference</a></li>
 </ul>
 
@@ -8752,7 +8829,7 @@ Support for TLS 1.0/ 1.1 version will be removed.</p>
   <small>
     
       Last update:
-      2023-07-08
+      2023-07-09
     
   </small>
 </div>

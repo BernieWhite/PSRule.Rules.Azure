@@ -7988,6 +7988,10 @@
         
           
         
+          
+        
+          
+        
       
       
         <label class="md-nav__link" for="__nav_4_6" id="__nav_4_6_label" tabindex="0">
@@ -8204,6 +8208,20 @@
   
   
     <li class="md-nav__item">
+      <a href="../../baselines/Azure.GA_2023_06/" class="md-nav__link">
+        Azure.GA_2023_06
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
       <a href="../../baselines/Azure.MCSB.v1/" class="md-nav__link">
         Azure.MCSB.v1
       </a>
@@ -8318,6 +8336,20 @@
     <li class="md-nav__item">
       <a href="../../baselines/Azure.Preview_2023_03/" class="md-nav__link">
         Azure.Preview_2023_03
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../baselines/Azure.Preview_2023_06/" class="md-nav__link">
+        Azure.Preview_2023_06
       </a>
     </li>
   
@@ -8667,14 +8699,13 @@
  · <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M7.75 6.5a1.25 1.25 0 1 0 0 2.5 1.25 1.25 0 0 0 0-2.5Z"/><path d="M2.5 1h8.44a1.5 1.5 0 0 1 1.06.44l10.25 10.25a1.5 1.5 0 0 1 0 2.12l-8.44 8.44a1.5 1.5 0 0 1-2.12 0L1.44 12A1.497 1.497 0 0 1 1 10.94V2.5A1.5 1.5 0 0 1 2.5 1Zm0 1.5v8.44l10.25 10.25 8.44-8.44L10.94 2.5Z"/></svg></span> 2020_06</p>
 <p>Azure Cache for Redis should only accept secure connections.</p>
 <h2 id="description">Description<a class="headerlink" href="#description" title="Permanent link">#</a></h2>
-<p>Azure Cache for Redis is configured to accept unencrypted connections using a non-SSL port.
-Unencrypted connections are disabled by default.</p>
-<p>Unencrypted communication to Redis Cache could allow disclosure of information to an untrusted party.</p>
+<p>Azure Cache for Redis can be configured to accept encrypted and unencrypted connections.
+By default, only encrypted communication is accepted.
+To accept unencrypted connections, the non-SSL port must be enabled.
+Using the non-SSL port for Azure Redis cache allows unencrypted communication to Redis cache.</p>
+<p>Unencrypted communication can potentially allow disclosure of sensitive information to an untrusted party.</p>
 <h2 id="recommendation">Recommendation<a class="headerlink" href="#recommendation" title="Permanent link">#</a></h2>
-<p>Azure Cache for Redis should be configured to only accept secure connections.</p>
-<p>When the non-SSL port is enabled, encrypted and unencrypted connections are permitted.
-To prevent unencrypted connections, disable the non-SSL port.</p>
-<p>Unless explicitly required, consider disabling the non-SSL port.</p>
+<p>Consider only using secure connections to Redis cache by enabling SSL and disabling the non-SSL port.</p>
 <h2 id="examples">Examples<a class="headerlink" href="#examples" title="Permanent link">#</a></h2>
 <h3 id="configure-with-azure-template">Configure with Azure template<a class="headerlink" href="#configure-with-azure-template" title="Permanent link">#</a></h3>
 <p>To deploy caches that pass this rule:</p>
@@ -8739,8 +8770,9 @@ To prevent unencrypted connections, disable the non-SSL port.</p>
 <h2 id="links">Links<a class="headerlink" href="#links" title="Permanent link">#</a></h2>
 <ul>
 <li><a href="https://learn.microsoft.com/azure/architecture/framework/security/design-storage-encryption#data-in-transit">Data encryption in Azure</a></li>
-<li><a href="https://docs.microsoft.com/azure/azure-cache-for-redis/cache-faq#when-should-i-enable-the-non-ssl-port-for-connecting-to-redis">when should I enable the non-SSL port for connecting to Redis</a></li>
-<li><a href="https://docs.microsoft.com/azure/azure-cache-for-redis/cache-configure#access-ports">How to configure Azure Cache for Redis</a></li>
+<li><a href="https://learn.microsoft.com/azure/azure-cache-for-redis/cache-configure#access-ports">How to configure Azure Cache for Redis</a></li>
+<li><a href="https://learn.microsoft.com/security/benchmark/azure/baselines/azure-cache-for-redis-security-baseline#dp-3-encrypt-sensitive-data-in-transit">DP-3: Encrypt sensitive data in transit</a></li>
+<li><a href="https://learn.microsoft.com/azure/azure-cache-for-redis/security-controls-policy">Azure Policy Regulatory Compliance controls for Azure Cache for Redis</a></li>
 <li><a href="https://learn.microsoft.com/azure/templates/microsoft.cache/redis">Azure deployment reference</a></li>
 </ul>
 
@@ -8752,7 +8784,7 @@ To prevent unencrypted connections, disable the non-SSL port.</p>
   <small>
     
       Last update:
-      2023-07-08
+      2023-07-09
     
   </small>
 </div>

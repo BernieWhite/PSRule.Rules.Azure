@@ -7884,6 +7884,10 @@
         
           
         
+          
+        
+          
+        
       
       
         <label class="md-nav__link" for="__nav_4_6" id="__nav_4_6_label" tabindex="0">
@@ -8100,6 +8104,20 @@
   
   
     <li class="md-nav__item">
+      <a href="../../../en/baselines/Azure.GA_2023_06/" class="md-nav__link">
+        Azure.GA_2023_06
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
       <a href="../../../en/baselines/Azure.MCSB.v1/" class="md-nav__link">
         Azure.MCSB.v1
       </a>
@@ -8214,6 +8232,20 @@
     <li class="md-nav__item">
       <a href="../../../en/baselines/Azure.Preview_2023_03/" class="md-nav__link">
         Azure.Preview_2023_03
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../en/baselines/Azure.Preview_2023_06/" class="md-nav__link">
+        Azure.Preview_2023_06
       </a>
     </li>
   
@@ -8614,6 +8646,13 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
+  <a href="#application-capacity" class="md-nav__link">
+    Application capacity
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#application-design" class="md-nav__link">
     Application design
   </a>
@@ -8621,8 +8660,8 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#capacity-planning" class="md-nav__link">
-    Capacity planning
+  <a href="#application-scalability" class="md-nav__link">
+    Application scalability
   </a>
   
 </li>
@@ -8658,13 +8697,6 @@
           <li class="md-nav__item">
   <a href="#performance-patterns" class="md-nav__link">
     Performance patterns
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#scalability" class="md-nav__link">
-    Scalability
   </a>
   
 </li>
@@ -8760,7 +8792,7 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#scalability_1" class="md-nav__link">
+  <a href="#scalability" class="md-nav__link">
     Scalability
   </a>
   
@@ -9956,6 +9988,43 @@
 </tbody>
 </table>
 <h2 id="performance-efficiency">Performance Efficiency<a class="headerlink" href="#performance-efficiency" title="Permanent link">#</a></h2>
+<h3 id="application-capacity">Application capacity<a class="headerlink" href="#application-capacity" title="Permanent link">#</a></h3>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Synopsis</th>
+<th>Severity</th>
+<th>Level</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="Azure.AppService.MinPlan.md">Azure.AppService.MinPlan</a></td>
+<td>Use at least a Standard App Service Plan.</td>
+<td>Important</td>
+<td>Error</td>
+</tr>
+<tr>
+<td><a href="Azure.Redis.MaxMemoryReserved.md">Azure.Redis.MaxMemoryReserved</a></td>
+<td>Configure maxmemory-reserved to reserve memory for non-cache operations.</td>
+<td>Important</td>
+<td>Error</td>
+</tr>
+<tr>
+<td><a href="Azure.Redis.MinSKU.md">Azure.Redis.MinSKU</a></td>
+<td>Use Azure Cache for Redis instances of at least Standard C1.</td>
+<td>Important</td>
+<td>Error</td>
+</tr>
+<tr>
+<td><a href="Azure.Search.SKU.md">Azure.Search.SKU</a></td>
+<td>Use the basic and standard tiers for entry level workloads.</td>
+<td>Critical</td>
+<td>Error</td>
+</tr>
+</tbody>
+</table>
 <h3 id="application-design">Application design<a class="headerlink" href="#application-design" title="Permanent link">#</a></h3>
 <table>
 <thead>
@@ -9981,7 +10050,7 @@
 </tr>
 </tbody>
 </table>
-<h3 id="capacity-planning">Capacity planning<a class="headerlink" href="#capacity-planning" title="Permanent link">#</a></h3>
+<h3 id="application-scalability">Application scalability<a class="headerlink" href="#application-scalability" title="Permanent link">#</a></h3>
 <table>
 <thead>
 <tr>
@@ -9999,33 +10068,15 @@
 <td>Error</td>
 </tr>
 <tr>
+<td><a href="Azure.AKS.PoolScaleSet.md">Azure.AKS.PoolScaleSet</a></td>
+<td>Deploy AKS clusters with nodes pools based on VM scale sets.</td>
+<td>Important</td>
+<td>Error</td>
+</tr>
+<tr>
 <td><a href="Azure.AKS.StandardLB.md">Azure.AKS.StandardLB</a></td>
 <td>Azure Kubernetes Clusters (AKS) should use a Standard load balancer SKU.</td>
 <td>Important</td>
-<td>Error</td>
-</tr>
-<tr>
-<td><a href="Azure.AppService.MinPlan.md">Azure.AppService.MinPlan</a></td>
-<td>Use at least a Standard App Service Plan.</td>
-<td>Important</td>
-<td>Error</td>
-</tr>
-<tr>
-<td><a href="Azure.Redis.MaxMemoryReserved.md">Azure.Redis.MaxMemoryReserved</a></td>
-<td>Configure maxmemory-reserved to reserve memory for non-cache operations.</td>
-<td>Important</td>
-<td>Error</td>
-</tr>
-<tr>
-<td><a href="Azure.Redis.MinSKU.md">Azure.Redis.MinSKU</a></td>
-<td>Use Azure Cache for Redis instances of at least Standard C1.</td>
-<td>Important</td>
-<td>Error</td>
-</tr>
-<tr>
-<td><a href="Azure.Search.SKU.md">Azure.Search.SKU</a></td>
-<td>Use the basic and standard tiers for entry level workloads.</td>
-<td>Critical</td>
 <td>Error</td>
 </tr>
 </tbody>
@@ -10138,25 +10189,6 @@
 <tr>
 <td><a href="Azure.FrontDoor.UseCaching.md">Azure.FrontDoor.UseCaching</a></td>
 <td>Use caching to reduce retrieving contents from origins.</td>
-<td>Important</td>
-<td>Error</td>
-</tr>
-</tbody>
-</table>
-<h3 id="scalability">Scalability<a class="headerlink" href="#scalability" title="Permanent link">#</a></h3>
-<table>
-<thead>
-<tr>
-<th>Name</th>
-<th>Synopsis</th>
-<th>Severity</th>
-<th>Level</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><a href="Azure.AKS.PoolScaleSet.md">Azure.AKS.PoolScaleSet</a></td>
-<td>Deploy AKS clusters with nodes pools based on VM scale sets.</td>
 <td>Important</td>
 <td>Error</td>
 </tr>
@@ -10648,7 +10680,7 @@
 </tr>
 </tbody>
 </table>
-<h3 id="scalability_1">Scalability<a class="headerlink" href="#scalability_1" title="Permanent link">#</a></h3>
+<h3 id="scalability">Scalability<a class="headerlink" href="#scalability" title="Permanent link">#</a></h3>
 <table>
 <thead>
 <tr>
@@ -11101,12 +11133,6 @@
 <td>Error</td>
 </tr>
 <tr>
-<td><a href="Azure.Redis.NonSslPort.md">Azure.Redis.NonSslPort</a></td>
-<td>Azure Cache for Redis should only accept secure connections.</td>
-<td>Critical</td>
-<td>Error</td>
-</tr>
-<tr>
 <td><a href="Azure.RedisEnterprise.MinTLS.md">Azure.RedisEnterprise.MinTLS</a></td>
 <td>Redis Cache should reject TLS versions older than 1.2.</td>
 <td>Critical</td>
@@ -11298,6 +11324,12 @@
 <tr>
 <td><a href="Azure.PostgreSQL.MinTLS.md">Azure.PostgreSQL.MinTLS</a></td>
 <td>PostgreSQL DB servers should reject TLS versions older than 1.2.</td>
+<td>Critical</td>
+<td>Error</td>
+</tr>
+<tr>
+<td><a href="Azure.Redis.NonSslPort.md">Azure.Redis.NonSslPort</a></td>
+<td>Azure Cache for Redis should only accept secure connections.</td>
 <td>Critical</td>
 <td>Error</td>
 </tr>
@@ -12105,7 +12137,7 @@
   <small>
     
       Last update:
-      2023-07-03
+      2023-07-09
     
   </small>
 </div>

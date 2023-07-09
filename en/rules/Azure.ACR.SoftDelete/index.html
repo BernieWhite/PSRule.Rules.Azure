@@ -7995,6 +7995,10 @@
         
           
         
+          
+        
+          
+        
       
       
         <label class="md-nav__link" for="__nav_4_6" id="__nav_4_6_label" tabindex="0">
@@ -8211,6 +8215,20 @@
   
   
     <li class="md-nav__item">
+      <a href="../../baselines/Azure.GA_2023_06/" class="md-nav__link">
+        Azure.GA_2023_06
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
       <a href="../../baselines/Azure.MCSB.v1/" class="md-nav__link">
         Azure.MCSB.v1
       </a>
@@ -8325,6 +8343,20 @@
     <li class="md-nav__item">
       <a href="../../baselines/Azure.Preview_2023_03/" class="md-nav__link">
         Azure.Preview_2023_03
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../baselines/Azure.Preview_2023_06/" class="md-nav__link">
+        Azure.Preview_2023_06
       </a>
     </li>
   
@@ -8683,8 +8715,11 @@
 <p>Azure Container Registries should have soft delete policy enabled.</p>
 <h2 id="description">Description<a class="headerlink" href="#description" title="Permanent link">#</a></h2>
 <p>Azure Container Registry (ACR) allows you to enable the soft delete policy to recover any accidentally deleted artifacts for a set retention period.</p>
-<p>This feature is available in all the service tiers (also known as SKUs). For information about registry service tiers, see Azure Container Registry service tiers.</p>
-<p>Once you enable the soft delete policy, ACR manages the deleted artifacts as the soft deleted artifacts with a set retention period. Thereby you have ability to list, filter, and restore the soft deleted artifacts. Once the retention period is complete, all the soft deleted artifacts are auto-purged.</p>
+<p>This feature is available in all the service tiers (also known as SKUs).
+For information about registry service tiers, see Azure Container Registry service tiers.</p>
+<p>Once you enable the soft delete policy, ACR manages the deleted artifacts as the soft deleted artifacts with a set retention period.
+Thereby you have ability to list, filter, and restore the soft deleted artifacts.
+Once the retention period is complete, all the soft deleted artifacts are auto-purged.</p>
 <p>Current preview limitations:</p>
 <ul>
 <li>ACR currently doesn't support manually purging soft deleted artifacts.</li>
@@ -8692,12 +8727,12 @@
 <li>ACR doesn't allow enabling both the retention policy and the soft delete policy. See retention policy for untagged manifests.</li>
 </ul>
 <h2 id="recommendation">Recommendation<a class="headerlink" href="#recommendation" title="Permanent link">#</a></h2>
-<p>Azure Container Registries should have soft delete policy enabled.</p>
+<p>Azure Container Registries should have soft delete enabled to enable recovery of accidentally deleted artifacts.</p>
 <h2 id="examples">Examples<a class="headerlink" href="#examples" title="Permanent link">#</a></h2>
 <h3 id="configure-with-azure-template">Configure with Azure template<a class="headerlink" href="#configure-with-azure-template" title="Permanent link">#</a></h3>
 <p>To deploy an Azure Container Registry that pass this rule:</p>
 <ul>
-<li>Set <code>properties.policies.softDeletePolicy.status</code> to <code>enabled</code>.</li>
+<li>Set the <code>properties.policies.softDeletePolicy.status</code> property to <code>enabled</code>.</li>
 </ul>
 <p>For example:</p>
 <div class="highlight"><span class="filename">Azure Template snippet</span><pre><span></span><code><span class="p">{</span>
@@ -8736,7 +8771,7 @@
 <h3 id="configure-with-bicep">Configure with Bicep<a class="headerlink" href="#configure-with-bicep" title="Permanent link">#</a></h3>
 <p>To deploy an Azure Container Registry that pass this rule:</p>
 <ul>
-<li>Set <code>properties.policies.softDeletePolicy.status</code> to <code>enabled</code>.</li>
+<li>Set the <code>properties.policies.softDeletePolicy.status</code> property to <code>enabled</code>.</li>
 </ul>
 <p>For example:</p>
 <div class="highlight"><span class="filename">Azure Bicep snippet</span><pre><span></span><code>resource acr &#39;Microsoft.ContainerRegistry/registries@2023-01-01-preview&#39; = {
@@ -8771,7 +8806,7 @@
 }
 </code></pre></div>
 <h3 id="configure-with-azure-cli">Configure with Azure CLI<a class="headerlink" href="#configure-with-azure-cli" title="Permanent link">#</a></h3>
-<div class="highlight"><span class="filename">Azure CLI snippet</span><pre><span></span><code>az<span class="w"> </span>acr<span class="w"> </span>config<span class="w"> </span>soft-delete<span class="w"> </span>update<span class="w"> </span>-r<span class="w"> </span>MyRegistry<span class="w"> </span>--days<span class="w"> </span><span class="m">90</span><span class="w"> </span>--status<span class="w"> </span>enabled
+<div class="highlight"><span class="filename">Azure CLI snippet</span><pre><span></span><code>az<span class="w"> </span>acr<span class="w"> </span>config<span class="w"> </span>soft-delete<span class="w"> </span>update<span class="w"> </span>-r<span class="w"> </span><span class="s1">&#39;&lt;name&gt;&#39;</span><span class="w"> </span>--days<span class="w"> </span><span class="m">90</span><span class="w"> </span>--status<span class="w"> </span>enabled
 </code></pre></div>
 <h2 id="links">Links<a class="headerlink" href="#links" title="Permanent link">#</a></h2>
 <ul>
@@ -8790,7 +8825,7 @@
   <small>
     
       Last update:
-      2023-06-09
+      2023-07-09
     
   </small>
 </div>

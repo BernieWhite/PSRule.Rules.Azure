@@ -3293,6 +3293,13 @@
   
 </li>
         
+          <li class="md-nav__item">
+  <a href="#configure-with-bicep-public-registry" class="md-nav__link">
+    Configure with Bicep Public Registry
+  </a>
+  
+</li>
+        
       </ul>
     </nav>
   
@@ -8646,6 +8653,13 @@
   
 </li>
         
+          <li class="md-nav__item">
+  <a href="#configure-with-bicep-public-registry" class="md-nav__link">
+    Configure with Bicep Public Registry
+  </a>
+  
+</li>
+        
       </ul>
     </nav>
   
@@ -8699,20 +8713,22 @@
  · <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M7.75 6.5a1.25 1.25 0 1 0 0 2.5 1.25 1.25 0 0 0 0-2.5Z"/><path d="M2.5 1h8.44a1.5 1.5 0 0 1 1.06.44l10.25 10.25a1.5 1.5 0 0 1 0 2.12l-8.44 8.44a1.5 1.5 0 0 1-2.12 0L1.44 12A1.497 1.497 0 0 1 1 10.94V2.5A1.5 1.5 0 0 1 2.5 1Zm0 1.5v8.44l10.25 10.25 8.44-8.44L10.94 2.5Z"/></svg></span> 2022_12</p>
 <p>Consider purge protection for app configuration store to ensure store cannot be purged in the retention period.</p>
 <h2 id="description">Description<a class="headerlink" href="#description" title="Permanent link">#</a></h2>
-<p>With purge protection enabled, soft deleted stores can't be purged in the retention period. If disabled, the soft deleted store can be purged before the retention period expires. Once purge protection is enabled on a store, it can't be disabled.</p>
-<p>Purge protection currently requires a <strong>standard</strong> SKU.</p>
+<p>With purge protection enabled, soft deleted stores can't be purged in the retention period.
+If disabled, the soft deleted store can be purged before the retention period expires.
+Once purge protection is enabled on a store, it can't be disabled.</p>
+<p>Purge protection is only available for configuration stores that use the <strong>standard</strong> SKU.</p>
 <h2 id="recommendation">Recommendation<a class="headerlink" href="#recommendation" title="Permanent link">#</a></h2>
-<p>Consider enabling purge protection for app configuration store.</p>
+<p>Consider enabling purge protection for app configuration stores.</p>
 <h2 id="examples">Examples<a class="headerlink" href="#examples" title="Permanent link">#</a></h2>
 <h3 id="configure-with-azure-template">Configure with Azure template<a class="headerlink" href="#configure-with-azure-template" title="Permanent link">#</a></h3>
 <p>To deploy App Configuration Stores that pass this rule:</p>
 <ul>
-<li>Set <code>properties.enablePurgeProtection</code> to <code>true</code>.</li>
+<li>Set the <code>properties.enablePurgeProtection</code> property to <code>true</code>.</li>
 </ul>
 <p>For example:</p>
 <div class="highlight"><span class="filename">Azure Template snippet</span><pre><span></span><code><span class="p">{</span>
 <span class="w">  </span><span class="nt">&quot;type&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Microsoft.AppConfiguration/configurationStores&quot;</span><span class="p">,</span>
-<span class="w">  </span><span class="nt">&quot;apiVersion&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;2022-05-01&quot;</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">&quot;apiVersion&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;2023-03-01&quot;</span><span class="p">,</span>
 <span class="w">  </span><span class="nt">&quot;name&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;[parameters(&#39;name&#39;)]&quot;</span><span class="p">,</span>
 <span class="w">  </span><span class="nt">&quot;location&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;[parameters(&#39;location&#39;)]&quot;</span><span class="p">,</span>
 <span class="w">  </span><span class="nt">&quot;sku&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
@@ -8720,17 +8736,18 @@
 <span class="w">  </span><span class="p">},</span>
 <span class="w">  </span><span class="nt">&quot;properties&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
 <span class="w">    </span><span class="nt">&quot;disableLocalAuth&quot;</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span>
-<span class="w">    </span><span class="nt">&quot;enablePurgeProtection&quot;</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span>
+<span class="w">    </span><span class="nt">&quot;enablePurgeProtection&quot;</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">&quot;publicNetworkAccess&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Disabled&quot;</span>
 <span class="w">  </span><span class="p">}</span>
 <span class="p">}</span>
 </code></pre></div>
 <h3 id="configure-with-bicep">Configure with Bicep<a class="headerlink" href="#configure-with-bicep" title="Permanent link">#</a></h3>
 <p>To deploy App Configuration Stores that pass this rule:</p>
 <ul>
-<li>Set <code>properties.enablePurgeProtection</code> to <code>true</code>.</li>
+<li>Set the <code>properties.enablePurgeProtection</code> property to <code>true</code>.</li>
 </ul>
 <p>For example:</p>
-<div class="highlight"><span class="filename">Azure Bicep snippet</span><pre><span></span><code>resource store &#39;Microsoft.AppConfiguration/configurationStores@2022-05-01&#39; = {
+<div class="highlight"><span class="filename">Azure Bicep snippet</span><pre><span></span><code>resource store &#39;Microsoft.AppConfiguration/configurationStores@2023-03-01&#39; = {
   name: name
   location: location
   sku: {
@@ -8739,6 +8756,23 @@
   properties: {
     disableLocalAuth: true
     enablePurgeProtection: true
+    publicNetworkAccess: &#39;Disabled&#39;
+  }
+}
+</code></pre></div>
+<h3 id="configure-with-bicep-public-registry">Configure with Bicep Public Registry<a class="headerlink" href="#configure-with-bicep-public-registry" title="Permanent link">#</a></h3>
+<p>To deploy App Configuration Stores that pass this rule:</p>
+<ul>
+<li>Set the <code>params.enablePurgeProtection</code> parameter to <code>true</code>.</li>
+</ul>
+<p>For example:</p>
+<div class="highlight"><span class="filename">Azure Bicep snippet</span><pre><span></span><code>module store &#39;br/public:app/app-configuration:1.1.1&#39; = {
+  name: &#39;store&#39;
+  params: {
+    skuName: &#39;Standard&#39;
+    disableLocalAuth: true
+    enablePurgeProtection: true
+    publicNetworkAccess: &#39;Disabled&#39;
   }
 }
 </code></pre></div>
@@ -8746,6 +8780,7 @@
 <ul>
 <li><a href="https://learn.microsoft.com/azure/architecture/framework/resiliency/data-management">Data management for reliability</a></li>
 <li><a href="https://learn.microsoft.com/azure/azure-app-configuration/concept-soft-delete#purge-protection">Purge protection</a></li>
+<li><a href="https://azure.github.io/bicep-registry-modules/#app">Public registry</a></li>
 <li><a href="https://learn.microsoft.com/azure/templates/microsoft.appconfiguration/configurationstores">Azure deployment reference</a></li>
 </ul>
 
@@ -8757,7 +8792,7 @@
   <small>
     
       Last update:
-      2022-10-06
+      2023-07-15
     
   </small>
 </div>

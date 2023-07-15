@@ -12,8 +12,8 @@ param location string = resourceGroup().location
 @description('The resource id of the Log Analytics workspace to send diagnostic logs to.')
 param workspaceId string
 
-// An example App Configuration Store
-resource store 'Microsoft.AppConfiguration/configurationStores@2022-05-01' = {
+// An example App Configuration Store with a Standard SKU.
+resource store 'Microsoft.AppConfiguration/configurationStores@2023-03-01' = {
   name: name
   location: location
   sku: {
@@ -22,12 +22,14 @@ resource store 'Microsoft.AppConfiguration/configurationStores@2022-05-01' = {
   properties: {
     disableLocalAuth: true
     enablePurgeProtection: true
+    publicNetworkAccess: 'Disabled'
   }
 }
 
+// Configure audit logs to be saved to a Log Analytics workspace.
 resource diagnostic 'Microsoft.Insights/diagnosticSettings@2021-05-01-preview' = {
-  name: '${name}-diagnostic'
   scope: store
+  name: '${name}-diagnostic'
   properties: {
     logs: [
       {

@@ -3307,6 +3307,13 @@
   
 </li>
         
+          <li class="md-nav__item">
+  <a href="#configure-with-bicep-public-registry" class="md-nav__link">
+    Configure with Bicep Public Registry
+  </a>
+  
+</li>
+        
       </ul>
     </nav>
   
@@ -8646,6 +8653,13 @@
   
 </li>
         
+          <li class="md-nav__item">
+  <a href="#configure-with-bicep-public-registry" class="md-nav__link">
+    Configure with Bicep Public Registry
+  </a>
+  
+</li>
+        
       </ul>
     </nav>
   
@@ -8709,12 +8723,12 @@ Free instances are intended only for early development and testing scenarios.</p
 <h3 id="configure-with-azure-template">Configure with Azure template<a class="headerlink" href="#configure-with-azure-template" title="Permanent link">#</a></h3>
 <p>To deploy configuration stores that pass this rule:</p>
 <ul>
-<li>Set <code>sku.name</code> to <code>standard</code>.</li>
+<li>Set the <code>sku.name</code> property to <code>standard</code>.</li>
 </ul>
 <p>For example:</p>
 <div class="highlight"><span class="filename">Azure Template snippet</span><pre><span></span><code><span class="p">{</span>
 <span class="w">  </span><span class="nt">&quot;type&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Microsoft.AppConfiguration/configurationStores&quot;</span><span class="p">,</span>
-<span class="w">  </span><span class="nt">&quot;apiVersion&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;2022-05-01&quot;</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">&quot;apiVersion&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;2023-03-01&quot;</span><span class="p">,</span>
 <span class="w">  </span><span class="nt">&quot;name&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;[parameters(&#39;name&#39;)]&quot;</span><span class="p">,</span>
 <span class="w">  </span><span class="nt">&quot;location&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;[parameters(&#39;location&#39;)]&quot;</span><span class="p">,</span>
 <span class="w">  </span><span class="nt">&quot;sku&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
@@ -8722,17 +8736,18 @@ Free instances are intended only for early development and testing scenarios.</p
 <span class="w">  </span><span class="p">},</span>
 <span class="w">  </span><span class="nt">&quot;properties&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
 <span class="w">    </span><span class="nt">&quot;disableLocalAuth&quot;</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span>
-<span class="w">    </span><span class="nt">&quot;enablePurgeProtection&quot;</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span>
+<span class="w">    </span><span class="nt">&quot;enablePurgeProtection&quot;</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">&quot;publicNetworkAccess&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Disabled&quot;</span>
 <span class="w">  </span><span class="p">}</span>
 <span class="p">}</span>
 </code></pre></div>
 <h3 id="configure-with-bicep">Configure with Bicep<a class="headerlink" href="#configure-with-bicep" title="Permanent link">#</a></h3>
 <p>To deploy configuration stores that pass this rule:</p>
 <ul>
-<li>Set <code>sku.name</code> to <code>standard</code>.</li>
+<li>Set the <code>sku.name</code> property to <code>standard</code>.</li>
 </ul>
 <p>For example:</p>
-<div class="highlight"><span class="filename">Azure Bicep snippet</span><pre><span></span><code>resource store &#39;Microsoft.AppConfiguration/configurationStores@2022-05-01&#39; = {
+<div class="highlight"><span class="filename">Azure Bicep snippet</span><pre><span></span><code>resource store &#39;Microsoft.AppConfiguration/configurationStores@2023-03-01&#39; = {
   name: name
   location: location
   sku: {
@@ -8741,6 +8756,23 @@ Free instances are intended only for early development and testing scenarios.</p
   properties: {
     disableLocalAuth: true
     enablePurgeProtection: true
+    publicNetworkAccess: &#39;Disabled&#39;
+  }
+}
+</code></pre></div>
+<h3 id="configure-with-bicep-public-registry">Configure with Bicep Public Registry<a class="headerlink" href="#configure-with-bicep-public-registry" title="Permanent link">#</a></h3>
+<p>To deploy App Configuration Stores that pass this rule:</p>
+<ul>
+<li>Set the <code>params.skuName</code> parameter to <code>Standard</code>.</li>
+</ul>
+<p>For example:</p>
+<div class="highlight"><span class="filename">Azure Bicep snippet</span><pre><span></span><code>module store &#39;br/public:app/app-configuration:1.1.1&#39; = {
+  name: &#39;store&#39;
+  params: {
+    skuName: &#39;Standard&#39;
+    disableLocalAuth: true
+    enablePurgeProtection: true
+    publicNetworkAccess: &#39;Disabled&#39;
   }
 }
 </code></pre></div>
@@ -8749,6 +8781,7 @@ Free instances are intended only for early development and testing scenarios.</p
 <li><a href="https://learn.microsoft.com/azure/architecture/framework/resiliency/design-requirements#meet-application-platform-requirements">Meet application platform requirements</a></li>
 <li><a href="https://azure.microsoft.com/pricing/details/app-configuration/">App Configuration pricing</a></li>
 <li><a href="https://learn.microsoft.com/azure/azure-app-configuration/faq#which-app-configuration-tier-should-i-use">Which App Configuration tier should I use?</a></li>
+<li><a href="https://azure.github.io/bicep-registry-modules/#app">Public registry</a></li>
 <li><a href="https://learn.microsoft.com/azure/templates/microsoft.appconfiguration/configurationstores">Azure deployment reference</a></li>
 </ul>
 
@@ -8760,7 +8793,7 @@ Free instances are intended only for early development and testing scenarios.</p
   <small>
     
       Last update:
-      2022-09-24
+      2023-07-15
     
   </small>
 </div>

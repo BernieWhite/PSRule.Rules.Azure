@@ -1,11 +1,13 @@
 {
   "$schema": "https://schema.management.azure.com/schemas/2019-04-01/deploymentTemplate.json#",
+  "languageVersion": "1.10-experimental",
   "contentVersion": "1.0.0.0",
   "metadata": {
+    "_EXPERIMENTAL_WARNING": "Symbolic name support in ARM is experimental, and should be enabled for testing purposes only. Do not enable this setting for any production usage, or you may be unexpectedly broken at any time!",
     "_generator": {
       "name": "bicep",
-      "version": "0.10.61.36676",
-      "templateHash": "16473115016755753924"
+      "version": "0.19.5.34762",
+      "templateHash": "18221119898236058940"
     }
   },
   "parameters": {
@@ -29,10 +31,10 @@
       }
     }
   },
-  "resources": [
-    {
+  "resources": {
+    "store": {
       "type": "Microsoft.AppConfiguration/configurationStores",
-      "apiVersion": "2022-05-01",
+      "apiVersion": "2023-03-01",
       "name": "[parameters('name')]",
       "location": "[parameters('location')]",
       "sku": {
@@ -40,10 +42,11 @@
       },
       "properties": {
         "disableLocalAuth": true,
-        "enablePurgeProtection": true
+        "enablePurgeProtection": true,
+        "publicNetworkAccess": "Disabled"
       }
     },
-    {
+    "diagnostic": {
       "type": "Microsoft.Insights/diagnosticSettings",
       "apiVersion": "2021-05-01-preview",
       "scope": "[format('Microsoft.AppConfiguration/configurationStores/{0}', parameters('name'))]",
@@ -62,8 +65,8 @@
         "workspaceId": "[parameters('workspaceId')]"
       },
       "dependsOn": [
-        "[resourceId('Microsoft.AppConfiguration/configurationStores', parameters('name'))]"
+        "store"
       ]
     }
-  ]
+  }
 }

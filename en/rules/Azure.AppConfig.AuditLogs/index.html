@@ -3237,6 +3237,13 @@
   
 </li>
         
+          <li class="md-nav__item">
+  <a href="#configure-with-bicep-public-registry" class="md-nav__link">
+    Configure with Bicep Public Registry
+  </a>
+  
+</li>
+        
       </ul>
     </nav>
   
@@ -8646,6 +8653,13 @@
   
 </li>
         
+          <li class="md-nav__item">
+  <a href="#configure-with-bicep-public-registry" class="md-nav__link">
+    Configure with Bicep Public Registry
+  </a>
+  
+</li>
+        
       </ul>
     </nav>
   
@@ -8785,16 +8799,7 @@
 <li>Enable <code>Audit</code> category or <code>audit</code> category group or <code>allLogs</code> category group.</li>
 </ul>
 <p>For example:</p>
-<div class="highlight"><span class="filename">Azure Bicep snippet</span><pre><span></span><code>@description(&#39;The name of the App Configuration Store.&#39;)
-param name string
-
-@description(&#39;The location resources will be deployed.&#39;)
-param location string = resourceGroup().location
-
-@description(&#39;The resource id of the Log Analytics workspace to send diagnostic logs to.&#39;)
-param workspaceId string
-
-resource store &#39;Microsoft.AppConfiguration/configurationStores@2022-05-01&#39; = {
+<div class="highlight"><span class="filename">Azure Bicep snippet</span><pre><span></span><code>resource store &#39;Microsoft.AppConfiguration/configurationStores@2023-03-01&#39; = {
   name: name
   location: location
   sku: {
@@ -8803,12 +8808,13 @@ resource store &#39;Microsoft.AppConfiguration/configurationStores@2022-05-01&#3
   properties: {
     disableLocalAuth: true
     enablePurgeProtection: true
+    publicNetworkAccess: &#39;Disabled&#39;
   }
 }
 
 resource diagnostic &#39;Microsoft.Insights/diagnosticSettings@2021-05-01-preview&#39; = {
-  name: &#39;${name}-diagnostic&#39;
   scope: store
+  name: &#39;${name}-diagnostic&#39;
   properties: {
     logs: [
       {
@@ -8824,9 +8830,42 @@ resource diagnostic &#39;Microsoft.Insights/diagnosticSettings@2021-05-01-previe
   }
 }
 </code></pre></div>
+<h3 id="configure-with-bicep-public-registry">Configure with Bicep Public Registry<a class="headerlink" href="#configure-with-bicep-public-registry" title="Permanent link">#</a></h3>
+<p>To deploy an App Configuration Store that pass this rule:</p>
+<ul>
+<li>Configure the <code>diagnosticSettingsProperties.logs</code> parameter.</li>
+<li>Enable <code>Audit</code> category or <code>audit</code> category group or <code>allLogs</code> category group.</li>
+</ul>
+<p>For example:</p>
+<div class="highlight"><span class="filename">Azure Bicep snippet</span><pre><span></span><code>module store &#39;br/public:app/app-configuration:1.1.1&#39; = {
+  name: &#39;store&#39;
+  params: {
+    skuName: &#39;Standard&#39;
+    disableLocalAuth: true
+    enablePurgeProtection: true
+    publicNetworkAccess: &#39;Disabled&#39;
+    diagnosticSettingsProperties: {
+      diagnosticReceivers: {
+        workspaceId: workspaceId
+      }
+      logs: [
+        {
+          categoryGroup: &#39;audit&#39;
+          enabled: true
+          retentionPolicy: {
+            days: 90
+            enabled: true
+          }
+        }
+      ]
+    }
+  }
+}
+</code></pre></div>
 <h2 id="links">Links<a class="headerlink" href="#links" title="Permanent link">#</a></h2>
 <ul>
 <li><a href="https://learn.microsoft.com/azure/architecture/framework/security/monitor-audit">Security audits</a></li>
+<li><a href="https://azure.github.io/bicep-registry-modules/#app">Public registry</a></li>
 <li><a href="https://learn.microsoft.com/azure/templates/microsoft.insights/diagnosticsetting">Azure deployment reference</a></li>
 </ul>
 
@@ -8838,7 +8877,7 @@ resource diagnostic &#39;Microsoft.Insights/diagnosticSettings@2021-05-01-previe
   <small>
     
       Last update:
-      2022-12-03
+      2023-07-15
     
   </small>
 </div>

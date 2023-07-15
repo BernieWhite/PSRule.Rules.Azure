@@ -3251,6 +3251,13 @@
   
 </li>
         
+          <li class="md-nav__item">
+  <a href="#configure-with-bicep-public-registry" class="md-nav__link">
+    Configure with Bicep Public Registry
+  </a>
+  
+</li>
+        
       </ul>
     </nav>
   
@@ -8646,6 +8653,13 @@
   
 </li>
         
+          <li class="md-nav__item">
+  <a href="#configure-with-bicep-public-registry" class="md-nav__link">
+    Configure with Bicep Public Registry
+  </a>
+  
+</li>
+        
       </ul>
     </nav>
   
@@ -8701,13 +8715,15 @@
 <h2 id="description">Description<a class="headerlink" href="#description" title="Permanent link">#</a></h2>
 <p>Every request to an Azure App Configuration resource must be authenticated.
 By default, requests can be authenticated with either Azure Active Directory (Azure AD) credentials,
-or by using an access key. Of these two types of authentication schemes, Azure AD provides superior
-security and ease of use over access keys, and is recommended by Microsoft. To require clients to use
-Azure AD to authenticate requests, you can disable the usage of access keys for an Azure App Configuration
+or by using an access key.
+Of these two types of authentication schemes, Azure AD provides superior
+security and ease of use over access keys, and is recommended by Microsoft.
+To require clients to use Azure AD to authenticate requests, you can disable the usage of access keys for an Azure App Configuration
 resource.</p>
 <p>When you disable access key authentication for an Azure App Configuration resource, any existing access
-keys for that resource are deleted. Any subsequent requests to the resource using the previously existing
-access keys will be rejected. Only requests that are authenticated using Azure AD will succeed.</p>
+keys for that resource are deleted.
+Any subsequent requests to the resource using the previously existing access keys will be rejected.
+Only requests that are authenticated using Azure AD will succeed.</p>
 <h2 id="recommendation">Recommendation<a class="headerlink" href="#recommendation" title="Permanent link">#</a></h2>
 <p>Consider only using Azure AD identities to access App Configuration data.
 Then disable authentication based on access keys or SAS tokens.</p>
@@ -8720,7 +8736,7 @@ Then disable authentication based on access keys or SAS tokens.</p>
 <p>For example:</p>
 <div class="highlight"><span class="filename">Azure Template snippet</span><pre><span></span><code><span class="p">{</span>
 <span class="w">  </span><span class="nt">&quot;type&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Microsoft.AppConfiguration/configurationStores&quot;</span><span class="p">,</span>
-<span class="w">  </span><span class="nt">&quot;apiVersion&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;2022-05-01&quot;</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">&quot;apiVersion&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;2023-03-01&quot;</span><span class="p">,</span>
 <span class="w">  </span><span class="nt">&quot;name&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;[parameters(&#39;name&#39;)]&quot;</span><span class="p">,</span>
 <span class="w">  </span><span class="nt">&quot;location&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;[parameters(&#39;location&#39;)]&quot;</span><span class="p">,</span>
 <span class="w">  </span><span class="nt">&quot;sku&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
@@ -8728,7 +8744,8 @@ Then disable authentication based on access keys or SAS tokens.</p>
 <span class="w">  </span><span class="p">},</span>
 <span class="w">  </span><span class="nt">&quot;properties&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
 <span class="w">    </span><span class="nt">&quot;disableLocalAuth&quot;</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span>
-<span class="w">    </span><span class="nt">&quot;enablePurgeProtection&quot;</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span>
+<span class="w">    </span><span class="nt">&quot;enablePurgeProtection&quot;</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">&quot;publicNetworkAccess&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Disabled&quot;</span>
 <span class="w">  </span><span class="p">}</span>
 <span class="p">}</span>
 </code></pre></div>
@@ -8738,7 +8755,7 @@ Then disable authentication based on access keys or SAS tokens.</p>
 <li>Set the <code>properties.disableLocalAuth</code> property to <code>true</code>.</li>
 </ul>
 <p>For example:</p>
-<div class="highlight"><span class="filename">Azure Bicep snippet</span><pre><span></span><code>resource store &#39;Microsoft.AppConfiguration/configurationStores@2022-05-01&#39; = {
+<div class="highlight"><span class="filename">Azure Bicep snippet</span><pre><span></span><code>resource store &#39;Microsoft.AppConfiguration/configurationStores@2023-03-01&#39; = {
   name: name
   location: location
   sku: {
@@ -8747,15 +8764,33 @@ Then disable authentication based on access keys or SAS tokens.</p>
   properties: {
     disableLocalAuth: true
     enablePurgeProtection: true
+    publicNetworkAccess: &#39;Disabled&#39;
+  }
+}
+</code></pre></div>
+<h3 id="configure-with-bicep-public-registry">Configure with Bicep Public Registry<a class="headerlink" href="#configure-with-bicep-public-registry" title="Permanent link">#</a></h3>
+<p>To deploy App Configuration Stores that pass this rule:</p>
+<ul>
+<li>Set the <code>params.disableLocalAuth</code> parameter to <code>true</code>.</li>
+</ul>
+<p>For example:</p>
+<div class="highlight"><span class="filename">Azure Bicep snippet</span><pre><span></span><code>module store &#39;br/public:app/app-configuration:1.1.1&#39; = {
+  name: &#39;store&#39;
+  params: {
+    skuName: &#39;Standard&#39;
+    disableLocalAuth: true
+    enablePurgeProtection: true
+    publicNetworkAccess: &#39;Disabled&#39;
   }
 }
 </code></pre></div>
 <h2 id="links">Links<a class="headerlink" href="#links" title="Permanent link">#</a></h2>
 <ul>
 <li><a href="https://learn.microsoft.com/azure/architecture/framework/security/design-identity-authentication#centralize-all-identity-systems">Centralize all identity systems</a></li>
-<li><a href="https://docs.microsoft.com/security/benchmark/azure/security-controls-v3-identity-management#im-1-use-centralized-identity-and-authentication-system">IM-1: Use centralized identity and authentication system</a></li>
+<li><a href="https://learn.microsoft.com/security/benchmark/azure/security-controls-v3-identity-management#im-1-use-centralized-identity-and-authentication-system">IM-1: Use centralized identity and authentication system</a></li>
 <li><a href="https://learn.microsoft.com/azure/azure-app-configuration/concept-enable-rbac">Authorize access to Azure App Configuration using Azure Active Directory</a></li>
 <li><a href="https://learn.microsoft.com/azure/azure-app-configuration/howto-disable-access-key-authentication">Disable access key authentication</a></li>
+<li><a href="https://azure.github.io/bicep-registry-modules/#app">Public registry</a></li>
 <li><a href="https://learn.microsoft.com/azure/templates/microsoft.appconfiguration/configurationstores">Azure deployment reference</a></li>
 </ul>
 
@@ -8767,7 +8802,7 @@ Then disable authentication based on access keys or SAS tokens.</p>
   <small>
     
       Last update:
-      2022-09-24
+      2023-07-15
     
   </small>
 </div>

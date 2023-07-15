@@ -8700,7 +8700,10 @@
 <p>Consider replication for app configuration store to ensure resiliency to region outages.</p>
 <h2 id="description">Description<a class="headerlink" href="#description" title="Permanent link">#</a></h2>
 <p>A app configuration store is stored and maintained by default in a single region.</p>
-<p>The app configuration geo-replication feature allows you to replicate your configuration store at-will to the regions of your choice. Each new <code>replica</code> will be in a different region and creates a new endpoint for your applications to send requests to. The original endpoint of your configuration store is called the <code>Origin</code>. The origin can't be removed, but otherwise behaves like any replica.</p>
+<p>The app configuration geo-replication feature allows you to replicate your configuration store at-will to the regions of your choice.
+Each new <code>replica</code> will be in a different region and creates a new endpoint for your applications to send requests to.
+The original endpoint of your configuration store is called the <code>Origin</code>.
+The origin can't be removed, but otherwise behaves like any replica.</p>
 <p>Replicating your configuration store adds the following benefits:</p>
 <ul>
 <li>Added resiliency for Azure outages.</li>
@@ -8795,7 +8798,7 @@ param replicaName string = &#39;replica01&#39;
 param appConfigLocation string = resourceGroup().location
 
 @description(&#39;The location where the replica will be deployed.&#39;)
-param replicaLocation string = &#39;northeurope&#39; 
+param replicaLocation string = &#39;northeurope&#39;
 
 resource store &#39;Microsoft.AppConfiguration/configurationStores@2022-05-01&#39; = {
   name: appConfigName
@@ -8832,7 +8835,7 @@ resource replica &#39;Microsoft.AppConfiguration/configurationStores/replicas@20
   <small>
     
       Last update:
-      2022-12-03
+      2023-07-15
     
   </small>
 </div>

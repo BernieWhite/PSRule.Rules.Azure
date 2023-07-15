@@ -11362,9 +11362,19 @@
 <h2 id="unreleased">Unreleased<a class="headerlink" href="#unreleased" title="Permanent link">#</a></h2>
 <p>What's changed since pre-release v1.28.0-B0159:</p>
 <ul>
+<li>General improvements:<ul>
+<li>Added support for safe dereference operator by <a href="https://github.com/BernieWhite">@BernieWhite</a>.
+  <a href="https://github.com/Azure/PSRule.Rules.Azure/issues/2322">#2322</a><ul>
+<li>Added support for <code>tryGet</code> Bicep function.</li>
+</ul>
+</li>
+</ul>
+</li>
 <li>Engineering:<ul>
 <li>Bump BenchmarkDotNet to v0.13.6.
   <a href="https://github.com/Azure/PSRule.Rules.Azure/pull/2317">#2317</a></li>
+<li>Bump BenchmarkDotNet.Diagnostics.Windows to v0.13.6.
+  <a href="https://github.com/Azure/PSRule.Rules.Azure/pull/2318">#2318</a></li>
 </ul>
 </li>
 <li>Bug fixes:<ul>
@@ -11374,6 +11384,8 @@
   <a href="https://github.com/Azure/PSRule.Rules.Azure/issues/2321">#2321</a></li>
 <li>Fixed handling of nested mock objects <a href="https://github.com/BernieWhite">@BernieWhite</a>.
   <a href="https://github.com/Azure/PSRule.Rules.Azure/issues/2325">#2325</a></li>
+<li>Fixed late binding of <code>coalesce</code> function by <a href="https://github.com/BernieWhite">@BernieWhite</a>.
+  <a href="https://github.com/Azure/PSRule.Rules.Azure/issues/2328">#2328</a></li>
 </ul>
 </li>
 </ul>

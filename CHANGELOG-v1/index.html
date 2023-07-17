@@ -1108,6 +1108,13 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#v1280" class="md-nav__link">
+    v1.28.0
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#v1280-b0213-pre-release" class="md-nav__link">
     v1.28.0-B0213 (pre-release)
   </a>
@@ -9958,6 +9965,13 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#v1280" class="md-nav__link">
+    v1.28.0
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#v1280-b0213-pre-release" class="md-nav__link">
     v1.28.0-B0213 (pre-release)
   </a>
@@ -11374,6 +11388,99 @@
   See <a href="../upgrade-notes/">upgrade notes</a> for more information.</li>
 </ul>
 <h2 id="unreleased">Unreleased<a class="headerlink" href="#unreleased" title="Permanent link">#</a></h2>
+<h2 id="v1280">v1.28.0<a class="headerlink" href="#v1280" title="Permanent link">#</a></h2>
+<p>What's changed since v1.27.3:</p>
+<ul>
+<li>New features:<ul>
+<li>Added June 2023 baselines <code>Azure.GA_2023_06</code> and <code>Azure.Preview_2023_06</code> by <a href="https://github.com/BernieWhite">@BernieWhite</a>.
+  <a href="https://github.com/Azure/PSRule.Rules.Azure/issues/2310">#2310</a><ul>
+<li>Includes rules released before or during June 2023.</li>
+<li>Marked <code>Azure.GA_2023_03</code> and <code>Azure.Preview_2023_03</code> baselines as obsolete.</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>New rules:<ul>
+<li>Azure Database for MySQL:<ul>
+<li>Check that Azure AD authentication is configured for Azure Database for MySQL databases by <a href="https://github.com/BenjaminEngeset">@BenjaminEngeset</a>.
+  <a href="https://github.com/Azure/PSRule.Rules.Azure/issues/2226">#2226</a></li>
+</ul>
+</li>
+<li>Azure Database for PostgreSQL:<ul>
+<li>Check that Azure AD-only authentication is configured for Azure Database for PostgreSQL databases by <a href="https://github.com/BenjaminEngeset">@BenjaminEngeset</a>.
+  <a href="https://github.com/Azure/PSRule.Rules.Azure/issues/2250">#2250</a></li>
+<li>Check that Azure AD authentication is configured for Azure Database for PostgreSQL databases by <a href="https://github.com/BenjaminEngeset">@BenjaminEngeset</a>.
+  <a href="https://github.com/Azure/PSRule.Rules.Azure/issues/2249">#2249</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li>Removed rules:<ul>
+<li>Azure Kubernetes Service:<ul>
+<li>Removed <code>Azure.AKS.PodIdentity</code> as pod identities has been replaced by workload identities by <a href="https://github.com/BernieWhite">@BernieWhite</a>.
+  <a href="https://github.com/Azure/PSRule.Rules.Azure/issues/2273">#2273</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li>General improvements:<ul>
+<li>Added support for safe dereference operator by <a href="https://github.com/BernieWhite">@BernieWhite</a>.
+  <a href="https://github.com/Azure/PSRule.Rules.Azure/issues/2322">#2322</a><ul>
+<li>Added support for <code>tryGet</code> Bicep function.</li>
+</ul>
+</li>
+<li>Added support for Bicep CIDR functions by <a href="https://github.com/BernieWhite">@BernieWhite</a>.
+  <a href="https://github.com/Azure/PSRule.Rules.Azure/issues/2279">#2279</a><ul>
+<li>Added support for <code>parseCidr</code>, <code>cidrSubnet</code>, and <code>cidrHost</code>.</li>
+</ul>
+</li>
+<li>Added support for <code>managementGroupResourceId</code> Bicep function by <a href="https://github.com/BernieWhite">@BernieWhite</a>.
+  <a href="https://github.com/Azure/PSRule.Rules.Azure/issues/2294">#2294</a></li>
+</ul>
+</li>
+<li>Engineering:<ul>
+<li>Bump PSRule to v2.9.0.
+  <a href="https://github.com/Azure/PSRule.Rules.Azure/pull/2293">#2293</a></li>
+<li>Updated resource providers and policy aliases.
+  <a href="https://github.com/Azure/PSRule.Rules.Azure/pull/2261">#2261</a></li>
+<li>Bump Microsoft.CodeAnalysis.NetAnalyzers to v7.0.3.
+  <a href="https://github.com/Azure/PSRule.Rules.Azure/pull/2281">#2281</a></li>
+<li>Bump Microsoft.NET.Test.Sdk to v17.6.3.
+  <a href="https://github.com/Azure/PSRule.Rules.Azure/pull/2290">#2290</a></li>
+<li>Bump coverlet.collector to v6.0.0.
+  <a href="https://github.com/Azure/PSRule.Rules.Azure/pull/2232">#2232</a></li>
+<li>Bump Az.Resources to v6.7.0.
+  <a href="https://github.com/Azure/PSRule.Rules.Azure/pull/2274">#2274</a></li>
+<li>Bump xunit to v2.5.0.
+  <a href="https://github.com/Azure/PSRule.Rules.Azure/pull/2306">#2306</a></li>
+<li>Bump xunit.runner.visualstudio to v2.5.0.
+  <a href="https://github.com/Azure/PSRule.Rules.Azure/pull/2307">#2307</a></li>
+<li>Bump BenchmarkDotNet to v0.13.6.
+  <a href="https://github.com/Azure/PSRule.Rules.Azure/pull/2317">#2317</a></li>
+<li>Bump BenchmarkDotNet.Diagnostics.Windows to v0.13.6.
+  <a href="https://github.com/Azure/PSRule.Rules.Azure/pull/2318">#2318</a></li>
+</ul>
+</li>
+<li>Bug fixes:<ul>
+<li>Fixed Redis firewall rules can not bind to start by <a href="https://github.com/BernieWhite">@BernieWhite</a>.
+  <a href="https://github.com/Azure/PSRule.Rules.Azure/issues/2303">#2303</a></li>
+<li>Fixed null condition handling by <a href="https://github.com/BernieWhite">@BernieWhite</a>.
+  <a href="https://github.com/Azure/PSRule.Rules.Azure/issues/2316">#2316</a></li>
+<li>Fixed reference expression in property name by <a href="https://github.com/BernieWhite">@BernieWhite</a>.
+  <a href="https://github.com/Azure/PSRule.Rules.Azure/issues/2321">#2321</a></li>
+<li>Fixed handling of nested mock objects by <a href="https://github.com/BernieWhite">@BernieWhite</a>.
+  <a href="https://github.com/Azure/PSRule.Rules.Azure/issues/2325">#2325</a></li>
+<li>Fixed late binding of <code>coalesce</code> function by <a href="https://github.com/BernieWhite">@BernieWhite</a>.
+  <a href="https://github.com/Azure/PSRule.Rules.Azure/issues/2328">#2328</a></li>
+<li>Fixed handling of JArray outputs with runtime values by <a href="https://github.com/BernieWhite">@BernieWhite</a>.
+  <a href="https://github.com/Azure/PSRule.Rules.Azure/issues/2159">#2159</a></li>
+</ul>
+</li>
+</ul>
+<p>What's changed since pre-release v1.28.0-B0213:</p>
+<ul>
+<li>No additional changes.</li>
+</ul>
 <h2 id="v1280-b0213-pre-release">v1.28.0-B0213 (pre-release)<a class="headerlink" href="#v1280-b0213-pre-release" title="Permanent link">#</a></h2>
 <p>What's changed since pre-release v1.28.0-B0159:</p>
 <ul>
@@ -16601,7 +16708,7 @@ What's changed since v1.24.0:</p>
   <small>
     
       Last update:
-      2023-07-15
+      2023-07-17
     
   </small>
 </div>

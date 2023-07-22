@@ -1,0 +1,90 @@
+{
+  "$schema": "https://schema.management.azure.com/schemas/2019-04-01/deploymentTemplate.json#",
+  "languageVersion": "1.10-experimental",
+  "contentVersion": "1.0.0.0",
+  "metadata": {
+    "_EXPERIMENTAL_WARNING": "Symbolic name support in ARM is experimental, and should be enabled for testing purposes only. Do not enable this setting for any production usage, or you may be unexpectedly broken at any time!",
+    "_generator": {
+      "name": "bicep",
+      "version": "0.19.5.34762",
+      "templateHash": "2540591518092935825"
+    }
+  },
+  "parameters": {
+    "name": {
+      "type": "string",
+      "metadata": {
+        "description": "The name of the resource."
+      }
+    },
+    "location": {
+      "type": "string",
+      "defaultValue": "[resourceGroup().location]",
+      "metadata": {
+        "description": "The location resources will be deployed."
+      }
+    },
+    "administratorLogin": {
+      "type": "string",
+      "metadata": {
+        "description": "The name of the admin user account."
+      }
+    },
+    "administratorLoginPassword": {
+      "type": "securestring",
+      "metadata": {
+        "description": "The secret for the admin user account."
+      }
+    },
+    "sku": {
+      "type": "string",
+      "defaultValue": "GP_Gen5_2",
+      "metadata": {
+        "description": "The sku to deploy."
+      }
+    },
+    "skuCapacity": {
+      "type": "int",
+      "defaultValue": 2,
+      "metadata": {
+        "description": "The sku capacity."
+      }
+    },
+    "skuSizeMB": {
+      "type": "int",
+      "defaultValue": 51200,
+      "metadata": {
+        "description": "The size of the storage."
+      }
+    }
+  },
+  "resources": {
+    "server": {
+      "type": "Microsoft.DBforMariaDB/servers",
+      "apiVersion": "2018-06-01",
+      "name": "[parameters('name')]",
+      "location": "[parameters('location')]",
+      "sku": {
+        "name": "[parameters('sku')]",
+        "tier": "GeneralPurpose",
+        "capacity": "[parameters('skuCapacity')]",
+        "size": "[format('{0}', parameters('skuSizeMB'))]",
+        "family": "Gen5"
+      },
+      "properties": {
+        "sslEnforcement": "Enabled",
+        "minimalTlsVersion": "TLS1_2",
+        "createMode": "Default",
+        "version": "10.3",
+        "administratorLogin": "[parameters('administratorLogin')]",
+        "administratorLoginPassword": "[parameters('administratorLoginPassword')]",
+        "publicNetworkAccess": "Disabled",
+        "storageProfile": {
+          "storageMB": "[parameters('skuSizeMB')]",
+          "backupRetentionDays": 7,
+          "geoRedundantBackup": "Enabled"
+        }
+      }
+    }
+  }
+}

@@ -27,12 +27,14 @@ resource firewall_policy 'Microsoft.Network/firewallPolicies@2021-05-01' = {
   }
 }
 
-resource firewall_with_policy 'Microsoft.Network/azureFirewalls@2021-05-01' = {
-  name: '${name}_with_policy'
+// An example Azure Firewall Premium with a linked firewall policy.
+resource firewall 'Microsoft.Network/azureFirewalls@2023-02-01' = {
+  name: name
   location: location
   properties: {
     sku: {
       name: 'AZFW_VNet'
+      tier: 'Premium'
     }
     firewallPolicy: {
       id: firewall_policy.id

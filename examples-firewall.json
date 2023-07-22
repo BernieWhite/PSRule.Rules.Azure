@@ -1,11 +1,13 @@
 {
   "$schema": "https://schema.management.azure.com/schemas/2019-04-01/deploymentTemplate.json#",
+  "languageVersion": "1.10-experimental",
   "contentVersion": "1.0.0.0",
   "metadata": {
+    "_EXPERIMENTAL_WARNING": "Symbolic name support in ARM is experimental, and should be enabled for testing purposes only. Do not enable this setting for any production usage, or you may be unexpectedly broken at any time!",
     "_generator": {
       "name": "bicep",
-      "version": "0.5.6.12127",
-      "templateHash": "6359428006480739944"
+      "version": "0.19.5.34762",
+      "templateHash": "17898570111117857053"
     }
   },
   "parameters": {
@@ -24,8 +26,8 @@
       }
     }
   },
-  "resources": [
-    {
+  "resources": {
+    "firewall_classic": {
       "type": "Microsoft.Network/azureFirewalls",
       "apiVersion": "2021-05-01",
       "name": "[format('{0}_classic', parameters('name'))]",
@@ -37,7 +39,7 @@
         "threatIntelMode": "Deny"
       }
     },
-    {
+    "firewall_policy": {
       "type": "Microsoft.Network/firewallPolicies",
       "apiVersion": "2021-05-01",
       "name": "[format('{0}_policy', parameters('name'))]",
@@ -45,30 +47,31 @@
         "threatIntelMode": "Deny"
       }
     },
-    {
+    "firewall": {
       "type": "Microsoft.Network/azureFirewalls",
-      "apiVersion": "2021-05-01",
-      "name": "[format('{0}_with_policy', parameters('name'))]",
+      "apiVersion": "2023-02-01",
+      "name": "[parameters('name')]",
       "location": "[parameters('location')]",
       "properties": {
         "sku": {
-          "name": "AZFW_VNet"
+          "name": "AZFW_VNet",
+          "tier": "Premium"
         },
         "firewallPolicy": {
           "id": "[resourceId('Microsoft.Network/firewallPolicies', format('{0}_policy', parameters('name')))]"
         }
       },
       "dependsOn": [
-        "[resourceId('Microsoft.Network/firewallPolicies', format('{0}_policy', parameters('name')))]"
+        "firewall_policy"
       ]
     },
-    {
+    "hub": {
       "type": "Microsoft.Network/virtualHubs",
       "apiVersion": "2021-05-01",
       "name": "[format('{0}_hub', parameters('name'))]",
       "location": "[parameters('location')]"
     },
-    {
+    "firewall_with_hub": {
       "type": "Microsoft.Network/azureFirewalls",
       "apiVersion": "2021-05-01",
       "name": "[format('{0}_with_hub', parameters('name'))]",
@@ -85,9 +88,9 @@
         }
       },
       "dependsOn": [
-        "[resourceId('Microsoft.Network/firewallPolicies', format('{0}_policy', parameters('name')))]",
-        "[resourceId('Microsoft.Network/virtualHubs', format('{0}_hub', parameters('name')))]"
+        "firewall_policy",
+        "hub"
       ]
     }
-  ]
+  }
 }

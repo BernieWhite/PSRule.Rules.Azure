@@ -8757,14 +8757,14 @@
  · <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M7.75 6.5a1.25 1.25 0 1 0 0 2.5 1.25 1.25 0 0 0 0-2.5Z"/><path d="M2.5 1h8.44a1.5 1.5 0 0 1 1.06.44l10.25 10.25a1.5 1.5 0 0 1 0 2.12l-8.44 8.44a1.5 1.5 0 0 1-2.12 0L1.44 12A1.497 1.497 0 0 1 1 10.94V2.5A1.5 1.5 0 0 1 2.5 1Zm0 1.5v8.44l10.25 10.25 8.44-8.44L10.94 2.5Z"/></svg></span> 2020_06</p>
 <p>Use Azure Active Directory (AAD) authentication with Azure SQL databases.</p>
 <h2 id="description">Description<a class="headerlink" href="#description" title="Permanent link">#</a></h2>
-<p>Azure SQL Database offer two authentication models, Azure Active Directory (AAD) and SQL logins.
-AAD authentication supports centialized identity management in addition to modern password protections.
+<p>Azure SQL Database offer two authentication models, Azure Active Directory (AAD) and SQL authentication.
+AAD authentication supports centralized identity management in addition to modern password protections.
 Some of the benefits of AAD authentication over SQL authentication including:</p>
 <ul>
 <li>Support for Azure Multi-Factor Authentication (MFA).</li>
 <li>Conditional-based access with Conditional Access.</li>
 </ul>
-<p>It is also possible to disable SQL authentication entirely.</p>
+<p>It is also possible to disable SQL authentication entirely and only use AAD authentication.</p>
 <h2 id="recommendation">Recommendation<a class="headerlink" href="#recommendation" title="Permanent link">#</a></h2>
 <p>Consider using Azure Active Directory (AAD) authentication with SQL databases.
 Additionally, consider disabling SQL authentication.</p>
@@ -8778,20 +8778,22 @@ Additionally, consider disabling SQL authentication.</p>
 </ul>
 <p>For example:</p>
 <div class="highlight"><span class="filename">Azure Template snippet</span><pre><span></span><code><span class="p">{</span>
-<span class="w">    </span><span class="nt">&quot;type&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Microsoft.Sql/servers&quot;</span><span class="p">,</span>
-<span class="w">    </span><span class="nt">&quot;apiVersion&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;2022-02-01-preview&quot;</span><span class="p">,</span>
-<span class="w">    </span><span class="nt">&quot;name&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;[parameters(&#39;name&#39;)]&quot;</span><span class="p">,</span>
-<span class="w">    </span><span class="nt">&quot;location&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;[parameters(&#39;location&#39;)]&quot;</span><span class="p">,</span>
-<span class="w">    </span><span class="nt">&quot;properties&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
-<span class="w">        </span><span class="nt">&quot;minimalTlsVersion&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;1.2&quot;</span><span class="p">,</span>
-<span class="w">        </span><span class="nt">&quot;administrators&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
-<span class="w">            </span><span class="nt">&quot;administratorType&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;ActiveDirectory&quot;</span><span class="p">,</span>
-<span class="w">            </span><span class="nt">&quot;login&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;[parameters(&#39;adminLogin&#39;)]&quot;</span><span class="p">,</span>
-<span class="w">            </span><span class="nt">&quot;principalType&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Group&quot;</span><span class="p">,</span>
-<span class="w">            </span><span class="nt">&quot;sid&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;[parameters(&#39;adminPrincipalId&#39;)]&quot;</span><span class="p">,</span>
-<span class="w">            </span><span class="nt">&quot;tenantId&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;[tenant().tenantId]&quot;</span>
-<span class="w">        </span><span class="p">}</span>
+<span class="w">  </span><span class="nt">&quot;type&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Microsoft.Sql/servers&quot;</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">&quot;apiVersion&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;2022-11-01-preview&quot;</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">&quot;name&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;[parameters(&#39;name&#39;)]&quot;</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">&quot;location&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;[parameters(&#39;location&#39;)]&quot;</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">&quot;properties&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="nt">&quot;publicNetworkAccess&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Disabled&quot;</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">&quot;minimalTlsVersion&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;1.2&quot;</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">&quot;administrators&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">      </span><span class="nt">&quot;azureADOnlyAuthentication&quot;</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span>
+<span class="w">      </span><span class="nt">&quot;administratorType&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;ActiveDirectory&quot;</span><span class="p">,</span>
+<span class="w">      </span><span class="nt">&quot;login&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;[parameters(&#39;adminLogin&#39;)]&quot;</span><span class="p">,</span>
+<span class="w">      </span><span class="nt">&quot;principalType&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Group&quot;</span><span class="p">,</span>
+<span class="w">      </span><span class="nt">&quot;sid&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;[parameters(&#39;adminPrincipalId&#39;)]&quot;</span><span class="p">,</span>
+<span class="w">      </span><span class="nt">&quot;tenantId&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;[tenant().tenantId]&quot;</span>
 <span class="w">    </span><span class="p">}</span>
+<span class="w">  </span><span class="p">}</span>
 <span class="p">}</span>
 </code></pre></div>
 <p>Alternatively, you can configure the <code>Microsoft.Sql/servers/administrators</code> sub-resource.
@@ -8803,17 +8805,17 @@ To deploy <code>Microsoft.Sql/servers/administrators</code> sub-resources that p
 </ul>
 <p>For example:</p>
 <div class="highlight"><span class="filename">Azure Template snippet</span><pre><span></span><code><span class="p">{</span>
-<span class="w">    </span><span class="nt">&quot;type&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Microsoft.Sql/servers/administrators&quot;</span><span class="p">,</span>
-<span class="w">    </span><span class="nt">&quot;apiVersion&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;2022-02-01-preview&quot;</span><span class="p">,</span>
-<span class="w">    </span><span class="nt">&quot;name&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;[format(&#39;{0}/{1}&#39;, parameters(&#39;name&#39;), &#39;ActiveDirectory&#39;)]&quot;</span><span class="p">,</span>
-<span class="w">    </span><span class="nt">&quot;properties&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
-<span class="w">        </span><span class="nt">&quot;administratorType&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;ActiveDirectory&quot;</span><span class="p">,</span>
-<span class="w">        </span><span class="nt">&quot;login&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;[parameters(&#39;adminLogin&#39;)]&quot;</span><span class="p">,</span>
-<span class="w">        </span><span class="nt">&quot;sid&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;[parameters(&#39;adminPrincipalId&#39;)]&quot;</span>
-<span class="w">    </span><span class="p">},</span>
-<span class="w">    </span><span class="nt">&quot;dependsOn&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
-<span class="w">        </span><span class="s2">&quot;[resourceId(&#39;Microsoft.Sql/servers&#39;, parameters(&#39;name&#39;))]&quot;</span>
-<span class="w">    </span><span class="p">]</span>
+<span class="w">  </span><span class="nt">&quot;type&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Microsoft.Sql/servers/administrators&quot;</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">&quot;apiVersion&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;2022-02-01-preview&quot;</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">&quot;name&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;[format(&#39;{0}/{1}&#39;, parameters(&#39;name&#39;), &#39;ActiveDirectory&#39;)]&quot;</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">&quot;properties&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="nt">&quot;administratorType&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;ActiveDirectory&quot;</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">&quot;login&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;[parameters(&#39;adminLogin&#39;)]&quot;</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">&quot;sid&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;[parameters(&#39;adminPrincipalId&#39;)]&quot;</span>
+<span class="w">  </span><span class="p">},</span>
+<span class="w">  </span><span class="nt">&quot;dependsOn&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
+<span class="w">    </span><span class="s2">&quot;server&quot;</span>
+<span class="w">  </span><span class="p">]</span>
 <span class="p">}</span>
 </code></pre></div>
 <h3 id="configure-with-bicep">Configure with Bicep<a class="headerlink" href="#configure-with-bicep" title="Permanent link">#</a></h3>
@@ -8824,12 +8826,17 @@ To deploy <code>Microsoft.Sql/servers/administrators</code> sub-resources that p
 <li>Set the <code>properties.administrators.sid</code> to the object ID GUID of the administrator user, group, or application.</li>
 </ul>
 <p>For example:</p>
-<div class="highlight"><span class="filename">Azure Bicep snippet</span><pre><span></span><code>resource server &#39;Microsoft.Sql/servers@2022-02-01-preview&#39; = {
+<div class="highlight"><span class="filename">Azure Bicep snippet</span><pre><span></span><code>resource server &#39;Microsoft.Sql/servers@2022-11-01-preview&#39; = {
   name: name
   location: location
+  identity: {
+    type: &#39;SystemAssigned&#39;
+  }
   properties: {
+    publicNetworkAccess: &#39;Disabled&#39;
     minimalTlsVersion: &#39;1.2&#39;
     administrators: {
+      azureADOnlyAuthentication: true
       administratorType: &#39;ActiveDirectory&#39;
       login: adminLogin
       principalType: &#39;Group&#39;
@@ -8867,16 +8874,16 @@ To deploy <code>Microsoft.Sql/servers/administrators</code> sub-resources that p
 <p>In newer API versions the <code>properties.administrators</code> property can be configured.
 Azure AD authentication can also be configured using the <code>Microsoft.Sql/servers/administrators</code> sub-resource.</p>
 <p>If both the <code>properties.administrators</code> property and <code>Microsoft.Sql/servers/administrators</code> are set,
-the sub-resoure will override the property.</p>
+the sub-resource will override the property.</p>
 <h2 id="links">Links<a class="headerlink" href="#links" title="Permanent link">#</a></h2>
 <ul>
 <li><a href="https://learn.microsoft.com/azure/architecture/framework/security/design-identity-authentication#use-modern-password-protection">Use modern password protection</a></li>
-<li><a href="https://docs.microsoft.com/azure/azure-sql/database/authentication-aad-configure">Configure and manage Azure AD authentication with Azure SQL</a></li>
-<li><a href="https://docs.microsoft.com/azure/azure-sql/database/authentication-mfa-ssms-overview">Using multi-factor Azure Active Directory authentication</a></li>
-<li><a href="https://docs.microsoft.com/azure/azure-sql/database/conditional-access-configure">Conditional Access with Azure SQL Database and Azure Synapse Analytics</a></li>
-<li><a href="https://docs.microsoft.com/azure/azure-sql/database/authentication-azure-ad-only-authentication">Azure AD-only authentication with Azure SQL</a></li>
-<li><a href="https://docs.microsoft.com/azure/azure-sql/database/authentication-azure-ad-only-authentication-policy">Azure Policy for Azure Active Directory only authentication with Azure SQL</a></li>
-<li><a href="https://docs.microsoft.com/azure/templates/microsoft.sql/servers/administrators">Azure deployment reference</a></li>
+<li><a href="https://learn.microsoft.com/azure/azure-sql/database/authentication-aad-configure">Configure and manage Azure AD authentication with Azure SQL</a></li>
+<li><a href="https://learn.microsoft.com/azure/azure-sql/database/authentication-mfa-ssms-overview">Using multi-factor Azure Active Directory authentication</a></li>
+<li><a href="https://learn.microsoft.com/azure/azure-sql/database/conditional-access-configure">Conditional Access with Azure SQL Database and Azure Synapse Analytics</a></li>
+<li><a href="https://learn.microsoft.com/azure/azure-sql/database/authentication-azure-ad-only-authentication">Azure AD-only authentication with Azure SQL</a></li>
+<li><a href="https://learn.microsoft.com/azure/azure-sql/database/authentication-azure-ad-only-authentication-policy">Azure Policy for Azure Active Directory only authentication with Azure SQL</a></li>
+<li><a href="https://learn.microsoft.com/azure/templates/microsoft.sql/servers">Azure deployment reference</a></li>
 </ul>
 
   <!-- Last update of source file -->
@@ -8887,7 +8894,7 @@ the sub-resoure will override the property.</p>
   <small>
     
       Last update:
-      2022-12-03
+      2023-07-26
     
   </small>
 </div>

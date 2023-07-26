@@ -1,11 +1,13 @@
 {
   "$schema": "https://schema.management.azure.com/schemas/2019-04-01/deploymentTemplate.json#",
+  "languageVersion": "1.10-experimental",
   "contentVersion": "1.0.0.0",
   "metadata": {
+    "_EXPERIMENTAL_WARNING": "Symbolic name support in ARM is experimental, and should be enabled for testing purposes only. Do not enable this setting for any production usage, or you may be unexpectedly broken at any time!",
     "_generator": {
       "name": "bicep",
-      "version": "0.9.1.41621",
-      "templateHash": "149537783775596231"
+      "version": "0.19.5.34762",
+      "templateHash": "2836760249200186240"
     }
   },
   "parameters": {
@@ -29,15 +31,17 @@
       "type": "string"
     }
   },
-  "resources": [
-    {
+  "resources": {
+    "server": {
       "type": "Microsoft.Sql/servers",
-      "apiVersion": "2022-02-01-preview",
+      "apiVersion": "2022-11-01-preview",
       "name": "[parameters('name')]",
       "location": "[parameters('location')]",
       "properties": {
+        "publicNetworkAccess": "Disabled",
         "minimalTlsVersion": "1.2",
         "administrators": {
+          "azureADOnlyAuthentication": true,
           "administratorType": "ActiveDirectory",
           "login": "[parameters('adminLogin')]",
           "principalType": "Group",
@@ -46,7 +50,7 @@
         }
       }
     },
-    {
+    "sqlAdministrator": {
       "type": "Microsoft.Sql/servers/administrators",
       "apiVersion": "2022-02-01-preview",
       "name": "[format('{0}/{1}', parameters('name'), 'ActiveDirectory')]",
@@ -56,8 +60,37 @@
         "sid": "[parameters('adminPrincipalId')]"
       },
       "dependsOn": [
-        "[resourceId('Microsoft.Sql/servers', parameters('name'))]"
+        "server"
+      ]
+    },
+    "defenderSql": {
+      "type": "Microsoft.Sql/servers/securityAlertPolicies",
+      "apiVersion": "2022-11-01-preview",
+      "name": "[format('{0}/{1}', parameters('name'), 'default')]",
+      "properties": {
+        "state": "Enabled"
+      },
+      "dependsOn": [
+        "server"
+      ]
+    },
+    "sqlAuditSettings": {
+      "type": "Microsoft.Sql/servers/auditingSettings",
+      "apiVersion": "2022-08-01-preview",
+      "name": "[format('{0}/{1}', parameters('name'), 'default')]",
+      "properties": {
+        "isAzureMonitorTargetEnabled": true,
+        "state": "Enabled",
+        "retentionDays": 7,
+        "auditActionsAndGroups": [
+          "SUCCESSFUL_DATABASE_AUTHENTICATION_GROUP",
+          "FAILED_DATABASE_AUTHENTICATION_GROUP",
+          "BATCH_COMPLETED_GROUP"
+        ]
+      },
+      "dependsOn": [
+        "server"
       ]
     }
-  ]
+  }
 }

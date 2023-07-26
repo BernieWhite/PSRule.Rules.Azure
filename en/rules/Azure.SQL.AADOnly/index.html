@@ -8729,11 +8729,24 @@
  · <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M7.75 6.5a1.25 1.25 0 1 0 0 2.5 1.25 1.25 0 0 0 0-2.5Z"/><path d="M2.5 1h8.44a1.5 1.5 0 0 1 1.06.44l10.25 10.25a1.5 1.5 0 0 1 0 2.12l-8.44 8.44a1.5 1.5 0 0 1-2.12 0L1.44 12A1.497 1.497 0 0 1 1 10.94V2.5A1.5 1.5 0 0 1 2.5 1Zm0 1.5v8.44l10.25 10.25 8.44-8.44L10.94 2.5Z"/></svg></span> 2023_03</p>
 <p>Ensure Azure AD-only authentication is enabled with Azure SQL Database.</p>
 <h2 id="description">Description<a class="headerlink" href="#description" title="Permanent link">#</a></h2>
-<p>Azure SQL Database supports authentication with SQL logins and Azure AD authentication.</p>
-<p>By default, authentication with SQL logins is enabled.
-SQL logins are unable to provide sufficient protection for identities.
-Azure AD authentication provides strong protection controls including conditional access, identity governance, and privileged identity management.</p>
-<p>Once you decide to use Azure AD authentication, you can disable authentication with SQL logins.</p>
+<p>Azure SQL Database supports authentication with SQL logins and Azure AD authentication.
+By default, authentication with SQL logins is enabled.
+SQL logins are unable to provide sufficient protection for identities.</p>
+<p>Azure AD authentication provides:</p>
+<ul>
+<li>Strong protection controls including conditional access, identity governance, and privileged identity management.</li>
+<li>Centralized identity management with Azure AD.</li>
+</ul>
+<p>Additionally you can disable SQL authentication entirely, by enabling Azure AD-only authentication.</p>
+<p>Some features may have limitations when using Azure AD-only authentication is enabled, including:</p>
+<ul>
+<li>Elastic jobs</li>
+<li>SQL Data Sync</li>
+<li>Change Data Capture (CDC)</li>
+<li>Transactional replication</li>
+<li>SQL insights</li>
+</ul>
+<p>Continue reading <a href="https://learn.microsoft.com/azure/azure-sql/database/authentication-azure-ad-only-authentication#limitations-for-azure-ad-only-authentication-in-sql-database">Limitations for Azure AD-only authentication in SQL Database</a>.</p>
 <h2 id="recommendation">Recommendation<a class="headerlink" href="#recommendation" title="Permanent link">#</a></h2>
 <p>Consider using Azure AD-only authentication.
 Also consider using Azure Policy for Azure AD-only authentication with SQL Database.</p>
@@ -8828,12 +8841,14 @@ To deploy <code>Microsoft.Sql/servers/azureADOnlyAuthentications</code> sub-reso
 }
 </code></pre></div>
 <h2 id="notes">Notes<a class="headerlink" href="#notes" title="Permanent link">#</a></h2>
-<p>The Azure AD admin must be set before enabling Azure AD-only authentication. Managed identity is required if an Azure AD service principal (Azure AD application) oversees creating and managing Azure AD users, groups, or applications in the logical server.</p>
+<p>The Azure AD admin must be set before enabling Azure AD-only authentication.
+A managed identity is required if an Azure AD service principal (Azure AD application) oversees creating and managing Azure AD users, groups, or applications in the logical server.</p>
 <h2 id="links">Links<a class="headerlink" href="#links" title="Permanent link">#</a></h2>
 <ul>
 <li><a href="https://learn.microsoft.com/azure/architecture/framework/security/design-identity-authentication#use-modern-password-protection">Use modern password protection</a></li>
 <li><a href="https://learn.microsoft.com/azure/azure-sql/database/authentication-azure-ad-only-authentication">Azure AD-only authentication with Azure SQL Database</a></li>
 <li><a href="https://learn.microsoft.com/azure/azure-sql/database/authentication-aad-configure">Configure and manage Azure AD authentication with Azure SQL Database</a></li>
+<li><a href="https://learn.microsoft.com/azure/azure-sql/database/authentication-azure-ad-only-authentication?#limitations-for-azure-ad-only-authentication-in-sql-database">Limitations for Azure AD-only authentication in SQL Database</a></li>
 <li><a href="https://learn.microsoft.com/azure/azure-sql/database/authentication-azure-ad-only-authentication-policy">Azure Policy for Azure AD-only authentication with Azure SQL Database</a></li>
 <li><a href="https://learn.microsoft.com/azure/templates/microsoft.sql/servers#managedinstanceexternaladministrator">Azure deployment reference</a></li>
 <li><a href="https://learn.microsoft.com/azure/templates/microsoft.sql/servers/azureadonlyauthentications#managedinstanceazureadonlyauthproperties">Azure deployment reference</a></li>
@@ -8847,7 +8862,7 @@ To deploy <code>Microsoft.Sql/servers/azureADOnlyAuthentications</code> sub-reso
   <small>
     
       Last update:
-      2023-04-05
+      2023-07-26
     
   </small>
 </div>

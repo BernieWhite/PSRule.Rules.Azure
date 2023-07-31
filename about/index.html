@@ -8645,14 +8645,15 @@
 <h1 id="what-is-psrule-for-azure">What is PSRule for Azure?<a class="headerlink" href="#what-is-psrule-for-azure" title="Permanent link">#</a></h1>
 <p>PSRule for Azure is a pre-built set of tests and documentation to help you configure Azure solutions.
 These tests allow you to check your Infrastructure as Code (<abbr title="Infrastructure as Code">IaC</abbr>) before or after deployment to Azure.
-PSRule for Azure includes tests that check how <abbr title="Infrastructure as Code">IaC</abbr> is written and how Azure resources are configured.</p>
+PSRule for Azure includes unit tests that check how Azure resources defined in <abbr title="Azure Resource Manager">ARM</abbr> templates or Bicep code are configured.</p>
 <h2 id="why-use-psrule-for-azure">Why use PSRule for Azure?<a class="headerlink" href="#why-use-psrule-for-azure" title="Permanent link">#</a></h2>
 <p>PSRule for Azure helps you identify changes to improve the quality of solutions deployed on Azure.
 PSRule for Azure uses the principles of the Azure Well-Architected Framework (WAF) to:</p>
 <ul>
 <li><strong>Suggest changes</strong> &mdash; you can use to improve the quality of your solution.</li>
 <li><strong>Link to documentation</strong> &mdash; to learn how this applies to your environment.</li>
-<li><strong>Demonstrate</strong> &mdash; how you can implement the change with examples.</li>
+<li><strong>Demonstrate</strong> &mdash; how you can implement the change with examples.
+  Examples are provided in Azure Bicep and <abbr title="Azure Resource Manager">ARM</abbr> templates syntax.</li>
 </ul>
 <p>If you want to write your own tests, you can do that too in your choice of YAML, JSON, or PowerShell.
 However with over 390 tests already built, you can identify and fix issues day one.</p>
@@ -8679,7 +8680,7 @@ Here's a few you may be familiar with:</p>
   <small>
     
       Last update:
-      2023-07-11
+      2023-07-31
     
   </small>
 </div>

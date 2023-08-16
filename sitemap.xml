@@ -916,6 +916,11 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
+         <loc>https://azure.github.io/PSRule.Rules.Azure/en/rules/Azure.BV.Immutable/</loc>
+         <lastmod>2023-08-16</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
          <loc>https://azure.github.io/PSRule.Rules.Azure/en/rules/Azure.Bastion.Name/</loc>
          <lastmod>2023-08-16</lastmod>
          <changefreq>daily</changefreq>
@@ -1617,6 +1622,11 @@
     </url>
     <url>
          <loc>https://azure.github.io/PSRule.Rules.Azure/en/rules/Azure.RBAC.UseRGDelegation/</loc>
+         <lastmod>2023-08-16</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://azure.github.io/PSRule.Rules.Azure/en/rules/Azure.RSV.Immutable/</loc>
          <lastmod>2023-08-16</lastmod>
          <changefreq>daily</changefreq>
     </url>

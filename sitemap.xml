@@ -1181,6 +1181,11 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
+         <loc>https://azure.github.io/PSRule.Rules.Azure/en/rules/Azure.Firewall.PolicyMode/</loc>
+         <lastmod>2023-08-20</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
          <loc>https://azure.github.io/PSRule.Rules.Azure/en/rules/Azure.Firewall.PolicyName/</loc>
          <lastmod>2023-08-20</lastmod>
          <changefreq>daily</changefreq>
@@ -2462,6 +2467,11 @@
     </url>
     <url>
          <loc>https://azure.github.io/PSRule.Rules.Azure/license-contributing/writing-documentation/</loc>
+         <lastmod>2023-08-20</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://azure.github.io/PSRule.Rules.Azure/quickstarts/test-bicep-with-github/</loc>
          <lastmod>2023-08-20</lastmod>
          <changefreq>daily</changefreq>
     </url>

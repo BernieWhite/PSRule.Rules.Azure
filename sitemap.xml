@@ -1596,6 +1596,11 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
+         <loc>https://azure.github.io/PSRule.Rules.Azure/en/rules/Azure.PublicIP.MigrateStandard/</loc>
+         <lastmod>2023-08-20</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
          <loc>https://azure.github.io/PSRule.Rules.Azure/en/rules/Azure.PublicIP.Name/</loc>
          <lastmod>2023-08-20</lastmod>
          <changefreq>daily</changefreq>

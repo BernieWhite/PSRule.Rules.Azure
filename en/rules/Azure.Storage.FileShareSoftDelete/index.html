@@ -6,7 +6,7 @@
       <meta charset="utf-8">
       <meta name="viewport" content="width=device-width,initial-scale=1">
       
-        <meta name="description" content="Enable fileshare soft delete on Storage Accounts">
+        <meta name="description" content="Enable soft delete on Storage Accounts file shares.">
       
       
         <meta name="author" content="Microsoft">
@@ -18,7 +18,7 @@
       
       
       <link rel="icon" href="../../../assets/ms_icon.png">
-      <meta name="generator" content="mkdocs-1.5.2, mkdocs-material-9.2.6">
+      <meta name="generator" content="mkdocs-1.5.2, mkdocs-material-9.2.8">
     
     
       
@@ -26,7 +26,7 @@
       
     
     
-      <link rel="stylesheet" href="../../../assets/stylesheets/main.0e669242.min.css">
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.046329b4.min.css">
       
         
         <link rel="stylesheet" href="../../../assets/stylesheets/palette.85d0ee34.min.css">
@@ -84,19 +84,19 @@
   <meta property="og:site_name" content="PSRule for Azure" />
   <meta property="og:type" content="article" />
   <meta property="og:title" content="PSRule for Azure - Azure.Storage.FileShareSoftDelete" />
-  <meta property="og:description" content="Enable fileshare soft delete on Storage Accounts" />
+  <meta property="og:description" content="Enable soft delete on Storage Accounts file shares." />
   <meta property="og:url" content="https://azure.github.io/PSRule.Rules.Azure/en/rules/Azure.Storage.FileShareSoftDelete/" />
   <meta property="og:image" content="https://repository-images.githubusercontent.com/184154668/58818c00-d496-11eb-9b77-016145022654" />
   <meta property="og:image:type" content="image/png" />
   <meta property="og:image:width" content="1280" />
   <meta property="og:image:height" content="640" />
-  <meta property="og:image:alt" content="Enable fileshare soft delete on Storage Accounts" />
+  <meta property="og:image:alt" content="Enable soft delete on Storage Accounts file shares." />
 
   <!-- Twitter meta tags -->
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:site" content="@github" />
   <meta name="twitter:title" content="PSRule for Azure - Azure.Storage.FileShareSoftDelete" />
-  <meta name="twitter:description" content="Enable fileshare soft delete on Storage Accounts" />
+  <meta name="twitter:description" content="Enable soft delete on Storage Accounts file shares." />
   <meta name="twitter:image" content="https://repository-images.githubusercontent.com/184154668/58818c00-d496-11eb-9b77-016145022654" />
 
 
@@ -118,7 +118,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#use-fileshare-soft-delete" class="md-skip">
+        <a href="#use-soft-delete-on-files-shares" class="md-skip">
           Skip to content
         </a>
       
@@ -12011,22 +12011,32 @@
   
 
   <!-- Markdown content -->
-  <h1 id="use-fileshare-soft-delete">Use fileshare soft delete<a class="headerlink" href="#use-fileshare-soft-delete" title="Permanent link">#</a></h1>
+  <h1 id="use-soft-delete-on-files-shares">Use soft delete on files shares<a class="headerlink" href="#use-soft-delete-on-files-shares" title="Permanent link">#</a></h1>
 <nav class="md-tags"><span class="md-tag">Azure.Storage.FileShareSoftDelete</span><span class="md-tag">AZR-000298</span><span class="md-tag">Error</span></nav>
 <p><a href="../module/#reliability"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M1.527 13.237a1.75 1.75 0 0 1 0-2.474l9.272-9.273a1.75 1.75 0 0 1 2.475 0l9.272 9.273a1.75 1.75 0 0 1 0 2.474l-9.272 9.272a1.75 1.75 0 0 1-2.475 0Zm1.06-1.414a.25.25 0 0 0 0 .354l9.273 9.272a.25.25 0 0 0 .353 0l9.272-9.272a.25.25 0 0 0 0-.354l-9.272-9.272a.25.25 0 0 0-.353 0Z"/></svg></span> Reliability</a>
  · <a href="../resource/#storage-account"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13.152.682a2.251 2.251 0 0 1 2.269 0l.007.004 6.957 4.276a2.277 2.277 0 0 1 1.126 1.964v7.516c0 .81-.432 1.56-1.133 1.968l-.002.001-11.964 7.037-.004.003c-.706.41-1.578.41-2.284 0l-.026-.015-6.503-4.502a2.268 2.268 0 0 1-1.096-1.943V9.438c0-.392.1-.77.284-1.1l.003-.006.014-.026c.197-.342.48-.627.82-.827h.002L13.152.681Zm.757 1.295h-.001L2.648 8.616l6.248 4.247a.775.775 0 0 0 .758-.01h.001l11.633-6.804-6.629-4.074a.75.75 0 0 0-.75.003ZM8.517 14.33a2.286 2.286 0 0 1-.393-.18l-.023-.014-6.102-4.147v7.003c0 .275.145.528.379.664l.025.014 6.114 4.232V14.33ZM18 9.709l-3.25 1.9v7.548L18 17.245Zm-7.59 4.438-.002.002a2.296 2.296 0 0 1-.391.18v7.612l3.233-1.902v-7.552Zm9.09-5.316v7.532l2.124-1.25a.776.776 0 0 0 .387-.671V7.363Z"/></svg></span> Storage Account</a>
  · <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M7.75 6.5a1.25 1.25 0 1 0 0 2.5 1.25 1.25 0 0 0 0-2.5Z"/><path d="M2.5 1h8.44a1.5 1.5 0 0 1 1.06.44l10.25 10.25a1.5 1.5 0 0 1 0 2.12l-8.44 8.44a1.5 1.5 0 0 1-2.12 0L1.44 12A1.497 1.497 0 0 1 1 10.94V2.5A1.5 1.5 0 0 1 2.5 1Zm0 1.5v8.44l10.25 10.25 8.44-8.44L10.94 2.5Z"/></svg></span> 2022_09</p>
 <h2 id="synopsis">Synopsis<a class="headerlink" href="#synopsis" title="Permanent link">#</a></h2>
-<p>Enable fileshare soft delete on Storage Accounts</p>
+<p>Enable soft delete on Storage Accounts file shares.</p>
 <h2 id="description">Description<a class="headerlink" href="#description" title="Permanent link">#</a></h2>
-<p>Azure Files offers soft delete for fileshares within Storage Accounts to recover deleted or modified files.</p>
+<p>Soft delete for Azure Files protects your shares from being accidentally deleted.
+This feature <strong>does not</strong> protect against individual files being deleted or modified.
+When soft delete is enabled for a Azure Files on a Storage Account, a share and its contents may be recovered
+after it has been deleted, within a retention period that you specify.</p>
+<p>Soft delete on file shares should be considered <em>part</em> of the strategy to protect and retain data for Azure Files.
+Also consider:</p>
+<ul>
+<li>Enabling Azure File Share Backup.</li>
+<li>Implementing role-based access control (RBAC).</li>
+</ul>
+<p>Storage Accounts can be configured to retain deleted share for a period of time between 1 and 365 days.</p>
 <h2 id="recommendation">Recommendation<a class="headerlink" href="#recommendation" title="Permanent link">#</a></h2>
-<p>Consider enabling soft delete on fileshares to protect files from accidential deletion or modification.</p>
+<p>Consider enabling soft delete on Azure Files to protect against accidental deletion of shares.</p>
 <h2 id="examples">Examples<a class="headerlink" href="#examples" title="Permanent link">#</a></h2>
 <h3 id="configure-with-azure-template">Configure with Azure template<a class="headerlink" href="#configure-with-azure-template" title="Permanent link">#</a></h3>
-<p>To deploy Fileshares via ARM that pass this rule:</p>
+<p>To deploy Storage Accounts that pass this rule:</p>
 <ul>
-<li>Set the <code>properties.deleteRetentionPolicy.enabled</code> property to <code>true</code> on the fileshare services sub-resource</li>
+<li>Set the <code>properties.deleteRetentionPolicy.enabled</code> property to <code>true</code> on the <code>fileServices</code> sub-resource</li>
 <li>Configure the <code>properties.deleteRetentionPolicy.days</code> property to the number of days to retain files.</li>
 </ul>
 <p>For example:</p>
@@ -12043,30 +12053,34 @@
 </span><span id="__span-0-11"><a id="__codelineno-0-11" name="__codelineno-0-11" href="#__codelineno-0-11"></a><span class="p">}</span>
 </span></code></pre></div>
 <h3 id="configure-with-bicep">Configure with Bicep<a class="headerlink" href="#configure-with-bicep" title="Permanent link">#</a></h3>
-<p>To deploy Fileshares via Bicep that pass this rule:</p>
+<p>To deploy Storage Accounts that pass this rule:</p>
 <ul>
-<li>Set the <code>properties.deleteRetentionPolicy.enabled</code> property to <code>true</code> on the fileshare services sub-resource</li>
+<li>Set the <code>properties.deleteRetentionPolicy.enabled</code> property to <code>true</code> on the <code>fileServices</code> sub-resource</li>
 <li>Configure the <code>properties.deleteRetentionPolicy.days</code> property to the number of days to retain files.</li>
 </ul>
 <p>For example:</p>
-<div class="language-text highlight"><span class="filename">Azure Bicep snippet</span><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>resource  &#39;Microsoft.Storage/storageAccounts/fileServices@2022-05-01&#39; = {
-</span><span id="__span-1-2"><a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a>  name: &#39;default&#39;
-</span><span id="__span-1-3"><a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a>  parent: st0000001
-</span><span id="__span-1-4"><a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a>    shareDeleteRetentionPolicy: {
-</span><span id="__span-1-5"><a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a>      days: 7
+<div class="language-text highlight"><span class="filename">Azure Bicep snippet</span><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>resource fileServices &#39;Microsoft.Storage/storageAccounts/fileServices@2023-01-01&#39; = {
+</span><span id="__span-1-2"><a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a>  parent: storageAccount
+</span><span id="__span-1-3"><a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a>  name: &#39;default&#39;
+</span><span id="__span-1-4"><a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a>  properties: {
+</span><span id="__span-1-5"><a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a>    shareDeleteRetentionPolicy: {
 </span><span id="__span-1-6"><a id="__codelineno-1-6" name="__codelineno-1-6" href="#__codelineno-1-6"></a>      enabled: true
-</span><span id="__span-1-7"><a id="__codelineno-1-7" name="__codelineno-1-7" href="#__codelineno-1-7"></a>    }
-</span><span id="__span-1-8"><a id="__codelineno-1-8" name="__codelineno-1-8" href="#__codelineno-1-8"></a>  }
-</span><span id="__span-1-9"><a id="__codelineno-1-9" name="__codelineno-1-9" href="#__codelineno-1-9"></a>}
+</span><span id="__span-1-7"><a id="__codelineno-1-7" name="__codelineno-1-7" href="#__codelineno-1-7"></a>      days: 7
+</span><span id="__span-1-8"><a id="__codelineno-1-8" name="__codelineno-1-8" href="#__codelineno-1-8"></a>    }
+</span><span id="__span-1-9"><a id="__codelineno-1-9" name="__codelineno-1-9" href="#__codelineno-1-9"></a>  }
+</span><span id="__span-1-10"><a id="__codelineno-1-10" name="__codelineno-1-10" href="#__codelineno-1-10"></a>}
 </span></code></pre></div>
 <h2 id="notes">Notes<a class="headerlink" href="#notes" title="Permanent link">#</a></h2>
-<p>Cloud Shell storage with the tag <code>ms-resource-usage = 'azure-cloud-shell'</code> is excluded. Storage accounts used for Cloud Shell are not intended to store data.</p>
+<p>Cloud Shell storage with the tag <code>ms-resource-usage = 'azure-cloud-shell'</code> is excluded.
+Storage accounts used for Cloud Shell are not intended to store data.</p>
 <h2 id="links">Links<a class="headerlink" href="#links" title="Permanent link">#</a></h2>
 <ul>
-<li><a href="https://docs.microsoft.com/azure/storage/files/storage-files-enable-soft-delete?tabs=azure-portal">Enable soft delete on Azure file shares</a></li>
-<li><a href="https://docs.microsoft.com/azure/role-based-access-control/resource-provider-operations#microsoftstorage">RBAC operations for storage</a></li>
-<li><a href="https://docs.microsoft.com/azure/storage/files/storage-files-introduction">What is Azure Files?</a></li>
-<li><a href="https://docs.microsoft.com/azure/templates/microsoft.storage/storageaccounts/fileservices">Microsoft.Storage storageAccounts/fileServices</a></li>
+<li><a href="https://learn.microsoft.com/azure/well-architected/resiliency/data-management">Data management for reliability</a></li>
+<li><a href="https://learn.microsoft.com/azure/well-architected/services/storage/storage-accounts/reliability">Storage Accounts and reliability</a></li>
+<li><a href="https://learn.microsoft.com/azure/storage/files/storage-files-prevent-file-share-deletion">Enable soft delete on Azure file shares</a></li>
+<li><a href="https://learn.microsoft.com/azure/backup/azure-file-share-backup-overview">About Azure file share backup</a></li>
+<li><a href="https://learn.microsoft.com/azure/storage/files/authorize-data-operations-portal">Authorize access to file data</a></li>
+<li><a href="https://learn.microsoft.com/azure/templates/microsoft.storage/storageaccounts/fileservices">Azure deployment reference</a></li>
 </ul>
 
   <!-- Last update of source file -->
@@ -12077,7 +12091,7 @@
   <small>
     
       Last update:
-      2022-09-21
+      2023-09-02
     
   </small>
 </div>
@@ -12195,7 +12209,7 @@
     <script id="__config" type="application/json">{"base": "../../..", "features": ["navigation.instant", "navigation.indexes", {"navigation.sections": {"level": 1}}, "navigation.tabs", "content.code.annotate", "content.tabs.link", "content.code.copy"], "search": "../../../assets/javascripts/workers/search.dfff1995.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
     
     
-      <script src="../../../assets/javascripts/bundle.78eede0e.min.js"></script>
+      <script src="../../../assets/javascripts/bundle.dff1b7c8.min.js"></script>
       
     
   </body>

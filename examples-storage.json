@@ -1,11 +1,13 @@
 {
   "$schema": "https://schema.management.azure.com/schemas/2019-04-01/deploymentTemplate.json#",
+  "languageVersion": "1.10-experimental",
   "contentVersion": "1.0.0.0",
   "metadata": {
+    "_EXPERIMENTAL_WARNING": "Symbolic name support in ARM is experimental, and should be enabled for testing purposes only. Do not enable this setting for any production usage, or you may be unexpectedly broken at any time!",
     "_generator": {
       "name": "bicep",
-      "version": "0.4.1124.51302",
-      "templateHash": "4901265845278602446"
+      "version": "0.20.4.51522",
+      "templateHash": "6814134128727565933"
     }
   },
   "parameters": {
@@ -27,10 +29,10 @@
     "containerName": "data",
     "shareName": "group"
   },
-  "resources": [
-    {
+  "resources": {
+    "storageAccount": {
       "type": "Microsoft.Storage/storageAccounts",
-      "apiVersion": "2021-06-01",
+      "apiVersion": "2023-01-01",
       "name": "[parameters('name')]",
       "location": "[parameters('location')]",
       "sku": {
@@ -48,9 +50,9 @@
         }
       }
     },
-    {
+    "blobService": {
       "type": "Microsoft.Storage/storageAccounts/blobServices",
-      "apiVersion": "2021-06-01",
+      "apiVersion": "2023-01-01",
       "name": "[format('{0}/{1}', parameters('name'), 'default')]",
       "properties": {
         "deleteRetentionPolicy": {
@@ -63,24 +65,23 @@
         }
       },
       "dependsOn": [
-        "[resourceId('Microsoft.Storage/storageAccounts', parameters('name'))]"
+        "storageAccount"
       ]
     },
-    {
+    "container": {
       "type": "Microsoft.Storage/storageAccounts/blobServices/containers",
-      "apiVersion": "2021-06-01",
+      "apiVersion": "2023-01-01",
       "name": "[format('{0}/{1}/{2}', parameters('name'), 'default', variables('containerName'))]",
       "properties": {
         "publicAccess": "None"
       },
       "dependsOn": [
-        "[resourceId('Microsoft.Storage/storageAccounts/blobServices', parameters('name'), 'default')]",
-        "[resourceId('Microsoft.Storage/storageAccounts', parameters('name'))]"
+        "blobService"
       ]
     },
-    {
+    "fileServices": {
       "type": "Microsoft.Storage/storageAccounts/fileServices",
-      "apiVersion": "2021-06-01",
+      "apiVersion": "2023-01-01",
       "name": "[format('{0}/{1}', parameters('name'), 'default')]",
       "properties": {
         "shareDeleteRetentionPolicy": {
@@ -89,20 +90,19 @@
         }
       },
       "dependsOn": [
-        "[resourceId('Microsoft.Storage/storageAccounts', parameters('name'))]"
+        "storageAccount"
       ]
     },
-    {
+    "share": {
       "type": "Microsoft.Storage/storageAccounts/fileServices/shares",
-      "apiVersion": "2021-06-01",
+      "apiVersion": "2023-01-01",
       "name": "[format('{0}/{1}/{2}', parameters('name'), 'default', variables('shareName'))]",
       "properties": {
         "accessTier": "TransactionOptimized"
       },
       "dependsOn": [
-        "[resourceId('Microsoft.Storage/storageAccounts/fileServices', parameters('name'), 'default')]",
-        "[resourceId('Microsoft.Storage/storageAccounts', parameters('name'))]"
+        "fileServices"
       ]
     }
-  ]
+  }
 }

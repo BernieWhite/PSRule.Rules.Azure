@@ -4,11 +4,17 @@
   "metadata": {
     "_generator": {
       "name": "bicep",
-      "version": "0.12.1.58429",
-      "templateHash": "10916983340852253317"
+      "version": "0.21.1.54444",
+      "templateHash": "5558385779567236827"
     }
   },
   "parameters": {
+    "name": {
+      "type": "string",
+      "metadata": {
+        "description": "The name of the resource."
+      }
+    },
     "location": {
       "type": "string",
       "defaultValue": "[resourceGroup().location]",
@@ -31,8 +37,61 @@
   },
   "resources": [
     {
+      "type": "Microsoft.Network/virtualNetworks",
+      "apiVersion": "2023-05-01",
+      "name": "[parameters('name')]",
+      "location": "[parameters('location')]",
+      "properties": {
+        "addressSpace": {
+          "addressPrefixes": [
+            "10.0.0.0/16"
+          ]
+        },
+        "dhcpOptions": {
+          "dnsServers": [
+            "10.0.1.4",
+            "10.0.1.5"
+          ]
+        },
+        "subnets": [
+          {
+            "name": "GatewaySubnet",
+            "properties": {
+              "addressPrefix": "10.0.0.0/24"
+            }
+          },
+          {
+            "name": "snet-001",
+            "properties": {
+              "addressPrefix": "10.0.1.0/24",
+              "networkSecurityGroup": {
+                "id": "[resourceId('Microsoft.Network/networkSecurityGroups', parameters('nsgName'))]"
+              }
+            }
+          },
+          {
+            "name": "snet-002",
+            "properties": {
+              "addressPrefix": "10.0.2.0/24",
+              "delegations": [
+                {
+                  "name": "HSM",
+                  "properties": {
+                    "serviceName": "Microsoft.HardwareSecurityModules/dedicatedHSMs"
+                  }
+                }
+              ]
+            }
+          }
+        ]
+      },
+      "dependsOn": [
+        "[resourceId('Microsoft.Network/networkSecurityGroups', parameters('nsgName'))]"
+      ]
+    },
+    {
       "type": "Microsoft.Network/networkSecurityGroups",
-      "apiVersion": "2022-01-01",
+      "apiVersion": "2023-05-01",
       "name": "[parameters('nsgName')]",
       "location": "[parameters('location')]",
       "properties": {
@@ -101,67 +160,14 @@
     },
     {
       "type": "Microsoft.Network/applicationSecurityGroups",
-      "apiVersion": "2022-01-01",
+      "apiVersion": "2023-05-01",
       "name": "[parameters('asgName')]",
       "location": "[parameters('location')]",
       "properties": {}
     },
     {
-      "type": "Microsoft.Network/virtualNetworks",
-      "apiVersion": "2022-01-01",
-      "name": "vnet-001",
-      "location": "[parameters('location')]",
-      "properties": {
-        "addressSpace": {
-          "addressPrefixes": [
-            "10.0.0.0/16"
-          ]
-        },
-        "dhcpOptions": {
-          "dnsServers": [
-            "10.0.1.4",
-            "10.0.1.5"
-          ]
-        },
-        "subnets": [
-          {
-            "name": "GatewaySubnet",
-            "properties": {
-              "addressPrefix": "10.0.0.0/24"
-            }
-          },
-          {
-            "name": "snet-001",
-            "properties": {
-              "addressPrefix": "10.0.1.0/24",
-              "networkSecurityGroup": {
-                "id": "[resourceId('Microsoft.Network/networkSecurityGroups', parameters('nsgName'))]"
-              }
-            }
-          },
-          {
-            "name": "snet-002",
-            "properties": {
-              "addressPrefix": "10.0.2.0/24",
-              "delegations": [
-                {
-                  "name": "HSM",
-                  "properties": {
-                    "serviceName": "Microsoft.HardwareSecurityModules/dedicatedHSMs"
-                  }
-                }
-              ]
-            }
-          }
-        ]
-      },
-      "dependsOn": [
-        "[resourceId('Microsoft.Network/networkSecurityGroups', parameters('nsgName'))]"
-      ]
-    },
-    {
       "type": "Microsoft.Network/loadBalancers",
-      "apiVersion": "2022-01-01",
+      "apiVersion": "2023-05-01",
       "name": "[parameters('lbName')]",
       "location": "[parameters('location')]",
       "sku": {
@@ -174,7 +180,7 @@
             "properties": {
               "privateIPAllocationMethod": "Dynamic",
               "subnet": {
-                "id": "[reference(resourceId('Microsoft.Network/virtualNetworks', 'vnet-001'), '2022-01-01').subnets[1].id]"
+                "id": "[reference(resourceId('Microsoft.Network/virtualNetworks', parameters('name')), '2023-05-01').subnets[1].id]"
               }
             },
             "zones": [
@@ -186,12 +192,12 @@
         ]
       },
       "dependsOn": [
-        "[resourceId('Microsoft.Network/virtualNetworks', 'vnet-001')]"
+        "[resourceId('Microsoft.Network/virtualNetworks', parameters('name'))]"
       ]
     },
     {
       "type": "Microsoft.Network/virtualNetworks",
-      "apiVersion": "2022-05-01",
+      "apiVersion": "2023-05-01",
       "name": "vnet-01",
       "location": "[parameters('location')]",
       "properties": {
@@ -230,7 +236,7 @@
     },
     {
       "type": "Microsoft.Network/virtualNetworks",
-      "apiVersion": "2022-05-01",
+      "apiVersion": "2023-05-01",
       "name": "vnet-02",
       "location": "[parameters('location')]",
       "properties": {
@@ -249,7 +255,7 @@
     },
     {
       "type": "Microsoft.Network/virtualNetworks/subnets",
-      "apiVersion": "2022-05-01",
+      "apiVersion": "2023-05-01",
       "name": "[format('{0}/{1}', 'vnet-02', 'GatewaySubnet')]",
       "properties": {
         "addressPrefix": "10.0.0.0/27"
@@ -260,7 +266,7 @@
     },
     {
       "type": "Microsoft.Network/virtualNetworks/subnets",
-      "apiVersion": "2022-05-01",
+      "apiVersion": "2023-05-01",
       "name": "[format('{0}/{1}', 'vnet-02', 'AzureBastionSubnet')]",
       "properties": {
         "addressPrefix": "10.0.0.0/26"

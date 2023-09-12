@@ -10,7 +10,7 @@ param name string
 param location string = resourceGroup().location
 
 // An example Web PubSub service
-resource service 'Microsoft.SignalRService/webPubSub@2021-10-01' = {
+resource service 'Microsoft.SignalRService/webPubSub@2023-02-01' = {
   name: name
   location: location
   sku: {

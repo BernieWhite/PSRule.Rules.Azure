@@ -5,7 +5,7 @@
     "_generator": {
       "name": "bicep",
       "version": "0.21.1.54444",
-      "templateHash": "5558385779567236827"
+      "templateHash": "1950988785245451580"
     }
   },
   "parameters": {
@@ -198,7 +198,7 @@
     {
       "type": "Microsoft.Network/virtualNetworks",
       "apiVersion": "2023-05-01",
-      "name": "vnet-01",
+      "name": "[parameters('name')]",
       "location": "[parameters('location')]",
       "properties": {
         "addressSpace": {
@@ -237,7 +237,7 @@
     {
       "type": "Microsoft.Network/virtualNetworks",
       "apiVersion": "2023-05-01",
-      "name": "vnet-02",
+      "name": "[parameters('name')]",
       "location": "[parameters('location')]",
       "properties": {
         "addressSpace": {
@@ -254,25 +254,61 @@
       }
     },
     {
-      "type": "Microsoft.Network/virtualNetworks/subnets",
+      "type": "Microsoft.Network/virtualNetworks/virtualNetworkPeerings",
       "apiVersion": "2023-05-01",
-      "name": "[format('{0}/{1}', 'vnet-02', 'GatewaySubnet')]",
+      "name": "[format('{0}/{1}', parameters('name'), format('peer-to-{0}', parameters('name')))]",
       "properties": {
-        "addressPrefix": "10.0.0.0/27"
+        "remoteVirtualNetwork": {
+          "id": "[resourceId('Microsoft.Network/virtualNetworks', parameters('name'))]"
+        },
+        "allowVirtualNetworkAccess": true,
+        "allowForwardedTraffic": true,
+        "allowGatewayTransit": false,
+        "useRemoteGateways": true
       },
       "dependsOn": [
-        "[resourceId('Microsoft.Network/virtualNetworks', 'vnet-02')]"
+        "[resourceId('Microsoft.Network/virtualNetworks', parameters('name'))]",
+        "[resourceId('Microsoft.Network/virtualNetworks', parameters('name'))]"
+      ]
+    },
+    {
+      "type": "Microsoft.Network/virtualNetworks/virtualNetworkPeerings",
+      "apiVersion": "2023-05-01",
+      "name": "[format('{0}/{1}', parameters('name'), format('peer-to-{0}', parameters('name')))]",
+      "properties": {
+        "remoteVirtualNetwork": {
+          "id": "[resourceId('Microsoft.Network/virtualNetworks', parameters('name'))]"
+        },
+        "allowVirtualNetworkAccess": true,
+        "allowForwardedTraffic": false,
+        "allowGatewayTransit": true,
+        "useRemoteGateways": false
+      },
+      "dependsOn": [
+        "[resourceId('Microsoft.Network/virtualNetworks', parameters('name'))]",
+        "[resourceId('Microsoft.Network/virtualNetworks', parameters('name'))]"
       ]
     },
     {
       "type": "Microsoft.Network/virtualNetworks/subnets",
       "apiVersion": "2023-05-01",
-      "name": "[format('{0}/{1}', 'vnet-02', 'AzureBastionSubnet')]",
+      "name": "[format('{0}/{1}', parameters('name'), 'GatewaySubnet')]",
+      "properties": {
+        "addressPrefix": "10.0.0.0/27"
+      },
+      "dependsOn": [
+        "[resourceId('Microsoft.Network/virtualNetworks', parameters('name'))]"
+      ]
+    },
+    {
+      "type": "Microsoft.Network/virtualNetworks/subnets",
+      "apiVersion": "2023-05-01",
+      "name": "[format('{0}/{1}', parameters('name'), 'AzureBastionSubnet')]",
       "properties": {
         "addressPrefix": "10.0.0.0/26"
       },
       "dependsOn": [
-        "[resourceId('Microsoft.Network/virtualNetworks', 'vnet-02')]"
+        "[resourceId('Microsoft.Network/virtualNetworks', parameters('name'))]"
       ]
     }
   ]

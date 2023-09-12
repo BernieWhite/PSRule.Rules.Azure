@@ -1888,6 +1888,13 @@
 </li>
         
           <li class="md-nav__item">
+  <a href="#principles" class="md-nav__link">
+    Principles
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#reports" class="md-nav__link">
     Reports
   </a>
@@ -1950,6 +1957,13 @@
 </li>
         
           <li class="md-nav__item">
+  <a href="#monitor" class="md-nav__link">
+    Monitor
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#monitoring" class="md-nav__link">
     Monitoring
   </a>
@@ -1957,7 +1971,7 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#principles" class="md-nav__link">
+  <a href="#principles_1" class="md-nav__link">
     Principles
   </a>
   
@@ -2199,13 +2213,6 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#configuration_1" class="md-nav__link">
-    Configuration
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
   <a href="#connectivity" class="md-nav__link">
     Connectivity
   </a>
@@ -2283,7 +2290,7 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#monitor" class="md-nav__link">
+  <a href="#monitor_1" class="md-nav__link">
     Monitor
   </a>
   
@@ -12382,6 +12389,13 @@
 </li>
         
           <li class="md-nav__item">
+  <a href="#principles" class="md-nav__link">
+    Principles
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#reports" class="md-nav__link">
     Reports
   </a>
@@ -12444,6 +12458,13 @@
 </li>
         
           <li class="md-nav__item">
+  <a href="#monitor" class="md-nav__link">
+    Monitor
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#monitoring" class="md-nav__link">
     Monitoring
   </a>
@@ -12451,7 +12472,7 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#principles" class="md-nav__link">
+  <a href="#principles_1" class="md-nav__link">
     Principles
   </a>
   
@@ -12693,13 +12714,6 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#configuration_1" class="md-nav__link">
-    Configuration
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
   <a href="#connectivity" class="md-nav__link">
     Connectivity
   </a>
@@ -12777,7 +12791,7 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#monitor" class="md-nav__link">
+  <a href="#monitor_1" class="md-nav__link">
     Monitor
   </a>
   
@@ -12941,6 +12955,25 @@
 </tr>
 </tbody>
 </table>
+<h3 id="principles">Principles<a class="headerlink" href="#principles" title="Permanent link">#</a></h3>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Synopsis</th>
+<th>Severity</th>
+<th>Level</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="../Azure.PublicIP.IsAttached/">Azure.PublicIP.IsAttached</a></td>
+<td>Public IP addresses should be attached or cleaned up if not in use.</td>
+<td>Important</td>
+<td>Error</td>
+</tr>
+</tbody>
+</table>
 <h3 id="reports">Reports<a class="headerlink" href="#reports" title="Permanent link">#</a></h3>
 <table>
 <thead>
@@ -12992,12 +13025,6 @@
 <tr>
 <td><a href="../Azure.ACR.Retention/">Azure.ACR.Retention</a></td>
 <td>Use a retention policy to cleanup untagged manifests.</td>
-<td>Important</td>
-<td>Error</td>
-</tr>
-<tr>
-<td><a href="../Azure.PublicIP.IsAttached/">Azure.PublicIP.IsAttached</a></td>
-<td>Public IP address should be attached or removed.</td>
 <td>Important</td>
 <td>Error</td>
 </tr>
@@ -13132,12 +13159,6 @@
 <td>Error</td>
 </tr>
 <tr>
-<td><a href="../Azure.VNET.PeerState/">Azure.VNET.PeerState</a></td>
-<td>VNET peering connections must be connected.</td>
-<td>Important</td>
-<td>Error</td>
-</tr>
-<tr>
 <td><a href="../Azure.VNG.ERLegacySKU/">Azure.VNG.ERLegacySKU</a></td>
 <td>Migrate from legacy SKUs to improve reliability and performance of ExpressRoute (ER) gateways.</td>
 <td>Important</td>
@@ -13180,12 +13201,6 @@
 <td>Important</td>
 <td>Warning</td>
 </tr>
-<tr>
-<td><a href="../Azure.PublicIP.MigrateStandard/">Azure.PublicIP.MigrateStandard</a></td>
-<td>Use the Standard SKU for Public IP addresses. Basic SKU for Public IP addresses will be retired.</td>
-<td>Important</td>
-<td>Error</td>
-</tr>
 </tbody>
 </table>
 <h3 id="instrumentation">Instrumentation<a class="headerlink" href="#instrumentation" title="Permanent link">#</a></h3>
@@ -13210,6 +13225,25 @@
 <td>API Management products should have a display name and description.</td>
 <td>Awareness</td>
 <td>Warning</td>
+</tr>
+</tbody>
+</table>
+<h3 id="monitor">Monitor<a class="headerlink" href="#monitor" title="Permanent link">#</a></h3>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Synopsis</th>
+<th>Severity</th>
+<th>Level</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="../Azure.VNET.PeerState/">Azure.VNET.PeerState</a></td>
+<td>VNET peering connections must be connected.</td>
+<td>Important</td>
+<td>Error</td>
 </tr>
 </tbody>
 </table>
@@ -13280,7 +13314,7 @@
 </tr>
 </tbody>
 </table>
-<h3 id="principles">Principles<a class="headerlink" href="#principles" title="Permanent link">#</a></h3>
+<h3 id="principles_1">Principles<a class="headerlink" href="#principles_1" title="Permanent link">#</a></h3>
 <table>
 <thead>
 <tr>
@@ -13624,6 +13658,18 @@
 <td>Error</td>
 </tr>
 <tr>
+<td><a href="../Azure.PublicIP.DNSLabel/">Azure.PublicIP.DNSLabel</a></td>
+<td>Public IP domain name labels should meet naming requirements.</td>
+<td>Awareness</td>
+<td>Error</td>
+</tr>
+<tr>
+<td><a href="../Azure.PublicIP.MigrateStandard/">Azure.PublicIP.MigrateStandard</a></td>
+<td>Use the Standard SKU for Public IP addresses as the Basic SKU will be retired.</td>
+<td>Important</td>
+<td>Error</td>
+</tr>
+<tr>
 <td><a href="../Azure.PublicIP.Name/">Azure.PublicIP.Name</a></td>
 <td>Public IP names should meet naming requirements.</td>
 <td>Awareness</td>
@@ -13855,12 +13901,6 @@
 <tr>
 <td><a href="../Azure.AKS.DNSPrefix/">Azure.AKS.DNSPrefix</a></td>
 <td>Azure Kubernetes Service (AKS) cluster DNS prefix should meet naming requirements.</td>
-<td>Awareness</td>
-<td>Error</td>
-</tr>
-<tr>
-<td><a href="../Azure.PublicIP.DNSLabel/">Azure.PublicIP.DNSLabel</a></td>
-<td>Public IP domain name labels should meet naming requirements.</td>
 <td>Awareness</td>
 <td>Error</td>
 </tr>
@@ -14276,12 +14316,6 @@
 <td>Error</td>
 </tr>
 <tr>
-<td><a href="../Azure.PublicIP.StandardSKU/">Azure.PublicIP.StandardSKU</a></td>
-<td>Public IP addresses should be deployed with Standard SKU for production workloads.</td>
-<td>Important</td>
-<td>Error</td>
-</tr>
-<tr>
 <td><a href="../Azure.Redis.AvailabilityZone/">Azure.Redis.AvailabilityZone</a></td>
 <td>Premium Redis cache should be deployed with availability zones for high availability.</td>
 <td>Important</td>
@@ -14468,6 +14502,12 @@
 <tr>
 <td><a href="../Azure.AppConfig.SKU/">Azure.AppConfig.SKU</a></td>
 <td>App Configuration should use a minimum size of Standard.</td>
+<td>Important</td>
+<td>Error</td>
+</tr>
+<tr>
+<td><a href="../Azure.PublicIP.StandardSKU/">Azure.PublicIP.StandardSKU</a></td>
+<td>Public IP addresses should be deployed with Standard SKU for production workloads.</td>
 <td>Important</td>
 <td>Error</td>
 </tr>
@@ -14707,6 +14747,12 @@
 <td>Error</td>
 </tr>
 <tr>
+<td><a href="../Azure.AKS.ManagedIdentity/">Azure.AKS.ManagedIdentity</a></td>
+<td>Configure AKS clusters to use managed identities for managing cluster infrastructure.</td>
+<td>Important</td>
+<td>Error</td>
+</tr>
+<tr>
 <td><a href="../Azure.APIM.ManagedIdentity/">Azure.APIM.ManagedIdentity</a></td>
 <td>Configure managed identities to access Azure resources.</td>
 <td>Important</td>
@@ -14719,8 +14765,38 @@
 <td>Error</td>
 </tr>
 <tr>
+<td><a href="../Azure.AppService.ManagedIdentity/">Azure.AppService.ManagedIdentity</a></td>
+<td>Configure managed identities to access Azure resources.</td>
+<td>Important</td>
+<td>Error</td>
+</tr>
+<tr>
+<td><a href="../Azure.Automation.ManagedIdentity/">Azure.Automation.ManagedIdentity</a></td>
+<td>Ensure Managed Identity is used for authentication.</td>
+<td>Important</td>
+<td>Error</td>
+</tr>
+<tr>
 <td><a href="../Azure.Cognitive.DisableLocalAuth/">Azure.Cognitive.DisableLocalAuth</a></td>
 <td>Authenticate requests to Cognitive Services with Azure AD identities.</td>
+<td>Important</td>
+<td>Error</td>
+</tr>
+<tr>
+<td><a href="../Azure.Cognitive.ManagedIdentity/">Azure.Cognitive.ManagedIdentity</a></td>
+<td>Configure managed identities to access Azure resources.</td>
+<td>Important</td>
+<td>Error</td>
+</tr>
+<tr>
+<td><a href="../Azure.ContainerApp.ManagedIdentity/">Azure.ContainerApp.ManagedIdentity</a></td>
+<td>Ensure managed identity is used for authentication.</td>
+<td>Important</td>
+<td>Error</td>
+</tr>
+<tr>
+<td><a href="../Azure.Cosmos.DisableMetadataWrite/">Azure.Cosmos.DisableMetadataWrite</a></td>
+<td>Use Azure AD identities for management place operations in Azure Cosmos DB.</td>
 <td>Important</td>
 <td>Error</td>
 </tr>
@@ -14731,8 +14807,20 @@
 <td>Error</td>
 </tr>
 <tr>
+<td><a href="../Azure.EventGrid.ManagedIdentity/">Azure.EventGrid.ManagedIdentity</a></td>
+<td>Use managed identities to deliver Event Grid Topic events.</td>
+<td>Important</td>
+<td>Error</td>
+</tr>
+<tr>
 <td><a href="../Azure.EventHub.DisableLocalAuth/">Azure.EventHub.DisableLocalAuth</a></td>
 <td>Authenticate Event Hub publishers and consumers with Azure AD identities.</td>
+<td>Important</td>
+<td>Error</td>
+</tr>
+<tr>
+<td><a href="../Azure.FrontDoor.ManagedIdentity/">Azure.FrontDoor.ManagedIdentity</a></td>
+<td>Ensure Front Door uses a managed identity to authorize access to Azure resources.</td>
 <td>Important</td>
 <td>Error</td>
 </tr>
@@ -14746,6 +14834,12 @@
 <td><a href="../Azure.PostgreSQL.AAD/">Azure.PostgreSQL.AAD</a></td>
 <td>Use Azure Active Directory (AAD) authentication with Azure Database for PostgreSQL databases.</td>
 <td>Critical</td>
+<td>Error</td>
+</tr>
+<tr>
+<td><a href="../Azure.Search.ManagedIdentity/">Azure.Search.ManagedIdentity</a></td>
+<td>Configure managed identities to access Azure resources.</td>
+<td>Important</td>
 <td>Error</td>
 </tr>
 <tr>
@@ -14770,6 +14864,12 @@
 <td><a href="../Azure.SQLMI.AAD/">Azure.SQLMI.AAD</a></td>
 <td>Use Azure Active Directory (AAD) authentication with Azure SQL Managed Instance.</td>
 <td>Critical</td>
+<td>Error</td>
+</tr>
+<tr>
+<td><a href="../Azure.SQLMI.ManagedIdentity/">Azure.SQLMI.ManagedIdentity</a></td>
+<td>Ensure managed identity is used to allow support for Azure AD authentication.</td>
+<td>Important</td>
 <td>Error</td>
 </tr>
 <tr>
@@ -14844,25 +14944,6 @@
 <td><a href="../Azure.Defender.Containers/">Azure.Defender.Containers</a></td>
 <td>Enable Microsoft Defender for Containers.</td>
 <td>Critical</td>
-<td>Error</td>
-</tr>
-</tbody>
-</table>
-<h3 id="configuration_1">Configuration<a class="headerlink" href="#configuration_1" title="Permanent link">#</a></h3>
-<table>
-<thead>
-<tr>
-<th>Name</th>
-<th>Synopsis</th>
-<th>Severity</th>
-<th>Level</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><a href="../Azure.AKS.ManagedIdentity/">Azure.AKS.ManagedIdentity</a></td>
-<td>Configure AKS clusters to use managed identities for managing cluster infrastructure.</td>
-<td>Important</td>
 <td>Error</td>
 </tr>
 </tbody>
@@ -15143,7 +15224,7 @@
 <tr>
 <td><a href="../Azure.Resource.AllowedRegions/">Azure.Resource.AllowedRegions</a></td>
 <td>Resources should be deployed to allowed regions.</td>
-<td>Awareness</td>
+<td>Important</td>
 <td>Error</td>
 </tr>
 </tbody>
@@ -15305,51 +15386,9 @@
 <td>Error</td>
 </tr>
 <tr>
-<td><a href="../Azure.AppService.ManagedIdentity/">Azure.AppService.ManagedIdentity</a></td>
-<td>Configure managed identities to access Azure resources.</td>
-<td>Important</td>
-<td>Error</td>
-</tr>
-<tr>
-<td><a href="../Azure.Automation.ManagedIdentity/">Azure.Automation.ManagedIdentity</a></td>
-<td>Ensure Managed Identity is used for authentication.</td>
-<td>Important</td>
-<td>Error</td>
-</tr>
-<tr>
 <td><a href="../Azure.Automation.WebHookExpiry/">Azure.Automation.WebHookExpiry</a></td>
 <td>Do not create webhooks with an expiry time greater than 1 year (default).</td>
 <td>Awareness</td>
-<td>Error</td>
-</tr>
-<tr>
-<td><a href="../Azure.Cognitive.ManagedIdentity/">Azure.Cognitive.ManagedIdentity</a></td>
-<td>Configure managed identities to access Azure resources.</td>
-<td>Important</td>
-<td>Error</td>
-</tr>
-<tr>
-<td><a href="../Azure.ContainerApp.ManagedIdentity/">Azure.ContainerApp.ManagedIdentity</a></td>
-<td>Ensure managed identity is used for authentication.</td>
-<td>Important</td>
-<td>Error</td>
-</tr>
-<tr>
-<td><a href="../Azure.Cosmos.DisableMetadataWrite/">Azure.Cosmos.DisableMetadataWrite</a></td>
-<td>Use Azure AD identities for management place operations in Azure Cosmos DB.</td>
-<td>Important</td>
-<td>Error</td>
-</tr>
-<tr>
-<td><a href="../Azure.EventGrid.ManagedIdentity/">Azure.EventGrid.ManagedIdentity</a></td>
-<td>Use managed identities to deliver Event Grid Topic events.</td>
-<td>Important</td>
-<td>Error</td>
-</tr>
-<tr>
-<td><a href="../Azure.FrontDoor.ManagedIdentity/">Azure.FrontDoor.ManagedIdentity</a></td>
-<td>Ensure Front Door uses a managed identity to authorize access to Azure resources.</td>
-<td>Important</td>
 <td>Error</td>
 </tr>
 <tr>
@@ -15407,12 +15446,6 @@
 <td>Error</td>
 </tr>
 <tr>
-<td><a href="../Azure.Search.ManagedIdentity/">Azure.Search.ManagedIdentity</a></td>
-<td>Configure managed identities to access Azure resources.</td>
-<td>Important</td>
-<td>Error</td>
-</tr>
-<tr>
 <td><a href="../Azure.ServiceFabric.AAD/">Azure.ServiceFabric.AAD</a></td>
 <td>Use Azure Active Directory (AAD) client authentication for Service Fabric clusters.</td>
 <td>Critical</td>
@@ -15427,12 +15460,6 @@
 <tr>
 <td><a href="../Azure.SQLMI.AADOnly/">Azure.SQLMI.AADOnly</a></td>
 <td>Ensure Azure AD-only authentication is enabled with Azure SQL Managed Instance.</td>
-<td>Important</td>
-<td>Error</td>
-</tr>
-<tr>
-<td><a href="../Azure.SQLMI.ManagedIdentity/">Azure.SQLMI.ManagedIdentity</a></td>
-<td>Ensure managed identity is used to allow support for Azure AD authentication.</td>
 <td>Important</td>
 <td>Error</td>
 </tr>
@@ -15556,7 +15583,7 @@
 </tr>
 </tbody>
 </table>
-<h3 id="monitor">Monitor<a class="headerlink" href="#monitor" title="Permanent link">#</a></h3>
+<h3 id="monitor_1">Monitor<a class="headerlink" href="#monitor_1" title="Permanent link">#</a></h3>
 <table>
 <thead>
 <tr>
@@ -16091,7 +16118,7 @@
   <small>
     
       Last update:
-      2023-09-09
+      2023-09-10
     
   </small>
 </div>

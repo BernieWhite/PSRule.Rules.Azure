@@ -166,7 +166,7 @@ resource lb_001 'Microsoft.Network/loadBalancers@2023-05-01' = {
 }
 
 // An example VNET with a GatewaySubnet, AzureBastionSubnet, and AzureBastionSubnet.
-resource virtualnetwork01 'Microsoft.Network/virtualNetworks@2023-05-01' = {
+resource spoke 'Microsoft.Network/virtualNetworks@2023-05-01' = {
   name: name
   location: location
   properties: {
@@ -205,7 +205,7 @@ resource virtualnetwork01 'Microsoft.Network/virtualNetworks@2023-05-01' = {
 }
 
 // An simple VNET with DNS servers defined.
-resource virtualnetwork02 'Microsoft.Network/virtualNetworks@2023-05-01' = {
+resource hub 'Microsoft.Network/virtualNetworks@2023-05-01' = {
   name: name
   location: location
   properties: {
@@ -223,17 +223,49 @@ resource virtualnetwork02 'Microsoft.Network/virtualNetworks@2023-05-01' = {
   }
 }
 
+// An example peering connection from a spoke to a hub VNET.
+resource toHub 'Microsoft.Network/virtualNetworks/virtualNetworkPeerings@2023-05-01' = {
+  parent: spoke
+  name: 'peer-to-${hub.name}'
+  properties: {
+    remoteVirtualNetwork: {
+      id: hub.id
+    }
+    allowVirtualNetworkAccess: true
+    allowForwardedTraffic: true
+    allowGatewayTransit: false
+    useRemoteGateways: true
+  }
+}
+
+// An example peering connection from a hub to a spoke VNET.
+resource toSpoke 'Microsoft.Network/virtualNetworks/virtualNetworkPeerings@2023-05-01' = {
+  parent: hub
+  name: 'peer-to-${spoke.name}'
+  properties: {
+    remoteVirtualNetwork: {
+      id: spoke.id
+    }
+    allowVirtualNetworkAccess: true
+    allowForwardedTraffic: false
+    allowGatewayTransit: true
+    useRemoteGateways: false
+  }
+}
+
+// A gateway subnet defined as a separate sub-resource.
 resource subnet01 'Microsoft.Network/virtualNetworks/subnets@2023-05-01' = {
   name: 'GatewaySubnet'
-  parent: virtualnetwork02
+  parent: hub
   properties: {
     addressPrefix: '10.0.0.0/27'
   }
 }
 
+// A Azure Bastion Subnet defined as a separate sub-resource.
 resource subnet02 'Microsoft.Network/virtualNetworks/subnets@2023-05-01' = {
   name: 'AzureBastionSubnet'
-  parent: virtualnetwork02
+  parent: hub
   properties: {
     addressPrefix: '10.0.0.0/26'
   }

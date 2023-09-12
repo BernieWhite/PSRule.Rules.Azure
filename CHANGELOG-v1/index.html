@@ -14798,6 +14798,10 @@
   If you have this option configured, please update it to <code>AZURE_AKS_CLUSTER_MINIMUM_VERSION</code>.
   Support for <code>Azure_AKSMinimumVersion</code> will be removed in v2.
   See <a href="../upgrade-notes/">upgrade notes</a> for more information.</li>
+<li>The configuration option <code>Azure_AllowedRegions</code> is replaced with <code>AZURE_RESOURCE_ALLOWED_LOCATIONS</code>.
+  If you have this option configured, please update it to <code>AZURE_RESOURCE_ALLOWED_LOCATIONS</code>.
+  Support for <code>Azure_AllowedRegions</code> will be removed in v2.
+  See <a href="../upgrade-notes/">upgrade notes</a> for more information.</li>
 <li>The <code>SupportsTag</code> PowerShell function has been replaced with the <code>Azure.Resource.SupportsTags</code> selector.
   Update PowerShell rules to use the <code>Azure.Resource.SupportsTags</code> selector instead.
   Support for the <code>SupportsTag</code> function will be removed in v2.
@@ -14806,6 +14810,18 @@
 <h2 id="unreleased">Unreleased<a class="headerlink" href="#unreleased" title="Permanent link">#</a></h2>
 <p>What's changed since pre-release v1.30.0-B0047:</p>
 <ul>
+<li>General improvements:<ul>
+<li><strong>Important change:</strong> Replaced <code>Azure_AllowedRegions</code> option with <code>AZURE_RESOURCE_ALLOWED_LOCATIONS</code>. <a href="https://github.com/Azure/PSRule.Rules.Azure/issues/941">#941</a><ul>
+<li>For compatibility, if <code>Azure_AllowedRegions</code> is set it will be used instead of <code>AZURE_RESOURCE_ALLOWED_LOCATIONS</code>.</li>
+<li>If only <code>AZURE_RESOURCE_ALLOWED_LOCATIONS</code> is set, this value will be used.</li>
+<li>The default will be used neither options are configured.</li>
+<li>If <code>Azure_AllowedRegions</code> is set a warning will be generated until the configuration is removed.</li>
+<li>Support for <code>Azure_AllowedRegions</code> is deprecated and will be removed in v2.</li>
+<li>See <a href="../upgrade-notes/">upgrade notes</a> for details.</li>
+</ul>
+</li>
+</ul>
+</li>
 <li>Engineering:<ul>
 <li>Bump Microsoft.NET.Test.Sdk to v17.7.2.
   <a href="https://github.com/Azure/PSRule.Rules.Azure/pull/2407">#2407</a></li>
@@ -20332,7 +20348,7 @@ What's changed since v1.24.0:</p>
   <small>
     
       Last update:
-      2023-09-10
+      2023-09-11
     
   </small>
 </div>

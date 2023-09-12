@@ -5,14 +5,14 @@
     "_generator": {
       "name": "bicep",
       "version": "0.21.1.54444",
-      "templateHash": "6171102942432720653"
+      "templateHash": "13877373436409452980"
     }
   },
   "parameters": {
     "name": {
       "type": "string",
       "metadata": {
-        "description": "The name of the Web PubSub service."
+        "description": "The name of the resource."
       }
     },
     "location": {
@@ -25,19 +25,24 @@
   },
   "resources": [
     {
-      "type": "Microsoft.SignalRService/webPubSub",
-      "apiVersion": "2023-02-01",
+      "type": "Microsoft.Network/publicIPAddresses",
+      "apiVersion": "2023-05-01",
       "name": "[parameters('name')]",
       "location": "[parameters('location')]",
       "sku": {
-        "name": "Standard_S1"
-      },
-      "identity": {
-        "type": "SystemAssigned"
+        "name": "Standard",
+        "tier": "Regional"
       },
       "properties": {
-        "disableLocalAuth": true
-      }
+        "publicIPAddressVersion": "IPv4",
+        "publicIPAllocationMethod": "Static",
+        "idleTimeoutInMinutes": 4
+      },
+      "zones": [
+        "1",
+        "2",
+        "3"
+      ]
     }
   ]
 }

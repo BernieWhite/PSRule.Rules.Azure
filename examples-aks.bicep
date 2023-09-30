@@ -46,7 +46,7 @@ param systemPoolMin int
 param systemPoolMax int = 3
 
 @description('The version of Kubernetes.')
-param kubernetesVersion string = '1.25.6'
+param kubernetesVersion string = '1.26.6'
 
 @description('Maximum number of pods that can run on nodes in the system pool.')
 @minValue(30)
@@ -124,13 +124,13 @@ var userPools = [for i in range(0, length(pools)): {
 // Define resources
 
 // Cluster managed identity
-resource identity 'Microsoft.ManagedIdentity/userAssignedIdentities@2018-11-30' = {
+resource identity 'Microsoft.ManagedIdentity/userAssignedIdentities@2023-01-31' = {
   name: identityName
   location: location
 }
 
 // An example AKS cluster
-resource cluster 'Microsoft.ContainerService/managedClusters@2023-04-01' = {
+resource cluster 'Microsoft.ContainerService/managedClusters@2023-07-01' = {
   location: location
   name: name
   identity: {
@@ -185,7 +185,7 @@ resource cluster 'Microsoft.ContainerService/managedClusters@2023-04-01' = {
 }
 
 // An example AKS cluster with pools defined.
-resource clusterWithPools 'Microsoft.ContainerService/managedClusters@2023-04-01' = {
+resource clusterWithPools 'Microsoft.ContainerService/managedClusters@2023-07-01' = {
   location: location
   name: name
   identity: {

@@ -12122,20 +12122,38 @@
  · <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M7.75 6.5a1.25 1.25 0 1 0 0 2.5 1.25 1.25 0 0 0 0-2.5Z"/><path d="M2.5 1h8.44a1.5 1.5 0 0 1 1.06.44l10.25 10.25a1.5 1.5 0 0 1 0 2.12l-8.44 8.44a1.5 1.5 0 0 1-2.12 0L1.44 12A1.497 1.497 0 0 1 1 10.94V2.5A1.5 1.5 0 0 1 2.5 1Zm0 1.5v8.44l10.25 10.25 8.44-8.44L10.94 2.5Z"/></svg></span> 2020_06</p>
 <p>AKS control plane and nodes pools should use a current stable release.</p>
 <h2 id="description">Description<a class="headerlink" href="#description" title="Permanent link">#</a></h2>
-<p>The AKS support policy for Kubernetes is include N-2 stable minor releases.
-Additionally two patch releases for each minor version are supported.</p>
+<p>The AKS Kubernetes support policy provides support for the latest generally available (GA) three minor versions (N-2).
+This version support policy is based on the Kubernetes community support policy, who maintain the Kubernetes project.
+As the Kubernetes releases new minor versions, the old minor versions are deprecated and eventually removed from support.</p>
+<p>When your cluster or cluster nodes are running a version that is no longer supported, you may:</p>
+<ul>
+<li>Encounter issues that may adversely affect the reliability of your cluster and cause down time.</li>
+<li>Have bugs or security vulnerabilities that have already been mitigated by the Kubernetes community.</li>
+<li>Introduce additional risk to your cluster and applications when you upgrade to a supported version.</li>
+</ul>
+<p>Additionally, AKS provides <em>Platform Support</em> for subset of components following an N-3.</p>
+<p>AKS supports a feature called cluster auto-upgrade, which can be used to reduce operational overhead of upgrading your cluster.
+This feature allows you to configure your cluster to automatically upgrade to the latest supported minor version of Kubernetes.
+When you enable cluster auto-upgrade, the control plane and node pools are upgraded to the latest supported minor version.
+Two channels are available for cluster auto-upgrade that maintain Kubernetes minor versions <code>stable</code> and <code>rapid</code>.
+For details on the differences between the two channels, see the references below.</p>
+<p>You are able to define a planned maintenance window to schedule and control upgrades to your cluster.
+Use the Planned Maintenance window to schedule upgrades to your cluster during times of low business impact.
+Alternatively, consider using blue / green clusters.</p>
 <h2 id="recommendation">Recommendation<a class="headerlink" href="#recommendation" title="Permanent link">#</a></h2>
-<p>Consider upgrading AKS control plane and nodes pools to the latest stable version of Kubernetes.</p>
+<p>Consider upgrading AKS control plane and nodes pools to the latest stable version of Kubernetes.
+Also consider enabling cluster auto-upgrade within a maintenance window to minimize operational overhead of cluster upgrades.</p>
 <h2 id="examples">Examples<a class="headerlink" href="#examples" title="Permanent link">#</a></h2>
 <h3 id="configure-with-azure-template">Configure with Azure template<a class="headerlink" href="#configure-with-azure-template" title="Permanent link">#</a></h3>
 <p>To deploy AKS clusters that pass this rule:</p>
 <ul>
-<li>Set <code>properties.autoUpgradeProfile.upgradeChannel</code> to <code>rapid</code> or <code>stable</code> or <code>node-image</code> or set <code>properties.kubernetesVersion</code> to a newer stable version.</li>
+<li>Set <code>properties.autoUpgradeProfile.upgradeChannel</code> to <code>rapid</code> or <code>stable</code>. OR</li>
+<li>Set <code>properties.kubernetesVersion</code> to a newer stable version.</li>
 </ul>
 <p>For example:</p>
 <div class="language-json highlight"><span class="filename">Azure Template snippet</span><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="p">{</span>
 </span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="w">    </span><span class="nt">&quot;type&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Microsoft.ContainerService/managedClusters&quot;</span><span class="p">,</span>
-</span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a><span class="w">    </span><span class="nt">&quot;apiVersion&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;2021-10-01&quot;</span><span class="p">,</span>
+</span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a><span class="w">    </span><span class="nt">&quot;apiVersion&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;2023-07-01&quot;</span><span class="p">,</span>
 </span><span id="__span-0-4"><a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a><span class="w">    </span><span class="nt">&quot;name&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;[parameters(&#39;clusterName&#39;)]&quot;</span><span class="p">,</span>
 </span><span id="__span-0-5"><a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a><span class="w">    </span><span class="nt">&quot;location&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;[parameters(&#39;location&#39;)]&quot;</span><span class="p">,</span>
 </span><span id="__span-0-6"><a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a><span class="w">    </span><span class="nt">&quot;identity&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
@@ -12145,7 +12163,7 @@ Additionally two patch releases for each minor version are supported.</p>
 </span><span id="__span-0-10"><a id="__codelineno-0-10" name="__codelineno-0-10" href="#__codelineno-0-10"></a><span class="w">        </span><span class="p">}</span>
 </span><span id="__span-0-11"><a id="__codelineno-0-11" name="__codelineno-0-11" href="#__codelineno-0-11"></a><span class="w">    </span><span class="p">},</span>
 </span><span id="__span-0-12"><a id="__codelineno-0-12" name="__codelineno-0-12" href="#__codelineno-0-12"></a><span class="w">    </span><span class="nt">&quot;properties&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
-</span><span id="__span-0-13"><a id="__codelineno-0-13" name="__codelineno-0-13" href="#__codelineno-0-13"></a><span class="w">        </span><span class="nt">&quot;kubernetesVersion&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;1.25.6&quot;</span><span class="p">,</span>
+</span><span id="__span-0-13"><a id="__codelineno-0-13" name="__codelineno-0-13" href="#__codelineno-0-13"></a><span class="w">        </span><span class="nt">&quot;kubernetesVersion&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;1.26.6&quot;</span><span class="p">,</span>
 </span><span id="__span-0-14"><a id="__codelineno-0-14" name="__codelineno-0-14" href="#__codelineno-0-14"></a><span class="w">        </span><span class="nt">&quot;enableRBAC&quot;</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span>
 </span><span id="__span-0-15"><a id="__codelineno-0-15" name="__codelineno-0-15" href="#__codelineno-0-15"></a><span class="w">        </span><span class="nt">&quot;dnsPrefix&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;[parameters(&#39;dnsPrefix&#39;)]&quot;</span><span class="p">,</span>
 </span><span id="__span-0-16"><a id="__codelineno-0-16" name="__codelineno-0-16" href="#__codelineno-0-16"></a><span class="w">        </span><span class="nt">&quot;agentPoolProfiles&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;[variables(&#39;allPools&#39;)]&quot;</span><span class="p">,</span>
@@ -12205,10 +12223,11 @@ Additionally two patch releases for each minor version are supported.</p>
 <h3 id="configure-with-bicep">Configure with Bicep<a class="headerlink" href="#configure-with-bicep" title="Permanent link">#</a></h3>
 <p>To deploy AKS clusters that pass this rule:</p>
 <ul>
-<li>Set <code>properties.autoUpgradeProfile.upgradeChannel</code> to <code>rapid</code> or <code>stable</code> or <code>node-image</code> or set <code>properties.kubernetesVersion</code> to a newer stable version.</li>
+<li>Set <code>properties.autoUpgradeProfile.upgradeChannel</code> to <code>rapid</code> or <code>stable</code>. OR</li>
+<li>Set <code>properties.kubernetesVersion</code> to a newer stable version.</li>
 </ul>
 <p>For example:</p>
-<div class="language-text highlight"><span class="filename">Azure Bicep snippet</span><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>resource cluster &#39;Microsoft.ContainerService/managedClusters@2021-10-01&#39; = {
+<div class="language-text highlight"><span class="filename">Azure Bicep snippet</span><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>resource cluster &#39;Microsoft.ContainerService/managedClusters@2023-07-01&#39; = {
 </span><span id="__span-1-2"><a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a>  location: location
 </span><span id="__span-1-3"><a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a>  name: clusterName
 </span><span id="__span-1-4"><a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a>  identity: {
@@ -12218,7 +12237,7 @@ Additionally two patch releases for each minor version are supported.</p>
 </span><span id="__span-1-8"><a id="__codelineno-1-8" name="__codelineno-1-8" href="#__codelineno-1-8"></a>    }
 </span><span id="__span-1-9"><a id="__codelineno-1-9" name="__codelineno-1-9" href="#__codelineno-1-9"></a>  }
 </span><span id="__span-1-10"><a id="__codelineno-1-10" name="__codelineno-1-10" href="#__codelineno-1-10"></a>  properties: {
-</span><span id="__span-1-11"><a id="__codelineno-1-11" name="__codelineno-1-11" href="#__codelineno-1-11"></a>    kubernetesVersion: &#39;1.25.6&#39;
+</span><span id="__span-1-11"><a id="__codelineno-1-11" name="__codelineno-1-11" href="#__codelineno-1-11"></a>    kubernetesVersion: &#39;1.26.6&#39;
 </span><span id="__span-1-12"><a id="__codelineno-1-12" name="__codelineno-1-12" href="#__codelineno-1-12"></a>    enableRBAC: true
 </span><span id="__span-1-13"><a id="__codelineno-1-13" name="__codelineno-1-13" href="#__codelineno-1-13"></a>    dnsPrefix: dnsPrefix
 </span><span id="__span-1-14"><a id="__codelineno-1-14" name="__codelineno-1-14" href="#__codelineno-1-14"></a>    agentPoolProfiles: allPools
@@ -12275,10 +12294,10 @@ Additionally two patch releases for each minor version are supported.</p>
 <h3 id="configure-with-azure-cli">Configure with Azure CLI<a class="headerlink" href="#configure-with-azure-cli" title="Permanent link">#</a></h3>
 <div class="language-bash highlight"><span class="filename">Azure CLI snippet</span><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>az<span class="w"> </span>aks<span class="w"> </span>update<span class="w"> </span>-n<span class="w"> </span><span class="s1">&#39;&lt;name&gt;&#39;</span><span class="w"> </span>-g<span class="w"> </span><span class="s1">&#39;&lt;resource_group&gt;&#39;</span><span class="w"> </span>--auto-upgrade-channel<span class="w"> </span><span class="s1">&#39;stable&#39;</span>
 </span></code></pre></div>
-<div class="language-bash highlight"><span class="filename">Azure CLI snippet</span><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>az<span class="w"> </span>aks<span class="w"> </span>upgrade<span class="w"> </span>-n<span class="w"> </span><span class="s1">&#39;&lt;name&gt;&#39;</span><span class="w"> </span>-g<span class="w"> </span><span class="s1">&#39;&lt;resource_group&gt;&#39;</span><span class="w"> </span>--kubernetes-version<span class="w"> </span><span class="s1">&#39;1.25.6&#39;</span>
+<div class="language-bash highlight"><span class="filename">Azure CLI snippet</span><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>az<span class="w"> </span>aks<span class="w"> </span>upgrade<span class="w"> </span>-n<span class="w"> </span><span class="s1">&#39;&lt;name&gt;&#39;</span><span class="w"> </span>-g<span class="w"> </span><span class="s1">&#39;&lt;resource_group&gt;&#39;</span><span class="w"> </span>--kubernetes-version<span class="w"> </span><span class="s1">&#39;1.26.6&#39;</span>
 </span></code></pre></div>
 <h3 id="configure-with-azure-powershell">Configure with Azure PowerShell<a class="headerlink" href="#configure-with-azure-powershell" title="Permanent link">#</a></h3>
-<div class="language-powershell highlight"><span class="filename">Azure PowerShell snippet</span><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a><span class="nb">Set-AzAksCluster</span> <span class="n">-Name</span> <span class="s1">&#39;&lt;name&gt;&#39;</span> <span class="n">-ResourceGroupName</span> <span class="s1">&#39;&lt;resource_group&gt;&#39;</span> <span class="n">-KubernetesVersion</span> <span class="s1">&#39;1.25.6&#39;</span>
+<div class="language-powershell highlight"><span class="filename">Azure PowerShell snippet</span><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a><span class="nb">Set-AzAksCluster</span> <span class="n">-Name</span> <span class="s1">&#39;&lt;name&gt;&#39;</span> <span class="n">-ResourceGroupName</span> <span class="s1">&#39;&lt;resource_group&gt;&#39;</span> <span class="n">-KubernetesVersion</span> <span class="s1">&#39;1.26.6&#39;</span>
 </span></code></pre></div>
 <h2 id="notes">Notes<a class="headerlink" href="#notes" title="Permanent link">#</a></h2>
 <p>A list of available Kubernetes versions can be found using the <code>az aks get-versions -o table --location &lt;location&gt;</code> CLI command.
@@ -12286,13 +12305,19 @@ To configure this rule:</p>
 <ul>
 <li>Override the <code>AZURE_AKS_CLUSTER_MINIMUM_VERSION</code> configuration value with the minimum Kubernetes version.</li>
 </ul>
+<p>If you must maintain AKS clusters for longer then the community support period, consider switch to Long Term Support (LTS).
+AKS LTS provides support for a specific Kubernetes version for a longer period of time.
+The first LTS release is 1.27.</p>
 <h2 id="links">Links<a class="headerlink" href="#links" title="Permanent link">#</a></h2>
 <ul>
-<li><a href="https://learn.microsoft.com/azure/architecture/framework/resiliency/design-requirements#meet-application-platform-requirements">Target and non-functional requirements</a></li>
+<li><a href="https://learn.microsoft.com/azure/well-architected/resiliency/design-requirements#meet-application-platform-requirements">Target and non-functional requirements</a></li>
 <li><a href="https://learn.microsoft.com/azure/aks/auto-upgrade-cluster">Automatically upgrade an Azure Kubernetes Service cluster</a></li>
-<li><a href="https://docs.microsoft.com/azure/aks/supported-kubernetes-versions">Supported Kubernetes versions in Azure Kubernetes Service</a></li>
-<li><a href="https://docs.microsoft.com/azure/aks/support-policies">Support policies for Azure Kubernetes Service</a></li>
-<li><a href="https://docs.microsoft.com/azure/templates/microsoft.containerservice/managedclusters">Azure deployment reference</a></li>
+<li><a href="https://learn.microsoft.com/azure/aks/supported-kubernetes-versions#kubernetes-version-support-policy">Supported Kubernetes versions in Azure Kubernetes Service</a></li>
+<li><a href="https://learn.microsoft.com/azure/aks/support-policies">Support policies for Azure Kubernetes Service</a></li>
+<li><a href="https://learn.microsoft.com/azure/aks/supported-kubernetes-versions#platform-support-policy">Platform support policy</a></li>
+<li><a href="https://learn.microsoft.com/azure/architecture/guide/aks/blue-green-deployment-for-aks">Blue-green deployment of AKS clusters</a></li>
+<li><a href="https://learn.microsoft.com/azure/aks/supported-kubernetes-version#long-term-support-lts">Long Term Support (LTS)</a></li>
+<li><a href="https://learn.microsoft.com/azure/templates/microsoft.containerservice/managedclusters">Azure deployment reference</a></li>
 </ul>
 
   <!-- Last update of source file -->
@@ -12303,7 +12328,7 @@ To configure this rule:</p>
   <small>
     
       Last update:
-      2023-04-06
+      2023-09-30
     
   </small>
 </div>

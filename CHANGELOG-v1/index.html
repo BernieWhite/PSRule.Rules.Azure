@@ -14924,6 +14924,17 @@
 </li>
 </ul>
 </li>
+<li>Updated rules:<ul>
+<li>Azure Kubernetes Service:<ul>
+<li>Updated <code>Azure.AKS.Version</code> to use latest stable version <code>1.26.6</code> by <a href="https://github.com/BernieWhite">@BernieWhite</a>.
+  <a href="https://github.com/Azure/PSRule.Rules.Azure/issues/2404">#2404</a><ul>
+<li>Use <code>AZURE_AKS_CLUSTER_MINIMUM_VERSION</code> to configure the minimum version of the cluster.</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
 <li>Engineering:<ul>
 <li>Updated resource providers and policy aliases.
   <a href="https://github.com/Azure/PSRule.Rules.Azure/pull/2442">#2442</a></li>
@@ -14931,6 +14942,11 @@
   <a href="https://github.com/Azure/PSRule.Rules.Azure/pull/2436">#2436</a></li>
 <li>Bump xunit.runner.visualstudio to v2.5.1.
   <a href="https://github.com/Azure/PSRule.Rules.Azure/pull/2435">#2435</a></li>
+</ul>
+</li>
+<li>Bug fixes:<ul>
+<li>Fixed <code>Azure.AKS.Version</code> by excluding <code>node-image</code> channel by <a href="https://github.com/BernieWhite">@BernieWhite</a>.
+  <a href="https://github.com/Azure/PSRule.Rules.Azure/issues/2446">#2446</a></li>
 </ul>
 </li>
 </ul>
@@ -20476,7 +20492,7 @@ What's changed since v1.24.0:</p>
   <small>
     
       Last update:
-      2023-09-28
+      2023-09-30
     
   </small>
 </div>

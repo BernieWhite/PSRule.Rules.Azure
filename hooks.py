@@ -84,6 +84,9 @@ def replace_maml(markdown: str, page: mkdocs.structure.nav.Page, config: mkdocs.
     if page.meta.get("resource", "None") != "None":
         markdown = markdown.replace("<!-- TAGS -->", " · [:octicons-container-24: " + page.meta['resource'] + "](resource.md#" + page.meta['resource'].lower().replace(" ", "-") + ")\r<!-- TAGS -->")
 
+    if page.meta.get('source', 'None') != 'None':
+        markdown = markdown.replace("<!-- TAGS -->", " · [:octicons-file-code-24: Rule](" + page.meta['source'] + ")\r<!-- TAGS -->")
+
     if page.meta.get('release', 'None') == 'preview':
         markdown = markdown.replace("<!-- TAGS -->", " · :octicons-beaker-24: Preview\r<!-- TAGS -->")
 
@@ -127,6 +130,10 @@ def read_metadata(page: mkdocs.structure.nav.Page):
         if page.meta.get('rule', '') != '' and data.get(name, None) != None and data[name].get('Synopsis', None) != None:
             description = data[name]['Synopsis']
             page.meta['description'] = description
+
+        if page.meta.get('rule', '') != '' and data.get(name, None) != None and data[name].get('Source', None) != None:
+            page.meta['source'] = data[name]['Source']
+
 
     page.meta['tags'] = tags
 

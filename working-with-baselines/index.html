@@ -11140,6 +11140,10 @@
       
         
       
+        
+      
+        
+      
     
     
     
@@ -11476,6 +11480,26 @@
   
   
     <li class="md-nav__item">
+      <a href="../en/baselines/Azure.GA_2023_09/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Azure.GA_2023_09
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
       <a href="../en/baselines/Azure.MCSB.v1/" class="md-nav__link">
         
   
@@ -11661,6 +11685,26 @@
   
   <span class="md-ellipsis">
     Azure.Preview_2023_06
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../en/baselines/Azure.Preview_2023_09/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Azure.Preview_2023_09
   </span>
   
 
@@ -12145,7 +12189,7 @@ See <a href="../en/baselines/Azure.All/">reference</a> for a list baselines ship
 </span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a><span class="w">  </span><span class="nt">uses</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">microsoft/ps-rule@v2.9.0</span>
 </span><span id="__span-0-4"><a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a><span class="w">  </span><span class="nt">with</span><span class="p">:</span>
 </span><span id="__span-0-5"><a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a><span class="w">    </span><span class="nt">modules</span><span class="p">:</span><span class="w"> </span><span class="s">&#39;PSRule.Rules.Azure&#39;</span>
-</span><span id="__span-0-6"><a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a><span class="w">    </span><span class="nt">baseline</span><span class="p">:</span><span class="w"> </span><span class="s">&#39;Azure.GA_2023_03&#39;</span>
+</span><span id="__span-0-6"><a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a><span class="w">    </span><span class="nt">baseline</span><span class="p">:</span><span class="w"> </span><span class="s">&#39;Azure.GA_2023_09&#39;</span>
 </span></code></pre></div>
 </div>
 <div class="tabbed-block">
@@ -12155,14 +12199,14 @@ See <a href="../en/baselines/Azure.All/">reference</a> for a list baselines ship
 </span><span id="__span-1-3"><a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a><span class="w">  </span><span class="nt">displayName</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Analyze Azure template files</span>
 </span><span id="__span-1-4"><a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a><span class="w">  </span><span class="nt">inputs</span><span class="p">:</span>
 </span><span id="__span-1-5"><a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a><span class="w">    </span><span class="nt">modules</span><span class="p">:</span><span class="w"> </span><span class="s">&#39;PSRule.Rules.Azure&#39;</span>
-</span><span id="__span-1-6"><a id="__codelineno-1-6" name="__codelineno-1-6" href="#__codelineno-1-6"></a><span class="w">    </span><span class="nt">baseline</span><span class="p">:</span><span class="w"> </span><span class="s">&#39;Azure.GA_2023_03&#39;</span>
+</span><span id="__span-1-6"><a id="__codelineno-1-6" name="__codelineno-1-6" href="#__codelineno-1-6"></a><span class="w">    </span><span class="nt">baseline</span><span class="p">:</span><span class="w"> </span><span class="s">&#39;Azure.GA_2023_09&#39;</span>
 </span></code></pre></div>
 </div>
 <div class="tabbed-block">
 <p>Update your PowerShell command-line with <code>-Baseline &lt;name_of_baseline&gt;</code>.</p>
-<div class="language-powershell highlight"><span class="filename">With Assert-PSRule</span><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="nb">Assert-PSRule</span> <span class="n">-Format</span> <span class="n">File</span> <span class="n">-InputPath</span> <span class="s1">&#39;.&#39;</span> <span class="n">-Module</span> <span class="s1">&#39;PSRule.Rules.Azure&#39;</span> <span class="n">-Baseline</span> <span class="s1">&#39;Azure.GA_2023_03&#39;</span>
+<div class="language-powershell highlight"><span class="filename">With Assert-PSRule</span><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="nb">Assert-PSRule</span> <span class="n">-Format</span> <span class="n">File</span> <span class="n">-InputPath</span> <span class="s1">&#39;.&#39;</span> <span class="n">-Module</span> <span class="s1">&#39;PSRule.Rules.Azure&#39;</span> <span class="n">-Baseline</span> <span class="s1">&#39;Azure.GA_2023_09&#39;</span>
 </span></code></pre></div>
-<div class="language-powershell highlight"><span class="filename">With Invoke-PSRule</span><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="nb">Invoke-PSRule</span> <span class="n">-Format</span> <span class="n">File</span> <span class="n">-InputPath</span> <span class="s1">&#39;.&#39;</span> <span class="n">-Module</span> <span class="s1">&#39;PSRule.Rules.Azure&#39;</span> <span class="n">-Baseline</span> <span class="s1">&#39;Azure.GA_2023_03&#39;</span>
+<div class="language-powershell highlight"><span class="filename">With Invoke-PSRule</span><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="nb">Invoke-PSRule</span> <span class="n">-Format</span> <span class="n">File</span> <span class="n">-InputPath</span> <span class="s1">&#39;.&#39;</span> <span class="n">-Module</span> <span class="s1">&#39;PSRule.Rules.Azure&#39;</span> <span class="n">-Baseline</span> <span class="s1">&#39;Azure.GA_2023_09&#39;</span>
 </span></code></pre></div>
 </div>
 </div>
@@ -12185,7 +12229,7 @@ This option can be set in <code>ps-rule.yaml</code>.</p>
   <small>
     
       Last update:
-      2023-07-31
+      2023-09-30
     
   </small>
 </div>

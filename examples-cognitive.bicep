@@ -10,7 +10,7 @@ param name string
 param location string = resourceGroup().location
 
 // An example multi-service cognitive services account
-resource account 'Microsoft.CognitiveServices/accounts@2022-03-01' = {
+resource account 'Microsoft.CognitiveServices/accounts@2023-05-01' = {
   name: name
   location: location
   identity: {

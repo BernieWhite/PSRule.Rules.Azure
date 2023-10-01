@@ -4,8 +4,8 @@
   "metadata": {
     "_generator": {
       "name": "bicep",
-      "version": "0.8.9.13224",
-      "templateHash": "11381831083074745449"
+      "version": "0.21.1.54444",
+      "templateHash": "17850178672994683728"
     }
   },
   "parameters": {
@@ -26,7 +26,7 @@
   "resources": [
     {
       "type": "Microsoft.CognitiveServices/accounts",
-      "apiVersion": "2022-03-01",
+      "apiVersion": "2023-05-01",
       "name": "[parameters('name')]",
       "location": "[parameters('location')]",
       "identity": {

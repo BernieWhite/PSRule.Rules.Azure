@@ -4,8 +4,8 @@
   "metadata": {
     "_generator": {
       "name": "bicep",
-      "version": "0.16.2.56959",
-      "templateHash": "12316369736007793712"
+      "version": "0.21.1.54444",
+      "templateHash": "14295091017114091018"
     }
   },
   "parameters": {
@@ -33,6 +33,12 @@
       "metadata": {
         "description": "The name of a Log Analytics workspace"
       }
+    },
+    "revision": {
+      "type": "string",
+      "metadata": {
+        "description": "The revision of the container app."
+      }
     }
   },
   "variables": {
@@ -50,7 +56,7 @@
   "resources": [
     {
       "type": "Microsoft.App/managedEnvironments",
-      "apiVersion": "2022-10-01",
+      "apiVersion": "2023-05-01",
       "name": "[parameters('envName')]",
       "location": "[parameters('location')]",
       "properties": {
@@ -65,18 +71,24 @@
     },
     {
       "type": "Microsoft.App/containerApps",
-      "apiVersion": "2022-10-01",
+      "apiVersion": "2023-05-01",
       "name": "[parameters('appName')]",
       "location": "[parameters('location')]",
+      "identity": {
+        "type": "SystemAssigned"
+      },
       "properties": {
-        "managedEnvironmentId": "[resourceId('Microsoft.App/managedEnvironments', parameters('envName'))]",
+        "environmentId": "[resourceId('Microsoft.App/managedEnvironments', parameters('envName'))]",
         "template": {
-          "revisionSuffix": "",
+          "revisionSuffix": "[parameters('revision')]",
           "containers": "[variables('containers')]"
         },
         "configuration": {
           "ingress": {
-            "allowInsecure": false
+            "allowInsecure": false,
+            "stickySessions": {
+              "affinity": "none"
+            }
           }
         }
       },

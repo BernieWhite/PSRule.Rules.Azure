@@ -1515,6 +1515,13 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#v1300" class="md-nav__link">
+    v1.30.0
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#v1300-b0127-pre-release" class="md-nav__link">
     v1.30.0-B0127 (pre-release)
   </a>
@@ -13469,6 +13476,13 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#v1300" class="md-nav__link">
+    v1.30.0
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#v1300-b0127-pre-release" class="md-nav__link">
     v1.30.0-B0127 (pre-release)
   </a>
@@ -14970,6 +14984,135 @@
   See <a href="../upgrade-notes/">upgrade notes</a> for more information.</li>
 </ul>
 <h2 id="unreleased">Unreleased<a class="headerlink" href="#unreleased" title="Permanent link">#</a></h2>
+<h2 id="v1300">v1.30.0<a class="headerlink" href="#v1300" title="Permanent link">#</a></h2>
+<p>What's changed since v1.29.0:</p>
+<ul>
+<li>New features:<ul>
+<li>Added September 2023 baselines <code>Azure.GA_2023_09</code> and <code>Azure.Preview_2023_09</code> by <a href="https://github.com/BernieWhite">@BernieWhite</a>.
+  <a href="https://github.com/Azure/PSRule.Rules.Azure/issues/2451">#2451</a><ul>
+<li>Includes rules released before or during September 2023.</li>
+<li>Marked <code>Azure.GA_2023_06</code> and <code>Azure.Preview_2023_06</code> baselines as obsolete.</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>New rules:<ul>
+<li>Azure Container Apps:<ul>
+<li>Check that Container Apps uses a supported API version by <a href="https://github.com/BenjaminEngeset">@BenjaminEngeset</a>.
+  <a href="https://github.com/Azure/PSRule.Rules.Azure/issues/2398">#2398</a></li>
+</ul>
+</li>
+<li>Azure Container Registry:<ul>
+<li>Check that Container Registries restricts network access by <a href="https://github.com/BenjaminEngeset">@BenjaminEngeset</a>.
+  <a href="https://github.com/Azure/PSRule.Rules.Azure/issues/2423">#2423</a></li>
+<li>Check that Container Registries disables anonymous pull access by <a href="https://github.com/BenjaminEngeset">@BenjaminEngeset</a>.
+  <a href="https://github.com/Azure/PSRule.Rules.Azure/issues/2422">#2422</a></li>
+</ul>
+</li>
+<li>Azure Database for MySQL:<ul>
+<li>Check that Azure AD-only authentication is configured for Azure Database for MySQL databases by <a href="https://github.com/BenjaminEngeset">@BenjaminEngeset</a>.
+  <a href="https://github.com/Azure/PSRule.Rules.Azure/issues/2227">#2227</a></li>
+</ul>
+</li>
+<li>Azure Firewall:<ul>
+<li>Check that Azure Firewall polices has configured threat intelligence-based filtering in <code>alert and deny</code> mode by <a href="https://github.com/BenjaminEngeset">@BenjaminEngeset</a>.
+  <a href="https://github.com/Azure/PSRule.Rules.Azure/issues/2354">#2354</a></li>
+</ul>
+</li>
+<li>Backup vault:<ul>
+<li>Check that immutability is configured for Backup vaults by <a href="https://github.com/BenjaminEngeset">@BenjaminEngeset</a>.
+  <a href="https://github.com/Azure/PSRule.Rules.Azure/issues/2387">#2387</a></li>
+</ul>
+</li>
+<li>Front Door:<ul>
+<li>Check that managed identity for Azure Front Door instances are configured by <a href="https://github.com/BenjaminEngeset">@BenjaminEngeset</a>.
+  <a href="https://github.com/Azure/PSRule.Rules.Azure/issues/2378">#2378</a></li>
+</ul>
+</li>
+<li>Public IP address:<ul>
+<li>Check that Public IP addresses uses Standard SKU by <a href="https://github.com/BenjaminEngeset">@BenjaminEngeset</a>.
+  <a href="https://github.com/Azure/PSRule.Rules.Azure/issues/2376">#2376</a></li>
+</ul>
+</li>
+<li>Recovery Services vault:<ul>
+<li>Check that immutability is configured for Recovery Services vaults by <a href="https://github.com/BenjaminEngeset">@BenjaminEngeset</a>.
+  <a href="https://github.com/Azure/PSRule.Rules.Azure/issues/2386">#2386</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li>Updated rules:<ul>
+<li>Azure Kubernetes Service:<ul>
+<li>Updated <code>Azure.AKS.Version</code> to use latest stable version <code>1.26.6</code> by <a href="https://github.com/BernieWhite">@BernieWhite</a>.
+  <a href="https://github.com/Azure/PSRule.Rules.Azure/issues/2404">#2404</a><ul>
+<li>Use <code>AZURE_AKS_CLUSTER_MINIMUM_VERSION</code> to configure the minimum version of the cluster.</li>
+</ul>
+</li>
+<li>Promoted <code>Azure.AKS.LocalAccounts</code> to GA rule set by <a href="https://github.com/BernieWhite">@BernieWhite</a>.
+  <a href="https://github.com/Azure/PSRule.Rules.Azure/issues/2448">#2448</a></li>
+</ul>
+</li>
+<li>Container App:<ul>
+<li>Promoted <code>Azure.ContainerApp.DisableAffinity</code> to GA rule set by <a href="https://github.com/BernieWhite">@BernieWhite</a>.
+  <a href="https://github.com/Azure/PSRule.Rules.Azure/issues/2455">#2455</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li>General improvements:<ul>
+<li><strong>Important change:</strong> Replaced the <code>Azure_AllowedRegions</code> option with <code>AZURE_RESOURCE_ALLOWED_LOCATIONS</code>.
+  <a href="https://github.com/Azure/PSRule.Rules.Azure/issues/941">#941</a><ul>
+<li>For compatibility, if <code>Azure_AllowedRegions</code> is set it will be used instead of <code>AZURE_RESOURCE_ALLOWED_LOCATIONS</code>.</li>
+<li>If only <code>AZURE_RESOURCE_ALLOWED_LOCATIONS</code> is set, this value will be used.</li>
+<li>The default will be used neither options are configured.</li>
+<li>If <code>Azure_AllowedRegions</code> is set a warning will be generated until the configuration is removed.</li>
+<li>Support for <code>Azure_AllowedRegions</code> is deprecated and will be removed in v2.</li>
+<li>See <a href="../upgrade-notes/">upgrade notes</a> for details.</li>
+</ul>
+</li>
+<li>Add source link for rule in docs by <a href="https://github.com/BernieWhite">@BernieWhite</a>.
+  <a href="https://github.com/Azure/PSRule.Rules.Azure/issues/2115">#2115</a></li>
+</ul>
+</li>
+<li>Engineering:<ul>
+<li>Updated resource providers and policy aliases.
+  <a href="https://github.com/Azure/PSRule.Rules.Azure/pull/2442">#2442</a></li>
+<li>Bump xunit to v2.5.1.
+  <a href="https://github.com/Azure/PSRule.Rules.Azure/pull/2436">#2436</a></li>
+<li>Bump xunit.runner.visualstudio to v2.5.1.
+  <a href="https://github.com/Azure/PSRule.Rules.Azure/pull/2435">#2435</a></li>
+<li>Bump Microsoft.NET.Test.Sdk to v17.7.2.
+  <a href="https://github.com/Azure/PSRule.Rules.Azure/pull/2407">#2407</a></li>
+<li>Bump BenchmarkDotNet to v0.13.8.
+  <a href="https://github.com/Azure/PSRule.Rules.Azure/pull/2425">#2425</a></li>
+<li>Bump BenchmarkDotNet.Diagnostics.Windows to v0.13.8.
+  <a href="https://github.com/Azure/PSRule.Rules.Azure/pull/2425">#2425</a></li>
+<li>Bump Microsoft.CodeAnalysis.NetAnalyzers to v7.0.4.
+  <a href="https://github.com/Azure/PSRule.Rules.Azure/pull/2405">#2405</a></li>
+</ul>
+</li>
+<li>Bug fixes:<ul>
+<li>Fixed false positive with <code>Azure.Storage.SecureTransfer</code> on new API versions by <a href="https://github.com/BernieWhite">@BernieWhite</a>.
+  <a href="https://github.com/Azure/PSRule.Rules.Azure/issues/2414">#2414</a></li>
+<li>Fixed false positive with <code>Azure.VNET.LocalDNS</code> for DNS server addresses out of local scope by <a href="https://github.com/BernieWhite">@BernieWhite</a>.
+  <a href="https://github.com/Azure/PSRule.Rules.Azure/issues/2370">#2370</a><ul>
+<li>This bug fix introduces a configuration option to flag when DNS from an Identity subscription is used.</li>
+<li>Set <code>AZURE_VNET_DNS_WITH_IDENTITY</code> to <code>true</code> when using an Identity subscription for DNS.</li>
+</ul>
+</li>
+<li>Fixed non-resource group rule triggering for a resource group by <a href="https://github.com/BernieWhite">@BernieWhite</a>.
+  <a href="https://github.com/Azure/PSRule.Rules.Azure/issues/2401">#2401</a></li>
+<li>Fixed lambda map in map variable by <a href="https://github.com/BernieWhite">@BernieWhite</a>.
+  <a href="https://github.com/Azure/PSRule.Rules.Azure/issues/2410">#2410</a></li>
+<li>Fixed <code>Azure.AKS.Version</code> by excluding <code>node-image</code> channel by <a href="https://github.com/BernieWhite">@BernieWhite</a>.
+  <a href="https://github.com/Azure/PSRule.Rules.Azure/issues/2446">#2446</a></li>
+</ul>
+</li>
+</ul>
+<p>What's changed since pre-release v1.30.0-B0127:</p>
+<ul>
+<li>No additional changes.</li>
+</ul>
 <h2 id="v1300-b0127-pre-release">v1.30.0-B0127 (pre-release)<a class="headerlink" href="#v1300-b0127-pre-release" title="Permanent link">#</a></h2>
 <p>What's changed since pre-release v1.30.0-B0080:</p>
 <ul>
@@ -20572,7 +20715,7 @@ What's changed since v1.24.0:</p>
   <small>
     
       Last update:
-      2023-10-01
+      2023-10-04
     
   </small>
 </div>

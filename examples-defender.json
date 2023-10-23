@@ -4,22 +4,32 @@
   "metadata": {
     "_generator": {
       "name": "bicep",
-      "version": "0.10.61.36676",
-      "templateHash": "13956112484547449048"
+      "version": "0.22.6.54827",
+      "templateHash": "9622669481012103945"
     }
   },
   "resources": [
     {
-      "type": "Microsoft.Security/pricings",
-      "apiVersion": "2018-06-01",
-      "name": "ContainerRegistry",
+      "type": "Microsoft.Security/securityContacts",
+      "apiVersion": "2020-01-01-preview",
+      "name": "default",
       "properties": {
-        "pricingTier": "Standard"
+        "notificationsByRole": {
+          "roles": [
+            "Owner"
+          ],
+          "state": "On"
+        },
+        "emails": "security@contoso.com",
+        "alertNotifications": {
+          "minimalSeverity": "High",
+          "state": "On"
+        }
       }
     },
     {
       "type": "Microsoft.Security/pricings",
-      "apiVersion": "2022-03-01",
+      "apiVersion": "2023-01-01",
       "name": "Containers",
       "properties": {
         "pricingTier": "Standard"
@@ -27,7 +37,7 @@
     },
     {
       "type": "Microsoft.Security/pricings",
-      "apiVersion": "2022-03-01",
+      "apiVersion": "2023-01-01",
       "name": "VirtualMachines",
       "properties": {
         "pricingTier": "Standard",
@@ -36,7 +46,7 @@
     },
     {
       "type": "Microsoft.Security/pricings",
-      "apiVersion": "2022-03-01",
+      "apiVersion": "2023-01-01",
       "name": "SqlServers",
       "properties": {
         "pricingTier": "Standard"
@@ -44,7 +54,7 @@
     },
     {
       "type": "Microsoft.Security/pricings",
-      "apiVersion": "2022-03-01",
+      "apiVersion": "2023-01-01",
       "name": "AppServices",
       "properties": {
         "pricingTier": "Standard"
@@ -52,16 +62,78 @@
     },
     {
       "type": "Microsoft.Security/pricings",
-      "apiVersion": "2022-03-01",
+      "apiVersion": "2023-01-01",
       "name": "StorageAccounts",
+      "properties": {
+        "pricingTier": "Standard",
+        "subPlan": "DefenderForStorageV2",
+        "extensions": [
+          {
+            "name": "OnUploadMalwareScanning",
+            "isEnabled": "True",
+            "additionalExtensionProperties": {
+              "CapGBPerMonthPerStorageAccount": "5000"
+            }
+          },
+          {
+            "name": "SensitiveDataDiscovery",
+            "isEnabled": "True"
+          }
+        ]
+      }
+    },
+    {
+      "type": "Microsoft.Security/pricings",
+      "apiVersion": "2023-01-01",
+      "name": "SqlServerVirtualMachines",
       "properties": {
         "pricingTier": "Standard"
       }
     },
     {
       "type": "Microsoft.Security/pricings",
-      "apiVersion": "2022-03-01",
-      "name": "SqlServerVirtualMachines",
+      "apiVersion": "2023-01-01",
+      "name": "KeyVaults",
+      "properties": {
+        "pricingTier": "Standard"
+      }
+    },
+    {
+      "type": "Microsoft.Security/pricings",
+      "apiVersion": "2023-01-01",
+      "name": "Dns",
+      "properties": {
+        "pricingTier": "Standard"
+      }
+    },
+    {
+      "type": "Microsoft.Security/pricings",
+      "apiVersion": "2023-01-01",
+      "name": "Arm",
+      "properties": {
+        "pricingTier": "Standard"
+      }
+    },
+    {
+      "type": "Microsoft.Security/pricings",
+      "apiVersion": "2023-01-01",
+      "name": "OpenSourceRelationalDatabases",
+      "properties": {
+        "pricingTier": "Standard"
+      }
+    },
+    {
+      "type": "Microsoft.Security/pricings",
+      "apiVersion": "2023-01-01",
+      "name": "CosmosDbs",
+      "properties": {
+        "pricingTier": "Standard"
+      }
+    },
+    {
+      "type": "Microsoft.Security/pricings",
+      "apiVersion": "2023-01-01",
+      "name": "CloudPosture",
       "properties": {
         "pricingTier": "Standard"
       }

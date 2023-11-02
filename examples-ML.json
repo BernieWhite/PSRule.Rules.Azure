@@ -1,0 +1,87 @@
+{
+  "$schema": "https://schema.management.azure.com/schemas/2019-04-01/deploymentTemplate.json#",
+  "contentVersion": "1.0.0.0",
+  "metadata": {
+    "_generator": {
+      "name": "bicep",
+      "version": "0.22.6.54827",
+      "templateHash": "6184102579990317886"
+    }
+  },
+  "parameters": {
+    "name": {
+      "type": "string",
+      "metadata": {
+        "description": "The name of the ML - Compute Instance."
+      }
+    },
+    "friendlyName": {
+      "type": "string",
+      "defaultValue": "[parameters('name')]",
+      "metadata": {
+        "description": "A friendly name for the workspace."
+      }
+    },
+    "location": {
+      "type": "string",
+      "defaultValue": "[resourceGroup().location]",
+      "metadata": {
+        "description": "The location resources will be deployed."
+      }
+    },
+    "vmSize": {
+      "type": "string",
+      "defaultValue": "STANDARD_D2_V2",
+      "metadata": {
+        "description": "The VM SKU to be deployed."
+      }
+    }
+  },
+  "resources": [
+    {
+      "type": "Microsoft.MachineLearningServices/workspaces",
+      "apiVersion": "2023-04-01",
+      "name": "[parameters('name')]",
+      "location": "[parameters('location')]",
+      "sku": {
+        "name": "basic",
+        "tier": "basic"
+      },
+      "identity": {
+        "type": "UserAssigned",
+        "userAssignedIdentities": {
+          "[format('{0}', resourceId('Microsoft.ManagedIdentity/userAssignedIdentities', 'example'))]": {}
+        }
+      },
+      "properties": {
+        "friendlyName": "[parameters('friendlyName')]",
+        "keyVault": "[resourceId('Microsoft.KeyVault/vaults', 'example')]",
+        "storageAccount": "[resourceId('Microsoft.Storage/storageAccounts', 'example')]",
+        "applicationInsights": "[resourceId('Microsoft.Insights/components', 'example')]",
+        "containerRegistry": "[resourceId('Microsoft.ContainerRegistry/registries', 'example')]",
+        "publicNetworkAccess": "Disabled",
+        "primaryUserAssignedIdentity": "[resourceId('Microsoft.ManagedIdentity/userAssignedIdentities', 'example')]"
+      }
+    },
+    {
+      "type": "Microsoft.MachineLearningServices/workspaces/computes",
+      "apiVersion": "2023-06-01-preview",
+      "name": "[format('{0}/{1}', parameters('name'), parameters('name'))]",
+      "location": "[parameters('location')]",
+      "properties": {
+        "computeType": "ComputeInstance",
+        "disableLocalAuth": true,
+        "properties": {
+          "vmSize": "[parameters('vmSize')]",
+          "idleTimeBeforeShutdown": "PT15M",
+          "subnet": {
+            "id": "[resourceId('Microsoft.Network/virtualNetworks/subnets', split('vnet/subnet', '/')[0], split('vnet/subnet', '/')[1])]"
+          }
+        }
+      },
+      "dependsOn": [
+        "[resourceId('Microsoft.MachineLearningServices/workspaces', parameters('name'))]"
+      ]
+    }
+  ]
+}

@@ -4274,6 +4274,18 @@
       
         
       
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
     
     
     
@@ -7490,6 +7502,26 @@
   
   
     <li class="md-nav__item">
+      <a href="../en/rules/Azure.Deployment.SecureParameter/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Azure.Deployment.SecureParameter
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
       <a href="../en/rules/Azure.Deployment.SecureValue/" class="md-nav__link">
         
   
@@ -8375,6 +8407,106 @@
   
   <span class="md-ellipsis">
     Azure.LogicApp.LimitHTTPTrigger
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../en/rules/Azure.ML.ComputeIdleShutdown/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Azure.ML.ComputeIdleShutdown
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../en/rules/Azure.ML.ComputeVnet/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Azure.ML.ComputeVnet
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../en/rules/Azure.ML.DisableLocalAuth/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Azure.ML.DisableLocalAuth
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../en/rules/Azure.ML.PublicAccess/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Azure.ML.PublicAccess
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../en/rules/Azure.ML.UserManagedIdentity/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Azure.ML.UserManagedIdentity
   </span>
   
 
@@ -15028,6 +15160,27 @@
 <h2 id="unreleased">Unreleased<a class="headerlink" href="#unreleased" title="Permanent link">#</a></h2>
 <p>What's changed since v1.30.3:</p>
 <ul>
+<li>New rules:<ul>
+<li>Deployment:<ul>
+<li>Check parameters potentially containing secure values by <a href="https://github.com/BernieWhite">@BernieWhite</a>.
+  <a href="https://github.com/Azure/PSRule.Rules.Azure/issues/1476">#1476</a></li>
+</ul>
+</li>
+<li>Machine Learning:<ul>
+<li>Check compute instances are configured for an idle shutdown by <a href="https://github.com/batemansogq">@batemansogq</a>.
+  <a href="https://github.com/Azure/PSRule.Rules.Azure/issues/2484">#2484</a></li>
+<li>Check workspace compute has local authentication disabled by <a href="https://github.com/batemansogq">@batemansogq</a>.
+  <a href="https://github.com/Azure/PSRule.Rules.Azure/issues/2484">#2484</a></li>
+<li>Check workspace compute is connected to a VNET by <a href="https://github.com/batemansogq">@batemansogq</a>.
+  <a href="https://github.com/Azure/PSRule.Rules.Azure/issues/2484">#2484</a></li>
+<li>Check public access to a workspace is disabled by <a href="https://github.com/batemansogq">@batemansogq</a>.
+  <a href="https://github.com/Azure/PSRule.Rules.Azure/issues/2484">#2484</a></li>
+<li>Check workspaces use a user-assigned identity by <a href="https://github.com/batemansogq">@batemansogq</a>.
+  <a href="https://github.com/Azure/PSRule.Rules.Azure/issues/2484">#2484</a></li>
+</ul>
+</li>
+</ul>
+</li>
 <li>Engineering:<ul>
 <li>Bump development tools to .NET 7.0 SDK by <a href="https://github.com/BernieWhite">@BernieWhite</a>.
   <a href="https://github.com/Azure/PSRule.Rules.Azure/issues/1870">#1870</a></li>
@@ -20796,7 +20949,7 @@ What's changed since v1.24.0:</p>
   <small>
     
       Last update:
-      2023-10-20
+      2023-11-02
     
   </small>
 </div>

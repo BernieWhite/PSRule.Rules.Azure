@@ -2714,6 +2714,18 @@
       
         
       
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
     
     
     
@@ -5930,6 +5942,26 @@
   
   
     <li class="md-nav__item">
+      <a href="../../rules/Azure.Deployment.SecureParameter/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Azure.Deployment.SecureParameter
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
       <a href="../../rules/Azure.Deployment.SecureValue/" class="md-nav__link">
         
   
@@ -6815,6 +6847,106 @@
   
   <span class="md-ellipsis">
     Azure.LogicApp.LimitHTTPTrigger
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../rules/Azure.ML.ComputeIdleShutdown/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Azure.ML.ComputeIdleShutdown
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../rules/Azure.ML.ComputeVnet/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Azure.ML.ComputeVnet
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../rules/Azure.ML.DisableLocalAuth/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Azure.ML.DisableLocalAuth
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../rules/Azure.ML.PublicAccess/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Azure.ML.PublicAccess
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../rules/Azure.ML.UserManagedIdentity/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Azure.ML.UserManagedIdentity
   </span>
   
 
@@ -12030,7 +12162,7 @@
 </div>
 <p>Microsoft Cloud Security Benchmark v1.</p>
 <h2 id="controls">Controls<a class="headerlink" href="#controls" title="Permanent link">#</a></h2>
-<p>The following rules are included within <code>Azure.MCSB.v1</code>. This baseline includes a total of 119 rules.</p>
+<p>The following rules are included within <code>Azure.MCSB.v1</code>. This baseline includes a total of 122 rules.</p>
 <table>
 <thead>
 <tr>
@@ -12424,6 +12556,21 @@
 <td><a href="../../rules/Azure.KeyVault.RBAC/">Azure.KeyVault.RBAC</a></td>
 <td>Key Vaults should use Azure RBAC as the authorization system for the data plane.</td>
 <td>Awareness</td>
+</tr>
+<tr>
+<td><a href="../../rules/Azure.ML.ComputeVnet/">Azure.ML.ComputeVnet</a></td>
+<td>Azure Machine Learning Computes should be hosted in a virtual network (VNet).</td>
+<td>Critical</td>
+</tr>
+<tr>
+<td><a href="../../rules/Azure.ML.PublicAccess/">Azure.ML.PublicAccess</a></td>
+<td>Disable public network access from a Azure Machine Learning workspace.</td>
+<td>Critical</td>
+</tr>
+<tr>
+<td><a href="../../rules/Azure.ML.UserManagedIdentity/">Azure.ML.UserManagedIdentity</a></td>
+<td>ML workspaces should use user-assigned managed identity, rather than the default system-assigned managed identity.</td>
+<td>Important</td>
 </tr>
 <tr>
 <td><a href="../../rules/Azure.Monitor.ServiceHealth/">Azure.Monitor.ServiceHealth</a></td>

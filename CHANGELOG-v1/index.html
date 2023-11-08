@@ -1515,6 +1515,13 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#v1310" class="md-nav__link">
+    v1.31.0
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#v1310-b0048-pre-release" class="md-nav__link">
     v1.31.0-B0048 (pre-release)
   </a>
@@ -13643,6 +13650,13 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#v1310" class="md-nav__link">
+    v1.31.0
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#v1310-b0048-pre-release" class="md-nav__link">
     v1.31.0-B0048 (pre-release)
   </a>
@@ -15186,6 +15200,57 @@
   See <a href="../upgrade-notes/">upgrade notes</a> for more information.</li>
 </ul>
 <h2 id="unreleased">Unreleased<a class="headerlink" href="#unreleased" title="Permanent link">#</a></h2>
+<h2 id="v1310">v1.31.0<a class="headerlink" href="#v1310" title="Permanent link">#</a></h2>
+<p>What's changed since v1.30.3:</p>
+<ul>
+<li>New rules:<ul>
+<li>Deployment:<ul>
+<li>Check parameters potentially containing secure values by <a href="https://github.com/BernieWhite">@BernieWhite</a>.
+  <a href="https://github.com/Azure/PSRule.Rules.Azure/issues/1476">#1476</a></li>
+</ul>
+</li>
+<li>Machine Learning:<ul>
+<li>Check compute instances are configured for an idle shutdown by <a href="https://github.com/batemansogq">@batemansogq</a>.
+  <a href="https://github.com/Azure/PSRule.Rules.Azure/issues/2484">#2484</a></li>
+<li>Check workspace compute has local authentication disabled by <a href="https://github.com/batemansogq">@batemansogq</a>.
+  <a href="https://github.com/Azure/PSRule.Rules.Azure/issues/2484">#2484</a></li>
+<li>Check workspace compute is connected to a VNET by <a href="https://github.com/batemansogq">@batemansogq</a>.
+  <a href="https://github.com/Azure/PSRule.Rules.Azure/issues/2484">#2484</a></li>
+<li>Check public access to a workspace is disabled by <a href="https://github.com/batemansogq">@batemansogq</a>.
+  <a href="https://github.com/Azure/PSRule.Rules.Azure/issues/2484">#2484</a></li>
+<li>Check workspaces use a user-assigned identity by <a href="https://github.com/batemansogq">@batemansogq</a>.
+  <a href="https://github.com/Azure/PSRule.Rules.Azure/issues/2484">#2484</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li>Engineering:<ul>
+<li>Bump development tools to .NET 7.0 SDK by <a href="https://github.com/BernieWhite">@BernieWhite</a>.
+  <a href="https://github.com/Azure/PSRule.Rules.Azure/issues/1870">#1870</a></li>
+<li>Bump BenchmarkDotNet to v0.13.10.
+  <a href="https://github.com/Azure/PSRule.Rules.Azure/pull/2518">#2518</a></li>
+<li>Bump BenchmarkDotNet.Diagnostics.Windows to v0.13.10.
+  <a href="https://github.com/Azure/PSRule.Rules.Azure/pull/2508">#2508</a></li>
+<li>Bump xunit to v2.6.1.
+  <a href="https://github.com/Azure/PSRule.Rules.Azure/pull/2514">#2514</a></li>
+<li>Bump xunit.runner.visualstudio to v2.5.3.
+  <a href="https://github.com/Azure/PSRule.Rules.Azure/pull/2486">#2486</a></li>
+</ul>
+</li>
+<li>Bug fixes:<ul>
+<li>Fixed dependency ordering with symbolic name by <a href="https://github.com/BernieWhite">@BernieWhite</a>.
+  <a href="https://github.com/Azure/PSRule.Rules.Azure/issues/2505">#2505</a></li>
+<li>Fixed nullable parameters for custom types by <a href="https://github.com/BernieWhite">@BernieWhite</a>.
+  <a href="https://github.com/Azure/PSRule.Rules.Azure/issues/2489">#2489</a></li>
+<li>Fixed API Connection might be missing dynamic properties by <a href="https://github.com/BernieWhite">@BernieWhite</a>.
+  <a href="https://github.com/Azure/PSRule.Rules.Azure/issues/2424">#2424</a></li>
+</ul>
+</li>
+</ul>
+<p>What's changed since pre-release v1.31.0-B0048:</p>
+<ul>
+<li>No additional changes.</li>
+</ul>
 <h2 id="v1310-b0048-pre-release">v1.31.0-B0048 (pre-release)<a class="headerlink" href="#v1310-b0048-pre-release" title="Permanent link">#</a></h2>
 <p>What's changed since pre-release v1.31.0-B0020:</p>
 <ul>
@@ -21002,7 +21067,7 @@ What's changed since v1.24.0:</p>
   <small>
     
       Last update:
-      2023-11-05
+      2023-11-09
     
   </small>
 </div>

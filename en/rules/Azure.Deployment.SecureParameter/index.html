@@ -12325,9 +12325,19 @@ These values can be retrieved by anyone with access to the deployment history.</
 <h2 id="notes">Notes<a class="headerlink" href="#notes" title="Permanent link">#</a></h2>
 <p>This rule uses a heuristics to determine if a parameter should use a secure type:</p>
 <ul>
-<li>Any parameter with a name containing <code>password</code>, <code>secret</code>, or <code>token</code> will be considered sensitive.</li>
-<li>Any parameter with a name ending in <code>key</code> or <code>keys</code> will be considered sensitive.</li>
-<li>Any parameter with a name ending in <code>publickey</code> or <code>publickeys</code> will not be considered sensitive.</li>
+<li>Any parameter with a name containing <code>password</code>, <code>secret</code>, or <code>token</code> will be considered sensitive.<ul>
+<li>Except parameter names containing <code>passwordlength</code>, <code>secretname</code>, <code>secreturl</code>, <code>secreturi</code>, or <code>tokenname</code>.</li>
+</ul>
+</li>
+<li>Any parameter with a name ending in <code>key</code> or <code>keys</code> will be considered sensitive.<ul>
+<li>Except parameter names ending in <code>publickey</code> or <code>publickeys</code>.</li>
+</ul>
+</li>
+</ul>
+<p>If you identify a parameter that is <em>not sensitive</em>, and is incorrectly flagged by this rule, you can override the rule.
+To override this rule:</p>
+<ul>
+<li>Set the <code>AZURE_DEPLOYMENT_NONSENSITIVE_PARAMETER_NAMES</code> configuration value to identify parameters that are not sensitive.</li>
 </ul>
 <h2 id="links">Links<a class="headerlink" href="#links" title="Permanent link">#</a></h2>
 <ul>
@@ -12344,7 +12354,7 @@ These values can be retrieved by anyone with access to the deployment history.</
   <small>
     
       Last update:
-      2023-11-02
+      2023-11-15
     
   </small>
 </div>

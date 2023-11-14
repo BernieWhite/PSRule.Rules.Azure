@@ -12272,7 +12272,7 @@
 <p>Use secure parameters for sensitive resource properties.</p>
 <h2 id="description">Description<a class="headerlink" href="#description" title="Permanent link">#</a></h2>
 <p>Resource properties can be configured using a hardcoded value or Azure Bicep/ template expressions.
-When specifing sensitive values use <em>secure</em> parameters such as <code>secureString</code> or <code>secureObject</code>.</p>
+When specifying sensitive values use <em>secure</em> parameters such as <code>secureString</code> or <code>secureObject</code>.</p>
 <p>Sensitive values that use deterministic expressions such as hardcodes string literals or variables are not secure.</p>
 <h2 id="recommendation">Recommendation<a class="headerlink" href="#recommendation" title="Permanent link">#</a></h2>
 <p>Sensitive properties should be passed as parameters.
@@ -12281,7 +12281,7 @@ Avoid using deterministic values for sensitive properties.</p>
 <h3 id="configure-with-azure-template">Configure with Azure template<a class="headerlink" href="#configure-with-azure-template" title="Permanent link">#</a></h3>
 <p>To deploy resources that pass this rule:</p>
 <ul>
-<li>Use parameters to specify sensitive properties.</li>
+<li>Use secure parameters to specify sensitive properties.</li>
 </ul>
 <p>For example:</p>
 <div class="language-json highlight"><span class="filename">Azure Template snippet</span><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="p">{</span>
@@ -12334,7 +12334,7 @@ Avoid using deterministic values for sensitive properties.</p>
 <h3 id="configure-with-bicep">Configure with Bicep<a class="headerlink" href="#configure-with-bicep" title="Permanent link">#</a></h3>
 <p>To deploy resources that pass this rule:</p>
 <ul>
-<li>steps</li>
+<li>Use secure parameters to specify sensitive properties.</li>
 </ul>
 <p>For example:</p>
 <div class="language-text highlight"><span class="filename">Azure Bicep snippet</span><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>@secure()
@@ -12389,7 +12389,7 @@ Avoid using deterministic values for sensitive properties.</p>
 </span></code></pre></div>
 <h2 id="notes">Notes<a class="headerlink" href="#notes" title="Permanent link">#</a></h2>
 <p>Configure <code>AZURE_DEPLOYMENT_SENSITIVE_PROPERTY_NAMES</code> to specify sensitive property names.
-By default the following values are used:</p>
+By default, the following values are used:</p>
 <ul>
 <li><code>adminUsername</code></li>
 <li><code>administratorLogin</code></li>
@@ -12410,7 +12410,7 @@ By default the following values are used:</p>
   <small>
     
       Last update:
-      2022-10-18
+      2023-11-15
     
   </small>
 </div>

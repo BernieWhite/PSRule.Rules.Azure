@@ -12973,7 +12973,7 @@ You may choose to pre-build <code>.bicep</code> files if the Bicep CLI is not av
 Using <code>bicep build</code> transpiles Bicep code into an Azure template <code>.json</code>.</p>
 </div>
 <h2 id="testing-bicep-modules">Testing Bicep modules<a class="headerlink" href="#testing-bicep-modules" title="Permanent link">#</a></h2>
-<p>Bicep allows you to separate out complex details into separate files called <a href="https://docs.microsoft.com/azure/azure-resource-manager/bicep/modules">modules</a>.
+<p>Bicep allows you to separate out complex details into separate files called <a href="https://learn.microsoft.com/azure/azure-resource-manager/bicep/modules">modules</a>.
 To expand resources, any parameters must be resolved.</p>
 <div class="admonition tip">
 <p class="admonition-title">Tip</p>
@@ -13176,7 +13176,7 @@ You should commit this file into a repository along with your Bicep code.</p>
 </div>
 <h3 id="granting-access-to-a-private-registry">Granting access to a private registry<a class="headerlink" href="#granting-access-to-a-private-registry" title="Permanent link">#</a></h3>
 <p>To access a private registry use an Azure AD identity which has been granted permissions to pull Bicep modules.
-When using <code>Environment</code> credential type, see <a href="https://learn.microsoft.com/azure/active-directory/develop/howto-create-service-principal-portal">create a service principal that can access resources</a> to create the identity.
+When using <code>Environment</code> credential type, see <a href="https://learn.microsoft.com/entra/identity-platform/howto-create-service-principal-portal">create a service principal that can access resources</a> to create the identity.
 If you are using the <code>ManagedIdentity</code> credential type, an identity is created for when you <a href="https://learn.microsoft.com/azure/active-directory/managed-identities-azure-resources/overview">configure the managed identity</a>.</p>
 <p>After configuring the identity, <a href="https://learn.microsoft.com/azure/container-registry/container-registry-faq#how-do-i-grant-access-to-pull-or-push-images-without-permission-to-manage-the-registry-resource-">grant access using the <code>AcrPull</code></a> built-in RBAC role on the Azure Container Registry.</p>
 <h3 id="set-pipeline-environment-variables">Set pipeline environment variables<a class="headerlink" href="#set-pipeline-environment-variables" title="Permanent link">#</a></h3>
@@ -13192,7 +13192,7 @@ Typically, the following three environment variables should be set:</p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>The environment credential type also supports other environment variables that may be applicable to your environment.
-To see a list visit <a href="https://docs.microsoft.com/dotnet/api/azure.identity.environmentcredential">EnvironmentCredential Class</a>.</p>
+To see a list visit <a href="https://learn.microsoft.com/dotnet/api/azure.identity.environmentcredential">EnvironmentCredential Class</a>.</p>
 </div>
 <div class="tabbed-set tabbed-alternate" data-tabs="1:2"><input checked="checked" id="__tabbed_1_1" name="__tabbed_1" type="radio" /><input id="__tabbed_1_2" name="__tabbed_1" type="radio" /><div class="tabbed-labels"><label for="__tabbed_1_1">GitHub Actions</label><label for="__tabbed_1_2">Azure Pipelines</label></div>
 <div class="tabbed-content">
@@ -13212,7 +13212,7 @@ To see a list visit <a href="https://docs.microsoft.com/dotnet/api/azure.identit
 <div class="admonition important">
 <p class="admonition-title">Important</p>
 <p>Environment variables can be configured in the workflow or from a secret.
-To keep <code>BICEP_REGISTRY_CLIENTSECRET</code> secure, use an <a href="https://docs.github.com/actions/reference/encrypted-secrets">encrypted secret</a>.</p>
+To keep <code>BICEP_REGISTRY_CLIENTSECRET</code> secure, use an <a href="https://docs.github.com/actions/security-guides/using-secrets-in-github-actions">encrypted secret</a>.</p>
 </div>
 </div>
 <div class="tabbed-block">
@@ -13230,7 +13230,7 @@ To keep <code>BICEP_REGISTRY_CLIENTSECRET</code> secure, use an <a href="https:/
 <div class="admonition important">
 <p class="admonition-title">Important</p>
 <p>Variables can be configured in YAML, on the pipeline, or referenced from a defined variable group.
-To keep <code>BICEPREGISTRYCLIENTSECRET</code> secure, use a <a href="https://docs.microsoft.com/azure/devops/pipelines/library/variable-groups">variable group</a> linked to an Azure Key Vault.</p>
+To keep <code>BICEPREGISTRYCLIENTSECRET</code> secure, use a <a href="https://learn.microsoft.com/azure/devops/pipelines/library/variable-groups">variable group</a> linked to an Azure Key Vault.</p>
 </div>
 </div>
 </div>
@@ -13247,7 +13247,7 @@ To keep <code>BICEPREGISTRYCLIENTSECRET</code> secure, use a <a href="https://do
   <small>
     
       Last update:
-      2023-10-04
+      2023-11-29
     
   </small>
 </div>

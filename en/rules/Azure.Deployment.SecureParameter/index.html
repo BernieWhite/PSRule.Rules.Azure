@@ -12861,8 +12861,11 @@ These values can be retrieved by anyone with access to the deployment history.</
 <h2 id="notes">Notes<a class="headerlink" href="#notes" title="Permanent link">#</a></h2>
 <p>This rule uses a heuristics to determine if a parameter should use a secure type:</p>
 <ul>
+<li>Parameters with the type <code>int</code> or <code>bool</code> are ignored regardless of how they are named.</li>
 <li>Any parameter with a name containing <code>password</code>, <code>secret</code>, or <code>token</code> will be considered sensitive.<ul>
-<li>Except parameter names containing <code>passwordlength</code>, <code>secretname</code>, <code>secreturl</code>, <code>secreturi</code>, or <code>tokenname</code>.</li>
+<li>Except parameter names containing any of the following:
+  <code>passwordlength</code>, <code>secretname</code>, <code>secreturl</code>, <code>secreturi</code>, <code>secretrotation</code>, <code>secretinterval</code>, <code>secretprovider</code>,
+  <code>secretsprovider</code>, <code>secretref</code>, <code>secretid</code>, <code>disablepassword</code>, <code>sync*passwords</code>, or <code>tokenname</code>.</li>
 </ul>
 </li>
 <li>Any parameter with a name ending in <code>key</code> or <code>keys</code> will be considered sensitive.<ul>
@@ -12890,7 +12893,7 @@ To override this rule:</p>
   <small>
     
       Last update:
-      2023-11-15
+      2023-12-01
     
   </small>
 </div>

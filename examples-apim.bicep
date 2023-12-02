@@ -3,10 +3,12 @@
 
 // Bicep documentation examples
 
-@description('The name of the API Management service.')
-param name string = 'apim-contoso-test-eus-001'
+@minLength(1)
+@maxLength(50)
+@sys.description('The name of the resource.')
+param name string
 
-@description('The location resources will be deployed.')
+@sys.description('The location resources will be deployed.')
 param location string = resourceGroup().location
 
 @description('The reply email of the publisher.')

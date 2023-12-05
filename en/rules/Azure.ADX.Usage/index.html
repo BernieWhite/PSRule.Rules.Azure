@@ -12743,22 +12743,23 @@
 <h2 id="description">Description<a class="headerlink" href="#description" title="Permanent link">#</a></h2>
 <p>Billing starts for an Azure Data Explorer (ADX) cluster after it is provisioned.
 To store data in an ADX cluster, you must first create a database.
-Clusters without any databases are considered unused.</p>
-<p>Additionally, ADX clusters can stopped.
+Clusters without any databases are considered unused and can be removed to reduce costs and management overhead.</p>
+<p>Additionally, ADX clusters on a paid tier can stopped.
 Stopping an ADX cluster deallocates and removes compute resources.
 While in the stopped state, compute charges are not incurred.
 Any data stored in the cluster is persisted while the cluster is stopped.</p>
 <h2 id="recommendation">Recommendation<a class="headerlink" href="#recommendation" title="Permanent link">#</a></h2>
-<p>Consider removing Data Explorer clusters that are not used.</p>
+<p>Consider removing Data Explorer clusters that have no databases and are not used.</p>
 <h2 id="notes">Notes<a class="headerlink" href="#notes" title="Permanent link">#</a></h2>
 <p>This rule applies when analyzing ADX clusters deployed (in-flight) and running within Azure.
 If the cluster is stopped, this rule is ignored.</p>
 <h2 id="links">Links<a class="headerlink" href="#links" title="Permanent link">#</a></h2>
 <ul>
-<li><a href="https://learn.microsoft.com/azure/architecture/framework/cost/monitor-reports">Generate cost reports</a></li>
+<li><a href="https://learn.microsoft.com/azure/well-architected/cost-optimization/consolidation">CO:14 Consolidation</a></li>
+<li><a href="https://learn.microsoft.com/azure/well-architected/cost-optimization/checklist">Design review checklist for Cost Optimization</a></li>
 <li><a href="https://azure.microsoft.com/pricing/details/data-explorer/">Pricing</a></li>
-<li><a href="https://docs.microsoft.com/azure/data-explorer/create-cluster-database-portal#stop-and-restart-the-cluster">Stop and restart the cluster</a></li>
-<li><a href="https://docs.microsoft.com/azure/data-explorer/auto-stop-clusters">Automatic stop of inactive Azure Data Explorer clusters</a></li>
+<li><a href="https://learn.microsoft.com/azure/data-explorer/create-cluster-and-database#stop-and-restart-the-cluster">Stop and restart the cluster</a></li>
+<li><a href="https://learn.microsoft.com/azure/data-explorer/auto-stop-clusters">Automatic stop of inactive Azure Data Explorer clusters</a></li>
 </ul>
 
   <!-- Last update of source file -->
@@ -12769,7 +12770,7 @@ If the cluster is stopped, this rule is ignored.</p>
   <small>
     
       Last update:
-      2022-10-17
+      2023-12-05
     
   </small>
 </div>

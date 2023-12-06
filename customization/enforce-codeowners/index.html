@@ -12723,24 +12723,33 @@
 
 
 <h1 id="enforcing-code-ownership">Enforcing code ownership<a class="headerlink" href="#enforcing-code-ownership" title="Permanent link">#</a></h1>
-<p>With PSRule, you can layer on custom rules with to implement organization specific requirements.
-These custom rules work side-by-side with PSRule for Azure.</p>
-<p>Pull requests are a key concept within common Git workflows used with DevOps to enforce peer review.
-To support peer review across a team tools such as GitHub and Azure DevOps provide code ownership.
-Code ownership, allows mix discipline teams to direct peer reviews based the path of a changed file.</p>
-<p>For sensitive changes such as firewall or policy exemptions, peer reviews may form a security control.
-In these cases, it may be important that specific paths are used for Infrastructure as Code artifacts.</p>
+<div class="admonition abstract">
+<p class="admonition-title">Abstract</p>
+<p>The following scenario <em>extends</em> on existing code ownership features available in your tool of choice.
+This topic covers static analysis testing for the content (specific Azure resource) within file paths.
+This allows you to:</p>
+<ul>
+<li>Identify if specific Azure resource types are added to file paths they shouldn't be.</li>
+</ul>
+</div>
+<p>Pull requests (PRs) are a key concept within common Git workflows and DevOps culture to enforce peer review.
+Code ownership provides a mechanism to require one or more specific people review changes prior to merging a PR.</p>
+<p>For Git repositories in GitHub and Azure Repos, code ownership is controlled based on file path.
+If a person or team owns a file or file path they are required to review the changes proposed in the PR.
+The specifics of how many approvals and if approval is optional vs required is controlled by branch protection/ policies.</p>
+<p>In the context of Azure Infrastructure as Code (IaC) - Azure Bicep/ ARM templates, these changes may:</p>
+<ul>
+<li>Add, change, or remove infrastructure components.</li>
+<li>Include sensitive changes such as updates to firewall rules or policy exemptions.</li>
+<li>Introduce concerns that sentitive changes could be moved to a different file path to bypass review by a specific team.</li>
+</ul>
+<p>PSRule allows teams to layer on additional rules to ensure Azure resources fall within the paths expected by code ownership.</p>
 <div class="admonition info">
 <p class="admonition-title">Info</p>
 <p>Code ownership is implemented through <a href="https://docs.github.com/repositories/managing-your-repositorys-settings-and-features/customizing-your-repository/about-code-owners">CODEOWNERS</a> in GitHub and <a href="https://learn.microsoft.com/azure/devops/repos/git/branch-policies#automatically-include-code-reviewers">required reviewers</a> in Azure Repos.</p>
 </div>
-<div class="admonition abstract">
-<p class="admonition-title">Abstract</p>
-<p>The following scenario shows how to create a custom rule to validate the file path of code artifacts.
-The scenario walks you through the process so that you can apply the same concepts for similar requirements.</p>
-</div>
 <h2 id="creating-a-new-rule">Creating a new rule<a class="headerlink" href="#creating-a-new-rule" title="Permanent link">#</a></h2>
-<p>Within the <code>.ps-rule</code> sub-directory create a new file called <code>Org.Azure.Rule.ps1</code>.
+<p>Within the <code>.ps-rule/</code> sub-directory create a new file called <code>Org.Azure.Rule.ps1</code>.
 Use the following snippet to populate the rule file:</p>
 <div class="language-powershell highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="c"># Synopsis: Policy exemptions must be stored under designated paths for review.</span>
 </span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="n">Rule</span> <span class="s1">&#39;Org.Azure.Policy.Path&#39;</span> <span class="n">-Type</span> <span class="s1">&#39;Microsoft.Authorization/policyExemptions&#39;</span> <span class="p">{</span>
@@ -12773,7 +12782,7 @@ Standalone rules will get their type binding configuration from <code>ps-rule.ya
 <li>Create/ update the <code>ps-rule.yaml</code> file within the root of the repository.</li>
 <li>Add the following configuration snippet.</li>
 </ul>
-<div class="language-yaml highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="c1"># Configure binding options</span>
+<div class="language-yaml highlight"><span class="filename">ps-rule.yaml</span><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="c1"># Configure binding options</span>
 </span><span id="__span-1-2"><a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a><span class="nt">binding</span><span class="p">:</span>
 </span><span id="__span-1-3"><a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a><span class="w">  </span><span class="nt">targetType</span><span class="p">:</span>
 </span><span id="__span-1-4"><a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a><span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="s">&#39;resourceType&#39;</span>
@@ -12790,7 +12799,8 @@ If neither property exists, PSRule will use the object type.</li>
 <h2 id="testing-locally">Testing locally<a class="headerlink" href="#testing-locally" title="Permanent link">#</a></h2>
 <p>To test the custom rule within Visual Studio Code, see <a href="../../install/#with-visual-studio-code">How to install PSRule for Azure</a>.
 Alternatively you can test the rule manually by running the following from a PowerShell terminal.</p>
-<div class="language-powershell highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="nb">Assert-PSRule</span> <span class="n">-Path</span> <span class="s1">&#39;.ps-rule/&#39;</span> <span class="n">-Module</span> <span class="s1">&#39;PSRule.Rules.Azure&#39;</span> <span class="n">-InputPath</span> <span class="p">.</span> <span class="n">-Format</span> <span class="n">File</span>
+<div class="language-powershell highlight"><span class="filename">PowerShell</span><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="nb">Assert-PSRule</span> <span class="n">-Path</span> <span class="s1">&#39;.ps-rule/&#39;</span> <span class="n">-Module</span> <span class="s1">&#39;PSRule.Rules.Azure&#39;</span> <span class="p">`</span>
+</span><span id="__span-2-2"><a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a>  <span class="n">-InputPath</span> <span class="p">.</span> <span class="n">-Format</span> <span class="n">File</span>
 </span></code></pre></div>
 <h2 id="sample-code">Sample code<a class="headerlink" href="#sample-code" title="Permanent link">#</a></h2>
 <p>Grab the full sample code for each of these files from:</p>
@@ -12806,7 +12816,7 @@ Alternatively you can test the rule manually by running the following from a Pow
   <small>
     
       Last update:
-      2023-11-29
+      2023-12-07
     
   </small>
 </div>

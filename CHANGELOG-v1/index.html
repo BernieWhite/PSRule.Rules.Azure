@@ -9760,6 +9760,69 @@
   
   
     <li class="md-nav__item">
+      <a href="../en/rules/Azure.NIC.Attached/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Azure.NIC.Attached
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../en/rules/Azure.NIC.Name/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Azure.NIC.Name
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../en/rules/Azure.NIC.UniqueDns/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Azure.NIC.UniqueDns
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
       <a href="../en/rules/Azure.NSG.AKSRules/" class="md-nav__link">
         
   
@@ -12616,48 +12679,6 @@
   
   
     <li class="md-nav__item">
-      <a href="../en/rules/Azure.VM.NICAttached/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Azure.VM.NICAttached
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../en/rules/Azure.VM.NICName/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Azure.VM.NICName
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
       <a href="../en/rules/Azure.VM.Name/" class="md-nav__link">
         
   
@@ -12810,27 +12831,6 @@
   
   <span class="md-ellipsis">
     Azure.VM.Standalone
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../en/rules/Azure.VM.UniqueDns/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Azure.VM.UniqueDns
   </span>
   
 
@@ -16646,9 +16646,31 @@
   Update PowerShell rules to use the <code>Azure.Resource.SupportsTags</code> selector instead.
   Support for the <code>SupportsTag</code> function will be removed in v2.
   See <a href="../upgrade-notes/">upgrade notes</a> for more information.</li>
+<li>Renamed network interface rules to reflect current usage.
+  If you have excluded or suppressed these rules, please update your configuration to reference the new names.
+  Support for the old names will be removed in v2.
+  See <a href="../upgrade-notes/">upgrade notes</a> for more information.</li>
 </ul>
 <h2 id="unreleased">Unreleased<a class="headerlink" href="#unreleased" title="Permanent link">#</a></h2>
+<p>What's changed since pre-release v1.32.0-B0021:</p>
 <ul>
+<li>Updated rules:<ul>
+<li>Network Interface:<ul>
+<li><strong>Important change</strong>: Renamed NIC rules to reflect current usage by <a href="https://github.com/BernieWhite">@BernieWhite</a>.
+  <a href="https://github.com/Azure/PSRule.Rules.Azure/issues/2574">#2574</a><ul>
+<li>Rename <code>Azure.VM.NICAttached</code> to <code>Azure.NIC.Attached</code>.</li>
+<li>Rename <code>Azure.VM.NICName</code> to <code>Azure.NIC.Name</code>.</li>
+<li>Rename <code>Azure.VM.UniqueDns</code> to <code>Azure.NIC.UniqueDns</code>.</li>
+<li>Added aliases to reference the old names for suppression and exclusion.</li>
+<li>Old names will be removed from v2.</li>
+</ul>
+</li>
+<li>Added support for private link services to <code>Azure.VM.NICAttached</code> by <a href="https://github.com/BernieWhite">@BernieWhite</a>.
+  <a href="https://github.com/Azure/PSRule.Rules.Azure/issues/2563">#2563</a></li>
+</ul>
+</li>
+</ul>
+</li>
 <li>General improvements:<ul>
 <li>Quality updates to documentation by <a href="https://github.com/BernieWhite">@BernieWhite</a>.
   <a href="https://github.com/Azure/PSRule.Rules.Azure/issues/2570">#2570</a>

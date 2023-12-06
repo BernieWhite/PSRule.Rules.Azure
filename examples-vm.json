@@ -4,8 +4,8 @@
   "metadata": {
     "_generator": {
       "name": "bicep",
-      "version": "0.10.61.36676",
-      "templateHash": "13174914885982696413"
+      "version": "0.23.1.45101",
+      "templateHash": "1366791398259070498"
     }
   },
   "parameters": {
@@ -23,13 +23,13 @@
       }
     },
     "adminUsername": {
-      "type": "secureString",
+      "type": "securestring",
       "metadata": {
         "description": "The name of the local administrator account."
       }
     },
     "adminPassword": {
-      "type": "secureString",
+      "type": "securestring",
       "metadata": {
         "description": "A password for the local administrator account."
       }
@@ -45,12 +45,20 @@
       "metadata": {
         "description": "A reference to the VNET subnet where the VM will be deployed."
       }
+    },
+    "nicName": {
+      "type": "string",
+      "minLength": 1,
+      "maxLength": 80,
+      "metadata": {
+        "description": "The name of the resource."
+      }
     }
   },
   "resources": [
     {
       "type": "Microsoft.Compute/virtualMachines",
-      "apiVersion": "2022-03-01",
+      "apiVersion": "2023-07-01",
       "name": "[parameters('name')]",
       "location": "[parameters('location')]",
       "zones": [
@@ -85,19 +93,19 @@
         "networkProfile": {
           "networkInterfaces": [
             {
-              "id": "[resourceId('Microsoft.Network/networkInterfaces', format('{0}-nic0', parameters('name')))]"
+              "id": "[resourceId('Microsoft.Network/networkInterfaces', parameters('nicName'))]"
             }
           ]
         }
       },
       "dependsOn": [
-        "[resourceId('Microsoft.Network/networkInterfaces', format('{0}-nic0', parameters('name')))]"
+        "[resourceId('Microsoft.Network/networkInterfaces', parameters('nicName'))]"
       ]
     },
     {
       "type": "Microsoft.Network/networkInterfaces",
-      "apiVersion": "2020-11-01",
-      "name": "[format('{0}-nic0', parameters('name'))]",
+      "apiVersion": "2023-05-01",
+      "name": "[parameters('nicName')]",
       "location": "[parameters('location')]",
       "properties": {
         "ipConfigurations": [

@@ -1631,6 +1631,15 @@
   
 </li>
         
+          <li class="md-nav__item">
+  <a href="#realignment-of-rule-names-for-network-interfaces" class="md-nav__link">
+    <span class="md-ellipsis">
+      Realignment of rule names for network interfaces
+    </span>
+  </a>
+  
+</li>
+        
       </ul>
     </nav>
   
@@ -7793,6 +7802,69 @@
   
   
     <li class="md-nav__item">
+      <a href="../en/rules/Azure.NIC.Attached/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Azure.NIC.Attached
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../en/rules/Azure.NIC.Name/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Azure.NIC.Name
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../en/rules/Azure.NIC.UniqueDns/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Azure.NIC.UniqueDns
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
       <a href="../en/rules/Azure.NSG.AKSRules/" class="md-nav__link">
         
   
@@ -10649,48 +10721,6 @@
   
   
     <li class="md-nav__item">
-      <a href="../en/rules/Azure.VM.NICAttached/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Azure.VM.NICAttached
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../en/rules/Azure.VM.NICName/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Azure.VM.NICName
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
       <a href="../en/rules/Azure.VM.Name/" class="md-nav__link">
         
   
@@ -10843,27 +10873,6 @@
   
   <span class="md-ellipsis">
     Azure.VM.Standalone
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../en/rules/Azure.VM.UniqueDns/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Azure.VM.UniqueDns
   </span>
   
 
@@ -12672,6 +12681,15 @@
   
 </li>
         
+          <li class="md-nav__item">
+  <a href="#realignment-of-rule-names-for-network-interfaces" class="md-nav__link">
+    <span class="md-ellipsis">
+      Realignment of rule names for network interfaces
+    </span>
+  </a>
+  
+</li>
+        
       </ul>
     </nav>
   
@@ -12747,13 +12765,37 @@ Check the <a href="../CHANGELOG-v1/">change log</a> and the <a href="../upgrade-
 Configuring these options prior to that release will have no affect.
 For details on configuring these options see <a href="../upgrade-notes/#realigned-configuration-option-names">upgrade notes</a> for details.</p>
 </div>
+<h3 id="realignment-of-rule-names-for-network-interfaces">Realignment of rule names for network interfaces<a class="headerlink" href="#realignment-of-rule-names-for-network-interfaces" title="Permanent link">#</a></h3>
+<p>Orginally when many of the rules targeting network interfaces were created, network interfaces only applied to virtual machines.
+Today, network interfaces can be attached to different types of resources including:</p>
+<ul>
+<li>Virtual machines.</li>
+<li>Private endpoints.</li>
+<li>Private link services.</li>
+</ul>
+<p>To better reflect that network interfaces are not only related to VMs, the following rules have been renamed:</p>
+<ul>
+<li>From <code>Azure.VM.NICAttached</code> to <code>Azure.NIC.Attached</code>.</li>
+<li>From <code>Azure.VM.NICName</code> to <code>Azure.NIC.Name</code>.</li>
+<li>From <code>Azure.VM.UniqueDns</code> to <code>Azure.NIC.UniqueDns</code>.</li>
+</ul>
+<p>Aliases have been added to ensure any existing suppression and exclusion to these rules continues to work.</p>
+<p>From <em>v2.0.0</em> these aliases will no longer work.</p>
+<p>To update your configuration, use the new rule names instead.
+Possible locations where the old rule names may be used include:</p>
+<ul>
+<li>Within the <code>suppression</code> option defined within <code>ps-rule.yaml</code> or by using <code>New-PSRuleOption</code>.</li>
+<li>Within the <code>rule.exclude</code> or <code>rule.include</code> option defined within <code>ps-rule.yaml</code> or by using <code>New-PSRuleOption</code>.</li>
+<li>Within the <code>rule.exclude</code> or <code>rule.include</code> option defined within a custom baseline.</li>
+<li>Other custom scripts that run PSRule cmdlets directly.</li>
+</ul>
 
   <hr>
 <div class="md-source-file">
   <small>
     
       Last update:
-      2023-09-11
+      2023-12-07
     
   </small>
 </div>

@@ -1531,6 +1531,21 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
+         <loc>https://azure.github.io/PSRule.Rules.Azure/en/rules/Azure.NIC.Attached/</loc>
+         <lastmod>2023-12-06</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://azure.github.io/PSRule.Rules.Azure/en/rules/Azure.NIC.Name/</loc>
+         <lastmod>2023-12-06</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://azure.github.io/PSRule.Rules.Azure/en/rules/Azure.NIC.UniqueDns/</loc>
+         <lastmod>2023-12-06</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
          <loc>https://azure.github.io/PSRule.Rules.Azure/en/rules/Azure.NSG.AKSRules/</loc>
          <lastmod>2023-12-06</lastmod>
          <changefreq>daily</changefreq>
@@ -2211,16 +2226,6 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://azure.github.io/PSRule.Rules.Azure/en/rules/Azure.VM.NICAttached/</loc>
-         <lastmod>2023-12-06</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
-         <loc>https://azure.github.io/PSRule.Rules.Azure/en/rules/Azure.VM.NICName/</loc>
-         <lastmod>2023-12-06</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
          <loc>https://azure.github.io/PSRule.Rules.Azure/en/rules/Azure.VM.Name/</loc>
          <lastmod>2023-12-06</lastmod>
          <changefreq>daily</changefreq>
@@ -2257,11 +2262,6 @@
     </url>
     <url>
          <loc>https://azure.github.io/PSRule.Rules.Azure/en/rules/Azure.VM.Standalone/</loc>
-         <lastmod>2023-12-06</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
-         <loc>https://azure.github.io/PSRule.Rules.Azure/en/rules/Azure.VM.UniqueDns/</loc>
          <lastmod>2023-12-06</lastmod>
          <changefreq>daily</changefreq>
     </url>

@@ -2316,6 +2316,15 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#network-interface" class="md-nav__link">
+    <span class="md-ellipsis">
+      Network Interface
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#network-security-group" class="md-nav__link">
     <span class="md-ellipsis">
       Network Security Group
@@ -8316,6 +8325,69 @@
   
   
     <li class="md-nav__item">
+      <a href="../Azure.NIC.Attached/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Azure.NIC.Attached
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Azure.NIC.Name/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Azure.NIC.Name
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Azure.NIC.UniqueDns/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Azure.NIC.UniqueDns
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
       <a href="../Azure.NSG.AKSRules/" class="md-nav__link">
         
   
@@ -11172,48 +11244,6 @@
   
   
     <li class="md-nav__item">
-      <a href="../Azure.VM.NICAttached/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Azure.VM.NICAttached
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../Azure.VM.NICName/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Azure.VM.NICName
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
       <a href="../Azure.VM.Name/" class="md-nav__link">
         
   
@@ -11366,27 +11396,6 @@
   
   <span class="md-ellipsis">
     Azure.VM.Standalone
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../Azure.VM.UniqueDns/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Azure.VM.UniqueDns
   </span>
   
 
@@ -13522,6 +13531,15 @@
   <a href="#monitor" class="md-nav__link">
     <span class="md-ellipsis">
       Monitor
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#network-interface" class="md-nav__link">
+    <span class="md-ellipsis">
+      Network Interface
     </span>
   </a>
   
@@ -15962,6 +15980,37 @@
 </tr>
 </tbody>
 </table>
+<h2 id="network-interface">Network Interface<a class="headerlink" href="#network-interface" title="Permanent link">#</a></h2>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Synopsis</th>
+<th>Severity</th>
+<th>Level</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="../Azure.NIC.Attached/">Azure.NIC.Attached</a></td>
+<td>Network interfaces (NICs) that are not used should be removed.</td>
+<td>Awareness</td>
+<td>Error</td>
+</tr>
+<tr>
+<td><a href="../Azure.NIC.Name/">Azure.NIC.Name</a></td>
+<td>Network Interface (NIC) names should meet naming requirements.</td>
+<td>Awareness</td>
+<td>Error</td>
+</tr>
+<tr>
+<td><a href="../Azure.NIC.UniqueDns/">Azure.NIC.UniqueDns</a></td>
+<td>Network interfaces (NICs) should inherit DNS from virtual networks.</td>
+<td>Awareness</td>
+<td>Error</td>
+</tr>
+</tbody>
+</table>
 <h2 id="network-security-group">Network Security Group<a class="headerlink" href="#network-security-group" title="Permanent link">#</a></h2>
 <table>
 <thead>
@@ -16698,18 +16747,6 @@
 <td>Error</td>
 </tr>
 <tr>
-<td><a href="../Azure.VM.NICAttached/">Azure.VM.NICAttached</a></td>
-<td>Network interfaces (NICs) should be attached.</td>
-<td>Awareness</td>
-<td>Error</td>
-</tr>
-<tr>
-<td><a href="../Azure.VM.NICName/">Azure.VM.NICName</a></td>
-<td>Network Interface (NIC) names should meet naming requirements.</td>
-<td>Awareness</td>
-<td>Error</td>
-</tr>
-<tr>
 <td><a href="../Azure.VM.PPGName/">Azure.VM.PPGName</a></td>
 <td>Proximity Placement Group (PPG) names should meet naming requirements.</td>
 <td>Awareness</td>
@@ -16749,12 +16786,6 @@
 <td><a href="../Azure.VM.Standalone/">Azure.VM.Standalone</a></td>
 <td>Use VM features to increase reliability and improve covered SLA for VM configurations.</td>
 <td>Important</td>
-<td>Error</td>
-</tr>
-<tr>
-<td><a href="../Azure.VM.UniqueDns/">Azure.VM.UniqueDns</a></td>
-<td>Network interfaces (NICs) should inherit DNS from virtual networks.</td>
-<td>Awareness</td>
 <td>Error</td>
 </tr>
 <tr>

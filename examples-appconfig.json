@@ -1,13 +1,11 @@
 {
   "$schema": "https://schema.management.azure.com/schemas/2019-04-01/deploymentTemplate.json#",
-  "languageVersion": "1.10-experimental",
   "contentVersion": "1.0.0.0",
   "metadata": {
-    "_EXPERIMENTAL_WARNING": "Symbolic name support in ARM is experimental, and should be enabled for testing purposes only. Do not enable this setting for any production usage, or you may be unexpectedly broken at any time!",
     "_generator": {
       "name": "bicep",
-      "version": "0.19.5.34762",
-      "templateHash": "18221119898236058940"
+      "version": "0.23.1.45101",
+      "templateHash": "7356968803015321012"
     }
   },
   "parameters": {
@@ -24,6 +22,18 @@
         "description": "The location resources will be deployed."
       }
     },
+    "replicaName": {
+      "type": "string",
+      "metadata": {
+        "description": "The name of the configuration store replica."
+      }
+    },
+    "replicaLocation": {
+      "type": "string",
+      "metadata": {
+        "description": "The location of the configuration store replica."
+      }
+    },
     "workspaceId": {
       "type": "string",
       "metadata": {
@@ -31,8 +41,8 @@
       }
     }
   },
-  "resources": {
-    "store": {
+  "resources": [
+    {
       "type": "Microsoft.AppConfiguration/configurationStores",
       "apiVersion": "2023-03-01",
       "name": "[parameters('name')]",
@@ -44,9 +54,24 @@
         "disableLocalAuth": true,
         "enablePurgeProtection": true,
         "publicNetworkAccess": "Disabled"
+      },
+      "metadata": {
+        "description": "An App Configuration store with a Standard SKU."
       }
     },
-    "diagnostic": {
+    {
+      "type": "Microsoft.AppConfiguration/configurationStores/replicas",
+      "apiVersion": "2023-03-01",
+      "name": "[format('{0}/{1}', parameters('name'), parameters('replicaName'))]",
+      "location": "[parameters('replicaLocation')]",
+      "dependsOn": [
+        "[resourceId('Microsoft.AppConfiguration/configurationStores', parameters('name'))]"
+      ],
+      "metadata": {
+        "description": "A App Configuration store replica in a secondary region."
+      }
+    },
+    {
       "type": "Microsoft.Insights/diagnosticSettings",
       "apiVersion": "2021-05-01-preview",
       "scope": "[format('Microsoft.AppConfiguration/configurationStores/{0}', parameters('name'))]",
@@ -65,8 +90,8 @@
         "workspaceId": "[parameters('workspaceId')]"
       },
       "dependsOn": [
-        "store"
+        "[resourceId('Microsoft.AppConfiguration/configurationStores', parameters('name'))]"
       ]
     }
-  }
+  ]
 }

@@ -6,7 +6,7 @@
       <meta charset="utf-8">
       <meta name="viewport" content="width=device-width,initial-scale=1">
       
-        <meta name="description" content="Authenticate App Configuration clients with Azure AD identities.">
+        <meta name="description" content="Authenticate App Configuration clients with Entra ID identities.">
       
       
         <meta name="author" content="Microsoft">
@@ -84,19 +84,19 @@
   <meta property="og:site_name" content="PSRule for Azure" />
   <meta property="og:type" content="article" />
   <meta property="og:title" content="PSRule for Azure - Azure.AppConfig.DisableLocalAuth" />
-  <meta property="og:description" content="Authenticate App Configuration clients with Azure AD identities." />
+  <meta property="og:description" content="Authenticate App Configuration clients with Entra ID identities." />
   <meta property="og:url" content="https://azure.github.io/PSRule.Rules.Azure/en/rules/Azure.AppConfig.DisableLocalAuth/" />
   <meta property="og:image" content="https://repository-images.githubusercontent.com/184154668/58818c00-d496-11eb-9b77-016145022654" />
   <meta property="og:image:type" content="image/png" />
   <meta property="og:image:width" content="1280" />
   <meta property="og:image:height" content="640" />
-  <meta property="og:image:alt" content="Authenticate App Configuration clients with Azure AD identities." />
+  <meta property="og:image:alt" content="Authenticate App Configuration clients with Entra ID identities." />
 
   <!-- Twitter meta tags -->
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:site" content="@github" />
   <meta name="twitter:title" content="PSRule for Azure - Azure.AppConfig.DisableLocalAuth" />
-  <meta name="twitter:description" content="Authenticate App Configuration clients with Azure AD identities." />
+  <meta name="twitter:description" content="Authenticate App Configuration clients with Entra ID identities." />
   <meta name="twitter:image" content="https://repository-images.githubusercontent.com/184154668/58818c00-d496-11eb-9b77-016145022654" />
 
 
@@ -4399,6 +4399,15 @@
   <a href="#configure-with-bicep-public-registry" class="md-nav__link">
     <span class="md-ellipsis">
       Configure with Bicep Public Registry
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#configure-with-azure-policy" class="md-nav__link">
+    <span class="md-ellipsis">
+      Configure with Azure Policy
     </span>
   </a>
   
@@ -12751,6 +12760,15 @@
   
 </li>
         
+          <li class="md-nav__item">
+  <a href="#configure-with-azure-policy" class="md-nav__link">
+    <span class="md-ellipsis">
+      Configure with Azure Policy
+    </span>
+  </a>
+  
+</li>
+        
       </ul>
     </nav>
   
@@ -12805,21 +12823,24 @@
  · <a href="../resource/#app-configuration"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13.152.682a2.251 2.251 0 0 1 2.269 0l.007.004 6.957 4.276a2.277 2.277 0 0 1 1.126 1.964v7.516c0 .81-.432 1.56-1.133 1.968l-.002.001-11.964 7.037-.004.003c-.706.41-1.578.41-2.284 0l-.026-.015-6.503-4.502a2.268 2.268 0 0 1-1.096-1.943V9.438c0-.392.1-.77.284-1.1l.003-.006.014-.026c.197-.342.48-.627.82-.827h.002L13.152.681Zm.757 1.295h-.001L2.648 8.616l6.248 4.247a.775.775 0 0 0 .758-.01h.001l11.633-6.804-6.629-4.074a.75.75 0 0 0-.75.003ZM8.517 14.33a2.286 2.286 0 0 1-.393-.18l-.023-.014-6.102-4.147v7.003c0 .275.145.528.379.664l.025.014 6.114 4.232V14.33ZM18 9.709l-3.25 1.9v7.548L18 17.245Zm-7.59 4.438-.002.002a2.296 2.296 0 0 1-.391.18v7.612l3.233-1.902v-7.552Zm9.09-5.316v7.532l2.124-1.25a.776.776 0 0 0 .387-.671V7.363Z"/></svg></span> App Configuration</a>
  · <a href="https://github.com/Azure/PSRule.Rules.Azure/blob/main/src/PSRule.Rules.Azure/rules/Azure.AppConfig.Rule.yaml"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 3a2 2 0 0 1 2-2h9.982a2 2 0 0 1 1.414.586l4.018 4.018A2 2 0 0 1 21 7.018V21a2 2 0 0 1-2 2H4.75a.75.75 0 0 1 0-1.5H19a.5.5 0 0 0 .5-.5V8.5h-4a2 2 0 0 1-2-2v-4H5a.5.5 0 0 0-.5.5v6.25a.75.75 0 0 1-1.5 0Zm12-.5v4a.5.5 0 0 0 .5.5h4a.5.5 0 0 0-.146-.336l-4.018-4.018A.5.5 0 0 0 15 2.5Z"/><path d="M4.53 12.24a.75.75 0 0 1-.039 1.06l-2.639 2.45 2.64 2.45a.75.75 0 1 1-1.022 1.1l-3.23-3a.75.75 0 0 1 0-1.1l3.23-3a.75.75 0 0 1 1.06.04Zm3.979 1.06a.75.75 0 1 1 1.02-1.1l3.231 3a.75.75 0 0 1 0 1.1l-3.23 3a.75.75 0 1 1-1.021-1.1l2.639-2.45-2.64-2.45Z"/></svg></span> Rule</a>
  · <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M7.75 6.5a1.25 1.25 0 1 0 0 2.5 1.25 1.25 0 0 0 0-2.5Z"/><path d="M2.5 1h8.44a1.5 1.5 0 0 1 1.06.44l10.25 10.25a1.5 1.5 0 0 1 0 2.12l-8.44 8.44a1.5 1.5 0 0 1-2.12 0L1.44 12A1.497 1.497 0 0 1 1 10.94V2.5A1.5 1.5 0 0 1 2.5 1Zm0 1.5v8.44l10.25 10.25 8.44-8.44L10.94 2.5Z"/></svg></span> 2022_09</p>
-<p>Authenticate App Configuration clients with Azure AD identities.</p>
+<p>Authenticate App Configuration clients with Entra ID identities.</p>
 <h2 id="description">Description<a class="headerlink" href="#description" title="Permanent link">#</a></h2>
 <p>Every request to an Azure App Configuration resource must be authenticated.
-By default, requests can be authenticated with either Azure Active Directory (Azure AD) credentials,
-or by using an access key.
-Of these two types of authentication schemes, Azure AD provides superior
-security and ease of use over access keys, and is recommended by Microsoft.
-To require clients to use Azure AD to authenticate requests, you can disable the usage of access keys for an Azure App Configuration
+App Configuration supports authenticating requests using either Entra ID (previously Azure AD) identities or access keys.
+Using Entra ID identities:</p>
+<ul>
+<li>Centralizes identity management and auditing.</li>
+<li>Allows granting of permissions using role-based access control (RBAC).</li>
+<li>Provides support for advanced security features such as conditional access and multi-factor authentication (MFA) when applicable.</li>
+</ul>
+<p>To require clients to use Entra ID to authenticate requests, you can disable the usage of access keys for an Azure App Configuration
 resource.</p>
 <p>When you disable access key authentication for an Azure App Configuration resource, any existing access
 keys for that resource are deleted.
 Any subsequent requests to the resource using the previously existing access keys will be rejected.
-Only requests that are authenticated using Azure AD will succeed.</p>
+Only requests that are authenticated using Entra ID will succeed.</p>
 <h2 id="recommendation">Recommendation<a class="headerlink" href="#recommendation" title="Permanent link">#</a></h2>
-<p>Consider only using Azure AD identities to access App Configuration data.
+<p>Consider only using Entra ID identities to access App Configuration data.
 Then disable authentication based on access keys or SAS tokens.</p>
 <h2 id="examples">Examples<a class="headerlink" href="#examples" title="Permanent link">#</a></h2>
 <h3 id="configure-with-azure-template">Configure with Azure template<a class="headerlink" href="#configure-with-azure-template" title="Permanent link">#</a></h3>
@@ -12868,23 +12889,51 @@ Then disable authentication based on access keys or SAS tokens.</p>
 <li>Set the <code>params.disableLocalAuth</code> parameter to <code>true</code>.</li>
 </ul>
 <p>For example:</p>
-<div class="language-text highlight"><span class="filename">Azure Bicep snippet</span><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>module store &#39;br/public:app/app-configuration:1.1.1&#39; = {
+<div class="language-text highlight"><span class="filename">Azure Bicep snippet</span><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>module br_public_store &#39;br/public:app/app-configuration:1.1.2&#39; = {
 </span><span id="__span-2-2"><a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a>  name: &#39;store&#39;
 </span><span id="__span-2-3"><a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a>  params: {
 </span><span id="__span-2-4"><a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a>    skuName: &#39;Standard&#39;
 </span><span id="__span-2-5"><a id="__codelineno-2-5" name="__codelineno-2-5" href="#__codelineno-2-5"></a>    disableLocalAuth: true
 </span><span id="__span-2-6"><a id="__codelineno-2-6" name="__codelineno-2-6" href="#__codelineno-2-6"></a>    enablePurgeProtection: true
 </span><span id="__span-2-7"><a id="__codelineno-2-7" name="__codelineno-2-7" href="#__codelineno-2-7"></a>    publicNetworkAccess: &#39;Disabled&#39;
-</span><span id="__span-2-8"><a id="__codelineno-2-8" name="__codelineno-2-8" href="#__codelineno-2-8"></a>  }
-</span><span id="__span-2-9"><a id="__codelineno-2-9" name="__codelineno-2-9" href="#__codelineno-2-9"></a>}
+</span><span id="__span-2-8"><a id="__codelineno-2-8" name="__codelineno-2-8" href="#__codelineno-2-8"></a>    replicas: [
+</span><span id="__span-2-9"><a id="__codelineno-2-9" name="__codelineno-2-9" href="#__codelineno-2-9"></a>      {
+</span><span id="__span-2-10"><a id="__codelineno-2-10" name="__codelineno-2-10" href="#__codelineno-2-10"></a>        name: &#39;eastus&#39;
+</span><span id="__span-2-11"><a id="__codelineno-2-11" name="__codelineno-2-11" href="#__codelineno-2-11"></a>        location: &#39;eastus&#39;
+</span><span id="__span-2-12"><a id="__codelineno-2-12" name="__codelineno-2-12" href="#__codelineno-2-12"></a>      }
+</span><span id="__span-2-13"><a id="__codelineno-2-13" name="__codelineno-2-13" href="#__codelineno-2-13"></a>    ]
+</span><span id="__span-2-14"><a id="__codelineno-2-14" name="__codelineno-2-14" href="#__codelineno-2-14"></a>  }
+</span><span id="__span-2-15"><a id="__codelineno-2-15" name="__codelineno-2-15" href="#__codelineno-2-15"></a>}
 </span></code></pre></div>
+<h3 id="configure-with-azure-policy">Configure with Azure Policy<a class="headerlink" href="#configure-with-azure-policy" title="Permanent link">#</a></h3>
+<p>To address this issue at runtime use the following policies:</p>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Resource</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>App Configuration stores should have local authentication methods disabled</td>
+<td><code>/providers/Microsoft.Authorization/policyDefinitions/b08ab3ca-1062-4db3-8803-eec9cae605d6</code></td>
+</tr>
+<tr>
+<td>Configure App Configuration stores to disable local authentication methods</td>
+<td><code>/providers/Microsoft.Authorization/policyDefinitions/72bc14af-4ab8-43af-b4e4-38e7983f9a1f</code></td>
+</tr>
+</tbody>
+</table>
 <h2 id="links">Links<a class="headerlink" href="#links" title="Permanent link">#</a></h2>
 <ul>
-<li><a href="https://learn.microsoft.com/azure/architecture/framework/security/design-identity-authentication#centralize-all-identity-systems">Centralize all identity systems</a></li>
+<li><a href="https://learn.microsoft.com/azure/well-architected/security/identity-access">SE:05 Identity and access management</a></li>
 <li><a href="https://learn.microsoft.com/security/benchmark/azure/security-controls-v3-identity-management#im-1-use-centralized-identity-and-authentication-system">IM-1: Use centralized identity and authentication system</a></li>
-<li><a href="https://learn.microsoft.com/azure/azure-app-configuration/concept-enable-rbac">Authorize access to Azure App Configuration using Azure Active Directory</a></li>
+<li><a href="https://learn.microsoft.com/azure/azure-app-configuration/concept-enable-rbac">Authorize access to Azure App Configuration using Microsoft Entra ID</a></li>
 <li><a href="https://learn.microsoft.com/azure/azure-app-configuration/howto-disable-access-key-authentication">Disable access key authentication</a></li>
-<li><a href="https://azure.github.io/bicep-registry-modules/#app">Public registry</a></li>
+<li><a href="https://learn.microsoft.com/security/benchmark/azure/baselines/azure-app-configuration-security-baseline">Azure security baseline for Azure App Configuration</a></li>
+<li><a href="https://learn.microsoft.com/azure/azure-app-configuration/policy-reference">Azure Policy built-in definitions for Azure App Configuration</a></li>
+<li><a href="https://azure.github.io/bicep-registry-modules/#app">Bicep public registry</a></li>
 <li><a href="https://learn.microsoft.com/azure/templates/microsoft.appconfiguration/configurationstores">Azure deployment reference</a></li>
 </ul>
 
@@ -12911,7 +12960,7 @@ Then disable authentication based on access keys or SAS tokens.</p>
     <span class="md-icon" title="Last update">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1-2.1-2M12.5 7v5.2l4 2.4-1 1L11 13V7h1.5M11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2v1.8Z"/></svg>
     </span>
-    2023-07-15
+    2023-12-11
   </span>
 
     

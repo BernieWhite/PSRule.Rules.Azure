@@ -133,3 +133,12 @@ resource defenderForCloudPosture 'Microsoft.Security/pricings@2023-01-01' = {
     pricingTier: 'Standard'
   }
 }
+
+// Configure Microsoft Defender for APIs
+resource defenderForApi 'Microsoft.Security/pricings@2023-01-01' = {
+  name: 'Api'
+  properties: {
+    subPlan: 'P1'
+    pricingTier: 'Standard'
+  }
+}

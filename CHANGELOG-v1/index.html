@@ -1553,6 +1553,15 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#v1320" class="md-nav__link">
+    <span class="md-ellipsis">
+      v1.32.0
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#v1320-b0099-pre-release" class="md-nav__link">
     <span class="md-ellipsis">
       v1.32.0-B0099 (pre-release)
@@ -14694,6 +14703,15 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#v1320" class="md-nav__link">
+    <span class="md-ellipsis">
+      v1.32.0
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#v1320-b0099-pre-release" class="md-nav__link">
     <span class="md-ellipsis">
       v1.32.0-B0099 (pre-release)
@@ -16759,6 +16777,95 @@
   See <a href="../upgrade-notes/">upgrade notes</a> for more information.</li>
 </ul>
 <h2 id="unreleased">Unreleased<a class="headerlink" href="#unreleased" title="Permanent link">#</a></h2>
+<h2 id="v1320">v1.32.0<a class="headerlink" href="#v1320" title="Permanent link">#</a></h2>
+<p>What's changed since v1.31.3:</p>
+<ul>
+<li>New features:<ul>
+<li>Added December 2023 baselines <code>Azure.GA_2023_12</code> and <code>Azure.Preview_2023_12</code> by <a href="https://github.com/BernieWhite">@BernieWhite</a>.
+  <a href="https://github.com/Azure/PSRule.Rules.Azure/issues/2580">#2580</a><ul>
+<li>Includes rules released before or during December 2023.</li>
+<li>Marked <code>Azure.GA_2023_09</code> and <code>Azure.Preview_2023_09</code> baselines as obsolete.</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>Updated rules:<ul>
+<li>App Configuration:<ul>
+<li>Promoted <code>Azure.AppConfig.GeoReplica</code> to GA rule set by <a href="https://github.com/BernieWhite">@BernieWhite</a>.
+  <a href="https://github.com/Azure/PSRule.Rules.Azure/issues/2592">#2592</a></li>
+</ul>
+</li>
+<li>API Management:<ul>
+<li>Promoted <code>Azure.APIM.DefenderCloud</code> to GA rule set by <a href="https://github.com/BernieWhite">@BernieWhite</a>.
+  <a href="https://github.com/Azure/PSRule.Rules.Azure/issues/2591">#2591</a></li>
+</ul>
+</li>
+<li>Azure Kubernetes Service:<ul>
+<li>Updated <code>Azure.AKS.Version</code> to use latest stable version <code>1.27.7</code> by <a href="https://github.com/BernieWhite">@BernieWhite</a>.
+  <a href="https://github.com/Azure/PSRule.Rules.Azure/issues/2581">#2581</a></li>
+</ul>
+</li>
+<li>Defender for Cloud:<ul>
+<li>Promoted <code>Azure.Defender.Api</code> to GA rule set by <a href="https://github.com/BernieWhite">@BernieWhite</a>.
+  <a href="https://github.com/Azure/PSRule.Rules.Azure/issues/2591">#2591</a></li>
+</ul>
+</li>
+<li>Network Interface:<ul>
+<li><strong>Important change</strong>: Renamed NIC rules to reflect current usage by <a href="https://github.com/BernieWhite">@BernieWhite</a>.
+  <a href="https://github.com/Azure/PSRule.Rules.Azure/issues/2574">#2574</a><ul>
+<li>Rename <code>Azure.VM.NICAttached</code> to <code>Azure.NIC.Attached</code>.</li>
+<li>Rename <code>Azure.VM.NICName</code> to <code>Azure.NIC.Name</code>.</li>
+<li>Rename <code>Azure.VM.UniqueDns</code> to <code>Azure.NIC.UniqueDns</code>.</li>
+<li>Added aliases to reference the old names for suppression and exclusion.</li>
+<li>Old names will be removed from v2.</li>
+</ul>
+</li>
+<li>Added support for private link services to <code>Azure.VM.NICAttached</code> by <a href="https://github.com/BernieWhite">@BernieWhite</a>.
+  <a href="https://github.com/Azure/PSRule.Rules.Azure/issues/2563">#2563</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li>General improvements:<ul>
+<li>Improved reporting of null argument in length function by <a href="https://github.com/BernieWhite">@BernieWhite</a>.
+  <a href="https://github.com/Azure/PSRule.Rules.Azure/issues/2597">#2597</a></li>
+<li>Quality updates to documentation by <a href="https://github.com/BernieWhite">@BernieWhite</a>.
+  <a href="https://github.com/Azure/PSRule.Rules.Azure/issues/2557">#2557</a>
+  <a href="https://github.com/Azure/PSRule.Rules.Azure/issues/2570">#2570</a>
+  <a href="https://github.com/Azure/PSRule.Rules.Azure/issues/1772">#1772</a></li>
+</ul>
+</li>
+<li>Engineering:<ul>
+<li>Updated resource providers and policy aliases.
+  <a href="https://github.com/Azure/PSRule.Rules.Azure/pull/2579">#2579</a></li>
+<li>Bump xunit to v2.6.2.
+  <a href="https://github.com/Azure/PSRule.Rules.Azure/pull/2544">#2544</a></li>
+<li>Bump xunit.runner.visualstudio to v2.5.4.
+  <a href="https://github.com/Azure/PSRule.Rules.Azure/pull/2567">#2567</a></li>
+<li>Bump Microsoft.SourceLink.GitHub to v8.0.0.
+  <a href="https://github.com/Azure/PSRule.Rules.Azure/pull/2538">#2538</a></li>
+<li>Bump BenchmarkDotNet.Diagnostics.Windows and BenchmarkDotNet to v0.13.11.
+  <a href="https://github.com/Azure/PSRule.Rules.Azure/pull/2575">#2575</a></li>
+<li>Bump Microsoft.CodeAnalysis.NetAnalyzers to v8.0.0.
+  <a href="https://github.com/Azure/PSRule.Rules.Azure/pull/2568">#2568</a></li>
+<li>Bump Microsoft.NET.Test.Sdk to v17.8.0.
+  <a href="https://github.com/Azure/PSRule.Rules.Azure/pull/2527">#2527</a></li>
+</ul>
+</li>
+<li>Bug fixes:<ul>
+<li>Fixed additional false positives of <code>Azure.Deployment.SecureParameter</code> by <a href="https://github.com/BernieWhite">@BernieWhite</a>.
+  <a href="https://github.com/Azure/PSRule.Rules.Azure/issues/2556">#2556</a></li>
+<li>Fixed expansion with sub-resource handling of deployments with duplicate resources by <a href="https://github.com/BernieWhite">@BernieWhite</a>.
+  <a href="https://github.com/Azure/PSRule.Rules.Azure/issues/2564">#2564</a></li>
+<li>Fixed dependency ordered is incorrect by <a href="https://github.com/BernieWhite">@BernieWhite</a>.
+  <a href="https://github.com/Azure/PSRule.Rules.Azure/issues/2578">#2578</a></li>
+</ul>
+</li>
+</ul>
+<p>What's changed since pre-release v1.32.0-B0099:</p>
+<ul>
+<li>No additional changes.</li>
+</ul>
 <h2 id="v1320-b0099-pre-release">v1.32.0-B0099 (pre-release)<a class="headerlink" href="#v1320-b0099-pre-release" title="Permanent link">#</a></h2>
 <p>What's changed since pre-release v1.32.0-B0053:</p>
 <ul>
@@ -16775,11 +16882,11 @@
 <li>App Configuration:<ul>
 <li>Promoted <code>Azure.AppConfig.GeoReplica</code> to GA rule set by <a href="https://github.com/BernieWhite">@BernieWhite</a>.
   <a href="https://github.com/Azure/PSRule.Rules.Azure/issues/2592">#2592</a></li>
+</ul>
+</li>
 <li>API Management:<ul>
 <li>Promoted <code>Azure.APIM.DefenderCloud</code> to GA rule set by <a href="https://github.com/BernieWhite">@BernieWhite</a>.
   <a href="https://github.com/Azure/PSRule.Rules.Azure/issues/2591">#2591</a></li>
-</ul>
-</li>
 </ul>
 </li>
 <li>Azure Kubernetes Service:<ul>
@@ -16838,8 +16945,6 @@
 </ul>
 </li>
 <li>Engineering:<ul>
-<li>Updated resource providers and policy aliases.
-  <a href="https://github.com/Azure/PSRule.Rules.Azure/pull/2579">#2579</a></li>
 <li>Bump xunit.runner.visualstudio to v2.5.4.
   <a href="https://github.com/Azure/PSRule.Rules.Azure/pull/2567">#2567</a></li>
 </ul>
@@ -22792,7 +22897,7 @@ What's changed since v1.24.0:</p>
     <span class="md-icon" title="Last update">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1-2.1-2M12.5 7v5.2l4 2.4-1 1L11 13V7h1.5M11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2v1.8Z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">December 13, 2023</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">December 16, 2023</span>
   </span>
 
     

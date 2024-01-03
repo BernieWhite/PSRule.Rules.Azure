@@ -1932,6 +1932,15 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#azure_vnet_subnet_excluded_from_nsg" class="md-nav__link">
+    <span class="md-ellipsis">
+      AZURE_VNET_SUBNET_EXCLUDED_FROM_NSG
+    </span>
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -13013,6 +13022,15 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#azure_vnet_subnet_excluded_from_nsg" class="md-nav__link">
+    <span class="md-ellipsis">
+      AZURE_VNET_SUBNET_EXCLUDED_FROM_NSG
+    </span>
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -13497,6 +13515,30 @@ By default, this configuration option is set to <code>false</code>.</p>
 </span><span id="__span-57-2"><a id="__codelineno-57-2" name="__codelineno-57-2" href="#__codelineno-57-2"></a><span class="nt">configuration</span><span class="p">:</span>
 </span><span id="__span-57-3"><a id="__codelineno-57-3" name="__codelineno-57-3" href="#__codelineno-57-3"></a><span class="w">  </span><span class="nt">AZURE_VNET_DNS_WITH_IDENTITY</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
 </span></code></pre></div>
+<h3 id="azure_vnet_subnet_excluded_from_nsg">AZURE_VNET_SUBNET_EXCLUDED_FROM_NSG<a class="headerlink" href="#azure_vnet_subnet_excluded_from_nsg" title="Permanent link">#</a></h3>
+<p><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M11.75 1a.75.75 0 0 1 .75.75V4h6.532c.42 0 .826.15 1.143.425l3.187 2.75a1.75 1.75 0 0 1 0 2.65l-3.187 2.75a1.75 1.75 0 0 1-1.143.425H12.5v9.25a.75.75 0 0 1-1.5 0V13H3.75A1.75 1.75 0 0 1 2 11.25v-5.5C2 4.783 2.784 4 3.75 4H11V1.75a.75.75 0 0 1 .75-.75Zm7.282 4.5H3.75a.25.25 0 0 0-.25.25v5.5c0 .138.112.25.25.25h15.282c.06 0 .118-.021.163-.06l3.188-2.75a.248.248 0 0 0 0-.38l-3.188-2.75a.249.249 0 0 0-.163-.06Z"/></svg></span> v1.33.0</p>
+<blockquote>
+<p>Applies to <a href="../../en/rules/Azure.VNET.UseNSGs/">Azure.VNET.UseNSGs</a>.</p>
+</blockquote>
+<p>This configuration option excludes subnets from requiring a Network Security Group (NSG).
+You can use this configuration option to exclude subnets that are specific to your environment.
+To configure this option, specify a list of subnet names to exclude.</p>
+<p>Syntax:</p>
+<div class="language-yaml highlight"><pre><span></span><code><span id="__span-58-1"><a id="__codelineno-58-1" name="__codelineno-58-1" href="#__codelineno-58-1"></a><span class="nt">configuration</span><span class="p">:</span>
+</span><span id="__span-58-2"><a id="__codelineno-58-2" name="__codelineno-58-2" href="#__codelineno-58-2"></a><span class="w">  </span><span class="nt">AZURE_VNET_SUBNET_EXCLUDED_FROM_NSG</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">array</span>
+</span></code></pre></div>
+<p>Default:</p>
+<div class="language-yaml highlight"><pre><span></span><code><span id="__span-59-1"><a id="__codelineno-59-1" name="__codelineno-59-1" href="#__codelineno-59-1"></a><span class="c1"># YAML: The default AZURE_VNET_SUBNET_EXCLUDED_FROM_NSG configuration option</span>
+</span><span id="__span-59-2"><a id="__codelineno-59-2" name="__codelineno-59-2" href="#__codelineno-59-2"></a><span class="nt">configuration</span><span class="p">:</span>
+</span><span id="__span-59-3"><a id="__codelineno-59-3" name="__codelineno-59-3" href="#__codelineno-59-3"></a><span class="w">  </span><span class="nt">AZURE_VNET_SUBNET_EXCLUDED_FROM_NSG</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">[]</span>
+</span></code></pre></div>
+<p>Example:</p>
+<div class="language-yaml highlight"><pre><span></span><code><span id="__span-60-1"><a id="__codelineno-60-1" name="__codelineno-60-1" href="#__codelineno-60-1"></a><span class="c1"># YAML: Set the AZURE_VNET_SUBNET_EXCLUDED_FROM_NSG configuration option with two user defined subnets.</span>
+</span><span id="__span-60-2"><a id="__codelineno-60-2" name="__codelineno-60-2" href="#__codelineno-60-2"></a><span class="nt">configuration</span><span class="p">:</span>
+</span><span id="__span-60-3"><a id="__codelineno-60-3" name="__codelineno-60-3" href="#__codelineno-60-3"></a><span class="w">  </span><span class="nt">AZURE_VNET_SUBNET_EXCLUDED_FROM_NSG</span><span class="p">:</span>
+</span><span id="__span-60-4"><a id="__codelineno-60-4" name="__codelineno-60-4" href="#__codelineno-60-4"></a><span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">subnet-1</span>
+</span><span id="__span-60-5"><a id="__codelineno-60-5" name="__codelineno-60-5" href="#__codelineno-60-5"></a><span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">subnet-2</span>
+</span></code></pre></div>
 
 
 
@@ -13519,7 +13561,7 @@ By default, this configuration option is set to <code>false</code>.</p>
     <span class="md-icon" title="Last update">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1-2.1-2M12.5 7v5.2l4 2.4-1 1L11 13V7h1.5M11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2v1.8Z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">December 10, 2023</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">January 3, 2024</span>
   </span>
 
     

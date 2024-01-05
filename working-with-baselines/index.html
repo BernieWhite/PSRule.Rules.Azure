@@ -12924,7 +12924,7 @@ See <a href="../en/baselines/Azure.All/">reference</a> for a list baselines ship
 </span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a><span class="w">  </span><span class="nt">uses</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">microsoft/ps-rule@v2.9.0</span>
 </span><span id="__span-0-4"><a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a><span class="w">  </span><span class="nt">with</span><span class="p">:</span>
 </span><span id="__span-0-5"><a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a><span class="w">    </span><span class="nt">modules</span><span class="p">:</span><span class="w"> </span><span class="s">&#39;PSRule.Rules.Azure&#39;</span>
-</span><span id="__span-0-6"><a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a><span class="w">    </span><span class="nt">baseline</span><span class="p">:</span><span class="w"> </span><span class="s">&#39;Azure.GA_2023_09&#39;</span>
+</span><span id="__span-0-6"><a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a><span class="w">    </span><span class="nt">baseline</span><span class="p">:</span><span class="w"> </span><span class="s">&#39;Azure.GA_2023_12&#39;</span>
 </span></code></pre></div>
 </div>
 <div class="tabbed-block">
@@ -12934,14 +12934,14 @@ See <a href="../en/baselines/Azure.All/">reference</a> for a list baselines ship
 </span><span id="__span-1-3"><a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a><span class="w">  </span><span class="nt">displayName</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Analyze Azure template files</span>
 </span><span id="__span-1-4"><a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a><span class="w">  </span><span class="nt">inputs</span><span class="p">:</span>
 </span><span id="__span-1-5"><a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a><span class="w">    </span><span class="nt">modules</span><span class="p">:</span><span class="w"> </span><span class="s">&#39;PSRule.Rules.Azure&#39;</span>
-</span><span id="__span-1-6"><a id="__codelineno-1-6" name="__codelineno-1-6" href="#__codelineno-1-6"></a><span class="w">    </span><span class="nt">baseline</span><span class="p">:</span><span class="w"> </span><span class="s">&#39;Azure.GA_2023_09&#39;</span>
+</span><span id="__span-1-6"><a id="__codelineno-1-6" name="__codelineno-1-6" href="#__codelineno-1-6"></a><span class="w">    </span><span class="nt">baseline</span><span class="p">:</span><span class="w"> </span><span class="s">&#39;Azure.GA_2023_12&#39;</span>
 </span></code></pre></div>
 </div>
 <div class="tabbed-block">
 <p>Update your PowerShell command-line with <code>-Baseline &lt;name_of_baseline&gt;</code>.</p>
-<div class="language-powershell highlight"><span class="filename">With Assert-PSRule</span><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="nb">Assert-PSRule</span> <span class="n">-Format</span> <span class="n">File</span> <span class="n">-InputPath</span> <span class="s1">&#39;.&#39;</span> <span class="n">-Module</span> <span class="s1">&#39;PSRule.Rules.Azure&#39;</span> <span class="n">-Baseline</span> <span class="s1">&#39;Azure.GA_2023_09&#39;</span>
+<div class="language-powershell highlight"><span class="filename">With Assert-PSRule</span><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="nb">Assert-PSRule</span> <span class="n">-Format</span> <span class="n">File</span> <span class="n">-InputPath</span> <span class="s1">&#39;.&#39;</span> <span class="n">-Module</span> <span class="s1">&#39;PSRule.Rules.Azure&#39;</span> <span class="n">-Baseline</span> <span class="s1">&#39;Azure.GA_2023_12&#39;</span>
 </span></code></pre></div>
-<div class="language-powershell highlight"><span class="filename">With Invoke-PSRule</span><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="nb">Invoke-PSRule</span> <span class="n">-Format</span> <span class="n">File</span> <span class="n">-InputPath</span> <span class="s1">&#39;.&#39;</span> <span class="n">-Module</span> <span class="s1">&#39;PSRule.Rules.Azure&#39;</span> <span class="n">-Baseline</span> <span class="s1">&#39;Azure.GA_2023_09&#39;</span>
+<div class="language-powershell highlight"><span class="filename">With Invoke-PSRule</span><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="nb">Invoke-PSRule</span> <span class="n">-Format</span> <span class="n">File</span> <span class="n">-InputPath</span> <span class="s1">&#39;.&#39;</span> <span class="n">-Module</span> <span class="s1">&#39;PSRule.Rules.Azure&#39;</span> <span class="n">-Baseline</span> <span class="s1">&#39;Azure.GA_2023_12&#39;</span>
 </span></code></pre></div>
 </div>
 </div>
@@ -12949,7 +12949,7 @@ See <a href="../en/baselines/Azure.All/">reference</a> for a list baselines ship
 <h2 id="creating-baselines">Creating baselines<a class="headerlink" href="#creating-baselines" title="Permanent link">#</a></h2>
 <p>To create your own baselines see the PSRule help topic <a href="https://microsoft.github.io/PSRule/v2/concepts/PSRule/en-US/about_PSRule_Baseline/">about_PSRule_Baseline</a>.</p>
 <h2 id="including-custom-rules">Including custom rules<a class="headerlink" href="#including-custom-rules" title="Permanent link">#</a></h2>
-<p><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M11.75 1a.75.75 0 0 1 .75.75V4h6.532c.42 0 .826.15 1.143.425l3.187 2.75a1.75 1.75 0 0 1 0 2.65l-3.187 2.75a1.75 1.75 0 0 1-1.143.425H12.5v9.25a.75.75 0 0 1-1.5 0V13H3.75A1.75 1.75 0 0 1 2 11.25v-5.5C2 4.783 2.784 4 3.75 4H11V1.75a.75.75 0 0 1 .75-.75Zm7.282 4.5H3.75a.25.25 0 0 0-.25.25v5.5c0 .138.112.25.25.25h15.282c.06 0 .118-.021.163-.06l3.188-2.75a.248.248 0 0 0 0-.38l-3.188-2.75a.249.249 0 0 0-.163-.06Z"/></svg></span> v1.8.0</p>
+<p><span class="badge"><span class="badge__icon"><a href="../CHANGELOG-v1/#v180" title="Minimum version"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M11.75 1a.75.75 0 0 1 .75.75V4h6.532c.42 0 .826.15 1.143.425l3.187 2.75a1.75 1.75 0 0 1 0 2.65l-3.187 2.75a1.75 1.75 0 0 1-1.143.425H12.5v9.25a.75.75 0 0 1-1.5 0V13H3.75A1.75 1.75 0 0 1 2 11.25v-5.5C2 4.783 2.784 4 3.75 4H11V1.75a.75.75 0 0 1 .75-.75Zm7.282 4.5H3.75a.25.25 0 0 0-.25.25v5.5c0 .138.112.25.25.25h15.282c.06 0 .118-.021.163-.06l3.188-2.75a.248.248 0 0 0 0-.38l-3.188-2.75a.249.249 0 0 0-.163-.06Z"/></svg></span></a></span><span class="badge__text"><a href="../CHANGELOG-v1/#v180">v1.8.0</a></span></span></p>
 <p>The quarterly baselines shipped with PSRule for Azure target a subset of rules for <abbr title="generally available">GA</abbr> Azure features.
 When you specify a baseline, custom rules you create and store in <code>.ps-rule/</code> will be ignored by default.</p>
 <p>To change this behavior, set the <code>Rule.IncludeLocal</code> option to <code>true</code>.
@@ -12980,7 +12980,7 @@ This option can be set in <code>ps-rule.yaml</code>.</p>
     <span class="md-icon" title="Last update">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1-2.1-2M12.5 7v5.2l4 2.4-1 1L11 13V7h1.5M11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2v1.8Z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">October 1, 2023</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">January 3, 2024</span>
   </span>
 
     

@@ -23,8 +23,50 @@ param sku string
 @description('A reference to the VNET subnet where the VM will be deployed.')
 param subnetId string
 
-// An example basic VM
-resource vm1 'Microsoft.Compute/virtualMachines@2023-07-01' = {
+// An example virtual machine.
+resource vm 'Microsoft.Compute/virtualMachines@2023-09-01' = {
+  name: name
+  location: location
+  zones: [
+    '1'
+  ]
+  properties: {
+    hardwareProfile: {
+      vmSize: 'Standard_D2s_v3'
+    }
+    osProfile: {
+      computerName: name
+      adminUsername: adminUsername
+      adminPassword: adminPassword
+    }
+    storageProfile: {
+      imageReference: {
+        publisher: 'MicrosoftWindowsServer'
+        offer: 'WindowsServer'
+        sku: sku
+        version: 'latest'
+      }
+      osDisk: {
+        name: '${name}-disk0'
+        caching: 'ReadWrite'
+        createOption: 'FromImage'
+        managedDisk: {
+          storageAccountType: 'Premium_LRS'
+        }
+      }
+    }
+    networkProfile: {
+      networkInterfaces: [
+        {
+          id: nic.id
+        }
+      ]
+    }
+  }
+}
+
+// An example virtual machine with Azure Hybrid Benefit.
+resource vm_with_benefit 'Microsoft.Compute/virtualMachines@2023-09-01' = {
   name: name
   location: location
   zones: [
@@ -71,7 +113,8 @@ resource vm1 'Microsoft.Compute/virtualMachines@2023-07-01' = {
 @sys.description('The name of the resource.')
 param nicName string
 
-resource nic 'Microsoft.Network/networkInterfaces@2023-05-01' = {
+// An example network interface
+resource nic 'Microsoft.Network/networkInterfaces@2023-06-01' = {
   name: nicName
   location: location
   properties: {

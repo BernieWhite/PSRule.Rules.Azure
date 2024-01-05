@@ -4,8 +4,8 @@
   "metadata": {
     "_generator": {
       "name": "bicep",
-      "version": "0.21.1.54444",
-      "templateHash": "17850178672994683728"
+      "version": "0.24.24.22086",
+      "templateHash": "4359857000491870165"
     }
   },
   "parameters": {
@@ -29,13 +29,30 @@
       "apiVersion": "2023-05-01",
       "name": "[parameters('name')]",
       "location": "[parameters('location')]",
+      "sku": {
+        "name": "S0"
+      },
+      "kind": "CognitiveServices",
+      "properties": {
+        "publicNetworkAccess": "Disabled",
+        "networkAcls": {
+          "defaultAction": "Deny"
+        },
+        "disableLocalAuth": true
+      }
+    },
+    {
+      "type": "Microsoft.CognitiveServices/accounts",
+      "apiVersion": "2023-05-01",
+      "name": "[parameters('name')]",
+      "location": "[parameters('location')]",
       "identity": {
         "type": "SystemAssigned"
       },
       "sku": {
         "name": "S0"
       },
-      "kind": "CognitiveServices",
+      "kind": "TextAnalytics",
       "properties": {
         "publicNetworkAccess": "Disabled",
         "networkAcls": {

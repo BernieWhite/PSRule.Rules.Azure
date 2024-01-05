@@ -16797,14 +16797,33 @@
 <h2 id="unreleased">Unreleased<a class="headerlink" href="#unreleased" title="Permanent link">#</a></h2>
 <p>What's changed since v1.32.1:</p>
 <ul>
-<li>General improvements:<ul>
-<li>Quality updates to rules and documentation by <a href="https://github.com/BernieWhite">@BernieWhite</a>.
-  <a href="https://github.com/Azure/PSRule.Rules.Azure/issues/1772">#1772</a></li>
+<li>Updated rules:<ul>
+<li>Cognitive Services:<ul>
+<li>Relaxed <code>Azure.Cognitive.ManagedIdentity</code> to configurations that require managed identities by <a href="https://github.com/BernieWhite">@BernieWhite</a>.
+  <a href="https://github.com/Azure/PSRule.Rules.Azure/issues/2559">#2559</a></li>
+</ul>
+</li>
+<li>Virtual Machine:<ul>
+<li>Checks for Azure Hybrid Benefit <code>Azure.VM.UseHybridUseBenefit</code> are not enabled by default by <a href="https://github.com/BernieWhite">@BernieWhite</a>.
+  <a href="https://github.com/Azure/PSRule.Rules.Azure/issues/2493">#2493</a><ul>
+<li>To enable, set the <code>AZURE_VM_USE_HYBRID_USE_BENEFIT</code> option to <code>true</code>.</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>Virtual Network:<ul>
 <li>Added option for excluding subnets to <code>Azure.VNET.UseNSGs</code> by <a href="https://github.com/BernieWhite">@BernieWhite</a>.
   <a href="https://github.com/Azure/PSRule.Rules.Azure/issues/2572">#2572</a><ul>
 <li>To add a subnet exclusion, set the <code>AZURE_VNET_SUBNET_EXCLUDED_FROM_NSG</code> option.</li>
 </ul>
 </li>
+</ul>
+</li>
+</ul>
+</li>
+<li>General improvements:<ul>
+<li>Quality updates to rules and documentation by <a href="https://github.com/BernieWhite">@BernieWhite</a>.
+  <a href="https://github.com/Azure/PSRule.Rules.Azure/issues/1772">#1772</a></li>
 </ul>
 </li>
 <li>Engineering:<ul>

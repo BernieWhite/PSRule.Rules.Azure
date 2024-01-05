@@ -69,3 +69,23 @@
   -webkit-mask-image: var(--md-admonition-icon--learn);
   mask-image: var(--md-admonition-icon--learn);
 }
+
+/* badges */
+
+.badge {
+  font-size: .85em
+}
+
+.md-typeset .badge__icon {
+  background: var(--md-accent-fg-color--transparent);
+  padding: .2rem
+}
+
+.md-typeset .badge__icon:last-child {
+  border-radius: .1rem
+}
+
+.md-typeset .badge__text {
+  box-shadow: 0 0 0 1px inset var(--md-accent-fg-color--transparent);
+  padding: .2rem .3rem
+}

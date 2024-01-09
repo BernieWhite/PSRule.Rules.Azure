@@ -5,7 +5,7 @@
     "_generator": {
       "name": "bicep",
       "version": "0.24.24.22086",
-      "templateHash": "8240160405856325456"
+      "templateHash": "10624006843579585769"
     }
   },
   "parameters": {
@@ -44,6 +44,18 @@
       "type": "string",
       "metadata": {
         "description": "A reference to the VNET subnet where the VM will be deployed."
+      }
+    },
+    "dataDiskId": {
+      "type": "string",
+      "metadata": {
+        "description": "A reference to an additional data disk."
+      }
+    },
+    "amaIdentityId": {
+      "type": "string",
+      "metadata": {
+        "description": "A reference to a user-assigned managed identity used for monitoring."
       }
     },
     "nicName": {
@@ -87,7 +99,16 @@
             "managedDisk": {
               "storageAccountType": "Premium_LRS"
             }
-          }
+          },
+          "dataDisks": [
+            {
+              "createOption": "Attach",
+              "lun": 0,
+              "managedDisk": {
+                "id": "[parameters('dataDiskId')]"
+              }
+            }
+          ]
         },
         "networkProfile": {
           "networkInterfaces": [
@@ -99,6 +120,30 @@
       },
       "dependsOn": [
         "[resourceId('Microsoft.Network/networkInterfaces', parameters('nicName'))]"
+      ]
+    },
+    {
+      "type": "Microsoft.Compute/virtualMachines/extensions",
+      "apiVersion": "2023-09-01",
+      "name": "[format('{0}/{1}', parameters('name'), 'AzureMonitorWindowsAgent')]",
+      "location": "[parameters('location')]",
+      "properties": {
+        "publisher": "Microsoft.Azure.Monitor",
+        "type": "AzureMonitorWindowsAgent",
+        "typeHandlerVersion": "1.0",
+        "autoUpgradeMinorVersion": true,
+        "enableAutomaticUpgrade": true,
+        "settings": {
+          "authentication": {
+            "managedIdentity": {
+              "identifier-name": "mi_res_id",
+              "identifier-value": "[parameters('amaIdentityId')]"
+            }
+          }
+        }
+      },
+      "dependsOn": [
+        "[resourceId('Microsoft.Compute/virtualMachines', parameters('name'))]"
       ]
     },
     {

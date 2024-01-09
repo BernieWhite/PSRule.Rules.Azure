@@ -23,7 +23,13 @@ param sku string
 @description('A reference to the VNET subnet where the VM will be deployed.')
 param subnetId string
 
-// An example virtual machine.
+@description('A reference to an additional data disk.')
+param dataDiskId string
+
+@description('A reference to a user-assigned managed identity used for monitoring.')
+param amaIdentityId string
+
+// An example virtual machine running Windows Server and one data disk attached.
 resource vm 'Microsoft.Compute/virtualMachines@2023-09-01' = {
   name: name
   location: location
@@ -54,6 +60,15 @@ resource vm 'Microsoft.Compute/virtualMachines@2023-09-01' = {
           storageAccountType: 'Premium_LRS'
         }
       }
+      dataDisks: [
+        {
+          createOption: 'Attach'
+          lun: 0
+          managedDisk: {
+            id: dataDiskId
+          }
+        }
+      ]
     }
     networkProfile: {
       networkInterfaces: [
@@ -61,6 +76,28 @@ resource vm 'Microsoft.Compute/virtualMachines@2023-09-01' = {
           id: nic.id
         }
       ]
+    }
+  }
+}
+
+// An example of configuring a VM extension for the Azure Monitor Agent.
+resource windowsAgent 'Microsoft.Compute/virtualMachines/extensions@2023-09-01' = {
+  parent: vm
+  name: 'AzureMonitorWindowsAgent'
+  location: location
+  properties: {
+    publisher: 'Microsoft.Azure.Monitor'
+    type: 'AzureMonitorWindowsAgent'
+    typeHandlerVersion: '1.0'
+    autoUpgradeMinorVersion: true
+    enableAutomaticUpgrade: true
+    settings: {
+      authentication: {
+        managedIdentity: {
+          'identifier-name': 'mi_res_id'
+          'identifier-value': amaIdentityId
+        }
+      }
     }
   }
 }

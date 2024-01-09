@@ -11,7 +11,7 @@ param name string
 @sys.description('The location resources will be deployed.')
 param location string = resourceGroup().location
 
-// An example container registry
+// An example container registry deployed with Premium SKU.
 resource registry 'Microsoft.ContainerRegistry/registries@2023-08-01-preview' = {
   name: name
   location: location
@@ -23,6 +23,7 @@ resource registry 'Microsoft.ContainerRegistry/registries@2023-08-01-preview' = 
   }
   properties: {
     adminUserEnabled: false
+    anonymousPullEnabled: false
     policies: {
       quarantinePolicy: {
         status: 'enabled'

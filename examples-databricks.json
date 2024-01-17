@@ -1,20 +1,18 @@
 {
   "$schema": "https://schema.management.azure.com/schemas/2019-04-01/deploymentTemplate.json#",
-  "languageVersion": "1.10-experimental",
   "contentVersion": "1.0.0.0",
   "metadata": {
-    "_EXPERIMENTAL_WARNING": "Symbolic name support in ARM is experimental, and should be enabled for testing purposes only. Do not enable this setting for any production usage, or you may be unexpectedly broken at any time!",
     "_generator": {
       "name": "bicep",
-      "version": "0.19.5.34762",
-      "templateHash": "13081891106656677852"
+      "version": "0.24.24.22086",
+      "templateHash": "6898993126135381945"
     }
   },
   "parameters": {
     "name": {
       "type": "string",
       "metadata": {
-        "description": "The name of the cognitive services account."
+        "description": "The name of the Databricks workspace."
       }
     },
     "location": {
@@ -25,21 +23,18 @@
       }
     }
   },
-  "resources": {
-    "managedRg": {
-      "existing": true,
-      "type": "Microsoft.Resources/resourceGroups",
-      "apiVersion": "2022-09-01",
-      "subscriptionId": "[subscription().subscriptionId]",
-      "name": "example-mg"
-    },
-    "databricks": {
+  "resources": [
+    {
       "type": "Microsoft.Databricks/workspaces",
       "apiVersion": "2023-02-01",
       "name": "[parameters('name')]",
       "location": "[parameters('location')]",
+      "sku": {
+        "name": "standard"
+      },
       "properties": {
         "managedResourceGroupId": "[subscriptionResourceId('Microsoft.Resources/resourceGroups', 'example-mg')]",
+        "publicNetworkAccess": "Disabled",
         "parameters": {
           "enableNoPublicIp": {
             "value": true
@@ -47,5 +42,5 @@
         }
       }
     }
-  }
+  ]
 }

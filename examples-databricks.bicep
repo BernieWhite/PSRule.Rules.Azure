@@ -18,8 +18,12 @@ resource managedRg 'Microsoft.Resources/resourceGroups@2022-09-01' existing = {
 resource databricks 'Microsoft.Databricks/workspaces@2023-02-01' = {
   name: name
   location: location
+  sku: {
+    name: 'standard'
+  }
   properties: {
     managedResourceGroupId: managedRg.id
+    publicNetworkAccess: 'Disabled'
     parameters: {
       enableNoPublicIp: {
         value: true

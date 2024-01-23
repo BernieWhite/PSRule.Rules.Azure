@@ -23,9 +23,6 @@ param sku string
 @description('A reference to the VNET subnet where the VM will be deployed.')
 param subnetId string
 
-@description('A reference to an additional data disk.')
-param dataDiskId string
-
 @description('A reference to a user-assigned managed identity used for monitoring.')
 param amaIdentityId string
 
@@ -65,7 +62,7 @@ resource vm 'Microsoft.Compute/virtualMachines@2023-09-01' = {
           createOption: 'Attach'
           lun: 0
           managedDisk: {
-            id: dataDiskId
+            id: dataDisk.id
           }
         }
       ]
@@ -77,6 +74,21 @@ resource vm 'Microsoft.Compute/virtualMachines@2023-09-01' = {
         }
       ]
     }
+  }
+}
+
+// An example of a VM managed disk.
+resource dataDisk 'Microsoft.Compute/disks@2023-04-02' = {
+  name: name
+  location: location
+  sku: {
+    name: 'Premium_ZRS'
+  }
+  properties: {
+    creationData: {
+      createOption: 'Empty'
+    }
+    diskSizeGB: 32
   }
 }
 

@@ -5,7 +5,7 @@
     "_generator": {
       "name": "bicep",
       "version": "0.24.24.22086",
-      "templateHash": "10624006843579585769"
+      "templateHash": "15227880975941749724"
     }
   },
   "parameters": {
@@ -44,12 +44,6 @@
       "type": "string",
       "metadata": {
         "description": "A reference to the VNET subnet where the VM will be deployed."
-      }
-    },
-    "dataDiskId": {
-      "type": "string",
-      "metadata": {
-        "description": "A reference to an additional data disk."
       }
     },
     "amaIdentityId": {
@@ -105,7 +99,7 @@
               "createOption": "Attach",
               "lun": 0,
               "managedDisk": {
-                "id": "[parameters('dataDiskId')]"
+                "id": "[resourceId('Microsoft.Compute/disks', parameters('name'))]"
               }
             }
           ]
@@ -119,8 +113,24 @@
         }
       },
       "dependsOn": [
+        "[resourceId('Microsoft.Compute/disks', parameters('name'))]",
         "[resourceId('Microsoft.Network/networkInterfaces', parameters('nicName'))]"
       ]
+    },
+    {
+      "type": "Microsoft.Compute/disks",
+      "apiVersion": "2023-04-02",
+      "name": "[parameters('name')]",
+      "location": "[parameters('location')]",
+      "sku": {
+        "name": "Premium_ZRS"
+      },
+      "properties": {
+        "creationData": {
+          "createOption": "Empty"
+        },
+        "diskSizeGB": 32
+      }
     },
     {
       "type": "Microsoft.Compute/virtualMachines/extensions",

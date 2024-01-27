@@ -2131,6 +2131,15 @@
 </li>
         
           <li class="md-nav__item">
+  <a href="#oe05-infrastructure-as-code" class="md-nav__link">
+    <span class="md-ellipsis">
+      OE:05 Infrastructure as code
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#oe07-monitoring-system" class="md-nav__link">
     <span class="md-ellipsis">
       OE:07 Monitoring system
@@ -2629,6 +2638,15 @@
   <a href="#se06-network-controls" class="md-nav__link">
     <span class="md-ellipsis">
       SE:06 Network controls
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#se07-encryption" class="md-nav__link">
+    <span class="md-ellipsis">
+      SE:07 Encryption
     </span>
   </a>
   
@@ -13689,6 +13707,15 @@
 </li>
         
           <li class="md-nav__item">
+  <a href="#oe05-infrastructure-as-code" class="md-nav__link">
+    <span class="md-ellipsis">
+      OE:05 Infrastructure as code
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#oe07-monitoring-system" class="md-nav__link">
     <span class="md-ellipsis">
       OE:07 Monitoring system
@@ -14187,6 +14214,15 @@
   <a href="#se06-network-controls" class="md-nav__link">
     <span class="md-ellipsis">
       SE:06 Network controls
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#se07-encryption" class="md-nav__link">
+    <span class="md-ellipsis">
+      SE:07 Encryption
     </span>
   </a>
   
@@ -14829,6 +14865,31 @@
 </tr>
 </tbody>
 </table>
+<h3 id="oe05-infrastructure-as-code">OE:05 Infrastructure as code<a class="headerlink" href="#oe05-infrastructure-as-code" title="Permanent link">#</a></h3>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Synopsis</th>
+<th>Severity</th>
+<th>Level</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="../Azure.Template.TemplateFile/">Azure.Template.TemplateFile</a></td>
+<td>Use ARM template files that are valid.</td>
+<td>Important</td>
+<td>Error</td>
+</tr>
+<tr>
+<td><a href="../Azure.Template.ValidSecretRef/">Azure.Template.ValidSecretRef</a></td>
+<td>Use a valid secret reference within parameter files.</td>
+<td>Awareness</td>
+<td>Error</td>
+</tr>
+</tbody>
+</table>
 <h3 id="oe07-monitoring-system">OE:07 Monitoring system<a class="headerlink" href="#oe07-monitoring-system" title="Permanent link">#</a></h3>
 <table>
 <thead>
@@ -15276,12 +15337,6 @@
 <td>Error</td>
 </tr>
 <tr>
-<td><a href="../Azure.Template.TemplateFile/">Azure.Template.TemplateFile</a></td>
-<td>Use ARM template files that are valid.</td>
-<td>Important</td>
-<td>Error</td>
-</tr>
-<tr>
 <td><a href="../Azure.Template.TemplateSchema/">Azure.Template.TemplateSchema</a></td>
 <td>Use a more recent version of the Azure template schema.</td>
 <td>Awareness</td>
@@ -15304,12 +15359,6 @@
 <td>Use descriptions for each resource in generated template(bicep, psarm, AzOps) to communicate purpose.</td>
 <td>Awareness</td>
 <td>Information</td>
-</tr>
-<tr>
-<td><a href="../Azure.Template.ValidSecretRef/">Azure.Template.ValidSecretRef</a></td>
-<td>Use a valid secret reference within parameter files.</td>
-<td>Awareness</td>
-<td>Error</td>
 </tr>
 <tr>
 <td><a href="../Azure.VM.ASName/">Azure.VM.ASName</a></td>
@@ -15913,12 +15962,6 @@
 <td>Error</td>
 </tr>
 <tr>
-<td><a href="../Azure.TrafficManager.Endpoints/">Azure.TrafficManager.Endpoints</a></td>
-<td>Traffic Manager should use at lest two enabled endpoints.</td>
-<td>Important</td>
-<td>Error</td>
-</tr>
-<tr>
 <td><a href="../Azure.VM.ASMinMembers/">Azure.VM.ASMinMembers</a></td>
 <td>Availability sets should be deployed with at least two virtual machines (VMs).</td>
 <td>Important</td>
@@ -15959,6 +16002,12 @@
 <tr>
 <td><a href="../Azure.AppConfig.GeoReplica/">Azure.AppConfig.GeoReplica</a></td>
 <td>Replicate app configuration store across all points of presence for an application.</td>
+<td>Important</td>
+<td>Error</td>
+</tr>
+<tr>
+<td><a href="../Azure.TrafficManager.Endpoints/">Azure.TrafficManager.Endpoints</a></td>
+<td>Traffic Manager should use at lest two enabled endpoints.</td>
 <td>Important</td>
 <td>Error</td>
 </tr>
@@ -16622,12 +16671,6 @@
 <td><a href="../Azure.Storage.DefenderCloud.SensitiveData/">Azure.Storage.DefenderCloud.SensitiveData</a></td>
 <td>Enable sensitive data threat detection in Microsoft Defender for Storage.</td>
 <td>Critical</td>
-<td>Error</td>
-</tr>
-<tr>
-<td><a href="../Azure.TrafficManager.Protocol/">Azure.TrafficManager.Protocol</a></td>
-<td>Monitor Traffic Manager web-based endpoints with HTTPS.</td>
-<td>Important</td>
 <td>Error</td>
 </tr>
 <tr>
@@ -17465,6 +17508,25 @@
 <td><a href="../Azure.VNET.UseNSGs/">Azure.VNET.UseNSGs</a></td>
 <td>Virtual network (VNET) subnets should have Network Security Groups (NSGs) assigned.</td>
 <td>Critical</td>
+<td>Error</td>
+</tr>
+</tbody>
+</table>
+<h3 id="se07-encryption">SE:07 Encryption<a class="headerlink" href="#se07-encryption" title="Permanent link">#</a></h3>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Synopsis</th>
+<th>Severity</th>
+<th>Level</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="../Azure.TrafficManager.Protocol/">Azure.TrafficManager.Protocol</a></td>
+<td>Monitor Traffic Manager web-based endpoints with HTTPS.</td>
+<td>Important</td>
 <td>Error</td>
 </tr>
 </tbody>

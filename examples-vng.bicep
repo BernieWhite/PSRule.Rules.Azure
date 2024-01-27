@@ -15,7 +15,7 @@ param subnetId string
 @description('The resource ID of the public IP address to use.')
 param pipId string
 
-// An example Virtual Network Gateway with availablity zone aware SKU.
+// An example Virtual Network Gateway with availability zone aware SKU.
 resource vng 'Microsoft.Network/virtualNetworkGateways@2023-06-01' = {
   name: name
   location: location

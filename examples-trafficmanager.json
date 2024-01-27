@@ -1,0 +1,49 @@
+{
+  "$schema": "https://schema.management.azure.com/schemas/2019-04-01/deploymentTemplate.json#",
+  "languageVersion": "2.0",
+  "contentVersion": "1.0.0.0",
+  "metadata": {
+    "_generator": {
+      "name": "bicep",
+      "version": "0.24.24.22086",
+      "templateHash": "13648233826792444598"
+    }
+  },
+  "parameters": {
+    "name": {
+      "type": "string",
+      "metadata": {
+        "description": "The name of the resource."
+      }
+    },
+    "endpoints": {
+      "type": "array",
+      "items": {
+        "type": "object"
+      },
+      "metadata": {
+        "description": "Endpoints to resolve for."
+      }
+    }
+  },
+  "resources": {
+    "profile": {
+      "type": "Microsoft.Network/trafficmanagerprofiles",
+      "apiVersion": "2022-04-01",
+      "name": "[parameters('name')]",
+      "location": "global",
+      "properties": {
+        "endpoints": "[parameters('endpoints')]",
+        "trafficRoutingMethod": "Performance",
+        "monitorConfig": {
+          "protocol": "HTTPS",
+          "port": 443,
+          "intervalInSeconds": 30,
+          "timeoutInSeconds": 5,
+          "toleratedNumberOfFailures": 3,
+          "path": "/healthz"
+        }
+      }
+    }
+  }
+}

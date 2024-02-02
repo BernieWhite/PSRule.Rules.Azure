@@ -16,7 +16,7 @@ param objectId string
 param workspaceId string
 
 // An example Key Vault with access policies.
-resource vaultWithAccessPolicies 'Microsoft.KeyVault/vaults@2023-02-01' = {
+resource vaultWithAccessPolicies 'Microsoft.KeyVault/vaults@2023-07-01' = {
   name: name
   location: location
   properties: {
@@ -45,7 +45,7 @@ resource vaultWithAccessPolicies 'Microsoft.KeyVault/vaults@2023-02-01' = {
 }
 
 // An example Key Vault with RBAC authorization.
-resource vault 'Microsoft.KeyVault/vaults@2023-02-01' = {
+resource vault 'Microsoft.KeyVault/vaults@2023-07-01' = {
   name: name
   location: location
   properties: {

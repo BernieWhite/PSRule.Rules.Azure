@@ -1553,6 +1553,15 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#v1330" class="md-nav__link">
+    <span class="md-ellipsis">
+      v1.33.0
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#v1330-b0169-pre-release" class="md-nav__link">
     <span class="md-ellipsis">
       v1.33.0-B0169 (pre-release)
@@ -14826,6 +14835,15 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#v1330" class="md-nav__link">
+    <span class="md-ellipsis">
+      v1.33.0
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#v1330-b0169-pre-release" class="md-nav__link">
     <span class="md-ellipsis">
       v1.33.0-B0169 (pre-release)
@@ -16954,6 +16972,114 @@
   See <a href="../upgrade-notes/">upgrade notes</a> for more information.</li>
 </ul>
 <h2 id="unreleased">Unreleased<a class="headerlink" href="#unreleased" title="Permanent link">#</a></h2>
+<h2 id="v1330">v1.33.0<a class="headerlink" href="#v1330" title="Permanent link">#</a></h2>
+<p>What's changed since v1.32.1:</p>
+<ul>
+<li>New features:<ul>
+<li>Exporting policy as rules also generates a baseline by <a href="https://github.com/BernieWhite">@BernieWhite</a>.
+  <a href="https://github.com/Azure/PSRule.Rules.Azure/issues/2482">#2482</a><ul>
+<li>A baseline is automatically generated that includes for all rules exported.
+  If a policy rule has been replaced by a built-in rule, the baseline will include the built-in rule instead.</li>
+<li>The baseline is named <code>&lt;Prefix&gt;.PolicyBaseline.All</code>. i.e. <code>Azure.PolicyBaseline.All</code> by default.</li>
+<li>For details see <a href="../concepts/policy-as-rules/#generated-baseline">Policy as rules</a>.</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>New rules:<ul>
+<li>Databricks:<ul>
+<li>Check that Databricks workspaces use a non-trial SKU by <a href="https://github.com/batemansogq">@batemansogq</a>.
+  <a href="https://github.com/Azure/PSRule.Rules.Azure/issues/2646">#2646</a></li>
+<li>Check that Databricks workspaces require use of private endpoints by <a href="https://github.com/batemansogq">@batemansogq</a>.
+  <a href="https://github.com/Azure/PSRule.Rules.Azure/issues/2646">#2646</a></li>
+</ul>
+</li>
+<li>Dev Box:<ul>
+<li>Check that projects limit the number of Dev Boxes per user by <a href="https://github.com/BernieWhite">@BernieWhite</a>.
+  <a href="https://github.com/Azure/PSRule.Rules.Azure/issues/2654">#2654</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li>Updated rules:<ul>
+<li>Application Gateway:<ul>
+<li>Updated <code>Azure.AppGwWAF.RuleGroups</code> to use the rule sets by <a href="https://github.com/BenjaminEngeset">@BenjaminEngeset</a>.
+  <a href="https://github.com/Azure/PSRule.Rules.Azure/issues/2629">#2629</a><ul>
+<li>The latest Bot Manager rule set is now <code>1.0</code>.</li>
+<li>The latest OWASP rule set is now <code>3.2</code>.</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>Cognitive Services:<ul>
+<li>Relaxed <code>Azure.Cognitive.ManagedIdentity</code> to configurations that require managed identities by <a href="https://github.com/BernieWhite">@BernieWhite</a>.
+  <a href="https://github.com/Azure/PSRule.Rules.Azure/issues/2559">#2559</a></li>
+</ul>
+</li>
+<li>Virtual Machine:<ul>
+<li>Checks for Azure Hybrid Benefit <code>Azure.VM.UseHybridUseBenefit</code> are not enabled by default by <a href="https://github.com/BernieWhite">@BernieWhite</a>.
+  <a href="https://github.com/Azure/PSRule.Rules.Azure/issues/2493">#2493</a><ul>
+<li>To enable, set the <code>AZURE_VM_USE_HYBRID_USE_BENEFIT</code> option to <code>true</code>.</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>Virtual Network:<ul>
+<li>Added option for excluding subnets to <code>Azure.VNET.UseNSGs</code> by <a href="https://github.com/BernieWhite">@BernieWhite</a>.
+  <a href="https://github.com/Azure/PSRule.Rules.Azure/issues/2572">#2572</a><ul>
+<li>To add a subnet exclusion, set the <code>AZURE_VNET_SUBNET_EXCLUDED_FROM_NSG</code> option.</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>General improvements:<ul>
+<li>Rules that are ignored during exporting policy as rules are now generate a verbose logs by <a href="https://github.com/BernieWhite">@BernieWhite</a>.
+  <a href="https://github.com/Azure/PSRule.Rules.Azure/issues/2482">#2482</a><ul>
+<li>This is to improve transparency of why rules are not exported.</li>
+<li>To see details on why a rule is ignored, enable verbose logging with <code>-Verbose</code>.</li>
+</ul>
+</li>
+<li>Policies that duplicate built-in rules can now be exported by using the <code>-KeepDuplicates</code> parameter by <a href="https://github.com/BernieWhite">@BernieWhite</a>.
+  <a href="https://github.com/Azure/PSRule.Rules.Azure/issues/2482">#2482</a><ul>
+<li>For details see <a href="../concepts/policy-as-rules/#duplicate-policies">Policy as rules</a>.</li>
+</ul>
+</li>
+<li>Quality updates to rules and documentation by <a href="https://github.com/BernieWhite">@BernieWhite</a>.
+  <a href="https://github.com/Azure/PSRule.Rules.Azure/issues/1772">#1772</a>
+  <a href="https://github.com/Azure/PSRule.Rules.Azure/issues/2570">#2570</a></li>
+</ul>
+</li>
+<li>Engineering:<ul>
+<li>Bump xunit to v2.6.6.
+  <a href="https://github.com/Azure/PSRule.Rules.Azure/pull/2645">#2645</a></li>
+<li>Bump xunit.runner.visualstudio to v2.5.6.
+  <a href="https://github.com/Azure/PSRule.Rules.Azure/pull/2619">#2619</a></li>
+<li>Bump BenchmarkDotNet to v0.13.12.
+  <a href="https://github.com/Azure/PSRule.Rules.Azure/pull/2636">#2636</a></li>
+<li>Bump BenchmarkDotNet.Diagnostics.Windows to v0.13.12.
+  <a href="https://github.com/Azure/PSRule.Rules.Azure/pull/2636">#2636</a></li>
+</ul>
+</li>
+<li>Bug fixes:<ul>
+<li>Fixed <code>dateTimeAdd</code> may fail with different localization by <a href="https://github.com/BernieWhite">@BernieWhite</a>.
+  <a href="https://github.com/Azure/PSRule.Rules.Azure/issues/2631">#2631</a></li>
+<li>Fixed inconclusive result reported for <code>Azure.ACR.Usage</code> by <a href="https://github.com/BernieWhite">@BernieWhite</a>.
+  <a href="https://github.com/Azure/PSRule.Rules.Azure/issues/2494">#2494</a></li>
+<li>Fixed export of Front Door resource data is incomplete by <a href="https://github.com/BernieWhite">@BernieWhite</a>.
+  <a href="https://github.com/Azure/PSRule.Rules.Azure/issues/2668">#2668</a></li>
+<li>Fixed <code>Azure.Template.TemplateFile</code> to support with <code>languageVersion</code> 2.0 template properties by <a href="https://github.com/MrRoundRobin">@MrRoundRobin</a>.
+  <a href="https://github.com/Azure/PSRule.Rules.Azure/issues/2660">#2660</a></li>
+<li>Fixed <code>Azure.VM.DiskSizeAlignment</code> does not handle smaller sizes and ultra disks by <a href="https://github.com/BernieWhite">@BernieWhite</a>.
+  <a href="https://github.com/Azure/PSRule.Rules.Azure/issues/2656">#2656</a></li>
+</ul>
+</li>
+</ul>
+<p>What's changed since pre-release v1.33.0-B0169:</p>
+<ul>
+<li>No additional changes.</li>
+</ul>
 <h2 id="v1330-b0169-pre-release">v1.33.0-B0169 (pre-release)<a class="headerlink" href="#v1330-b0169-pre-release" title="Permanent link">#</a></h2>
 <p>What's changed since pre-release v1.33.0-B0126:</p>
 <ul>
@@ -23227,7 +23353,7 @@ What's changed since v1.24.0:</p>
     <span class="md-icon" title="Last update">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1-2.1-2M12.5 7v5.2l4 2.4-1 1L11 13V7h1.5M11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2v1.8Z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">February 4, 2024</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">February 5, 2024</span>
   </span>
 
     

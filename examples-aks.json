@@ -4,8 +4,8 @@
   "metadata": {
     "_generator": {
       "name": "bicep",
-      "version": "0.21.1.54444",
-      "templateHash": "16848582474653805725"
+      "version": "0.25.3.34343",
+      "templateHash": "15286438717534282301"
     }
   },
   "parameters": {
@@ -178,7 +178,7 @@
     },
     {
       "type": "Microsoft.ContainerService/managedClusters",
-      "apiVersion": "2023-07-01",
+      "apiVersion": "2023-11-01",
       "name": "[parameters('name')]",
       "location": "[parameters('location')]",
       "identity": {
@@ -205,6 +205,11 @@
           "loadBalancerSku": "standard",
           "serviceCidr": "[variables('serviceCidr')]",
           "dnsServiceIP": "[variables('dnsServiceIP')]"
+        },
+        "apiServerAccessProfile": {
+          "authorizedIPRanges": [
+            "0.0.0.0/32"
+          ]
         },
         "autoUpgradeProfile": {
           "upgradeChannel": "stable"
@@ -236,7 +241,7 @@
     },
     {
       "type": "Microsoft.ContainerService/managedClusters",
-      "apiVersion": "2023-07-01",
+      "apiVersion": "2023-11-01",
       "name": "[parameters('name')]",
       "location": "[parameters('location')]",
       "identity": {
@@ -290,6 +295,100 @@
           "loadBalancerSku": "standard",
           "serviceCidr": "[variables('serviceCidr')]",
           "dnsServiceIP": "[variables('dnsServiceIP')]"
+        },
+        "apiServerAccessProfile": {
+          "authorizedIPRanges": [
+            "0.0.0.0/32"
+          ]
+        },
+        "autoUpgradeProfile": {
+          "upgradeChannel": "stable"
+        },
+        "oidcIssuerProfile": {
+          "enabled": true
+        },
+        "addonProfiles": {
+          "azurepolicy": {
+            "enabled": true
+          },
+          "omsagent": {
+            "enabled": true,
+            "config": {
+              "logAnalyticsWorkspaceResourceID": "[parameters('workspaceId')]"
+            }
+          },
+          "azureKeyvaultSecretsProvider": {
+            "enabled": true,
+            "config": {
+              "enableSecretRotation": "true"
+            }
+          }
+        }
+      },
+      "dependsOn": [
+        "[resourceId('Microsoft.ManagedIdentity/userAssignedIdentities', parameters('identityName'))]"
+      ]
+    },
+    {
+      "type": "Microsoft.ContainerService/managedClusters",
+      "apiVersion": "2023-11-01",
+      "name": "[parameters('name')]",
+      "location": "[parameters('location')]",
+      "identity": {
+        "type": "UserAssigned",
+        "userAssignedIdentities": {
+          "[format('{0}', resourceId('Microsoft.ManagedIdentity/userAssignedIdentities', parameters('identityName')))]": {}
+        }
+      },
+      "properties": {
+        "kubernetesVersion": "[parameters('kubernetesVersion')]",
+        "disableLocalAccounts": true,
+        "enableRBAC": true,
+        "dnsPrefix": "[parameters('dnsPrefix')]",
+        "agentPoolProfiles": [
+          {
+            "name": "system",
+            "osDiskSizeGB": 0,
+            "minCount": 3,
+            "maxCount": 5,
+            "enableAutoScaling": true,
+            "maxPods": 50,
+            "vmSize": "Standard_D4s_v5",
+            "type": "VirtualMachineScaleSets",
+            "vnetSubnetID": "[parameters('clusterSubnetId')]",
+            "mode": "System",
+            "osDiskType": "Ephemeral"
+          },
+          {
+            "name": "user",
+            "osDiskSizeGB": 0,
+            "minCount": 3,
+            "maxCount": 20,
+            "enableAutoScaling": true,
+            "maxPods": 50,
+            "vmSize": "Standard_D4s_v5",
+            "type": "VirtualMachineScaleSets",
+            "vnetSubnetID": "[parameters('clusterSubnetId')]",
+            "mode": "User",
+            "osDiskType": "Ephemeral"
+          }
+        ],
+        "aadProfile": {
+          "managed": true,
+          "enableAzureRBAC": true,
+          "adminGroupObjectIDs": "[parameters('clusterAdmins')]",
+          "tenantID": "[subscription().tenantId]"
+        },
+        "networkProfile": {
+          "networkPlugin": "azure",
+          "networkPolicy": "azure",
+          "loadBalancerSku": "standard",
+          "serviceCidr": "[variables('serviceCidr')]",
+          "dnsServiceIP": "[variables('dnsServiceIP')]"
+        },
+        "apiServerAccessProfile": {
+          "enablePrivateCluster": true,
+          "enablePrivateClusterPublicFQDN": false
         },
         "autoUpgradeProfile": {
           "upgradeChannel": "stable"

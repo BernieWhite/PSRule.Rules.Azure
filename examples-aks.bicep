@@ -130,7 +130,7 @@ resource identity 'Microsoft.ManagedIdentity/userAssignedIdentities@2023-01-31' 
 }
 
 // An example AKS cluster
-resource cluster 'Microsoft.ContainerService/managedClusters@2023-07-01' = {
+resource cluster 'Microsoft.ContainerService/managedClusters@2023-11-01' = {
   location: location
   name: name
   identity: {
@@ -157,6 +157,11 @@ resource cluster 'Microsoft.ContainerService/managedClusters@2023-07-01' = {
       loadBalancerSku: 'standard'
       serviceCidr: serviceCidr
       dnsServiceIP: dnsServiceIP
+    }
+    apiServerAccessProfile: {
+      authorizedIPRanges: [
+        '0.0.0.0/32'
+      ]
     }
     autoUpgradeProfile: {
       upgradeChannel: 'stable'
@@ -185,7 +190,7 @@ resource cluster 'Microsoft.ContainerService/managedClusters@2023-07-01' = {
 }
 
 // An example AKS cluster with pools defined.
-resource clusterWithPools 'Microsoft.ContainerService/managedClusters@2023-07-01' = {
+resource clusterWithPools 'Microsoft.ContainerService/managedClusters@2023-11-01' = {
   location: location
   name: name
   identity: {
@@ -239,6 +244,97 @@ resource clusterWithPools 'Microsoft.ContainerService/managedClusters@2023-07-01
       loadBalancerSku: 'standard'
       serviceCidr: serviceCidr
       dnsServiceIP: dnsServiceIP
+    }
+    apiServerAccessProfile: {
+      authorizedIPRanges: [
+        '0.0.0.0/32'
+      ]
+    }
+    autoUpgradeProfile: {
+      upgradeChannel: 'stable'
+    }
+    oidcIssuerProfile: {
+      enabled: true
+    }
+    addonProfiles: {
+      azurepolicy: {
+        enabled: true
+      }
+      omsagent: {
+        enabled: true
+        config: {
+          logAnalyticsWorkspaceResourceID: workspaceId
+        }
+      }
+      azureKeyvaultSecretsProvider: {
+        enabled: true
+        config: {
+          enableSecretRotation: 'true'
+        }
+      }
+    }
+  }
+}
+
+// An example private AKS cluster with pools defined.
+resource privateCluster 'Microsoft.ContainerService/managedClusters@2023-11-01' = {
+  location: location
+  name: name
+  identity: {
+    type: 'UserAssigned'
+    userAssignedIdentities: {
+      '${identity.id}': {}
+    }
+  }
+  properties: {
+    kubernetesVersion: kubernetesVersion
+    disableLocalAccounts: true
+    enableRBAC: true
+    dnsPrefix: dnsPrefix
+    agentPoolProfiles: [
+      {
+        name: 'system'
+        osDiskSizeGB: 0
+        minCount: 3
+        maxCount: 5
+        enableAutoScaling: true
+        maxPods: 50
+        vmSize: 'Standard_D4s_v5'
+        type: 'VirtualMachineScaleSets'
+        vnetSubnetID: clusterSubnetId
+        mode: 'System'
+        osDiskType: 'Ephemeral'
+      }
+      {
+        name: 'user'
+        osDiskSizeGB: 0
+        minCount: 3
+        maxCount: 20
+        enableAutoScaling: true
+        maxPods: 50
+        vmSize: 'Standard_D4s_v5'
+        type: 'VirtualMachineScaleSets'
+        vnetSubnetID: clusterSubnetId
+        mode: 'User'
+        osDiskType: 'Ephemeral'
+      }
+    ]
+    aadProfile: {
+      managed: true
+      enableAzureRBAC: true
+      adminGroupObjectIDs: clusterAdmins
+      tenantID: subscription().tenantId
+    }
+    networkProfile: {
+      networkPlugin: 'azure'
+      networkPolicy: 'azure'
+      loadBalancerSku: 'standard'
+      serviceCidr: serviceCidr
+      dnsServiceIP: dnsServiceIP
+    }
+    apiServerAccessProfile: {
+      enablePrivateCluster: true
+      enablePrivateClusterPublicFQDN: false
     }
     autoUpgradeProfile: {
       upgradeChannel: 'stable'

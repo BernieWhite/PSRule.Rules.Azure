@@ -38,6 +38,8 @@ def module(markdown: str, page: Page, config: MkDocsConfig, files: Files) -> str
             return _badge_for_version(args, page, files)
         elif type == "rule":
             return _badge_for_applies_to_rule(args, page, files)
+        elif type == "config":
+            return _badge_for_configuration(args, page, files)
 
         raise RuntimeError(f"Unknown shortcode module:{type}")
 
@@ -96,5 +98,22 @@ def _badge_for_applies_to_rule(text: str, page: Page, files: Files) -> str:
     href = _relative_uri(path, page, files)
     return _badge(
         icon = f"[:{icon}:]({href} 'Applies to rule')",
+        text = f"[{text}]({href})"
+    )
+
+def _badge_for_configuration(text: str, page: Page, files: Files) -> str:
+    '''Create a badge for linking to a configuration setting.'''
+
+    config_type = text.split(' ')[0]
+    config_value = text.split(' ')[1]
+    path = ""
+    if config_type == "rule":
+        path = f"../../setup/configuring-rules.md#{config_value.lower()}"
+
+    icon = "octicons-gear-24"
+    href = path
+    text = config_value
+    return _badge(
+        icon = f"[:{icon}:]({href} 'Applies to configuration setting')",
         text = f"[{text}]({href})"
     )

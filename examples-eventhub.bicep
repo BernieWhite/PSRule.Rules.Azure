@@ -9,8 +9,8 @@ param name string
 @description('The location resources will be deployed.')
 param location string = resourceGroup().location
 
-// An example Event Hub namespace
-resource ns 'Microsoft.EventHub/namespaces@2021-11-01' = {
+// An example Event Hub namespace.
+resource ns 'Microsoft.EventHub/namespaces@2024-01-01' = {
   name: name
   location: location
   identity: {
@@ -21,6 +21,8 @@ resource ns 'Microsoft.EventHub/namespaces@2021-11-01' = {
   }
   properties: {
     disableLocalAuth: true
+    minimumTlsVersion: '1.2'
+    publicNetworkAccess: 'Disabled'
     isAutoInflateEnabled: true
     maximumThroughputUnits: 10
     zoneRedundant: true

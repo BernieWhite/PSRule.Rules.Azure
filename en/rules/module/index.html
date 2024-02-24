@@ -2341,7 +2341,7 @@
           <li class="md-nav__item">
   <a href="#data-management" class="md-nav__link">
     <span class="md-ellipsis">
-      Data management
+      Data Management
     </span>
   </a>
   
@@ -13986,7 +13986,7 @@
           <li class="md-nav__item">
   <a href="#data-management" class="md-nav__link">
     <span class="md-ellipsis">
-      Data management
+      Data Management
     </span>
   </a>
   
@@ -15877,7 +15877,7 @@
 </tr>
 </tbody>
 </table>
-<h3 id="data-management">Data management<a class="headerlink" href="#data-management" title="Permanent link">#</a></h3>
+<h3 id="data-management">Data Management<a class="headerlink" href="#data-management" title="Permanent link">#</a></h3>
 <table>
 <thead>
 <tr>
@@ -16456,12 +16456,6 @@
 <td>Error</td>
 </tr>
 <tr>
-<td><a href="../Azure.NSG.AnyInboundSource/">Azure.NSG.AnyInboundSource</a></td>
-<td>Network security groups (NSGs) should avoid rules that allow "any" as an inbound source.</td>
-<td>Critical</td>
-<td>Error</td>
-</tr>
-<tr>
 <td><a href="../Azure.Storage.Firewall/">Azure.Storage.Firewall</a></td>
 <td>Storage Accounts should only accept explicitly allowed traffic.</td>
 <td>Important</td>
@@ -16501,12 +16495,6 @@
 <tr>
 <td><a href="../Azure.Cosmos.DisableMetadataWrite/">Azure.Cosmos.DisableMetadataWrite</a></td>
 <td>Use Azure AD identities for management place operations in Azure Cosmos DB.</td>
-<td>Important</td>
-<td>Error</td>
-</tr>
-<tr>
-<td><a href="../Azure.EventHub.DisableLocalAuth/">Azure.EventHub.DisableLocalAuth</a></td>
-<td>Authenticate Event Hub publishers and consumers with Azure AD identities.</td>
 <td>Important</td>
 <td>Error</td>
 </tr>
@@ -16942,12 +16930,6 @@
 <td><a href="../Azure.CDN.MinTLS/">Azure.CDN.MinTLS</a></td>
 <td>Azure CDN endpoints should reject TLS versions older than 1.2.</td>
 <td>Important</td>
-<td>Error</td>
-</tr>
-<tr>
-<td><a href="../Azure.EventHub.MinTLS/">Azure.EventHub.MinTLS</a></td>
-<td>Event Hub namespaces should reject TLS versions older than 1.2.</td>
-<td>Critical</td>
 <td>Error</td>
 </tr>
 <tr>
@@ -17654,6 +17636,12 @@
 <td>Error</td>
 </tr>
 <tr>
+<td><a href="../Azure.EventHub.DisableLocalAuth/">Azure.EventHub.DisableLocalAuth</a></td>
+<td>Authenticate Event Hub publishers and consumers with Entra ID identities.</td>
+<td>Important</td>
+<td>Error</td>
+</tr>
+<tr>
 <td><a href="../Azure.KeyVault.RBAC/">Azure.KeyVault.RBAC</a></td>
 <td>Key Vaults should use Azure RBAC as the authorization system for the data plane.</td>
 <td>Awareness</td>
@@ -17697,6 +17685,12 @@
 <td>Error</td>
 </tr>
 <tr>
+<td><a href="../Azure.NSG.AnyInboundSource/">Azure.NSG.AnyInboundSource</a></td>
+<td>Network security groups (NSGs) should avoid rules that allow "any" as an inbound source.</td>
+<td>Critical</td>
+<td>Error</td>
+</tr>
+<tr>
 <td><a href="../Azure.VNET.UseNSGs/">Azure.VNET.UseNSGs</a></td>
 <td>Virtual network (VNET) subnets should have Network Security Groups (NSGs) assigned.</td>
 <td>Critical</td>
@@ -17715,6 +17709,12 @@
 </tr>
 </thead>
 <tbody>
+<tr>
+<td><a href="../Azure.EventHub.MinTLS/">Azure.EventHub.MinTLS</a></td>
+<td>Event Hub namespaces should reject TLS versions older than 1.2.</td>
+<td>Critical</td>
+<td>Error</td>
+</tr>
 <tr>
 <td><a href="../Azure.TrafficManager.Protocol/">Azure.TrafficManager.Protocol</a></td>
 <td>Monitor Traffic Manager web-based endpoints with HTTPS.</td>

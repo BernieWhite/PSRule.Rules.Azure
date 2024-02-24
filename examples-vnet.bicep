@@ -14,7 +14,7 @@ param nsgName string = 'nsg-001'
 param lbName string = 'lb-001'
 
 // An example virtual network (VNET) with NSG configured.
-resource vnet 'Microsoft.Network/virtualNetworks@2023-05-01' = {
+resource vnet 'Microsoft.Network/virtualNetworks@2023-09-01' = {
   name: name
   location: location
   properties: {
@@ -64,8 +64,8 @@ resource vnet 'Microsoft.Network/virtualNetworks@2023-05-01' = {
 }
 
 // An example network security group.
-resource nsg 'Microsoft.Network/networkSecurityGroups@2023-05-01' = {
-  name: nsgName
+resource nsg 'Microsoft.Network/networkSecurityGroups@2023-09-01' = {
+  name: name
   location: location
   properties: {
     securityRules: [
@@ -132,14 +132,15 @@ resource nsg 'Microsoft.Network/networkSecurityGroups@2023-05-01' = {
   }
 }
 
-resource asg 'Microsoft.Network/applicationSecurityGroups@2023-05-01' = {
-  name: asgName
+// An example application security group.
+resource asg 'Microsoft.Network/applicationSecurityGroups@2023-09-01' = {
+  name: name
   location: location
   properties: {}
 }
 
-// An example internal load balancer
-resource lb_001 'Microsoft.Network/loadBalancers@2023-05-01' = {
+// An example internal load balancer.
+resource lb_001 'Microsoft.Network/loadBalancers@2023-09-01' = {
   name: lbName
   location: location
   sku: {
@@ -166,7 +167,7 @@ resource lb_001 'Microsoft.Network/loadBalancers@2023-05-01' = {
 }
 
 // An example VNET with a GatewaySubnet, AzureBastionSubnet, and AzureBastionSubnet.
-resource spoke 'Microsoft.Network/virtualNetworks@2023-05-01' = {
+resource spoke 'Microsoft.Network/virtualNetworks@2023-09-01' = {
   name: name
   location: location
   properties: {
@@ -205,7 +206,7 @@ resource spoke 'Microsoft.Network/virtualNetworks@2023-05-01' = {
 }
 
 // An simple VNET with DNS servers defined.
-resource hub 'Microsoft.Network/virtualNetworks@2023-05-01' = {
+resource hub 'Microsoft.Network/virtualNetworks@2023-09-01' = {
   name: name
   location: location
   properties: {
@@ -224,7 +225,7 @@ resource hub 'Microsoft.Network/virtualNetworks@2023-05-01' = {
 }
 
 // An example peering connection from a spoke to a hub VNET.
-resource toHub 'Microsoft.Network/virtualNetworks/virtualNetworkPeerings@2023-05-01' = {
+resource toHub 'Microsoft.Network/virtualNetworks/virtualNetworkPeerings@2023-09-01' = {
   parent: spoke
   name: 'peer-to-${hub.name}'
   properties: {
@@ -239,7 +240,7 @@ resource toHub 'Microsoft.Network/virtualNetworks/virtualNetworkPeerings@2023-05
 }
 
 // An example peering connection from a hub to a spoke VNET.
-resource toSpoke 'Microsoft.Network/virtualNetworks/virtualNetworkPeerings@2023-05-01' = {
+resource toSpoke 'Microsoft.Network/virtualNetworks/virtualNetworkPeerings@2023-09-01' = {
   parent: hub
   name: 'peer-to-${spoke.name}'
   properties: {
@@ -254,7 +255,7 @@ resource toSpoke 'Microsoft.Network/virtualNetworks/virtualNetworkPeerings@2023-
 }
 
 // A gateway subnet defined as a separate sub-resource.
-resource subnet01 'Microsoft.Network/virtualNetworks/subnets@2023-05-01' = {
+resource subnet01 'Microsoft.Network/virtualNetworks/subnets@2023-09-01' = {
   name: 'GatewaySubnet'
   parent: hub
   properties: {
@@ -263,7 +264,7 @@ resource subnet01 'Microsoft.Network/virtualNetworks/subnets@2023-05-01' = {
 }
 
 // A Azure Bastion Subnet defined as a separate sub-resource.
-resource subnet02 'Microsoft.Network/virtualNetworks/subnets@2023-05-01' = {
+resource subnet02 'Microsoft.Network/virtualNetworks/subnets@2023-09-01' = {
   name: 'AzureBastionSubnet'
   parent: hub
   properties: {

@@ -4,8 +4,8 @@
   "metadata": {
     "_generator": {
       "name": "bicep",
-      "version": "0.4.1124.51302",
-      "templateHash": "8147439201000013969"
+      "version": "0.25.53.49325",
+      "templateHash": "955114084331896299"
     }
   },
   "parameters": {
@@ -26,7 +26,7 @@
   "resources": [
     {
       "type": "Microsoft.EventHub/namespaces",
-      "apiVersion": "2021-11-01",
+      "apiVersion": "2024-01-01",
       "name": "[parameters('name')]",
       "location": "[parameters('location')]",
       "identity": {
@@ -37,6 +37,8 @@
       },
       "properties": {
         "disableLocalAuth": true,
+        "minimumTlsVersion": "1.2",
+        "publicNetworkAccess": "Disabled",
         "isAutoInflateEnabled": true,
         "maximumThroughputUnits": 10,
         "zoneRedundant": true

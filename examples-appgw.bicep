@@ -7,7 +7,7 @@ param name string
 @description('The location resources will be deployed.')
 param location string = resourceGroup().location
 
-resource name_resource 'Microsoft.Network/applicationGateways@2019-09-01' = {
+resource app_gw 'Microsoft.Network/applicationGateways@2023-09-01' = {
   name: name
   location: location
   zones: [
@@ -20,6 +20,16 @@ resource name_resource 'Microsoft.Network/applicationGateways@2019-09-01' = {
     sku: {
       name: 'WAF_v2'
       tier: 'WAF_v2'
+    }
+    sslPolicy: {
+      policyType: 'Custom'
+      minProtocolVersion: 'TLSv1_2'
+      cipherSuites: [
+        'TLS_ECDHE_ECDSA_WITH_AES_256_GCM_SHA384'
+        'TLS_ECDHE_ECDSA_WITH_AES_128_GCM_SHA256'
+        'TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384'
+        'TLS_ECDHE_RSA_WITH_AES_128_GCM_SHA256'
+      ]
     }
     gatewayIPConfigurations: []
     frontendIPConfigurations: []
@@ -44,7 +54,7 @@ resource name_resource 'Microsoft.Network/applicationGateways@2019-09-01' = {
   }
 }
 
-resource waf 'Microsoft.Network/ApplicationGatewayWebApplicationFirewallPolicies@2022-01-01' = {
+resource waf 'Microsoft.Network/ApplicationGatewayWebApplicationFirewallPolicies@2023-09-01' = {
   name: 'agwwaf'
   location: location
   properties: {

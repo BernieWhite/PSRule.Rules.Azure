@@ -2461,6 +2461,16 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
+         <loc>https://azure.github.io/PSRule.Rules.Azure/en/selectors/Azure.FrontDoor.IsClassic/</loc>
+         <lastmod>2024-02-24</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://azure.github.io/PSRule.Rules.Azure/en/selectors/Azure.FrontDoor.IsStandardOrPremium/</loc>
+         <lastmod>2024-02-24</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
          <loc>https://azure.github.io/PSRule.Rules.Azure/en/selectors/Azure.Resource.SupportsTags/</loc>
          <lastmod>2024-02-24</lastmod>
          <changefreq>daily</changefreq>

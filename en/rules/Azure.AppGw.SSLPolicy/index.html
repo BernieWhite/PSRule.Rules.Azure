@@ -4675,6 +4675,15 @@
   
 </li>
         
+          <li class="md-nav__item">
+  <a href="#configure-with-azure-powershell" class="md-nav__link">
+    <span class="md-ellipsis">
+      Configure with Azure PowerShell
+    </span>
+  </a>
+  
+</li>
+        
       </ul>
     </nav>
   
@@ -12519,6 +12528,10 @@
       
         
       
+        
+      
+        
+      
     
     
       
@@ -12625,6 +12638,48 @@
   
   <span class="md-ellipsis">
     Azure.AppService.IsWebApp
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../selectors/Azure.FrontDoor.IsClassic/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Azure.FrontDoor.IsClassic
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../selectors/Azure.FrontDoor.IsStandardOrPremium/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Azure.FrontDoor.IsStandardOrPremium
   </span>
   
 
@@ -12861,6 +12916,15 @@
   
 </li>
         
+          <li class="md-nav__item">
+  <a href="#configure-with-azure-powershell" class="md-nav__link">
+    <span class="md-ellipsis">
+      Configure with Azure PowerShell
+    </span>
+  </a>
+  
+</li>
+        
       </ul>
     </nav>
   
@@ -12936,9 +13000,13 @@
  · <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M7.75 6.5a1.25 1.25 0 1 0 0 2.5 1.25 1.25 0 0 0 0-2.5Z"/><path d="M2.5 1h8.44a1.5 1.5 0 0 1 1.06.44l10.25 10.25a1.5 1.5 0 0 1 0 2.12l-8.44 8.44a1.5 1.5 0 0 1-2.12 0L1.44 12A1.497 1.497 0 0 1 1 10.94V2.5A1.5 1.5 0 0 1 2.5 1Zm0 1.5v8.44l10.25 10.25 8.44-8.44L10.94 2.5Z"/></svg></span> 2020_06</p>
 <p>Application Gateway should only accept a minimum of TLS 1.2.</p>
 <h2 id="description">Description<a class="headerlink" href="#description" title="Permanent link">#</a></h2>
+<p>The minimum version of TLS that Application Gateways accept is configurable.
+Older TLS versions are no longer considered secure by industry standards, such as PCI DSS.</p>
+<p>Azure lets you disable outdated protocols and require connections to use a minimum of TLS 1.2.
+By default, TLS 1.0, TLS 1.1, and TLS 1.2 is accepted.</p>
 <p>Application Gateway should only accept a minimum of TLS 1.2 to ensure secure connections.</p>
 <h2 id="recommendation">Recommendation<a class="headerlink" href="#recommendation" title="Permanent link">#</a></h2>
-<p>Consider configuring Application Gateway to accept a minimum of TLS 1.2.</p>
+<p>Consider configuring Application Gateways to accept a minimum of TLS 1.2.</p>
 <h3 id="configure-with-azure-template">Configure with Azure template<a class="headerlink" href="#configure-with-azure-template" title="Permanent link">#</a></h3>
 <p>To deploy Application Gateways that pass this rule use a predefined or custom policy:</p>
 <ul>
@@ -12960,27 +13028,32 @@
 </ul>
 <p>For example:</p>
 <div class="language-json highlight"><span class="filename">Azure Template snippet</span><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="p">{</span>
-</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="w">    </span><span class="nt">&quot;type&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Microsoft.Network/applicationGateways&quot;</span><span class="p">,</span>
-</span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a><span class="w">    </span><span class="nt">&quot;apiVersion&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;2020-11-01&quot;</span><span class="p">,</span>
-</span><span id="__span-0-4"><a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a><span class="w">    </span><span class="nt">&quot;name&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;appGw-001&quot;</span><span class="p">,</span>
-</span><span id="__span-0-5"><a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a><span class="w">    </span><span class="nt">&quot;location&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;[resourceGroup().location]&quot;</span><span class="p">,</span>
-</span><span id="__span-0-6"><a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a><span class="w">    </span><span class="nt">&quot;properties&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
-</span><span id="__span-0-7"><a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a><span class="w">        </span><span class="nt">&quot;sku&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
-</span><span id="__span-0-8"><a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a><span class="w">            </span><span class="nt">&quot;name&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;WAF_v2&quot;</span><span class="p">,</span>
-</span><span id="__span-0-9"><a id="__codelineno-0-9" name="__codelineno-0-9" href="#__codelineno-0-9"></a><span class="w">            </span><span class="nt">&quot;tier&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;WAF_v2&quot;</span>
-</span><span id="__span-0-10"><a id="__codelineno-0-10" name="__codelineno-0-10" href="#__codelineno-0-10"></a><span class="w">        </span><span class="p">},</span>
-</span><span id="__span-0-11"><a id="__codelineno-0-11" name="__codelineno-0-11" href="#__codelineno-0-11"></a><span class="w">        </span><span class="nt">&quot;sslPolicy&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
-</span><span id="__span-0-12"><a id="__codelineno-0-12" name="__codelineno-0-12" href="#__codelineno-0-12"></a><span class="w">          </span><span class="nt">&quot;policyType&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Custom&quot;</span><span class="p">,</span>
-</span><span id="__span-0-13"><a id="__codelineno-0-13" name="__codelineno-0-13" href="#__codelineno-0-13"></a><span class="w">          </span><span class="nt">&quot;minProtocolVersion&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;TLSv1_2&quot;</span><span class="p">,</span>
-</span><span id="__span-0-14"><a id="__codelineno-0-14" name="__codelineno-0-14" href="#__codelineno-0-14"></a><span class="w">          </span><span class="nt">&quot;cipherSuites&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
-</span><span id="__span-0-15"><a id="__codelineno-0-15" name="__codelineno-0-15" href="#__codelineno-0-15"></a><span class="w">                  </span><span class="s2">&quot;TLS_ECDHE_ECDSA_WITH_AES_256_GCM_SHA384&quot;</span><span class="p">,</span>
-</span><span id="__span-0-16"><a id="__codelineno-0-16" name="__codelineno-0-16" href="#__codelineno-0-16"></a><span class="w">                  </span><span class="s2">&quot;TLS_ECDHE_ECDSA_WITH_AES_128_GCM_SHA256&quot;</span><span class="p">,</span>
-</span><span id="__span-0-17"><a id="__codelineno-0-17" name="__codelineno-0-17" href="#__codelineno-0-17"></a><span class="w">                  </span><span class="s2">&quot;TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384&quot;</span><span class="p">,</span>
-</span><span id="__span-0-18"><a id="__codelineno-0-18" name="__codelineno-0-18" href="#__codelineno-0-18"></a><span class="w">                  </span><span class="s2">&quot;TLS_ECDHE_RSA_WITH_AES_128_GCM_SHA256&quot;</span>
-</span><span id="__span-0-19"><a id="__codelineno-0-19" name="__codelineno-0-19" href="#__codelineno-0-19"></a><span class="w">          </span><span class="p">]</span>
-</span><span id="__span-0-20"><a id="__codelineno-0-20" name="__codelineno-0-20" href="#__codelineno-0-20"></a><span class="w">        </span><span class="p">}</span>
-</span><span id="__span-0-21"><a id="__codelineno-0-21" name="__codelineno-0-21" href="#__codelineno-0-21"></a><span class="w">    </span><span class="p">}</span>
-</span><span id="__span-0-22"><a id="__codelineno-0-22" name="__codelineno-0-22" href="#__codelineno-0-22"></a><span class="p">}</span>
+</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="w">  </span><span class="nt">&quot;type&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Microsoft.Network/applicationGateways&quot;</span><span class="p">,</span>
+</span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a><span class="w">  </span><span class="nt">&quot;apiVersion&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;2023-09-01&quot;</span><span class="p">,</span>
+</span><span id="__span-0-4"><a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a><span class="w">  </span><span class="nt">&quot;name&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;[parameters(&#39;name&#39;)]&quot;</span><span class="p">,</span>
+</span><span id="__span-0-5"><a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a><span class="w">  </span><span class="nt">&quot;location&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;[parameters(&#39;location&#39;)]&quot;</span><span class="p">,</span>
+</span><span id="__span-0-6"><a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a><span class="w">  </span><span class="nt">&quot;zones&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
+</span><span id="__span-0-7"><a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a><span class="w">    </span><span class="s2">&quot;1&quot;</span><span class="p">,</span>
+</span><span id="__span-0-8"><a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a><span class="w">    </span><span class="s2">&quot;2&quot;</span><span class="p">,</span>
+</span><span id="__span-0-9"><a id="__codelineno-0-9" name="__codelineno-0-9" href="#__codelineno-0-9"></a><span class="w">    </span><span class="s2">&quot;3&quot;</span>
+</span><span id="__span-0-10"><a id="__codelineno-0-10" name="__codelineno-0-10" href="#__codelineno-0-10"></a><span class="w">  </span><span class="p">],</span>
+</span><span id="__span-0-11"><a id="__codelineno-0-11" name="__codelineno-0-11" href="#__codelineno-0-11"></a><span class="w">  </span><span class="nt">&quot;properties&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-0-12"><a id="__codelineno-0-12" name="__codelineno-0-12" href="#__codelineno-0-12"></a><span class="w">    </span><span class="nt">&quot;sku&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-0-13"><a id="__codelineno-0-13" name="__codelineno-0-13" href="#__codelineno-0-13"></a><span class="w">      </span><span class="nt">&quot;name&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;WAF_v2&quot;</span><span class="p">,</span>
+</span><span id="__span-0-14"><a id="__codelineno-0-14" name="__codelineno-0-14" href="#__codelineno-0-14"></a><span class="w">      </span><span class="nt">&quot;tier&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;WAF_v2&quot;</span>
+</span><span id="__span-0-15"><a id="__codelineno-0-15" name="__codelineno-0-15" href="#__codelineno-0-15"></a><span class="w">    </span><span class="p">},</span>
+</span><span id="__span-0-16"><a id="__codelineno-0-16" name="__codelineno-0-16" href="#__codelineno-0-16"></a><span class="w">    </span><span class="nt">&quot;sslPolicy&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-0-17"><a id="__codelineno-0-17" name="__codelineno-0-17" href="#__codelineno-0-17"></a><span class="w">      </span><span class="nt">&quot;policyType&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Custom&quot;</span><span class="p">,</span>
+</span><span id="__span-0-18"><a id="__codelineno-0-18" name="__codelineno-0-18" href="#__codelineno-0-18"></a><span class="w">      </span><span class="nt">&quot;minProtocolVersion&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;TLSv1_2&quot;</span><span class="p">,</span>
+</span><span id="__span-0-19"><a id="__codelineno-0-19" name="__codelineno-0-19" href="#__codelineno-0-19"></a><span class="w">      </span><span class="nt">&quot;cipherSuites&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
+</span><span id="__span-0-20"><a id="__codelineno-0-20" name="__codelineno-0-20" href="#__codelineno-0-20"></a><span class="w">        </span><span class="s2">&quot;TLS_ECDHE_ECDSA_WITH_AES_256_GCM_SHA384&quot;</span><span class="p">,</span>
+</span><span id="__span-0-21"><a id="__codelineno-0-21" name="__codelineno-0-21" href="#__codelineno-0-21"></a><span class="w">        </span><span class="s2">&quot;TLS_ECDHE_ECDSA_WITH_AES_128_GCM_SHA256&quot;</span><span class="p">,</span>
+</span><span id="__span-0-22"><a id="__codelineno-0-22" name="__codelineno-0-22" href="#__codelineno-0-22"></a><span class="w">        </span><span class="s2">&quot;TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384&quot;</span><span class="p">,</span>
+</span><span id="__span-0-23"><a id="__codelineno-0-23" name="__codelineno-0-23" href="#__codelineno-0-23"></a><span class="w">        </span><span class="s2">&quot;TLS_ECDHE_RSA_WITH_AES_128_GCM_SHA256&quot;</span>
+</span><span id="__span-0-24"><a id="__codelineno-0-24" name="__codelineno-0-24" href="#__codelineno-0-24"></a><span class="w">      </span><span class="p">]</span>
+</span><span id="__span-0-25"><a id="__codelineno-0-25" name="__codelineno-0-25" href="#__codelineno-0-25"></a><span class="w">    </span><span class="p">}</span>
+</span><span id="__span-0-26"><a id="__codelineno-0-26" name="__codelineno-0-26" href="#__codelineno-0-26"></a><span class="w">  </span><span class="p">}</span>
+</span><span id="__span-0-27"><a id="__codelineno-0-27" name="__codelineno-0-27" href="#__codelineno-0-27"></a><span class="p">}</span>
 </span></code></pre></div>
 <h3 id="configure-with-bicep">Configure with Bicep<a class="headerlink" href="#configure-with-bicep" title="Permanent link">#</a></h3>
 <p>To deploy Application Gateways that pass this rule use a predefined or custom policy:</p>
@@ -13002,37 +13075,47 @@
 </li>
 </ul>
 <p>For example:</p>
-<div class="language-text highlight"><span class="filename">Azure Bicep snippet</span><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>resource name_resource &#39;Microsoft.Network/applicationGateways@2019-09-01&#39; = {
-</span><span id="__span-1-2"><a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a>  name: &#39;appGw-001&#39;
+<div class="language-text highlight"><span class="filename">Azure Bicep snippet</span><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>resource app_gw &#39;Microsoft.Network/applicationGateways@2023-09-01&#39; = {
+</span><span id="__span-1-2"><a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a>  name: name
 </span><span id="__span-1-3"><a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a>  location: location
-</span><span id="__span-1-4"><a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a>  properties: {
-</span><span id="__span-1-5"><a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a>    sku: {
-</span><span id="__span-1-6"><a id="__codelineno-1-6" name="__codelineno-1-6" href="#__codelineno-1-6"></a>      name: &#39;WAF_v2&#39;
-</span><span id="__span-1-7"><a id="__codelineno-1-7" name="__codelineno-1-7" href="#__codelineno-1-7"></a>      tier: &#39;WAF_v2&#39;
-</span><span id="__span-1-8"><a id="__codelineno-1-8" name="__codelineno-1-8" href="#__codelineno-1-8"></a>    }
-</span><span id="__span-1-9"><a id="__codelineno-1-9" name="__codelineno-1-9" href="#__codelineno-1-9"></a>    sslPolicy: {
-</span><span id="__span-1-10"><a id="__codelineno-1-10" name="__codelineno-1-10" href="#__codelineno-1-10"></a>      policyType: &#39;Custom&#39;
-</span><span id="__span-1-11"><a id="__codelineno-1-11" name="__codelineno-1-11" href="#__codelineno-1-11"></a>      minProtocolVersion: &#39;TLSv1_2&#39;
-</span><span id="__span-1-12"><a id="__codelineno-1-12" name="__codelineno-1-12" href="#__codelineno-1-12"></a>      cipherSuites: [
-</span><span id="__span-1-13"><a id="__codelineno-1-13" name="__codelineno-1-13" href="#__codelineno-1-13"></a>        &#39;TLS_ECDHE_ECDSA_WITH_AES_256_GCM_SHA384&#39;
-</span><span id="__span-1-14"><a id="__codelineno-1-14" name="__codelineno-1-14" href="#__codelineno-1-14"></a>        &#39;TLS_ECDHE_ECDSA_WITH_AES_128_GCM_SHA256&#39;
-</span><span id="__span-1-15"><a id="__codelineno-1-15" name="__codelineno-1-15" href="#__codelineno-1-15"></a>        &#39;TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384&#39;
-</span><span id="__span-1-16"><a id="__codelineno-1-16" name="__codelineno-1-16" href="#__codelineno-1-16"></a>        &#39;TLS_ECDHE_RSA_WITH_AES_128_GCM_SHA256&#39;
-</span><span id="__span-1-17"><a id="__codelineno-1-17" name="__codelineno-1-17" href="#__codelineno-1-17"></a>      ]
-</span><span id="__span-1-18"><a id="__codelineno-1-18" name="__codelineno-1-18" href="#__codelineno-1-18"></a>    }
-</span><span id="__span-1-19"><a id="__codelineno-1-19" name="__codelineno-1-19" href="#__codelineno-1-19"></a>  }
-</span><span id="__span-1-20"><a id="__codelineno-1-20" name="__codelineno-1-20" href="#__codelineno-1-20"></a>}
+</span><span id="__span-1-4"><a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a>  zones: [
+</span><span id="__span-1-5"><a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a>    &#39;1&#39;
+</span><span id="__span-1-6"><a id="__codelineno-1-6" name="__codelineno-1-6" href="#__codelineno-1-6"></a>    &#39;2&#39;
+</span><span id="__span-1-7"><a id="__codelineno-1-7" name="__codelineno-1-7" href="#__codelineno-1-7"></a>    &#39;3&#39;
+</span><span id="__span-1-8"><a id="__codelineno-1-8" name="__codelineno-1-8" href="#__codelineno-1-8"></a>  ]
+</span><span id="__span-1-9"><a id="__codelineno-1-9" name="__codelineno-1-9" href="#__codelineno-1-9"></a>  properties: {
+</span><span id="__span-1-10"><a id="__codelineno-1-10" name="__codelineno-1-10" href="#__codelineno-1-10"></a>    sku: {
+</span><span id="__span-1-11"><a id="__codelineno-1-11" name="__codelineno-1-11" href="#__codelineno-1-11"></a>      name: &#39;WAF_v2&#39;
+</span><span id="__span-1-12"><a id="__codelineno-1-12" name="__codelineno-1-12" href="#__codelineno-1-12"></a>      tier: &#39;WAF_v2&#39;
+</span><span id="__span-1-13"><a id="__codelineno-1-13" name="__codelineno-1-13" href="#__codelineno-1-13"></a>    }
+</span><span id="__span-1-14"><a id="__codelineno-1-14" name="__codelineno-1-14" href="#__codelineno-1-14"></a>    sslPolicy: {
+</span><span id="__span-1-15"><a id="__codelineno-1-15" name="__codelineno-1-15" href="#__codelineno-1-15"></a>      policyType: &#39;Custom&#39;
+</span><span id="__span-1-16"><a id="__codelineno-1-16" name="__codelineno-1-16" href="#__codelineno-1-16"></a>      minProtocolVersion: &#39;TLSv1_2&#39;
+</span><span id="__span-1-17"><a id="__codelineno-1-17" name="__codelineno-1-17" href="#__codelineno-1-17"></a>      cipherSuites: [
+</span><span id="__span-1-18"><a id="__codelineno-1-18" name="__codelineno-1-18" href="#__codelineno-1-18"></a>        &#39;TLS_ECDHE_ECDSA_WITH_AES_256_GCM_SHA384&#39;
+</span><span id="__span-1-19"><a id="__codelineno-1-19" name="__codelineno-1-19" href="#__codelineno-1-19"></a>        &#39;TLS_ECDHE_ECDSA_WITH_AES_128_GCM_SHA256&#39;
+</span><span id="__span-1-20"><a id="__codelineno-1-20" name="__codelineno-1-20" href="#__codelineno-1-20"></a>        &#39;TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384&#39;
+</span><span id="__span-1-21"><a id="__codelineno-1-21" name="__codelineno-1-21" href="#__codelineno-1-21"></a>        &#39;TLS_ECDHE_RSA_WITH_AES_128_GCM_SHA256&#39;
+</span><span id="__span-1-22"><a id="__codelineno-1-22" name="__codelineno-1-22" href="#__codelineno-1-22"></a>      ]
+</span><span id="__span-1-23"><a id="__codelineno-1-23" name="__codelineno-1-23" href="#__codelineno-1-23"></a>    }
+</span><span id="__span-1-24"><a id="__codelineno-1-24" name="__codelineno-1-24" href="#__codelineno-1-24"></a>  }
+</span><span id="__span-1-25"><a id="__codelineno-1-25" name="__codelineno-1-25" href="#__codelineno-1-25"></a>}
+</span></code></pre></div>
+<h3 id="configure-with-azure-powershell">Configure with Azure PowerShell<a class="headerlink" href="#configure-with-azure-powershell" title="Permanent link">#</a></h3>
+<div class="language-powershell highlight"><span class="filename">Azure PowerShell snippet</span><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="nv">$gw</span> <span class="p">=</span> <span class="nb">Get-AzApplicationGateway</span> <span class="n">-Name</span> <span class="s1">&#39;&lt;name&gt;&#39;</span> <span class="n">-ResourceGroupName</span> <span class="s1">&#39;&lt;resource_group&gt;&#39;</span>
+</span><span id="__span-2-2"><a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a><span class="nb">Set-AzApplicationGatewaySslPolicy</span> <span class="n">-ApplicationGateway</span> <span class="nv">$gw</span> <span class="n">-PolicyType</span> <span class="n">Custom</span> <span class="n">-MinProtocolVersion</span> <span class="n">TLSv1_2</span> <span class="n">-CipherSuite</span> <span class="s1">&#39;TLS_ECDHE_ECDSA_WITH_AES_256_GCM_SHA384&#39;</span><span class="p">,</span> <span class="s1">&#39;TLS_ECDHE_ECDSA_WITH_AES_128_GCM_SHA256&#39;</span><span class="p">,</span> <span class="s1">&#39;TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384&#39;</span><span class="p">,</span> <span class="s1">&#39;TLS_ECDHE_RSA_WITH_AES_128_GCM_SHA256&#39;</span>
 </span></code></pre></div>
 <h2 id="links">Links<a class="headerlink" href="#links" title="Permanent link">#</a></h2>
 <ul>
-<li><a href="https://learn.microsoft.com/azure/architecture/framework/security/design-storage-encryption#data-in-transit">Data encryption in Azure</a></li>
-<li><a href="https://docs.microsoft.com/azure/application-gateway/application-gateway-ssl-policy-overview">Application Gateway SSL policy overview</a></li>
-<li><a href="https://docs.microsoft.com/azure/application-gateway/application-gateway-configure-ssl-policy-powershell">Configure SSL policy versions and cipher suites on Application Gateway</a></li>
-<li><a href="https://docs.microsoft.com/azure/application-gateway/ssl-overview">Overview of TLS termination and end to end TLS with Application Gateway</a></li>
-<li><a href="https://docs.microsoft.com/azure/templates/microsoft.network/applicationgateways">Azure deployment reference</a></li>
+<li><a href="https://learn.microsoft.com/azure/well-architected/security/encryption">SE:07 Encryption</a></li>
+<li><a href="https://learn.microsoft.com/security/benchmark/azure/baselines/application-gateway-security-baseline#dp-3-encrypt-sensitive-data-in-transit">DP-3: Encrypt sensitive data in transit</a></li>
+<li><a href="https://learn.microsoft.com/azure/application-gateway/application-gateway-ssl-policy-overview">Application Gateway SSL policy overview</a></li>
+<li><a href="https://learn.microsoft.com/azure/application-gateway/application-gateway-configure-ssl-policy-powershell">Configure SSL policy versions and cipher suites on Application Gateway</a></li>
+<li><a href="https://learn.microsoft.com/azure/application-gateway/ssl-overview">Overview of TLS termination and end to end TLS with Application Gateway</a></li>
 <li><a href="https://learn.microsoft.com/azure/application-gateway/application-gateway-ssl-policy-overview#predefined-tls-policy">Predefined TLS policy</a></li>
 <li><a href="https://learn.microsoft.com/azure/application-gateway/application-gateway-ssl-policy-overview#cipher-suites">Cipher suites</a></li>
 <li><a href="https://learn.microsoft.com/azure/application-gateway/application-gateway-ssl-policy-overview#limitations">Limitations</a></li>
+<li><a href="https://learn.microsoft.com/azure/templates/microsoft.network/applicationgateways">Azure deployment reference</a></li>
 </ul>
 
   <!-- Source file information -->
@@ -13058,7 +13141,7 @@
     <span class="md-icon" title="Last update">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1-2.1-2M12.5 7v5.2l4 2.4-1 1L11 13V7h1.5M11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2v1.8Z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">February 28, 2023</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">February 24, 2024</span>
   </span>
 
     
@@ -13086,14 +13169,14 @@
     
     <nav>
       
-        <a href="https://github.com/kislow" class="md-author" title="@kislow">
-          
-          <img src="https://avatars.githubusercontent.com/u/33865204?v=4&size=72" alt="kislow">
-        </a>
-      
         <a href="https://github.com/BernieWhite" class="md-author" title="@BernieWhite">
           
           <img src="https://avatars.githubusercontent.com/u/13513058?v=4&size=72" alt="BernieWhite">
+        </a>
+      
+        <a href="https://github.com/kislow" class="md-author" title="@kislow">
+          
+          <img src="https://avatars.githubusercontent.com/u/33865204?v=4&size=72" alt="kislow">
         </a>
       
         <a href="https://github.com/ms-sambell" class="md-author" title="@ms-sambell">

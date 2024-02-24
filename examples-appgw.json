@@ -4,8 +4,8 @@
   "metadata": {
     "_generator": {
       "name": "bicep",
-      "version": "0.10.61.36676",
-      "templateHash": "17322635064657728998"
+      "version": "0.25.53.49325",
+      "templateHash": "16003563993180625268"
     }
   },
   "parameters": {
@@ -26,7 +26,7 @@
   "resources": [
     {
       "type": "Microsoft.Network/applicationGateways",
-      "apiVersion": "2019-09-01",
+      "apiVersion": "2023-09-01",
       "name": "[parameters('name')]",
       "location": "[parameters('location')]",
       "zones": [
@@ -39,6 +39,16 @@
         "sku": {
           "name": "WAF_v2",
           "tier": "WAF_v2"
+        },
+        "sslPolicy": {
+          "policyType": "Custom",
+          "minProtocolVersion": "TLSv1_2",
+          "cipherSuites": [
+            "TLS_ECDHE_ECDSA_WITH_AES_256_GCM_SHA384",
+            "TLS_ECDHE_ECDSA_WITH_AES_128_GCM_SHA256",
+            "TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384",
+            "TLS_ECDHE_RSA_WITH_AES_128_GCM_SHA256"
+          ]
         },
         "gatewayIPConfigurations": [],
         "frontendIPConfigurations": [],
@@ -64,7 +74,7 @@
     },
     {
       "type": "Microsoft.Network/ApplicationGatewayWebApplicationFirewallPolicies",
-      "apiVersion": "2022-01-01",
+      "apiVersion": "2023-09-01",
       "name": "agwwaf",
       "location": "[parameters('location')]",
       "properties": {

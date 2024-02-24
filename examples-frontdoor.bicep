@@ -6,6 +6,9 @@
 @description('The name of the resource.')
 param name string = 'frontdoor'
 
+@description('A resource ID that specifies the Log Analytics workspace to send logs.')
+param workspaceId string
+
 @description('Define a WAF policy for Front Door Premium.')
 resource waf 'Microsoft.Network/FrontDoorWebApplicationFirewallPolicies@2022-05-01' = {
   name: name
@@ -148,6 +151,8 @@ resource afd_classic 'Microsoft.Network/frontDoors@2021-06-01' = {
         properties: {
           hostName: '${name}.azurefd.net'
           sessionAffinityEnabledState: 'Disabled'
+
+          #disable-next-line BCP073
           customHttpsConfiguration: {
             minimumTlsVersion: '1.2'
           }
@@ -161,8 +166,27 @@ resource afd_classic 'Microsoft.Network/frontDoors@2021-06-01' = {
   }
 }
 
-@description('Define Front Door Premium.')
-resource afd_premium 'Microsoft.Cdn/profiles@2021-06-01' = {
+// Configure settings to send audit logs to a Log Analytics workspace.
+resource audit_classic 'Microsoft.Insights/diagnosticSettings@2021-05-01-preview' = {
+  name: 'audit'
+  scope: afd_classic
+  properties: {
+    workspaceId: workspaceId
+    logs: [
+      {
+        category: 'FrontdoorAccessLog'
+        enabled: true
+      }
+      {
+        category: 'FrontdoorWebApplicationFirewallLog'
+        enabled: true
+      }
+    ]
+  }
+}
+
+// Define an Azure Front Door Premium profile.
+resource afd_profile 'Microsoft.Cdn/profiles@2023-05-01' = {
   name: name
   location: 'Global'
   sku: {
@@ -170,8 +194,9 @@ resource afd_premium 'Microsoft.Cdn/profiles@2021-06-01' = {
   }
 }
 
-resource adf_endpoint 'Microsoft.Cdn/profiles/afdEndpoints@2021-06-01' = {
-  parent: afd_premium
+// Defines an endpoint for Azure Front Door Standard/ Premium profile.
+resource adf_endpoint 'Microsoft.Cdn/profiles/afdEndpoints@2023-05-01' = {
+  parent: afd_profile
   name: name
   location: 'Global'
   properties: {
@@ -179,9 +204,10 @@ resource adf_endpoint 'Microsoft.Cdn/profiles/afdEndpoints@2021-06-01' = {
   }
 }
 
-resource adf_origin_group 'Microsoft.Cdn/profiles/originGroups@2021-06-01' = {
+// Define an origin group for a Front Door Standard/ Premium profile.
+resource adf_origin_group 'Microsoft.Cdn/profiles/originGroups@2023-05-01' = {
   name: name
-  parent: afd_premium
+  parent: afd_profile
   properties: {
     loadBalancingSettings: {
       sampleSize: 4
@@ -193,5 +219,24 @@ resource adf_origin_group 'Microsoft.Cdn/profiles/originGroups@2021-06-01' = {
       probeProtocol: 'Http'
       probeIntervalInSeconds: 100
     }
+  }
+}
+
+// Configure settings to send audit logs to a Log Analytics workspace.
+resource audit 'Microsoft.Insights/diagnosticSettings@2021-05-01-preview' = {
+  name: 'audit'
+  scope: afd_profile
+  properties: {
+    workspaceId: workspaceId
+    logs: [
+      {
+        category: 'FrontdoorAccessLog'
+        enabled: true
+      }
+      {
+        category: 'FrontdoorWebApplicationFirewallLog'
+        enabled: true
+      }
+    ]
   }
 }

@@ -1,13 +1,11 @@
 {
   "$schema": "https://schema.management.azure.com/schemas/2019-04-01/deploymentTemplate.json#",
-  "languageVersion": "1.9-experimental",
   "contentVersion": "1.0.0.0",
   "metadata": {
-    "_EXPERIMENTAL_WARNING": "Symbolic name support in ARM is experimental, and should be enabled for testing purposes only. Do not enable this setting for any production usage, or you may be unexpectedly broken at any time!",
     "_generator": {
       "name": "bicep",
-      "version": "0.14.46.61228",
-      "templateHash": "5803424126704954217"
+      "version": "0.25.53.49325",
+      "templateHash": "16025868691049564889"
     }
   },
   "parameters": {
@@ -16,6 +14,12 @@
       "defaultValue": "frontdoor",
       "metadata": {
         "description": "The name of the resource."
+      }
+    },
+    "workspaceId": {
+      "type": "string",
+      "metadata": {
+        "description": "A resource ID that specifies the Log Analytics workspace to send logs."
       }
     },
     "backendAddress": {
@@ -119,8 +123,8 @@
       }
     ]
   },
-  "resources": {
-    "waf": {
+  "resources": [
+    {
       "type": "Microsoft.Network/FrontDoorWebApplicationFirewallPolicies",
       "apiVersion": "2022-05-01",
       "name": "[parameters('name')]",
@@ -156,7 +160,7 @@
         "description": "Define a WAF policy for Front Door Premium."
       }
     },
-    "afd_classic": {
+    {
       "type": "Microsoft.Network/frontDoors",
       "apiVersion": "2021-06-01",
       "name": "[parameters('name')]",
@@ -184,33 +188,52 @@
         "description": "Define a Front Door Classic."
       }
     },
-    "afd_premium": {
+    {
+      "type": "Microsoft.Insights/diagnosticSettings",
+      "apiVersion": "2021-05-01-preview",
+      "scope": "[format('Microsoft.Network/frontDoors/{0}', parameters('name'))]",
+      "name": "audit",
+      "properties": {
+        "workspaceId": "[parameters('workspaceId')]",
+        "logs": [
+          {
+            "category": "FrontdoorAccessLog",
+            "enabled": true
+          },
+          {
+            "category": "FrontdoorWebApplicationFirewallLog",
+            "enabled": true
+          }
+        ]
+      },
+      "dependsOn": [
+        "[resourceId('Microsoft.Network/frontDoors', parameters('name'))]"
+      ]
+    },
+    {
       "type": "Microsoft.Cdn/profiles",
-      "apiVersion": "2021-06-01",
+      "apiVersion": "2023-05-01",
       "name": "[parameters('name')]",
       "location": "Global",
       "sku": {
         "name": "Premium_AzureFrontDoor"
-      },
-      "metadata": {
-        "description": "Define Front Door Premium."
       }
     },
-    "adf_endpoint": {
+    {
       "type": "Microsoft.Cdn/profiles/afdEndpoints",
-      "apiVersion": "2021-06-01",
+      "apiVersion": "2023-05-01",
       "name": "[format('{0}/{1}', parameters('name'), parameters('name'))]",
       "location": "Global",
       "properties": {
         "enabledState": "Enabled"
       },
       "dependsOn": [
-        "afd_premium"
+        "[resourceId('Microsoft.Cdn/profiles', parameters('name'))]"
       ]
     },
-    "adf_origin_group": {
+    {
       "type": "Microsoft.Cdn/profiles/originGroups",
-      "apiVersion": "2021-06-01",
+      "apiVersion": "2023-05-01",
       "name": "[format('{0}/{1}', parameters('name'), parameters('name'))]",
       "properties": {
         "loadBalancingSettings": {
@@ -225,8 +248,30 @@
         }
       },
       "dependsOn": [
-        "afd_premium"
+        "[resourceId('Microsoft.Cdn/profiles', parameters('name'))]"
+      ]
+    },
+    {
+      "type": "Microsoft.Insights/diagnosticSettings",
+      "apiVersion": "2021-05-01-preview",
+      "scope": "[format('Microsoft.Cdn/profiles/{0}', parameters('name'))]",
+      "name": "audit",
+      "properties": {
+        "workspaceId": "[parameters('workspaceId')]",
+        "logs": [
+          {
+            "category": "FrontdoorAccessLog",
+            "enabled": true
+          },
+          {
+            "category": "FrontdoorWebApplicationFirewallLog",
+            "enabled": true
+          }
+        ]
+      },
+      "dependsOn": [
+        "[resourceId('Microsoft.Cdn/profiles', parameters('name'))]"
       ]
     }
-  }
+  ]
 }

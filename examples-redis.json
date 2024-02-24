@@ -1,13 +1,11 @@
 {
   "$schema": "https://schema.management.azure.com/schemas/2019-04-01/deploymentTemplate.json#",
-  "languageVersion": "1.10-experimental",
   "contentVersion": "1.0.0.0",
   "metadata": {
-    "_EXPERIMENTAL_WARNING": "Symbolic name support in ARM is experimental, and should be enabled for testing purposes only. Do not enable this setting for any production usage, or you may be unexpectedly broken at any time!",
     "_generator": {
       "name": "bicep",
-      "version": "0.18.4.5664",
-      "templateHash": "13212070657845815407"
+      "version": "0.25.53.49325",
+      "templateHash": "7482944073131107404"
     }
   },
   "parameters": {
@@ -25,10 +23,10 @@
       }
     }
   },
-  "resources": {
-    "cache": {
+  "resources": [
+    {
       "type": "Microsoft.Cache/redis",
-      "apiVersion": "2023-04-01",
+      "apiVersion": "2023-08-01",
       "name": "[parameters('name')]",
       "location": "[parameters('location')]",
       "properties": {
@@ -51,17 +49,17 @@
         "3"
       ]
     },
-    "rule": {
+    {
       "type": "Microsoft.Cache/redis/firewallRules",
-      "apiVersion": "2023-04-01",
+      "apiVersion": "2023-08-01",
       "name": "[format('{0}/{1}', parameters('name'), 'allow-on-premises')]",
       "properties": {
         "startIP": "10.0.1.1",
         "endIP": "10.0.1.31"
       },
       "dependsOn": [
-        "cache"
+        "[resourceId('Microsoft.Cache/redis', parameters('name'))]"
       ]
     }
-  }
+  ]
 }

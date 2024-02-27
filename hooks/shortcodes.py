@@ -110,6 +110,9 @@ def _badge_for_configuration(text: str, page: Page, files: Files) -> str:
     if config_type == "rule":
         path = f"../../setup/configuring-rules.md#{config_value.lower()}"
 
+    if config_type == "expand":
+        path = f"../../setup/configuring-expansion.md#{config_value.lower()}"
+
     icon = "octicons-gear-24"
     href = path
     text = config_value

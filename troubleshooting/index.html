@@ -1306,6 +1306,15 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#bicep-features" class="md-nav__link">
+    <span class="md-ellipsis">
+      Bicep features
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#bicep-compilation-timeout" class="md-nav__link">
     <span class="md-ellipsis">
       Bicep compilation timeout
@@ -12910,6 +12919,15 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#bicep-features" class="md-nav__link">
+    <span class="md-ellipsis">
+      Bicep features
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#bicep-compilation-timeout" class="md-nav__link">
     <span class="md-ellipsis">
       Bicep compilation timeout
@@ -13033,6 +13051,7 @@ See <a href="../setup/setup-bicep/#configuring-minimum-version">Configuring mini
 <h2 id="bicep-version">Bicep version<a class="headerlink" href="#bicep-version" title="Permanent link">#</a></h2>
 <p>When expanding Bicep source files you may get an error relating to the Bicep version you have installed.
 For example if you attempt to use a Bicep feature that is not supported by the version used by PSRule for Azure.</p>
+<p>Check the Bicep version reported by PSRule supports the Bicep features you are using.</p>
 <p>PSRule for Azure uses the Bicep CLI installed on your machine or CI worker.
 By default, the Bicep CLI binary will be selected by your <code>PATH</code> environment variable.</p>
 <p>Optionally you can configure an alternative Bicep CLI binary to use by either:</p>
@@ -13041,6 +13060,12 @@ By default, the Bicep CLI binary will be selected by your <code>PATH</code> envi
 <li><strong>From Azure CLI</strong> &mdash; Set the <a href="../setup/setup-bicep/#using-azure-cli">PSRULE_AZURE_BICEP_USE_AZURE_CLI</a> environment variable to <code>true</code>.</li>
 </ul>
 <p>For more details on installing and configuring the Bicep CLI, see <a href="../setup/setup-bicep/">Setup Bicep</a>.</p>
+<h2 id="bicep-features">Bicep features<a class="headerlink" href="#bicep-features" title="Permanent link">#</a></h2>
+<p>Generally PSRule for Azure plans to support any language features that are supported by the latest version of Bicep.
+New language features are often added behind an experimental feature flag for community feedback.
+Features flagged by Bicep as experimental may not be supported by PSRule for Azure immediately.
+PSRule for Azure will plan to add support as soon as possible after the feature flag is removed.</p>
+<p>If you are using a Bicep feature that is not supported by PSRule for Azure, please <a href="https://github.com/Azure/PSRule.Rules.Azure/discussions">join or start a discussion</a>.</p>
 <h2 id="bicep-compilation-timeout">Bicep compilation timeout<a class="headerlink" href="#bicep-compilation-timeout" title="Permanent link">#</a></h2>
 <p>When expanding Bicep source files you may get an error similar to the following:</p>
 <div class="admonition error">
@@ -13191,7 +13216,7 @@ The PSRule for Azure <strong>&lt;1.3.1</strong> uses an older version of this li
     <span class="md-icon" title="Last update">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1-2.1-2M12.5 7v5.2l4 2.4-1 1L11 13V7h1.5M11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2v1.8Z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">June 28, 2023</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">February 28, 2024</span>
   </span>
 
     

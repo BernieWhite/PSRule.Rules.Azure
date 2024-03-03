@@ -9913,6 +9913,15 @@
   
 </li>
         
+          <li class="md-nav__item">
+  <a href="#configure-with-azure-policy" class="md-nav__link">
+    <span class="md-ellipsis">
+      Configure with Azure Policy
+    </span>
+  </a>
+  
+</li>
+        
       </ul>
     </nav>
   
@@ -12925,6 +12934,15 @@
   
 </li>
         
+          <li class="md-nav__item">
+  <a href="#configure-with-azure-policy" class="md-nav__link">
+    <span class="md-ellipsis">
+      Configure with Azure Policy
+    </span>
+  </a>
+  
+</li>
+        
       </ul>
     </nav>
   
@@ -13075,9 +13093,17 @@ Also consider using Azure Policy to audit or enforce this configuration.</p>
 </span><span id="__span-1-17"><a id="__codelineno-1-17" name="__codelineno-1-17" href="#__codelineno-1-17"></a>  }
 </span><span id="__span-1-18"><a id="__codelineno-1-18" name="__codelineno-1-18" href="#__codelineno-1-18"></a>}
 </span></code></pre></div>
+<h3 id="configure-with-azure-policy">Configure with Azure Policy<a class="headerlink" href="#configure-with-azure-policy" title="Permanent link">#</a></h3>
+<p>To address this issue at runtime use the following policies:</p>
+<ul>
+<li><a href="https://github.com/Azure/azure-policy/blob/master/built-in-policies/policyDefinitions/Storage/Storage_AuditForHTTPSEnabled_Audit.json">Secure transfer to storage accounts should be enabled</a>
+  <code>/providers/Microsoft.Authorization/policyDefinitions/404c3081-a854-4457-ae30-26a93ef643f9</code></li>
+<li><a href="https://github.com/Azure/azure-policy/blob/master/built-in-policies/policyDefinitions/Storage/StorageAccountSecureTransfer_Modify.json">Configure secure transfer of data on a storage account</a>
+  <code>/providers/Microsoft.Authorization/policyDefinitions/f81e3117-0093-4b17-8a60-82363134f0eb</code></li>
+</ul>
 <h2 id="links">Links<a class="headerlink" href="#links" title="Permanent link">#</a></h2>
 <ul>
-<li><a href="https://learn.microsoft.com/azure/architecture/framework/security/design-storage-encryption#data-in-transit">Data encryption in Azure</a></li>
+<li><a href="https://learn.microsoft.com/azure/well-architected/security/encryption#data-in-transit">SE:07 Encryption</a></li>
 <li><a href="https://learn.microsoft.com/azure/storage/common/storage-require-secure-transfer">Require secure transfer in Azure Storage</a></li>
 <li><a href="https://learn.microsoft.com/security/benchmark/azure/baselines/storage-security-baseline#dp-3-encrypt-sensitive-data-in-transit">DP-3: Encrypt sensitive data in transit</a></li>
 <li><a href="https://learn.microsoft.com/azure/governance/policy/samples/built-in-policies#storage">Sample policy for ensuring https traffic</a></li>
@@ -13107,7 +13133,7 @@ Also consider using Azure Policy to audit or enforce this configuration.</p>
     <span class="md-icon" title="Last update">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1-2.1-2M12.5 7v5.2l4 2.4-1 1L11 13V7h1.5M11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2v1.8Z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">September 2, 2023</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">March 3, 2024</span>
   </span>
 
     

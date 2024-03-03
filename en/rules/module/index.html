@@ -16528,12 +16528,6 @@
 <td>Error</td>
 </tr>
 <tr>
-<td><a href="../Azure.ContainerApp.ManagedIdentity/">Azure.ContainerApp.ManagedIdentity</a></td>
-<td>Ensure managed identity is used for authentication.</td>
-<td>Important</td>
-<td>Error</td>
-</tr>
-<tr>
 <td><a href="../Azure.Cosmos.DisableMetadataWrite/">Azure.Cosmos.DisableMetadataWrite</a></td>
 <td>Use Azure AD identities for management place operations in Azure Cosmos DB.</td>
 <td>Important</td>
@@ -16596,18 +16590,6 @@
 <tr>
 <td><a href="../Azure.SQLMI.ManagedIdentity/">Azure.SQLMI.ManagedIdentity</a></td>
 <td>Ensure managed identity is used to allow support for Azure AD authentication.</td>
-<td>Important</td>
-<td>Error</td>
-</tr>
-<tr>
-<td><a href="../Azure.Storage.BlobAccessType/">Azure.Storage.BlobAccessType</a></td>
-<td>Use containers configured with a private access type that requires authorization.</td>
-<td>Important</td>
-<td>Error</td>
-</tr>
-<tr>
-<td><a href="../Azure.Storage.BlobPublicAccess/">Azure.Storage.BlobPublicAccess</a></td>
-<td>Storage Accounts should only accept authorized requests.</td>
 <td>Important</td>
 <td>Error</td>
 </tr>
@@ -16876,12 +16858,6 @@
 <td>Important</td>
 <td>Error</td>
 </tr>
-<tr>
-<td><a href="../Azure.ContainerApp.Insecure/">Azure.ContainerApp.Insecure</a></td>
-<td>Ensure insecure inbound traffic is not permitted to the container app.</td>
-<td>Important</td>
-<td>Error</td>
-</tr>
 </tbody>
 </table>
 <h3 id="encryption">Encryption<a class="headerlink" href="#encryption" title="Permanent link">#</a></h3>
@@ -16971,18 +16947,6 @@
 <td><a href="../Azure.SQL.MinTLS/">Azure.SQL.MinTLS</a></td>
 <td>Azure SQL Database servers should reject TLS versions older than 1.2.</td>
 <td>Critical</td>
-<td>Error</td>
-</tr>
-<tr>
-<td><a href="../Azure.Storage.MinTLS/">Azure.Storage.MinTLS</a></td>
-<td>Storage Accounts should reject TLS versions older than 1.2.</td>
-<td>Critical</td>
-<td>Error</td>
-</tr>
-<tr>
-<td><a href="../Azure.Storage.SecureTransfer/">Azure.Storage.SecureTransfer</a></td>
-<td>Storage accounts should only accept encrypted connections.</td>
-<td>Important</td>
 <td>Error</td>
 </tr>
 </tbody>
@@ -17604,6 +17568,12 @@
 <td>Error</td>
 </tr>
 <tr>
+<td><a href="../Azure.ContainerApp.ManagedIdentity/">Azure.ContainerApp.ManagedIdentity</a></td>
+<td>Ensure managed identity is used for authentication.</td>
+<td>Important</td>
+<td>Error</td>
+</tr>
+<tr>
 <td><a href="../Azure.EventGrid.DisableLocalAuth/">Azure.EventGrid.DisableLocalAuth</a></td>
 <td>Authenticate publishing clients with Azure AD identities.</td>
 <td>Important</td>
@@ -17626,6 +17596,18 @@
 <td>Key Vaults should use Azure RBAC as the authorization system for the data plane.</td>
 <td>Awareness</td>
 <td>Warning</td>
+</tr>
+<tr>
+<td><a href="../Azure.Storage.BlobAccessType/">Azure.Storage.BlobAccessType</a></td>
+<td>Use containers configured with a private access type that requires authorization.</td>
+<td>Important</td>
+<td>Error</td>
+</tr>
+<tr>
+<td><a href="../Azure.Storage.BlobPublicAccess/">Azure.Storage.BlobPublicAccess</a></td>
+<td>Storage Accounts should only accept authorized requests.</td>
+<td>Important</td>
+<td>Error</td>
 </tr>
 </tbody>
 </table>
@@ -17702,6 +17684,12 @@
 <td>Error</td>
 </tr>
 <tr>
+<td><a href="../Azure.ContainerApp.Insecure/">Azure.ContainerApp.Insecure</a></td>
+<td>Ensure insecure inbound traffic is not permitted to the container app.</td>
+<td>Important</td>
+<td>Error</td>
+</tr>
+<tr>
 <td><a href="../Azure.EventHub.MinTLS/">Azure.EventHub.MinTLS</a></td>
 <td>Event Hub namespaces should reject TLS versions older than 1.2.</td>
 <td>Critical</td>
@@ -17717,6 +17705,18 @@
 <td><a href="../Azure.RedisEnterprise.MinTLS/">Azure.RedisEnterprise.MinTLS</a></td>
 <td>Redis Cache should reject TLS versions older than 1.2.</td>
 <td>Critical</td>
+<td>Error</td>
+</tr>
+<tr>
+<td><a href="../Azure.Storage.MinTLS/">Azure.Storage.MinTLS</a></td>
+<td>Storage Accounts should reject TLS versions older than 1.2.</td>
+<td>Critical</td>
+<td>Error</td>
+</tr>
+<tr>
+<td><a href="../Azure.Storage.SecureTransfer/">Azure.Storage.SecureTransfer</a></td>
+<td>Storage accounts should only accept encrypted connections.</td>
+<td>Important</td>
 <td>Error</td>
 </tr>
 <tr>

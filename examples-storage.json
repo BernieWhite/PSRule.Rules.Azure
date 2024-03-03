@@ -1,13 +1,11 @@
 {
   "$schema": "https://schema.management.azure.com/schemas/2019-04-01/deploymentTemplate.json#",
-  "languageVersion": "1.10-experimental",
   "contentVersion": "1.0.0.0",
   "metadata": {
-    "_EXPERIMENTAL_WARNING": "Symbolic name support in ARM is experimental, and should be enabled for testing purposes only. Do not enable this setting for any production usage, or you may be unexpectedly broken at any time!",
     "_generator": {
       "name": "bicep",
-      "version": "0.20.4.51522",
-      "templateHash": "6814134128727565933"
+      "version": "0.25.53.49325",
+      "templateHash": "6095867228458030395"
     }
   },
   "parameters": {
@@ -29,8 +27,8 @@
     "containerName": "data",
     "shareName": "group"
   },
-  "resources": {
-    "storageAccount": {
+  "resources": [
+    {
       "type": "Microsoft.Storage/storageAccounts",
       "apiVersion": "2023-01-01",
       "name": "[parameters('name')]",
@@ -50,7 +48,7 @@
         }
       }
     },
-    "blobService": {
+    {
       "type": "Microsoft.Storage/storageAccounts/blobServices",
       "apiVersion": "2023-01-01",
       "name": "[format('{0}/{1}', parameters('name'), 'default')]",
@@ -65,10 +63,10 @@
         }
       },
       "dependsOn": [
-        "storageAccount"
+        "[resourceId('Microsoft.Storage/storageAccounts', parameters('name'))]"
       ]
     },
-    "container": {
+    {
       "type": "Microsoft.Storage/storageAccounts/blobServices/containers",
       "apiVersion": "2023-01-01",
       "name": "[format('{0}/{1}/{2}', parameters('name'), 'default', variables('containerName'))]",
@@ -76,10 +74,10 @@
         "publicAccess": "None"
       },
       "dependsOn": [
-        "blobService"
+        "[resourceId('Microsoft.Storage/storageAccounts/blobServices', parameters('name'), 'default')]"
       ]
     },
-    "fileServices": {
+    {
       "type": "Microsoft.Storage/storageAccounts/fileServices",
       "apiVersion": "2023-01-01",
       "name": "[format('{0}/{1}', parameters('name'), 'default')]",
@@ -90,10 +88,10 @@
         }
       },
       "dependsOn": [
-        "storageAccount"
+        "[resourceId('Microsoft.Storage/storageAccounts', parameters('name'))]"
       ]
     },
-    "share": {
+    {
       "type": "Microsoft.Storage/storageAccounts/fileServices/shares",
       "apiVersion": "2023-01-01",
       "name": "[format('{0}/{1}/{2}', parameters('name'), 'default', variables('shareName'))]",
@@ -101,8 +99,30 @@
         "accessTier": "TransactionOptimized"
       },
       "dependsOn": [
-        "fileServices"
+        "[resourceId('Microsoft.Storage/storageAccounts/fileServices', parameters('name'), 'default')]"
+      ]
+    },
+    {
+      "type": "Microsoft.Security/defenderForStorageSettings",
+      "apiVersion": "2022-12-01-preview",
+      "scope": "[format('Microsoft.Storage/storageAccounts/{0}', parameters('name'))]",
+      "name": "current",
+      "properties": {
+        "isEnabled": true,
+        "malwareScanning": {
+          "onUpload": {
+            "isEnabled": true,
+            "capGBPerMonth": 5000
+          }
+        },
+        "sensitiveDataDiscovery": {
+          "isEnabled": true
+        },
+        "overrideSubscriptionLevelSettings": false
+      },
+      "dependsOn": [
+        "[resourceId('Microsoft.Storage/storageAccounts', parameters('name'))]"
       ]
     }
-  }
+  ]
 }

@@ -4,8 +4,8 @@
   "metadata": {
     "_generator": {
       "name": "bicep",
-      "version": "0.23.1.45101",
-      "templateHash": "6320102656796608467"
+      "version": "0.25.53.49325",
+      "templateHash": "16203270925454783024"
     }
   },
   "resources": [
@@ -62,7 +62,7 @@
     },
     {
       "type": "Microsoft.Security/pricings",
-      "apiVersion": "2023-01-01",
+      "apiVersion": "2024-01-01",
       "name": "StorageAccounts",
       "properties": {
         "pricingTier": "Standard",

@@ -15,7 +15,7 @@ var containerName = 'data'
 // The name of a file share
 var shareName = 'group'
 
-// An example Storage Account
+// Define a Storage Account with common security settings.
 resource storageAccount 'Microsoft.Storage/storageAccounts@2023-01-01' = {
   name: name
   location: location
@@ -35,7 +35,7 @@ resource storageAccount 'Microsoft.Storage/storageAccounts@2023-01-01' = {
   }
 }
 
-// Configure blob services
+// Configure blob services with soft-delete enabled.
 resource blobService 'Microsoft.Storage/storageAccounts/blobServices@2023-01-01' = {
   parent: storageAccount
   name: 'default'
@@ -51,7 +51,7 @@ resource blobService 'Microsoft.Storage/storageAccounts/blobServices@2023-01-01'
   }
 }
 
-// An example container
+// Create a storage container.
 resource container 'Microsoft.Storage/storageAccounts/blobServices/containers@2023-01-01' = {
   parent: blobService
   name: containerName
@@ -60,7 +60,7 @@ resource container 'Microsoft.Storage/storageAccounts/blobServices/containers@20
   }
 }
 
-// Configure file services
+// Configure file services.
 resource fileServices 'Microsoft.Storage/storageAccounts/fileServices@2023-01-01' = {
   parent: storageAccount
   name: 'default'
@@ -72,10 +72,30 @@ resource fileServices 'Microsoft.Storage/storageAccounts/fileServices@2023-01-01
   }
 }
 
+// Create a file share.
 resource share 'Microsoft.Storage/storageAccounts/fileServices/shares@2023-01-01' = {
   parent: fileServices
   name: shareName
   properties: {
     accessTier: 'TransactionOptimized'
+  }
+}
+
+// Override Defender for Storage settings on a Storage Account.
+resource defenderForStorageSettings 'Microsoft.Security/defenderForStorageSettings@2022-12-01-preview' = {
+  name: 'current'
+  scope: storageAccount
+  properties: {
+    isEnabled: true
+    malwareScanning: {
+      onUpload: {
+        isEnabled: true
+        capGBPerMonth: 5000
+      }
+    }
+    sensitiveDataDiscovery: {
+      isEnabled: true
+    }
+    overrideSubscriptionLevelSettings: false
   }
 }

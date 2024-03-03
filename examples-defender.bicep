@@ -57,7 +57,7 @@ resource defenderForAppServices 'Microsoft.Security/pricings@2023-01-01' = {
 }
 
 // Configures Microsoft Defender for Storage Accounts.
-resource defenderForStorage 'Microsoft.Security/pricings@2023-01-01' = {
+resource defenderForStorage 'Microsoft.Security/pricings@2024-01-01' = {
   name: 'StorageAccounts'
   properties: {
     pricingTier: 'Standard'

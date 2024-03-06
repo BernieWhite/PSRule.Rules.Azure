@@ -1564,6 +1564,15 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#v1340" class="md-nav__link">
+    <span class="md-ellipsis">
+      v1.34.0
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#v1340-b0077-pre-release" class="md-nav__link">
     <span class="md-ellipsis">
       v1.34.0-B0077 (pre-release)
@@ -14957,6 +14966,15 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#v1340" class="md-nav__link">
+    <span class="md-ellipsis">
+      v1.34.0
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#v1340-b0077-pre-release" class="md-nav__link">
     <span class="md-ellipsis">
       v1.34.0-B0077 (pre-release)
@@ -17139,6 +17157,110 @@
   See <a href="../upgrade-notes/">upgrade notes</a> for more information.</li>
 </ul>
 <h2 id="unreleased">Unreleased<a class="headerlink" href="#unreleased" title="Permanent link">#</a></h2>
+<h2 id="v1340">v1.34.0<a class="headerlink" href="#v1340" title="Permanent link">#</a></h2>
+<p>What's changed since v1.33.2:</p>
+<ul>
+<li>New rules:<ul>
+<li>Azure Kubernetes Service:<ul>
+<li>Check that user mode pools have a minimum number of nodes by <a href="https://github.com/BernieWhite">@BernieWhite</a>.
+  <a href="https://github.com/Azure/PSRule.Rules.Azure/issues/2683">#2683</a><ul>
+<li>Added configuration to support changing the minimum number of node and to exclude node pools.</li>
+<li>Set <code>AZURE_AKS_CLUSTER_USER_POOL_MINIMUM_NODES</code> to set the minimum number of user nodes.</li>
+<li>Set <code>AZURE_AKS_CLUSTER_USER_POOL_EXCLUDED_FROM_MINIMUM_NODES</code> to exclude a specific node pool by name.</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>Updated rules:<ul>
+<li>Azure Kubernetes Service:<ul>
+<li>Updated <code>Azure.AKS.MinNodeCount</code> the count nodes system node pools by <a href="https://github.com/BernieWhite">@BernieWhite</a>.
+  <a href="https://github.com/Azure/PSRule.Rules.Azure/issues/2683">#2683</a><ul>
+<li>Improved guidance and examples specifically for system node pools.</li>
+<li>Added configuration to support changing the minimum number of node.</li>
+<li>Set <code>AZURE_AKS_CLUSTER_MINIMUM_SYSTEM_NODES</code> to set the minimum number of system nodes.</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>Front Door:<ul>
+<li>Updated <code>Azure.FrontDoor.Logs</code> to cover premium and standard profiles instead of just classic by <a href="https://github.com/BernieWhite">@BernieWhite</a>.
+  <a href="https://github.com/Azure/PSRule.Rules.Azure/issues/2704">#2704</a><ul>
+<li>Added a selector for premium and standard profiles <code>Azure.FrontDoor.IsStandardOrPremium</code>.</li>
+<li>Added a selector for classic profiles <code>Azure.FrontDoor.IsClassic</code>.</li>
+<li>Updated rule set to <code>2024_03</code>.</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>Microsoft Defender for Cloud:<ul>
+<li>Renamed rules to align with recommended naming length by <a href="https://github.com/BernieWhite">@BernieWhite</a>.
+  <a href="https://github.com/Azure/PSRule.Rules.Azure/issues/2718">#2718</a><ul>
+<li>Renamed <code>Azure.Defender.Storage.SensitiveData</code> to <code>Azure.Defender.Storage.DataScan</code>.</li>
+</ul>
+</li>
+<li>Promoted <code>Azure.Defender.Storage.MalwareScan</code> to GA rule set by <a href="https://github.com/BernieWhite">@BernieWhite</a>.
+  <a href="https://github.com/Azure/PSRule.Rules.Azure/issues/2590">#2590</a></li>
+</ul>
+</li>
+<li>Storage Account:<ul>
+<li>Renamed rules to align with recommended naming length by <a href="https://github.com/BernieWhite">@BernieWhite</a>.
+  <a href="https://github.com/Azure/PSRule.Rules.Azure/issues/2718">#2718</a><ul>
+<li>Renamed <code>Azure.Storage.DefenderCloud.MalwareScan</code> to <code>Azure.Storage.Defender.MalwareScan</code>.</li>
+<li>Renamed <code>Azure.Storage.DefenderCloud.SensitiveData</code> to <code>Azure.Storage.Defender.DataScan</code>.</li>
+</ul>
+</li>
+<li>Promoted <code>Azure.Storage.Defender.MalwareScan</code> to GA rule set by <a href="https://github.com/BernieWhite">@BernieWhite</a>.
+  <a href="https://github.com/Azure/PSRule.Rules.Azure/issues/2590">#2590</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li>General improvements:<ul>
+<li>Moved <code>.bicepparam</code> file support to stable by <a href="https://github.com/BernieWhite">@BernieWhite</a>.
+  <a href="https://github.com/Azure/PSRule.Rules.Azure/issues/2682">#2682</a><ul>
+<li>Bicep param files are now automatically expanded when found.</li>
+<li>To disable expansion, set the configuration option <code>AZURE_BICEP_PARAMS_FILE_EXPANSION</code> to <code>false</code>.</li>
+</ul>
+</li>
+<li>Added support for type/ variable/ and function imports from Bicep files by <a href="https://github.com/BernieWhite">@BernieWhite</a>.
+  <a href="https://github.com/Azure/PSRule.Rules.Azure/issues/2537">#2537</a></li>
+<li>Added duplicate policies to default ignore list by <a href="https://github.com/BernieWhite">@BernieWhite</a>.
+  <a href="https://github.com/Azure/PSRule.Rules.Azure/issues/1731">#1731</a></li>
+<li>Documentation and metadata improvements by <a href="https://github.com/BernieWhite">@BernieWhite</a>.
+  <a href="https://github.com/Azure/PSRule.Rules.Azure/issues/1772">#1772</a>
+  <a href="https://github.com/Azure/PSRule.Rules.Azure/issues/2570">#2570</a></li>
+</ul>
+</li>
+<li>Engineering:<ul>
+<li>Updated resource providers and policy aliases.
+  <a href="https://github.com/Azure/PSRule.Rules.Azure/pull/2717">#2717</a></li>
+<li>Improved debugging experience by providing symbols for .NET code by <a href="https://github.com/BernieWhite">@BernieWhite</a>.
+  <a href="https://github.com/Azure/PSRule.Rules.Azure/issues/2712">#2712</a></li>
+<li>Bump Microsoft.NET.Test.Sdk to v17.9.0.
+  <a href="https://github.com/Azure/PSRule.Rules.Azure/pull/2680">#2680</a></li>
+<li>Bump xunit to v2.7.0.
+  <a href="https://github.com/Azure/PSRule.Rules.Azure/pull/2688">#2688</a></li>
+<li>Bump xunit.runner.visualstudio to v2.5.7.
+  <a href="https://github.com/Azure/PSRule.Rules.Azure/pull/2689">#2689</a></li>
+<li>Bump coverlet.collector to v6.0.1.
+  <a href="https://github.com/Azure/PSRule.Rules.Azure/pull/2699">#2699</a></li>
+</ul>
+</li>
+<li>Bug fixes:<ul>
+<li>Fixed missing zones property for public IP addresses by <a href="https://github.com/BernieWhite">@BernieWhite</a>.
+  <a href="https://github.com/Azure/PSRule.Rules.Azure/issues/2698">#2698</a></li>
+<li>Fixes for policy as rules by <a href="https://github.com/BernieWhite">@BernieWhite</a>.
+  <a href="https://github.com/Azure/PSRule.Rules.Azure/issues/181">#181</a>
+  <a href="https://github.com/Azure/PSRule.Rules.Azure/issues/1323">#1323</a></li>
+</ul>
+</li>
+</ul>
+<p>What's changed since pre-release v1.34.0-B0077:</p>
+<ul>
+<li>No additional changes.</li>
+</ul>
 <h2 id="v1340-b0077-pre-release">v1.34.0-B0077 (pre-release)<a class="headerlink" href="#v1340-b0077-pre-release" title="Permanent link">#</a></h2>
 <p>What's changed since pre-release v1.34.0-B0047:</p>
 <ul>
@@ -23666,7 +23788,7 @@ What's changed since v1.24.0:</p>
     <span class="md-icon" title="Last update">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1-2.1-2M12.5 7v5.2l4 2.4-1 1L11 13V7h1.5M11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2v1.8Z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">March 3, 2024</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">March 4, 2024</span>
   </span>
 
     

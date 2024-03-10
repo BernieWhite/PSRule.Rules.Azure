@@ -9,8 +9,8 @@ param name string
 @description('The location resources will be deployed.')
 param location string = resourceGroup().location
 
-// An example Service Bus namespace
-resource ns 'Microsoft.ServiceBus/namespaces@2022-01-01-preview' = {
+// An example Service Bus namespace.
+resource ns 'Microsoft.ServiceBus/namespaces@2022-10-01-preview' = {
   name: name
   location: location
   identity: {

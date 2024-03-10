@@ -12867,7 +12867,7 @@
 </div>
 <p>Microsoft Cloud Security Benchmark v1.</p>
 <h2 id="controls">Controls<a class="headerlink" href="#controls" title="Permanent link">#</a></h2>
-<p>The following rules are included within <code>Azure.MCSB.v1</code>. This baseline includes a total of 131 rules.</p>
+<p>The following rules are included within <code>Azure.MCSB.v1</code>. This baseline includes a total of 132 rules.</p>
 <table>
 <thead>
 <tr>
@@ -13434,7 +13434,12 @@
 </tr>
 <tr>
 <td><a href="../../rules/Azure.ServiceBus.DisableLocalAuth/">Azure.ServiceBus.DisableLocalAuth</a></td>
-<td>Authenticate Service Bus publishers and consumers with Azure AD identities.</td>
+<td>Authenticate Service Bus publishers and consumers with Entra ID identities.</td>
+<td>Important</td>
+</tr>
+<tr>
+<td><a href="../../rules/Azure.ServiceBus.MinTLS/">Azure.ServiceBus.MinTLS</a></td>
+<td>Service Bus namespaces should reject TLS versions older than 1.2.</td>
 <td>Important</td>
 </tr>
 <tr>
@@ -13449,7 +13454,7 @@
 </tr>
 <tr>
 <td><a href="../../rules/Azure.SQL.AAD/">Azure.SQL.AAD</a></td>
-<td>Use Azure Active Directory (AAD) authentication with Azure SQL databases.</td>
+<td>Use Entra ID authentication with Azure SQL databases.</td>
 <td>Critical</td>
 </tr>
 <tr>

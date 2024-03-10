@@ -4,8 +4,8 @@
   "metadata": {
     "_generator": {
       "name": "bicep",
-      "version": "0.11.1.770",
-      "templateHash": "17235301402195616974"
+      "version": "0.25.53.49325",
+      "templateHash": "11141900091582778494"
     }
   },
   "parameters": {
@@ -26,7 +26,7 @@
   "resources": [
     {
       "type": "Microsoft.ServiceBus/namespaces",
-      "apiVersion": "2022-01-01-preview",
+      "apiVersion": "2022-10-01-preview",
       "name": "[parameters('name')]",
       "location": "[parameters('location')]",
       "identity": {

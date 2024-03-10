@@ -6,7 +6,7 @@
       <meta charset="utf-8">
       <meta name="viewport" content="width=device-width,initial-scale=1">
       
-        <meta name="description" content="Enforce namespaces to require that clients send and receive data with TLS 1.2 version.">
+        <meta name="description" content="Service Bus namespaces should reject TLS versions older than 1.2.">
       
       
         <meta name="author" content="Microsoft">
@@ -84,19 +84,19 @@
   <meta property="og:site_name" content="PSRule for Azure" />
   <meta property="og:type" content="article" />
   <meta property="og:title" content="PSRule for Azure - Azure.ServiceBus.MinTLS" />
-  <meta property="og:description" content="Enforce namespaces to require that clients send and receive data with TLS 1.2 version." />
+  <meta property="og:description" content="Service Bus namespaces should reject TLS versions older than 1.2." />
   <meta property="og:url" content="https://azure.github.io/PSRule.Rules.Azure/en/rules/Azure.ServiceBus.MinTLS/" />
   <meta property="og:image" content="https://repository-images.githubusercontent.com/184154668/58818c00-d496-11eb-9b77-016145022654" />
   <meta property="og:image:type" content="image/png" />
   <meta property="og:image:width" content="1280" />
   <meta property="og:image:height" content="640" />
-  <meta property="og:image:alt" content="Enforce namespaces to require that clients send and receive data with TLS 1.2 version." />
+  <meta property="og:image:alt" content="Service Bus namespaces should reject TLS versions older than 1.2." />
 
   <!-- Twitter meta tags -->
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:site" content="@github" />
   <meta name="twitter:title" content="PSRule for Azure - Azure.ServiceBus.MinTLS" />
-  <meta name="twitter:description" content="Enforce namespaces to require that clients send and receive data with TLS 1.2 version." />
+  <meta name="twitter:description" content="Service Bus namespaces should reject TLS versions older than 1.2." />
   <meta name="twitter:image" content="https://repository-images.githubusercontent.com/184154668/58818c00-d496-11eb-9b77-016145022654" />
 
 
@@ -9577,6 +9577,24 @@
   
 </li>
         
+          <li class="md-nav__item">
+  <a href="#configure-with-azure-cli" class="md-nav__link">
+    <span class="md-ellipsis">
+      Configure with Azure CLI
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#configure-with-azure-powershell" class="md-nav__link">
+    <span class="md-ellipsis">
+      Configure with Azure PowerShell
+    </span>
+  </a>
+  
+</li>
+        
       </ul>
     </nav>
   
@@ -12925,6 +12943,24 @@
   
 </li>
         
+          <li class="md-nav__item">
+  <a href="#configure-with-azure-cli" class="md-nav__link">
+    <span class="md-ellipsis">
+      Configure with Azure CLI
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#configure-with-azure-powershell" class="md-nav__link">
+    <span class="md-ellipsis">
+      Configure with Azure PowerShell
+    </span>
+  </a>
+  
+</li>
+        
       </ul>
     </nav>
   
@@ -12996,25 +13032,30 @@
 <nav class="md-tags"><span class="md-tag">Azure.ServiceBus.MinTLS</span><span class="md-tag">AZR-000315</span><span class="md-tag">Error</span></nav>
 <p><a href="../module/#security"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M1.527 13.237a1.75 1.75 0 0 1 0-2.474l9.272-9.273a1.75 1.75 0 0 1 2.475 0l9.272 9.273a1.75 1.75 0 0 1 0 2.474l-9.272 9.272a1.75 1.75 0 0 1-2.475 0Zm1.06-1.414a.25.25 0 0 0 0 .354l9.273 9.272a.25.25 0 0 0 .353 0l9.272-9.272a.25.25 0 0 0 0-.354l-9.272-9.272a.25.25 0 0 0-.353 0Z"/></svg></span> Security</a>
  · <a href="../resource/#service-bus"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13.152.682a2.251 2.251 0 0 1 2.269 0l.007.004 6.957 4.276a2.277 2.277 0 0 1 1.126 1.964v7.516c0 .81-.432 1.56-1.133 1.968l-.002.001-11.964 7.037-.004.003c-.706.41-1.578.41-2.284 0l-.026-.015-6.503-4.502a2.268 2.268 0 0 1-1.096-1.943V9.438c0-.392.1-.77.284-1.1l.003-.006.014-.026c.197-.342.48-.627.82-.827h.002L13.152.681Zm.757 1.295h-.001L2.648 8.616l6.248 4.247a.775.775 0 0 0 .758-.01h.001l11.633-6.804-6.629-4.074a.75.75 0 0 0-.75.003ZM8.517 14.33a2.286 2.286 0 0 1-.393-.18l-.023-.014-6.102-4.147v7.003c0 .275.145.528.379.664l.025.014 6.114 4.232V14.33ZM18 9.709l-3.25 1.9v7.548L18 17.245Zm-7.59 4.438-.002.002a2.296 2.296 0 0 1-.391.18v7.612l3.233-1.902v-7.552Zm9.09-5.316v7.532l2.124-1.25a.776.776 0 0 0 .387-.671V7.363Z"/></svg></span> Service Bus</a>
- · <a href="https://github.com/Azure/PSRule.Rules.Azure/blob/main/src/PSRule.Rules.Azure/rules/Azure.ServiceBus.Rule.ps1"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 3a2 2 0 0 1 2-2h9.982a2 2 0 0 1 1.414.586l4.018 4.018A2 2 0 0 1 21 7.018V21a2 2 0 0 1-2 2H4.75a.75.75 0 0 1 0-1.5H19a.5.5 0 0 0 .5-.5V8.5h-4a2 2 0 0 1-2-2v-4H5a.5.5 0 0 0-.5.5v6.25a.75.75 0 0 1-1.5 0Zm12-.5v4a.5.5 0 0 0 .5.5h4a.5.5 0 0 0-.146-.336l-4.018-4.018A.5.5 0 0 0 15 2.5Z"/><path d="M4.53 12.24a.75.75 0 0 1-.039 1.06l-2.639 2.45 2.64 2.45a.75.75 0 1 1-1.022 1.1l-3.23-3a.75.75 0 0 1 0-1.1l3.23-3a.75.75 0 0 1 1.06.04Zm3.979 1.06a.75.75 0 1 1 1.02-1.1l3.231 3a.75.75 0 0 1 0 1.1l-3.23 3a.75.75 0 1 1-1.021-1.1l2.639-2.45-2.64-2.45Z"/></svg></span> Rule</a>
+ · <a href="https://github.com/Azure/PSRule.Rules.Azure/blob/main/src/PSRule.Rules.Azure/rules/Azure.ServiceBus.Rule.yaml"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 3a2 2 0 0 1 2-2h9.982a2 2 0 0 1 1.414.586l4.018 4.018A2 2 0 0 1 21 7.018V21a2 2 0 0 1-2 2H4.75a.75.75 0 0 1 0-1.5H19a.5.5 0 0 0 .5-.5V8.5h-4a2 2 0 0 1-2-2v-4H5a.5.5 0 0 0-.5.5v6.25a.75.75 0 0 1-1.5 0Zm12-.5v4a.5.5 0 0 0 .5.5h4a.5.5 0 0 0-.146-.336l-4.018-4.018A.5.5 0 0 0 15 2.5Z"/><path d="M4.53 12.24a.75.75 0 0 1-.039 1.06l-2.639 2.45 2.64 2.45a.75.75 0 1 1-1.022 1.1l-3.23-3a.75.75 0 0 1 0-1.1l3.23-3a.75.75 0 0 1 1.06.04Zm3.979 1.06a.75.75 0 1 1 1.02-1.1l3.231 3a.75.75 0 0 1 0 1.1l-3.23 3a.75.75 0 1 1-1.021-1.1l2.639-2.45-2.64-2.45Z"/></svg></span> Rule</a>
  · <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M7.75 6.5a1.25 1.25 0 1 0 0 2.5 1.25 1.25 0 0 0 0-2.5Z"/><path d="M2.5 1h8.44a1.5 1.5 0 0 1 1.06.44l10.25 10.25a1.5 1.5 0 0 1 0 2.12l-8.44 8.44a1.5 1.5 0 0 1-2.12 0L1.44 12A1.497 1.497 0 0 1 1 10.94V2.5A1.5 1.5 0 0 1 2.5 1Zm0 1.5v8.44l10.25 10.25 8.44-8.44L10.94 2.5Z"/></svg></span> 2022_12</p>
-<p>Enforce namespaces to require that clients send and receive data with TLS 1.2 version.</p>
+<p>Service Bus namespaces should reject TLS versions older than 1.2.</p>
 <h2 id="description">Description<a class="headerlink" href="#description" title="Permanent link">#</a></h2>
-<p>Communication between a client application and an Azure Service Bus namespace is encrypted using Transport Layer Security (TLS).</p>
-<p>Azure Service Bus namespaces permit clients to send and receive data with TLS 1.0 and above. To enforce stricter security measures, you can configure your Service Bus namespace to require that clients send and receive data with a newer version of TLS. If a Service Bus namespace requires a minimum version of TLS, then any requests made with an older version will fail.</p>
-<p><strong>Important</strong> If you are using a service that connects to Azure Service Bus, make sure that that service is using the appropriate version of TLS to send requests to Azure Service Bus before you set the required minimum version for a Service Bus namespace.</p>
+<p>Clients connect to Azure Service Bus to send and receive messages over a Transport Layer Security (TLS) encrypted connection.
+The minimum version of TLS that Service Bus accepts is configurable.
+Older TLS versions are no longer considered secure by industry standards, such as PCI DSS.
+Additionally, support for TLS 1.0 and 1.1 are on a deprecation path across Azure services.</p>
+<p>Azure lets you disable outdated protocols and require connections to use a minimum of TLS 1.2.
+By default, TLS 1.0, TLS 1.1, and TLS 1.2 are accepted.</p>
+<p>When clients connect using an older version of TLS that is disabled, the connection will fail.</p>
 <h2 id="recommendation">Recommendation<a class="headerlink" href="#recommendation" title="Permanent link">#</a></h2>
-<p>Consider namespaces to require that clients send and receive data with TLS 1.2 version.</p>
+<p>Consider configuring the minimum supported TLS version for Service Bus clients to be 1.2.
+Support for TLS 1.0/ 1.1 version will be removed.</p>
 <h2 id="examples">Examples<a class="headerlink" href="#examples" title="Permanent link">#</a></h2>
 <h3 id="configure-with-azure-template">Configure with Azure template<a class="headerlink" href="#configure-with-azure-template" title="Permanent link">#</a></h3>
-<p>To deploy Service Bus namespaces that pass this rule:</p>
+<p>To deploy namespaces that pass this rule:</p>
 <ul>
-<li>Set <code>properties.minimumTlsVersion</code> to <code>1.2</code>.</li>
+<li>Set the <code>properties.minimumTlsVersion</code> property to <code>1.2</code>.</li>
 </ul>
 <p>For example:</p>
 <div class="language-json highlight"><span class="filename">Azure Template snippet</span><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="p">{</span>
 </span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="w">  </span><span class="nt">&quot;type&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Microsoft.ServiceBus/namespaces&quot;</span><span class="p">,</span>
-</span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a><span class="w">  </span><span class="nt">&quot;apiVersion&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;2022-01-01-preview&quot;</span><span class="p">,</span>
+</span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a><span class="w">  </span><span class="nt">&quot;apiVersion&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;2022-10-01-preview&quot;</span><span class="p">,</span>
 </span><span id="__span-0-4"><a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a><span class="w">  </span><span class="nt">&quot;name&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;[parameters(&#39;name&#39;)]&quot;</span><span class="p">,</span>
 </span><span id="__span-0-5"><a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a><span class="w">  </span><span class="nt">&quot;location&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;[parameters(&#39;location&#39;)]&quot;</span><span class="p">,</span>
 </span><span id="__span-0-6"><a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a><span class="w">  </span><span class="nt">&quot;identity&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
@@ -13030,36 +13071,39 @@
 </span><span id="__span-0-16"><a id="__codelineno-0-16" name="__codelineno-0-16" href="#__codelineno-0-16"></a><span class="p">}</span>
 </span></code></pre></div>
 <h3 id="configure-with-bicep">Configure with Bicep<a class="headerlink" href="#configure-with-bicep" title="Permanent link">#</a></h3>
-<p>To deploy Service Bus namespaces that pass this rule:</p>
+<p>To deploy namespaces that pass this rule:</p>
 <ul>
-<li>Set <code>properties.minimumTlsVersion</code> to <code>1.2</code>.</li>
+<li>Set the <code>properties.minimumTlsVersion</code> property to <code>1.2</code>.</li>
 </ul>
 <p>For example:</p>
-<div class="language-text highlight"><span class="filename">Azure Bicep snippet</span><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>@description(&#39;The name of the resource.&#39;)
-</span><span id="__span-1-2"><a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a>param name string
-</span><span id="__span-1-3"><a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a>
-</span><span id="__span-1-4"><a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a>@description(&#39;The location resources will be deployed.&#39;)
-</span><span id="__span-1-5"><a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a>param location string = resourceGroup().location
-</span><span id="__span-1-6"><a id="__codelineno-1-6" name="__codelineno-1-6" href="#__codelineno-1-6"></a>
-</span><span id="__span-1-7"><a id="__codelineno-1-7" name="__codelineno-1-7" href="#__codelineno-1-7"></a>resource ns &#39;Microsoft.ServiceBus/namespaces@2022-01-01-preview&#39; = {
-</span><span id="__span-1-8"><a id="__codelineno-1-8" name="__codelineno-1-8" href="#__codelineno-1-8"></a>  name: name
-</span><span id="__span-1-9"><a id="__codelineno-1-9" name="__codelineno-1-9" href="#__codelineno-1-9"></a>  location: location
-</span><span id="__span-1-10"><a id="__codelineno-1-10" name="__codelineno-1-10" href="#__codelineno-1-10"></a>  identity: {
-</span><span id="__span-1-11"><a id="__codelineno-1-11" name="__codelineno-1-11" href="#__codelineno-1-11"></a>    type: &#39;SystemAssigned&#39;
-</span><span id="__span-1-12"><a id="__codelineno-1-12" name="__codelineno-1-12" href="#__codelineno-1-12"></a>  }
-</span><span id="__span-1-13"><a id="__codelineno-1-13" name="__codelineno-1-13" href="#__codelineno-1-13"></a>  sku: {
-</span><span id="__span-1-14"><a id="__codelineno-1-14" name="__codelineno-1-14" href="#__codelineno-1-14"></a>    name: &#39;Standard&#39;
-</span><span id="__span-1-15"><a id="__codelineno-1-15" name="__codelineno-1-15" href="#__codelineno-1-15"></a>  }
-</span><span id="__span-1-16"><a id="__codelineno-1-16" name="__codelineno-1-16" href="#__codelineno-1-16"></a>  properties: {
-</span><span id="__span-1-17"><a id="__codelineno-1-17" name="__codelineno-1-17" href="#__codelineno-1-17"></a>    disableLocalAuth: true
-</span><span id="__span-1-18"><a id="__codelineno-1-18" name="__codelineno-1-18" href="#__codelineno-1-18"></a>    minimumTlsVersion: &#39;1.2&#39;
-</span><span id="__span-1-19"><a id="__codelineno-1-19" name="__codelineno-1-19" href="#__codelineno-1-19"></a>  }
-</span><span id="__span-1-20"><a id="__codelineno-1-20" name="__codelineno-1-20" href="#__codelineno-1-20"></a>}
+<div class="language-text highlight"><span class="filename">Azure Bicep snippet</span><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>resource ns &#39;Microsoft.ServiceBus/namespaces@2022-10-01-preview&#39; = {
+</span><span id="__span-1-2"><a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a>  name: name
+</span><span id="__span-1-3"><a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a>  location: location
+</span><span id="__span-1-4"><a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a>  identity: {
+</span><span id="__span-1-5"><a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a>    type: &#39;SystemAssigned&#39;
+</span><span id="__span-1-6"><a id="__codelineno-1-6" name="__codelineno-1-6" href="#__codelineno-1-6"></a>  }
+</span><span id="__span-1-7"><a id="__codelineno-1-7" name="__codelineno-1-7" href="#__codelineno-1-7"></a>  sku: {
+</span><span id="__span-1-8"><a id="__codelineno-1-8" name="__codelineno-1-8" href="#__codelineno-1-8"></a>    name: &#39;Standard&#39;
+</span><span id="__span-1-9"><a id="__codelineno-1-9" name="__codelineno-1-9" href="#__codelineno-1-9"></a>  }
+</span><span id="__span-1-10"><a id="__codelineno-1-10" name="__codelineno-1-10" href="#__codelineno-1-10"></a>  properties: {
+</span><span id="__span-1-11"><a id="__codelineno-1-11" name="__codelineno-1-11" href="#__codelineno-1-11"></a>    disableLocalAuth: true
+</span><span id="__span-1-12"><a id="__codelineno-1-12" name="__codelineno-1-12" href="#__codelineno-1-12"></a>    minimumTlsVersion: &#39;1.2&#39;
+</span><span id="__span-1-13"><a id="__codelineno-1-13" name="__codelineno-1-13" href="#__codelineno-1-13"></a>  }
+</span><span id="__span-1-14"><a id="__codelineno-1-14" name="__codelineno-1-14" href="#__codelineno-1-14"></a>}
+</span></code></pre></div>
+<h3 id="configure-with-azure-cli">Configure with Azure CLI<a class="headerlink" href="#configure-with-azure-cli" title="Permanent link">#</a></h3>
+<div class="language-bash highlight"><span class="filename">Azure CLI snippet</span><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>az<span class="w"> </span>servicebus<span class="w"> </span>namespace<span class="w"> </span>update<span class="w"> </span>-n<span class="w"> </span><span class="s1">&#39;&lt;name&gt;&#39;</span><span class="w"> </span>-g<span class="w"> </span><span class="s1">&#39;&lt;resource_group&gt;&#39;</span><span class="w"> </span>--minimum-tls-version<span class="w"> </span><span class="s1">&#39;1.2&#39;</span>
+</span></code></pre></div>
+<h3 id="configure-with-azure-powershell">Configure with Azure PowerShell<a class="headerlink" href="#configure-with-azure-powershell" title="Permanent link">#</a></h3>
+<div class="language-powershell highlight"><span class="filename">Azure PowerShell snippet</span><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="nv">$ns</span> <span class="p">=</span> <span class="nb">Get-AzServiceBusNamespace</span>  <span class="n">-Name</span> <span class="s1">&#39;&lt;name&gt;&#39;</span> <span class="n">-ResourceGroupName</span> <span class="s1">&#39;&lt;resource_group&gt;&#39;</span>
+</span><span id="__span-3-2"><a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a><span class="nb">Set-AzServiceBusNamespace</span> <span class="n">-InputObject</span> <span class="nv">$ns</span> <span class="n">-MinimumTlsVersion</span> <span class="s1">&#39;1.2&#39;</span>
 </span></code></pre></div>
 <h2 id="links">Links<a class="headerlink" href="#links" title="Permanent link">#</a></h2>
 <ul>
-<li><a href="https://learn.microsoft.com/azure/architecture/framework/security/storage-data-encryption">Information protection and storage</a></li>
+<li><a href="https://learn.microsoft.com/azure/well-architected/security/encryption#data-in-transit">SE:07 Encryption</a></li>
+<li><a href="https://learn.microsoft.com/security/benchmark/azure/baselines/service-bus-security-baseline#dp-3-encrypt-sensitive-data-in-transit">DP-3: Encrypt sensitive data in transit</a></li>
 <li><a href="https://learn.microsoft.com/azure/service-bus-messaging/transport-layer-security-enforce-minimum-version">Enforce a minimum requires version of TLS</a></li>
+<li><a href="https://azure.microsoft.com/updates/azuretls12/">Preparing for TLS 1.2 in Microsoft Azure</a></li>
 <li><a href="https://learn.microsoft.com/azure/templates/microsoft.servicebus/namespaces">Azure deployment reference</a></li>
 </ul>
 
@@ -13086,7 +13130,7 @@
     <span class="md-icon" title="Last update">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1-2.1-2M12.5 7v5.2l4 2.4-1 1L11 13V7h1.5M11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2v1.8Z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">December 2, 2022</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">March 10, 2024</span>
   </span>
 
     

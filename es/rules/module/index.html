@@ -13392,15 +13392,6 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#information-protection" class="md-nav__link">
-    <span class="md-ellipsis">
-      Information protection
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
   <a href="#infrastructure-provisioning_1" class="md-nav__link">
     <span class="md-ellipsis">
       Infrastructure provisioning
@@ -15680,21 +15671,9 @@
 <td>Error</td>
 </tr>
 <tr>
-<td><a href="Azure.ServiceBus.DisableLocalAuth.md">Azure.ServiceBus.DisableLocalAuth</a></td>
-<td>Authenticate Service Bus publishers and consumers with Azure AD identities.</td>
-<td>Important</td>
-<td>Error</td>
-</tr>
-<tr>
 <td><a href="Azure.SignalR.ManagedIdentity.md">Azure.SignalR.ManagedIdentity</a></td>
 <td>Configure SignalR Services to use managed identities to access Azure resources securely.</td>
 <td>Important</td>
-<td>Error</td>
-</tr>
-<tr>
-<td><a href="Azure.SQL.AAD.md">Azure.SQL.AAD</a></td>
-<td>Use Azure Active Directory (AAD) authentication with Azure SQL databases.</td>
-<td>Critical</td>
 <td>Error</td>
 </tr>
 <tr>
@@ -16195,25 +16174,6 @@
 <tr>
 <td><a href="Azure.VMSS.PublicKey.md">Azure.VMSS.PublicKey</a></td>
 <td>Use SSH keys instead of common credentials to secure virtual machine scale sets against malicious activities.</td>
-<td>Important</td>
-<td>Error</td>
-</tr>
-</tbody>
-</table>
-<h3 id="information-protection">Information protection<a class="headerlink" href="#information-protection" title="Permanent link">#</a></h3>
-<table>
-<thead>
-<tr>
-<th>Name</th>
-<th>Synopsis</th>
-<th>Severity</th>
-<th>Level</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><a href="Azure.ServiceBus.MinTLS.md">Azure.ServiceBus.MinTLS</a></td>
-<td>Enforce namespaces to require that clients send and receive data with TLS 1.2 version.</td>
 <td>Important</td>
 <td>Error</td>
 </tr>
@@ -16720,6 +16680,18 @@
 <td>Error</td>
 </tr>
 <tr>
+<td><a href="Azure.ServiceBus.DisableLocalAuth.md">Azure.ServiceBus.DisableLocalAuth</a></td>
+<td>Authenticate Service Bus publishers and consumers with Entra ID identities.</td>
+<td>Important</td>
+<td>Error</td>
+</tr>
+<tr>
+<td><a href="Azure.SQL.AAD.md">Azure.SQL.AAD</a></td>
+<td>Use Entra ID authentication with Azure SQL databases.</td>
+<td>Critical</td>
+<td>Error</td>
+</tr>
+<tr>
 <td><a href="Azure.Storage.BlobAccessType.md">Azure.Storage.BlobAccessType</a></td>
 <td>Use containers configured with a private access type that requires authorization.</td>
 <td>Important</td>
@@ -16827,6 +16799,12 @@
 <td><a href="Azure.RedisEnterprise.MinTLS.md">Azure.RedisEnterprise.MinTLS</a></td>
 <td>Redis Cache should reject TLS versions older than 1.2.</td>
 <td>Critical</td>
+<td>Error</td>
+</tr>
+<tr>
+<td><a href="Azure.ServiceBus.MinTLS.md">Azure.ServiceBus.MinTLS</a></td>
+<td>Service Bus namespaces should reject TLS versions older than 1.2.</td>
+<td>Important</td>
 <td>Error</td>
 </tr>
 <tr>

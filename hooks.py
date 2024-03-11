@@ -78,7 +78,7 @@ def replace_maml(markdown: str, page: mkdocs.structure.nav.Page, config: mkdocs.
         if page.meta.get('ref', 'None') == 'None':
             markdown = markdown.replace('<ref/>', '')
 
-    if page.meta.get("pillar", "None") != "None":
+    if page.canonical_url.__contains__("/rules/") and page.meta.get("pillar", "None") != "None":
         markdown = markdown.replace("<!-- TAGS -->", "[:octicons-diamond-24: " + page.meta['pillar'] + "](module.md#" + page.meta['pillar'].lower().replace(" ", "-") + ")\r<!-- TAGS -->")
 
     if page.meta.get("resource", "None") != "None":

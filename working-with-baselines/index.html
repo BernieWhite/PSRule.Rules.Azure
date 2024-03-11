@@ -959,6 +959,15 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#pillar-specific-baselines" class="md-nav__link">
+    <span class="md-ellipsis">
+      Pillar specific baselines
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#additional-standard-baselines" class="md-nav__link">
     <span class="md-ellipsis">
       Additional standard baselines
@@ -11863,6 +11872,16 @@
       
         
       
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
     
     
       
@@ -12263,6 +12282,111 @@
   
   <span class="md-ellipsis">
     Azure.MCSB.v1
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../en/baselines/Azure.Pillar.CostOptimization/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Azure.Pillar.CostOptimization
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../en/baselines/Azure.Pillar.OperationalExcellence/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Azure.Pillar.OperationalExcellence
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../en/baselines/Azure.Pillar.PerformanceEfficiency/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Azure.Pillar.PerformanceEfficiency
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../en/baselines/Azure.Pillar.Reliability/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Azure.Pillar.Reliability
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../en/baselines/Azure.Pillar.Security/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Azure.Pillar.Security
   </span>
   
 
@@ -12908,6 +13032,15 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#pillar-specific-baselines" class="md-nav__link">
+    <span class="md-ellipsis">
+      Pillar specific baselines
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#additional-standard-baselines" class="md-nav__link">
     <span class="md-ellipsis">
       Additional standard baselines
@@ -13043,17 +13176,30 @@ This is different from the <code>Azure.Preview</code> baseline which contains <a
   Currently rule configuration defaults are not included in quarterly baselines.
   To workaround this, override the rule configuration option by setting the value in <code>ps-rule.yaml</code>.</li>
 </ul>
-<h2 id="additional-standard-baselines">Additional standard baselines<a class="headerlink" href="#additional-standard-baselines" title="Permanent link">#</a></h2>
-<p>In additional to quarterly baselines, some additional baselines exist:</p>
+<h2 id="pillar-specific-baselines">Pillar specific baselines<a class="headerlink" href="#pillar-specific-baselines" title="Permanent link">#</a></h2>
+<p>Pillar specific baselines includes rules aligned to a specific Microsoft Azure Well-Architected Framework pillar.</p>
+<p>Use these baselines to focus on improvement aligned to a specific area of the Azure Well-Architected Framework.
+Only rules that related to <abbr title="generally available">GA</abbr> Azure features are included in these baselines.
+These baselines are best used for ad-hoc scans.</p>
+<p>The following baselines are available:</p>
 <ul>
-<li><code>Azure.Default</code> - Includes rules for <abbr title="generally available">GA</abbr> Azure features.
+<li><code>Azure.Pillar.CostOptimization</code> &mdash; A baseline that only includes cost optimization rules.</li>
+<li><code>Azure.Pillar.OperationalExcellence</code> &mdash; A baseline that only includes operational excellence rules.</li>
+<li><code>Azure.Pillar.PerformanceEfficiency</code> &mdash; A baseline that only includes performance efficiency rules.</li>
+<li><code>Azure.Pillar.Reliability</code> &mdash; A baseline that only includes reliability rules.</li>
+<li><code>Azure.Pillar.Security</code> &mdash; A baseline that only includes security rules.</li>
+</ul>
+<h2 id="additional-standard-baselines">Additional standard baselines<a class="headerlink" href="#additional-standard-baselines" title="Permanent link">#</a></h2>
+<p>In additional to quarterly and pillar specific baselines, some additional baselines exist:</p>
+<ul>
+<li><code>Azure.Default</code> &mdash; Includes rules for <abbr title="generally available">GA</abbr> Azure features.
   This is the default baseline that is used when no baseline is specified.
   Rules for Azure features that are within the scope of a public or private preview are not included.</li>
-<li><code>Azure.Preview</code> - Includes all rules for <abbr title="generally available">GA</abbr> and preview Azure features.</li>
-<li><code>Azure.All</code> - Includes all Azure rules shipped with PSRule for Azure.
+<li><code>Azure.Preview</code> &mdash; Includes all rules for <abbr title="generally available">GA</abbr> and preview Azure features.</li>
+<li><code>Azure.All</code> &mdash; Includes all Azure rules shipped with PSRule for Azure.
   This is functionally the same as <code>Azure.Preview</code> however intended for internal use only.</li>
 <li>
-<p><code>Azure.MCSB.v1</code> - Includes rules related to Microsoft cloud security benchmark (MCSB) controls.
+<p><code>Azure.MCSB.v1</code> &mdash; Includes rules related to Microsoft cloud security benchmark (MCSB) controls.
   This baseline is currently experimental and may change in future releases.
   You can learn more about MCSB within PSRule for Azure in the <a href="../en/mcsb-v1/">Microsoft cloud security benchmark (MCSB)</a> topic.</p>
 </li>
@@ -13126,7 +13272,7 @@ This option can be set in <code>ps-rule.yaml</code>.</p>
     <span class="md-icon" title="Last update">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1-2.1-2M12.5 7v5.2l4 2.4-1 1L11 13V7h1.5M11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2v1.8Z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">January 3, 2024</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">March 10, 2024</span>
   </span>
 
     

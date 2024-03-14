@@ -73,8 +73,6 @@
   <!-- Determine type -->
   
   
-    
-  
   
 
   <!-- The image needs to have an absolute URL -->
@@ -82,7 +80,7 @@
 
   <!-- Open graph meta tags -->
   <meta property="og:site_name" content="PSRule for Azure" />
-  <meta property="og:type" content="article" />
+  <meta property="og:type" content="website" />
   <meta property="og:title" content="PSRule for Azure - Azure.NSG.Associated" />
   <meta property="og:description" content="Network Security Groups (NSGs) should be associated to a subnet or network interface." />
   <meta property="og:url" content="https://azure.github.io/PSRule.Rules.Azure/en/rules/Azure.NSG.Associated/" />
@@ -13000,9 +12998,25 @@
             <div class="md-content" data-md-component="content">
               <article class="md-content__inner md-typeset">
                 
+                  
+  
+<nav class="md-tags" >
+  
+    
+    
+    
+      <span class="md-tag">Azure.NSG.Associated</span>
+    
+  
+    
+    
+    
+      <span class="md-tag">AZR-000140</span>
+    
+  
+</nav>
 
-  <!-- Actions -->
-  <!-- Actions - only if content is not generated -->
+<!-- Actions - only if content is not generated -->
 
 
   <!-- Edit button -->
@@ -13033,15 +13047,7 @@
   
 
 
-  <!--
-    Hack: check whether the content contains a h1 headline. If it
-    doesn't, the page title (or respectively site name) is used
-    as the main headline.
-  -->
-  
-
-  <!-- Page content -->
-  <h1 id="associate-nsgs-or-clean-them-up">Associate NSGs or clean them up<a class="headerlink" href="#associate-nsgs-or-clean-them-up" title="Permanent link">#</a></h1>
+<h1 id="associate-nsgs-or-clean-them-up">Associate NSGs or clean them up<a class="headerlink" href="#associate-nsgs-or-clean-them-up" title="Permanent link">#</a></h1>
 <nav class="md-tags"><span class="md-tag">Azure.NSG.Associated</span><span class="md-tag">AZR-000140</span><span class="md-tag">Error</span></nav>
 <p><a href="../module/#operational-excellence"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M1.527 13.237a1.75 1.75 0 0 1 0-2.474l9.272-9.273a1.75 1.75 0 0 1 2.475 0l9.272 9.273a1.75 1.75 0 0 1 0 2.474l-9.272 9.272a1.75 1.75 0 0 1-2.475 0Zm1.06-1.414a.25.25 0 0 0 0 .354l9.273 9.272a.25.25 0 0 0 .353 0l9.272-9.272a.25.25 0 0 0 0-.354l-9.272-9.272a.25.25 0 0 0-.353 0Z"/></svg></span> Operational Excellence</a>
  · <a href="../resource/#network-security-group"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13.152.682a2.251 2.251 0 0 1 2.269 0l.007.004 6.957 4.276a2.277 2.277 0 0 1 1.126 1.964v7.516c0 .81-.432 1.56-1.133 1.968l-.002.001-11.964 7.037-.004.003c-.706.41-1.578.41-2.284 0l-.026-.015-6.503-4.502a2.268 2.268 0 0 1-1.096-1.943V9.438c0-.392.1-.77.284-1.1l.003-.006.014-.026c.197-.342.48-.627.82-.827h.002L13.152.681Zm.757 1.295h-.001L2.648 8.616l6.248 4.247a.775.775 0 0 0 .758-.01h.001l11.633-6.804-6.629-4.074a.75.75 0 0 0-.75.003ZM8.517 14.33a2.286 2.286 0 0 1-.393-.18l-.023-.014-6.102-4.147v7.003c0 .275.145.528.379.664l.025.014 6.114 4.232V14.33ZM18 9.709l-3.25 1.9v7.548L18 17.245Zm-7.59 4.438-.002.002a2.296 2.296 0 0 1-.391.18v7.612l3.233-1.902v-7.552Zm9.09-5.316v7.532l2.124-1.25a.776.776 0 0 0 .387-.671V7.363Z"/></svg></span> Network Security Group</a>
@@ -13057,7 +13063,7 @@ NSGs that are not associated with a network interface or subnet perform no purpo
 Also consider using Resource Groups to help manage the lifecycle of related resources together.
 Apply tags to all resources to help identify resources that are attached to specific workloads</p>
 <p>To find orphaned NSG's run the following Azure CLI command</p>
-<div class="language-bash highlight"><span class="filename">Azure CLI snippet</span><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>az<span class="w"> </span>network<span class="w"> </span>nsg<span class="w"> </span>list<span class="w"> </span>-g<span class="w"> </span><span class="nv">$rgName</span><span class="w"> </span>--query<span class="w"> </span><span class="s2">&quot;[?(subnets==null) &amp;&amp; (networkInterfaces==null)].id&quot;</span><span class="w"> </span>-o<span class="w"> </span>tsv
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>az<span class="w"> </span>network<span class="w"> </span>nsg<span class="w"> </span>list<span class="w"> </span>-g<span class="w"> </span><span class="nv">$rgName</span><span class="w"> </span>--query<span class="w"> </span><span class="s2">&quot;[?(subnets==null) &amp;&amp; (networkInterfaces==null)].id&quot;</span><span class="w"> </span>-o<span class="w"> </span>tsv
 </span></code></pre></div>
 <h2 id="links">Links<a class="headerlink" href="#links" title="Permanent link">#</a></h2>
 <ul>
@@ -13068,8 +13074,6 @@ Apply tags to all resources to help identify resources that are attached to spec
 <li><a href="https://docs.microsoft.com/azure/virtual-network/security-overview">Network security groups</a></li>
 </ul>
 
-  <!-- Source file information -->
-  
 
 
 
@@ -13138,13 +13142,9 @@ Apply tags to all resources to help identify resources that are attached to spec
   </aside>
 
 
-  <!-- Was this page helpful? -->
-  
 
 
 
-  <!-- Comment system -->
-  
 
 
   <!-- Giscus -->
@@ -13203,8 +13203,7 @@ Apply tags to all resources to help identify resources that are attached to spec
     })
   </script>
 
-
-
+                
               </article>
             </div>
           

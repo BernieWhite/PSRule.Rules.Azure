@@ -13,6 +13,9 @@ import mkdocs.structure.files
 import mkdocs.structure.nav
 import mkdocs.structure.pages
 
+from mkdocs.structure.files import File, Files
+from mkdocs.structure.pages import Page
+
 log = logging.getLogger(f"mkdocs.plugins.{__name__}")
 rulesItem: mkdocs.structure.nav.Section = mkdocs.structure.nav.Section("Rules", [])
 
@@ -56,10 +59,9 @@ def replace_maml(markdown: str, page: mkdocs.structure.nav.Page, config: mkdocs.
         if page.meta.get('obsolete', 'false') == 'true':
             markdown = markdown.replace("<!-- OBSOLETE -->", "!!! Warning\r    This baseline is obsolete.\r    Consider switching to a newer baseline.")
 
-    if page.canonical_url.__contains__("/rules/"):
-        page.meta['template'] = 'reference.html'
-        page.meta['type'] = 'rule'
-        markdown = markdown.replace("```bicep\r", "```bicep title=\"Azure Bicep snippet\"\r")
+        if page.meta.get('moduleVersion', 'None') != 'None':
+            markdown = markdown.replace("<!-- TAGS -->", f"{_badge_for_version(page.meta['moduleVersion'], page, files)}<!-- TAGS -->")
+
         markdown = markdown.replace("```json\r", "```json title=\"Azure Template snippet\"\r")
         markdown = markdown.replace("```powershell\r", "```powershell title=\"Azure PowerShell snippet\"\r")
         markdown = markdown.replace("```bash\r", "```bash title=\"Azure CLI snippet\"\r")
@@ -195,3 +197,43 @@ def build_selector_nav(nav: mkdocs.structure.nav.Navigation, config: mkdocs.conf
     referenceItem: mkdocs.structure.nav.Section = next(x for x in nav if x.title == "Reference")
     referenceItem.children.append(item)
     mkdocs.structure.nav._add_parent_links(nav)
+
+def _badge(icon: str, text: str = "") -> str:
+    '''Create span block for a badge.'''
+
+    classes = "badge"
+    return "".join([
+        f"<span class=\"{classes}\">",
+        *([f"<span class=\"badge__icon\">{icon}</span>"] if icon else []),
+        *([f"<span class=\"badge__text\">{text}</span>"] if text else []),
+        f"</span>",
+    ])
+
+def _badge_for_version(text: str, page: Page, files: Files) -> str:
+    '''Create badge for minimum version.'''
+
+    # Get place in changelog.
+    version = text
+    major = version.split('.')[0]
+    anchor = version.replace('.', '')
+    path = f"CHANGELOG-{major}.md#{anchor}"
+
+    icon = "octicons-milestone-24"
+    href = _relative_uri(path, page, files)
+    return _badge(
+        icon = f"[:{icon}:]({href} 'Minimum version')",
+        text = f"[{text}]({href})"
+    )
+
+def _relative_uri(path: str, page: Page, files: Files) -> str:
+    '''Get relative URI for a file including anchor.'''
+
+    path, anchor, *_ = f"{path}#".split("#")
+    path = _relative_path(files.get_file_from_path(path), page)
+    return "#".join([path, anchor]) if anchor else path
+
+def _relative_path(file: File, page: Page) -> str:
+    '''Get relative source path for a file to a page.'''
+
+    path = os.path.relpath(file.src_uri, page.file.src_uri)
+    return os.path.sep.join(path.split(os.path.sep)[1:])

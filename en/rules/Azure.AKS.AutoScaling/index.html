@@ -73,8 +73,6 @@
   <!-- Determine type -->
   
   
-    
-  
   
 
   <!-- The image needs to have an absolute URL -->
@@ -82,7 +80,7 @@
 
   <!-- Open graph meta tags -->
   <meta property="og:site_name" content="PSRule for Azure" />
-  <meta property="og:type" content="article" />
+  <meta property="og:type" content="website" />
   <meta property="og:title" content="PSRule for Azure - Azure.AKS.AutoScaling" />
   <meta property="og:description" content="Use autoscaling to scale clusters based on workload requirements." />
   <meta property="og:url" content="https://azure.github.io/PSRule.Rules.Azure/en/rules/Azure.AKS.AutoScaling/" />
@@ -13132,9 +13130,25 @@
             <div class="md-content" data-md-component="content">
               <article class="md-content__inner md-typeset">
                 
+                  
+  
+<nav class="md-tags" >
+  
+    
+    
+    
+      <span class="md-tag">Azure.AKS.AutoScaling</span>
+    
+  
+    
+    
+    
+      <span class="md-tag">AZR-000019</span>
+    
+  
+</nav>
 
-  <!-- Actions -->
-  <!-- Actions - only if content is not generated -->
+<!-- Actions - only if content is not generated -->
 
 
   <!-- Edit button -->
@@ -13165,15 +13179,7 @@
   
 
 
-  <!--
-    Hack: check whether the content contains a h1 headline. If it
-    doesn't, the page title (or respectively site name) is used
-    as the main headline.
-  -->
-  
-
-  <!-- Page content -->
-  <h1 id="enable-aks-cluster-autoscaler">Enable AKS cluster autoscaler<a class="headerlink" href="#enable-aks-cluster-autoscaler" title="Permanent link">#</a></h1>
+<h1 id="enable-aks-cluster-autoscaler">Enable AKS cluster autoscaler<a class="headerlink" href="#enable-aks-cluster-autoscaler" title="Permanent link">#</a></h1>
 <nav class="md-tags"><span class="md-tag">Azure.AKS.AutoScaling</span><span class="md-tag">AZR-000019</span><span class="md-tag">Error</span></nav>
 <p><a href="../module/#performance-efficiency"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M1.527 13.237a1.75 1.75 0 0 1 0-2.474l9.272-9.273a1.75 1.75 0 0 1 2.475 0l9.272 9.273a1.75 1.75 0 0 1 0 2.474l-9.272 9.272a1.75 1.75 0 0 1-2.475 0Zm1.06-1.414a.25.25 0 0 0 0 .354l9.273 9.272a.25.25 0 0 0 .353 0l9.272-9.272a.25.25 0 0 0 0-.354l-9.272-9.272a.25.25 0 0 0-.353 0Z"/></svg></span> Performance Efficiency</a>
  · <a href="../resource/#azure-kubernetes-service"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13.152.682a2.251 2.251 0 0 1 2.269 0l.007.004 6.957 4.276a2.277 2.277 0 0 1 1.126 1.964v7.516c0 .81-.432 1.56-1.133 1.968l-.002.001-11.964 7.037-.004.003c-.706.41-1.578.41-2.284 0l-.026-.015-6.503-4.502a2.268 2.268 0 0 1-1.096-1.943V9.438c0-.392.1-.77.284-1.1l.003-.006.014-.026c.197-.342.48-.627.82-.827h.002L13.152.681Zm.757 1.295h-.001L2.648 8.616l6.248 4.247a.775.775 0 0 0 .758-.01h.001l11.633-6.804-6.629-4.074a.75.75 0 0 0-.75.003ZM8.517 14.33a2.286 2.286 0 0 1-.393-.18l-.023-.014-6.102-4.147v7.003c0 .275.145.528.379.664l.025.014 6.114 4.232V14.33ZM18 9.709l-3.25 1.9v7.548L18 17.245Zm-7.59 4.438-.002.002a2.296 2.296 0 0 1-.391.18v7.612l3.233-1.902v-7.552Zm9.09-5.316v7.532l2.124-1.25a.776.776 0 0 0 .387-.671V7.363Z"/></svg></span> Azure Kubernetes Service</a>
@@ -13209,7 +13215,7 @@ autoscaling can also help reduce costs when the cluster is underutilized enough 
   The cluster autoscaler will adjust the number of nodes between (inclusive of) these values.</li>
 </ul>
 <p>For example:</p>
-<div class="language-json highlight"><span class="filename">Azure Template snippet</span><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="p">{</span>
+<div class="language-json highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="p">{</span>
 </span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="w">  </span><span class="nt">&quot;type&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Microsoft.ContainerService/managedClusters&quot;</span><span class="p">,</span>
 </span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a><span class="w">  </span><span class="nt">&quot;apiVersion&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;2023-11-01&quot;</span><span class="p">,</span>
 </span><span id="__span-0-4"><a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a><span class="w">  </span><span class="nt">&quot;name&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;[parameters(&#39;name&#39;)]&quot;</span><span class="p">,</span>
@@ -13309,7 +13315,7 @@ autoscaling can also help reduce costs when the cluster is underutilized enough 
   The cluster autoscaler will adjust the number of nodes between (inclusive of) these values.</li>
 </ul>
 <p>For example:</p>
-<div class="language-text highlight"><span class="filename">Azure Bicep snippet</span><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>resource clusterWithPools &#39;Microsoft.ContainerService/managedClusters@2023-11-01&#39; = {
+<div class="language-text highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>resource clusterWithPools &#39;Microsoft.ContainerService/managedClusters@2023-11-01&#39; = {
 </span><span id="__span-1-2"><a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a>  location: location
 </span><span id="__span-1-3"><a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a>  name: name
 </span><span id="__span-1-4"><a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a>  identity: {
@@ -13397,7 +13403,7 @@ autoscaling can also help reduce costs when the cluster is underutilized enough 
 </span></code></pre></div>
 <h3 id="configure-with-azure-cli">Configure with Azure CLI<a class="headerlink" href="#configure-with-azure-cli" title="Permanent link">#</a></h3>
 <h4 id="enable-cluster-autoscaler">Enable cluster autoscaler<a class="headerlink" href="#enable-cluster-autoscaler" title="Permanent link">#</a></h4>
-<div class="language-bash highlight"><span class="filename">Azure CLI snippet</span><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>az<span class="w"> </span>aks<span class="w"> </span>update<span class="w"> </span><span class="se">\</span>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>az<span class="w"> </span>aks<span class="w"> </span>update<span class="w"> </span><span class="se">\</span>
 </span><span id="__span-2-2"><a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a><span class="w">  </span>--name<span class="w"> </span><span class="s1">&#39;&lt;name&gt;&#39;</span><span class="w"> </span><span class="se">\</span>
 </span><span id="__span-2-3"><a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a><span class="w">  </span>--resource-group<span class="w"> </span><span class="s1">&#39;&lt;resource_group&gt;&#39;</span><span class="w"> </span><span class="se">\</span>
 </span><span id="__span-2-4"><a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a><span class="w">  </span>--enable-cluster-autoscaler<span class="w"> </span><span class="se">\</span>
@@ -13405,7 +13411,7 @@ autoscaling can also help reduce costs when the cluster is underutilized enough 
 </span><span id="__span-2-6"><a id="__codelineno-2-6" name="__codelineno-2-6" href="#__codelineno-2-6"></a><span class="w">  </span>--max-count<span class="w"> </span><span class="s1">&#39;&lt;max_count&gt;&#39;</span>
 </span></code></pre></div>
 <h4 id="enable-cluster-nodepool-autoscaler">Enable cluster nodepool autoscaler<a class="headerlink" href="#enable-cluster-nodepool-autoscaler" title="Permanent link">#</a></h4>
-<div class="language-bash highlight"><span class="filename">Azure CLI snippet</span><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>az<span class="w"> </span>aks<span class="w"> </span>nodepool<span class="w"> </span>update<span class="w"> </span><span class="se">\</span>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>az<span class="w"> </span>aks<span class="w"> </span>nodepool<span class="w"> </span>update<span class="w"> </span><span class="se">\</span>
 </span><span id="__span-3-2"><a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a><span class="w">  </span>--name<span class="w"> </span><span class="s1">&#39;&lt;name&gt;&#39;</span><span class="w"> </span><span class="se">\</span>
 </span><span id="__span-3-3"><a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a><span class="w">  </span>--resource-group<span class="w"> </span><span class="s1">&#39;&lt;resource_group&gt;&#39;</span><span class="w"> </span><span class="se">\</span>
 </span><span id="__span-3-4"><a id="__codelineno-3-4" name="__codelineno-3-4" href="#__codelineno-3-4"></a><span class="w">  </span>--cluster-name<span class="w"> </span><span class="s1">&#39;&lt;cluster_name&gt;&#39;</span><span class="w"> </span><span class="se">\</span>
@@ -13422,8 +13428,6 @@ autoscaling can also help reduce costs when the cluster is underutilized enough 
 <li><a href="https://learn.microsoft.com/azure/templates/microsoft.containerservice/managedclusters">Azure deployment reference</a></li>
 </ul>
 
-  <!-- Source file information -->
-  
 
 
 
@@ -13492,13 +13496,9 @@ autoscaling can also help reduce costs when the cluster is underutilized enough 
   </aside>
 
 
-  <!-- Was this page helpful? -->
-  
 
 
 
-  <!-- Comment system -->
-  
 
 
   <!-- Giscus -->
@@ -13557,8 +13557,7 @@ autoscaling can also help reduce costs when the cluster is underutilized enough 
     })
   </script>
 
-
-
+                
               </article>
             </div>
           

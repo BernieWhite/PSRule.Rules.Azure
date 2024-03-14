@@ -12,7 +12,7 @@ param name string
 param location string = resourceGroup().location
 
 // An example container registry deployed with Premium SKU.
-resource registry 'Microsoft.ContainerRegistry/registries@2023-08-01-preview' = {
+resource registry 'Microsoft.ContainerRegistry/registries@2023-11-01-preview' = {
   name: name
   location: location
   sku: {

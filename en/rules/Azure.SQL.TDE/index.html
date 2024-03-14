@@ -73,8 +73,6 @@
   <!-- Determine type -->
   
   
-    
-  
   
 
   <!-- The image needs to have an absolute URL -->
@@ -82,7 +80,7 @@
 
   <!-- Open graph meta tags -->
   <meta property="og:site_name" content="PSRule for Azure" />
-  <meta property="og:type" content="article" />
+  <meta property="og:type" content="website" />
   <meta property="og:title" content="PSRule for Azure - Azure.SQL.TDE" />
   <meta property="og:description" content="Use Transparent Data Encryption (TDE) with Azure SQL Database." />
   <meta property="og:url" content="https://azure.github.io/PSRule.Rules.Azure/en/rules/Azure.SQL.TDE/" />
@@ -13084,9 +13082,25 @@
             <div class="md-content" data-md-component="content">
               <article class="md-content__inner md-typeset">
                 
+                  
+  
+<nav class="md-tags" >
+  
+    
+    
+    
+      <span class="md-tag">Azure.SQL.TDE</span>
+    
+  
+    
+    
+    
+      <span class="md-tag">AZR-000191</span>
+    
+  
+</nav>
 
-  <!-- Actions -->
-  <!-- Actions - only if content is not generated -->
+<!-- Actions - only if content is not generated -->
 
 
   <!-- Edit button -->
@@ -13117,15 +13131,7 @@
   
 
 
-  <!--
-    Hack: check whether the content contains a h1 headline. If it
-    doesn't, the page title (or respectively site name) is used
-    as the main headline.
-  -->
-  
-
-  <!-- Page content -->
-  <h1 id="use-sql-database-tde">Use SQL database TDE<a class="headerlink" href="#use-sql-database-tde" title="Permanent link">#</a></h1>
+<h1 id="use-sql-database-tde">Use SQL database TDE<a class="headerlink" href="#use-sql-database-tde" title="Permanent link">#</a></h1>
 <nav class="md-tags"><span class="md-tag">Azure.SQL.TDE</span><span class="md-tag">AZR-000191</span><span class="md-tag">Error</span></nav>
 <p><a href="../module/#security"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M1.527 13.237a1.75 1.75 0 0 1 0-2.474l9.272-9.273a1.75 1.75 0 0 1 2.475 0l9.272 9.273a1.75 1.75 0 0 1 0 2.474l-9.272 9.272a1.75 1.75 0 0 1-2.475 0Zm1.06-1.414a.25.25 0 0 0 0 .354l9.273 9.272a.25.25 0 0 0 .353 0l9.272-9.272a.25.25 0 0 0 0-.354l-9.272-9.272a.25.25 0 0 0-.353 0Z"/></svg></span> Security</a>
  · <a href="../resource/#sql-database"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13.152.682a2.251 2.251 0 0 1 2.269 0l.007.004 6.957 4.276a2.277 2.277 0 0 1 1.126 1.964v7.516c0 .81-.432 1.56-1.133 1.968l-.002.001-11.964 7.037-.004.003c-.706.41-1.578.41-2.284 0l-.026-.015-6.503-4.502a2.268 2.268 0 0 1-1.096-1.943V9.438c0-.392.1-.77.284-1.1l.003-.006.014-.026c.197-.342.48-.627.82-.827h.002L13.152.681Zm.757 1.295h-.001L2.648 8.616l6.248 4.247a.775.775 0 0 0 .758-.01h.001l11.633-6.804-6.629-4.074a.75.75 0 0 0-.75.003ZM8.517 14.33a2.286 2.286 0 0 1-.393-.18l-.023-.014-6.102-4.147v7.003c0 .275.145.528.379.664l.025.014 6.114 4.232V14.33ZM18 9.709l-3.25 1.9v7.548L18 17.245Zm-7.59 4.438-.002.002a2.296 2.296 0 0 1-.391.18v7.612l3.233-1.902v-7.552Zm9.09-5.316v7.532l2.124-1.25a.776.776 0 0 0 .387-.671V7.363Z"/></svg></span> SQL Database</a>
@@ -13140,7 +13146,7 @@ Encryption is perform at rest without requiring changes to the application.</p>
 <p>Consider enable Transparent Data Encryption (TDE) for Azure SQL Databases to perform encryption at rest.</p>
 <h2 id="examples">Examples<a class="headerlink" href="#examples" title="Permanent link">#</a></h2>
 <h3 id="configure-with-azure-template">Configure with Azure template<a class="headerlink" href="#configure-with-azure-template" title="Permanent link">#</a></h3>
-<div class="language-json highlight"><span class="filename">Azure Template snippet</span><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="p">{</span>
+<div class="language-json highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="p">{</span>
 </span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="w">    </span><span class="nt">&quot;type&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Microsoft.Sql/servers/databases&quot;</span><span class="p">,</span>
 </span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a><span class="w">    </span><span class="nt">&quot;apiVersion&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;2020-08-01-preview&quot;</span><span class="p">,</span>
 </span><span id="__span-0-4"><a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a><span class="w">    </span><span class="nt">&quot;name&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;[variables(&#39;dbName&#39;)]&quot;</span><span class="p">,</span>
@@ -13174,10 +13180,10 @@ Encryption is perform at rest without requiring changes to the application.</p>
 </span><span id="__span-0-32"><a id="__codelineno-0-32" name="__codelineno-0-32" href="#__codelineno-0-32"></a><span class="p">}</span>
 </span></code></pre></div>
 <h3 id="configure-with-azure-cli">Configure with Azure CLI<a class="headerlink" href="#configure-with-azure-cli" title="Permanent link">#</a></h3>
-<div class="language-bash highlight"><span class="filename">Azure CLI snippet</span><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>az<span class="w"> </span>sql<span class="w"> </span>db<span class="w"> </span>tde<span class="w"> </span><span class="nb">set</span><span class="w"> </span>--status<span class="w"> </span>Enabled<span class="w"> </span>-s<span class="w"> </span><span class="s1">&#39;&lt;server_name&gt;&#39;</span><span class="w"> </span>-d<span class="w"> </span><span class="s1">&#39;&lt;database&gt;&#39;</span><span class="w"> </span>-g<span class="w"> </span><span class="s1">&#39;&lt;resource_group&gt;&#39;</span>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>az<span class="w"> </span>sql<span class="w"> </span>db<span class="w"> </span>tde<span class="w"> </span><span class="nb">set</span><span class="w"> </span>--status<span class="w"> </span>Enabled<span class="w"> </span>-s<span class="w"> </span><span class="s1">&#39;&lt;server_name&gt;&#39;</span><span class="w"> </span>-d<span class="w"> </span><span class="s1">&#39;&lt;database&gt;&#39;</span><span class="w"> </span>-g<span class="w"> </span><span class="s1">&#39;&lt;resource_group&gt;&#39;</span>
 </span></code></pre></div>
 <h3 id="configure-with-azure-powershell">Configure with Azure PowerShell<a class="headerlink" href="#configure-with-azure-powershell" title="Permanent link">#</a></h3>
-<div class="language-powershell highlight"><span class="filename">Azure PowerShell snippet</span><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="nb">Set-AzSqlDatabaseTransparentDataEncryption</span> <span class="n">-ResourceGroupName</span> <span class="s1">&#39;&lt;resource_group&gt;&#39;</span> <span class="n">-ServerName</span> <span class="s1">&#39;&lt;server_name&gt;&#39;</span> <span class="n">-DatabaseName</span> <span class="s1">&#39;&lt;database&gt;&#39;</span> <span class="n">-State</span> <span class="n">Enabled</span>
+<div class="language-powershell highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="nb">Set-AzSqlDatabaseTransparentDataEncryption</span> <span class="n">-ResourceGroupName</span> <span class="s1">&#39;&lt;resource_group&gt;&#39;</span> <span class="n">-ServerName</span> <span class="s1">&#39;&lt;server_name&gt;&#39;</span> <span class="n">-DatabaseName</span> <span class="s1">&#39;&lt;database&gt;&#39;</span> <span class="n">-State</span> <span class="n">Enabled</span>
 </span></code></pre></div>
 <h2 id="links">Links<a class="headerlink" href="#links" title="Permanent link">#</a></h2>
 <ul>
@@ -13185,8 +13191,6 @@ Encryption is perform at rest without requiring changes to the application.</p>
 <li><a href="https://docs.microsoft.com/azure/templates/microsoft.sql/servers/databases/transparentdataencryption">Azure deployment reference</a></li>
 </ul>
 
-  <!-- Source file information -->
-  
 
 
 
@@ -13250,13 +13254,9 @@ Encryption is perform at rest without requiring changes to the application.</p>
   </aside>
 
 
-  <!-- Was this page helpful? -->
-  
 
 
 
-  <!-- Comment system -->
-  
 
 
   <!-- Giscus -->
@@ -13315,8 +13315,7 @@ Encryption is perform at rest without requiring changes to the application.</p>
     })
   </script>
 
-
-
+                
               </article>
             </div>
           

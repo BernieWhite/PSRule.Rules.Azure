@@ -75,8 +75,6 @@
   <!-- Determine type -->
   
   
-    
-  
   
 
   <!-- The image needs to have an absolute URL -->
@@ -84,7 +82,7 @@
 
   <!-- Open graph meta tags -->
   <meta property="og:site_name" content="PSRule for Azure" />
-  <meta property="og:type" content="article" />
+  <meta property="og:type" content="website" />
   <meta property="og:title" content="PSRule for Azure - By pillar" />
   <meta property="og:description" content="Ready to go rules for testing Azure Infrastructure as Code (IaC)." />
   <meta property="og:url" content="https://azure.github.io/PSRule.Rules.Azure/en/rules/module/" />
@@ -2006,6 +2004,15 @@
 </li>
         
           <li class="md-nav__item">
+  <a href="#co10-data-costs" class="md-nav__link">
+    <span class="md-ellipsis">
+      CO:10 Data costs
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#co13-personnel-time" class="md-nav__link">
     <span class="md-ellipsis">
       CO:13 Personnel time
@@ -2018,24 +2025,6 @@
   <a href="#co14-consolidation" class="md-nav__link">
     <span class="md-ellipsis">
       CO:14 Consolidation
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#pricing-and-billing-model" class="md-nav__link">
-    <span class="md-ellipsis">
-      Pricing and billing model
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#resource-usage" class="md-nav__link">
-    <span class="md-ellipsis">
-      Resource usage
     </span>
   </a>
   
@@ -13794,6 +13783,15 @@
 </li>
         
           <li class="md-nav__item">
+  <a href="#co10-data-costs" class="md-nav__link">
+    <span class="md-ellipsis">
+      CO:10 Data costs
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#co13-personnel-time" class="md-nav__link">
     <span class="md-ellipsis">
       CO:13 Personnel time
@@ -13806,24 +13804,6 @@
   <a href="#co14-consolidation" class="md-nav__link">
     <span class="md-ellipsis">
       CO:14 Consolidation
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#pricing-and-billing-model" class="md-nav__link">
-    <span class="md-ellipsis">
-      Pricing and billing model
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#resource-usage" class="md-nav__link">
-    <span class="md-ellipsis">
-      Resource usage
     </span>
   </a>
   
@@ -14554,20 +14534,11 @@
             <div class="md-content" data-md-component="content">
               <article class="md-content__inner md-typeset">
                 
+                  
+<!-- Actions - only if content is not generated -->
 
-  <!-- Actions -->
-  <!-- Actions - only if content is not generated -->
 
-
-  <!--
-    Hack: check whether the content contains a h1 headline. If it
-    doesn't, the page title (or respectively site name) is used
-    as the main headline.
-  -->
-  
-
-  <!-- Page content -->
-  <h1 id="rules-by-pillar">Rules by pillar<a class="headerlink" href="#rules-by-pillar" title="Permanent link">#</a></h1>
+<h1 id="rules-by-pillar">Rules by pillar<a class="headerlink" href="#rules-by-pillar" title="Permanent link">#</a></h1>
 <p>PSRule for Azure includes the following rules across five pillars of the Microsoft Azure Well-Architected Framework.</p>
 <h2 id="cost-optimization">Cost Optimization<a class="headerlink" href="#cost-optimization" title="Permanent link">#</a></h2>
 <h3 id="co03-cost-data-and-reporting">CO:03 Cost data and reporting<a class="headerlink" href="#co03-cost-data-and-reporting" title="Permanent link">#</a></h3>
@@ -14620,6 +14591,12 @@
 </thead>
 <tbody>
 <tr>
+<td><a href="../Azure.VM.PromoSku/">Azure.VM.PromoSku</a></td>
+<td>Virtual machines (VMs) should not use expired promotional SKU.</td>
+<td>Awareness</td>
+<td>Error</td>
+</tr>
+<tr>
 <td><a href="../Azure.VM.UseHybridUseBenefit/">Azure.VM.UseHybridUseBenefit</a></td>
 <td>Use Azure Hybrid Benefit for applicable virtual machine (VM) workloads.</td>
 <td>Awareness</td>
@@ -14666,6 +14643,37 @@
 <tr>
 <td><a href="../Azure.ACR.Usage/">Azure.ACR.Usage</a></td>
 <td>Regularly remove deprecated and unneeded images to reduce storage usage.</td>
+<td>Important</td>
+<td>Error</td>
+</tr>
+<tr>
+<td><a href="../Azure.VM.DiskAttached/">Azure.VM.DiskAttached</a></td>
+<td>Managed disks should be attached to virtual machines or removed.</td>
+<td>Important</td>
+<td>Error</td>
+</tr>
+<tr>
+<td><a href="../Azure.VM.ShouldNotBeStopped/">Azure.VM.ShouldNotBeStopped</a></td>
+<td>Azure VMs should be running or in a deallocated state.</td>
+<td>Important</td>
+<td>Error</td>
+</tr>
+</tbody>
+</table>
+<h3 id="co10-data-costs">CO:10 Data costs<a class="headerlink" href="#co10-data-costs" title="Permanent link">#</a></h3>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Synopsis</th>
+<th>Severity</th>
+<th>Level</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="../Azure.ACR.Retention/">Azure.ACR.Retention</a></td>
+<td>Use a retention policy to cleanup untagged manifests.</td>
 <td>Important</td>
 <td>Error</td>
 </tr>
@@ -14728,56 +14736,6 @@
 <tr>
 <td><a href="../Azure.ServiceBus.Usage/">Azure.ServiceBus.Usage</a></td>
 <td>Regularly remove unused resources to reduce costs.</td>
-<td>Important</td>
-<td>Error</td>
-</tr>
-</tbody>
-</table>
-<h3 id="pricing-and-billing-model">Pricing and billing model<a class="headerlink" href="#pricing-and-billing-model" title="Permanent link">#</a></h3>
-<table>
-<thead>
-<tr>
-<th>Name</th>
-<th>Synopsis</th>
-<th>Severity</th>
-<th>Level</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><a href="../Azure.VM.PromoSku/">Azure.VM.PromoSku</a></td>
-<td>Virtual machines (VMs) should not use expired promotional SKU.</td>
-<td>Awareness</td>
-<td>Error</td>
-</tr>
-</tbody>
-</table>
-<h3 id="resource-usage">Resource usage<a class="headerlink" href="#resource-usage" title="Permanent link">#</a></h3>
-<table>
-<thead>
-<tr>
-<th>Name</th>
-<th>Synopsis</th>
-<th>Severity</th>
-<th>Level</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><a href="../Azure.ACR.Retention/">Azure.ACR.Retention</a></td>
-<td>Use a retention policy to cleanup untagged manifests.</td>
-<td>Important</td>
-<td>Error</td>
-</tr>
-<tr>
-<td><a href="../Azure.VM.DiskAttached/">Azure.VM.DiskAttached</a></td>
-<td>Managed disks should be attached to virtual machines or removed.</td>
-<td>Important</td>
-<td>Error</td>
-</tr>
-<tr>
-<td><a href="../Azure.VM.ShouldNotBeStopped/">Azure.VM.ShouldNotBeStopped</a></td>
-<td>Azure VMs should be running or in a deallocated state.</td>
 <td>Important</td>
 <td>Error</td>
 </tr>
@@ -18094,8 +18052,6 @@
 </tbody>
 </table>
 
-  <!-- Source file information -->
-  
 
 
 
@@ -18117,7 +18073,7 @@
     <span class="md-icon" title="Last update">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1-2.1-2M12.5 7v5.2l4 2.4-1 1L11 13V7h1.5M11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2v1.8Z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">March 10, 2024</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">March 13, 2024</span>
   </span>
 
     
@@ -18174,16 +18130,11 @@
   </aside>
 
 
-  <!-- Was this page helpful? -->
-  
 
 
 
-  <!-- Comment system -->
-  
 
-
-
+                
               </article>
             </div>
           

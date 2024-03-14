@@ -71,8 +71,6 @@
   <!-- Determine type -->
   
   
-    
-  
   
 
   <!-- The image needs to have an absolute URL -->
@@ -80,7 +78,7 @@
 
   <!-- Open graph meta tags -->
   <meta property="og:site_name" content="PSRule for Azure" />
-  <meta property="og:type" content="article" />
+  <meta property="og:type" content="website" />
   <meta property="og:title" content="PSRule for Azure - Azure.APIM.ProductDescriptors" />
   <meta property="og:description" content="Ready to go rules for testing Azure Infrastructure as Code (IaC)." />
   <meta property="og:url" content="https://azure.github.io/PSRule.Rules.Azure/en/rules/Azure.APIM.ProductDescriptors/" />
@@ -13106,9 +13104,8 @@
             <div class="md-content" data-md-component="content">
               <article class="md-content__inner md-typeset">
                 
-
-  <!-- Actions -->
-  <!-- Actions - only if content is not generated -->
+                  
+<!-- Actions - only if content is not generated -->
 
 
   <!-- Edit button -->
@@ -13139,15 +13136,7 @@
   
 
 
-  <!--
-    Hack: check whether the content contains a h1 headline. If it
-    doesn't, the page title (or respectively site name) is used
-    as the main headline.
-  -->
-  
-
-  <!-- Page content -->
-  <h2 id="online-version-httpsazuregithubiopsrulerulesazureenrulesazureapimproductdescriptors">online version: https://azure.github.io/PSRule.Rules.Azure/en/rules/Azure.APIM.ProductDescriptors/<a class="headerlink" href="#online-version-httpsazuregithubiopsrulerulesazureenrulesazureapimproductdescriptors" title="Permanent link">#</a></h2>
+<h2 id="online-version-httpsazuregithubiopsrulerulesazureenrulesazureapimproductdescriptors">online version: https://azure.github.io/PSRule.Rules.Azure/en/rules/Azure.APIM.ProductDescriptors/<a class="headerlink" href="#online-version-httpsazuregithubiopsrulerulesazureenrulesazureapimproductdescriptors" title="Permanent link">#</a></h2>
 <h1 id="use-product-descriptors">Use product descriptors<a class="headerlink" href="#use-product-descriptors" title="Permanent link">#</a></h1>
 <p>API Management products should have a display name and description.</p>
 <h2 id="description">Description<a class="headerlink" href="#description" title="Permanent link">#</a></h2>
@@ -13172,7 +13161,7 @@ Display name and description fields should be human readable and easy to underst
 <li>Set the <code>properties.description</code> with an description of the APIs purpose.</li>
 </ul>
 <p>For example:</p>
-<div class="language-json highlight"><span class="filename">Azure Template snippet</span><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="p">{</span>
+<div class="language-json highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="p">{</span>
 </span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="w">  </span><span class="nt">&quot;type&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Microsoft.ApiManagement/service/products&quot;</span><span class="p">,</span>
 </span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a><span class="w">  </span><span class="nt">&quot;apiVersion&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;2022-08-01&quot;</span><span class="p">,</span>
 </span><span id="__span-0-4"><a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a><span class="w">  </span><span class="nt">&quot;name&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;[format(&#39;{0}/{1}&#39;, parameters(&#39;name&#39;), &#39;echo&#39;)]&quot;</span><span class="p">,</span>
@@ -13194,7 +13183,7 @@ Display name and description fields should be human readable and easy to underst
 <li>Set the <code>properties.description</code> with an description of the APIs purpose.</li>
 </ul>
 <p>For example:</p>
-<div class="language-text highlight"><span class="filename">Azure Bicep snippet</span><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>resource product &#39;Microsoft.ApiManagement/service/products@2022-08-01&#39; = {
+<div class="language-text highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>resource product &#39;Microsoft.ApiManagement/service/products@2022-08-01&#39; = {
 </span><span id="__span-1-2"><a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a>  parent: service
 </span><span id="__span-1-3"><a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a>  name: &#39;echo&#39;
 </span><span id="__span-1-4"><a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a>  properties: {
@@ -13213,8 +13202,6 @@ Display name and description fields should be human readable and easy to underst
 <li><a href="https://learn.microsoft.com/azure/templates/microsoft.apimanagement/service/products">Azure deployment reference</a></li>
 </ul>
 
-  <!-- Source file information -->
-  
 
 
 
@@ -13278,13 +13265,9 @@ Display name and description fields should be human readable and easy to underst
   </aside>
 
 
-  <!-- Was this page helpful? -->
-  
 
 
 
-  <!-- Comment system -->
-  
 
 
   <!-- Giscus -->
@@ -13340,8 +13323,7 @@ Display name and description fields should be human readable and easy to underst
     })
   </script>
 
-
-
+                
               </article>
             </div>
           

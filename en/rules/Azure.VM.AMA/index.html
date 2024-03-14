@@ -73,8 +73,6 @@
   <!-- Determine type -->
   
   
-    
-  
   
 
   <!-- The image needs to have an absolute URL -->
@@ -82,7 +80,7 @@
 
   <!-- Open graph meta tags -->
   <meta property="og:site_name" content="PSRule for Azure" />
-  <meta property="og:type" content="article" />
+  <meta property="og:type" content="website" />
   <meta property="og:title" content="PSRule for Azure - Azure.VM.AMA" />
   <meta property="og:description" content="Use Azure Monitor Agent for collecting monitoring data from VMs." />
   <meta property="og:url" content="https://azure.github.io/PSRule.Rules.Azure/en/rules/Azure.VM.AMA/" />
@@ -13120,9 +13118,25 @@
             <div class="md-content" data-md-component="content">
               <article class="md-content__inner md-typeset">
                 
+                  
+  
+<nav class="md-tags" >
+  
+    
+    
+    
+      <span class="md-tag">Azure.VM.AMA</span>
+    
+  
+    
+    
+    
+      <span class="md-tag">AZR-000345</span>
+    
+  
+</nav>
 
-  <!-- Actions -->
-  <!-- Actions - only if content is not generated -->
+<!-- Actions - only if content is not generated -->
 
 
   <!-- Edit button -->
@@ -13153,15 +13167,7 @@
   
 
 
-  <!--
-    Hack: check whether the content contains a h1 headline. If it
-    doesn't, the page title (or respectively site name) is used
-    as the main headline.
-  -->
-  
-
-  <!-- Page content -->
-  <h1 id="use-azure-monitor-agent">Use Azure Monitor Agent<a class="headerlink" href="#use-azure-monitor-agent" title="Permanent link">#</a></h1>
+<h1 id="use-azure-monitor-agent">Use Azure Monitor Agent<a class="headerlink" href="#use-azure-monitor-agent" title="Permanent link">#</a></h1>
 <nav class="md-tags"><span class="md-tag">Azure.VM.AMA</span><span class="md-tag">AZR-000345</span><span class="md-tag">Error</span></nav>
 <p><a href="../module/#operational-excellence"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M1.527 13.237a1.75 1.75 0 0 1 0-2.474l9.272-9.273a1.75 1.75 0 0 1 2.475 0l9.272 9.273a1.75 1.75 0 0 1 0 2.474l-9.272 9.272a1.75 1.75 0 0 1-2.475 0Zm1.06-1.414a.25.25 0 0 0 0 .354l9.273 9.272a.25.25 0 0 0 .353 0l9.272-9.272a.25.25 0 0 0 0-.354l-9.272-9.272a.25.25 0 0 0-.353 0Z"/></svg></span> Operational Excellence</a>
  · <a href="../resource/#virtual-machine"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13.152.682a2.251 2.251 0 0 1 2.269 0l.007.004 6.957 4.276a2.277 2.277 0 0 1 1.126 1.964v7.516c0 .81-.432 1.56-1.133 1.968l-.002.001-11.964 7.037-.004.003c-.706.41-1.578.41-2.284 0l-.026-.015-6.503-4.502a2.268 2.268 0 0 1-1.096-1.943V9.438c0-.392.1-.77.284-1.1l.003-.006.014-.026c.197-.342.48-.627.82-.827h.002L13.152.681Zm.757 1.295h-.001L2.648 8.616l6.248 4.247a.775.775 0 0 0 .758-.01h.001l11.633-6.804-6.629-4.074a.75.75 0 0 0-.75.003ZM8.517 14.33a2.286 2.286 0 0 1-.393-.18l-.023-.014-6.102-4.147v7.003c0 .275.145.528.379.664l.025.014 6.114 4.232V14.33ZM18 9.709l-3.25 1.9v7.548L18 17.245Zm-7.59 4.438-.002.002a2.296 2.296 0 0 1-.391.18v7.612l3.233-1.902v-7.552Zm9.09-5.316v7.532l2.124-1.25a.776.776 0 0 0 .387-.671V7.363Z"/></svg></span> Virtual Machine</a>
@@ -13198,7 +13204,7 @@ automatic updates, and deployment as Infrastructure as Code.</p>
 </li>
 </ul>
 <p>For example:</p>
-<div class="language-json highlight"><span class="filename">Azure Template snippet</span><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="p">{</span>
+<div class="language-json highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="p">{</span>
 </span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="w">  </span><span class="nt">&quot;type&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Microsoft.Compute/virtualMachines/extensions&quot;</span><span class="p">,</span>
 </span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a><span class="w">  </span><span class="nt">&quot;apiVersion&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;2023-09-01&quot;</span><span class="p">,</span>
 </span><span id="__span-0-4"><a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a><span class="w">  </span><span class="nt">&quot;name&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;[format(&#39;{0}/{1}&#39;, parameters(&#39;name&#39;), &#39;AzureMonitorWindowsAgent&#39;)]&quot;</span><span class="p">,</span>
@@ -13233,7 +13239,7 @@ automatic updates, and deployment as Infrastructure as Code.</p>
 </li>
 </ul>
 <p>For example:</p>
-<div class="language-text highlight"><span class="filename">Azure Bicep snippet</span><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>resource windowsAgent &#39;Microsoft.Compute/virtualMachines/extensions@2023-09-01&#39; = {
+<div class="language-text highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>resource windowsAgent &#39;Microsoft.Compute/virtualMachines/extensions@2023-09-01&#39; = {
 </span><span id="__span-1-2"><a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a>  parent: vm
 </span><span id="__span-1-3"><a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a>  name: &#39;AzureMonitorWindowsAgent&#39;
 </span><span id="__span-1-4"><a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a>  location: location
@@ -13265,7 +13271,7 @@ automatic updates, and deployment as Infrastructure as Code.</p>
 </li>
 </ul>
 <p>For example:</p>
-<div class="language-bash highlight"><span class="filename">Azure CLI snippet</span><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>az<span class="w"> </span>vm<span class="w"> </span>extension<span class="w"> </span><span class="nb">set</span><span class="w"> </span>--name<span class="w"> </span><span class="s1">&#39;AzureMonitorWindowsAgent&#39;</span><span class="w"> </span>--publisher<span class="w"> </span>Microsoft.Azure.Monitor<span class="w"> </span>--ids<span class="w"> </span><span class="s1">&#39;&lt;vm-resource-id&gt;&#39;</span><span class="w"> </span>--enable-auto-upgrade<span class="w"> </span><span class="nb">true</span><span class="w"> </span>--settings<span class="w"> </span><span class="s1">&#39;{&quot;authentication&quot;:{&quot;managedIdentity&quot;:{&quot;identifier-name&quot;:&quot;mi_res_id&quot;,&quot;identifier-value&quot;:&quot;/subscriptions/&lt;my-subscription-id&gt;/resourceGroups/&lt;my-resource-group&gt;/providers/Microsoft.ManagedIdentity/userAssignedIdentities/&lt;my-user-assigned-identity&gt;&quot;}}}&#39;</span>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>az<span class="w"> </span>vm<span class="w"> </span>extension<span class="w"> </span><span class="nb">set</span><span class="w"> </span>--name<span class="w"> </span><span class="s1">&#39;AzureMonitorWindowsAgent&#39;</span><span class="w"> </span>--publisher<span class="w"> </span>Microsoft.Azure.Monitor<span class="w"> </span>--ids<span class="w"> </span><span class="s1">&#39;&lt;vm-resource-id&gt;&#39;</span><span class="w"> </span>--enable-auto-upgrade<span class="w"> </span><span class="nb">true</span><span class="w"> </span>--settings<span class="w"> </span><span class="s1">&#39;{&quot;authentication&quot;:{&quot;managedIdentity&quot;:{&quot;identifier-name&quot;:&quot;mi_res_id&quot;,&quot;identifier-value&quot;:&quot;/subscriptions/&lt;my-subscription-id&gt;/resourceGroups/&lt;my-resource-group&gt;/providers/Microsoft.ManagedIdentity/userAssignedIdentities/&lt;my-user-assigned-identity&gt;&quot;}}}&#39;</span>
 </span></code></pre></div>
 <h3 id="configure-with-azure-powershell">Configure with Azure PowerShell<a class="headerlink" href="#configure-with-azure-powershell" title="Permanent link">#</a></h3>
 <p>To configure virtual machine using a user-assigned identity:</p>
@@ -13278,7 +13284,7 @@ automatic updates, and deployment as Infrastructure as Code.</p>
 </li>
 </ul>
 <p>For example:</p>
-<div class="language-powershell highlight"><span class="filename">Azure PowerShell snippet</span><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="nb">Set-AzVMExtension</span> <span class="n">-Name</span> <span class="n">AzureMonitorWindowsAgent</span> <span class="n">-ExtensionType</span> <span class="s1">&#39;AzureMonitorWindowsAgent&#39;</span> <span class="n">-Publisher</span> <span class="n">Microsoft</span><span class="p">.</span><span class="n">Azure</span><span class="p">.</span><span class="n">Monitor</span> <span class="n">-ResourceGroupName</span> <span class="s1">&#39;&lt;resource-group-name&gt;&#39;</span> <span class="n">-VMName</span> <span class="s1">&#39;&lt;virtual-machine-name&gt;&#39;</span> <span class="n">-Location</span> <span class="s1">&#39;&lt;location&gt;&#39;</span> <span class="n">-TypeHandlerVersion</span> <span class="s1">&#39;1.0&#39;</span> <span class="n">-EnableAutomaticUpgrade</span> <span class="nv">$true</span> <span class="n">-SettingString</span> <span class="s1">&#39;{&quot;authentication&quot;:{&quot;managedIdentity&quot;:{&quot;identifier-name&quot;:&quot;mi_res_id&quot;,&quot;identifier-value&quot;:&quot;/subscriptions/&lt;my-subscription-id&gt;/resourceGroups/&lt;my-resource-group&gt;/providers/Microsoft.ManagedIdentity/userAssignedIdentities/&lt;my-user-assigned-identity&gt;&quot;}}}&#39;</span>
+<div class="language-powershell highlight"><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="nb">Set-AzVMExtension</span> <span class="n">-Name</span> <span class="n">AzureMonitorWindowsAgent</span> <span class="n">-ExtensionType</span> <span class="s1">&#39;AzureMonitorWindowsAgent&#39;</span> <span class="n">-Publisher</span> <span class="n">Microsoft</span><span class="p">.</span><span class="n">Azure</span><span class="p">.</span><span class="n">Monitor</span> <span class="n">-ResourceGroupName</span> <span class="s1">&#39;&lt;resource-group-name&gt;&#39;</span> <span class="n">-VMName</span> <span class="s1">&#39;&lt;virtual-machine-name&gt;&#39;</span> <span class="n">-Location</span> <span class="s1">&#39;&lt;location&gt;&#39;</span> <span class="n">-TypeHandlerVersion</span> <span class="s1">&#39;1.0&#39;</span> <span class="n">-EnableAutomaticUpgrade</span> <span class="nv">$true</span> <span class="n">-SettingString</span> <span class="s1">&#39;{&quot;authentication&quot;:{&quot;managedIdentity&quot;:{&quot;identifier-name&quot;:&quot;mi_res_id&quot;,&quot;identifier-value&quot;:&quot;/subscriptions/&lt;my-subscription-id&gt;/resourceGroups/&lt;my-resource-group&gt;/providers/Microsoft.ManagedIdentity/userAssignedIdentities/&lt;my-user-assigned-identity&gt;&quot;}}}&#39;</span>
 </span></code></pre></div>
 <h2 id="notes">Notes<a class="headerlink" href="#notes" title="Permanent link">#</a></h2>
 <p>Deploying Azure Monitor Agent (AMA) extension alone does not include all configuration needed.
@@ -13291,8 +13297,6 @@ Additionally data collection rules and associations are required to specify what
 <li><a href="https://learn.microsoft.com/azure/templates/microsoft.compute/virtualmachines/extensions">Azure deployment reference</a></li>
 </ul>
 
-  <!-- Source file information -->
-  
 
 
 
@@ -13361,13 +13365,9 @@ Additionally data collection rules and associations are required to specify what
   </aside>
 
 
-  <!-- Was this page helpful? -->
-  
 
 
 
-  <!-- Comment system -->
-  
 
 
   <!-- Giscus -->
@@ -13426,8 +13426,7 @@ Additionally data collection rules and associations are required to specify what
     })
   </script>
 
-
-
+                
               </article>
             </div>
           

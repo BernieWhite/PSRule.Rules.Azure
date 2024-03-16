@@ -12,7 +12,7 @@ from mkdocs.config.defaults import MkDocsConfig
 from mkdocs.structure.files import File, Files
 from mkdocs.structure.pages import Page
 
-log = logging.getLogger(f"mkdocs.plugins.{__name__}")
+log = logging.getLogger(f"mkdocs")
 
 #
 # Hooks

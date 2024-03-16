@@ -1,26 +1,28 @@
 # Copyright (c) Microsoft Corporation.
 # Licensed under the MIT License.
 
-import json
+import logging
 import os
 import re
-import shutil
-import logging
-import mkdocs.config
-import mkdocs.config.config_options
-import mkdocs.plugins
-import mkdocs.structure.files
-import mkdocs.structure.nav
-import mkdocs.structure.pages
 
+from mkdocs.config import Config
+from mkdocs.config.defaults import MkDocsConfig
 from mkdocs.structure.files import File, Files
 from mkdocs.structure.pages import Page
+from mkdocs.structure.nav import Section, Navigation, _add_parent_links
 
 log = logging.getLogger(f"mkdocs.plugins.{__name__}")
-rulesItem: mkdocs.structure.nav.Section = mkdocs.structure.nav.Section("Rules", [])
+rulesItem: Section = Section("Rules", [])
+
+# Dynamically build reference nav
+def on_nav(nav: Navigation, config: Config, files: Files) -> Navigation:
+    build_rule_nav(nav, config, files)
+    build_baseline_nav(nav, config, files)
+    build_selector_nav(nav, config, files)
+    return nav
 
 # Replace MAML headers
-def replace_maml(markdown: str, page: mkdocs.structure.nav.Page, config: mkdocs.config.Config, files: mkdocs.structure.files.Files, **kwargs) -> str:
+def on_page_markdown(markdown: str, page: Page, config: MkDocsConfig, files: Files) -> str:
     markdown = markdown.replace("## about_PSRule_Azure_Configuration", "")
     markdown = markdown.replace("# PSRule_Azure_Configuration", "# Configuration options")
 
@@ -62,16 +64,11 @@ def replace_maml(markdown: str, page: mkdocs.structure.nav.Page, config: mkdocs.
         if page.meta.get('moduleVersion', 'None') != 'None':
             markdown = markdown.replace("<!-- TAGS -->", f"{_badge_for_version(page.meta['moduleVersion'], page, files)}<!-- TAGS -->")
 
-        markdown = markdown.replace("```json\r", "```json title=\"Azure Template snippet\"\r")
-        markdown = markdown.replace("```powershell\r", "```powershell title=\"Azure PowerShell snippet\"\r")
-        markdown = markdown.replace("```bash\r", "```bash title=\"Azure CLI snippet\"\r")
-        markdown = markdown.replace("```xml\r", "```xml title=\"API Management policy\"\r")
-
     if page.canonical_url.__contains__("/rules/") and page.meta.get("pillar", "None") != "None":
         page.meta['rule'] = page.canonical_url.split("/")[-2]
         read_metadata(page)
 
-    if page.meta.get('rule', 'None') != 'None':
+    if page.meta.get('rule', None) != None:
         markdown = markdown.replace('<!-- TAGS -->', '<nav class="md-tags"><rule/><ref/><level/></nav>\r<!-- TAGS -->')
         markdown = markdown.replace('<rule/>', '<span class="md-tag">' + page.meta['rule'] + '</span>')
         markdown = markdown.replace('<level/>', '<span class="md-tag">' + page.meta['level'] + '</span>')
@@ -79,6 +76,12 @@ def replace_maml(markdown: str, page: mkdocs.structure.nav.Page, config: mkdocs.
             markdown = markdown.replace('<ref/>', '<span class="md-tag">' + page.meta['ref'] + '</span>')
         if page.meta.get('ref', 'None') == 'None':
             markdown = markdown.replace('<ref/>', '')
+
+        markdown = markdown.replace("```bicep\r", "```bicep title=\"Azure Bicep snippet\"\r")
+        markdown = markdown.replace("```json\r", "```json title=\"Azure Template snippet\"\r")
+        markdown = markdown.replace("```powershell\r", "```powershell title=\"Azure PowerShell snippet\"\r")
+        markdown = markdown.replace("```bash\r", "```bash title=\"Azure CLI snippet\"\r")
+        markdown = markdown.replace("```xml\r", "```xml title=\"API Management policy\"\r")
 
     if page.canonical_url.__contains__("/rules/") and page.meta.get("pillar", "None") != "None":
         markdown = markdown.replace("<!-- TAGS -->", "[:octicons-diamond-24: " + page.meta['pillar'] + "](module.md#" + page.meta['pillar'].lower().replace(" ", "-") + ")\r<!-- TAGS -->")
@@ -95,6 +98,9 @@ def replace_maml(markdown: str, page: mkdocs.structure.nav.Page, config: mkdocs.
     if page.meta.get('ruleSet', 'None') != 'None':
         markdown = markdown.replace("<!-- TAGS -->", " · :octicons-tag-24: " + page.meta['ruleSet'] + "\r<!-- TAGS -->")
 
+    if page.meta.get('severity', 'None') != 'None':
+        markdown = markdown.replace("<!-- TAGS -->", " · :octicons-bell-24: " + page.meta['severity'] + "\r<!-- TAGS -->")
+
     return markdown.replace("<!-- TAGS -->", "")
 
 def add_tags(markdown: str) -> str:
@@ -109,48 +115,43 @@ def add_tags(markdown: str) -> str:
 
     return "\r".join(converted)
 
-def read_metadata(page: mkdocs.structure.nav.Page):
-    file: str = os.path.join(os.path.dirname(page.file.abs_src_path), 'metadata.json')
+def read_metadata(page: Page):
+    meta = page.__annotations__['__psrule__']
+    name = meta.get('rule', None)
+    if name == None:
+      return
+
     tags = []
-    with open(file) as f:
-        data = json.load(f)
-        name = page.meta['rule']
-        tags.append(name)
-        if page.meta.get('rule', '') != '' and data.get(name, None) != None and data[name].get('Ref', None) != None and data[name]['Ref'].get('Name', None) != None:
-            page.meta['ref'] = data[name]['Ref']['Name']
-            tags.append(page.meta['ref'])
 
-        if page.meta.get('rule', '') != '' and data.get(name, None) != None and data[name].get('Release', None) != None:
-            page.meta['release'] = data[name]['Release']
+    page.meta['rule'] = name
+    tags.append(name)
 
-        if page.meta.get('rule', '') != '' and data.get(name, None) != None and data[name].get('RuleSet', None) != None:
-            page.meta['ruleSet'] = data[name]['RuleSet']
+    if meta.get('ref', None) != None:
+        page.meta['ref'] = meta['ref']
+        tags.append(meta['ref'])
 
-        if page.meta.get('rule', '') != '' and data.get(name, None) != None and data[name].get('Level', None) != None:
-            page.meta['level'] = data[name]['Level']
+    if meta.get('release', None) != None:
+        page.meta['release'] = meta['release']
 
-        if page.meta.get('rule', '') != '' and data.get(name, None) != None and data[name].get('Synopsis', None) != None:
-            description = data[name]['Synopsis']
-            page.meta['description'] = description
+    if meta.get('ruleSet', None) != None:
+        page.meta['ruleSet'] = meta['ruleSet']
 
-        if page.meta.get('rule', '') != '' and data.get(name, None) != None and data[name].get('Source', None) != None:
-            page.meta['source'] = data[name]['Source']
+    if meta.get('level', None) != None:
+        page.meta['level'] = meta['level']
 
+    if meta.get('description', None) != None:
+        page.meta['description'] = meta['description']
+
+    if meta.get('source', None) != None:
+        page.meta['source'] = meta['source']
 
     page.meta['tags'] = tags
 
 
-# Dynamically build reference nav
-def build_reference_nav(nav: mkdocs.structure.nav.Navigation, config: mkdocs.config.Config, files: mkdocs.structure.files.Files) -> mkdocs.structure.nav.Navigation:
-    build_rule_nav(nav, config, files)
-    build_baseline_nav(nav, config, files)
-    build_selector_nav(nav, config, files)
-    return nav
-
 # Build Rules list
-def build_rule_nav(nav: mkdocs.structure.nav.Navigation, config: mkdocs.config.Config, files: mkdocs.structure.files.Files):
+def build_rule_nav(nav: Navigation, config: Config, files: Files):
     children = []
-    item: mkdocs.structure.nav.Section = mkdocs.structure.nav.Section("Rules", children)
+    item: Section = Section("Rules", children)
 
     for f in files:
         if not f.is_documentation_page():
@@ -160,43 +161,43 @@ def build_rule_nav(nav: mkdocs.structure.nav.Navigation, config: mkdocs.config.C
             continue
 
         if f._get_dest_path(False).__contains__("/rules/"):
-            children.append(mkdocs.structure.pages.Page(f._get_stem(), f, config))
+            children.append(Page(f._get_stem(), f, config))
 
-    referenceItem: mkdocs.structure.nav.Section = next(x for x in nav if x.title == "Reference")
+    referenceItem: Section = next(x for x in nav if x.title == "Reference")
     referenceItem.children.append(item)
-    mkdocs.structure.nav._add_parent_links(nav)
+    _add_parent_links(nav)
 
 # Build Baselines list
-def build_baseline_nav(nav: mkdocs.structure.nav.Navigation, config: mkdocs.config.Config, files: mkdocs.structure.files.Files):
+def build_baseline_nav(nav: Navigation, config: Config, files: Files):
     children = []
-    item: mkdocs.structure.nav.Section = mkdocs.structure.nav.Section("Baselines", children)
+    item: Section = Section("Baselines", children)
 
     for f in files:
         if not f.is_documentation_page():
             continue
 
         if f._get_dest_path(False).__contains__("/baselines/"):
-            children.append(mkdocs.structure.pages.Page(f._get_stem(), f, config))
+            children.append(Page(f._get_stem(), f, config))
 
-    referenceItem: mkdocs.structure.nav.Section = next(x for x in nav if x.title == "Reference")
+    referenceItem: Section = next(x for x in nav if x.title == "Reference")
     referenceItem.children.append(item)
-    mkdocs.structure.nav._add_parent_links(nav)
+    _add_parent_links(nav)
 
 # Build Selectors list
-def build_selector_nav(nav: mkdocs.structure.nav.Navigation, config: mkdocs.config.Config, files: mkdocs.structure.files.Files):
+def build_selector_nav(nav: Navigation, config: Config, files: Files):
     children = []
-    item: mkdocs.structure.nav.Section = mkdocs.structure.nav.Section("Selectors", children)
+    item: Section = Section("Selectors", children)
 
     for f in files:
         if not f.is_documentation_page():
             continue
 
         if f._get_dest_path(False).__contains__("/selectors/"):
-            children.append(mkdocs.structure.pages.Page(f._get_stem(), f, config))
+            children.append(Page(f._get_stem(), f, config))
 
-    referenceItem: mkdocs.structure.nav.Section = next(x for x in nav if x.title == "Reference")
+    referenceItem: Section = next(x for x in nav if x.title == "Reference")
     referenceItem.children.append(item)
-    mkdocs.structure.nav._add_parent_links(nav)
+    _add_parent_links(nav)
 
 def _badge(icon: str, text: str = "") -> str:
     '''Create span block for a badge.'''

@@ -13160,6 +13160,15 @@
 </li>
         
           <li class="md-nav__item">
+  <a href="#pe02-capacity-planning" class="md-nav__link">
+    <span class="md-ellipsis">
+      PE:02 Capacity planning
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#pe03-selecting-services" class="md-nav__link">
     <span class="md-ellipsis">
       PE:03 Selecting services
@@ -13313,6 +13322,15 @@
   <a href="#re05-regions-and-availability-zones" class="md-nav__link">
     <span class="md-ellipsis">
       RE:05 Regions and availability zones
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#re06-data-partitioning" class="md-nav__link">
+    <span class="md-ellipsis">
+      RE:06 Data partitioning
     </span>
   </a>
   
@@ -13489,7 +13507,7 @@
           <li class="md-nav__item">
   <a href="#identity-and-access-management" class="md-nav__link">
     <span class="md-ellipsis">
-      Identity and access management
+      Identity and Access Management
     </span>
   </a>
   
@@ -14159,6 +14177,12 @@
 <td>Error</td>
 </tr>
 <tr>
+<td><a href="Azure.Search.Name.md">Azure.Search.Name</a></td>
+<td>AI Search service names should meet naming requirements.</td>
+<td>Awareness</td>
+<td>Error</td>
+</tr>
+<tr>
 <td><a href="Azure.Storage.Name.md">Azure.Storage.Name</a></td>
 <td>Storage Account names should meet naming requirements.</td>
 <td>Awareness</td>
@@ -14609,12 +14633,6 @@
 <td>Error</td>
 </tr>
 <tr>
-<td><a href="Azure.Search.Name.md">Azure.Search.Name</a></td>
-<td>Azure Cognitive Search service names should meet naming requirements.</td>
-<td>Awareness</td>
-<td>Error</td>
-</tr>
-<tr>
 <td><a href="Azure.SignalR.Name.md">Azure.SignalR.Name</a></td>
 <td>SignalR service instance names should meet naming requirements.</td>
 <td>Awareness</td>
@@ -14809,12 +14827,6 @@
 <td>Important</td>
 <td>Error</td>
 </tr>
-<tr>
-<td><a href="Azure.Search.SKU.md">Azure.Search.SKU</a></td>
-<td>Use the basic and standard tiers for entry level workloads.</td>
-<td>Critical</td>
-<td>Error</td>
-</tr>
 </tbody>
 </table>
 <h3 id="application-design">Application design<a class="headerlink" href="#application-design" title="Permanent link">#</a></h3>
@@ -14901,6 +14913,25 @@
 <td><a href="Azure.ContainerApp.DisableAffinity.md">Azure.ContainerApp.DisableAffinity</a></td>
 <td>Disable session affinity to prevent unbalanced distribution.</td>
 <td>Important</td>
+<td>Error</td>
+</tr>
+</tbody>
+</table>
+<h3 id="pe02-capacity-planning">PE:02 Capacity planning<a class="headerlink" href="#pe02-capacity-planning" title="Permanent link">#</a></h3>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Synopsis</th>
+<th>Severity</th>
+<th>Level</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="Azure.Search.SKU.md">Azure.Search.SKU</a></td>
+<td>Use the basic and standard tiers for entry level workloads.</td>
+<td>Critical</td>
 <td>Error</td>
 </tr>
 </tbody>
@@ -15033,18 +15064,6 @@
 <tr>
 <td><a href="Azure.AppService.AlwaysOn.md">Azure.AppService.AlwaysOn</a></td>
 <td>Configure Always On for App Service apps.</td>
-<td>Important</td>
-<td>Error</td>
-</tr>
-<tr>
-<td><a href="Azure.Search.IndexSLA.md">Azure.Search.IndexSLA</a></td>
-<td>Use a minimum of 3 replicas to receive an SLA for query and index updates.</td>
-<td>Important</td>
-<td>Error</td>
-</tr>
-<tr>
-<td><a href="Azure.Search.QuerySLA.md">Azure.Search.QuerySLA</a></td>
-<td>Use a minimum of 2 replicas to receive an SLA for index queries.</td>
 <td>Important</td>
 <td>Error</td>
 </tr>
@@ -15408,6 +15427,31 @@
 </tr>
 </tbody>
 </table>
+<h3 id="re06-data-partitioning">RE:06 Data partitioning<a class="headerlink" href="#re06-data-partitioning" title="Permanent link">#</a></h3>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Synopsis</th>
+<th>Severity</th>
+<th>Level</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="Azure.Search.IndexSLA.md">Azure.Search.IndexSLA</a></td>
+<td>Use a minimum of 3 replicas to receive an SLA for query and index updates.</td>
+<td>Important</td>
+<td>Error</td>
+</tr>
+<tr>
+<td><a href="Azure.Search.QuerySLA.md">Azure.Search.QuerySLA</a></td>
+<td>Use a minimum of 2 replicas to receive an SLA for index queries.</td>
+<td>Important</td>
+<td>Error</td>
+</tr>
+</tbody>
+</table>
 <h3 id="re07-self-preservation">RE:07 Self-preservation<a class="headerlink" href="#re07-self-preservation" title="Permanent link">#</a></h3>
 <table>
 <thead>
@@ -15744,12 +15788,6 @@
 <td><a href="Azure.MySQL.AAD.md">Azure.MySQL.AAD</a></td>
 <td>Use Azure Active Directory (AAD) authentication with Azure Database for MySQL databases.</td>
 <td>Critical</td>
-<td>Error</td>
-</tr>
-<tr>
-<td><a href="Azure.Search.ManagedIdentity.md">Azure.Search.ManagedIdentity</a></td>
-<td>Configure managed identities to access Azure resources.</td>
-<td>Important</td>
 <td>Error</td>
 </tr>
 <tr>
@@ -16128,7 +16166,7 @@
 </tr>
 </tbody>
 </table>
-<h3 id="identity-and-access-management">Identity and access management<a class="headerlink" href="#identity-and-access-management" title="Permanent link">#</a></h3>
+<h3 id="identity-and-access-management">Identity and Access Management<a class="headerlink" href="#identity-and-access-management" title="Permanent link">#</a></h3>
 <table>
 <thead>
 <tr>
@@ -16759,6 +16797,12 @@
 <td><a href="Azure.PostgreSQL.AAD.md">Azure.PostgreSQL.AAD</a></td>
 <td>Use Entra ID authentication with Azure Database for PostgreSQL databases.</td>
 <td>Critical</td>
+<td>Error</td>
+</tr>
+<tr>
+<td><a href="Azure.Search.ManagedIdentity.md">Azure.Search.ManagedIdentity</a></td>
+<td>Configure managed identities to access Azure resources.</td>
+<td>Important</td>
 <td>Error</td>
 </tr>
 <tr>

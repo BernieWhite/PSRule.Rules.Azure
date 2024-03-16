@@ -12868,6 +12868,15 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
+  <a href="#ai-search" class="md-nav__link">
+    <span class="md-ellipsis">
+      AI Search
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#all-resources" class="md-nav__link">
     <span class="md-ellipsis">
       All resources
@@ -13024,15 +13033,6 @@
   <a href="#bastion" class="md-nav__link">
     <span class="md-ellipsis">
       Bastion
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#cognitive-search" class="md-nav__link">
-    <span class="md-ellipsis">
-      Cognitive Search
     </span>
   </a>
   
@@ -13452,6 +13452,49 @@
 
 <h1 id="rules-by-resource-type">Rules by resource type<a class="headerlink" href="#rules-by-resource-type" title="Permanent link">#</a></h1>
 <p>PSRule for Azure includes the following rules organized by resource type.</p>
+<h2 id="ai-search">AI Search<a class="headerlink" href="#ai-search" title="Permanent link">#</a></h2>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Synopsis</th>
+<th>Severity</th>
+<th>Level</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="Azure.Search.IndexSLA.md">Azure.Search.IndexSLA</a></td>
+<td>Use a minimum of 3 replicas to receive an SLA for query and index updates.</td>
+<td>Important</td>
+<td>Error</td>
+</tr>
+<tr>
+<td><a href="Azure.Search.ManagedIdentity.md">Azure.Search.ManagedIdentity</a></td>
+<td>Configure managed identities to access Azure resources.</td>
+<td>Important</td>
+<td>Error</td>
+</tr>
+<tr>
+<td><a href="Azure.Search.Name.md">Azure.Search.Name</a></td>
+<td>AI Search service names should meet naming requirements.</td>
+<td>Awareness</td>
+<td>Error</td>
+</tr>
+<tr>
+<td><a href="Azure.Search.QuerySLA.md">Azure.Search.QuerySLA</a></td>
+<td>Use a minimum of 2 replicas to receive an SLA for index queries.</td>
+<td>Important</td>
+<td>Error</td>
+</tr>
+<tr>
+<td><a href="Azure.Search.SKU.md">Azure.Search.SKU</a></td>
+<td>Use the basic and standard tiers for entry level workloads.</td>
+<td>Critical</td>
+<td>Error</td>
+</tr>
+</tbody>
+</table>
 <h2 id="all-resources">All resources<a class="headerlink" href="#all-resources" title="Permanent link">#</a></h2>
 <table>
 <thead>
@@ -14696,49 +14739,6 @@
 <td><a href="Azure.Bastion.Name.md">Azure.Bastion.Name</a></td>
 <td>Bastion hosts should meet naming requirements.</td>
 <td>Awareness</td>
-<td>Error</td>
-</tr>
-</tbody>
-</table>
-<h2 id="cognitive-search">Cognitive Search<a class="headerlink" href="#cognitive-search" title="Permanent link">#</a></h2>
-<table>
-<thead>
-<tr>
-<th>Name</th>
-<th>Synopsis</th>
-<th>Severity</th>
-<th>Level</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><a href="Azure.Search.IndexSLA.md">Azure.Search.IndexSLA</a></td>
-<td>Use a minimum of 3 replicas to receive an SLA for query and index updates.</td>
-<td>Important</td>
-<td>Error</td>
-</tr>
-<tr>
-<td><a href="Azure.Search.ManagedIdentity.md">Azure.Search.ManagedIdentity</a></td>
-<td>Configure managed identities to access Azure resources.</td>
-<td>Important</td>
-<td>Error</td>
-</tr>
-<tr>
-<td><a href="Azure.Search.Name.md">Azure.Search.Name</a></td>
-<td>Azure Cognitive Search service names should meet naming requirements.</td>
-<td>Awareness</td>
-<td>Error</td>
-</tr>
-<tr>
-<td><a href="Azure.Search.QuerySLA.md">Azure.Search.QuerySLA</a></td>
-<td>Use a minimum of 2 replicas to receive an SLA for index queries.</td>
-<td>Important</td>
-<td>Error</td>
-</tr>
-<tr>
-<td><a href="Azure.Search.SKU.md">Azure.Search.SKU</a></td>
-<td>Use the basic and standard tiers for entry level workloads.</td>
-<td>Critical</td>
 <td>Error</td>
 </tr>
 </tbody>

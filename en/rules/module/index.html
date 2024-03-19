@@ -22,7 +22,7 @@
       
       
       <link rel="icon" href="../../../assets/ms_icon.png">
-      <meta name="generator" content="mkdocs-1.5.3, mkdocs-material-9.5.13">
+      <meta name="generator" content="mkdocs-1.5.3, mkdocs-material-9.5.14">
     
     
       
@@ -30,7 +30,7 @@
       
     
     
-      <link rel="stylesheet" href="../../../assets/stylesheets/main.7e359304.min.css">
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.10ba22f1.min.css">
       
         
         <link rel="stylesheet" href="../../../assets/stylesheets/palette.06af60db.min.css">
@@ -2588,7 +2588,7 @@
           <li class="md-nav__item">
   <a href="#identity-and-access-management" class="md-nav__link">
     <span class="md-ellipsis">
-      Identity and Access Management
+      Identity and access management
     </span>
   </a>
   
@@ -2667,6 +2667,15 @@
 </li>
         
           <li class="md-nav__item">
+  <a href="#se02-secured-development-lifecycle" class="md-nav__link">
+    <span class="md-ellipsis">
+      SE:02 Secured development lifecycle
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#se04-segmentation" class="md-nav__link">
     <span class="md-ellipsis">
       SE:04 Segmentation
@@ -2703,6 +2712,15 @@
 </li>
         
           <li class="md-nav__item">
+  <a href="#se08-hardening-resources" class="md-nav__link">
+    <span class="md-ellipsis">
+      SE:08 Hardening resources
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#se10-monitoring-and-threat-detection" class="md-nav__link">
     <span class="md-ellipsis">
       SE:10 Monitoring and threat detection
@@ -2715,15 +2733,6 @@
   <a href="#secrets" class="md-nav__link">
     <span class="md-ellipsis">
       Secrets
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#security-configuration" class="md-nav__link">
-    <span class="md-ellipsis">
-      Security configuration
     </span>
   </a>
   
@@ -14385,7 +14394,7 @@
           <li class="md-nav__item">
   <a href="#identity-and-access-management" class="md-nav__link">
     <span class="md-ellipsis">
-      Identity and Access Management
+      Identity and access management
     </span>
   </a>
   
@@ -14464,6 +14473,15 @@
 </li>
         
           <li class="md-nav__item">
+  <a href="#se02-secured-development-lifecycle" class="md-nav__link">
+    <span class="md-ellipsis">
+      SE:02 Secured development lifecycle
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#se04-segmentation" class="md-nav__link">
     <span class="md-ellipsis">
       SE:04 Segmentation
@@ -14500,6 +14518,15 @@
 </li>
         
           <li class="md-nav__item">
+  <a href="#se08-hardening-resources" class="md-nav__link">
+    <span class="md-ellipsis">
+      SE:08 Hardening resources
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#se10-monitoring-and-threat-detection" class="md-nav__link">
     <span class="md-ellipsis">
       SE:10 Monitoring and threat detection
@@ -14512,15 +14539,6 @@
   <a href="#secrets" class="md-nav__link">
     <span class="md-ellipsis">
       Secrets
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#security-configuration" class="md-nav__link">
-    <span class="md-ellipsis">
-      Security configuration
     </span>
   </a>
   
@@ -16125,18 +16143,6 @@
 </thead>
 <tbody>
 <tr>
-<td><a href="../Azure.AppService.WebProbe/">Azure.AppService.WebProbe</a></td>
-<td>Configure and enable instance health probes.</td>
-<td>Important</td>
-<td>Error</td>
-</tr>
-<tr>
-<td><a href="../Azure.AppService.WebProbePath/">Azure.AppService.WebProbePath</a></td>
-<td>Configure a dedicated path for health probe requests.</td>
-<td>Important</td>
-<td>Error</td>
-</tr>
-<tr>
 <td><a href="../Azure.FrontDoor.Probe/">Azure.FrontDoor.Probe</a></td>
 <td>Use health probes to check the health of each backend.</td>
 <td>Important</td>
@@ -16214,6 +16220,18 @@
 <tr>
 <td><a href="../Azure.AKS.Version/">Azure.AKS.Version</a></td>
 <td>AKS control plane and nodes pools should use a current stable release.</td>
+<td>Important</td>
+<td>Error</td>
+</tr>
+<tr>
+<td><a href="../Azure.AppService.WebProbe/">Azure.AppService.WebProbe</a></td>
+<td>Configure and enable instance health probes.</td>
+<td>Important</td>
+<td>Error</td>
+</tr>
+<tr>
+<td><a href="../Azure.AppService.WebProbePath/">Azure.AppService.WebProbePath</a></td>
+<td>Configure a dedicated path for health probe requests.</td>
 <td>Important</td>
 <td>Error</td>
 </tr>
@@ -16842,18 +16860,6 @@
 <td>Error</td>
 </tr>
 <tr>
-<td><a href="../Azure.AppService.UseHTTPS/">Azure.AppService.UseHTTPS</a></td>
-<td>Azure App Service apps should only accept encrypted connections.</td>
-<td>Important</td>
-<td>Error</td>
-</tr>
-<tr>
-<td><a href="../Azure.AppService.WebSecureFtp/">Azure.AppService.WebSecureFtp</a></td>
-<td>Web apps should disable insecure FTP and configure SFTP when required.</td>
-<td>Important</td>
-<td>Error</td>
-</tr>
-<tr>
 <td><a href="../Azure.Automation.EncryptVariables/">Azure.Automation.EncryptVariables</a></td>
 <td>Azure Automation variables should be encrypted.</td>
 <td>Important</td>
@@ -16914,12 +16920,6 @@
 </tr>
 </thead>
 <tbody>
-<tr>
-<td><a href="../Azure.AppService.NETVersion/">Azure.AppService.NETVersion</a></td>
-<td>Configure applications to use newer .NET versions.</td>
-<td>Important</td>
-<td>Error</td>
-</tr>
 <tr>
 <td><a href="../Azure.AppService.PHPVersion/">Azure.AppService.PHPVersion</a></td>
 <td>Configure applications to use newer PHP runtime versions.</td>
@@ -16989,12 +16989,6 @@
 <td>Error</td>
 </tr>
 <tr>
-<td><a href="../Azure.AppService.MinTLS/">Azure.AppService.MinTLS</a></td>
-<td>App Service should reject TLS versions older than 1.2.</td>
-<td>Critical</td>
-<td>Error</td>
-</tr>
-<tr>
 <td><a href="../Azure.CDN.MinTLS/">Azure.CDN.MinTLS</a></td>
 <td>Azure CDN endpoints should reject TLS versions older than 1.2.</td>
 <td>Important</td>
@@ -17044,7 +17038,7 @@
 </tr>
 </tbody>
 </table>
-<h3 id="identity-and-access-management">Identity and Access Management<a class="headerlink" href="#identity-and-access-management" title="Permanent link">#</a></h3>
+<h3 id="identity-and-access-management">Identity and access management<a class="headerlink" href="#identity-and-access-management" title="Permanent link">#</a></h3>
 <table>
 <thead>
 <tr>
@@ -17557,6 +17551,25 @@
 </tr>
 </tbody>
 </table>
+<h3 id="se02-secured-development-lifecycle">SE:02 Secured development lifecycle<a class="headerlink" href="#se02-secured-development-lifecycle" title="Permanent link">#</a></h3>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Synopsis</th>
+<th>Severity</th>
+<th>Level</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="../Azure.AppService.NETVersion/">Azure.AppService.NETVersion</a></td>
+<td>Configure applications to use newer .NET versions.</td>
+<td>Important</td>
+<td>Error</td>
+</tr>
+</tbody>
+</table>
 <h3 id="se04-segmentation">SE:04 Segmentation<a class="headerlink" href="#se04-segmentation" title="Permanent link">#</a></h3>
 <table>
 <thead>
@@ -17782,6 +17795,24 @@
 <td>Error</td>
 </tr>
 <tr>
+<td><a href="../Azure.AppService.MinTLS/">Azure.AppService.MinTLS</a></td>
+<td>App Service should reject TLS versions older than 1.2.</td>
+<td>Critical</td>
+<td>Error</td>
+</tr>
+<tr>
+<td><a href="../Azure.AppService.UseHTTPS/">Azure.AppService.UseHTTPS</a></td>
+<td>Azure App Service apps should only accept encrypted connections.</td>
+<td>Important</td>
+<td>Error</td>
+</tr>
+<tr>
+<td><a href="../Azure.AppService.WebSecureFtp/">Azure.AppService.WebSecureFtp</a></td>
+<td>Web apps should disable insecure FTP and configure SFTP when required.</td>
+<td>Important</td>
+<td>Error</td>
+</tr>
+<tr>
 <td><a href="../Azure.ContainerApp.Insecure/">Azure.ContainerApp.Insecure</a></td>
 <td>Ensure insecure inbound traffic is not permitted to the container app.</td>
 <td>Important</td>
@@ -17826,6 +17857,25 @@
 <tr>
 <td><a href="../Azure.TrafficManager.Protocol/">Azure.TrafficManager.Protocol</a></td>
 <td>Monitor Traffic Manager web-based endpoints with HTTPS.</td>
+<td>Important</td>
+<td>Error</td>
+</tr>
+</tbody>
+</table>
+<h3 id="se08-hardening-resources">SE:08 Hardening resources<a class="headerlink" href="#se08-hardening-resources" title="Permanent link">#</a></h3>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Synopsis</th>
+<th>Severity</th>
+<th>Level</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="../Azure.AppService.RemoteDebug/">Azure.AppService.RemoteDebug</a></td>
+<td>Disable remote debugging on App Service apps when not in use.</td>
 <td>Important</td>
 <td>Error</td>
 </tr>
@@ -17930,25 +17980,6 @@
 <tr>
 <td><a href="../Azure.VMSS.ScriptExtensions/">Azure.VMSS.ScriptExtensions</a></td>
 <td>Custom Script Extensions scripts that reference secret values must use the protectedSettings.</td>
-<td>Important</td>
-<td>Error</td>
-</tr>
-</tbody>
-</table>
-<h3 id="security-configuration">Security configuration<a class="headerlink" href="#security-configuration" title="Permanent link">#</a></h3>
-<table>
-<thead>
-<tr>
-<th>Name</th>
-<th>Synopsis</th>
-<th>Severity</th>
-<th>Level</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><a href="../Azure.AppService.RemoteDebug/">Azure.AppService.RemoteDebug</a></td>
-<td>Disable remote debugging on App Service apps when not in use.</td>
 <td>Important</td>
 <td>Error</td>
 </tr>
@@ -18290,7 +18321,7 @@
     <script id="__config" type="application/json">{"base": "../../..", "features": ["navigation.instant", "navigation.indexes", {"navigation.sections": {"level": 1}}, "navigation.tabs", "navigation.footer", "content.code.annotate", "content.tabs.link", "content.code.copy", "content.action.edit", "content.action.view"], "search": "../../../assets/javascripts/workers/search.b8dbb3d2.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
     
     
-      <script src="../../../assets/javascripts/bundle.c8d2eff1.min.js"></script>
+      <script src="../../../assets/javascripts/bundle.bd41221c.min.js"></script>
       
     
   </body>

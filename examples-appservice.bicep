@@ -9,25 +9,24 @@ param name string
 @description('The name of the App Services Plan.')
 param planName string
 
-@description('Tags to apply to the resource.')
-param tags object
-
 @description('The location resources will be deployed.')
 param location string = resourceGroup().location
 
-// An example App Services Plan
-resource plan 'Microsoft.Web/serverfarms@2022-09-01' = {
+// An example App Services Plan.
+resource plan 'Microsoft.Web/serverfarms@2023-01-01' = {
   name: planName
   location: location
   sku: {
-    name: 'S1'
-    tier: 'Standard'
-    capacity: 2
+    name: 'P1V3'
+    tier: 'PremiumV3'
+  }
+  properties: {
+    zoneRedundant: true
   }
 }
 
-// An example .NET Framework Web App
-resource webApp 'Microsoft.Web/sites@2022-09-01' = {
+// An example .NET Framework Web App running on a Windows App Services Plan.
+resource web 'Microsoft.Web/sites@2023-01-01' = {
   name: name
   location: location
   identity: {
@@ -40,18 +39,41 @@ resource webApp 'Microsoft.Web/sites@2022-09-01' = {
     siteConfig: {
       alwaysOn: true
       minTlsVersion: '1.2'
-      ftpsState: 'FtpsOnly'
+      ftpsState: 'Disabled'
       remoteDebuggingEnabled: false
       http20Enabled: true
-      netFrameworkVersion: 'v6.0'
+      netFrameworkVersion: 'v8.0'
       healthCheckPath: '/healthz'
+      metadata: [
+        {
+          name: 'CURRENT_STACK'
+          value: 'dotnet'
+        }
+      ]
     }
   }
-  tags: tags
+}
+
+// Disable basic publishing credentials for FTP.
+resource ftp 'Microsoft.Web/sites/basicPublishingCredentialsPolicies@2023-01-01' = {
+  parent: web
+  name: 'ftp'
+  properties: {
+    allow: false
+  }
+}
+
+// Disable basic publishing credentials over SCM.
+resource scm 'Microsoft.Web/sites/basicPublishingCredentialsPolicies@2023-01-01' = {
+  parent: web
+  name: 'scm'
+  properties: {
+    allow: false
+  }
 }
 
 // An example PHP Web App
-resource webAppPHP 'Microsoft.Web/sites@2022-09-01' = {
+resource webAppPHP 'Microsoft.Web/sites@2023-01-01' = {
   name: name
   location: location
   identity: {
@@ -72,5 +94,4 @@ resource webAppPHP 'Microsoft.Web/sites@2022-09-01' = {
       healthCheckPath: '/healthz'
     }
   }
-  tags: tags
 }

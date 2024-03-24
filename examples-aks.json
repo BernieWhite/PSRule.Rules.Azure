@@ -4,8 +4,8 @@
   "metadata": {
     "_generator": {
       "name": "bicep",
-      "version": "0.25.3.34343",
-      "templateHash": "15286438717534282301"
+      "version": "0.26.54.24096",
+      "templateHash": "2536331348365960823"
     }
   },
   "parameters": {
@@ -73,7 +73,7 @@
     },
     "kubernetesVersion": {
       "type": "string",
-      "defaultValue": "1.26.6",
+      "defaultValue": "1.27.9",
       "metadata": {
         "description": "The version of Kubernetes."
       }
@@ -178,7 +178,7 @@
     },
     {
       "type": "Microsoft.ContainerService/managedClusters",
-      "apiVersion": "2023-11-01",
+      "apiVersion": "2024-01-01",
       "name": "[parameters('name')]",
       "location": "[parameters('location')]",
       "identity": {
@@ -241,7 +241,7 @@
     },
     {
       "type": "Microsoft.ContainerService/managedClusters",
-      "apiVersion": "2023-11-01",
+      "apiVersion": "2024-01-01",
       "name": "[parameters('name')]",
       "location": "[parameters('location')]",
       "identity": {
@@ -331,7 +331,7 @@
     },
     {
       "type": "Microsoft.ContainerService/managedClusters",
-      "apiVersion": "2023-11-01",
+      "apiVersion": "2024-01-01",
       "name": "[parameters('name')]",
       "location": "[parameters('location')]",
       "identity": {

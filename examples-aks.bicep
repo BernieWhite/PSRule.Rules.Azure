@@ -46,7 +46,7 @@ param systemPoolMin int
 param systemPoolMax int = 3
 
 @description('The version of Kubernetes.')
-param kubernetesVersion string = '1.26.6'
+param kubernetesVersion string = '1.27.9'
 
 @description('Maximum number of pods that can run on nodes in the system pool.')
 @minValue(30)
@@ -104,22 +104,24 @@ var systemPools = [
     scaleSetPriority: 'Regular'
   }
 ]
-var userPools = [for i in range(0, length(pools)): {
-  name: pools[i].name
-  osDiskSizeGB: osDiskSizeGB
-  count: pools[i].minCount
-  minCount: pools[i].minCount
-  maxCount: pools[i].maxCount
-  enableAutoScaling: true
-  maxPods: pools[i].maxPods
-  vmSize: pools[i].vmSize
-  osType: pools[i].osType
-  type: 'VirtualMachineScaleSets'
-  vnetSubnetID: clusterSubnetId
-  mode: 'User'
-  osDiskType: 'Ephemeral'
-  scaleSetPriority: pools[i].priority
-}]
+var userPools = [
+  for i in range(0, length(pools)): {
+    name: pools[i].name
+    osDiskSizeGB: osDiskSizeGB
+    count: pools[i].minCount
+    minCount: pools[i].minCount
+    maxCount: pools[i].maxCount
+    enableAutoScaling: true
+    maxPods: pools[i].maxPods
+    vmSize: pools[i].vmSize
+    osType: pools[i].osType
+    type: 'VirtualMachineScaleSets'
+    vnetSubnetID: clusterSubnetId
+    mode: 'User'
+    osDiskType: 'Ephemeral'
+    scaleSetPriority: pools[i].priority
+  }
+]
 
 // Define resources
 
@@ -130,7 +132,7 @@ resource identity 'Microsoft.ManagedIdentity/userAssignedIdentities@2023-01-31' 
 }
 
 // An example AKS cluster
-resource cluster 'Microsoft.ContainerService/managedClusters@2023-11-01' = {
+resource cluster 'Microsoft.ContainerService/managedClusters@2024-01-01' = {
   location: location
   name: name
   identity: {
@@ -190,7 +192,7 @@ resource cluster 'Microsoft.ContainerService/managedClusters@2023-11-01' = {
 }
 
 // An example AKS cluster with pools defined.
-resource clusterWithPools 'Microsoft.ContainerService/managedClusters@2023-11-01' = {
+resource clusterWithPools 'Microsoft.ContainerService/managedClusters@2024-01-01' = {
   location: location
   name: name
   identity: {
@@ -277,7 +279,7 @@ resource clusterWithPools 'Microsoft.ContainerService/managedClusters@2023-11-01
 }
 
 // An example private AKS cluster with pools defined.
-resource privateCluster 'Microsoft.ContainerService/managedClusters@2023-11-01' = {
+resource privateCluster 'Microsoft.ContainerService/managedClusters@2024-01-01' = {
   location: location
   name: name
   identity: {

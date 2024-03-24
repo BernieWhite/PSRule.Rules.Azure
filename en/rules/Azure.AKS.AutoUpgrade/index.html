@@ -3368,6 +3368,15 @@
   
 </li>
         
+          <li class="md-nav__item">
+  <a href="#configure-with-azure-policy" class="md-nav__link">
+    <span class="md-ellipsis">
+      Configure with Azure Policy
+    </span>
+  </a>
+  
+</li>
+        
       </ul>
     </nav>
   
@@ -13056,6 +13065,15 @@
   
 </li>
         
+          <li class="md-nav__item">
+  <a href="#configure-with-azure-policy" class="md-nav__link">
+    <span class="md-ellipsis">
+      Configure with Azure Policy
+    </span>
+  </a>
+  
+</li>
+        
       </ul>
     </nav>
   
@@ -13129,13 +13147,13 @@ Auto-upgrades reduces manual intervention required to maintain an AKS cluster.</
 The following release channels are available:</p>
 <ul>
 <li><code>none</code> - Disables auto-upgrades.
-The default setting.</li>
+  The default setting.</li>
 <li><code>patch</code> - Automatically upgrade to the latest supported patch version of the current minor version.</li>
 <li><code>stable</code> - Automatically upgrade to the latest supported patch release of the recommended minor version.
-This is N-1 of the current AKS non-preview minor version.</li>
+  This is N-1 of the current AKS non-preview minor version.</li>
 <li><code>rapid</code> - Automatically upgrade to the latest supported patch of the latest support minor version.</li>
 <li><code>node-image</code> - Automatically upgrade to the latest node image version.
-Normally upgraded weekly.</li>
+  Normally upgraded weekly.</li>
 </ul>
 <h2 id="recommendation">Recommendation<a class="headerlink" href="#recommendation" title="Permanent link">#</a></h2>
 <p>Consider enabling auto-upgrades for AKS clusters by setting an auto-upgrade channel.</p>
@@ -13282,13 +13300,19 @@ Normally upgraded weekly.</li>
 <h3 id="configure-with-azure-cli">Configure with Azure CLI<a class="headerlink" href="#configure-with-azure-cli" title="Permanent link">#</a></h3>
 <div class="language-bash highlight"><span class="filename">Azure CLI snippet</span><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>az<span class="w"> </span>aks<span class="w"> </span>update<span class="w"> </span>-n<span class="w"> </span><span class="s1">&#39;&lt;name&gt;&#39;</span><span class="w"> </span>-g<span class="w"> </span><span class="s1">&#39;&lt;resource_group&gt;&#39;</span><span class="w"> </span>--auto-upgrade-channel<span class="w"> </span><span class="s1">&#39;stable&#39;</span>
 </span></code></pre></div>
+<h3 id="configure-with-azure-policy">Configure with Azure Policy<a class="headerlink" href="#configure-with-azure-policy" title="Permanent link">#</a></h3>
+<p>To address this issue at runtime use the following policies:</p>
+<ul>
+<li><a href="https://github.com/Azure/azure-policy/blob/master/built-in-policies/policyDefinitions/Kubernetes/AKS_Autoupgrade_Cluster_Audit.json">Azure Kubernetes Service Clusters should enable cluster auto-upgrade</a>
+  <code>/providers/Microsoft.Authorization/policyDefinitions/5c345cdf-2049-47e0-b8fe-b0e96bc2df35</code></li>
+</ul>
 <h2 id="links">Links<a class="headerlink" href="#links" title="Permanent link">#</a></h2>
 <ul>
-<li><a href="https://learn.microsoft.com/azure/architecture/framework/devops/automation-overview">Automation overview</a></li>
-<li><a href="https://docs.microsoft.com/azure/aks/supported-kubernetes-versions">Supported Kubernetes versions in Azure Kubernetes Service</a></li>
-<li><a href="https://docs.microsoft.com/azure/aks/support-policies">Support policies for Azure Kubernetes Service</a></li>
-<li><a href="https://docs.microsoft.com/azure/aks/upgrade-cluster#set-auto-upgrade-channel">Set auto-upgrade channel</a></li>
-<li><a href="https://docs.microsoft.com/azure/templates/microsoft.containerservice/managedclusters#ManagedClusterAutoUpgradeProfile">Azure deployment reference</a></li>
+<li><a href="https://learn.microsoft.com/azure/well-architected/operational-excellence/automate-tasks">OE:09 Task automation</a></li>
+<li><a href="https://learn.microsoft.com/azure/aks/supported-kubernetes-versions">Supported Kubernetes versions in Azure Kubernetes Service</a></li>
+<li><a href="https://learn.microsoft.com/azure/aks/support-policies">Support policies for Azure Kubernetes Service</a></li>
+<li><a href="https://learn.microsoft.com/azure/aks/auto-upgrade-cluster">Automatically upgrade an Azure Kubernetes Service (AKS) cluster</a></li>
+<li><a href="https://learn.microsoft.com/azure/templates/microsoft.containerservice/managedclusters">Azure deployment reference</a></li>
 </ul>
 
 
@@ -13312,7 +13336,7 @@ Normally upgraded weekly.</li>
     <span class="md-icon" title="Last update">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1-2.1-2M12.5 7v5.2l4 2.4-1 1L11 13V7h1.5M11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2v1.8Z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">December 2, 2022</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">March 24, 2024</span>
   </span>
 
     

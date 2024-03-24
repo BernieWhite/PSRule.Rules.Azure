@@ -36,6 +36,7 @@ resource web 'Microsoft.Web/sites@2023-01-01' = {
   properties: {
     serverFarmId: plan.id
     httpsOnly: true
+    clientAffinityEnabled: false
     siteConfig: {
       alwaysOn: true
       minTlsVersion: '1.2'
@@ -50,6 +51,29 @@ resource web 'Microsoft.Web/sites@2023-01-01' = {
           value: 'dotnet'
         }
       ]
+    }
+  }
+}
+
+// An example PHP Web App running on a Linux App Services Plan.
+resource php 'Microsoft.Web/sites@2023-01-01' = {
+  name: name
+  location: location
+  identity: {
+    type: 'SystemAssigned'
+  }
+  kind: 'web'
+  properties: {
+    serverFarmId: plan.id
+    httpsOnly: true
+    clientAffinityEnabled: false
+    siteConfig: {
+      alwaysOn: true
+      minTlsVersion: '1.2'
+      ftpsState: 'Disabled'
+      http20Enabled: true
+      healthCheckPath: '/healthz'
+      linuxFxVersion: 'PHP|8.2'
     }
   }
 }

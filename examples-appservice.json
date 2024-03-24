@@ -5,7 +5,7 @@
     "_generator": {
       "name": "bicep",
       "version": "0.26.54.24096",
-      "templateHash": "210994321631769997"
+      "templateHash": "10435733640424545318"
     }
   },
   "parameters": {
@@ -55,6 +55,7 @@
       "properties": {
         "serverFarmId": "[resourceId('Microsoft.Web/serverfarms', parameters('planName'))]",
         "httpsOnly": true,
+        "clientAffinityEnabled": false,
         "siteConfig": {
           "alwaysOn": true,
           "minTlsVersion": "1.2",
@@ -69,6 +70,32 @@
               "value": "dotnet"
             }
           ]
+        }
+      },
+      "dependsOn": [
+        "[resourceId('Microsoft.Web/serverfarms', parameters('planName'))]"
+      ]
+    },
+    {
+      "type": "Microsoft.Web/sites",
+      "apiVersion": "2023-01-01",
+      "name": "[parameters('name')]",
+      "location": "[parameters('location')]",
+      "identity": {
+        "type": "SystemAssigned"
+      },
+      "kind": "web",
+      "properties": {
+        "serverFarmId": "[resourceId('Microsoft.Web/serverfarms', parameters('planName'))]",
+        "httpsOnly": true,
+        "clientAffinityEnabled": false,
+        "siteConfig": {
+          "alwaysOn": true,
+          "minTlsVersion": "1.2",
+          "ftpsState": "Disabled",
+          "http20Enabled": true,
+          "healthCheckPath": "/healthz",
+          "linuxFxVersion": "PHP|8.2"
         }
       },
       "dependsOn": [

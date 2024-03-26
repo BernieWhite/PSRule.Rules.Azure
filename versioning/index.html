@@ -1645,6 +1645,25 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
+  <a href="#module-releases" class="md-nav__link">
+    <span class="md-ellipsis">
+      Module releases
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Module releases">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#stable-releases" class="md-nav__link">
+    <span class="md-ellipsis">
+      Stable releases
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#pre-releases" class="md-nav__link">
     <span class="md-ellipsis">
       Pre-releases
@@ -1652,11 +1671,25 @@
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
+        
+          <li class="md-nav__item">
   <a href="#experimental-features" class="md-nav__link">
     <span class="md-ellipsis">
       Experimental features
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#rule-lifecycle" class="md-nav__link">
+    <span class="md-ellipsis">
+      Rule lifecycle
     </span>
   </a>
   
@@ -12964,6 +12997,25 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
+  <a href="#module-releases" class="md-nav__link">
+    <span class="md-ellipsis">
+      Module releases
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Module releases">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#stable-releases" class="md-nav__link">
+    <span class="md-ellipsis">
+      Stable releases
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#pre-releases" class="md-nav__link">
     <span class="md-ellipsis">
       Pre-releases
@@ -12971,11 +13023,25 @@
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
+        
+          <li class="md-nav__item">
   <a href="#experimental-features" class="md-nav__link">
     <span class="md-ellipsis">
       Experimental features
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#rule-lifecycle" class="md-nav__link">
+    <span class="md-ellipsis">
+      Rule lifecycle
     </span>
   </a>
   
@@ -13035,20 +13101,43 @@
 
 
 <h1 id="changes-and-versioning">Changes and versioning<a class="headerlink" href="#changes-and-versioning" title="Permanent link">#</a></h1>
-<p>PSRule for Azure uses <a href="https://semver.org/">semantic versioning</a> to declare breaking changes.
-The latest module version can be installed from the PowerShell Gallery.
+<p>As PSRule evolves over time features and rules are added, updated, and removed.
+PSRule for Azure uses <a href="https://semver.org/">semantic versioning</a> to declare breaking changes.</p>
+<ul>
+<li>Major releases are infrequent in nature, but created on an as-needed basis.
+  You can check the <a href="../upgrade-notes/">upgrade notes</a> to plan for the changes of the next major release.</li>
+<li>Minor releases are shipped normally each month.</li>
+<li>Patch releases to fix bugs for the most recent minor version are released on an as-needed basis.</li>
+</ul>
+<p>The latest module version can be installed from the PowerShell Gallery and NuGet.
 For a list of module changes please see the <a href="https://aka.ms/ps-rule-azure/changelog">change log</a>.</p>
-<h2 id="pre-releases">Pre-releases<a class="headerlink" href="#pre-releases" title="Permanent link">#</a></h2>
+<h2 id="module-releases">Module releases<a class="headerlink" href="#module-releases" title="Permanent link">#</a></h2>
+<h3 id="stable-releases">Stable releases<a class="headerlink" href="#stable-releases" title="Permanent link">#</a></h3>
+<p>Stable modules versions are identified by a version number (<code>major.minor.patch</code>) such as <code>1.34.2</code>.
+A stable release is considered production ready and is recommended for general use.
+These versions are can be installed from the PowerShell Gallery or NuGet.</p>
+<p>When using PSRule extensions in GitHub and Azure Pipelines,
+the latest stable version is automatically installed by default when an existing version is not already installed.</p>
+<p>The version of PSRule and PSRule for Azure modules can be viewed by default in the output of each run.</p>
+<h3 id="pre-releases">Pre-releases<a class="headerlink" href="#pre-releases" title="Permanent link">#</a></h3>
 <p>Pre-release module versions are created on major commits and can be installed from the PowerShell Gallery.
 Module versions and change log details for pre-releases will be removed as stable releases are made available.</p>
+<p>You can identify a pre-release version by the pre-release suffix on the end of the version (<code>major.minor.patch-prerelease</code>).
+For example, <code>1.35.0-B0055</code>.</p>
+<p>To use a pre-release version you will need to install it specifically.
+To do this, insert a PowerShell step in your pipeline to install the module with the <code>-AllowPrerelease</code> switch.</p>
+<p>For example:</p>
+<div class="language-powershell highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="nb">Install-Module</span> <span class="n">-Name</span> <span class="s1">&#39;PSRule.Rules.Azure&#39;</span> <span class="n">-RequiredVersion</span> <span class="s1">&#39;1.35.0-B0055&#39;</span> <span class="n">-AllowPrerelease</span> <span class="n">-Force</span><span class="p">;</span>
+</span></code></pre></div>
 <div class="admonition important">
 <p class="admonition-title">Important</p>
 <p>Pre-release versions should be considered work in progress.
 These releases should not be used in production.
 We may introduce breaking changes between a pre-release as we work towards a stable version release.</p>
 </div>
-<h2 id="experimental-features">Experimental features<a class="headerlink" href="#experimental-features" title="Permanent link">#</a></h2>
+<h3 id="experimental-features">Experimental features<a class="headerlink" href="#experimental-features" title="Permanent link">#</a></h3>
 <p>From time to time we may ship experiential features.
+Experiential features are shipped so that customers can try them out and provide feedback.
 These features are generally marked experimental in the change log as these features ship.
 Experimental features may ship in stable releases, however to use them you may need to:</p>
 <ul>
@@ -13060,8 +13149,37 @@ Experimental features may ship in stable releases, however to use them you may n
 These features may be incomplete and should not be used in production.
 We may introduce breaking changes for experimental features as we work towards a general release for the feature.</p>
 </div>
+<h2 id="rule-lifecycle">Rule lifecycle<a class="headerlink" href="#rule-lifecycle" title="Permanent link">#</a></h2>
+<p>Common rules are added and updated on a regular basis.
+Occasionally rules are removed or deprecated.</p>
+<p>The following information outlines how changes to rules are managed within PSRule for Azure.</p>
+<ul>
+<li><strong>New</strong> - rules are introduced to PSRule for Azure on a regular basis as Azure evolves and recommended practices are identified.
+  Recommended practices are aligned to the <a href="https://learn.microsoft.com/azure/well-architected/">Azure Well-Architected Framework</a>.
+  Each rule is added to a rule set which identifies the quarter and year the rule was added/ updated (e.g. <code>2024_03</code>).</li>
+<li><strong>Bug fix</strong> - is a change that corrects a rule that is not working as intended.
+  These updates are shipped regularly in the next release.
+  Typically no action is required to receive these updates in addition to using the latest release.</li>
+<li><strong>Revision</strong> - is an improvement to the rule that changes the behavior of the rule.
+  Most commonly these changes are made to better align with the intent of the rule and Azure features as they evolve.
+  The changes log, GitHub issue, rule documentation, and rule set are updated to reflect the change.
+  <a href="../working-with-baselines/">Quarterly baselines</a> are provided to help manage these changes by providing a stable checkpoint for a given quarter.
+  These updates normally ship in the next minor release.</li>
+<li><strong>Rename</strong> - is a change to the rule name to better reflect the intent of the rule or to align with naming conventions.
+  These changes can occur when Microsoft products or features are renamed, similar rules are renamed to reduce customer confusion.
+  When a rule is renamed, the old name is added as an alias, this allows existing suppression to continue to work.
+  A warning will be generated if you are referencing the rule alias so you can update your configuration.
+  These updates normally ship in the next minor release.</li>
+<li>
+<p><strong>Deprecation/ removal</strong> - occurs when checking for the conditions of the rule is no longer necessary or it no longer aligns.
+  In these cases, the rule may be removed or if there is still some customer value it may be retained but not run by default.
+  For example, the rule may not align to the Well-Architected Framework but is still useful for some customers.
+  This is done by the means of a feature flag, by requiring a configuration value to be set.
+  Check the rule documentation for details on any configuration requirements.</p>
+</li>
+</ul>
 <h2 id="reporting-bugs">Reporting bugs<a class="headerlink" href="#reporting-bugs" title="Permanent link">#</a></h2>
-<p>If you experience an issue with an pre-release or experimental feature please let us know by logging an issue as a <a href="https://github.com/Azure/PSRule.Rules.Azure/issues">bug</a>.</p>
+<p>If you experience an issue with a feature or release please let us know by logging an issue as a <a href="https://github.com/Azure/PSRule.Rules.Azure/issues">bug</a>.</p>
 
 
 
@@ -13084,7 +13202,7 @@ We may introduce breaking changes for experimental features as we work towards a
     <span class="md-icon" title="Last update">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1-2.1-2M12.5 7v5.2l4 2.4-1 1L11 13V7h1.5M11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2v1.8Z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">May 22, 2023</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">March 26, 2024</span>
   </span>
 
     

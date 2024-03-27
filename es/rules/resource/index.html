@@ -3180,6 +3180,90 @@
   
   
     <li class="md-nav__item">
+      <a href="../../../en/rules/Azure.AI.DisableLocalAuth/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Azure.AI.DisableLocalAuth
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../en/rules/Azure.AI.ManagedIdentity/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Azure.AI.ManagedIdentity
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../en/rules/Azure.AI.PrivateEndpoints/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Azure.AI.PrivateEndpoints
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../en/rules/Azure.AI.PublicAccess/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Azure.AI.PublicAccess
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
       <a href="../../../en/rules/Azure.AKS.AuditLogs/" class="md-nav__link">
         
   
@@ -5348,90 +5432,6 @@
   
   <span class="md-ellipsis">
     Azure.CDN.UseFrontDoor
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../../en/rules/Azure.Cognitive.DisableLocalAuth/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Azure.Cognitive.DisableLocalAuth
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../../en/rules/Azure.Cognitive.ManagedIdentity/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Azure.Cognitive.ManagedIdentity
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../../en/rules/Azure.Cognitive.PrivateEndpoints/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Azure.Cognitive.PrivateEndpoints
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../../en/rules/Azure.Cognitive.PublicAccess/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Azure.Cognitive.PublicAccess
   </span>
   
 
@@ -12967,6 +12967,15 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#azure-ai" class="md-nav__link">
+    <span class="md-ellipsis">
+      Azure AI
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#azure-cache-for-redis" class="md-nav__link">
     <span class="md-ellipsis">
       Azure Cache for Redis
@@ -13033,15 +13042,6 @@
   <a href="#bastion" class="md-nav__link">
     <span class="md-ellipsis">
       Bastion
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#cognitive-services" class="md-nav__link">
-    <span class="md-ellipsis">
-      Cognitive Services
     </span>
   </a>
   
@@ -14189,6 +14189,43 @@
 </tr>
 </tbody>
 </table>
+<h2 id="azure-ai">Azure AI<a class="headerlink" href="#azure-ai" title="Permanent link">#</a></h2>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Synopsis</th>
+<th>Severity</th>
+<th>Level</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="Azure.AI.DisableLocalAuth.md">Azure.AI.DisableLocalAuth</a></td>
+<td>Authenticate requests to Azure AI services with Entra ID identities.</td>
+<td>Important</td>
+<td>Error</td>
+</tr>
+<tr>
+<td><a href="Azure.AI.ManagedIdentity.md">Azure.AI.ManagedIdentity</a></td>
+<td>Configure managed identities to access Azure resources.</td>
+<td>Important</td>
+<td>Error</td>
+</tr>
+<tr>
+<td><a href="Azure.AI.PrivateEndpoints.md">Azure.AI.PrivateEndpoints</a></td>
+<td>Use Private Endpoints to access Azure AI services accounts.</td>
+<td>Important</td>
+<td>Error</td>
+</tr>
+<tr>
+<td><a href="Azure.AI.PublicAccess.md">Azure.AI.PublicAccess</a></td>
+<td>Restrict access of Azure AI services to authorized virtual networks.</td>
+<td>Important</td>
+<td>Error</td>
+</tr>
+</tbody>
+</table>
 <h2 id="azure-cache-for-redis">Azure Cache for Redis<a class="headerlink" href="#azure-cache-for-redis" title="Permanent link">#</a></h2>
 <table>
 <thead>
@@ -14739,43 +14776,6 @@
 <td><a href="Azure.Bastion.Name.md">Azure.Bastion.Name</a></td>
 <td>Bastion hosts should meet naming requirements.</td>
 <td>Awareness</td>
-<td>Error</td>
-</tr>
-</tbody>
-</table>
-<h2 id="cognitive-services">Cognitive Services<a class="headerlink" href="#cognitive-services" title="Permanent link">#</a></h2>
-<table>
-<thead>
-<tr>
-<th>Name</th>
-<th>Synopsis</th>
-<th>Severity</th>
-<th>Level</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><a href="Azure.Cognitive.DisableLocalAuth.md">Azure.Cognitive.DisableLocalAuth</a></td>
-<td>Authenticate requests to Cognitive Services with Azure AD identities.</td>
-<td>Important</td>
-<td>Error</td>
-</tr>
-<tr>
-<td><a href="Azure.Cognitive.ManagedIdentity.md">Azure.Cognitive.ManagedIdentity</a></td>
-<td>Configure managed identities to access Azure resources.</td>
-<td>Important</td>
-<td>Error</td>
-</tr>
-<tr>
-<td><a href="Azure.Cognitive.PrivateEndpoints.md">Azure.Cognitive.PrivateEndpoints</a></td>
-<td>Use Private Endpoints to access Cognitive Services accounts.</td>
-<td>Important</td>
-<td>Error</td>
-</tr>
-<tr>
-<td><a href="Azure.Cognitive.PublicAccess.md">Azure.Cognitive.PublicAccess</a></td>
-<td>Restrict access of Cognitive Services accounts to authorized virtual networks.</td>
-<td>Important</td>
 <td>Error</td>
 </tr>
 </tbody>

@@ -13272,21 +13272,21 @@
 
 <h1 id="setup-azure-monitor-logs">Setup Azure Monitor logs<a class="headerlink" href="#setup-azure-monitor-logs" title="Permanent link">#</a></h1>
 <p>When analyzing Azure resources, you may want to capture the results of each analysis run.
-Azure Monitor provides a central storage location for log data through <a href="https://docs.microsoft.com/azure/azure-monitor/logs/log-analytics-overview">Log Analytics</a> workspaces.
+Azure Monitor provides a central storage location for log data through <a href="https://learn.microsoft.com/azure/azure-monitor/logs/log-analytics-overview">Log Analytics</a> workspaces.
 Centrally storing PSRule results enables the following scenarios:</p>
 <ul>
 <li><strong>Auditing and reporting</strong> &mdash; Report on analysis pass or failures.<ul>
-<li>Use Azure Monitor <a href="https://docs.microsoft.com/azure/azure-monitor/visualize/workbooks-overview">workbooks</a> or <a href="https://docs.microsoft.com/azure/azure-monitor/logs/queries">custom queries</a> to perform analysis and display results.</li>
-<li>Perform security analysis within <a href="https://docs.microsoft.com/azure/sentinel/overview">Microsoft Azure Sentinel</a> your a scalable, cloud-native <abbr title="security information event management">SIEM</abbr>.
+<li>Use Azure Monitor <a href="https://learn.microsoft.com/azure/azure-monitor/visualize/workbooks-overview">workbooks</a> or <a href="https://learn.microsoft.com/azure/azure-monitor/logs/queries">custom queries</a> to perform analysis and display results.</li>
+<li>Perform security analysis within <a href="https://learn.microsoft.com/azure/sentinel/overview">Microsoft Azure Sentinel</a> your a scalable, cloud-native <abbr title="security information event management">SIEM</abbr>.
   Alternatively, export log data from Log Analytics for ingestion into a third-party <abbr title="security information event management">SIEM</abbr>.</li>
 </ul>
 </li>
-<li><strong>Send notifications using alerts</strong> &mdash; Trigger <a href="https://docs.microsoft.com/azure/azure-monitor/alerts/alerts-log">alerts</a> to send notifications.</li>
-<li><strong>Integration with other workflows</strong> &mdash; Configure alerts and action groups to <a href="https://docs.microsoft.com/azure/azure-monitor/alerts/alerts-common-schema-integrations">trigger integration</a>.</li>
+<li><strong>Send notifications using alerts</strong> &mdash; Trigger <a href="https://learn.microsoft.com/azure/azure-monitor/alerts/alerts-log">alerts</a> to send notifications.</li>
+<li><strong>Integration with other workflows</strong> &mdash; Configure alerts and action groups to <a href="https://learn.microsoft.com/azure/azure-monitor/alerts/alerts-common-schema-integrations">trigger integration</a>.</li>
 </ul>
 <div class="admonition abstract">
 <p class="admonition-title">Abstract</p>
-<p>This topic covers setting up PSRule to log rule results into a <a href="https://docs.microsoft.com/azure/azure-monitor/logs/log-analytics-overview">Log Analytics</a> workspace.</p>
+<p>This topic covers setting up PSRule to log rule results into a <a href="https://learn.microsoft.com/azure/azure-monitor/logs/log-analytics-overview">Log Analytics</a> workspace.</p>
 </div>
 <h2 id="logging-into-a-log-analytics-workspace">Logging into a Log Analytics workspace<a class="headerlink" href="#logging-into-a-log-analytics-workspace" title="Permanent link">#</a></h2>
 <p>Logging of PSRule results into a workspace is done using the <em>PSRule for Azure Monitor</em> module.
@@ -13410,7 +13410,7 @@ To keep <code>MONITOR_WORKSPACE_KEY</code> secure, use an <a href="https://docs.
 <div class="admonition important">
 <p class="admonition-title">Important</p>
 <p>Variables can be configured in YAML, on the pipeline, or referenced from a defined variable group.
-To keep <code>MONITORWORKSPACEKEY</code> secure, use a <a href="https://docs.microsoft.com/azure/devops/pipelines/library/variable-groups">variable group</a> linked to an Azure Key Vault.</p>
+To keep <code>MONITORWORKSPACEKEY</code> secure, use a <a href="https://learn.microsoft.com/azure/devops/pipelines/library/variable-groups">variable group</a> linked to an Azure Key Vault.</p>
 </div>
 <h2 id="samples">Samples<a class="headerlink" href="#samples" title="Permanent link">#</a></h2>
 <p>Continue reading for some sample resources you can try once this integration is setup Azure Monitor integration.</p>
@@ -13459,7 +13459,7 @@ Review the <a href="https://learn.microsoft.com/azure/azure-monitor/visualize/wo
     <span class="md-icon" title="Last update">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1-2.1-2M12.5 7v5.2l4 2.4-1 1L11 13V7h1.5M11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2v1.8Z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">July 30, 2023</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">March 29, 2024</span>
   </span>
 
     
@@ -13486,6 +13486,11 @@ Review the <a href="https://learn.microsoft.com/azure/azure-monitor/visualize/wo
 
     
     <nav>
+      
+        <a href="https://github.com/lukemurraynz" class="md-author" title="@lukemurraynz">
+          
+          <img src="https://avatars.githubusercontent.com/u/24467442?v=4&size=72" alt="lukemurraynz">
+        </a>
       
         <a href="https://github.com/BernieWhite" class="md-author" title="@BernieWhite">
           

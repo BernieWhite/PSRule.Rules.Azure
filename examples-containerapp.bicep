@@ -45,6 +45,7 @@ resource containerEnv 'Microsoft.App/managedEnvironments@2023-05-01' = {
         sharedKey: workspace.listKeys().primarySharedKey
       }
     }
+    zoneRedundant: true
   }
 }
 
@@ -60,6 +61,9 @@ resource containerApp 'Microsoft.App/containerApps@2023-05-01' = {
     template: {
       revisionSuffix: revision
       containers: containers
+      scale: {
+        minReplicas: 2
+      }
     }
     configuration: {
       ingress: {

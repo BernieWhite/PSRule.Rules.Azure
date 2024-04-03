@@ -49,6 +49,24 @@ def module(markdown: str, page: Page, config: MkDocsConfig, files: Files) -> str
         replace, markdown, flags = re.I | re.M
     )
 
+def external(markdown: str, page: Page, config: MkDocsConfig, files: Files) -> str:
+    '''Replace external shortcodes in markdown.'''
+
+    # Callback for regular expression replacement.
+    def replace(match: re.Match) -> str:
+        type, args = match.groups()
+        args = args.strip()
+        if type == "avm":
+            return _external_reference_avm(args)
+
+        raise RuntimeError(f"Unknown shortcode external:{type}")
+
+    # Replace external shortcodes.
+    return re.sub(
+        r"<!-- external:(\w+)(.*?) -->",
+        replace, markdown, flags = re.I | re.M
+    )
+
 def _relative_uri(path: str, page: Page, files: Files) -> str:
     '''Get relative URI for a file including anchor.'''
 
@@ -119,4 +137,21 @@ def _badge_for_configuration(text: str, page: Page, files: Files) -> str:
     return _badge(
         icon = f"[:{icon}:]({href} 'Applies to configuration setting')",
         text = f"[{text}]({href})"
+    )
+
+def _reference_block(style: str, title: str, text: str = "") -> str:
+    '''Add an external reference block.'''
+
+    lines = text.replace('\r\n', '\n').replace('\r', '\n').replace('\n', '\n    ').strip()
+    return f"!!! {style} \"{title}\"\n    {lines}"
+
+def _external_reference_avm(text: str) -> str:
+    '''Create a reference to AVM.'''
+
+    avm_path = text.split(' ')[0]
+
+    return _reference_block(
+        style = "Example",
+        title = f"Configure with [Azure Verified Modules](https://github.com/Azure/bicep-registry-modules/tree/main/{avm_path})",
+        text = f"A pre-built module is avilable on the Azure Bicep public registry.\nTo reference the module, please use the following syntax: `br/public:{avm_path}:<version>`"
     )

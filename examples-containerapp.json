@@ -4,8 +4,8 @@
   "metadata": {
     "_generator": {
       "name": "bicep",
-      "version": "0.21.1.54444",
-      "templateHash": "14295091017114091018"
+      "version": "0.26.54.24096",
+      "templateHash": "13273570990713004075"
     }
   },
   "parameters": {
@@ -66,7 +66,8 @@
             "customerId": "[reference(resourceId('Microsoft.OperationalInsights/workspaces', parameters('workspaceId')), '2022-10-01').customerId]",
             "sharedKey": "[listKeys(resourceId('Microsoft.OperationalInsights/workspaces', parameters('workspaceId')), '2022-10-01').primarySharedKey]"
           }
-        }
+        },
+        "zoneRedundant": true
       }
     },
     {
@@ -81,7 +82,10 @@
         "environmentId": "[resourceId('Microsoft.App/managedEnvironments', parameters('envName'))]",
         "template": {
           "revisionSuffix": "[parameters('revision')]",
-          "containers": "[variables('containers')]"
+          "containers": "[variables('containers')]",
+          "scale": {
+            "minReplicas": 2
+          }
         },
         "configuration": {
           "ingress": {

@@ -2232,15 +2232,6 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#design-for-performance-efficiency" class="md-nav__link">
-    <span class="md-ellipsis">
-      Design for performance efficiency
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
   <a href="#pe02-capacity-planning" class="md-nav__link">
     <span class="md-ellipsis">
       PE:02 Capacity planning
@@ -2802,6 +2793,8 @@
   
     
     
+      
+        
       
         
       
@@ -6315,6 +6308,27 @@
   
   <span class="md-ellipsis">
     Azure.ContainerApp.APIVersion
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Azure.ContainerApp.AvailabilityZone/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Azure.ContainerApp.AvailabilityZone
   </span>
   
 
@@ -14080,15 +14094,6 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#design-for-performance-efficiency" class="md-nav__link">
-    <span class="md-ellipsis">
-      Design for performance efficiency
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
   <a href="#pe02-capacity-planning" class="md-nav__link">
     <span class="md-ellipsis">
       PE:02 Capacity planning
@@ -15117,6 +15122,12 @@
 <td>Awareness</td>
 <td>Warning</td>
 </tr>
+<tr>
+<td><a href="../Azure.ContainerApp.Name/">Azure.ContainerApp.Name</a></td>
+<td>Container Apps should meet naming requirements.</td>
+<td>Awareness</td>
+<td>Error</td>
+</tr>
 </tbody>
 </table>
 <h3 id="oe05-infrastructure-as-code">OE:05 Infrastructure as code<a class="headerlink" href="#oe05-infrastructure-as-code" title="Permanent link">#</a></h3>
@@ -15355,12 +15366,6 @@
 <td><a href="../Azure.ContainerApp.APIVersion/">Azure.ContainerApp.APIVersion</a></td>
 <td>Migrate from retired API version to a supported version.</td>
 <td>Important</td>
-<td>Error</td>
-</tr>
-<tr>
-<td><a href="../Azure.ContainerApp.Name/">Azure.ContainerApp.Name</a></td>
-<td>Container Apps should meet naming requirements.</td>
-<td>Awareness</td>
 <td>Error</td>
 </tr>
 <tr>
@@ -15809,25 +15814,6 @@
 </tr>
 </tbody>
 </table>
-<h3 id="design-for-performance-efficiency">Design for performance efficiency<a class="headerlink" href="#design-for-performance-efficiency" title="Permanent link">#</a></h3>
-<table>
-<thead>
-<tr>
-<th>Name</th>
-<th>Synopsis</th>
-<th>Severity</th>
-<th>Level</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><a href="../Azure.ContainerApp.DisableAffinity/">Azure.ContainerApp.DisableAffinity</a></td>
-<td>Disable session affinity to prevent unbalanced distribution.</td>
-<td>Important</td>
-<td>Error</td>
-</tr>
-</tbody>
-</table>
 <h3 id="pe02-capacity-planning">PE:02 Capacity planning<a class="headerlink" href="#pe02-capacity-planning" title="Permanent link">#</a></h3>
 <table>
 <thead>
@@ -15886,6 +15872,12 @@
 <tr>
 <td><a href="../Azure.AKS.NodeMinPods/">Azure.AKS.NodeMinPods</a></td>
 <td>Azure Kubernetes Cluster (AKS) nodes should use a minimum number of pods.</td>
+<td>Important</td>
+<td>Error</td>
+</tr>
+<tr>
+<td><a href="../Azure.ContainerApp.DisableAffinity/">Azure.ContainerApp.DisableAffinity</a></td>
+<td>Disable session affinity to prevent unbalanced distribution.</td>
 <td>Important</td>
 <td>Error</td>
 </tr>
@@ -16337,6 +16329,12 @@
 </thead>
 <tbody>
 <tr>
+<td><a href="../Azure.ContainerApp.AvailabilityZone/">Azure.ContainerApp.AvailabilityZone</a></td>
+<td>Use Container Apps environments that are zone redundant to improve reliability.</td>
+<td>Important</td>
+<td>Error</td>
+</tr>
+<tr>
 <td><a href="../Azure.LB.AvailabilityZone/">Azure.LB.AvailabilityZone</a></td>
 <td>Load balancers deployed with Standard SKU should be zone-redundant for high availability.</td>
 <td>Important</td>
@@ -16620,12 +16618,6 @@
 <td><a href="../Azure.AppGw.UseWAF/">Azure.AppGw.UseWAF</a></td>
 <td>Internet accessible Application Gateways should use protect endpoints with WAF.</td>
 <td>Critical</td>
-<td>Error</td>
-</tr>
-<tr>
-<td><a href="../Azure.ContainerApp.PublicAccess/">Azure.ContainerApp.PublicAccess</a></td>
-<td>Ensure public network access for Container Apps environment is disabled.</td>
-<td>Important</td>
 <td>Error</td>
 </tr>
 <tr>
@@ -17307,18 +17299,6 @@
 <td>Error</td>
 </tr>
 <tr>
-<td><a href="../Azure.ContainerApp.ExternalIngress/">Azure.ContainerApp.ExternalIngress</a></td>
-<td>Limit inbound communication for Container Apps is limited to callers within the Container Apps Environment.</td>
-<td>Important</td>
-<td>Error</td>
-</tr>
-<tr>
-<td><a href="../Azure.ContainerApp.RestrictIngress/">Azure.ContainerApp.RestrictIngress</a></td>
-<td>IP ingress restrictions mode should be set to allow action for all rules defined.</td>
-<td>Important</td>
-<td>Error</td>
-</tr>
-<tr>
 <td><a href="../Azure.Firewall.Mode/">Azure.Firewall.Mode</a></td>
 <td>Deny high confidence malicious IP addresses and domains on classic managed Azure Firewalls.</td>
 <td>Critical</td>
@@ -17712,6 +17692,24 @@
 <tr>
 <td><a href="../Azure.AKS.AuthorizedIPs/">Azure.AKS.AuthorizedIPs</a></td>
 <td>Restrict access to API server endpoints to authorized IP addresses.</td>
+<td>Important</td>
+<td>Error</td>
+</tr>
+<tr>
+<td><a href="../Azure.ContainerApp.ExternalIngress/">Azure.ContainerApp.ExternalIngress</a></td>
+<td>Limit inbound communication for Container Apps is limited to callers within the Container Apps Environment.</td>
+<td>Important</td>
+<td>Error</td>
+</tr>
+<tr>
+<td><a href="../Azure.ContainerApp.PublicAccess/">Azure.ContainerApp.PublicAccess</a></td>
+<td>Ensure public network access for Container Apps environment is disabled.</td>
+<td>Important</td>
+<td>Error</td>
+</tr>
+<tr>
+<td><a href="../Azure.ContainerApp.RestrictIngress/">Azure.ContainerApp.RestrictIngress</a></td>
+<td>IP ingress restrictions mode should be set to allow action for all rules defined.</td>
 <td>Important</td>
 <td>Error</td>
 </tr>

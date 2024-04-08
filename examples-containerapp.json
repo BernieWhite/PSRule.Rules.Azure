@@ -5,7 +5,7 @@
     "_generator": {
       "name": "bicep",
       "version": "0.26.54.24096",
-      "templateHash": "13273570990713004075"
+      "templateHash": "3735352956667233547"
     }
   },
   "parameters": {
@@ -17,6 +17,8 @@
     },
     "appName": {
       "type": "string",
+      "minLength": 2,
+      "maxLength": 32,
       "metadata": {
         "description": "The name of the container app."
       }
@@ -32,6 +34,12 @@
       "type": "string",
       "metadata": {
         "description": "The name of a Log Analytics workspace"
+      }
+    },
+    "subnetId": {
+      "type": "string",
+      "metadata": {
+        "description": "The resource ID of a VNET subnet."
       }
     },
     "revision": {
@@ -67,7 +75,17 @@
             "sharedKey": "[listKeys(resourceId('Microsoft.OperationalInsights/workspaces', parameters('workspaceId')), '2022-10-01').primarySharedKey]"
           }
         },
-        "zoneRedundant": true
+        "zoneRedundant": true,
+        "workloadProfiles": [
+          {
+            "name": "Consumption",
+            "workloadProfileType": "Consumption"
+          }
+        ],
+        "vnetConfiguration": {
+          "infrastructureSubnetId": "[parameters('subnetId')]",
+          "internal": true
+        }
       }
     },
     {

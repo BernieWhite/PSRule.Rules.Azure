@@ -6,6 +6,8 @@
 @description('The name of the app environment.')
 param envName string
 
+@minLength(2)
+@maxLength(32)
 @description('The name of the container app.')
 param appName string
 
@@ -14,6 +16,9 @@ param location string = resourceGroup().location
 
 @description('The name of a Log Analytics workspace')
 param workspaceId string
+
+@description('The resource ID of a VNET subnet.')
+param subnetId string
 
 @description('The revision of the container app.')
 param revision string
@@ -33,7 +38,7 @@ var containers = [
   }
 ]
 
-// An example App Environment
+// An example App Environment configured with a consumption workload profile.
 resource containerEnv 'Microsoft.App/managedEnvironments@2023-05-01' = {
   name: envName
   location: location
@@ -46,10 +51,20 @@ resource containerEnv 'Microsoft.App/managedEnvironments@2023-05-01' = {
       }
     }
     zoneRedundant: true
+    workloadProfiles: [
+      {
+        name: 'Consumption'
+        workloadProfileType: 'Consumption'
+      }
+    ]
+    vnetConfiguration: {
+      infrastructureSubnetId: subnetId
+      internal: true
+    }
   }
 }
 
-// An example Container App
+// An example Container App using a minimum of 2 replicas.
 resource containerApp 'Microsoft.App/containerApps@2023-05-01' = {
   name: appName
   location: location

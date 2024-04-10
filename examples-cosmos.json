@@ -4,12 +4,12 @@
   "metadata": {
     "_generator": {
       "name": "bicep",
-      "version": "0.4.613.9944",
-      "templateHash": "13433916459456835935"
+      "version": "0.26.54.24096",
+      "templateHash": "12996554638761229869"
     }
   },
   "parameters": {
-    "dbAccountName": {
+    "name": {
       "type": "string",
       "metadata": {
         "description": "The name of the Cosmos database account."
@@ -23,14 +23,14 @@
       }
     }
   },
-  "functions": [],
   "resources": [
     {
       "type": "Microsoft.DocumentDB/databaseAccounts",
-      "apiVersion": "2021-06-15",
-      "name": "[parameters('dbAccountName')]",
+      "apiVersion": "2023-11-15",
+      "name": "[parameters('name')]",
       "location": "[parameters('location')]",
       "properties": {
+        "enableFreeTier": false,
         "consistencyPolicy": {
           "defaultConsistencyLevel": "Session"
         },
@@ -39,23 +39,24 @@
           {
             "locationName": "[parameters('location')]",
             "failoverPriority": 0,
-            "isZoneRedundant": false
+            "isZoneRedundant": true
           }
         ],
-        "disableKeyBasedMetadataWriteAccess": true
+        "disableKeyBasedMetadataWriteAccess": true,
+        "minimalTlsVersion": "Tls12"
       }
     },
     {
       "type": "Microsoft.DocumentDB/databaseAccounts/sqlDatabases",
-      "apiVersion": "2021-04-15",
-      "name": "[format('{0}/{1}', parameters('dbAccountName'), 'sql-001')]",
+      "apiVersion": "2023-11-15",
+      "name": "[format('{0}/{1}', parameters('name'), 'sql-001')]",
       "properties": {
         "resource": {
           "id": "sql-001"
         }
       },
       "dependsOn": [
-        "[resourceId('Microsoft.DocumentDB/databaseAccounts', parameters('dbAccountName'))]"
+        "[resourceId('Microsoft.DocumentDB/databaseAccounts', parameters('name'))]"
       ]
     }
   ]

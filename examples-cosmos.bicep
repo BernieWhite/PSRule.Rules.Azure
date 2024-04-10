@@ -4,16 +4,17 @@
 // Bicep documentation examples
 
 @description('The name of the Cosmos database account.')
-param dbAccountName string
+param name string
 
 @description('The location resources will be deployed.')
 param location string = resourceGroup().location
 
-// An example Cosmos DB account
-resource dbAccount 'Microsoft.DocumentDB/databaseAccounts@2021-06-15' = {
-  name: dbAccountName
+// An example Cosmos DB account using the NoSQL API.
+resource account 'Microsoft.DocumentDB/databaseAccounts@2023-11-15' = {
+  name: name
   location: location
   properties: {
+    enableFreeTier: false
     consistencyPolicy: {
       defaultConsistencyLevel: 'Session'
     }
@@ -22,16 +23,17 @@ resource dbAccount 'Microsoft.DocumentDB/databaseAccounts@2021-06-15' = {
       {
         locationName: location
         failoverPriority: 0
-        isZoneRedundant: false
+        isZoneRedundant: true
       }
     ]
     disableKeyBasedMetadataWriteAccess: true
+    minimalTlsVersion: 'Tls12'
   }
 }
 
-resource accountName_databaseName 'Microsoft.DocumentDB/databaseAccounts/sqlDatabases@2021-04-15' = {
+resource database 'Microsoft.DocumentDB/databaseAccounts/sqlDatabases@2023-11-15' = {
   name: 'sql-001'
-  parent: dbAccount
+  parent: account
   properties: {
     resource: {
       id: 'sql-001'

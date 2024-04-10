@@ -21,7 +21,7 @@ log = logging.getLogger(f"mkdocs")
 def on_page_markdown(markdown: str, *, page: Page, config: MkDocsConfig, files: Files) -> str:
     '''Hook on_page_markdown event.'''
 
-    return module(markdown, page, config, files)
+    return external(module(markdown, page, config, files), page, config, files)
 
 #
 # Supporting functions

@@ -4,8 +4,8 @@
   "metadata": {
     "_generator": {
       "name": "bicep",
-      "version": "0.25.53.49325",
-      "templateHash": "15957041710021771979"
+      "version": "0.26.54.24096",
+      "templateHash": "14583622702129964730"
     }
   },
   "parameters": {
@@ -21,14 +21,6 @@
       "metadata": {
         "description": "The location resources will be deployed."
       }
-    },
-    "asgName": {
-      "type": "string",
-      "defaultValue": "asg-001"
-    },
-    "nsgName": {
-      "type": "string",
-      "defaultValue": "nsg-001"
     },
     "lbName": {
       "type": "string",
@@ -171,7 +163,8 @@
       "name": "[parameters('lbName')]",
       "location": "[parameters('location')]",
       "sku": {
-        "name": "Standard"
+        "name": "Standard",
+        "tier": "Regional"
       },
       "properties": {
         "frontendIPConfigurations": [
@@ -193,6 +186,128 @@
       },
       "dependsOn": [
         "[resourceId('Microsoft.Network/virtualNetworks', parameters('name'))]"
+      ]
+    },
+    {
+      "type": "Microsoft.Network/publicIPAddresses",
+      "apiVersion": "2023-09-01",
+      "name": "pip-001",
+      "location": "[parameters('location')]",
+      "sku": {
+        "name": "Standard",
+        "tier": "Regional"
+      },
+      "properties": {
+        "publicIPAddressVersion": "IPv4",
+        "publicIPAllocationMethod": "Static",
+        "idleTimeoutInMinutes": 4
+      },
+      "zones": [
+        "1",
+        "2",
+        "3"
+      ]
+    },
+    {
+      "type": "Microsoft.Network/loadBalancers",
+      "apiVersion": "2023-09-01",
+      "name": "[parameters('lbName')]",
+      "location": "[parameters('location')]",
+      "sku": {
+        "name": "Standard",
+        "tier": "Regional"
+      },
+      "properties": {
+        "frontendIPConfigurations": [
+          {
+            "name": "frontend1",
+            "properties": {
+              "privateIPAddressVersion": "IPv4",
+              "privateIPAllocationMethod": "Dynamic",
+              "subnet": {
+                "id": "[resourceId('Microsoft.Network/virtualNetworks/subnets', parameters('name'), 'GatewaySubnet')]"
+              }
+            },
+            "zones": [
+              "2",
+              "3",
+              "1"
+            ]
+          }
+        ],
+        "backendAddressPools": [
+          {
+            "name": "backend1"
+          }
+        ],
+        "probes": [
+          {
+            "name": "https",
+            "properties": {
+              "protocol": "HTTPS",
+              "port": 443,
+              "requestPath": "/health",
+              "intervalInSeconds": 5,
+              "numberOfProbes": 1
+            }
+          }
+        ],
+        "loadBalancingRules": [
+          {
+            "name": "https",
+            "properties": {
+              "frontendIPConfiguration": {
+                "id": "[resourceId('Microsoft.Network/loadBalancers/frontendIPConfigurations', parameters('lbName'), 'frontend1')]"
+              },
+              "frontendPort": 443,
+              "backendPort": 443,
+              "enableFloatingIP": false,
+              "idleTimeoutInMinutes": 4,
+              "protocol": "TCP",
+              "loadDistribution": "Default",
+              "probe": {
+                "id": "[resourceId('Microsoft.Network/loadBalancers/probes', parameters('lbName'), 'https')]"
+              },
+              "disableOutboundSnat": true,
+              "enableTcpReset": false,
+              "backendAddressPools": [
+                {
+                  "id": "[resourceId('Microsoft.Network/loadBalancers/backendAddressPools', parameters('lbName'), 'backend1')]"
+                }
+              ]
+            }
+          }
+        ],
+        "inboundNatRules": [],
+        "outboundRules": []
+      },
+      "dependsOn": [
+        "[resourceId('Microsoft.Network/virtualNetworks/subnets', parameters('name'), 'GatewaySubnet')]"
+      ]
+    },
+    {
+      "type": "Microsoft.Network/loadBalancers",
+      "apiVersion": "2023-09-01",
+      "name": "[parameters('lbName')]",
+      "location": "[parameters('location')]",
+      "sku": {
+        "name": "Standard",
+        "tier": "Regional"
+      },
+      "properties": {
+        "frontendIPConfigurations": [
+          {
+            "name": "frontendIPConfig",
+            "properties": {
+              "publicIPAddress": {
+                "id": "[resourceId('Microsoft.Network/publicIPAddresses', 'pip-001')]"
+              }
+            }
+          }
+        ]
+      },
+      "dependsOn": [
+        "[resourceId('Microsoft.Network/publicIPAddresses', 'pip-001')]"
       ]
     },
     {

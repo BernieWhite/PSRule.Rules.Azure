@@ -9,8 +9,6 @@ param name string
 @description('The location resources will be deployed.')
 param location string = resourceGroup().location
 
-param asgName string = 'asg-001'
-param nsgName string = 'nsg-001'
 param lbName string = 'lb-001'
 
 // An example virtual network (VNET) with NSG configured.
@@ -139,12 +137,13 @@ resource asg 'Microsoft.Network/applicationSecurityGroups@2023-09-01' = {
   properties: {}
 }
 
-// An example internal load balancer.
-resource lb_001 'Microsoft.Network/loadBalancers@2023-09-01' = {
+// An example internal load balancer with availability zones configured.
+resource internal_lb 'Microsoft.Network/loadBalancers@2023-09-01' = {
   name: lbName
   location: location
   sku: {
     name: 'Standard'
+    tier: 'Regional'
   }
   properties: {
     frontendIPConfigurations: [
@@ -161,6 +160,122 @@ resource lb_001 'Microsoft.Network/loadBalancers@2023-09-01' = {
           '2'
           '3'
         ]
+      }
+    ]
+  }
+}
+
+// An example zone redundant public IP address.
+resource pip 'Microsoft.Network/publicIPAddresses@2023-09-01' = {
+  name: 'pip-001'
+  location: location
+  sku: {
+    name: 'Standard'
+    tier: 'Regional'
+  }
+  properties: {
+    publicIPAddressVersion: 'IPv4'
+    publicIPAllocationMethod: 'Static'
+    idleTimeoutInMinutes: 4
+  }
+  zones: [
+    '1'
+    '2'
+    '3'
+  ]
+}
+
+// An example load balancer with serving HTTPS from a backend pool.
+resource https_lb 'Microsoft.Network/loadBalancers@2023-09-01' = {
+  name: lbName
+  location: location
+  sku: {
+    name: 'Standard'
+    tier: 'Regional'
+  }
+  properties: {
+    frontendIPConfigurations: [
+      {
+        name: 'frontend1'
+        properties: {
+          privateIPAddressVersion: 'IPv4'
+          privateIPAllocationMethod: 'Dynamic'
+          subnet: {
+            id: subnet01.id
+          }
+        }
+        zones: [
+          '2'
+          '3'
+          '1'
+        ]
+      }
+    ]
+    backendAddressPools: [
+      {
+        name: 'backend1'
+      }
+    ]
+    probes: [
+      {
+        name: 'https'
+        properties: {
+          protocol: 'HTTPS'
+          port: 443
+          requestPath: '/health'
+          intervalInSeconds: 5
+          numberOfProbes: 1
+        }
+      }
+    ]
+    loadBalancingRules: [
+      {
+        name: 'https'
+        properties: {
+          frontendIPConfiguration: {
+            id: resourceId('Microsoft.Network/loadBalancers/frontendIPConfigurations', lbName, 'frontend1')
+          }
+          frontendPort: 443
+          backendPort: 443
+          enableFloatingIP: false
+          idleTimeoutInMinutes: 4
+          protocol: 'TCP'
+          loadDistribution: 'Default'
+          probe: {
+            id: resourceId('Microsoft.Network/loadBalancers/probes', lbName, 'https')
+          }
+          disableOutboundSnat: true
+          enableTcpReset: false
+          backendAddressPools: [
+            {
+              id: resourceId('Microsoft.Network/loadBalancers/backendAddressPools', lbName, 'backend1')
+            }
+          ]
+        }
+      }
+    ]
+    inboundNatRules: []
+    outboundRules: []
+  }
+}
+
+// An example public load balancer.
+resource public_lb 'Microsoft.Network/loadBalancers@2023-09-01' = {
+  name: lbName
+  location: location
+  sku: {
+    name: 'Standard'
+    tier: 'Regional'
+  }
+  properties: {
+    frontendIPConfigurations: [
+      {
+        name: 'frontendIPConfig'
+        properties: {
+          publicIPAddress: {
+            id: pip.id
+          }
+        }
       }
     ]
   }

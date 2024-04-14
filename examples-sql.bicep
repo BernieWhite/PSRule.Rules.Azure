@@ -13,7 +13,7 @@ param adminLogin string
 param adminPrincipalId string
 
 // An example Azure SQL Database logical server.
-resource server 'Microsoft.Sql/servers@2022-11-01-preview' = {
+resource server 'Microsoft.Sql/servers@2023-08-01-preview' = {
   name: name
   location: location
   identity: {
@@ -34,7 +34,7 @@ resource server 'Microsoft.Sql/servers@2022-11-01-preview' = {
 }
 
 // An example administrator configuration for an Azure SQL Database logical server.
-resource sqlAdministrator 'Microsoft.Sql/servers/administrators@2022-02-01-preview' = {
+resource sqlAdministrator 'Microsoft.Sql/servers/administrators@2023-08-01-preview' = {
   parent: server
   name: 'ActiveDirectory'
   properties: {
@@ -45,7 +45,7 @@ resource sqlAdministrator 'Microsoft.Sql/servers/administrators@2022-02-01-previ
 }
 
 // An example configuration to enable SQL Advanced Threat Protection for an Azure SQL Database logical server.
-resource defenderSql 'Microsoft.Sql/servers/securityAlertPolicies@2022-11-01-preview' = {
+resource defenderSql 'Microsoft.Sql/servers/securityAlertPolicies@2023-08-01-preview' = {
   name: 'default'
   parent: server
   properties: {
@@ -54,7 +54,7 @@ resource defenderSql 'Microsoft.Sql/servers/securityAlertPolicies@2022-11-01-pre
 }
 
 // An example configuration to enable Azure SQL auditing for an Azure SQL Database logical server.
-resource sqlAuditSettings 'Microsoft.Sql/servers/auditingSettings@2022-08-01-preview' = {
+resource sqlAuditSettings 'Microsoft.Sql/servers/auditingSettings@2023-08-01-preview' = {
   name: 'default'
   parent: server
   properties: {

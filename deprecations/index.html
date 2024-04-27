@@ -1651,6 +1651,15 @@
   
 </li>
         
+          <li class="md-nav__item">
+  <a href="#realignment-of-rules" class="md-nav__link">
+    <span class="md-ellipsis">
+      Realignment of rules
+    </span>
+  </a>
+  
+</li>
+        
       </ul>
     </nav>
   
@@ -2044,6 +2053,12 @@
   
     
     
+      
+        
+      
+        
+      
+        
       
         
       
@@ -6443,6 +6458,69 @@
   
   <span class="md-ellipsis">
     Azure.DevBox.ProjectLimit
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../en/rules/Azure.EntraDS.NTLM/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Azure.EntraDS.NTLM
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../en/rules/Azure.EntraDS.RC4/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Azure.EntraDS.RC4
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../en/rules/Azure.EntraDS.TLS/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Azure.EntraDS.TLS
   </span>
   
 
@@ -13112,6 +13190,15 @@
   
 </li>
         
+          <li class="md-nav__item">
+  <a href="#realignment-of-rules" class="md-nav__link">
+    <span class="md-ellipsis">
+      Realignment of rules
+    </span>
+  </a>
+  
+</li>
+        
       </ul>
     </nav>
   
@@ -13213,7 +13300,7 @@ Configuring these options prior to that release will have no affect.
 For details on configuring these options see <a href="../upgrade-notes/#realigned-configuration-option-names">upgrade notes</a> for details.</p>
 </div>
 <h3 id="realignment-of-rule-names-for-network-interfaces">Realignment of rule names for network interfaces<a class="headerlink" href="#realignment-of-rule-names-for-network-interfaces" title="Permanent link">#</a></h3>
-<p>Orginally when many of the rules targeting network interfaces were created, network interfaces only applied to virtual machines.
+<p>Originally when many of the rules targeting network interfaces were created, network interfaces only applied to virtual machines.
 Today, network interfaces can be attached to different types of resources including:</p>
 <ul>
 <li>Virtual machines.</li>
@@ -13236,6 +13323,53 @@ Possible locations where the old rule names may be used include:</p>
 <li>Within the <code>rule.exclude</code> or <code>rule.include</code> option defined within a custom baseline.</li>
 <li>Other custom scripts that run PSRule cmdlets directly.</li>
 </ul>
+<h3 id="realignment-of-rules">Realignment of rules<a class="headerlink" href="#realignment-of-rules" title="Permanent link">#</a></h3>
+<p>The Well-Architected Framework and PSRule are regularly updated.
+As a result, some rules may not have a clear linkage with the latest guidance or practices.</p>
+<p>To ensure that PSRule for Azure continues to provide clear guidance, examples, and references some rules will be removed.
+The following rules are deprecated and will be removed in v2:</p>
+<table>
+<thead>
+<tr>
+<th>Reference ID</th>
+<th>Name</th>
+<th>Deprecated from</th>
+<th>Reason</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>AZR-000217</td>
+<td>Azure.Template.UseParameters</td>
+<td>v1.36.0</td>
+<td>Linting already handled by Bicep linter. No clear linkage to WAF.</td>
+</tr>
+<tr>
+<td>AZR-000219</td>
+<td>Azure.Template.UseVariables</td>
+<td>v1.36.0</td>
+<td>Linting already handled by Bicep linter. No clear linkage to WAF.</td>
+</tr>
+<tr>
+<td>AZR-000218</td>
+<td>Azure.Template.DefineParameters</td>
+<td>v1.36.0</td>
+<td>No applicable to Bicep. No clear linkage to WAF.</td>
+</tr>
+<tr>
+<td>AZR-000233</td>
+<td>Azure.Template.ValidSecretRef</td>
+<td>v1.36.0</td>
+<td>Linting already handled by Bicep linter. No clear linkage to WAF.</td>
+</tr>
+</tbody>
+</table>
+<p>Deprecated rules will not be run by default, but can be enabled by:</p>
+<ul>
+<li>Explicitly configuring the rule name or ID in the <code>Rule.Include</code> option, when a baseline not used.</li>
+<li>Adding the rule name or ID to the <code>Rule.Include</code> option in a custom baseline.</li>
+</ul>
+<p>From v2, the deprecated rules will be removed and will no longer be available in new releases.</p>
 
 
 
@@ -13258,7 +13392,7 @@ Possible locations where the old rule names may be used include:</p>
     <span class="md-icon" title="Last update">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1-2.1-2M12.5 7v5.2l4 2.4-1 1L11 13V7h1.5M11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2v1.8Z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">December 6, 2023</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">April 27, 2024</span>
   </span>
 
     

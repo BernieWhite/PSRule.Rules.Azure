@@ -22,7 +22,7 @@
       
       
       <link rel="icon" href="../../../assets/ms_icon.png">
-      <meta name="generator" content="mkdocs-1.6.0, mkdocs-material-9.5.19">
+      <meta name="generator" content="mkdocs-1.6.0, mkdocs-material-9.5.20">
     
     
       
@@ -2205,15 +2205,6 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#application-design" class="md-nav__link">
-    <span class="md-ellipsis">
-      Application design
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
   <a href="#application-scalability" class="md-nav__link">
     <span class="md-ellipsis">
       Application scalability
@@ -2253,6 +2244,15 @@
   <a href="#pe05-scaling-and-partitioning" class="md-nav__link">
     <span class="md-ellipsis">
       PE:05 Scaling and partitioning
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#pe07-code-and-infrastructure" class="md-nav__link">
+    <span class="md-ellipsis">
+      PE:07 Code and infrastructure
     </span>
   </a>
   
@@ -2301,7 +2301,7 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#application-design_1" class="md-nav__link">
+  <a href="#application-design" class="md-nav__link">
     <span class="md-ellipsis">
       Application design
     </span>
@@ -14159,15 +14159,6 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#application-design" class="md-nav__link">
-    <span class="md-ellipsis">
-      Application design
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
   <a href="#application-scalability" class="md-nav__link">
     <span class="md-ellipsis">
       Application scalability
@@ -14207,6 +14198,15 @@
   <a href="#pe05-scaling-and-partitioning" class="md-nav__link">
     <span class="md-ellipsis">
       PE:05 Scaling and partitioning
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#pe07-code-and-infrastructure" class="md-nav__link">
+    <span class="md-ellipsis">
+      PE:07 Code and infrastructure
     </span>
   </a>
   
@@ -14255,7 +14255,7 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#application-design_1" class="md-nav__link">
+  <a href="#application-design" class="md-nav__link">
     <span class="md-ellipsis">
       Application design
     </span>
@@ -14963,12 +14963,6 @@
 <td>Error</td>
 </tr>
 <tr>
-<td><a href="../Azure.AppInsights.Workspace/">Azure.AppInsights.Workspace</a></td>
-<td>Configure Application Insights resources to store data in workspaces.</td>
-<td>Important</td>
-<td>Error</td>
-</tr>
-<tr>
 <td><a href="../Azure.DataFactory.Version/">Azure.DataFactory.Version</a></td>
 <td>Consider migrating to DataFactory v2.</td>
 <td>Awareness</td>
@@ -15264,6 +15258,12 @@
 </tr>
 </thead>
 <tbody>
+<tr>
+<td><a href="../Azure.AppInsights.Workspace/">Azure.AppInsights.Workspace</a></td>
+<td>Configure Application Insights resources to store data a workspace.</td>
+<td>Important</td>
+<td>Error</td>
+</tr>
 <tr>
 <td><a href="../Azure.VM.AMA/">Azure.VM.AMA</a></td>
 <td>Use Azure Monitor Agent for collecting monitoring data from VMs.</td>
@@ -15837,31 +15837,6 @@
 </tr>
 </tbody>
 </table>
-<h3 id="application-design">Application design<a class="headerlink" href="#application-design" title="Permanent link">#</a></h3>
-<table>
-<thead>
-<tr>
-<th>Name</th>
-<th>Synopsis</th>
-<th>Severity</th>
-<th>Level</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><a href="../Azure.AppService.ARRAffinity/">Azure.AppService.ARRAffinity</a></td>
-<td>Disable client affinity for stateless services.</td>
-<td>Awareness</td>
-<td>Error</td>
-</tr>
-<tr>
-<td><a href="../Azure.AppService.HTTP2/">Azure.AppService.HTTP2</a></td>
-<td>Use HTTP/2 instead of HTTP/1.x to improve protocol efficiency.</td>
-<td>Awareness</td>
-<td>Error</td>
-</tr>
-</tbody>
-</table>
 <h3 id="application-scalability">Application scalability<a class="headerlink" href="#application-scalability" title="Permanent link">#</a></h3>
 <table>
 <thead>
@@ -15968,9 +15943,34 @@
 <td>Error</td>
 </tr>
 <tr>
+<td><a href="../Azure.AppService.ARRAffinity/">Azure.AppService.ARRAffinity</a></td>
+<td>Disable client affinity for stateless services.</td>
+<td>Awareness</td>
+<td>Error</td>
+</tr>
+<tr>
 <td><a href="../Azure.ContainerApp.DisableAffinity/">Azure.ContainerApp.DisableAffinity</a></td>
 <td>Disable session affinity to prevent unbalanced distribution.</td>
 <td>Important</td>
+<td>Error</td>
+</tr>
+</tbody>
+</table>
+<h3 id="pe07-code-and-infrastructure">PE:07 Code and infrastructure<a class="headerlink" href="#pe07-code-and-infrastructure" title="Permanent link">#</a></h3>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Synopsis</th>
+<th>Severity</th>
+<th>Level</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="../Azure.AppService.HTTP2/">Azure.AppService.HTTP2</a></td>
+<td>Use HTTP/2 instead of HTTP/1.x to improve protocol efficiency.</td>
+<td>Awareness</td>
 <td>Error</td>
 </tr>
 </tbody>
@@ -16045,7 +16045,7 @@
 </tbody>
 </table>
 <h2 id="reliability">Reliability<a class="headerlink" href="#reliability" title="Permanent link">#</a></h2>
-<h3 id="application-design_1">Application design<a class="headerlink" href="#application-design_1" title="Permanent link">#</a></h3>
+<h3 id="application-design">Application design<a class="headerlink" href="#application-design" title="Permanent link">#</a></h3>
 <table>
 <thead>
 <tr>
@@ -16169,32 +16169,8 @@
 </thead>
 <tbody>
 <tr>
-<td><a href="../Azure.AKS.AvailabilityZone/">Azure.AKS.AvailabilityZone</a></td>
-<td>AKS clusters deployed with virtual machine scale sets should use availability zones in supported regions for high availability.</td>
-<td>Important</td>
-<td>Error</td>
-</tr>
-<tr>
 <td><a href="../Azure.AKS.PoolVersion/">Azure.AKS.PoolVersion</a></td>
 <td>AKS node pools should match Kubernetes control plane version.</td>
-<td>Important</td>
-<td>Error</td>
-</tr>
-<tr>
-<td><a href="../Azure.APIM.AvailabilityZone/">Azure.APIM.AvailabilityZone</a></td>
-<td>API management services deployed with Premium SKU should use availability zones in supported regions for high availability.</td>
-<td>Important</td>
-<td>Error</td>
-</tr>
-<tr>
-<td><a href="../Azure.AppGw.AvailabilityZone/">Azure.AppGw.AvailabilityZone</a></td>
-<td>Application gateways should use availability zones in supported regions for high availability.</td>
-<td>Important</td>
-<td>Error</td>
-</tr>
-<tr>
-<td><a href="../Azure.PublicIP.AvailabilityZone/">Azure.PublicIP.AvailabilityZone</a></td>
-<td>Public IP addresses deployed with Standard SKU should use availability zones in supported regions for high availability.</td>
 <td>Important</td>
 <td>Error</td>
 </tr>
@@ -16421,6 +16397,24 @@
 </thead>
 <tbody>
 <tr>
+<td><a href="../Azure.AKS.AvailabilityZone/">Azure.AKS.AvailabilityZone</a></td>
+<td>AKS clusters deployed with virtual machine scale sets should use availability zones in supported regions for high availability.</td>
+<td>Important</td>
+<td>Error</td>
+</tr>
+<tr>
+<td><a href="../Azure.APIM.AvailabilityZone/">Azure.APIM.AvailabilityZone</a></td>
+<td>API management services deployed with Premium SKU should use availability zones in supported regions for high availability.</td>
+<td>Important</td>
+<td>Error</td>
+</tr>
+<tr>
+<td><a href="../Azure.AppGw.AvailabilityZone/">Azure.AppGw.AvailabilityZone</a></td>
+<td>Application gateways should use availability zones in supported regions for high availability.</td>
+<td>Important</td>
+<td>Error</td>
+</tr>
+<tr>
 <td><a href="../Azure.ContainerApp.AvailabilityZone/">Azure.ContainerApp.AvailabilityZone</a></td>
 <td>Use Container Apps environments that are zone redundant to improve reliability.</td>
 <td>Important</td>
@@ -16429,6 +16423,12 @@
 <tr>
 <td><a href="../Azure.LB.AvailabilityZone/">Azure.LB.AvailabilityZone</a></td>
 <td>Load balancers deployed with Standard SKU should be zone-redundant for high availability.</td>
+<td>Important</td>
+<td>Error</td>
+</tr>
+<tr>
+<td><a href="../Azure.PublicIP.AvailabilityZone/">Azure.PublicIP.AvailabilityZone</a></td>
+<td>Public IP addresses deployed with Standard SKU should use availability zones in supported regions for high availability.</td>
 <td>Important</td>
 <td>Error</td>
 </tr>
@@ -17040,18 +17040,6 @@
 <tr>
 <td><a href="../Azure.IoTHub.MinTLS/">Azure.IoTHub.MinTLS</a></td>
 <td>IoT Hubs should reject TLS versions older than 1.2.</td>
-<td>Critical</td>
-<td>Error</td>
-</tr>
-<tr>
-<td><a href="../Azure.MariaDB.MinTLS/">Azure.MariaDB.MinTLS</a></td>
-<td>Azure Database for MariaDB servers should reject TLS versions older than 1.2.</td>
-<td>Critical</td>
-<td>Error</td>
-</tr>
-<tr>
-<td><a href="../Azure.MySQL.MinTLS/">Azure.MySQL.MinTLS</a></td>
-<td>MySQL DB servers should reject TLS versions older than 1.2.</td>
 <td>Critical</td>
 <td>Error</td>
 </tr>
@@ -17887,6 +17875,18 @@
 <tr>
 <td><a href="../Azure.EventHub.MinTLS/">Azure.EventHub.MinTLS</a></td>
 <td>Event Hub namespaces should reject TLS versions older than 1.2.</td>
+<td>Critical</td>
+<td>Error</td>
+</tr>
+<tr>
+<td><a href="../Azure.MariaDB.MinTLS/">Azure.MariaDB.MinTLS</a></td>
+<td>Azure Database for MariaDB servers should reject TLS versions older than 1.2.</td>
+<td>Critical</td>
+<td>Error</td>
+</tr>
+<tr>
+<td><a href="../Azure.MySQL.MinTLS/">Azure.MySQL.MinTLS</a></td>
+<td>MySQL DB servers should reject TLS versions older than 1.2.</td>
 <td>Critical</td>
 <td>Error</td>
 </tr>

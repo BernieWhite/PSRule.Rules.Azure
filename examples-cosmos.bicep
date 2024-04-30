@@ -9,7 +9,7 @@ param name string
 @description('The location resources will be deployed.')
 param location string = resourceGroup().location
 
-// An example Cosmos DB account using the NoSQL API.
+@description('A Cosmos DB account using the NoSQL API.')
 resource account 'Microsoft.DocumentDB/databaseAccounts@2023-11-15' = {
   name: name
   location: location
@@ -31,6 +31,7 @@ resource account 'Microsoft.DocumentDB/databaseAccounts@2023-11-15' = {
   }
 }
 
+@description('A No SQL API database in a Cosmos DB account.')
 resource database 'Microsoft.DocumentDB/databaseAccounts/sqlDatabases@2023-11-15' = {
   name: 'sql-001'
   parent: account

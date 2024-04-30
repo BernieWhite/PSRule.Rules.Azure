@@ -4,8 +4,8 @@
   "metadata": {
     "_generator": {
       "name": "bicep",
-      "version": "0.21.1.54444",
-      "templateHash": "6171102942432720653"
+      "version": "0.26.170.59819",
+      "templateHash": "349389587419513896"
     }
   },
   "parameters": {
@@ -37,6 +37,9 @@
       },
       "properties": {
         "disableLocalAuth": true
+      },
+      "metadata": {
+        "description": "A Standard tier Web PubSub service with key based auth disabled."
       }
     }
   ]

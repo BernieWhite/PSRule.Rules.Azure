@@ -9,8 +9,8 @@ param name string
 @description('The location resources will be deployed.')
 param location string = resourceGroup().location
 
-// An example data explorer cluster
-resource adx 'Microsoft.Kusto/clusters@2021-08-27' = {
+@description('An example data explorer cluster using a managed identity.')
+resource adx 'Microsoft.Kusto/clusters@2023-08-15' = {
   name: name
   location: location
   sku: {

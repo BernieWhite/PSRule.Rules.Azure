@@ -9,7 +9,7 @@ param name string
 @description('The location resources will be deployed.')
 param location string = resourceGroup().location
 
-// An example Web PubSub service
+@description('A Standard tier Web PubSub service with key based auth disabled.')
 resource service 'Microsoft.SignalRService/webPubSub@2023-02-01' = {
   name: name
   location: location

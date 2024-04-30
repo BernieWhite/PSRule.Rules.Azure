@@ -4,8 +4,8 @@
   "metadata": {
     "_generator": {
       "name": "bicep",
-      "version": "0.4.1318.3566",
-      "templateHash": "3540985800388280568"
+      "version": "0.26.170.59819",
+      "templateHash": "13459397003928854105"
     }
   },
   "parameters": {
@@ -26,7 +26,7 @@
   "resources": [
     {
       "type": "Microsoft.SignalRService/signalR",
-      "apiVersion": "2021-10-01",
+      "apiVersion": "2023-02-01",
       "name": "[parameters('name')]",
       "location": "[parameters('location')]",
       "kind": "SignalR",
@@ -44,6 +44,9 @@
             "value": "Serverless"
           }
         ]
+      },
+      "metadata": {
+        "description": "A Standard tier SignalR Service with key based auth disabled."
       }
     }
   ]

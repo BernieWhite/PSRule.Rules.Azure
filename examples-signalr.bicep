@@ -9,8 +9,8 @@ param name string
 @description('The location resources will be deployed.')
 param location string = resourceGroup().location
 
-// An example SignalR Service
-resource service 'Microsoft.SignalRService/signalR@2021-10-01' = {
+@description('A Standard tier SignalR Service with key based auth disabled.')
+resource service 'Microsoft.SignalRService/signalR@2023-02-01' = {
   name: name
   location: location
   kind: 'SignalR'

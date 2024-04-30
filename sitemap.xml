@@ -1121,6 +1121,11 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
+         <loc>https://azure.github.io/PSRule.Rules.Azure/en/rules/Azure.Cosmos.SLA/</loc>
+         <lastmod>2024-04-30</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
          <loc>https://azure.github.io/PSRule.Rules.Azure/en/rules/Azure.DataFactory.Version/</loc>
          <lastmod>2024-04-30</lastmod>
          <changefreq>daily</changefreq>

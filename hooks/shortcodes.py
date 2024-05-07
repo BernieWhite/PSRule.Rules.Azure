@@ -153,5 +153,5 @@ def _external_reference_avm(text: str) -> str:
     return _reference_block(
         style = "Example",
         title = f"Configure with [Azure Verified Modules](https://github.com/Azure/bicep-registry-modules/tree/main/{avm_path})",
-        text = f"A pre-built module is avilable on the Azure Bicep public registry.\nTo reference the module, please use the following syntax: `br/public:{avm_path}:<version>`"
+        text = f"A pre-built module is avilable on the Azure Bicep public registry.\nTo reference the module, please use the following syntax:\n\n```text\nbr/public:{avm_path}:<version>\n```"
     )

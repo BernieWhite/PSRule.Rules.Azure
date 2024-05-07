@@ -11961,6 +11961,10 @@
     
       
         
+          
+        
+      
+        
       
         
       
@@ -12045,16 +12049,24 @@
         <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_6" >
         
           
-          <label class="md-nav__link" for="__nav_4_6" id="__nav_4_6_label" tabindex="0">
-            
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../baselines/" class="md-nav__link ">
+              
   
   <span class="md-ellipsis">
     Baselines
   </span>
   
 
-            <span class="md-nav__icon md-icon"></span>
-          </label>
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_4_6" id="__nav_4_6_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
         
         <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_6_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_4_6">
@@ -12062,6 +12074,8 @@
             Baselines
           </label>
           <ul class="md-nav__list" data-md-scrollfix>
+            
+              
             
               
                 
@@ -13376,7 +13390,9 @@ Also consider enforcing this setting using Azure Policy.</p>
 <div class="admonition example">
 <p class="admonition-title">Configure with <a href="https://github.com/Azure/bicep-registry-modules/tree/main/avm/res/event-hub/namespace">Azure Verified Modules</a></p>
 <p>A pre-built module is avilable on the Azure Bicep public registry.
-To reference the module, please use the following syntax: <code>br/public:avm/res/event-hub/namespace:&lt;version&gt;</code></p>
+To reference the module, please use the following syntax:</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>br/public:avm/res/event-hub/namespace:&lt;version&gt;
+</span></code></pre></div>
 </div>
 <h2 id="links">Links<a class="headerlink" href="#links" title="Permanent link">#</a></h2>
 <ul>

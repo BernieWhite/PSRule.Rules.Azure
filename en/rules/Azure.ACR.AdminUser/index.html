@@ -11988,6 +11988,10 @@
     
       
         
+          
+        
+      
+        
       
         
       
@@ -12072,16 +12076,24 @@
         <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_6" >
         
           
-          <label class="md-nav__link" for="__nav_4_6" id="__nav_4_6_label" tabindex="0">
-            
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../baselines/" class="md-nav__link ">
+              
   
   <span class="md-ellipsis">
     Baselines
   </span>
   
 
-            <span class="md-nav__icon md-icon"></span>
-          </label>
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_4_6" id="__nav_4_6_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
         
         <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_6_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_4_6">
@@ -12089,6 +12101,8 @@
             Baselines
           </label>
           <ul class="md-nav__list" data-md-scrollfix>
+            
+              
             
               
                 
@@ -13447,15 +13461,17 @@ This provides a number of benefits including:</p>
 <div class="admonition example">
 <p class="admonition-title">Configure with <a href="https://github.com/Azure/bicep-registry-modules/tree/main/avm/res/container-registry/registry">Azure Verified Modules</a></p>
 <p>A pre-built module is avilable on the Azure Bicep public registry.
-To reference the module, please use the following syntax: <code>br/public:avm/res/container-registry/registry:&lt;version&gt;</code></p>
+To reference the module, please use the following syntax:</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>br/public:avm/res/container-registry/registry:&lt;version&gt;
+</span></code></pre></div>
 </div>
 <h3 id="configure-with-azure-cli">Configure with Azure CLI<a class="headerlink" href="#configure-with-azure-cli" title="Permanent link">#</a></h3>
 <p>To configure registries that pass this rule:</p>
-<div class="language-bash highlight"><span class="filename">Azure CLI snippet</span><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>az<span class="w"> </span>acr<span class="w"> </span>update<span class="w"> </span>-n<span class="w"> </span><span class="s1">&#39;&lt;name&gt;&#39;</span><span class="w"> </span>-g<span class="w"> </span><span class="s1">&#39;&lt;resource_group&gt;&#39;</span><span class="w"> </span>--admin-enabled<span class="w"> </span><span class="nb">false</span>
+<div class="language-bash highlight"><span class="filename">Azure CLI snippet</span><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>az<span class="w"> </span>acr<span class="w"> </span>update<span class="w"> </span>-n<span class="w"> </span><span class="s1">&#39;&lt;name&gt;&#39;</span><span class="w"> </span>-g<span class="w"> </span><span class="s1">&#39;&lt;resource_group&gt;&#39;</span><span class="w"> </span>--admin-enabled<span class="w"> </span><span class="nb">false</span>
 </span></code></pre></div>
 <h3 id="configure-with-azure-powershell">Configure with Azure PowerShell<a class="headerlink" href="#configure-with-azure-powershell" title="Permanent link">#</a></h3>
 <p>To configure registries that pass this rule:</p>
-<div class="language-powershell highlight"><span class="filename">Azure PowerShell snippet</span><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="nb">Update-AzContainerRegistry</span> <span class="n">-ResourceGroupName</span> <span class="s1">&#39;&lt;resource_group&gt;&#39;</span> <span class="n">-Name</span> <span class="s1">&#39;&lt;name&gt;&#39;</span> <span class="n">-DisableAdminUser</span>
+<div class="language-powershell highlight"><span class="filename">Azure PowerShell snippet</span><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a><span class="nb">Update-AzContainerRegistry</span> <span class="n">-ResourceGroupName</span> <span class="s1">&#39;&lt;resource_group&gt;&#39;</span> <span class="n">-Name</span> <span class="s1">&#39;&lt;name&gt;&#39;</span> <span class="n">-DisableAdminUser</span>
 </span></code></pre></div>
 <h3 id="configure-with-azure-policy">Configure with Azure Policy<a class="headerlink" href="#configure-with-azure-policy" title="Permanent link">#</a></h3>
 <p>To address this issue at runtime use the following policies:</p>

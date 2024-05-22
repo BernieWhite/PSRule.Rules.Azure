@@ -22,7 +22,7 @@
       
       
       <link rel="icon" href="../assets/ms_icon.png">
-      <meta name="generator" content="mkdocs-1.6.0, mkdocs-material-9.5.23">
+      <meta name="generator" content="mkdocs-1.6.0, mkdocs-material-9.5.24">
     
     
       
@@ -1637,15 +1637,6 @@
   <a href="#realigned-configuration-option-names" class="md-nav__link">
     <span class="md-ellipsis">
       Realigned configuration option names
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#realignment-of-rule-names-for-network-interfaces" class="md-nav__link">
-    <span class="md-ellipsis">
-      Realignment of rule names for network interfaces
     </span>
   </a>
   
@@ -13288,15 +13279,6 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#realignment-of-rule-names-for-network-interfaces" class="md-nav__link">
-    <span class="md-ellipsis">
-      Realignment of rule names for network interfaces
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
   <a href="#realignment-of-rules" class="md-nav__link">
     <span class="md-ellipsis">
       Realignment of rules
@@ -13405,30 +13387,6 @@ Check the <a href="../CHANGELOG-v1/">change log</a> and the <a href="../upgrade-
 Configuring these options prior to that release will have no affect.
 For details on configuring these options see <a href="../upgrade-notes/#realigned-configuration-option-names">upgrade notes</a> for details.</p>
 </div>
-<h3 id="realignment-of-rule-names-for-network-interfaces">Realignment of rule names for network interfaces<a class="headerlink" href="#realignment-of-rule-names-for-network-interfaces" title="Permanent link">#</a></h3>
-<p>Originally when many of the rules targeting network interfaces were created, network interfaces only applied to virtual machines.
-Today, network interfaces can be attached to different types of resources including:</p>
-<ul>
-<li>Virtual machines.</li>
-<li>Private endpoints.</li>
-<li>Private link services.</li>
-</ul>
-<p>To better reflect that network interfaces are not only related to VMs, the following rules have been renamed:</p>
-<ul>
-<li>From <code>Azure.VM.NICAttached</code> to <code>Azure.NIC.Attached</code>.</li>
-<li>From <code>Azure.VM.NICName</code> to <code>Azure.NIC.Name</code>.</li>
-<li>From <code>Azure.VM.UniqueDns</code> to <code>Azure.NIC.UniqueDns</code>.</li>
-</ul>
-<p>Aliases have been added to ensure any existing suppression and exclusion to these rules continues to work.</p>
-<p>From <em>v2.0.0</em> these aliases will no longer work.</p>
-<p>To update your configuration, use the new rule names instead.
-Possible locations where the old rule names may be used include:</p>
-<ul>
-<li>Within the <code>suppression</code> option defined within <code>ps-rule.yaml</code> or by using <code>New-PSRuleOption</code>.</li>
-<li>Within the <code>rule.exclude</code> or <code>rule.include</code> option defined within <code>ps-rule.yaml</code> or by using <code>New-PSRuleOption</code>.</li>
-<li>Within the <code>rule.exclude</code> or <code>rule.include</code> option defined within a custom baseline.</li>
-<li>Other custom scripts that run PSRule cmdlets directly.</li>
-</ul>
 <h3 id="realignment-of-rules">Realignment of rules<a class="headerlink" href="#realignment-of-rules" title="Permanent link">#</a></h3>
 <p>The Well-Architected Framework and PSRule are regularly updated.
 As a result, some rules may not have a clear linkage with the latest guidance or practices.</p>
@@ -13498,7 +13456,7 @@ The following rules are deprecated and will be removed in v2:</p>
     <span class="md-icon" title="Last update">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1-2.1-2M12.5 7v5.2l4 2.4-1 1L11 13V7h1.5M11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2v1.8Z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">April 27, 2024</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">May 22, 2024</span>
   </span>
 
     
@@ -13638,7 +13596,7 @@ The following rules are deprecated and will be removed in v2:</p>
     <script id="__config" type="application/json">{"base": "..", "features": ["navigation.instant", "navigation.indexes", {"navigation.sections": {"level": 1}}, "navigation.tabs", "navigation.footer", "content.code.annotate", "content.tabs.link", "content.code.copy", "content.action.edit", "content.action.view"], "search": "../assets/javascripts/workers/search.b8dbb3d2.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
     
     
-      <script src="../assets/javascripts/bundle.ebd0bdb7.min.js"></script>
+      <script src="../assets/javascripts/bundle.081f42fc.min.js"></script>
       
     
   </body>

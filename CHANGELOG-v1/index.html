@@ -22,7 +22,7 @@
       
       
       <link rel="icon" href="../assets/ms_icon.png">
-      <meta name="generator" content="mkdocs-1.6.0, mkdocs-material-9.5.23">
+      <meta name="generator" content="mkdocs-1.6.0, mkdocs-material-9.5.24">
     
     
       
@@ -17844,12 +17844,9 @@
   Update PowerShell rules to use the <code>Azure.Resource.SupportsTags</code> selector instead.
   Support for the <code>SupportsTag</code> function will be removed in v2.
   See <a href="../upgrade-notes/">upgrade notes</a> for more information.</li>
-<li>Renamed network interface rules to reflect current usage.
-  If you have excluded or suppressed these rules, please update your configuration to reference the new names.
-  Support for the old names will be removed in v2.
-  See <a href="../upgrade-notes/">upgrade notes</a> for more information.</li>
 </ul>
 <h2 id="unreleased">Unreleased<a class="headerlink" href="#unreleased" title="Permanent link">#</a></h2>
+<p>What's changed since pre-release v1.37.0-B0009:</p>
 <ul>
 <li>New rules:<ul>
 <li>Cosmos DB:<ul>
@@ -17872,13 +17869,16 @@
   <a href="https://github.com/Azure/PSRule.Rules.Azure/issues/2788">#2788</a><ul>
 <li>Removed the <code>If</code> Premium SKU.</li>
 <li>Added check for Premium SKU.</li>
-<li>Updated tests.</li>
-<li>Updated rule doc.</li>
 <li>Bumped rule set to <code>2024_06</code>.</li>
 </ul>
 </li>
 </ul>
 </li>
+</ul>
+</li>
+<li>General improvements:<ul>
+<li>Updated resource providers and policy aliases.
+  <a href="https://github.com/Azure/PSRule.Rules.Azure/pull/2880">#2880</a></li>
 </ul>
 </li>
 </ul>
@@ -18842,13 +18842,12 @@
 </ul>
 </li>
 <li>Network Interface:<ul>
-<li><strong>Important change</strong>: Renamed NIC rules to reflect current usage by <a href="https://github.com/BernieWhite">@BernieWhite</a>.
+<li>Renamed NIC rules to reflect current usage by <a href="https://github.com/BernieWhite">@BernieWhite</a>.
   <a href="https://github.com/Azure/PSRule.Rules.Azure/issues/2574">#2574</a><ul>
 <li>Rename <code>Azure.VM.NICAttached</code> to <code>Azure.NIC.Attached</code>.</li>
 <li>Rename <code>Azure.VM.NICName</code> to <code>Azure.NIC.Name</code>.</li>
 <li>Rename <code>Azure.VM.UniqueDns</code> to <code>Azure.NIC.UniqueDns</code>.</li>
 <li>Added aliases to reference the old names for suppression and exclusion.</li>
-<li>Old names will be removed from v2.</li>
 </ul>
 </li>
 <li>Added support for private link services to <code>Azure.VM.NICAttached</code> by <a href="https://github.com/BernieWhite">@BernieWhite</a>.
@@ -18954,13 +18953,12 @@
 <ul>
 <li>Updated rules:<ul>
 <li>Network Interface:<ul>
-<li><strong>Important change</strong>: Renamed NIC rules to reflect current usage by <a href="https://github.com/BernieWhite">@BernieWhite</a>.
+<li>Renamed NIC rules to reflect current usage by <a href="https://github.com/BernieWhite">@BernieWhite</a>.
   <a href="https://github.com/Azure/PSRule.Rules.Azure/issues/2574">#2574</a><ul>
 <li>Rename <code>Azure.VM.NICAttached</code> to <code>Azure.NIC.Attached</code>.</li>
 <li>Rename <code>Azure.VM.NICName</code> to <code>Azure.NIC.Name</code>.</li>
 <li>Rename <code>Azure.VM.UniqueDns</code> to <code>Azure.NIC.UniqueDns</code>.</li>
 <li>Added aliases to reference the old names for suppression and exclusion.</li>
-<li>Old names will be removed from v2.</li>
 </ul>
 </li>
 <li>Added support for private link services to <code>Azure.VM.NICAttached</code> by <a href="https://github.com/BernieWhite">@BernieWhite</a>.
@@ -24956,14 +24954,14 @@ What's changed since v1.24.0:</p>
     
     <nav>
       
-        <a href="https://github.com/BenjaminEngeset" class="md-author" title="@BenjaminEngeset">
-          
-          <img src="https://avatars.githubusercontent.com/u/99641908?v=4&size=72" alt="BenjaminEngeset">
-        </a>
-      
         <a href="https://github.com/BernieWhite" class="md-author" title="@BernieWhite">
           
           <img src="https://avatars.githubusercontent.com/u/13513058?v=4&size=72" alt="BernieWhite">
+        </a>
+      
+        <a href="https://github.com/BenjaminEngeset" class="md-author" title="@BenjaminEngeset">
+          
+          <img src="https://avatars.githubusercontent.com/u/99641908?v=4&size=72" alt="BenjaminEngeset">
         </a>
       
         <a href="https://github.com/sebassem" class="md-author" title="@sebassem">
@@ -25089,7 +25087,7 @@ What's changed since v1.24.0:</p>
     <script id="__config" type="application/json">{"base": "..", "features": ["navigation.instant", "navigation.indexes", {"navigation.sections": {"level": 1}}, "navigation.tabs", "navigation.footer", "content.code.annotate", "content.tabs.link", "content.code.copy", "content.action.edit", "content.action.view"], "search": "../assets/javascripts/workers/search.b8dbb3d2.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
     
     
-      <script src="../assets/javascripts/bundle.ebd0bdb7.min.js"></script>
+      <script src="../assets/javascripts/bundle.081f42fc.min.js"></script>
       
     
   </body>

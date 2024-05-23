@@ -5153,6 +5153,10 @@
       
         
       
+        
+      
+        
+      
     
     
       
@@ -6897,6 +6901,27 @@
   
   <span class="md-ellipsis">
     Azure.AppGw.MigrateV2
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../en/rules/Azure.AppGw.MigrateWAFPolicy/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Azure.AppGw.MigrateWAFPolicy
   </span>
   
 
@@ -9417,6 +9442,27 @@
   
   <span class="md-ellipsis">
     Azure.FrontDoorWAF.RuleGroups
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../en/rules/Azure.Grafana.Version/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Azure.Grafana.Version
   </span>
   
 
@@ -17848,7 +17894,28 @@
 <h2 id="unreleased">Unreleased<a class="headerlink" href="#unreleased" title="Permanent link">#</a></h2>
 <p>What's changed since pre-release v1.37.0-B0009:</p>
 <ul>
+<li>New features:<ul>
+<li>Added support for new Bicep language features introduced in v0.27.1 by <a href="https://github.com/BernieWhite">@BernieWhite</a>.
+  <a href="https://github.com/Azure/PSRule.Rules.Azure/issues/2860">#2860</a>
+  <a href="https://github.com/Azure/PSRule.Rules.Azure/issues/2859">#2859</a><ul>
+<li>Added support for <code>shallowMerge</code>, <code>groupBy</code>, <code>objectKeys</code>, and <code>mapValues</code>.</li>
+<li>Updated syntax for Bicep lambda usage of <code>map</code>, <code>reduce</code>, and <code>filter</code> which now support indices.</li>
+<li>Added support for spread operator.</li>
+</ul>
+</li>
+</ul>
+</li>
 <li>New rules:<ul>
+<li>Application Gateway:<ul>
+<li>Check that WAF v2 doesn't use legacy WAF configuration by <a href="https://github.com/BenjaminEngeset">@BenjaminEngeset</a>.
+  <a href="https://github.com/Azure/PSRule.Rules.Azure/issues/2877">#2877</a></li>
+</ul>
+</li>
+<li>Azure Managed Grafana:<ul>
+<li>Check that Azure Managed Grafana workspaces uses Grafana version 10 by <a href="https://github.com/BenjaminEngeset">@BenjaminEngeset</a>.
+  <a href="https://github.com/Azure/PSRule.Rules.Azure/issues/2878">#2878</a></li>
+</ul>
+</li>
 <li>Cosmos DB:<ul>
 <li>Check that database accounts have local authentication disabled by <a href="https://github.com/BenjaminEngeset">@BenjaminEngeset</a>.
   <a href="https://github.com/Azure/PSRule.Rules.Azure/issues/2846">#2846</a></li>
@@ -17879,6 +17946,11 @@
 <li>General improvements:<ul>
 <li>Updated resource providers and policy aliases.
   <a href="https://github.com/Azure/PSRule.Rules.Azure/pull/2880">#2880</a></li>
+</ul>
+</li>
+<li>Bug fixed:<ul>
+<li>Fixed <code>union</code> does not perform deep merge or keep property order by <a href="https://github.com/BernieWhite">@BernieWhite</a>.
+  <a href="https://github.com/Azure/PSRule.Rules.Azure/issues/2885">#2885</a></li>
 </ul>
 </li>
 </ul>
@@ -24926,7 +24998,7 @@ What's changed since v1.24.0:</p>
     <span class="md-icon" title="Last update">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1-2.1-2M12.5 7v5.2l4 2.4-1 1L11 13V7h1.5M11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2v1.8Z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">May 22, 2024</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">May 23, 2024</span>
   </span>
 
     

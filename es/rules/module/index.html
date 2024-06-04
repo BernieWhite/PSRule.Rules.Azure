@@ -13677,7 +13677,7 @@
           <li class="md-nav__item">
   <a href="#data-management" class="md-nav__link">
     <span class="md-ellipsis">
-      Data management
+      Data Management
     </span>
   </a>
   
@@ -14385,18 +14385,6 @@
 <tr>
 <td><a href="Azure.VM.Updates.md">Azure.VM.Updates</a></td>
 <td>Ensure automatic updates are enabled at deployment.</td>
-<td>Important</td>
-<td>Error</td>
-</tr>
-<tr>
-<td><a href="Azure.VNG.ERLegacySKU.md">Azure.VNG.ERLegacySKU</a></td>
-<td>Migrate from legacy SKUs to improve reliability and performance of ExpressRoute (ER) gateways.</td>
-<td>Important</td>
-<td>Error</td>
-</tr>
-<tr>
-<td><a href="Azure.VNG.VPNLegacySKU.md">Azure.VNG.VPNLegacySKU</a></td>
-<td>Migrate from legacy SKUs to improve reliability and performance of VPN gateways.</td>
 <td>Important</td>
 <td>Error</td>
 </tr>
@@ -15225,18 +15213,6 @@
 <td>Important</td>
 <td>Error</td>
 </tr>
-<tr>
-<td><a href="Azure.Redis.MaxMemoryReserved.md">Azure.Redis.MaxMemoryReserved</a></td>
-<td>Configure maxmemory-reserved to reserve memory for non-cache operations.</td>
-<td>Important</td>
-<td>Error</td>
-</tr>
-<tr>
-<td><a href="Azure.Redis.MinSKU.md">Azure.Redis.MinSKU</a></td>
-<td>Use Azure Cache for Redis instances of at least Standard C1.</td>
-<td>Important</td>
-<td>Error</td>
-</tr>
 </tbody>
 </table>
 <h3 id="application-scalability">Application scalability<a class="headerlink" href="#application-scalability" title="Permanent link">#</a></h3>
@@ -15319,6 +15295,12 @@
 <td>Critical</td>
 <td>Error</td>
 </tr>
+<tr>
+<td><a href="Azure.Redis.MinSKU.md">Azure.Redis.MinSKU</a></td>
+<td>Use Azure Cache for Redis instances of at least Standard C1.</td>
+<td>Important</td>
+<td>Error</td>
+</tr>
 </tbody>
 </table>
 <h3 id="pe05-scaling-and-partitioning">PE:05 Scaling and partitioning<a class="headerlink" href="#pe05-scaling-and-partitioning" title="Permanent link">#</a></h3>
@@ -15353,6 +15335,12 @@
 <tr>
 <td><a href="Azure.ContainerApp.DisableAffinity.md">Azure.ContainerApp.DisableAffinity</a></td>
 <td>Disable session affinity to prevent unbalanced distribution.</td>
+<td>Important</td>
+<td>Error</td>
+</tr>
+<tr>
+<td><a href="Azure.Redis.MaxMemoryReserved.md">Azure.Redis.MaxMemoryReserved</a></td>
+<td>Configure maxmemory-reserved to reserve memory for non-cache operations.</td>
 <td>Important</td>
 <td>Error</td>
 </tr>
@@ -15510,7 +15498,7 @@
 </tr>
 </tbody>
 </table>
-<h3 id="data-management">Data management<a class="headerlink" href="#data-management" title="Permanent link">#</a></h3>
+<h3 id="data-management">Data Management<a class="headerlink" href="#data-management" title="Permanent link">#</a></h3>
 <table>
 <thead>
 <tr>
@@ -15573,12 +15561,6 @@
 <tr>
 <td><a href="Azure.AKS.PoolVersion.md">Azure.AKS.PoolVersion</a></td>
 <td>AKS node pools should match Kubernetes control plane version.</td>
-<td>Important</td>
-<td>Error</td>
-</tr>
-<tr>
-<td><a href="Azure.Redis.AvailabilityZone.md">Azure.Redis.AvailabilityZone</a></td>
-<td>Premium Redis cache should be deployed with availability zones for high availability.</td>
 <td>Important</td>
 <td>Error</td>
 </tr>
@@ -15755,6 +15737,18 @@
 <td>Error</td>
 </tr>
 <tr>
+<td><a href="Azure.VNG.ERLegacySKU.md">Azure.VNG.ERLegacySKU</a></td>
+<td>Migrate from legacy SKUs to improve reliability and performance of ExpressRoute (ER) gateways.</td>
+<td>Critical</td>
+<td>Error</td>
+</tr>
+<tr>
+<td><a href="Azure.VNG.VPNLegacySKU.md">Azure.VNG.VPNLegacySKU</a></td>
+<td>Migrate from legacy SKUs to improve reliability and performance of VPN gateways.</td>
+<td>Critical</td>
+<td>Error</td>
+</tr>
+<tr>
 <td><a href="Azure.WebPubSub.SLA.md">Azure.WebPubSub.SLA</a></td>
 <td>Use SKUs that include an SLA when configuring Web PubSub Services.</td>
 <td>Important</td>
@@ -15885,6 +15879,12 @@
 <tr>
 <td><a href="Azure.PublicIP.AvailabilityZone.md">Azure.PublicIP.AvailabilityZone</a></td>
 <td>Public IP addresses deployed with Standard SKU should use availability zones in supported regions for high availability.</td>
+<td>Important</td>
+<td>Error</td>
+</tr>
+<tr>
+<td><a href="Azure.Redis.AvailabilityZone.md">Azure.Redis.AvailabilityZone</a></td>
+<td>Premium Redis cache should be deployed with availability zones for high availability.</td>
 <td>Important</td>
 <td>Error</td>
 </tr>

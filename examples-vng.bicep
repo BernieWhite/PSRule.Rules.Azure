@@ -16,7 +16,7 @@ param subnetId string
 param pipId string
 
 // An example Virtual Network Gateway with availability zone aware SKU.
-resource vng 'Microsoft.Network/virtualNetworkGateways@2023-06-01' = {
+resource vng 'Microsoft.Network/virtualNetworkGateways@2023-11-01' = {
   name: name
   location: location
   properties: {
@@ -35,6 +35,7 @@ resource vng 'Microsoft.Network/virtualNetworkGateways@2023-06-01' = {
         }
       }
     ]
+    activeActive: true
     vpnType: 'RouteBased'
     vpnGatewayGeneration: 'Generation2'
     sku: {

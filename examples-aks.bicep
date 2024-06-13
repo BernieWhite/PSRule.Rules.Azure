@@ -46,7 +46,7 @@ param systemPoolMin int
 param systemPoolMax int = 3
 
 @description('The version of Kubernetes.')
-param kubernetesVersion string = '1.27.9'
+param kubernetesVersion string = '1.28.9'
 
 @description('Maximum number of pods that can run on nodes in the system pool.')
 @minValue(30)

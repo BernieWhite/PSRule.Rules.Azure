@@ -27,7 +27,7 @@ param subnetId string
 param amaIdentityId string
 
 // An example virtual machine running Windows Server and one data disk attached.
-resource vm 'Microsoft.Compute/virtualMachines@2023-09-01' = {
+resource vm 'Microsoft.Compute/virtualMachines@2024-03-01' = {
   name: name
   location: location
   zones: [
@@ -78,7 +78,7 @@ resource vm 'Microsoft.Compute/virtualMachines@2023-09-01' = {
 }
 
 // An example of a VM managed disk.
-resource dataDisk 'Microsoft.Compute/disks@2023-04-02' = {
+resource dataDisk 'Microsoft.Compute/disks@2023-10-02' = {
   name: name
   location: location
   sku: {
@@ -93,7 +93,7 @@ resource dataDisk 'Microsoft.Compute/disks@2023-04-02' = {
 }
 
 // An example of configuring a VM extension for the Azure Monitor Agent.
-resource windowsAgent 'Microsoft.Compute/virtualMachines/extensions@2023-09-01' = {
+resource windowsAgent 'Microsoft.Compute/virtualMachines/extensions@2024-03-01' = {
   parent: vm
   name: 'AzureMonitorWindowsAgent'
   location: location
@@ -111,6 +111,31 @@ resource windowsAgent 'Microsoft.Compute/virtualMachines/extensions@2023-09-01' 
         }
       }
     }
+  }
+}
+
+// An example maintenance configuration for specifying a in-guest patch maintenance window.
+resource maintenanceConfiguration 'Microsoft.Maintenance/maintenanceConfigurations@2023-04-01' = {
+  name: name
+  location: location
+  properties: {
+    maintenanceScope: 'InGuestPatch'
+    maintenanceWindow: {
+      startDateTime: '2021-08-21 01:18'
+      expirationDateTime: '2221-05-19 03:30'
+      duration: '01:30'
+      recurEvery: 'Day'
+    }
+  }
+}
+
+// An example of an assignment of a maintenance configuration to a virtual machine.
+resource config 'Microsoft.Maintenance/configurationAssignments@2023-04-01' = {
+  name: name
+  location: location
+  scope: vm
+  properties: {
+    maintenanceConfigurationId: maintenanceConfiguration.id
   }
 }
 

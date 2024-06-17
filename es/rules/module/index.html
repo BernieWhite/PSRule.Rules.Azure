@@ -2829,6 +2829,8 @@
       
         
       
+        
+      
     
     
       
@@ -3712,6 +3714,27 @@
   
   <span class="md-ellipsis">
     Azure.AKS.NetworkPolicy
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../en/rules/Azure.AKS.NodeAutoUpgrade/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Azure.AKS.NodeAutoUpgrade
   </span>
   
 
@@ -13815,7 +13838,7 @@
           <li class="md-nav__item">
   <a href="#data-management" class="md-nav__link">
     <span class="md-ellipsis">
-      Data Management
+      Data management
     </span>
   </a>
   
@@ -14173,6 +14196,15 @@
   <a href="#se08-hardening-resources" class="md-nav__link">
     <span class="md-ellipsis">
       SE:08 Hardening resources
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#se09-application-secrets" class="md-nav__link">
+    <span class="md-ellipsis">
+      SE:09 Application secrets
     </span>
   </a>
   
@@ -14676,6 +14708,12 @@
 <td>Error</td>
 </tr>
 <tr>
+<td><a href="Azure.KeyVault.KeyName.md">Azure.KeyVault.KeyName</a></td>
+<td>Key Vault Key names should meet naming requirements.</td>
+<td>Awareness</td>
+<td>Error</td>
+</tr>
+<tr>
 <td><a href="Azure.NIC.Name.md">Azure.NIC.Name</a></td>
 <td>Network Interface (NIC) names should meet naming requirements.</td>
 <td>Awareness</td>
@@ -15027,12 +15065,6 @@
 <tr>
 <td><a href="Azure.Identity.UserAssignedName.md">Azure.Identity.UserAssignedName</a></td>
 <td>Managed Identity names should meet naming requirements.</td>
-<td>Awareness</td>
-<td>Error</td>
-</tr>
-<tr>
-<td><a href="Azure.KeyVault.KeyName.md">Azure.KeyVault.KeyName</a></td>
-<td>Key Vault Key names should meet naming requirements.</td>
 <td>Awareness</td>
 <td>Error</td>
 </tr>
@@ -15630,7 +15662,7 @@
 </tr>
 </tbody>
 </table>
-<h3 id="data-management">Data Management<a class="headerlink" href="#data-management" title="Permanent link">#</a></h3>
+<h3 id="data-management">Data management<a class="headerlink" href="#data-management" title="Permanent link">#</a></h3>
 <table>
 <thead>
 <tr>
@@ -16331,12 +16363,6 @@
 <td>Error</td>
 </tr>
 <tr>
-<td><a href="Azure.KeyVault.Firewall.md">Azure.KeyVault.Firewall</a></td>
-<td>Key Vault should only accept explicitly allowed traffic.</td>
-<td>Important</td>
-<td>Error</td>
-</tr>
-<tr>
 <td><a href="Azure.Storage.Firewall.md">Azure.Storage.Firewall</a></td>
 <td>Storage Accounts should only accept explicitly allowed traffic.</td>
 <td>Important</td>
@@ -16693,12 +16719,6 @@
 <td>Error</td>
 </tr>
 <tr>
-<td><a href="Azure.KeyVault.AccessPolicy.md">Azure.KeyVault.AccessPolicy</a></td>
-<td>Use the principal of least privilege when assigning access to Key Vault.</td>
-<td>Important</td>
-<td>Error</td>
-</tr>
-<tr>
 <td><a href="Azure.ML.UserManagedIdentity.md">Azure.ML.UserManagedIdentity</a></td>
 <td>ML workspaces should use user-assigned managed identity, rather than the default system-assigned managed identity.</td>
 <td>Important</td>
@@ -16835,12 +16855,6 @@
 <tr>
 <td><a href="Azure.AKS.SecretStoreRotation.md">Azure.AKS.SecretStoreRotation</a></td>
 <td>Enable autorotation of Secrets Store CSI Driver secrets for AKS clusters.</td>
-<td>Important</td>
-<td>Error</td>
-</tr>
-<tr>
-<td><a href="Azure.KeyVault.AutoRotationPolicy.md">Azure.KeyVault.AutoRotationPolicy</a></td>
-<td>Key Vault keys should have auto-rotation enabled.</td>
 <td>Important</td>
 <td>Error</td>
 </tr>
@@ -17102,6 +17116,12 @@
 </thead>
 <tbody>
 <tr>
+<td><a href="Azure.AKS.NodeAutoUpgrade.md">Azure.AKS.NodeAutoUpgrade</a></td>
+<td>Deploy AKS Clusters with Node Auto-Upgrade enabled</td>
+<td>Important</td>
+<td>Error</td>
+</tr>
+<tr>
 <td><a href="Azure.Resource.AllowedRegions.md">Azure.Resource.AllowedRegions</a></td>
 <td>Resources should be deployed to allowed regions.</td>
 <td>Important</td>
@@ -17292,6 +17312,12 @@
 <td>Error</td>
 </tr>
 <tr>
+<td><a href="Azure.KeyVault.AccessPolicy.md">Azure.KeyVault.AccessPolicy</a></td>
+<td>Use the principal of least privilege when assigning access to Key Vault.</td>
+<td>Important</td>
+<td>Error</td>
+</tr>
+<tr>
 <td><a href="Azure.KeyVault.RBAC.md">Azure.KeyVault.RBAC</a></td>
 <td>Key Vaults should use Azure RBAC as the authorization system for the data plane.</td>
 <td>Awareness</td>
@@ -17422,6 +17448,12 @@
 <td><a href="Azure.EventHub.Firewall.md">Azure.EventHub.Firewall</a></td>
 <td>Access to the namespace endpoints should be restricted to only allowed sources.</td>
 <td>Critical</td>
+<td>Error</td>
+</tr>
+<tr>
+<td><a href="Azure.KeyVault.Firewall.md">Azure.KeyVault.Firewall</a></td>
+<td>Key Vault should only accept explicitly allowed traffic.</td>
+<td>Important</td>
 <td>Error</td>
 </tr>
 <tr>
@@ -17603,6 +17635,25 @@
 <tr>
 <td><a href="Azure.AppService.RemoteDebug.md">Azure.AppService.RemoteDebug</a></td>
 <td>Disable remote debugging on App Service apps when not in use.</td>
+<td>Important</td>
+<td>Error</td>
+</tr>
+</tbody>
+</table>
+<h3 id="se09-application-secrets">SE:09 Application secrets<a class="headerlink" href="#se09-application-secrets" title="Permanent link">#</a></h3>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Synopsis</th>
+<th>Severity</th>
+<th>Level</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="Azure.KeyVault.AutoRotationPolicy.md">Azure.KeyVault.AutoRotationPolicy</a></td>
+<td>Key Vault keys should have auto-rotation enabled.</td>
 <td>Important</td>
 <td>Error</td>
 </tr>

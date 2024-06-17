@@ -4,8 +4,8 @@
   "metadata": {
     "_generator": {
       "name": "bicep",
-      "version": "0.26.54.24096",
-      "templateHash": "3735352956667233547"
+      "version": "0.28.1.47646",
+      "templateHash": "3152038712307898231"
     }
   },
   "parameters": {
@@ -64,7 +64,7 @@
   "resources": [
     {
       "type": "Microsoft.App/managedEnvironments",
-      "apiVersion": "2023-05-01",
+      "apiVersion": "2024-03-01",
       "name": "[parameters('envName')]",
       "location": "[parameters('location')]",
       "properties": {
@@ -90,7 +90,7 @@
     },
     {
       "type": "Microsoft.App/containerApps",
-      "apiVersion": "2023-05-01",
+      "apiVersion": "2024-03-01",
       "name": "[parameters('appName')]",
       "location": "[parameters('location')]",
       "identity": {
@@ -108,6 +108,20 @@
         "configuration": {
           "ingress": {
             "allowInsecure": false,
+            "ipSecurityRestrictions": [
+              {
+                "action": "Allow",
+                "description": "Allowed IP address range",
+                "ipAddressRange": "10.1.1.1/32",
+                "name": "ClientIPAddress_1"
+              },
+              {
+                "action": "Allow",
+                "description": "Allowed IP address range",
+                "ipAddressRange": "10.1.2.1/32",
+                "name": "ClientIPAddress_2"
+              }
+            ],
             "stickySessions": {
               "affinity": "none"
             }

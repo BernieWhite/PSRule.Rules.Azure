@@ -39,7 +39,7 @@ var containers = [
 ]
 
 // An example App Environment configured with a consumption workload profile.
-resource containerEnv 'Microsoft.App/managedEnvironments@2023-05-01' = {
+resource containerEnv 'Microsoft.App/managedEnvironments@2024-03-01' = {
   name: envName
   location: location
   properties: {
@@ -65,7 +65,7 @@ resource containerEnv 'Microsoft.App/managedEnvironments@2023-05-01' = {
 }
 
 // An example Container App using a minimum of 2 replicas.
-resource containerApp 'Microsoft.App/containerApps@2023-05-01' = {
+resource containerApp 'Microsoft.App/containerApps@2024-03-01' = {
   name: appName
   location: location
   identity: {
@@ -83,6 +83,20 @@ resource containerApp 'Microsoft.App/containerApps@2023-05-01' = {
     configuration: {
       ingress: {
         allowInsecure: false
+        ipSecurityRestrictions: [
+          {
+            action: 'Allow'
+            description: 'Allowed IP address range'
+            ipAddressRange: '10.1.1.1/32'
+            name: 'ClientIPAddress_1'
+          }
+          {
+            action: 'Allow'
+            description: 'Allowed IP address range'
+            ipAddressRange: '10.1.2.1/32'
+            name: 'ClientIPAddress_2'
+          }
+        ]
         stickySessions: {
           affinity: 'none'
         }

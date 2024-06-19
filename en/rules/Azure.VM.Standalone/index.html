@@ -2846,6 +2846,8 @@
       
         
       
+        
+      
     
     
       
@@ -11755,6 +11757,27 @@
   
   
     <li class="md-nav__item">
+      <a href="../Azure.VMSS.ZoneBalance/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Azure.VMSS.ZoneBalance
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
       <a href="../Azure.VNET.BastionSubnet/" class="md-nav__link">
         
   
@@ -13748,11 +13771,11 @@ A FMA is the process of analyzing the system to determine the possible failure p
 In many but not all cases, the number of VMs can be increased to add redundancy to the system.
 Taking advantage of some of the features of Azure can further increase the availability of the system.</p>
 <ul>
-<li>Availability Zones (AZ) - is a physically separate zone, within an Azure region.
+<li><strong>Availability Zones (AZ)</strong> - is a physically separate zone, within an Azure region.
   Each Availability Zone has a distinct power source, network, and cooling.</li>
-<li>Availability Sets - is a logical grouping of VMs that allows Azure to understand how your application is built.
+<li><strong>Availability Sets</strong> - is a logical grouping of VMs that allows Azure to understand how your application is built.
   By understanding the distinct tiers of the application, Azure can better organize compute and storage to improve availability.</li>
-<li>Solid State Storage (SSD) Disks - high performance block-level storage with three replicas of your data.</li>
+<li><strong>Solid State Storage (SSD) Disks</strong> - high performance block-level storage with three replicas of your data.</li>
 </ul>
 <h2 id="recommendation">Recommendation<a class="headerlink" href="#recommendation" title="Permanent link">#</a></h2>
 <p>Consider using availability zones/ sets or only premium/ ultra disks to improve SLA.</p>
@@ -13864,11 +13887,12 @@ Taking advantage of some of the features of Azure can further increase the avail
 </span></code></pre></div>
 <h2 id="links">Links<a class="headerlink" href="#links" title="Permanent link">#</a></h2>
 <ul>
-<li><a href="https://learn.microsoft.com/azure/architecture/framework/resiliency/design-requirements#meet-application-platform-requirements">Meet application platform requirements</a></li>
+<li><a href="https://learn.microsoft.com/azure/well-architected/reliability/metrics">RE:04 Target metrics</a></li>
 <li><a href="https://azure.microsoft.com/support/legal/sla/virtual-machines">Virtual Machine SLA</a></li>
 <li><a href="https://learn.microsoft.com/azure/virtual-machines/availability">Availability options for virtual machines in Azure</a></li>
 <li><a href="https://learn.microsoft.com/azure/virtual-machines/windows/manage-availability">Manage the availability of Windows virtual machines in Azure</a></li>
 <li><a href="https://learn.microsoft.com/azure/virtual-machines/linux/manage-availability">Manage the availability of Linux virtual machines</a></li>
+<li><a href="https://learn.microsoft.com/azure/templates/microsoft.compute/virtualmachines">Azure deployment reference</a></li>
 </ul>
 
 
@@ -13892,7 +13916,7 @@ Taking advantage of some of the features of Azure can further increase the avail
     <span class="md-icon" title="Last update">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1-2.1-2M12.5 7v5.2l4 2.4-1 1L11 13V7h1.5M11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2v1.8Z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">March 29, 2024</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">June 19, 2024</span>
   </span>
 
     
@@ -13920,14 +13944,14 @@ Taking advantage of some of the features of Azure can further increase the avail
     
     <nav>
       
-        <a href="https://github.com/lukemurraynz" class="md-author" title="@lukemurraynz">
-          
-          <img src="https://avatars.githubusercontent.com/u/24467442?v=4&size=72" alt="lukemurraynz">
-        </a>
-      
         <a href="https://github.com/BernieWhite" class="md-author" title="@BernieWhite">
           
           <img src="https://avatars.githubusercontent.com/u/13513058?v=4&size=72" alt="BernieWhite">
+        </a>
+      
+        <a href="https://github.com/lukemurraynz" class="md-author" title="@lukemurraynz">
+          
+          <img src="https://avatars.githubusercontent.com/u/24467442?v=4&size=72" alt="lukemurraynz">
         </a>
       
       

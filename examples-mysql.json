@@ -1,0 +1,112 @@
+{
+  "$schema": "https://schema.management.azure.com/schemas/2019-04-01/deploymentTemplate.json#",
+  "contentVersion": "1.0.0.0",
+  "metadata": {
+    "_generator": {
+      "name": "bicep",
+      "version": "0.28.1.47646",
+      "templateHash": "14190762334901930442"
+    }
+  },
+  "parameters": {
+    "name": {
+      "type": "string",
+      "metadata": {
+        "description": "The name of the resource."
+      }
+    },
+    "location": {
+      "type": "string",
+      "defaultValue": "[resourceGroup().location]",
+      "metadata": {
+        "description": "The location resources will be deployed."
+      }
+    },
+    "administratorLogin": {
+      "type": "string",
+      "metadata": {
+        "description": "The login for an administrator."
+      }
+    },
+    "administratorLoginPassword": {
+      "type": "securestring",
+      "metadata": {
+        "description": "A default administrator password."
+      }
+    },
+    "loginObjectId": {
+      "type": "string",
+      "metadata": {
+        "description": "The object GUID for an administrator account."
+      }
+    }
+  },
+  "resources": [
+    {
+      "type": "Microsoft.DBforMySQL/servers",
+      "apiVersion": "2017-12-01",
+      "name": "[parameters('name')]",
+      "location": "[parameters('location')]",
+      "sku": {
+        "name": "GP_Gen5_2",
+        "tier": "GeneralPurpose",
+        "capacity": 2,
+        "size": "5120",
+        "family": "Gen5"
+      },
+      "properties": {
+        "createMode": "Default",
+        "version": "8.0",
+        "administratorLogin": "[parameters('administratorLogin')]",
+        "administratorLoginPassword": "[parameters('administratorLoginPassword')]",
+        "minimalTlsVersion": "TLS1_2",
+        "sslEnforcement": "Enabled",
+        "publicNetworkAccess": "Disabled",
+        "storageProfile": {
+          "storageMB": 5120,
+          "backupRetentionDays": 7,
+          "geoRedundantBackup": "Enabled"
+        }
+      }
+    },
+    {
+      "type": "Microsoft.DBforMySQL/servers/administrators",
+      "apiVersion": "2017-12-01",
+      "name": "[format('{0}/{1}', parameters('name'), 'activeDirectory')]",
+      "properties": {
+        "administratorType": "ActiveDirectory",
+        "login": "[parameters('administratorLogin')]",
+        "sid": "[parameters('loginObjectId')]",
+        "tenantId": "[tenant().tenantId]"
+      },
+      "dependsOn": [
+        "[resourceId('Microsoft.DBforMySQL/servers', parameters('name'))]"
+      ]
+    },
+    {
+      "type": "Microsoft.DBforMySQL/flexibleServers",
+      "apiVersion": "2023-12-30",
+      "name": "[parameters('name')]",
+      "location": "[parameters('location')]",
+      "sku": {
+        "name": "Standard_D16as",
+        "tier": "GeneralPurpose"
+      },
+      "properties": {
+        "createMode": "Default",
+        "version": "8.0.21",
+        "administratorLogin": "[parameters('administratorLogin')]",
+        "administratorLoginPassword": "[parameters('administratorLoginPassword')]",
+        "highAvailability": {
+          "mode": "ZoneRedundant"
+        },
+        "maintenanceWindow": {
+          "customWindow": "Enabled",
+          "dayOfWeek": 0,
+          "startHour": 1,
+          "startMinute": 0
+        }
+      }
+    }
+  ]
+}

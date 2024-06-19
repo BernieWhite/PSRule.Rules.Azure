@@ -2145,15 +2145,6 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#principles" class="md-nav__link">
-    <span class="md-ellipsis">
-      Principles
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
   <a href="#release-engineering" class="md-nav__link">
     <span class="md-ellipsis">
       Release engineering
@@ -2811,6 +2802,8 @@
   
     
     
+      
+        
       
         
       
@@ -12499,6 +12492,27 @@
   
   
     <li class="md-nav__item">
+      <a href="../Azure.VMSS.ZoneBalance/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Azure.VMSS.ZoneBalance
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
       <a href="../Azure.VNET.BastionSubnet/" class="md-nav__link">
         
   
@@ -14568,15 +14582,6 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#principles" class="md-nav__link">
-    <span class="md-ellipsis">
-      Principles
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
   <a href="#release-engineering" class="md-nav__link">
     <span class="md-ellipsis">
       Release engineering
@@ -15349,6 +15354,12 @@
 <td>Awareness</td>
 <td>Error</td>
 </tr>
+<tr>
+<td><a href="../Azure.NSG.Associated/">Azure.NSG.Associated</a></td>
+<td>Network Security Groups (NSGs) should be associated to a subnet or network interface.</td>
+<td>Awareness</td>
+<td>Error</td>
+</tr>
 </tbody>
 </table>
 <h3 id="co14-consolidation">CO:14 Consolidation<a class="headerlink" href="#co14-consolidation" title="Permanent link">#</a></h3>
@@ -15464,12 +15475,6 @@
 <tr>
 <td><a href="../Azure.VM.BasicSku/">Azure.VM.BasicSku</a></td>
 <td>Virtual machines (VMs) should not use Basic sizes.</td>
-<td>Important</td>
-<td>Error</td>
-</tr>
-<tr>
-<td><a href="../Azure.VM.Updates/">Azure.VM.Updates</a></td>
-<td>Ensure automatic updates are enabled at deployment.</td>
 <td>Important</td>
 <td>Error</td>
 </tr>
@@ -15653,6 +15658,24 @@
 <td>Error</td>
 </tr>
 <tr>
+<td><a href="../Azure.VM.ComputerName/">Azure.VM.ComputerName</a></td>
+<td>Virtual Machine (VM) computer name should meet naming requirements.</td>
+<td>Awareness</td>
+<td>Error</td>
+</tr>
+<tr>
+<td><a href="../Azure.VM.Name/">Azure.VM.Name</a></td>
+<td>Virtual Machine (VM) names should meet naming requirements.</td>
+<td>Awareness</td>
+<td>Error</td>
+</tr>
+<tr>
+<td><a href="../Azure.VM.PPGName/">Azure.VM.PPGName</a></td>
+<td>Proximity Placement Group (PPG) names should meet naming requirements.</td>
+<td>Awareness</td>
+<td>Error</td>
+</tr>
+<tr>
 <td><a href="../Azure.VNET.Name/">Azure.VNET.Name</a></td>
 <td>Virtual Network (VNET) names should meet naming requirements.</td>
 <td>Awareness</td>
@@ -15774,25 +15797,6 @@
 <td><a href="../Azure.AKS.AutoUpgrade/">Azure.AKS.AutoUpgrade</a></td>
 <td>Configure AKS to automatically upgrade to newer supported AKS versions as they are made available.</td>
 <td>Important</td>
-<td>Error</td>
-</tr>
-</tbody>
-</table>
-<h3 id="principles">Principles<a class="headerlink" href="#principles" title="Permanent link">#</a></h3>
-<table>
-<thead>
-<tr>
-<th>Name</th>
-<th>Synopsis</th>
-<th>Severity</th>
-<th>Level</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><a href="../Azure.NSG.Associated/">Azure.NSG.Associated</a></td>
-<td>Network Security Groups (NSGs) should be associated to a subnet or network interface.</td>
-<td>Awareness</td>
 <td>Error</td>
 </tr>
 </tbody>
@@ -16206,26 +16210,8 @@
 <td>Error</td>
 </tr>
 <tr>
-<td><a href="../Azure.VM.ComputerName/">Azure.VM.ComputerName</a></td>
-<td>Virtual Machine (VM) computer name should meet naming requirements.</td>
-<td>Awareness</td>
-<td>Error</td>
-</tr>
-<tr>
 <td><a href="../Azure.VM.DiskName/">Azure.VM.DiskName</a></td>
 <td>Managed Disk names should meet naming requirements.</td>
-<td>Awareness</td>
-<td>Error</td>
-</tr>
-<tr>
-<td><a href="../Azure.VM.Name/">Azure.VM.Name</a></td>
-<td>Virtual Machine (VM) names should meet naming requirements.</td>
-<td>Awareness</td>
-<td>Error</td>
-</tr>
-<tr>
-<td><a href="../Azure.VM.PPGName/">Azure.VM.PPGName</a></td>
-<td>Proximity Placement Group (PPG) names should meet naming requirements.</td>
 <td>Awareness</td>
 <td>Error</td>
 </tr>
@@ -16550,12 +16536,6 @@
 <td>Important</td>
 <td>Error</td>
 </tr>
-<tr>
-<td><a href="../Azure.VM.Standalone/">Azure.VM.Standalone</a></td>
-<td>Use VM features to increase reliability and improve covered SLA for VM configurations.</td>
-<td>Important</td>
-<td>Error</td>
-</tr>
 </tbody>
 </table>
 <h3 id="best-practices">Best practices<a class="headerlink" href="#best-practices" title="Permanent link">#</a></h3>
@@ -16840,6 +16820,12 @@
 <td>Error</td>
 </tr>
 <tr>
+<td><a href="../Azure.VM.Standalone/">Azure.VM.Standalone</a></td>
+<td>Use VM features to increase reliability and improve covered SLA for VM configurations.</td>
+<td>Important</td>
+<td>Error</td>
+</tr>
+<tr>
 <td><a href="../Azure.VNG.ERLegacySKU/">Azure.VNG.ERLegacySKU</a></td>
 <td>Migrate from legacy SKUs to improve reliability and performance of ExpressRoute (ER) gateways.</td>
 <td>Critical</td>
@@ -17074,6 +17060,12 @@
 <tr>
 <td><a href="../Azure.VMSS.AutoInstanceRepairs/">Azure.VMSS.AutoInstanceRepairs</a></td>
 <td>Automatic instance repairs are enabled.</td>
+<td>Important</td>
+<td>Error</td>
+</tr>
+<tr>
+<td><a href="../Azure.VMSS.ZoneBalance/">Azure.VMSS.ZoneBalance</a></td>
+<td>Deploy virtual machine scale set instances using the best-effort zone balance in supported regions.</td>
 <td>Important</td>
 <td>Error</td>
 </tr>
@@ -17327,12 +17319,6 @@
 <td>Error</td>
 </tr>
 <tr>
-<td><a href="../Azure.MySQL.AAD/">Azure.MySQL.AAD</a></td>
-<td>Use Azure Active Directory (AAD) authentication with Azure Database for MySQL databases.</td>
-<td>Critical</td>
-<td>Error</td>
-</tr>
-<tr>
 <td><a href="../Azure.SignalR.ManagedIdentity/">Azure.SignalR.ManagedIdentity</a></td>
 <td>Configure SignalR Services to use managed identities to access Azure resources securely.</td>
 <td>Important</td>
@@ -17499,12 +17485,6 @@
 <td>Error</td>
 </tr>
 <tr>
-<td><a href="../Azure.MySQL.UseSSL/">Azure.MySQL.UseSSL</a></td>
-<td>Enforce encrypted MySQL connections.</td>
-<td>Critical</td>
-<td>Error</td>
-</tr>
-<tr>
 <td><a href="../Azure.SQL.TDE/">Azure.SQL.TDE</a></td>
 <td>Use Transparent Data Encryption (TDE) with Azure SQL Database.</td>
 <td>Critical</td>
@@ -17648,12 +17628,6 @@
 <tr>
 <td><a href="../Azure.ML.UserManagedIdentity/">Azure.ML.UserManagedIdentity</a></td>
 <td>ML workspaces should use user-assigned managed identity, rather than the default system-assigned managed identity.</td>
-<td>Important</td>
-<td>Error</td>
-</tr>
-<tr>
-<td><a href="../Azure.MySQL.AADOnly/">Azure.MySQL.AADOnly</a></td>
-<td>Ensure Azure AD-only authentication is enabled with Azure Database for MySQL databases.</td>
 <td>Important</td>
 <td>Error</td>
 </tr>
@@ -17917,54 +17891,6 @@
 <td><a href="../Azure.MariaDB.AllowAzureAccess/">Azure.MariaDB.AllowAzureAccess</a></td>
 <td>Determine if access from Azure services is required.</td>
 <td>Important</td>
-<td>Error</td>
-</tr>
-<tr>
-<td><a href="../Azure.MariaDB.FirewallIPRange/">Azure.MariaDB.FirewallIPRange</a></td>
-<td>Determine if there is an excessive number of permitted IP addresses.</td>
-<td>Important</td>
-<td>Error</td>
-</tr>
-<tr>
-<td><a href="../Azure.MariaDB.FirewallRuleCount/">Azure.MariaDB.FirewallRuleCount</a></td>
-<td>Determine if there is an excessive number of firewall rules.</td>
-<td>Awareness</td>
-<td>Error</td>
-</tr>
-<tr>
-<td><a href="../Azure.MySQL.AllowAzureAccess/">Azure.MySQL.AllowAzureAccess</a></td>
-<td>Determine if access from Azure services is required.</td>
-<td>Important</td>
-<td>Error</td>
-</tr>
-<tr>
-<td><a href="../Azure.MySQL.FirewallIPRange/">Azure.MySQL.FirewallIPRange</a></td>
-<td>Determine if there is an excessive number of permitted IP addresses.</td>
-<td>Important</td>
-<td>Error</td>
-</tr>
-<tr>
-<td><a href="../Azure.MySQL.FirewallRuleCount/">Azure.MySQL.FirewallRuleCount</a></td>
-<td>Determine if there is an excessive number of firewall rules.</td>
-<td>Awareness</td>
-<td>Error</td>
-</tr>
-<tr>
-<td><a href="../Azure.PostgreSQL.AllowAzureAccess/">Azure.PostgreSQL.AllowAzureAccess</a></td>
-<td>Determine if access from Azure services is required.</td>
-<td>Important</td>
-<td>Error</td>
-</tr>
-<tr>
-<td><a href="../Azure.PostgreSQL.FirewallIPRange/">Azure.PostgreSQL.FirewallIPRange</a></td>
-<td>Determine if there is an excessive number of permitted IP addresses.</td>
-<td>Important</td>
-<td>Error</td>
-</tr>
-<tr>
-<td><a href="../Azure.PostgreSQL.FirewallRuleCount/">Azure.PostgreSQL.FirewallRuleCount</a></td>
-<td>Determine if there is an excessive number of firewall rules.</td>
-<td>Awareness</td>
 <td>Error</td>
 </tr>
 <tr>
@@ -18251,6 +18177,18 @@
 <td>Warning</td>
 </tr>
 <tr>
+<td><a href="../Azure.MySQL.AAD/">Azure.MySQL.AAD</a></td>
+<td>Use Entra ID authentication with Azure Database for MySQL databases.</td>
+<td>Critical</td>
+<td>Error</td>
+</tr>
+<tr>
+<td><a href="../Azure.MySQL.AADOnly/">Azure.MySQL.AADOnly</a></td>
+<td>Ensure Entra ID only authentication is enabled with Azure Database for MySQL databases.</td>
+<td>Important</td>
+<td>Error</td>
+</tr>
+<tr>
 <td><a href="../Azure.PostgreSQL.AAD/">Azure.PostgreSQL.AAD</a></td>
 <td>Use Entra ID authentication with Azure Database for PostgreSQL databases.</td>
 <td>Critical</td>
@@ -18384,9 +18322,57 @@
 <td>Error</td>
 </tr>
 <tr>
+<td><a href="../Azure.MariaDB.FirewallIPRange/">Azure.MariaDB.FirewallIPRange</a></td>
+<td>Determine if there is an excessive number of permitted IP addresses.</td>
+<td>Important</td>
+<td>Error</td>
+</tr>
+<tr>
+<td><a href="../Azure.MariaDB.FirewallRuleCount/">Azure.MariaDB.FirewallRuleCount</a></td>
+<td>Determine if there is an excessive number of firewall rules.</td>
+<td>Awareness</td>
+<td>Error</td>
+</tr>
+<tr>
+<td><a href="../Azure.MySQL.AllowAzureAccess/">Azure.MySQL.AllowAzureAccess</a></td>
+<td>Determine if access from Azure services is required.</td>
+<td>Important</td>
+<td>Error</td>
+</tr>
+<tr>
+<td><a href="../Azure.MySQL.FirewallIPRange/">Azure.MySQL.FirewallIPRange</a></td>
+<td>Determine if there is an excessive number of permitted IP addresses.</td>
+<td>Important</td>
+<td>Error</td>
+</tr>
+<tr>
+<td><a href="../Azure.MySQL.FirewallRuleCount/">Azure.MySQL.FirewallRuleCount</a></td>
+<td>Determine if there is an excessive number of firewall rules.</td>
+<td>Awareness</td>
+<td>Error</td>
+</tr>
+<tr>
 <td><a href="../Azure.NSG.AnyInboundSource/">Azure.NSG.AnyInboundSource</a></td>
 <td>Network security groups (NSGs) should avoid rules that allow "any" as an inbound source.</td>
 <td>Critical</td>
+<td>Error</td>
+</tr>
+<tr>
+<td><a href="../Azure.PostgreSQL.AllowAzureAccess/">Azure.PostgreSQL.AllowAzureAccess</a></td>
+<td>Determine if access from Azure services is required.</td>
+<td>Important</td>
+<td>Error</td>
+</tr>
+<tr>
+<td><a href="../Azure.PostgreSQL.FirewallIPRange/">Azure.PostgreSQL.FirewallIPRange</a></td>
+<td>Determine if there is an excessive number of permitted IP addresses.</td>
+<td>Important</td>
+<td>Error</td>
+</tr>
+<tr>
+<td><a href="../Azure.PostgreSQL.FirewallRuleCount/">Azure.PostgreSQL.FirewallRuleCount</a></td>
+<td>Determine if there is an excessive number of firewall rules.</td>
+<td>Awareness</td>
 <td>Error</td>
 </tr>
 <tr>
@@ -18487,6 +18473,12 @@
 <td>Error</td>
 </tr>
 <tr>
+<td><a href="../Azure.MySQL.UseSSL/">Azure.MySQL.UseSSL</a></td>
+<td>Enforce encrypted MySQL connections.</td>
+<td>Critical</td>
+<td>Error</td>
+</tr>
+<tr>
 <td><a href="../Azure.PostgreSQL.MinTLS/">Azure.PostgreSQL.MinTLS</a></td>
 <td>PostgreSQL DB servers should reject TLS versions older than 1.2.</td>
 <td>Critical</td>
@@ -18562,6 +18554,12 @@
 <tr>
 <td><a href="../Azure.AppService.RemoteDebug/">Azure.AppService.RemoteDebug</a></td>
 <td>Disable remote debugging on App Service apps when not in use.</td>
+<td>Important</td>
+<td>Error</td>
+</tr>
+<tr>
+<td><a href="../Azure.VM.Updates/">Azure.VM.Updates</a></td>
+<td>Ensure automatic updates are enabled at deployment.</td>
 <td>Important</td>
 <td>Error</td>
 </tr>
@@ -18889,7 +18887,7 @@
     <span class="md-icon" title="Last update">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1-2.1-2M12.5 7v5.2l4 2.4-1 1L11 13V7h1.5M11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2v1.8Z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">May 7, 2024</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">June 19, 2024</span>
   </span>
 
     

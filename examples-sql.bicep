@@ -12,6 +12,8 @@ param location string = resourceGroup().location
 param adminLogin string
 param adminPrincipalId string
 
+var maxSize = 32 * 1048576
+
 // An example Azure SQL Database logical server.
 resource server 'Microsoft.Sql/servers@2023-08-01-preview' = {
   name: name
@@ -66,5 +68,28 @@ resource sqlAuditSettings 'Microsoft.Sql/servers/auditingSettings@2023-08-01-pre
       'FAILED_DATABASE_AUTHENTICATION_GROUP'
       'BATCH_COMPLETED_GROUP'
     ]
+  }
+}
+
+// An example Azure SQL Database.
+resource database 'Microsoft.Sql/servers/databases@2023-08-01-preview' = {
+  parent: server
+  name: name
+  location: location
+  properties: {
+    collation: 'SQL_Latin1_General_CP1_CI_AS'
+    maxSizeBytes: maxSize
+    catalogCollation: 'SQL_Latin1_General_CP1_CI_AS'
+    readScale: 'Disabled'
+    zoneRedundant: true
+  }
+}
+
+// An example configuration to enable TDE for an Azure SQL Database.
+resource tde 'Microsoft.Sql/servers/databases/transparentDataEncryption@2023-08-01-preview' = {
+  parent: database
+  name: 'current'
+  properties: {
+    state: 'Enabled'
   }
 }

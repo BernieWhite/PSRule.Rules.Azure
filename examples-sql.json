@@ -4,8 +4,8 @@
   "metadata": {
     "_generator": {
       "name": "bicep",
-      "version": "0.26.170.59819",
-      "templateHash": "6875576904803423253"
+      "version": "0.28.1.47646",
+      "templateHash": "16965524500352716387"
     }
   },
   "parameters": {
@@ -28,6 +28,9 @@
     "adminPrincipalId": {
       "type": "string"
     }
+  },
+  "variables": {
+    "maxSize": "[mul(32, 1048576)]"
   },
   "resources": [
     {
@@ -91,6 +94,33 @@
       },
       "dependsOn": [
         "[resourceId('Microsoft.Sql/servers', parameters('name'))]"
+      ]
+    },
+    {
+      "type": "Microsoft.Sql/servers/databases",
+      "apiVersion": "2023-08-01-preview",
+      "name": "[format('{0}/{1}', parameters('name'), parameters('name'))]",
+      "location": "[parameters('location')]",
+      "properties": {
+        "collation": "SQL_Latin1_General_CP1_CI_AS",
+        "maxSizeBytes": "[variables('maxSize')]",
+        "catalogCollation": "SQL_Latin1_General_CP1_CI_AS",
+        "readScale": "Disabled",
+        "zoneRedundant": true
+      },
+      "dependsOn": [
+        "[resourceId('Microsoft.Sql/servers', parameters('name'))]"
+      ]
+    },
+    {
+      "type": "Microsoft.Sql/servers/databases/transparentDataEncryption",
+      "apiVersion": "2023-08-01-preview",
+      "name": "[format('{0}/{1}/{2}', parameters('name'), parameters('name'), 'current')]",
+      "properties": {
+        "state": "Enabled"
+      },
+      "dependsOn": [
+        "[resourceId('Microsoft.Sql/servers/databases', parameters('name'), parameters('name'))]"
       ]
     }
   ]

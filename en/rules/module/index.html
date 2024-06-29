@@ -2073,24 +2073,6 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#instrumentation" class="md-nav__link">
-    <span class="md-ellipsis">
-      Instrumentation
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#monitor" class="md-nav__link">
-    <span class="md-ellipsis">
-      Monitor
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
   <a href="#monitoring" class="md-nav__link">
     <span class="md-ellipsis">
       Monitoring
@@ -2157,15 +2139,6 @@
   <a href="#repeatable-infrastructure" class="md-nav__link">
     <span class="md-ellipsis">
       Repeatable infrastructure
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#tagging-and-resource-naming" class="md-nav__link">
-    <span class="md-ellipsis">
-      Tagging and resource naming
     </span>
   </a>
   
@@ -2552,7 +2525,7 @@
           <li class="md-nav__item">
   <a href="#identity-and-access-management" class="md-nav__link">
     <span class="md-ellipsis">
-      Identity and access management
+      Identity and Access Management
     </span>
   </a>
   
@@ -2577,7 +2550,7 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#monitor_1" class="md-nav__link">
+  <a href="#monitor" class="md-nav__link">
     <span class="md-ellipsis">
       Monitor
     </span>
@@ -14510,24 +14483,6 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#instrumentation" class="md-nav__link">
-    <span class="md-ellipsis">
-      Instrumentation
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#monitor" class="md-nav__link">
-    <span class="md-ellipsis">
-      Monitor
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
   <a href="#monitoring" class="md-nav__link">
     <span class="md-ellipsis">
       Monitoring
@@ -14594,15 +14549,6 @@
   <a href="#repeatable-infrastructure" class="md-nav__link">
     <span class="md-ellipsis">
       Repeatable infrastructure
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#tagging-and-resource-naming" class="md-nav__link">
-    <span class="md-ellipsis">
-      Tagging and resource naming
     </span>
   </a>
   
@@ -14989,7 +14935,7 @@
           <li class="md-nav__item">
   <a href="#identity-and-access-management" class="md-nav__link">
     <span class="md-ellipsis">
-      Identity and access management
+      Identity and Access Management
     </span>
   </a>
   
@@ -15014,7 +14960,7 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#monitor_1" class="md-nav__link">
+  <a href="#monitor" class="md-nav__link">
     <span class="md-ellipsis">
       Monitor
     </span>
@@ -15505,44 +15451,6 @@
 </tr>
 </tbody>
 </table>
-<h3 id="instrumentation">Instrumentation<a class="headerlink" href="#instrumentation" title="Permanent link">#</a></h3>
-<table>
-<thead>
-<tr>
-<th>Name</th>
-<th>Synopsis</th>
-<th>Severity</th>
-<th>Level</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><a href="../Azure.APIM.APIDescriptors/">Azure.APIM.APIDescriptors</a></td>
-<td>API Management APIs should have a display name and description.</td>
-<td>Awareness</td>
-<td>Warning</td>
-</tr>
-</tbody>
-</table>
-<h3 id="monitor">Monitor<a class="headerlink" href="#monitor" title="Permanent link">#</a></h3>
-<table>
-<thead>
-<tr>
-<th>Name</th>
-<th>Synopsis</th>
-<th>Severity</th>
-<th>Level</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><a href="../Azure.VNET.PeerState/">Azure.VNET.PeerState</a></td>
-<td>VNET peering connections must be connected.</td>
-<td>Important</td>
-<td>Error</td>
-</tr>
-</tbody>
-</table>
 <h3 id="monitoring">Monitoring<a class="headerlink" href="#monitoring" title="Permanent link">#</a></h3>
 <table>
 <thead>
@@ -15616,6 +15524,12 @@
 <td>Error</td>
 </tr>
 <tr>
+<td><a href="../Azure.AKS.DNSPrefix/">Azure.AKS.DNSPrefix</a></td>
+<td>Azure Kubernetes Service (AKS) cluster DNS prefix should meet naming requirements.</td>
+<td>Awareness</td>
+<td>Error</td>
+</tr>
+<tr>
 <td><a href="../Azure.AKS.Name/">Azure.AKS.Name</a></td>
 <td>Azure Kubernetes Service (AKS) cluster names should meet naming requirements.</td>
 <td>Awareness</td>
@@ -15628,8 +15542,50 @@
 <td>Error</td>
 </tr>
 <tr>
+<td><a href="../Azure.AppConfig.Name/">Azure.AppConfig.Name</a></td>
+<td>App Configuration store names should meet naming requirements.</td>
+<td>Awareness</td>
+<td>Error</td>
+</tr>
+<tr>
+<td><a href="../Azure.AppGw.Name/">Azure.AppGw.Name</a></td>
+<td>Application Gateways should meet naming requirements.</td>
+<td>Awareness</td>
+<td>Error</td>
+</tr>
+<tr>
+<td><a href="../Azure.AppInsights.Name/">Azure.AppInsights.Name</a></td>
+<td>Azure Application Insights resources names should meet naming requirements.</td>
+<td>Awareness</td>
+<td>Error</td>
+</tr>
+<tr>
+<td><a href="../Azure.ContainerApp.Name/">Azure.ContainerApp.Name</a></td>
+<td>Container Apps should meet naming requirements.</td>
+<td>Awareness</td>
+<td>Error</td>
+</tr>
+<tr>
 <td><a href="../Azure.KeyVault.KeyName/">Azure.KeyVault.KeyName</a></td>
 <td>Key Vault Key names should meet naming requirements.</td>
+<td>Awareness</td>
+<td>Error</td>
+</tr>
+<tr>
+<td><a href="../Azure.KeyVault.SecretName/">Azure.KeyVault.SecretName</a></td>
+<td>Key Vault Secret names should meet naming requirements.</td>
+<td>Awareness</td>
+<td>Error</td>
+</tr>
+<tr>
+<td><a href="../Azure.LB.Name/">Azure.LB.Name</a></td>
+<td>Load Balancer names should meet naming requirements.</td>
+<td>Awareness</td>
+<td>Error</td>
+</tr>
+<tr>
+<td><a href="../Azure.MariaDB.DatabaseName/">Azure.MariaDB.DatabaseName</a></td>
+<td>Azure Database for MariaDB databases should meet naming requirements.</td>
 <td>Awareness</td>
 <td>Error</td>
 </tr>
@@ -15707,15 +15663,39 @@
 </thead>
 <tbody>
 <tr>
+<td><a href="../Azure.APIM.APIDescriptors/">Azure.APIM.APIDescriptors</a></td>
+<td>APIs should have a display name and description.</td>
+<td>Awareness</td>
+<td>Warning</td>
+</tr>
+<tr>
 <td><a href="../Azure.APIM.ProductDescriptors/">Azure.APIM.ProductDescriptors</a></td>
 <td>API Management products should have a display name and description.</td>
 <td>Awareness</td>
 <td>Warning</td>
 </tr>
 <tr>
-<td><a href="../Azure.ContainerApp.Name/">Azure.ContainerApp.Name</a></td>
-<td>Container Apps should meet naming requirements.</td>
+<td><a href="../Azure.Policy.AssignmentDescriptors/">Azure.Policy.AssignmentDescriptors</a></td>
+<td>Policy assignments should use a display name and description.</td>
 <td>Awareness</td>
+<td>Error</td>
+</tr>
+<tr>
+<td><a href="../Azure.Policy.Descriptors/">Azure.Policy.Descriptors</a></td>
+<td>Policy and initiative definitions should use a display name, description, and category.</td>
+<td>Awareness</td>
+<td>Error</td>
+</tr>
+<tr>
+<td><a href="../Azure.Policy.ExemptionDescriptors/">Azure.Policy.ExemptionDescriptors</a></td>
+<td>Policy exemptions should use a display name and description.</td>
+<td>Awareness</td>
+<td>Error</td>
+</tr>
+<tr>
+<td><a href="../Azure.VNET.PeerState/">Azure.VNET.PeerState</a></td>
+<td>VNET peering connections must be connected.</td>
+<td>Important</td>
 <td>Error</td>
 </tr>
 </tbody>
@@ -15898,24 +15878,6 @@
 <td>Error</td>
 </tr>
 <tr>
-<td><a href="../Azure.AppConfig.Name/">Azure.AppConfig.Name</a></td>
-<td>App Configuration store names should meet naming requirements.</td>
-<td>Awareness</td>
-<td>Error</td>
-</tr>
-<tr>
-<td><a href="../Azure.AppGw.Name/">Azure.AppGw.Name</a></td>
-<td>Application Gateways should meet naming requirements.</td>
-<td>Awareness</td>
-<td>Error</td>
-</tr>
-<tr>
-<td><a href="../Azure.AppInsights.Name/">Azure.AppInsights.Name</a></td>
-<td>Azure Application Insights resources names should meet naming requirements.</td>
-<td>Awareness</td>
-<td>Error</td>
-</tr>
-<tr>
 <td><a href="../Azure.Arc.Server.MaintenanceConfig/">Azure.Arc.Server.MaintenanceConfig</a></td>
 <td>Use a maintenance configuration for Arc-enabled servers.</td>
 <td>Important</td>
@@ -15994,24 +15956,6 @@
 <td>Error</td>
 </tr>
 <tr>
-<td><a href="../Azure.KeyVault.SecretName/">Azure.KeyVault.SecretName</a></td>
-<td>Key Vault Secret names should meet naming requirements.</td>
-<td>Awareness</td>
-<td>Error</td>
-</tr>
-<tr>
-<td><a href="../Azure.LB.Name/">Azure.LB.Name</a></td>
-<td>Load Balancer names should meet naming requirements.</td>
-<td>Awareness</td>
-<td>Error</td>
-</tr>
-<tr>
-<td><a href="../Azure.MariaDB.DatabaseName/">Azure.MariaDB.DatabaseName</a></td>
-<td>Azure Database for MariaDB databases should meet naming requirements.</td>
-<td>Awareness</td>
-<td>Error</td>
-</tr>
-<tr>
 <td><a href="../Azure.MariaDB.FirewallRuleName/">Azure.MariaDB.FirewallRuleName</a></td>
 <td>Azure Database for MariaDB firewall rules should meet naming requirements.</td>
 <td>Awareness</td>
@@ -16050,30 +15994,6 @@
 <tr>
 <td><a href="../Azure.Policy.AssignmentAssignedBy/">Azure.Policy.AssignmentAssignedBy</a></td>
 <td>Policy assignments should use assignedBy metadata.</td>
-<td>Awareness</td>
-<td>Error</td>
-</tr>
-<tr>
-<td><a href="../Azure.Policy.AssignmentDescriptors/">Azure.Policy.AssignmentDescriptors</a></td>
-<td>Policy assignments should use a display name and description.</td>
-<td>Awareness</td>
-<td>Error</td>
-</tr>
-<tr>
-<td><a href="../Azure.Policy.Descriptors/">Azure.Policy.Descriptors</a></td>
-<td>Policy and initiative definitions should use a display name, description, and category.</td>
-<td>Awareness</td>
-<td>Error</td>
-</tr>
-<tr>
-<td><a href="../Azure.Policy.ExemptionDescriptors/">Azure.Policy.ExemptionDescriptors</a></td>
-<td>Policy exemptions should use a display name and description.</td>
-<td>Awareness</td>
-<td>Error</td>
-</tr>
-<tr>
-<td><a href="../Azure.Policy.WaiverExpiry/">Azure.Policy.WaiverExpiry</a></td>
-<td>Configure policy waiver exemptions to expire.</td>
 <td>Awareness</td>
 <td>Error</td>
 </tr>
@@ -16236,25 +16156,6 @@
 <tr>
 <td><a href="../Azure.vWAN.Name/">Azure.vWAN.Name</a></td>
 <td>Virtual WAN (vWAN) names should meet naming requirements.</td>
-<td>Awareness</td>
-<td>Error</td>
-</tr>
-</tbody>
-</table>
-<h3 id="tagging-and-resource-naming">Tagging and resource naming<a class="headerlink" href="#tagging-and-resource-naming" title="Permanent link">#</a></h3>
-<table>
-<thead>
-<tr>
-<th>Name</th>
-<th>Synopsis</th>
-<th>Severity</th>
-<th>Level</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><a href="../Azure.AKS.DNSPrefix/">Azure.AKS.DNSPrefix</a></td>
-<td>Azure Kubernetes Service (AKS) cluster DNS prefix should meet naming requirements.</td>
 <td>Awareness</td>
 <td>Error</td>
 </tr>
@@ -16754,6 +16655,12 @@
 <td>Error</td>
 </tr>
 <tr>
+<td><a href="../Azure.AppConfig.SKU/">Azure.AppConfig.SKU</a></td>
+<td>App Configuration should use a minimum size of Standard.</td>
+<td>Important</td>
+<td>Error</td>
+</tr>
+<tr>
 <td><a href="../Azure.AppGw.MigrateWAFPolicy/">Azure.AppGw.MigrateWAFPolicy</a></td>
 <td>Migrate to Application Gateway WAF policy.</td>
 <td>Critical</td>
@@ -17104,12 +17011,6 @@
 <tr>
 <td><a href="../Azure.ACR.MinSku/">Azure.ACR.MinSku</a></td>
 <td>ACR should use the Premium or Standard SKU for production deployments.</td>
-<td>Important</td>
-<td>Error</td>
-</tr>
-<tr>
-<td><a href="../Azure.AppConfig.SKU/">Azure.AppConfig.SKU</a></td>
-<td>App Configuration should use a minimum size of Standard.</td>
 <td>Important</td>
 <td>Error</td>
 </tr>
@@ -17485,12 +17386,6 @@
 <td>Error</td>
 </tr>
 <tr>
-<td><a href="../Azure.SQL.TDE/">Azure.SQL.TDE</a></td>
-<td>Use Transparent Data Encryption (TDE) with Azure SQL Database.</td>
-<td>Critical</td>
-<td>Error</td>
-</tr>
-<tr>
 <td><a href="../Azure.VM.ADE/">Azure.VM.ADE</a></td>
 <td>Use Azure Disk Encryption (ADE).</td>
 <td>Important</td>
@@ -17541,12 +17436,6 @@
 <td>Error</td>
 </tr>
 <tr>
-<td><a href="../Azure.APIM.Ciphers/">Azure.APIM.Ciphers</a></td>
-<td>API Management should not accept weak or deprecated ciphers for client or backend communication.</td>
-<td>Critical</td>
-<td>Error</td>
-</tr>
-<tr>
 <td><a href="../Azure.APIM.HTTPBackend/">Azure.APIM.HTTPBackend</a></td>
 <td>Use HTTPS for communication to backend services.</td>
 <td>Critical</td>
@@ -17584,7 +17473,7 @@
 </tr>
 </tbody>
 </table>
-<h3 id="identity-and-access-management">Identity and access management<a class="headerlink" href="#identity-and-access-management" title="Permanent link">#</a></h3>
+<h3 id="identity-and-access-management">Identity and Access Management<a class="headerlink" href="#identity-and-access-management" title="Permanent link">#</a></h3>
 <table>
 <thead>
 <tr>
@@ -17664,18 +17553,6 @@
 <tr>
 <td><a href="../Azure.RBAC.UseRGDelegation/">Azure.RBAC.UseRGDelegation</a></td>
 <td>Use RBAC assignments on resource groups instead of individual resources.</td>
-<td>Important</td>
-<td>Error</td>
-</tr>
-<tr>
-<td><a href="../Azure.ServiceFabric.AAD/">Azure.ServiceFabric.AAD</a></td>
-<td>Use Azure Active Directory (AAD) client authentication for Service Fabric clusters.</td>
-<td>Critical</td>
-<td>Error</td>
-</tr>
-<tr>
-<td><a href="../Azure.SQL.AADOnly/">Azure.SQL.AADOnly</a></td>
-<td>Ensure Azure AD-only authentication is enabled with Azure SQL Database.</td>
 <td>Important</td>
 <td>Error</td>
 </tr>
@@ -17761,7 +17638,7 @@
 </tr>
 </tbody>
 </table>
-<h3 id="monitor_1">Monitor<a class="headerlink" href="#monitor_1" title="Permanent link">#</a></h3>
+<h3 id="monitor">Monitor<a class="headerlink" href="#monitor" title="Permanent link">#</a></h3>
 <table>
 <thead>
 <tr>
@@ -17893,24 +17770,6 @@
 <td>Important</td>
 <td>Error</td>
 </tr>
-<tr>
-<td><a href="../Azure.SQL.AllowAzureAccess/">Azure.SQL.AllowAzureAccess</a></td>
-<td>Determine if access from Azure services is required.</td>
-<td>Important</td>
-<td>Error</td>
-</tr>
-<tr>
-<td><a href="../Azure.SQL.FirewallIPRange/">Azure.SQL.FirewallIPRange</a></td>
-<td>Determine if there is an excessive number of permitted IP addresses set in the allowed IP list (CIDR range).</td>
-<td>Important</td>
-<td>Error</td>
-</tr>
-<tr>
-<td><a href="../Azure.SQL.FirewallRuleCount/">Azure.SQL.FirewallRuleCount</a></td>
-<td>Determine if there is an excessive number of firewall rules.</td>
-<td>Awareness</td>
-<td>Error</td>
-</tr>
 </tbody>
 </table>
 <h3 id="network-segmentation">Network segmentation<a class="headerlink" href="#network-segmentation" title="Permanent link">#</a></h3>
@@ -17924,12 +17783,6 @@
 </tr>
 </thead>
 <tbody>
-<tr>
-<td><a href="../Azure.NSG.LateralTraversal/">Azure.NSG.LateralTraversal</a></td>
-<td>Deny outbound management connections from non-management hosts.</td>
-<td>Important</td>
-<td>Error</td>
-</tr>
 <tr>
 <td><a href="../Azure.VNET.FirewallSubnet/">Azure.VNET.FirewallSubnet</a></td>
 <td>Use Azure Firewall to filter network traffic to and from Azure resources.</td>
@@ -17972,6 +17825,12 @@
 <td><a href="../Azure.AKS.NodeAutoUpgrade/">Azure.AKS.NodeAutoUpgrade</a></td>
 <td>Deploy AKS Clusters with Node Auto-Upgrade enabled</td>
 <td>Important</td>
+<td>Error</td>
+</tr>
+<tr>
+<td><a href="../Azure.Policy.WaiverExpiry/">Azure.Policy.WaiverExpiry</a></td>
+<td>Configure policy waiver exemptions to expire.</td>
+<td>Awareness</td>
 <td>Error</td>
 </tr>
 <tr>
@@ -18039,6 +17898,12 @@
 <tr>
 <td><a href="../Azure.AKS.NetworkPolicy/">Azure.AKS.NetworkPolicy</a></td>
 <td>Deploy AKS clusters with Network Policies enabled.</td>
+<td>Important</td>
+<td>Error</td>
+</tr>
+<tr>
+<td><a href="../Azure.NSG.LateralTraversal/">Azure.NSG.LateralTraversal</a></td>
+<td>Deny outbound management connections from non-management hosts.</td>
 <td>Important</td>
 <td>Error</td>
 </tr>
@@ -18219,9 +18084,21 @@
 <td>Error</td>
 </tr>
 <tr>
+<td><a href="../Azure.ServiceFabric.AAD/">Azure.ServiceFabric.AAD</a></td>
+<td>Use Entra ID client authentication for Service Fabric clusters.</td>
+<td>Critical</td>
+<td>Error</td>
+</tr>
+<tr>
 <td><a href="../Azure.SQL.AAD/">Azure.SQL.AAD</a></td>
 <td>Use Entra ID authentication with Azure SQL databases.</td>
 <td>Critical</td>
+<td>Error</td>
+</tr>
+<tr>
+<td><a href="../Azure.SQL.AADOnly/">Azure.SQL.AADOnly</a></td>
+<td>Ensure Entra ID only authentication is enabled with Azure SQL Database.</td>
+<td>Important</td>
 <td>Error</td>
 </tr>
 <tr>
@@ -18376,6 +18253,24 @@
 <td>Error</td>
 </tr>
 <tr>
+<td><a href="../Azure.SQL.AllowAzureAccess/">Azure.SQL.AllowAzureAccess</a></td>
+<td>Determine if access from Azure services is required.</td>
+<td>Important</td>
+<td>Error</td>
+</tr>
+<tr>
+<td><a href="../Azure.SQL.FirewallIPRange/">Azure.SQL.FirewallIPRange</a></td>
+<td>Determine if there is an excessive number of permitted IP addresses set in the allowed IP list (CIDR range).</td>
+<td>Important</td>
+<td>Error</td>
+</tr>
+<tr>
+<td><a href="../Azure.SQL.FirewallRuleCount/">Azure.SQL.FirewallRuleCount</a></td>
+<td>Determine if there is an excessive number of firewall rules.</td>
+<td>Awareness</td>
+<td>Error</td>
+</tr>
+<tr>
 <td><a href="../Azure.VNET.UseNSGs/">Azure.VNET.UseNSGs</a></td>
 <td>Virtual network (VNET) subnets should have Network Security Groups (NSGs) assigned.</td>
 <td>Critical</td>
@@ -18394,6 +18289,12 @@
 </tr>
 </thead>
 <tbody>
+<tr>
+<td><a href="../Azure.APIM.Ciphers/">Azure.APIM.Ciphers</a></td>
+<td>API Management should not accept weak or deprecated ciphers for client or backend communication.</td>
+<td>Critical</td>
+<td>Error</td>
+</tr>
 <tr>
 <td><a href="../Azure.AppGw.SSLPolicy/">Azure.AppGw.SSLPolicy</a></td>
 <td>Application Gateway should only accept a minimum of TLS 1.2.</td>
@@ -18511,6 +18412,12 @@
 <tr>
 <td><a href="../Azure.SQL.MinTLS/">Azure.SQL.MinTLS</a></td>
 <td>Azure SQL Database servers should reject TLS versions older than 1.2.</td>
+<td>Critical</td>
+<td>Error</td>
+</tr>
+<tr>
+<td><a href="../Azure.SQL.TDE/">Azure.SQL.TDE</a></td>
+<td>Use Transparent Data Encryption (TDE) with Azure SQL Database.</td>
 <td>Critical</td>
 <td>Error</td>
 </tr>

@@ -4,8 +4,8 @@
   "metadata": {
     "_generator": {
       "name": "bicep",
-      "version": "0.23.1.45101",
-      "templateHash": "2937516046566459664"
+      "version": "0.28.1.47646",
+      "templateHash": "17483218613728979013"
     }
   },
   "parameters": {
@@ -160,10 +160,7 @@
       "dependsOn": [
         "[resourceId('Microsoft.ApiManagement/service', parameters('name'))]",
         "[resourceId('Microsoft.ApiManagement/service/apiVersionSets', parameters('name'), 'echo')]"
-      ],
-      "metadata": {
-        "description": "An example API."
-      }
+      ]
     },
     {
       "type": "Microsoft.ApiManagement/service/backends",

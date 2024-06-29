@@ -18,7 +18,7 @@ param replicaLocation string
 @description('The resource id of the Log Analytics workspace to send diagnostic logs to.')
 param workspaceId string
 
-@description('An App Configuration store with a Standard SKU.')
+// An example App Configuration store with a Standard SKU.
 resource store 'Microsoft.AppConfiguration/configurationStores@2023-03-01' = {
   name: name
   location: location
@@ -32,7 +32,7 @@ resource store 'Microsoft.AppConfiguration/configurationStores@2023-03-01' = {
   }
 }
 
-@description('An App Configuration store replica in a secondary region.')
+// An example App Configuration store replica in a secondary region.
 resource replica 'Microsoft.AppConfiguration/configurationStores/replicas@2023-03-01' = {
   parent: store
   name: replicaName

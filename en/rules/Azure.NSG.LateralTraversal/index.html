@@ -8487,15 +8487,6 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#notes" class="md-nav__link">
-    <span class="md-ellipsis">
-      Notes
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
   <a href="#examples" class="md-nav__link">
     <span class="md-ellipsis">
       Examples
@@ -8525,6 +8516,15 @@
         
       </ul>
     </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#notes" class="md-nav__link">
+    <span class="md-ellipsis">
+      Notes
+    </span>
+  </a>
   
 </li>
       
@@ -13678,15 +13678,6 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#notes" class="md-nav__link">
-    <span class="md-ellipsis">
-      Notes
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
   <a href="#examples" class="md-nav__link">
     <span class="md-ellipsis">
       Examples
@@ -13716,6 +13707,15 @@
         
       </ul>
     </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#notes" class="md-nav__link">
+    <span class="md-ellipsis">
+      Notes
+    </span>
+  </a>
   
 </li>
       
@@ -13801,9 +13801,6 @@ Management protocols originating from application workload hosts should be block
 </ol>
 <h2 id="recommendation">Recommendation<a class="headerlink" href="#recommendation" title="Permanent link">#</a></h2>
 <p>Consider configuring NSGs rules to block common outbound management traffic from non-management hosts.</p>
-<h2 id="notes">Notes<a class="headerlink" href="#notes" title="Permanent link">#</a></h2>
-<p>Specifically this rule checks if either 3389 (RDP) or 22 (SSH) has been blocked for outbound traffic.</p>
-<p>To suppress this rule for NSGs protecting subnets expected to allow outbound management traffic see <a href="https://azure.github.io/PSRule.Rules.Azure/customization/permit-outbound-management/">Permit outbound management</a>.</p>
 <h2 id="examples">Examples<a class="headerlink" href="#examples" title="Permanent link">#</a></h2>
 <h3 id="configure-with-azure-template">Configure with Azure template<a class="headerlink" href="#configure-with-azure-template" title="Permanent link">#</a></h3>
 <p>To deploy NSGs that pass this rule:</p>
@@ -13867,9 +13864,12 @@ Management protocols originating from application workload hosts should be block
 </span><span id="__span-1-21"><a id="__codelineno-1-21" name="__codelineno-1-21" href="#__codelineno-1-21"></a>  }
 </span><span id="__span-1-22"><a id="__codelineno-1-22" name="__codelineno-1-22" href="#__codelineno-1-22"></a>}
 </span></code></pre></div>
+<h2 id="notes">Notes<a class="headerlink" href="#notes" title="Permanent link">#</a></h2>
+<p>Specifically this rule checks if either 3389 (RDP) or 22 (SSH) has been blocked for outbound traffic.</p>
+<p>To suppress this rule for NSGs protecting subnets expected to allow outbound management traffic see <a href="https://azure.github.io/PSRule.Rules.Azure/customization/permit-outbound-management/">Permit outbound management</a>.</p>
 <h2 id="links">Links<a class="headerlink" href="#links" title="Permanent link">#</a></h2>
 <ul>
-<li><a href="https://learn.microsoft.com/azure/architecture/framework/security/design-network-segmentation">Implement network segmentation patterns on Azure</a></li>
+<li><a href="https://learn.microsoft.com/azure/well-architected/security/segmentation">SE:04 Segmentation</a></li>
 <li><a href="https://learn.microsoft.com/azure/security/fundamentals/network-best-practices#logically-segment-subnets">Logically segment subnets</a></li>
 <li><a href="https://learn.microsoft.com/azure/virtual-network/virtual-network-vnet-plan-design-arm#segmentation">Plan virtual networks</a></li>
 <li><a href="https://learn.microsoft.com/azure/virtual-network/security-overview">Network security groups</a></li>
@@ -13898,7 +13898,7 @@ Management protocols originating from application workload hosts should be block
     <span class="md-icon" title="Last update">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1-2.1-2M12.5 7v5.2l4 2.4-1 1L11 13V7h1.5M11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2v1.8Z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">March 29, 2024</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">June 27, 2024</span>
   </span>
 
     
@@ -13926,14 +13926,14 @@ Management protocols originating from application workload hosts should be block
     
     <nav>
       
-        <a href="https://github.com/lukemurraynz" class="md-author" title="@lukemurraynz">
-          
-          <img src="https://avatars.githubusercontent.com/u/24467442?v=4&size=72" alt="lukemurraynz">
-        </a>
-      
         <a href="https://github.com/BernieWhite" class="md-author" title="@BernieWhite">
           
           <img src="https://avatars.githubusercontent.com/u/13513058?v=4&size=72" alt="BernieWhite">
+        </a>
+      
+        <a href="https://github.com/lukemurraynz" class="md-author" title="@lukemurraynz">
+          
+          <img src="https://avatars.githubusercontent.com/u/24467442?v=4&size=72" alt="lukemurraynz">
         </a>
       
         <a href="https://github.com/simone-bennett" class="md-author" title="@simone-bennett">

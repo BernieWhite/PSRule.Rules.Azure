@@ -93,7 +93,7 @@ resource version 'Microsoft.ApiManagement/service/apiVersionSets@2022-08-01' = {
   }
 }
 
-@description('An example API.')
+// An example REST API hosted on API Management
 resource api 'Microsoft.ApiManagement/service/apis@2022-08-01' = {
   parent: service
   name: 'echo-v1'

@@ -22,7 +22,7 @@
       
       
       <link rel="icon" href="../assets/ms_icon.png">
-      <meta name="generator" content="mkdocs-1.6.0, mkdocs-material-9.5.27">
+      <meta name="generator" content="mkdocs-1.6.0, mkdocs-material-9.5.28">
     
     
       
@@ -282,8 +282,14 @@
   
     
     
+      
+  
+  
+  
+    
+    
       <li class="md-tabs__item">
-        <a href="../setup/configuring-options/" class="md-tabs__link">
+        <a href="../setup/" class="md-tabs__link">
           
   
     
@@ -292,6 +298,9 @@
 
         </a>
       </li>
+    
+  
+
     
   
 
@@ -1351,6 +1360,15 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#a-warning-is-reported-for-azresources" class="md-nav__link">
+    <span class="md-ellipsis">
+      A warning is reported for Az.Resources
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#an-earlier-version-of-azaccounts-is-imported" class="md-nav__link">
     <span class="md-ellipsis">
       An earlier version of Az.Accounts is imported
@@ -1785,10 +1803,6 @@
       
         
       
-        
-      
-        
-      
     
     
       
@@ -1826,19 +1840,58 @@
   
   
   
-    <li class="md-nav__item">
-      <a href="../setup/configuring-options/" class="md-nav__link">
+    
+    
+      
         
+          
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_1" >
+        
+          
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../setup/" class="md-nav__link ">
+              
   
   <span class="md-ellipsis">
     Configuring options
   </span>
   
 
-      </a>
-    </li>
-  
-
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_3_1" id="__nav_3_1_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_1">
+            <span class="md-nav__icon md-icon"></span>
+            Configuring options
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
               
             
               
@@ -1878,6 +1931,35 @@
   
 
       </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../setup/configuring-exports/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Configuring exports
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
     </li>
   
 
@@ -13783,6 +13865,15 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#a-warning-is-reported-for-azresources" class="md-nav__link">
+    <span class="md-ellipsis">
+      A warning is reported for Az.Resources
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#an-earlier-version-of-azaccounts-is-imported" class="md-nav__link">
     <span class="md-ellipsis">
       An earlier version of Az.Accounts is imported
@@ -13848,8 +13939,8 @@
 <p>This article provides troubleshooting instructions for common errors.</p>
 <h2 id="bicep-compile-errors">Bicep compile errors<a class="headerlink" href="#bicep-compile-errors" title="Permanent link">#</a></h2>
 <p>When expanding Bicep source files you may get an error including a <em>BCPnnn</em> code similar to the following:</p>
-<div class="admonition error">
-<p class="admonition-title">Error</p>
+<div class="admonition message">
+<p class="admonition-title">Message</p>
 <p>Exception calling "GetResources" with "3" argument(s): "Bicep (0.14.46) compilation of '<file>' failed with: Error BCP057: The name "storageAccountName" does not exist in the current context.</p>
 </div>
 <p>This error is raised when Bicep fails to compile a source file.
@@ -13887,8 +13978,8 @@ PSRule for Azure will plan to add support as soon as possible after the feature 
 <p>If you are using a Bicep feature that is not supported by PSRule for Azure, please <a href="https://github.com/Azure/PSRule.Rules.Azure/discussions">join or start a discussion</a>.</p>
 <h2 id="bicep-compilation-timeout">Bicep compilation timeout<a class="headerlink" href="#bicep-compilation-timeout" title="Permanent link">#</a></h2>
 <p>When expanding Bicep source files you may get an error similar to the following:</p>
-<div class="admonition error">
-<p class="admonition-title">Error</p>
+<div class="admonition message">
+<p class="admonition-title">Message</p>
 <p>Bicep (0.4.1124) compilation of 'C:\temp\deploy.bicep' failed with: Bicep compilation hasn't completed within the timeout window. This can be caused by errors or warnings. Check the Bicep output by running bicep build and addressing any issues.</p>
 </div>
 <p>This error is raised when Bicep takes longer then the timeout to build a source file.
@@ -13959,8 +14050,8 @@ See <a href="../setup/configuring-expansion/#bicep-compilation-timeout">Bicep co
 </div>
 <h2 id="parameter-file-warns-of-metadata-property">Parameter file warns of metadata property<a class="headerlink" href="#parameter-file-warns-of-metadata-property" title="Permanent link">#</a></h2>
 <p>You may find while editing a <code>.json</code> parameter file the root <code>metadata</code> property is flagged with a warning.</p>
-<div class="admonition warning">
-<p class="admonition-title">Warning</p>
+<div class="admonition message">
+<p class="admonition-title">Message</p>
 <p>The property 'metadata' is not allowed.</p>
 </div>
 <div class="language-json highlight"><span class="filename">Azure parameter file</span><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="p">{</span>
@@ -13976,11 +14067,22 @@ See <a href="../setup/configuring-expansion/#bicep-compilation-timeout">Bicep co
 <p>This doesn't affect the workings of the parameter file or deployment.
 The reason for the warning is that the <code>metadata</code> property has not been added to the parameter file JSON schema.
 However, the top level <code>metadata</code> property is ignored by Azure Resource Manager when deploying a template.</p>
+<h2 id="a-warning-is-reported-for-azresources">A warning is reported for Az.Resources<a class="headerlink" href="#a-warning-is-reported-for-azresources" title="Permanent link">#</a></h2>
+<p>When running PSRule or importing <code>PSRule.Rules.Azure</code> on the command-line you see a message similar to the following:</p>
+<div class="admonition message">
+<p class="admonition-title">Message</p>
+<p>To use PSRule for Azure export cmdlets please install Az.Resources.</p>
+</div>
+<p>This warning flags that when running <code>Export-*</code> cmdlets for PSRule for Azure, the <code>Az.Resources</code> module is required.
+If you intend to call these cmdlets, first install the <code>Az.Resources</code> module.
+Otherwise this warning message can be ignored.</p>
+<p>To suppress the warning configure the <code>PSRULE_AZURE_RESOURCE_MODULE_NOWARN</code> environment variable to <code>true</code>.
+For more details see <a href="../setup/configuring-exports/#psrule_azure_resource_module_nowarn">Configuring exports</a>.</p>
 <h2 id="an-earlier-version-of-azaccounts-is-imported">An earlier version of Az.Accounts is imported<a class="headerlink" href="#an-earlier-version-of-azaccounts-is-imported" title="Permanent link">#</a></h2>
 <p>When running PSRule for Azure in Azure DevOps within the <code>AzurePowerShell@5</code> task,
 you may see the following error.</p>
-<div class="admonition error">
-<p class="admonition-title">Error</p>
+<div class="admonition message">
+<p class="admonition-title">Message</p>
 <p>This module requires Az.Accounts version 2.8.0. An earlier version of
 Az.Accounts is imported in the current PowerShell session. Please open a new
 session before importing this module. This error could indicate that multiple
@@ -13991,12 +14093,12 @@ information.</p>
 <p>This error is raised by a chained dependency failure importing a newer version of <code>Az.Accounts</code>.
 To avoid this issue attempt to install the exact versions of <code>Az.Resources</code>.
 In the <code>AzurePowerShell@5</code> task before installing PSRule.</p>
-<div class="language-powershell highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="nb">Install-Module</span> <span class="n">Az</span><span class="p">.</span><span class="n">Resources</span> <span class="n">-RequiredVersion</span> <span class="s1">&#39;5.6.0&#39;</span> <span class="n">-Force</span> <span class="n">-Scope</span> <span class="n">CurrentUser</span>
+<div class="language-powershell highlight"><span class="filename">PowerShell</span><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="nb">Install-Module</span> <span class="n">Az</span><span class="p">.</span><span class="n">Resources</span> <span class="n">-RequiredVersion</span> <span class="s1">&#39;7.1.0&#39;</span> <span class="n">-Force</span> <span class="n">-Scope</span> <span class="n">CurrentUser</span>
 </span></code></pre></div>
 <p>From PSRule for Azure v1.16.0, <code>Az.Accounts</code> and <code>Az.Resources</code> are no longer installed as dependencies.
 When using export commands from PSRule, you may need to install these modules.</p>
 <p>To install these modules, use the following PowerShell command:</p>
-<div class="language-powershell highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="nb">Install-Module</span> <span class="n">Az</span><span class="p">.</span><span class="n">Resources</span> <span class="n">-Force</span> <span class="n">-Scope</span> <span class="n">CurrentUser</span>
+<div class="language-powershell highlight"><span class="filename">PowerShell</span><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="nb">Install-Module</span> <span class="n">Az</span><span class="p">.</span><span class="n">Resources</span> <span class="n">-Force</span> <span class="n">-Scope</span> <span class="n">CurrentUser</span>
 </span></code></pre></div>
 <h2 id="could-not-load-file-or-assembly-yamldotnet">Could not load file or assembly YamlDotNet<a class="headerlink" href="#could-not-load-file-or-assembly-yamldotnet" title="Permanent link">#</a></h2>
 <p>PSRule <strong>&gt;=1.3.0</strong> uses an updated version of the YamlDotNet library.
@@ -14007,10 +14109,10 @@ The PSRule for Azure <strong>&lt;1.3.1</strong> uses an older version of this li
 <li>Alternatively, when using PSRule for Azure <strong>&lt;1.3.1</strong> use PSRule <strong>=1.2.0</strong>.</li>
 </ul>
 <p>To install the latest module version of PSRule use the following commands:</p>
-<div class="language-powershell highlight"><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="nb">Install-Module</span> <span class="n">-Name</span> <span class="n">PSRule</span><span class="p">.</span><span class="n">Rules</span><span class="p">.</span><span class="n">Azure</span> <span class="n">-MinimumVersion</span> <span class="n">1</span><span class="p">.</span><span class="n">3</span><span class="p">.</span><span class="n">1</span> <span class="n">-Scope</span> <span class="n">CurrentUser</span> <span class="n">-Force</span><span class="p">;</span>
+<div class="language-powershell highlight"><span class="filename">PowerShell</span><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="nb">Install-Module</span> <span class="n">-Name</span> <span class="n">PSRule</span><span class="p">.</span><span class="n">Rules</span><span class="p">.</span><span class="n">Azure</span> <span class="n">-MinimumVersion</span> <span class="n">1</span><span class="p">.</span><span class="n">3</span><span class="p">.</span><span class="n">1</span> <span class="n">-Scope</span> <span class="n">CurrentUser</span> <span class="n">-Force</span><span class="p">;</span>
 </span></code></pre></div>
 <p>For the PSRule GitHub Action, use <strong>&gt;=1.4.0</strong>.</p>
-<div class="language-yaml highlight"><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Run PSRule analysis</span>
+<div class="language-yaml highlight"><span class="filename">GitHub Actions</span><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Run PSRule analysis</span>
 </span><span id="__span-4-2"><a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a><span class="w">  </span><span class="nt">uses</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">microsoft/ps-rule@v2.9.0</span>
 </span></code></pre></div>
 
@@ -14035,7 +14137,7 @@ The PSRule for Azure <strong>&lt;1.3.1</strong> uses an older version of this li
     <span class="md-icon" title="Last update">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1-2.1-2M12.5 7v5.2l4 2.4-1 1L11 13V7h1.5M11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2v1.8Z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">February 28, 2024</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">July 1, 2024</span>
   </span>
 
     
@@ -14180,7 +14282,7 @@ The PSRule for Azure <strong>&lt;1.3.1</strong> uses an older version of this li
     <script id="__config" type="application/json">{"base": "..", "features": ["navigation.instant", "navigation.indexes", {"navigation.sections": {"level": 1}}, "navigation.tabs", "navigation.footer", "content.code.annotate", "content.tabs.link", "content.code.copy", "content.action.edit", "content.action.view"], "search": "../assets/javascripts/workers/search.b8dbb3d2.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
     
     
-      <script src="../assets/javascripts/bundle.ad660dcc.min.js"></script>
+      <script src="../assets/javascripts/bundle.fe8b6f2b.min.js"></script>
       
     
   </body>

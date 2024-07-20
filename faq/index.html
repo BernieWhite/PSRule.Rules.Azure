@@ -655,6 +655,15 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#what-is-expansion" class="md-nav__link">
+    <span class="md-ellipsis">
+      What is expansion?
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#is-terraform-supported" class="md-nav__link">
     <span class="md-ellipsis">
       Is Terraform supported?
@@ -1360,11 +1369,11 @@
   
   
     <li class="md-nav__item">
-      <a href="../customization/storing-custom-rules/" class="md-nav__link">
+      <a href="../customization/using-custom-rules/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
-    Storing custom rules
+    Using custom rules
   </span>
   
 
@@ -14052,6 +14061,15 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#what-is-expansion" class="md-nav__link">
+    <span class="md-ellipsis">
+      What is expansion?
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#is-terraform-supported" class="md-nav__link">
     <span class="md-ellipsis">
       Is Terraform supported?
@@ -14254,14 +14272,25 @@ For common issues and workarounds, please see <a href="../troubleshooting/">trou
 </div>
 <h2 id="what-is-a-rule">What is a rule?<a class="headerlink" href="#what-is-a-rule" title="Permanent link">#</a></h2>
 <p>A rule is a named set of checks and documentation.
+Each rule is tests a specific aspect of an Azure resource or deployment to determine if
+it is aligned with the <a href="https://learn.microsoft.com/azure/architecture/framework/">Microsoft Azure Well-Architected Framework</a>.
 You can find the documentation for each rule under <a href="../en/rules/module/">reference</a>.</p>
 <h2 id="what-is-a-baseline">What is a baseline?<a class="headerlink" href="#what-is-a-baseline" title="Permanent link">#</a></h2>
 <p>A baseline combines rules and configuration.
 PSRule for Azure provides several baselines that can be referenced when running PSRule.
 Quarterly baselines provide a stable checkpoint of rules when you need to stagger adoption of new rules.</p>
 <p>Continue reading <a href="../working-with-baselines/">working with baselines</a> for a detailed breakdown.</p>
+<h2 id="what-is-expansion">What is expansion?<a class="headerlink" href="#what-is-expansion" title="Permanent link">#</a></h2>
+<p>Expansion is a feature of PSRule for Azure that converts Azure Infrastructure as Code (<abbr title="Infrastructure as Code">IaC</abbr>) to a testable Azure resource.
+<abbr title="Infrastructure as Code">IaC</abbr> format such as Bicep and <abbr title="Azure Resource Manager">ARM</abbr> templates, support dynamic capabilities such parameters, variables, and conditions...
+These dynamic capabilities allow customers to create modular reusable code that can scale across an organization.
+However, to determine if a specific Azure resource meets the requirements of an organization the final state must be known.</p>
+<p>Expansion resolves these dynamic capabilities so that a final state for each resource can be tested by rules.
+Noting the final expanded state provided by PSRule for Azure is a close approximation.
+This close approximation allows testing of Azure resources offline directly from code before deployment to Azure.</p>
+<p>Continue reading <a href="../expanding-source-files/">Expanding source files</a>.</p>
 <h2 id="is-terraform-supported">Is Terraform supported?<a class="headerlink" href="#is-terraform-supported" title="Permanent link">#</a></h2>
-<p>Currently PSRule for Azure supports testing Azure resources from Infrastructure as Code (<abbr title="Infrastructure as Code">IaC</abbr>) with:</p>
+<p>Currently PSRule for Azure supports testing Azure resources from <abbr title="Infrastructure as Code">IaC</abbr> with:</p>
 <ul>
 <li>Azure Resource Manager (<abbr title="Azure Resource Manager">ARM</abbr>) templates.</li>
 <li>Azure Bicep deployments.</li>
@@ -14431,7 +14460,7 @@ Collection of telemetry in PowerShell and how to opt-out is explained in <a href
     <span class="md-icon" title="Last update">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1-2.1-2M12.5 7v5.2l4 2.4-1 1L11 13V7h1.5M11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2v1.8Z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">July 1, 2024</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">July 20, 2024</span>
   </span>
 
     

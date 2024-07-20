@@ -1145,11 +1145,11 @@
   
   
     <li class="md-nav__item">
-      <a href="../customization/storing-custom-rules/" class="md-nav__link">
+      <a href="../customization/using-custom-rules/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
-    Storing custom rules
+    Using custom rules
   </span>
   
 
@@ -18656,6 +18656,7 @@
   See <a href="../upgrade-notes/">upgrade notes</a> for more information.</li>
 </ul>
 <h2 id="unreleased">Unreleased<a class="headerlink" href="#unreleased" title="Permanent link">#</a></h2>
+<p>What's changed since pre-release v1.39.0-B0009:</p>
 <ul>
 <li>New rules:<ul>
 <li>Azure Kubernetes Service:<ul>
@@ -18663,6 +18664,11 @@
   <a href="https://github.com/Azure/PSRule.Rules.Azure/issues/2450">#2450</a></li>
 </ul>
 </li>
+</ul>
+</li>
+<li>General improvements:<ul>
+<li>Add binding configuration to policy as rules docs by <a href="https://github.com/BernieWhite">@BernieWhite</a>.
+  <a href="https://github.com/Azure/PSRule.Rules.Azure/issues/2995">#2995</a></li>
 </ul>
 </li>
 </ul>
@@ -25093,7 +25099,8 @@ What's changed since v1.24.0:</p>
 <p>What's changed since v1.7.0:</p>
 <ul>
 <li>New features:<ul>
-<li>Added <code>Azure.GA_2021_09</code> baseline. <a href="https://github.com/Azure/PSRule.Rules.Azure/issues/961">#961</a><ul>
+<li>Added <code>Azure.GA_2021_09</code> baseline.
+  <a href="https://github.com/Azure/PSRule.Rules.Azure/issues/961">#961</a><ul>
 <li>Includes rules released before or during September 2021 for Azure GA features.</li>
 <li>Marked baseline <code>Azure.GA_2021_06</code> as obsolete.</li>
 </ul>
@@ -25102,43 +25109,63 @@ What's changed since v1.24.0:</p>
 </li>
 <li>New rules:<ul>
 <li>Application Gateway:<ul>
-<li>Check App Gateways should use availability zones when available. Thanks <a href="https://github.com/ArmaanMcleod">[@ArmaanMcleod](https://github.com/ArmaanMcleod)</a>. <a href="https://github.com/Azure/PSRule.Rules.Azure/issues/928">#928</a></li>
+<li>Check App Gateways should use availability zones when available by <a href="https://github.com/ArmaanMcleod">@ArmaanMcleod</a>.
+  <a href="https://github.com/Azure/PSRule.Rules.Azure/issues/928">#928</a></li>
 </ul>
 </li>
 <li>Azure Kubernetes Service:<ul>
-<li>Check clusters have control plane audit logs enabled. Thanks <a href="https://github.com/ArmaanMcleod">[@ArmaanMcleod](https://github.com/ArmaanMcleod)</a>. <a href="https://github.com/Azure/PSRule.Rules.Azure/issues/882">#882</a></li>
-<li>Check clusters have control plane diagnostics enabled. Thanks <a href="https://github.com/ArmaanMcleod">[@ArmaanMcleod](https://github.com/ArmaanMcleod)</a>. <a href="https://github.com/Azure/PSRule.Rules.Azure/issues/922">#922</a></li>
-<li>Check clusters use Container Insights for monitoring workloads. Thanks <a href="https://github.com/ArmaanMcleod">[@ArmaanMcleod](https://github.com/ArmaanMcleod)</a>. <a href="https://github.com/Azure/PSRule.Rules.Azure/issues/881">#881</a></li>
-<li>Check clusters use availability zones when available. Thanks <a href="https://github.com/ArmaanMcleod">[@ArmaanMcleod](https://github.com/ArmaanMcleod)</a>. <a href="https://github.com/Azure/PSRule.Rules.Azure/issues/880">#880</a></li>
+<li>Check clusters have control plane audit logs enabled by <a href="https://github.com/ArmaanMcleod">@ArmaanMcleod</a>.
+  <a href="https://github.com/Azure/PSRule.Rules.Azure/issues/882">#882</a></li>
+<li>Check clusters have control plane diagnostics enabled by <a href="https://github.com/ArmaanMcleod">@ArmaanMcleod</a>.
+  <a href="https://github.com/Azure/PSRule.Rules.Azure/issues/922">#922</a></li>
+<li>Check clusters use Container Insights for monitoring workloads by <a href="https://github.com/ArmaanMcleod">@ArmaanMcleod</a>.
+  <a href="https://github.com/Azure/PSRule.Rules.Azure/issues/881">#881</a></li>
+<li>Check clusters use availability zones when available by <a href="https://github.com/ArmaanMcleod">@ArmaanMcleod</a>.
+  <a href="https://github.com/Azure/PSRule.Rules.Azure/issues/880">#880</a></li>
 </ul>
 </li>
 <li>Cosmos DB:<ul>
-<li>Check DB account names meet naming requirements. <a href="https://github.com/Azure/PSRule.Rules.Azure/issues/954">#954</a></li>
-<li>Check DB accounts use Azure AD identities for resource management operations. <a href="https://github.com/Azure/PSRule.Rules.Azure/issues/953">#953</a></li>
+<li>Check DB account names meet naming requirements.
+  <a href="https://github.com/Azure/PSRule.Rules.Azure/issues/954">#954</a></li>
+<li>Check DB accounts use Azure AD identities for resource management operations.
+  <a href="https://github.com/Azure/PSRule.Rules.Azure/issues/953">#953</a></li>
 </ul>
 </li>
 <li>Load Balancer:<ul>
-<li>Check Load balancers are using Standard SKU. Thanks <a href="https://github.com/ArmaanMcleod">[@ArmaanMcleod](https://github.com/ArmaanMcleod)</a>. <a href="https://github.com/Azure/PSRule.Rules.Azure/issues/957">#957</a></li>
-<li>Check Load Balancers are configured with zone-redundancy. Thanks <a href="https://github.com/ArmaanMcleod">[@ArmaanMcleod](https://github.com/ArmaanMcleod)</a>. <a href="https://github.com/Azure/PSRule.Rules.Azure/issues/927">#927</a></li>
+<li>Check Load balancers are using Standard SKU by <a href="https://github.com/ArmaanMcleod">@ArmaanMcleod</a>.
+  <a href="https://github.com/Azure/PSRule.Rules.Azure/issues/957">#957</a></li>
+<li>Check Load Balancers are configured with zone-redundancy by <a href="https://github.com/ArmaanMcleod">@ArmaanMcleod</a>.
+  <a href="https://github.com/Azure/PSRule.Rules.Azure/issues/927">#927</a></li>
 </ul>
 </li>
 </ul>
 </li>
 <li>Engineering:<ul>
-<li>Bump PSRule dependency to v1.7.2. <a href="https://github.com/Azure/PSRule.Rules.Azure/issues/951">#951</a></li>
-<li>Automated update of availability zone information in providers.json. <a href="https://github.com/Azure/PSRule.Rules.Azure/issues/907">#907</a></li>
-<li>Increased test coverage of rule reasons. Thanks <a href="https://github.com/ArmaanMcleod">[@ArmaanMcleod](https://github.com/ArmaanMcleod)</a>. <a href="https://github.com/Azure/PSRule.Rules.Azure/issues/960">#960</a></li>
+<li>Bump PSRule dependency to v1.7.2.
+  <a href="https://github.com/Azure/PSRule.Rules.Azure/issues/951">#951</a></li>
+<li>Automated update of availability zone information in providers.json.
+  <a href="https://github.com/Azure/PSRule.Rules.Azure/issues/907">#907</a></li>
+<li>Increased test coverage of rule reasons by <a href="https://github.com/ArmaanMcleod">@ArmaanMcleod</a>.
+  <a href="https://github.com/Azure/PSRule.Rules.Azure/issues/960">#960</a></li>
 </ul>
 </li>
 <li>Bug fixes:<ul>
-<li>Fixed export of in-flight AKS related subnets for kubenet clusters. Thanks <a href="https://github.com/ArmaanMcleod">[@ArmaanMcleod](https://github.com/ArmaanMcleod)</a>. <a href="https://github.com/Azure/PSRule.Rules.Azure/issues/920">#920</a></li>
-<li>Fixed plan instance count is not applicable to Elastic Premium plans. <a href="https://github.com/Azure/PSRule.Rules.Azure/issues/946">#946</a></li>
-<li>Fixed minimum App Service Plan fails Elastic Premium plans. <a href="https://github.com/Azure/PSRule.Rules.Azure/issues/945">#945</a></li>
-<li>Fixed App Service Plan should include PremiumV3 plan. <a href="https://github.com/Azure/PSRule.Rules.Azure/issues/944">#944</a></li>
-<li>Fixed Azure.VM.NICAttached with private endpoints. <a href="https://github.com/Azure/PSRule.Rules.Azure/issues/932">#932</a></li>
-<li>Fixed Bicep CLI fails with unexpected end of content. <a href="https://github.com/Azure/PSRule.Rules.Azure/issues/889">#889</a></li>
-<li>Fixed incomplete reason message for <code>Azure.Storage.MinTLS</code>. <a href="https://github.com/Azure/PSRule.Rules.Azure/issues/971">#971</a></li>
-<li>Fixed false positive of <code>Azure.Storage.UseReplication</code> with large file storage. <a href="https://github.com/Azure/PSRule.Rules.Azure/issues/965">#965</a></li>
+<li>Fixed export of in-flight AKS related subnets for kubenet clusters by <a href="https://github.com/ArmaanMcleod">@ArmaanMcleod</a>.
+  <a href="https://github.com/Azure/PSRule.Rules.Azure/issues/920">#920</a></li>
+<li>Fixed plan instance count is not applicable to Elastic Premium plans.
+  <a href="https://github.com/Azure/PSRule.Rules.Azure/issues/946">#946</a></li>
+<li>Fixed minimum App Service Plan fails Elastic Premium plans.
+  <a href="https://github.com/Azure/PSRule.Rules.Azure/issues/945">#945</a></li>
+<li>Fixed App Service Plan should include PremiumV3 plan.
+  <a href="https://github.com/Azure/PSRule.Rules.Azure/issues/944">#944</a></li>
+<li>Fixed Azure.VM.NICAttached with private endpoints.
+  <a href="https://github.com/Azure/PSRule.Rules.Azure/issues/932">#932</a></li>
+<li>Fixed Bicep CLI fails with unexpected end of content.
+  <a href="https://github.com/Azure/PSRule.Rules.Azure/issues/889">#889</a></li>
+<li>Fixed incomplete reason message for <code>Azure.Storage.MinTLS</code>.
+  <a href="https://github.com/Azure/PSRule.Rules.Azure/issues/971">#971</a></li>
+<li>Fixed false positive of <code>Azure.Storage.UseReplication</code> with large file storage.
+  <a href="https://github.com/Azure/PSRule.Rules.Azure/issues/965">#965</a></li>
 </ul>
 </li>
 </ul>
@@ -25151,19 +25178,24 @@ What's changed since v1.24.0:</p>
 <ul>
 <li>New rules:<ul>
 <li>Load Balancer:<ul>
-<li>Check Load balancers are using Standard SKU. Thanks <a href="https://github.com/ArmaanMcleod">[@ArmaanMcleod](https://github.com/ArmaanMcleod)</a>. <a href="https://github.com/Azure/PSRule.Rules.Azure/issues/957">#957</a></li>
+<li>Check Load balancers are using Standard SKU. by <a href="https://github.com/ArmaanMcleod">@ArmaanMcleod</a>.
+  <a href="https://github.com/Azure/PSRule.Rules.Azure/issues/957">#957</a></li>
 </ul>
 </li>
 </ul>
 </li>
 <li>Engineering:<ul>
-<li>Increased test coverage of rule reasons. Thanks <a href="https://github.com/ArmaanMcleod">[@ArmaanMcleod](https://github.com/ArmaanMcleod)</a>. <a href="https://github.com/Azure/PSRule.Rules.Azure/issues/960">#960</a></li>
+<li>Increased test coverage of rule reasons. by <a href="https://github.com/ArmaanMcleod">@ArmaanMcleod</a>.
+  <a href="https://github.com/Azure/PSRule.Rules.Azure/issues/960">#960</a></li>
 </ul>
 </li>
 <li>Bug fixes:<ul>
-<li>Fixed Bicep CLI fails with unexpected end of content. <a href="https://github.com/Azure/PSRule.Rules.Azure/issues/889">#889</a></li>
-<li>Fixed incomplete reason message for <code>Azure.Storage.MinTLS</code>. <a href="https://github.com/Azure/PSRule.Rules.Azure/issues/971">#971</a></li>
-<li>Fixed false positive of <code>Azure.Storage.UseReplication</code> with large file storage. <a href="https://github.com/Azure/PSRule.Rules.Azure/issues/965">#965</a></li>
+<li>Fixed Bicep CLI fails with unexpected end of content.
+  <a href="https://github.com/Azure/PSRule.Rules.Azure/issues/889">#889</a></li>
+<li>Fixed incomplete reason message for <code>Azure.Storage.MinTLS</code>.
+  <a href="https://github.com/Azure/PSRule.Rules.Azure/issues/971">#971</a></li>
+<li>Fixed false positive of <code>Azure.Storage.UseReplication</code> with large file storage.
+  <a href="https://github.com/Azure/PSRule.Rules.Azure/issues/965">#965</a></li>
 </ul>
 </li>
 </ul>
@@ -25171,7 +25203,8 @@ What's changed since v1.24.0:</p>
 <p>What's changed since pre-release v1.8.0-B2109046:</p>
 <ul>
 <li>New features:<ul>
-<li>Added <code>Azure.GA_2021_09</code> baseline. <a href="https://github.com/Azure/PSRule.Rules.Azure/issues/961">#961</a><ul>
+<li>Added <code>Azure.GA_2021_09</code> baseline.
+  <a href="https://github.com/Azure/PSRule.Rules.Azure/issues/961">#961</a><ul>
 <li>Includes rules released before or during September 2021 for Azure GA features.</li>
 <li>Marked baseline <code>Azure.GA_2021_06</code> as obsolete.</li>
 </ul>
@@ -25180,7 +25213,8 @@ What's changed since v1.24.0:</p>
 </li>
 <li>New rules:<ul>
 <li>Load Balancer:<ul>
-<li>Check Load Balancers are configured with zone-redundancy. Thanks <a href="https://github.com/ArmaanMcleod">[@ArmaanMcleod](https://github.com/ArmaanMcleod)</a>. <a href="https://github.com/Azure/PSRule.Rules.Azure/issues/927">#927</a></li>
+<li>Check Load Balancers are configured with zone-redundancy by <a href="https://github.com/ArmaanMcleod">@ArmaanMcleod</a>.
+  <a href="https://github.com/Azure/PSRule.Rules.Azure/issues/927">#927</a></li>
 </ul>
 </li>
 </ul>
@@ -25191,25 +25225,33 @@ What's changed since v1.24.0:</p>
 <ul>
 <li>New rules:<ul>
 <li>Application Gateway:<ul>
-<li>Check App Gateways should use availability zones when available. Thanks <a href="https://github.com/ArmaanMcleod">[@ArmaanMcleod](https://github.com/ArmaanMcleod)</a>. <a href="https://github.com/Azure/PSRule.Rules.Azure/issues/928">#928</a></li>
+<li>Check App Gateways should use availability zones when available by <a href="https://github.com/ArmaanMcleod">@ArmaanMcleod</a>
+  <a href="https://github.com/Azure/PSRule.Rules.Azure/issues/928">#928</a></li>
 </ul>
 </li>
 <li>Cosmos DB:<ul>
-<li>Check DB account names meet naming requirements. <a href="https://github.com/Azure/PSRule.Rules.Azure/issues/954">#954</a></li>
-<li>Check DB accounts use Azure AD identities for resource management operations. <a href="https://github.com/Azure/PSRule.Rules.Azure/issues/953">#953</a></li>
+<li>Check DB account names meet naming requirements.
+  <a href="https://github.com/Azure/PSRule.Rules.Azure/issues/954">#954</a></li>
+<li>Check DB accounts use Azure AD identities for resource management operations.
+  <a href="https://github.com/Azure/PSRule.Rules.Azure/issues/953">#953</a></li>
 </ul>
 </li>
 </ul>
 </li>
 <li>Bug fixes:<ul>
-<li>Fixed plan instance count is not applicable to Elastic Premium plans. <a href="https://github.com/Azure/PSRule.Rules.Azure/issues/946">#946</a></li>
-<li>Fixed minimum App Service Plan fails Elastic Premium plans. <a href="https://github.com/Azure/PSRule.Rules.Azure/issues/945">#945</a></li>
-<li>Fixed App Service Plan should include PremiumV3 plan. <a href="https://github.com/Azure/PSRule.Rules.Azure/issues/944">#944</a></li>
-<li>Fixed Azure.VM.NICAttached with private endpoints. <a href="https://github.com/Azure/PSRule.Rules.Azure/issues/932">#932</a></li>
+<li>Fixed plan instance count is not applicable to Elastic Premium plans.
+  <a href="https://github.com/Azure/PSRule.Rules.Azure/issues/946">#946</a></li>
+<li>Fixed minimum App Service Plan fails Elastic Premium plans.
+  <a href="https://github.com/Azure/PSRule.Rules.Azure/issues/945">#945</a></li>
+<li>Fixed App Service Plan should include PremiumV3 plan.
+  <a href="https://github.com/Azure/PSRule.Rules.Azure/issues/944">#944</a></li>
+<li>Fixed Azure.VM.NICAttached with private endpoints.
+  <a href="https://github.com/Azure/PSRule.Rules.Azure/issues/932">#932</a></li>
 </ul>
 </li>
 <li>Engineering:<ul>
-<li>Bump PSRule dependency to v1.7.2. <a href="https://github.com/Azure/PSRule.Rules.Azure/issues/951">#951</a></li>
+<li>Bump PSRule dependency to v1.7.2.
+  <a href="https://github.com/Azure/PSRule.Rules.Azure/issues/951">#951</a></li>
 </ul>
 </li>
 </ul>
@@ -25218,14 +25260,17 @@ What's changed since v1.24.0:</p>
 <ul>
 <li>New rules:<ul>
 <li>Azure Kubernetes Service:<ul>
-<li>Check clusters have control plane audit logs enabled. Thanks <a href="https://github.com/ArmaanMcleod">[@ArmaanMcleod](https://github.com/ArmaanMcleod)</a>. <a href="https://github.com/Azure/PSRule.Rules.Azure/issues/882">#882</a></li>
-<li>Check clusters have control plane diagnostics enabled. Thanks <a href="https://github.com/ArmaanMcleod">[@ArmaanMcleod](https://github.com/ArmaanMcleod)</a>. <a href="https://github.com/Azure/PSRule.Rules.Azure/issues/922">#922</a></li>
+<li>Check clusters have control plane audit logs enabled by <a href="https://github.com/ArmaanMcleod">@ArmaanMcleod</a>.
+  <a href="https://github.com/Azure/PSRule.Rules.Azure/issues/882">#882</a></li>
+<li>Check clusters have control plane diagnostics enabled by <a href="https://github.com/ArmaanMcleod">@ArmaanMcleod</a>.
+  <a href="https://github.com/Azure/PSRule.Rules.Azure/issues/922">#922</a></li>
 </ul>
 </li>
 </ul>
 </li>
 <li>Engineering:<ul>
-<li>Bump PSRule dependency to v1.7.0. <a href="https://github.com/Azure/PSRule.Rules.Azure/issues/938">#938</a></li>
+<li>Bump PSRule dependency to v1.7.0.
+  <a href="https://github.com/Azure/PSRule.Rules.Azure/issues/938">#938</a></li>
 </ul>
 </li>
 </ul>
@@ -25234,13 +25279,15 @@ What's changed since v1.24.0:</p>
 <ul>
 <li>New rules:<ul>
 <li>Azure Kubernetes Service:<ul>
-<li>Check clusters use Container Insights for monitoring workloads. Thanks <a href="https://github.com/ArmaanMcleod">[@ArmaanMcleod](https://github.com/ArmaanMcleod)</a>. <a href="https://github.com/Azure/PSRule.Rules.Azure/issues/881">#881</a></li>
+<li>Check clusters use Container Insights for monitoring workloads by <a href="https://github.com/ArmaanMcleod">@ArmaanMcleod</a>.
+  <a href="https://github.com/Azure/PSRule.Rules.Azure/issues/881">#881</a></li>
 </ul>
 </li>
 </ul>
 </li>
 <li>Bug fixes:<ul>
-<li>Fixed export of in-flight AKS related subnets for kubenet clusters. Thanks <a href="https://github.com/ArmaanMcleod">[@ArmaanMcleod](https://github.com/ArmaanMcleod)</a>. <a href="https://github.com/Azure/PSRule.Rules.Azure/issues/920">#920</a></li>
+<li>Fixed export of in-flight AKS related subnets for kubenet clusters by <a href="https://github.com/ArmaanMcleod">@ArmaanMcleod</a>.
+  <a href="https://github.com/Azure/PSRule.Rules.Azure/issues/920">#920</a></li>
 </ul>
 </li>
 </ul>
@@ -25249,14 +25296,17 @@ What's changed since v1.24.0:</p>
 <ul>
 <li>New rules:<ul>
 <li>Azure Kubernetes Service:<ul>
-<li>Check clusters use availability zones when available. Thanks <a href="https://github.com/ArmaanMcleod">[@ArmaanMcleod](https://github.com/ArmaanMcleod)</a>. <a href="https://github.com/Azure/PSRule.Rules.Azure/issues/880">#880</a></li>
+<li>Check clusters use availability zones when available by <a href="https://github.com/ArmaanMcleod">@ArmaanMcleod</a>.
+  <a href="https://github.com/Azure/PSRule.Rules.Azure/issues/880">#880</a></li>
 </ul>
 </li>
 </ul>
 </li>
 <li>Engineering:<ul>
-<li>Bump PSRule dependency to v1.6.1. <a href="https://github.com/Azure/PSRule.Rules.Azure/issues/913">#913</a></li>
-<li>Automated update of availability zone information in providers.json. <a href="https://github.com/Azure/PSRule.Rules.Azure/issues/907">#907</a></li>
+<li>Bump PSRule dependency to v1.6.1.
+  <a href="https://github.com/Azure/PSRule.Rules.Azure/issues/913">#913</a></li>
+<li>Automated update of availability zone information in providers.json.
+  <a href="https://github.com/Azure/PSRule.Rules.Azure/issues/907">#907</a></li>
 </ul>
 </li>
 </ul>
@@ -25277,8 +25327,8 @@ What's changed since v1.24.0:</p>
 </ul>
 </li>
 <li>Azure Kubernetes Service:<ul>
-<li>Check clusters using Azure CNI should use large subnets. Thanks <a href="https://github.com/ArmaanMcleod">[@ArmaanMcleod](https://github.com/ArmaanMcleod)</a>. <a href="https://github.com/Azure/PSRule.Rules.Azure/issues/273">#273</a></li>
-<li>Check clusters use auto-scale node pools. Thanks <a href="https://github.com/ArmaanMcleod"><a href="https://github.com/ArmaanMcleod">@ArmaanMcleod</a></a>. <a href="https://github.com/Azure/PSRule.Rules.Azure/issues/218">#218</a><ul>
+<li>Check clusters using Azure CNI should use large subnets by <a href="https://github.com/ArmaanMcleod">@ArmaanMcleod</a>. <a href="https://github.com/Azure/PSRule.Rules.Azure/issues/273">#273</a></li>
+<li>Check clusters use auto-scale node pools by <a href="https://github.com/ArmaanMcleod">@ArmaanMcleod</a>. <a href="https://github.com/Azure/PSRule.Rules.Azure/issues/218">#218</a><ul>
 <li>By default, a minimum of a <code>/23</code> subnet is required.</li>
 <li>Configure <code>AZURE_AKS_CNI_MINIMUM_CLUSTER_SUBNET_SIZE</code> to change the default minimum subnet size.</li>
 </ul>
@@ -25359,7 +25409,7 @@ What's changed since v1.24.0:</p>
 </ul>
 </li>
 <li>Azure Kubernetes Service:<ul>
-<li>Check clusters using Azure CNI should use large subnets. Thanks <a href="https://github.com/ArmaanMcleod"><a href="https://github.com/ArmaanMcleod">@ArmaanMcleod</a></a>. <a href="https://github.com/Azure/PSRule.Rules.Azure/issues/273">#273</a><ul>
+<li>Check clusters using Azure CNI should use large subnets by <a href="https://github.com/ArmaanMcleod">@ArmaanMcleod</a>. <a href="https://github.com/Azure/PSRule.Rules.Azure/issues/273">#273</a><ul>
 <li>By default, a minimum of a <code>/23</code> subnet is required.</li>
 <li>Configure <code>AZURE_AKS_CNI_MINIMUM_CLUSTER_SUBNET_SIZE</code> to change the default minimum subnet size.</li>
 </ul>
@@ -25378,7 +25428,7 @@ What's changed since v1.24.0:</p>
 <ul>
 <li>New rules:<ul>
 <li>Azure Kubernetes Service:<ul>
-<li>Check clusters use auto-scale node pools. Thanks <a href="https://github.com/ArmaanMcleod">[@ArmaanMcleod](https://github.com/ArmaanMcleod)</a>. <a href="https://github.com/Azure/PSRule.Rules.Azure/issues/218">#218</a></li>
+<li>Check clusters use auto-scale node pools by <a href="https://github.com/ArmaanMcleod">@ArmaanMcleod</a>. <a href="https://github.com/Azure/PSRule.Rules.Azure/issues/218">#218</a></li>
 </ul>
 </li>
 </ul>
@@ -25399,7 +25449,10 @@ What's changed since v1.24.0:</p>
 <p>What's changed since v1.5.1:</p>
 <ul>
 <li>New features:<ul>
-<li><strong>Experimental:</strong> Added support for expansion from Bicep source files. <a href="https://github.com/Azure/PSRule.Rules.Azure/issues/848">#848</a> <a href="https://github.com/Azure/PSRule.Rules.Azure/issues/670">#670</a> <a href="https://github.com/Azure/PSRule.Rules.Azure/issues/858">#858</a><ul>
+<li><strong>Experimental:</strong> Added support for expansion from Bicep source files.
+  <a href="https://github.com/Azure/PSRule.Rules.Azure/issues/848">#848</a>
+  <a href="https://github.com/Azure/PSRule.Rules.Azure/issues/670">#670</a>
+  <a href="https://github.com/Azure/PSRule.Rules.Azure/issues/858">#858</a><ul>
 <li>Bicep support is currently experimental.</li>
 <li>To opt-in set the <code>AZURE_BICEP_FILE_EXPANSION</code> configuration to <code>true</code>.</li>
 <li>For more information see <a href="https://azure.github.io/PSRule.Rules.Azure/using-bicep/">Using Bicep</a>.</li>
@@ -25409,21 +25462,25 @@ What's changed since v1.24.0:</p>
 </li>
 <li>New rules:<ul>
 <li>Application Gateways:<ul>
-<li>Check Application Gateways publish endpoints by HTTPS. <a href="https://github.com/Azure/PSRule.Rules.Azure/issues/841">#841</a></li>
+<li>Check Application Gateways publish endpoints by HTTPS.
+  <a href="https://github.com/Azure/PSRule.Rules.Azure/issues/841">#841</a></li>
 </ul>
 </li>
 </ul>
 </li>
 <li>Engineering:<ul>
-<li>Bump PSRule dependency to v1.5.0. <a href="https://github.com/Azure/PSRule.Rules.Azure/issues/832">#832</a></li>
-<li>Migration of Pester v4 tests to Pester v5. Thanks <a href="https://github.com/ArmaanMcleod">[@ArmaanMcleod](https://github.com/ArmaanMcleod)</a>. <a href="https://github.com/Azure/PSRule.Rules.Azure/issues/395">#395</a></li>
+<li>Bump PSRule dependency to v1.5.0.
+  <a href="https://github.com/Azure/PSRule.Rules.Azure/issues/832">#832</a></li>
+<li>Migration of Pester v4 tests to Pester v5 by <a href="https://github.com/ArmaanMcleod">@ArmaanMcleod</a>.
+  <a href="https://github.com/Azure/PSRule.Rules.Azure/issues/395">#395</a></li>
 </ul>
 </li>
 </ul>
 <p>What's changed since pre-release v1.6.0-B2108038:</p>
 <ul>
 <li>Bug fixes:<ul>
-<li>Fixed Bicep expand creates deadlock and times out. <a href="https://github.com/Azure/PSRule.Rules.Azure/issues/863">#863</a></li>
+<li>Fixed Bicep expand creates deadlock and times out.
+  <a href="https://github.com/Azure/PSRule.Rules.Azure/issues/863">#863</a></li>
 </ul>
 </li>
 </ul>
@@ -25431,7 +25488,8 @@ What's changed since v1.24.0:</p>
 <p>What's changed since pre-release v1.6.0-B2108023:</p>
 <ul>
 <li>Bug fixes:<ul>
-<li>Fixed Bicep expand hangs analysis. <a href="https://github.com/Azure/PSRule.Rules.Azure/issues/858">#858</a></li>
+<li>Fixed Bicep expand hangs analysis.
+  <a href="https://github.com/Azure/PSRule.Rules.Azure/issues/858">#858</a></li>
 </ul>
 </li>
 </ul>
@@ -25439,7 +25497,9 @@ What's changed since v1.24.0:</p>
 <p>What's changed since pre-release v1.6.0-B2107028:</p>
 <ul>
 <li>New features:<ul>
-<li><strong>Experimental:</strong> Added support for expansion from Bicep source files. <a href="https://github.com/Azure/PSRule.Rules.Azure/issues/848">#848</a> <a href="https://github.com/Azure/PSRule.Rules.Azure/issues/670">#670</a><ul>
+<li><strong>Experimental:</strong> Added support for expansion from Bicep source files.
+  <a href="https://github.com/Azure/PSRule.Rules.Azure/issues/848">#848</a>
+  <a href="https://github.com/Azure/PSRule.Rules.Azure/issues/670">#670</a><ul>
 <li>Bicep support is currently experimental.</li>
 <li>To opt-in set the <code>AZURE_BICEP_FILE_EXPANSION</code> configuration to <code>true</code>.</li>
 <li>For more information see <a href="https://azure.github.io/PSRule.Rules.Azure/using-bicep/">Using Bicep</a>.</li>
@@ -26278,14 +26338,14 @@ What's changed since v1.24.0:</p>
     
     <nav>
       
-        <a href="https://github.com/BenjaminEngeset" class="md-author" title="@BenjaminEngeset">
-          
-          <img src="https://avatars.githubusercontent.com/u/99641908?v=4&size=72" alt="BenjaminEngeset">
-        </a>
-      
         <a href="https://github.com/BernieWhite" class="md-author" title="@BernieWhite">
           
           <img src="https://avatars.githubusercontent.com/u/13513058?v=4&size=72" alt="BernieWhite">
+        </a>
+      
+        <a href="https://github.com/BenjaminEngeset" class="md-author" title="@BenjaminEngeset">
+          
+          <img src="https://avatars.githubusercontent.com/u/99641908?v=4&size=72" alt="BenjaminEngeset">
         </a>
       
         <a href="https://github.com/apps/dependabot" class="md-author" title="@dependabot[bot]">

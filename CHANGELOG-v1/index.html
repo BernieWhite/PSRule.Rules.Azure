@@ -22,7 +22,7 @@
       
       
       <link rel="icon" href="../assets/ms_icon.png">
-      <meta name="generator" content="mkdocs-1.6.0, mkdocs-material-9.5.30">
+      <meta name="generator" content="mkdocs-1.6.0, mkdocs-material-9.5.31">
     
     
       
@@ -4444,6 +4444,10 @@
   
     
     
+      
+        
+      
+        
       
         
       
@@ -14381,6 +14385,27 @@
   
   
     <li class="md-nav__item">
+      <a href="../en/rules/Azure.VNET.FirewallSubnetNAT/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Azure.VNET.FirewallSubnetNAT
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
       <a href="../en/rules/Azure.VNET.LocalDNS/" class="md-nav__link">
         
   
@@ -14428,6 +14453,27 @@
   
   <span class="md-ellipsis">
     Azure.VNET.PeerState
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../en/rules/Azure.VNET.PrivateSubnet/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Azure.VNET.PrivateSubnet
   </span>
   
 
@@ -18681,9 +18727,9 @@
 <h2 id="unreleased">Unreleased<a class="headerlink" href="#unreleased" title="Permanent link">#</a></h2>
 <ul>
 <li>New rules:<ul>
-<li>Azure Kubernetes Service:<ul>
-<li>Verify that clusters have the customer-controlled maintenance windows 'aksManagedAutoUpgradeSchedule' and 'aksManagedNodeOSUpgradeSchedule' configured by <a href="https://github.com/BenjaminEngeset">@BenjaminEngeset</a>.
-  <a href="https://github.com/Azure/PSRule.Rules.Azure/issues/2444">#2444</a></li>
+<li>Virtual Network:<ul>
+<li>Verify that subnets have disabled default outbound access for virtual machines by <a href="https://github.com/BenjaminEngeset">@BenjaminEngeset</a>.
+  <a href="https://github.com/Azure/PSRule.Rules.Azure/issues/3001">#3001</a></li>
 </ul>
 </li>
 </ul>
@@ -18695,6 +18741,21 @@
 <li>Azure Kubernetes Service:<ul>
 <li>Verify that clusters have kube-audit logging disabled when not required by <a href="https://github.com/BenjaminEngeset">@BenjaminEngeset</a>.
   <a href="https://github.com/Azure/PSRule.Rules.Azure/issues/2450">#2450</a></li>
+<li>Verify that clusters have the customer-controlled maintenance windows 'aksManagedAutoUpgradeSchedule' and 'aksManagedNodeOSUpgradeSchedule' configured by <a href="https://github.com/BenjaminEngeset">@BenjaminEngeset</a>.
+  <a href="https://github.com/Azure/PSRule.Rules.Azure/issues/2444">#2444</a></li>
+</ul>
+</li>
+<li>Virtual Network:<ul>
+<li>Verify that zonal-deployed Azure firewalls uses Azure NAT Gateway for outbound access by <a href="https://github.com/BenjaminEngeset">@BenjaminEngeset</a>.
+  <a href="https://github.com/Azure/PSRule.Rules.Azure/issues/#3005">##3005</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li>Updated rules:<ul>
+<li>Virtual Network:<ul>
+<li>Updated <code>Azure.VNET.UseNSGs</code> to correctly handle cases for special purpose and customer-excluded subnets by <a href="https://github.com/BenjaminEngeset">@BenjaminEngeset</a>.
+  <a href="https://github.com/Azure/PSRule.Rules.Azure/issues/3007">#3007</a></li>
 </ul>
 </li>
 </ul>
@@ -26343,7 +26404,7 @@ What's changed since v1.24.0:</p>
     <span class="md-icon" title="Last update">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1-2.1-2M12.5 7v5.2l4 2.4-1 1L11 13V7h1.5M11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2v1.8Z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">July 25, 2024</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">August 7, 2024</span>
   </span>
 
     

@@ -18,7 +18,7 @@
       
       
       <link rel="icon" href="../../../assets/ms_icon.png">
-      <meta name="generator" content="mkdocs-1.6.0, mkdocs-material-9.5.30">
+      <meta name="generator" content="mkdocs-1.6.0, mkdocs-material-9.5.31">
     
     
       
@@ -2024,6 +2024,10 @@
   
     
     
+      
+        
+      
+        
       
         
       
@@ -11961,6 +11965,27 @@
   
   
     <li class="md-nav__item">
+      <a href="../../rules/Azure.VNET.FirewallSubnetNAT/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Azure.VNET.FirewallSubnetNAT
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
       <a href="../../rules/Azure.VNET.LocalDNS/" class="md-nav__link">
         
   
@@ -12008,6 +12033,27 @@
   
   <span class="md-ellipsis">
     Azure.VNET.PeerState
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../rules/Azure.VNET.PrivateSubnet/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Azure.VNET.PrivateSubnet
   </span>
   
 
@@ -13940,7 +13986,7 @@
 <p>Includes all Azure rules.</p>
 <h2 id="rules">Rules<a class="headerlink" href="#rules" title="Permanent link">#</a></h2>
 <p>The following rules are included within the <code>Azure.All</code> baseline.</p>
-<p>This baseline includes a total of 445 rules.</p>
+<p>This baseline includes a total of 447 rules.</p>
 <table>
 <thead>
 <tr>
@@ -16091,6 +16137,11 @@
 <td>Important</td>
 </tr>
 <tr>
+<td><a href="../../rules/Azure.VNET.FirewallSubnetNAT/">Azure.VNET.FirewallSubnetNAT</a></td>
+<td>Zonal-deployed Azure Firewalls should consider using an Azure NAT Gateway for outbound access.</td>
+<td>Awareness</td>
+</tr>
+<tr>
 <td><a href="../../rules/Azure.VNET.LocalDNS/">Azure.VNET.LocalDNS</a></td>
 <td>Virtual networks (VNETs) should use DNS servers deployed within the same Azure region.</td>
 <td>Important</td>
@@ -16104,6 +16155,11 @@
 <td><a href="../../rules/Azure.VNET.PeerState/">Azure.VNET.PeerState</a></td>
 <td>VNET peering connections must be connected.</td>
 <td>Important</td>
+</tr>
+<tr>
+<td><a href="../../rules/Azure.VNET.PrivateSubnet/">Azure.VNET.PrivateSubnet</a></td>
+<td>Disable default outbound access for virtual machines.</td>
+<td>Critical</td>
 </tr>
 <tr>
 <td><a href="../../rules/Azure.VNET.SingleDNS/">Azure.VNET.SingleDNS</a></td>

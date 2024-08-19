@@ -14094,7 +14094,7 @@ If the <code>.ps-rule</code> sub-directory does not exist, create it in the root
 <li>The name of the suppression group is <code>Org.Azure.PermitOutboundManagement</code>.
   Each resource name must be unique.</li>
 <li>The suppression group applies to:<ul>
-<li>The rule <code>PSRule.Rules.Azure\Azure.NSG.LateralTraversal</code>.</li>
+<li>The rule <code>PSRule.Rules.Azure\Azure.<abbr title="Network Security Group">NSG</abbr>.LateralTraversal</code>.</li>
 <li>Run against <abbr title="Network Security Groups">NSGs</abbr> with the type <code>Microsoft.Network/networkSecurityGroups</code>.</li>
 <li>When the name of the <abbr title="Network Security Group">NSG</abbr> contains <code>bastion</code> or <code>management</code>.
   The <a href="https://microsoft.github.io/PSRule/v2/concepts/PSRule/en-US/about_PSRule_SuppressionGroups/">suppression group</a> uses <a href="https://microsoft.github.io/PSRule/v2/concepts/PSRule/en-US/about_PSRule_Expressions/">expressions</a> to determine when a resource is suppressed.

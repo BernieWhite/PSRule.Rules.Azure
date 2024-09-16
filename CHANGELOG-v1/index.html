@@ -18839,14 +18839,16 @@
 <ul>
 <li>Issue #741: <code>Could not load file or assembly YamlDotNet</code>.
   See <a href="../troubleshooting/">troubleshooting guide</a> for a workaround to this issue.</li>
-<li>The configuration option <code>Azure_AKSMinimumVersion</code> is replaced with <code>AZURE_AKS_CLUSTER_MINIMUM_VERSION</code>.
-  If you have this option configured, please update it to <code>AZURE_AKS_CLUSTER_MINIMUM_VERSION</code>.
-  Support for <code>Azure_AKSMinimumVersion</code> will be removed in v2.
-  See <a href="../upgrade-notes/">upgrade notes</a> for more information.</li>
-<li>The configuration option <code>Azure_AllowedRegions</code> is replaced with <code>AZURE_RESOURCE_ALLOWED_LOCATIONS</code>.
-  If you have this option configured, please update it to <code>AZURE_RESOURCE_ALLOWED_LOCATIONS</code>.
-  Support for <code>Azure_AllowedRegions</code> will be removed in v2.
-  See <a href="../upgrade-notes/">upgrade notes</a> for more information.</li>
+<li>The following configuration options are deprecated and have been replaced with alternative options.
+  If you have these options configured, please update them to the replacement.
+  Support for the old names will be removed in v2.
+  See <a href="../upgrade-notes/">upgrade notes</a> for more information.<ul>
+<li><code>Azure_AKSMinimumVersion</code> is replaced with <code>AZURE_AKS_CLUSTER_MINIMUM_VERSION</code>.</li>
+<li><code>Azure_AKSNodeMinimumMaxPods</code> is replaced with <code>AZURE_AKS_POOL_MINIMUM_MAXPODS</code>.</li>
+<li><code>Azure_AllowedRegions</code> is replaced with <code>AZURE_RESOURCE_ALLOWED_LOCATIONS</code>.</li>
+<li><code>Azure_MinimumCertificateLifetime</code> is replaced with <code>AZURE_APIM_MINIMUM_CERTIFICATE_LIFETIME</code>.</li>
+</ul>
+</li>
 <li>The <code>SupportsTag</code> PowerShell function has been replaced with the <code>Azure.Resource.SupportsTags</code> selector.
   Update PowerShell rules to use the <code>Azure.Resource.SupportsTags</code> selector instead.
   Support for the <code>SupportsTag</code> function will be removed in v2.
@@ -18860,6 +18862,29 @@
   <a href="https://github.com/Azure/PSRule.Rules.Azure/issues/432">#432</a></li>
 <li>Verify that availability set members are in a backend pool by <a href="https://github.com/BenjaminEngeset">@BenjaminEngeset</a>.
   <a href="https://github.com/Azure/PSRule.Rules.Azure/issues/67">#67</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li>General improvements:<ul>
+<li><strong>Important change:</strong> Replaced the <code>Azure_AKSNodeMinimumMaxPods</code> option with <code>AZURE_AKS_POOL_MINIMUM_MAXPODS</code> by <a href="https://github.com/BernieWhite">@BernieWhite</a>.
+  <a href="https://github.com/Azure/PSRule.Rules.Azure/issues/941">#941</a><ul>
+<li>For compatibility, if <code>Azure_AKSNodeMinimumMaxPods</code> is set it will be used instead of <code>AZURE_AKS_POOL_MINIMUM_MAXPODS</code>.</li>
+<li>If only <code>AZURE_AKS_POOL_MINIMUM_MAXPODS</code> is set, this value will be used.</li>
+<li>The default will be used neither options are configured.</li>
+<li>If <code>Azure_AKSNodeMinimumMaxPods</code> is set a warning will be generated until the configuration is removed.</li>
+<li>Support for <code>Azure_AKSNodeMinimumMaxPods</code> is deprecated and will be removed in v2.</li>
+<li>See <a href="../upgrade-notes/">upgrade notes</a> for details.</li>
+</ul>
+</li>
+<li><strong>Important change:</strong> Replaced the <code>Azure_MinimumCertificateLifetime</code> option with <code>AZURE_APIM_MINIMUM_CERTIFICATE_LIFETIME</code> by <a href="https://github.com/BernieWhite">@BernieWhite</a>.
+  <a href="https://github.com/Azure/PSRule.Rules.Azure/issues/941">#941</a><ul>
+<li>For compatibility, if <code>Azure_MinimumCertificateLifetime</code> is set it will be used instead of <code>AZURE_APIM_MINIMUM_CERTIFICATE_LIFETIME</code>.</li>
+<li>If only <code>AZURE_APIM_MINIMUM_CERTIFICATE_LIFETIME</code> is set, this value will be used.</li>
+<li>The default will be used neither options are configured.</li>
+<li>If <code>Azure_MinimumCertificateLifetime</code> is set a warning will be generated until the configuration is removed.</li>
+<li>Support for <code>Azure_MinimumCertificateLifetime</code> is deprecated and will be removed in v2.</li>
+<li>See <a href="../upgrade-notes/">upgrade notes</a> for details.</li>
 </ul>
 </li>
 </ul>
@@ -20848,7 +20873,7 @@
 </ul>
 </li>
 <li>General improvements:<ul>
-<li><strong>Important change:</strong> Replaced the <code>Azure_AllowedRegions</code> option with <code>AZURE_RESOURCE_ALLOWED_LOCATIONS</code>.
+<li><strong>Important change:</strong> Replaced the <code>Azure_AllowedRegions</code> option with <code>AZURE_RESOURCE_ALLOWED_LOCATIONS</code> by <a href="https://github.com/BernieWhite">@BernieWhite</a>.
   <a href="https://github.com/Azure/PSRule.Rules.Azure/issues/941">#941</a><ul>
 <li>For compatibility, if <code>Azure_AllowedRegions</code> is set it will be used instead of <code>AZURE_RESOURCE_ALLOWED_LOCATIONS</code>.</li>
 <li>If only <code>AZURE_RESOURCE_ALLOWED_LOCATIONS</code> is set, this value will be used.</li>
@@ -20965,7 +20990,7 @@
 <p>What's changed since pre-release v1.30.0-B0047:</p>
 <ul>
 <li>General improvements:<ul>
-<li><strong>Important change:</strong> Replaced the <code>Azure_AllowedRegions</code> option with <code>AZURE_RESOURCE_ALLOWED_LOCATIONS</code>.
+<li><strong>Important change:</strong> Replaced the <code>Azure_AllowedRegions</code> option with <code>AZURE_RESOURCE_ALLOWED_LOCATIONS</code> by <a href="https://github.com/BernieWhite">@BernieWhite</a>.
   <a href="https://github.com/Azure/PSRule.Rules.Azure/issues/941">#941</a><ul>
 <li>For compatibility, if <code>Azure_AllowedRegions</code> is set it will be used instead of <code>AZURE_RESOURCE_ALLOWED_LOCATIONS</code>.</li>
 <li>If only <code>AZURE_RESOURCE_ALLOWED_LOCATIONS</code> is set, this value will be used.</li>
@@ -26573,7 +26598,7 @@ What's changed since v1.24.0:</p>
     <span class="md-icon" title="Last update">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">September 15, 2024</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">September 16, 2024</span>
   </span>
 
     

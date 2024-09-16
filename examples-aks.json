@@ -4,8 +4,8 @@
   "metadata": {
     "_generator": {
       "name": "bicep",
-      "version": "0.28.1.47646",
-      "templateHash": "5111879364998616708"
+      "version": "0.29.47.4906",
+      "templateHash": "2547527017795438682"
     }
   },
   "parameters": {
@@ -73,7 +73,7 @@
     },
     "kubernetesVersion": {
       "type": "string",
-      "defaultValue": "1.28.9",
+      "defaultValue": "1.29.7",
       "metadata": {
         "description": "The version of Kubernetes."
       }
@@ -178,7 +178,7 @@
     },
     {
       "type": "Microsoft.ContainerService/managedClusters",
-      "apiVersion": "2024-01-01",
+      "apiVersion": "2024-02-01",
       "name": "[parameters('name')]",
       "location": "[parameters('location')]",
       "identity": {
@@ -240,8 +240,39 @@
       ]
     },
     {
+      "type": "Microsoft.Insights/diagnosticSettings",
+      "apiVersion": "2021-05-01-preview",
+      "scope": "[format('Microsoft.ContainerService/managedClusters/{0}', parameters('name'))]",
+      "name": "audit",
+      "properties": {
+        "logs": [
+          {
+            "category": "kube-audit-admin",
+            "enabled": true,
+            "retentionPolicy": {
+              "days": 0,
+              "enabled": false
+            }
+          },
+          {
+            "category": "guard",
+            "enabled": true,
+            "retentionPolicy": {
+              "days": 0,
+              "enabled": false
+            }
+          }
+        ],
+        "workspaceId": "[parameters('workspaceId')]",
+        "logAnalyticsDestinationType": "Dedicated"
+      },
+      "dependsOn": [
+        "[resourceId('Microsoft.ContainerService/managedClusters', parameters('name'))]"
+      ]
+    },
+    {
       "type": "Microsoft.ContainerService/managedClusters",
-      "apiVersion": "2024-01-01",
+      "apiVersion": "2024-02-01",
       "name": "[parameters('name')]",
       "location": "[parameters('location')]",
       "identity": {
@@ -331,7 +362,7 @@
     },
     {
       "type": "Microsoft.ContainerService/managedClusters",
-      "apiVersion": "2024-01-01",
+      "apiVersion": "2024-02-01",
       "name": "[parameters('name')]",
       "location": "[parameters('location')]",
       "identity": {

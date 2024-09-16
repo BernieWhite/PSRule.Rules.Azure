@@ -46,7 +46,7 @@ param systemPoolMin int
 param systemPoolMax int = 3
 
 @description('The version of Kubernetes.')
-param kubernetesVersion string = '1.28.9'
+param kubernetesVersion string = '1.29.7'
 
 @description('Maximum number of pods that can run on nodes in the system pool.')
 @minValue(30)
@@ -132,7 +132,7 @@ resource identity 'Microsoft.ManagedIdentity/userAssignedIdentities@2023-01-31' 
 }
 
 // An example AKS cluster
-resource cluster 'Microsoft.ContainerService/managedClusters@2024-01-01' = {
+resource cluster 'Microsoft.ContainerService/managedClusters@2024-02-01' = {
   location: location
   name: name
   identity: {
@@ -191,8 +191,35 @@ resource cluster 'Microsoft.ContainerService/managedClusters@2024-01-01' = {
   }
 }
 
+resource auditLogs 'Microsoft.Insights/diagnosticSettings@2021-05-01-preview' = {
+  name: 'audit'
+  scope: cluster
+  properties: {
+    logs: [
+      {
+        category: 'kube-audit-admin'
+        enabled: true
+        retentionPolicy: {
+          days: 0
+          enabled: false
+        }
+      }
+      {
+        category: 'guard'
+        enabled: true
+        retentionPolicy: {
+          days: 0
+          enabled: false
+        }
+      }
+    ]
+    workspaceId: workspaceId
+    logAnalyticsDestinationType: 'Dedicated'
+  }
+}
+
 // An example AKS cluster with pools defined.
-resource clusterWithPools 'Microsoft.ContainerService/managedClusters@2024-01-01' = {
+resource clusterWithPools 'Microsoft.ContainerService/managedClusters@2024-02-01' = {
   location: location
   name: name
   identity: {
@@ -279,7 +306,7 @@ resource clusterWithPools 'Microsoft.ContainerService/managedClusters@2024-01-01
 }
 
 // An example private AKS cluster with pools defined.
-resource privateCluster 'Microsoft.ContainerService/managedClusters@2024-01-01' = {
+resource privateCluster 'Microsoft.ContainerService/managedClusters@2024-02-01' = {
   location: location
   name: name
   identity: {

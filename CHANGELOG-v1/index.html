@@ -1573,9 +1573,9 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#v1390-b0055-pre-release" class="md-nav__link">
+  <a href="#v1390-b0072-pre-release" class="md-nav__link">
     <span class="md-ellipsis">
-      v1.39.0-B0055 (pre-release)
+      v1.39.0-B0072 (pre-release)
     </span>
   </a>
   
@@ -16423,9 +16423,9 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#v1390-b0055-pre-release" class="md-nav__link">
+  <a href="#v1390-b0072-pre-release" class="md-nav__link">
     <span class="md-ellipsis">
-      v1.39.0-B0055 (pre-release)
+      v1.39.0-B0072 (pre-release)
     </span>
   </a>
   
@@ -18855,13 +18855,22 @@
   See <a href="../upgrade-notes/">upgrade notes</a> for more information.</li>
 </ul>
 <h2 id="unreleased">Unreleased<a class="headerlink" href="#unreleased" title="Permanent link">#</a></h2>
+<h2 id="v1390-b0072-pre-release">v1.39.0-B0072 (pre-release)<a class="headerlink" href="#v1390-b0072-pre-release" title="Permanent link">#</a></h2>
+<p>What's changed since pre-release v1.39.0-B0029:</p>
 <ul>
 <li>New rules:<ul>
 <li>Virtual Machine:<ul>
+<li>Verify that virtual machines does not have public IPs attached by <a href="https://github.com/BenjaminEngeset">@BenjaminEngeset</a>.
+  <a href="https://github.com/Azure/PSRule.Rules.Azure/issues/11">#11</a></li>
 <li>Verify that multi-tenant Hosting Rights are used for Windows client VMs by <a href="https://github.com/BenjaminEngeset">@BenjaminEngeset</a>.
   <a href="https://github.com/Azure/PSRule.Rules.Azure/issues/432">#432</a></li>
 <li>Verify that availability set members are in a backend pool by <a href="https://github.com/BenjaminEngeset">@BenjaminEngeset</a>.
   <a href="https://github.com/Azure/PSRule.Rules.Azure/issues/67">#67</a></li>
+</ul>
+</li>
+<li>Virtual Machine Scale Sets:<ul>
+<li>Verify that virtual machine scale set instances does not have public IPs attached by <a href="https://github.com/BenjaminEngeset">@BenjaminEngeset</a>.
+  <a href="https://github.com/Azure/PSRule.Rules.Azure/issues/3014">#3014</a></li>
 </ul>
 </li>
 </ul>
@@ -18897,30 +18906,6 @@
 </li>
 </ul>
 </li>
-<li>Bug fixed:<ul>
-<li>Fixed <code>Azure.AppService.AvailabilityZone</code> only detects premium by tier property <a href="https://github.com/BenjaminEngeset">@BenjaminEngeset</a>.
-  <a href="https://github.com/Azure/PSRule.Rules.Azure/issues/3034">#3034</a></li>
-<li>Fixed loading of expansion options from non-default options file <a href="https://github.com/BernieWhite">@BernieWhite</a>.
-  <a href="https://github.com/Azure/PSRule.Rules.Azure/issues/3033">#3033</a></li>
-</ul>
-</li>
-</ul>
-<h2 id="v1390-b0055-pre-release">v1.39.0-B0055 (pre-release)<a class="headerlink" href="#v1390-b0055-pre-release" title="Permanent link">#</a></h2>
-<p>What's changed since pre-release v1.39.0-B0029:</p>
-<ul>
-<li>New rules:<ul>
-<li>Virtual Machine:<ul>
-<li>Verify that virtual machines does not have public IPs attached by <a href="https://github.com/BenjaminEngeset">@BenjaminEngeset</a>.
-  <a href="https://github.com/Azure/PSRule.Rules.Azure/issues/11">#11</a></li>
-</ul>
-</li>
-<li>Virtual Machine Scale Sets:<ul>
-<li>Verify that virtual machine scale set instances does not have public IPs attached by <a href="https://github.com/BenjaminEngeset">@BenjaminEngeset</a>.
-  <a href="https://github.com/Azure/PSRule.Rules.Azure/issues/3014">#3014</a></li>
-</ul>
-</li>
-</ul>
-</li>
 <li>Engineering:<ul>
 <li>Bump development tools to .NET 8.0 SDK by <a href="https://github.com/BernieWhite">@BernieWhite</a>.
   <a href="https://github.com/Azure/PSRule.Rules.Azure/issues/3017">#3017</a></li>
@@ -18931,6 +18916,10 @@
   <a href="https://github.com/Azure/PSRule.Rules.Azure/issues/3013">#3013</a></li>
 <li>Fixed subscription aliases don't support tags by <a href="https://github.com/BernieWhite">@BernieWhite</a>.
   <a href="https://github.com/Azure/PSRule.Rules.Azure/issues/3021">#3021</a></li>
+<li>Fixed <code>Azure.AppService.AvailabilityZone</code> only detects premium by tier property <a href="https://github.com/BenjaminEngeset">@BenjaminEngeset</a>.
+  <a href="https://github.com/Azure/PSRule.Rules.Azure/issues/3034">#3034</a></li>
+<li>Fixed loading of expansion options from non-default options file <a href="https://github.com/BernieWhite">@BernieWhite</a>.
+  <a href="https://github.com/Azure/PSRule.Rules.Azure/issues/3033">#3033</a></li>
 </ul>
 </li>
 </ul>
@@ -26606,7 +26595,7 @@ What's changed since v1.24.0:</p>
     <span class="md-icon" title="Last update">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">September 16, 2024</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">September 17, 2024</span>
   </span>
 
     

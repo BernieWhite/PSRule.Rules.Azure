@@ -4,8 +4,8 @@
   "metadata": {
     "_generator": {
       "name": "bicep",
-      "version": "0.25.53.49325",
-      "templateHash": "7482944073131107404"
+      "version": "0.30.23.60470",
+      "templateHash": "16114660589456584580"
     }
   },
   "parameters": {
@@ -26,7 +26,7 @@
   "resources": [
     {
       "type": "Microsoft.Cache/redis",
-      "apiVersion": "2023-08-01",
+      "apiVersion": "2024-03-01",
       "name": "[parameters('name')]",
       "location": "[parameters('location')]",
       "properties": {
@@ -51,7 +51,7 @@
     },
     {
       "type": "Microsoft.Cache/redis/firewallRules",
-      "apiVersion": "2023-08-01",
+      "apiVersion": "2024-03-01",
       "name": "[format('{0}/{1}', parameters('name'), 'allow-on-premises')]",
       "properties": {
         "startIP": "10.0.1.1",

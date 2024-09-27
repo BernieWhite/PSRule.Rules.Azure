@@ -10,7 +10,7 @@ param name string
 param location string = resourceGroup().location
 
 // An example Redis Cache.
-resource cache 'Microsoft.Cache/redis@2023-08-01' = {
+resource cache 'Microsoft.Cache/redis@2024-03-01' = {
   name: name
   location: location
   properties: {
@@ -35,7 +35,7 @@ resource cache 'Microsoft.Cache/redis@2023-08-01' = {
 }
 
 // An example firewall rule for Redis Cache.
-resource rule 'Microsoft.Cache/redis/firewallRules@2023-08-01' = {
+resource rule 'Microsoft.Cache/redis/firewallRules@2024-03-01' = {
   parent: cache
   name: 'allow-on-premises'
   properties: {

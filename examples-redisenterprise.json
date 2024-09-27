@@ -4,8 +4,8 @@
   "metadata": {
     "_generator": {
       "name": "bicep",
-      "version": "0.25.53.49325",
-      "templateHash": "3600259857722261042"
+      "version": "0.30.23.60470",
+      "templateHash": "18144616178175150817"
     }
   },
   "parameters": {
@@ -26,7 +26,7 @@
   "resources": [
     {
       "type": "Microsoft.Cache/redisEnterprise",
-      "apiVersion": "2023-11-01",
+      "apiVersion": "2024-02-01",
       "name": "[parameters('name')]",
       "location": "[parameters('location')]",
       "sku": {

@@ -148,10 +148,30 @@ def _reference_block(style: str, title: str, text: str = "") -> str:
 def _external_reference_avm(text: str) -> str:
     '''Create a reference to AVM.'''
 
-    avm_path = text.split(' ')[0]
+    # Extract the reference.
+    # <path>[:<suggestedVersion>] [<params>,...]
+    # avm/res/app/container-app:0.8 ingressExternal
+
+    referenceParts = text.split(' ')
+    pathParts = referenceParts[0].split(':')
+
+    avm_path = pathParts[0]
+    avm_suggested_version = ''
+
+    # Use the suggested version if set.
+    if len(pathParts) > 1:
+        avm_suggested_version = pathParts[1]
+
+    # Build the body of the reference.
+    syntax = f"br/public:{avm_path}:<version>"
+    suggestion_body = ''
+
+    if avm_suggested_version != '':
+        suggested = f"br/public:{avm_path}:{avm_suggested_version}"
+        suggestion_body = f"\n\nFor example:\n\n```text\n{suggested}\n```"
 
     return _reference_block(
         style = "Example",
         title = f"Configure with [Azure Verified Modules](https://github.com/Azure/bicep-registry-modules/tree/main/{avm_path})",
-        text = f"A pre-built module is avilable on the Azure Bicep public registry.\nTo reference the module, please use the following syntax:\n\n```text\nbr/public:{avm_path}:<version>\n```"
+        text = f"A pre-built module is available on the Azure Bicep public registry.\nTo reference the module, please use the following syntax:\n\n```text\n{syntax}\n```{suggestion_body}"
     )

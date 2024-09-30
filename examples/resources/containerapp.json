@@ -4,8 +4,8 @@
   "metadata": {
     "_generator": {
       "name": "bicep",
-      "version": "0.28.1.47646",
-      "templateHash": "3152038712307898231"
+      "version": "0.30.23.60470",
+      "templateHash": "7132667371133705541"
     }
   },
   "parameters": {
@@ -59,6 +59,20 @@
           "memory": ".5Gi"
         }
       }
+    ],
+    "ipSecurityRestrictions": [
+      {
+        "action": "Allow",
+        "description": "Allowed IP address range",
+        "ipAddressRange": "10.1.1.1/32",
+        "name": "ClientIPAddress_1"
+      },
+      {
+        "action": "Allow",
+        "description": "Allowed IP address range",
+        "ipAddressRange": "10.1.2.1/32",
+        "name": "ClientIPAddress_2"
+      }
     ]
   },
   "resources": [
@@ -71,8 +85,8 @@
         "appLogsConfiguration": {
           "destination": "log-analytics",
           "logAnalyticsConfiguration": {
-            "customerId": "[reference(resourceId('Microsoft.OperationalInsights/workspaces', parameters('workspaceId')), '2022-10-01').customerId]",
-            "sharedKey": "[listKeys(resourceId('Microsoft.OperationalInsights/workspaces', parameters('workspaceId')), '2022-10-01').primarySharedKey]"
+            "customerId": "[reference(resourceId('Microsoft.OperationalInsights/workspaces', split(parameters('workspaceId'), '/')[8]), '2022-10-01').customerId]",
+            "sharedKey": "[listKeys(resourceId('Microsoft.OperationalInsights/workspaces', split(parameters('workspaceId'), '/')[8]), '2022-10-01').primarySharedKey]"
           }
         },
         "zoneRedundant": true,
@@ -87,6 +101,38 @@
           "internal": true
         }
       }
+    },
+    {
+      "type": "Microsoft.App/containerApps",
+      "apiVersion": "2024-03-01",
+      "name": "[parameters('appName')]",
+      "location": "[parameters('location')]",
+      "identity": {
+        "type": "SystemAssigned"
+      },
+      "properties": {
+        "environmentId": "[resourceId('Microsoft.App/managedEnvironments', parameters('envName'))]",
+        "template": {
+          "revisionSuffix": "[parameters('revision')]",
+          "containers": "[variables('containers')]",
+          "scale": {
+            "minReplicas": 2
+          }
+        },
+        "configuration": {
+          "ingress": {
+            "allowInsecure": false,
+            "external": false,
+            "ipSecurityRestrictions": "[variables('ipSecurityRestrictions')]",
+            "stickySessions": {
+              "affinity": "none"
+            }
+          }
+        }
+      },
+      "dependsOn": [
+        "[resourceId('Microsoft.App/managedEnvironments', parameters('envName'))]"
+      ]
     },
     {
       "type": "Microsoft.App/containerApps",

@@ -14268,14 +14268,16 @@
  · <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 1c3.681 0 7 2.565 7 6v4.539c0 .642.189 1.269.545 1.803l2.2 3.298A1.517 1.517 0 0 1 20.482 19H15.5a3.5 3.5 0 1 1-7 0H3.519a1.518 1.518 0 0 1-1.265-2.359l2.2-3.299A3.25 3.25 0 0 0 5 11.539V7c0-3.435 3.318-6 7-6M6.5 7v4.539a4.75 4.75 0 0 1-.797 2.635l-2.2 3.298-.003.01.001.007.004.006.006.004.007.001h16.964l.007-.001.006-.004.004-.006.001-.006-.003-.01-2.199-3.299a4.75 4.75 0 0 1-.798-2.635V7c0-2.364-2.383-4.5-5.5-4.5S6.5 4.636 6.5 7M14 19h-4a2 2 0 1 0 4 0"/></svg></span> Awareness</p>
 <p>Use of Azure Files volume mounts to persistent storage container data.</p>
 <h2 id="description">Description<a class="headerlink" href="#description" title="Permanent link">#</a></h2>
-<p>Container apps allows you to use different types of storage. This can be achieved by using volume mounts.</p>
+<p>Container apps allows you to use different types of storage.
+This can be achieved by using volume mounts.</p>
 <p>There are considerations to be taken, whether persistent storage is suitable for your app or if non-persistent storage is suitable.
 Apps may require no storage.</p>
 <p>By default all files created inside a container are stored on a writable container layer.</p>
 <p>Some considerations when using container file system storage:</p>
 <ul>
-<li>The data doesn’t persist when that container no longer exists, and it can be difficult to get the data out of the container if another process needs it.</li>
-<li>There are no capacity guarantees. The available storage depends on the amount of disk space available in the container.</li>
+<li>The data doesn't persist when that container no longer exists, and it can be difficult to get the data out of the container if another process needs it.</li>
+<li>There are no capacity guarantees.
+The available storage depends on the amount of disk space available in the container.</li>
 </ul>
 <p>Usage examples for this can be a stateless web API or a single page application (that just calls APIs).</p>
 <p>Some considerations when using storage volume mounts:</p>
@@ -14408,7 +14410,7 @@ Apps may require no storage.</p>
 <p>To enable Azure Files storage, a storage definition must be defined in the Container Apps Environment.</p>
 <h2 id="links">Links<a class="headerlink" href="#links" title="Permanent link">#</a></h2>
 <ul>
-<li><a href="https://learn.microsoft.com/azure/architecture/framework/resiliency/principles#design-for-scale-out">Reliability design principles</a></li>
+<li><a href="https://learn.microsoft.com/azure/well-architected/reliability/redundancy">RE:05 Redundancy</a></li>
 <li><a href="https://learn.microsoft.com/azure/container-apps/storage-mounts">Use storage mounts in Azure Container Apps</a></li>
 <li><a href="https://learn.microsoft.com/azure/templates/microsoft.app/containerapps#volumemount">Azure deployment reference</a></li>
 </ul>
@@ -14434,7 +14436,7 @@ Apps may require no storage.</p>
     <span class="md-icon" title="Last update">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">October 1, 2023</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">September 29, 2024</span>
   </span>
 
     

@@ -14410,6 +14410,15 @@
 </li>
         
           <li class="md-nav__item">
+  <a href="#re05-high-availability-multi-region-design" class="md-nav__link">
+    <span class="md-ellipsis">
+      RE:05 High-availability multi-region design
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#re05-redundancy" class="md-nav__link">
     <span class="md-ellipsis">
       RE:05 Redundancy
@@ -14440,15 +14449,6 @@
   <a href="#re07-self-preservation" class="md-nav__link">
     <span class="md-ellipsis">
       RE:07 Self-preservation
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#reliability-design-principles" class="md-nav__link">
-    <span class="md-ellipsis">
-      Reliability design principles
     </span>
   </a>
   
@@ -14626,15 +14626,6 @@
   <a href="#network-segmentation" class="md-nav__link">
     <span class="md-ellipsis">
       Network segmentation
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#review-and-remediate" class="md-nav__link">
-    <span class="md-ellipsis">
-      Review and remediate
     </span>
   </a>
   
@@ -15332,6 +15323,12 @@
 <td>Warning</td>
 </tr>
 <tr>
+<td><a href="Azure.ContainerApp.APIVersion.md">Azure.ContainerApp.APIVersion</a></td>
+<td>Migrate from retired API version to a supported version.</td>
+<td>Important</td>
+<td>Error</td>
+</tr>
+<tr>
 <td><a href="Azure.Policy.AssignmentDescriptors.md">Azure.Policy.AssignmentDescriptors</a></td>
 <td>Policy assignments should use a display name and description.</td>
 <td>Awareness</td>
@@ -15556,12 +15553,6 @@
 <td><a href="Azure.CDN.EndpointName.md">Azure.CDN.EndpointName</a></td>
 <td>Azure CDN Endpoint names should meet naming requirements.</td>
 <td>Awareness</td>
-<td>Error</td>
-</tr>
-<tr>
-<td><a href="Azure.ContainerApp.APIVersion.md">Azure.ContainerApp.APIVersion</a></td>
-<td>Migrate from retired API version to a supported version.</td>
-<td>Important</td>
 <td>Error</td>
 </tr>
 <tr>
@@ -15958,7 +15949,7 @@
 <tr>
 <td><a href="Azure.ContainerApp.DisableAffinity.md">Azure.ContainerApp.DisableAffinity</a></td>
 <td>Disable session affinity to prevent unbalanced distribution.</td>
-<td>Important</td>
+<td>Awareness</td>
 <td>Error</td>
 </tr>
 <tr>
@@ -16127,18 +16118,6 @@
 </thead>
 <tbody>
 <tr>
-<td><a href="../Azure.ACR.GeoReplica/">Azure.ACR.GeoReplica</a></td>
-<td>Use geo-replicated container registries to compliment a multi-region container deployments.</td>
-<td>Important</td>
-<td>Error</td>
-</tr>
-<tr>
-<td><a href="Azure.ACR.SoftDelete.md">Azure.ACR.SoftDelete</a></td>
-<td>Azure Container Registries should have soft delete policy enabled.</td>
-<td>Important</td>
-<td>Error</td>
-</tr>
-<tr>
 <td><a href="Azure.AppConfig.PurgeProtect.md">Azure.AppConfig.PurgeProtect</a></td>
 <td>Consider purge protection for app configuration store to ensure store cannot be purged in the retention period.</td>
 <td>Important</td>
@@ -16294,6 +16273,18 @@
 </thead>
 <tbody>
 <tr>
+<td><a href="../Azure.ACR.MinSku/">Azure.ACR.MinSku</a></td>
+<td>ACR should use the Premium or Standard SKU for production deployments.</td>
+<td>Important</td>
+<td>Error</td>
+</tr>
+<tr>
+<td><a href="Azure.ACR.SoftDelete.md">Azure.ACR.SoftDelete</a></td>
+<td>Azure Container Registries should have soft delete policy enabled.</td>
+<td>Important</td>
+<td>Error</td>
+</tr>
+<tr>
 <td><a href="Azure.ADX.SLA.md">Azure.ADX.SLA</a></td>
 <td>Use SKUs that include an SLA when configuring Azure Data Explorer (ADX) clusters.</td>
 <td>Important</td>
@@ -16433,6 +16424,25 @@
 </tr>
 </tbody>
 </table>
+<h3 id="re05-high-availability-multi-region-design">RE:05 High-availability multi-region design<a class="headerlink" href="#re05-high-availability-multi-region-design" title="Permanent link">#</a></h3>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Synopsis</th>
+<th>Severity</th>
+<th>Level</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="../Azure.ACR.GeoReplica/">Azure.ACR.GeoReplica</a></td>
+<td>Use geo-replicated container registries to compliment a multi-region container deployments.</td>
+<td>Important</td>
+<td>Error</td>
+</tr>
+</tbody>
+</table>
 <h3 id="re05-redundancy">RE:05 Redundancy<a class="headerlink" href="#re05-redundancy" title="Permanent link">#</a></h3>
 <table>
 <thead>
@@ -16466,6 +16476,12 @@
 <td><a href="Azure.ContainerApp.MinReplicas.md">Azure.ContainerApp.MinReplicas</a></td>
 <td>Use multiple replicas to remove a single point of failure.</td>
 <td>Important</td>
+<td>Error</td>
+</tr>
+<tr>
+<td><a href="Azure.ContainerApp.Storage.md">Azure.ContainerApp.Storage</a></td>
+<td>Use of Azure Files volume mounts to persistent storage container data.</td>
+<td>Awareness</td>
 <td>Error</td>
 </tr>
 <tr>
@@ -16689,25 +16705,6 @@
 </tr>
 </tbody>
 </table>
-<h3 id="reliability-design-principles">Reliability design principles<a class="headerlink" href="#reliability-design-principles" title="Permanent link">#</a></h3>
-<table>
-<thead>
-<tr>
-<th>Name</th>
-<th>Synopsis</th>
-<th>Severity</th>
-<th>Level</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><a href="Azure.ContainerApp.Storage.md">Azure.ContainerApp.Storage</a></td>
-<td>Use of Azure Files volume mounts to persistent storage container data.</td>
-<td>Awareness</td>
-<td>Error</td>
-</tr>
-</tbody>
-</table>
 <h3 id="requirements">Requirements<a class="headerlink" href="#requirements" title="Permanent link">#</a></h3>
 <table>
 <thead>
@@ -16719,12 +16716,6 @@
 </tr>
 </thead>
 <tbody>
-<tr>
-<td><a href="../Azure.ACR.MinSku/">Azure.ACR.MinSku</a></td>
-<td>ACR should use the Premium or Standard SKU for production deployments.</td>
-<td>Important</td>
-<td>Error</td>
-</tr>
 <tr>
 <td><a href="Azure.PublicIP.StandardSKU.md">Azure.PublicIP.StandardSKU</a></td>
 <td>Public IP addresses should be deployed with Standard SKU for production workloads.</td>
@@ -16863,12 +16854,6 @@
 </tr>
 </thead>
 <tbody>
-<tr>
-<td><a href="Azure.ACR.Firewall.md">Azure.ACR.Firewall</a></td>
-<td>Limit network access of container registries to only trusted clients.</td>
-<td>Important</td>
-<td>Error</td>
-</tr>
 <tr>
 <td><a href="Azure.AKS.HttpAppRouting.md">Azure.AKS.HttpAppRouting</a></td>
 <td>Disable HTTP application routing add-on in AKS clusters.</td>
@@ -17177,12 +17162,6 @@
 </thead>
 <tbody>
 <tr>
-<td><a href="Azure.ACR.AnonymousAccess.md">Azure.ACR.AnonymousAccess</a></td>
-<td>Disable anonymous pull access.</td>
-<td>Important</td>
-<td>Error</td>
-</tr>
-<tr>
 <td><a href="Azure.AKS.UseRBAC.md">Azure.AKS.UseRBAC</a></td>
 <td>Deploy AKS cluster with role-based access control (RBAC) enabled.</td>
 <td>Important</td>
@@ -17465,25 +17444,6 @@
 </tr>
 </tbody>
 </table>
-<h3 id="review-and-remediate">Review and remediate<a class="headerlink" href="#review-and-remediate" title="Permanent link">#</a></h3>
-<table>
-<thead>
-<tr>
-<th>Name</th>
-<th>Synopsis</th>
-<th>Severity</th>
-<th>Level</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><a href="../Azure.ACR.ImageHealth/">Azure.ACR.ImageHealth</a></td>
-<td>Remove container images with known vulnerabilities.</td>
-<td>Critical</td>
-<td>Error</td>
-</tr>
-</tbody>
-</table>
 <h3 id="se01-security-baseline">SE:01 Security baseline<a class="headerlink" href="#se01-security-baseline" title="Permanent link">#</a></h3>
 <table>
 <thead>
@@ -17530,6 +17490,12 @@
 <td><a href="../Azure.ACR.ContentTrust/">Azure.ACR.ContentTrust</a></td>
 <td>Use container images signed by a trusted image publisher.</td>
 <td>Important</td>
+<td>Error</td>
+</tr>
+<tr>
+<td><a href="../Azure.ACR.ImageHealth/">Azure.ACR.ImageHealth</a></td>
+<td>Remove container images with known vulnerabilities.</td>
+<td>Critical</td>
 <td>Error</td>
 </tr>
 <tr>
@@ -17617,6 +17583,12 @@
 <td><a href="../Azure.ACR.AdminUser/">Azure.ACR.AdminUser</a></td>
 <td>Use Entra ID identities instead of using the registry admin user.</td>
 <td>Critical</td>
+<td>Error</td>
+</tr>
+<tr>
+<td><a href="Azure.ACR.AnonymousAccess.md">Azure.ACR.AnonymousAccess</a></td>
+<td>Disable anonymous pull access.</td>
+<td>Important</td>
 <td>Error</td>
 </tr>
 <tr>
@@ -17818,6 +17790,12 @@
 </tr>
 </thead>
 <tbody>
+<tr>
+<td><a href="Azure.ACR.Firewall.md">Azure.ACR.Firewall</a></td>
+<td>Limit network access of container registries to only trusted clients.</td>
+<td>Important</td>
+<td>Error</td>
+</tr>
 <tr>
 <td><a href="Azure.AI.PrivateEndpoints.md">Azure.AI.PrivateEndpoints</a></td>
 <td>Use Private Endpoints to access Azure AI services accounts.</td>
@@ -18510,7 +18488,7 @@
     <span class="md-icon" title="Last update">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">September 19, 2024</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">September 29, 2024</span>
   </span>
 
     

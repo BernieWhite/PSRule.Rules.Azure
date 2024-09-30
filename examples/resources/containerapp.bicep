@@ -24,7 +24,7 @@ param subnetId string
 param revision string
 
 resource workspace 'Microsoft.OperationalInsights/workspaces@2022-10-01' existing = {
-  name: workspaceId
+  name: split(workspaceId, '/')[8]
 }
 
 var containers = [
@@ -35,6 +35,21 @@ var containers = [
       cpu: json('0.25')
       memory: '.5Gi'
     }
+  }
+]
+
+var ipSecurityRestrictions = [
+  {
+    action: 'Allow'
+    description: 'Allowed IP address range'
+    ipAddressRange: '10.1.1.1/32'
+    name: 'ClientIPAddress_1'
+  }
+  {
+    action: 'Allow'
+    description: 'Allowed IP address range'
+    ipAddressRange: '10.1.2.1/32'
+    name: 'ClientIPAddress_2'
   }
 ]
 
@@ -66,6 +81,35 @@ resource containerEnv 'Microsoft.App/managedEnvironments@2024-03-01' = {
 
 // An example Container App using a minimum of 2 replicas.
 resource containerApp 'Microsoft.App/containerApps@2024-03-01' = {
+  name: appName
+  location: location
+  identity: {
+    type: 'SystemAssigned'
+  }
+  properties: {
+    environmentId: containerEnv.id
+    template: {
+      revisionSuffix: revision
+      containers: containers
+      scale: {
+        minReplicas: 2
+      }
+    }
+    configuration: {
+      ingress: {
+        allowInsecure: false
+        external: false
+        ipSecurityRestrictions: ipSecurityRestrictions
+        stickySessions: {
+          affinity: 'none'
+        }
+      }
+    }
+  }
+}
+
+// An example Container App with IP security restrictions.
+resource containerAppWithSecurity 'Microsoft.App/containerApps@2024-03-01' = {
   name: appName
   location: location
   identity: {

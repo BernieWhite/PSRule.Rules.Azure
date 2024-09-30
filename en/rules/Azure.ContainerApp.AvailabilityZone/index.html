@@ -14251,16 +14251,24 @@
 <p>Use Container Apps environments that are zone redundant to improve reliability.</p>
 <h2 id="description">Description<a class="headerlink" href="#description" title="Permanent link">#</a></h2>
 <p>Container App environments can be configured to be zone redundant in regions that support availability zones.
+Zone redundancy is supported in both the workload profiles and consumption only environments.
 When configured, replicas of each Container App are spread across availability zones automatically.
 A Container App must have multiple replicas to be zone redundant.</p>
-<p>For example, if a Container App has three replicas, each replica is placed in a different availability zone.</p>
+<p>For example:</p>
+<ul>
+<li>If a Container App has three replicas, each replica is placed in a different availability zone.</li>
+<li>If a Container App has one replica, it is only available in a single zone.</li>
+</ul>
+<p>Zone redundancy can only be enabled at initial environment creation.
+Additionally, the Container App environment must be deployed with an infrastructure subnet configured.</p>
 <h2 id="recommendation">Recommendation<a class="headerlink" href="#recommendation" title="Permanent link">#</a></h2>
-<p>Consider configuring Container App environments to be zone redundant to improve reliability.</p>
+<p>Consider configuring Container App environments to be zone redundant to improve workload resiliency.</p>
 <h2 id="examples">Examples<a class="headerlink" href="#examples" title="Permanent link">#</a></h2>
 <h3 id="configure-with-azure-template">Configure with Azure template<a class="headerlink" href="#configure-with-azure-template" title="Permanent link">#</a></h3>
 <p>To deploy Container App environments that pass this rule:</p>
 <ul>
 <li>Set the <code>properties.zoneRedundant</code> property to <code>true</code>.</li>
+<li>Set the <code>properties.vnetConfiguration.infrastructureSubnetId</code> property to reference a valid subnet.</li>
 </ul>
 <p>For example:</p>
 <div class="language-json highlight"><span class="filename">Azure Template snippet</span><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="p">{</span>
@@ -14294,6 +14302,7 @@ A Container App must have multiple replicas to be zone redundant.</p>
 <p>To deploy Container App environments that pass this rule:</p>
 <ul>
 <li>Set the <code>properties.zoneRedundant</code> property to <code>true</code>.</li>
+<li>Set the <code>properties.vnetConfiguration.infrastructureSubnetId</code> property to reference a valid subnet.</li>
 </ul>
 <p>For example:</p>
 <div class="language-text highlight"><span class="filename">Azure Bicep snippet</span><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>resource containerEnv &#39;Microsoft.App/managedEnvironments@2023-05-01&#39; = {
@@ -14323,9 +14332,12 @@ A Container App must have multiple replicas to be zone redundant.</p>
 </span></code></pre></div>
 <div class="admonition example">
 <p class="admonition-title">Configure with <a href="https://github.com/Azure/bicep-registry-modules/tree/main/avm/res/app/managed-environment">Azure Verified Modules</a></p>
-<p>A pre-built module is avilable on the Azure Bicep public registry.
+<p>A pre-built module is available on the Azure Bicep public registry.
 To reference the module, please use the following syntax:</p>
 <div class="language-text highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>br/public:avm/res/app/managed-environment:&lt;version&gt;
+</span></code></pre></div>
+<p>For example:</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>br/public:avm/res/app/managed-environment:0.8.0
 </span></code></pre></div>
 </div>
 <h2 id="links">Links<a class="headerlink" href="#links" title="Permanent link">#</a></h2>
@@ -14357,7 +14369,7 @@ To reference the module, please use the following syntax:</p>
     <span class="md-icon" title="Last update">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">April 14, 2024</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">September 30, 2024</span>
   </span>
 
     

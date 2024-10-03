@@ -14414,18 +14414,26 @@ Zone redundancy improves resiliency and high availability of the service by depl
 </span></code></pre></div>
 <div class="admonition example">
 <p class="admonition-title">Configure with <a href="https://github.com/Azure/bicep-registry-modules/tree/main/avm/res/api-management/service">Azure Verified Modules</a></p>
-<p>A pre-built module is available on the Azure Bicep public registry.
+<p>A pre-validated module supported by Microsoft is available from the Azure Bicep public registry.
 To reference the module, please use the following syntax:</p>
 <div class="language-text highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>br/public:avm/res/api-management/service:&lt;version&gt;
 </span></code></pre></div>
+<p>To use the latest version:</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>br/public:avm/res/api-management/service:0.6.0
+</span></code></pre></div>
+<hr />
+<ul>
+<li><a href="https://aka.ms/avm">What is Azure Verified Modules?</a></li>
+<li><a href="https://github.com/Azure/bicep-registry-modules/tree/main/avm/res/api-management/service">Usage and parameters for this module</a></li>
+</ul>
 </div>
 <h2 id="notes">Notes<a class="headerlink" href="#notes" title="Permanent link">#</a></h2>
 <p>This rule applies when analyzing resources deployed to Azure using <em>pre-flight</em> and <em>in-flight</em> data.</p>
 <p>This rule fails when <code>"zones"</code> is <code>null</code>, <code>[]</code> or less than two zones when API Management instance is deployed with Premium SKU and there are supported availability zones for the given region.</p>
 <p>Configure <code>AZURE_APIM_ADDITIONAL_REGION_AVAILABILITY_ZONE_LIST</code> to set additional availability zones that need to be supported which are not in the existing <a href="https://github.com/Azure/PSRule.Rules.Azure/blob/main/data/providers/">providers</a> for namespace <code>Microsoft.ApiManagement</code> and resource type <code>services</code>.</p>
-<div class="language-yaml highlight"><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="c1"># YAML: The default AZURE_APIM_ADDITIONAL_REGION_AVAILABILITY_ZONE_LIST configuration option</span>
-</span><span id="__span-3-2"><a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a><span class="nt">configuration</span><span class="p">:</span>
-</span><span id="__span-3-3"><a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a><span class="w">  </span><span class="nt">AZURE_APIM_ADDITIONAL_REGION_AVAILABILITY_ZONE_LIST</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">[]</span>
+<div class="language-yaml highlight"><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a><span class="c1"># YAML: The default AZURE_APIM_ADDITIONAL_REGION_AVAILABILITY_ZONE_LIST configuration option</span>
+</span><span id="__span-4-2"><a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a><span class="nt">configuration</span><span class="p">:</span>
+</span><span id="__span-4-3"><a id="__codelineno-4-3" name="__codelineno-4-3" href="#__codelineno-4-3"></a><span class="w">  </span><span class="nt">AZURE_APIM_ADDITIONAL_REGION_AVAILABILITY_ZONE_LIST</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">[]</span>
 </span></code></pre></div>
 <p>For developer environments, suppressing the rule might make sense as enabling zone redundancy for an API Management instance requries the <code>Premium</code> SKU currently.</p>
 <h2 id="links">Links<a class="headerlink" href="#links" title="Permanent link">#</a></h2>

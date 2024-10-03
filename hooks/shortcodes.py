@@ -7,6 +7,7 @@
 import logging
 import os
 import re
+import json
 
 from mkdocs.config.defaults import MkDocsConfig
 from mkdocs.structure.files import File, Files
@@ -57,7 +58,7 @@ def external(markdown: str, page: Page, config: MkDocsConfig, files: Files) -> s
         type, args = match.groups()
         args = args.strip()
         if type == "avm":
-            return _external_reference_avm(args)
+            return _external_reference_avm(args, page)
 
         raise RuntimeError(f"Unknown shortcode external:{type}")
 
@@ -145,7 +146,7 @@ def _reference_block(style: str, title: str, text: str = "") -> str:
     lines = text.replace('\r\n', '\n').replace('\r', '\n').replace('\n', '\n    ').strip()
     return f"!!! {style} \"{title}\"\n    {lines}"
 
-def _external_reference_avm(text: str) -> str:
+def _external_reference_avm(text: str, page: Page) -> str:
     '''Create a reference to AVM.'''
 
     # Extract the reference.
@@ -156,22 +157,56 @@ def _external_reference_avm(text: str) -> str:
     pathParts = referenceParts[0].split(':')
 
     avm_path = pathParts[0]
-    avm_suggested_version = ''
 
     # Use the suggested version if set.
+    avm_suggested_version = ''
     if len(pathParts) > 1:
         avm_suggested_version = pathParts[1]
 
-    # Build the body of the reference.
-    syntax = f"br/public:{avm_path}:<version>"
-    suggestion_body = ''
+    # Load latest version from cache.
+    avm_latest_version = _avm_module_latest_tag(page, avm_path)
 
+    # Add the reference syntax.
+    syntax_body = f"\nTo reference the module, please use the following syntax:{_avm_code_reference(avm_path, None)}"
+
+    # Add suggested version.
+    suggestion_body = ''
     if avm_suggested_version != '':
-        suggested = f"br/public:{avm_path}:{avm_suggested_version}"
-        suggestion_body = f"\n\nFor example:\n\n```text\n{suggested}\n```"
+        suggestion_body = f"\n\nFor example:{_avm_code_reference(avm_path, avm_suggested_version)}"
+
+    # Add latest version.
+    latest_body = ''
+    if avm_latest_version != '':
+        latest_body = f"\n\nTo use the latest version:{_avm_code_reference(avm_path, avm_latest_version)}"
+
+    # Add AVM info.
+    avm_links_body = f"\n\n---\n\n- [What is Azure Verified Modules?](https://aka.ms/avm)\n- [Usage and parameters for this module](https://github.com/Azure/bicep-registry-modules/tree/main/{avm_path})"
 
     return _reference_block(
         style = "Example",
         title = f"Configure with [Azure Verified Modules](https://github.com/Azure/bicep-registry-modules/tree/main/{avm_path})",
-        text = f"A pre-built module is available on the Azure Bicep public registry.\nTo reference the module, please use the following syntax:\n\n```text\n{syntax}\n```{suggestion_body}"
+        text = f"A pre-validated module supported by Microsoft is available from the Azure Bicep public registry.{syntax_body}{suggestion_body}{latest_body}{avm_links_body}"
     )
+
+def _avm_code_reference(path: str, version: str) -> str:
+    '''Create a reference to Bicep public registry.'''
+
+    if version == '' or version == None:
+        version = '<version>'
+
+    return f"\n\n```text\nbr/public:{path}:{version}\n```"
+
+def _avm_module_latest_tag(page: Page, name: str) -> str:
+    '''Load latest AVM module version details for any examples.'''
+
+    log.debug(f"Loading avm module versions page: {page.abs_url}")
+
+    latest = ''
+
+    file: str = os.path.join(os.path.dirname(page.file.abs_src_path), 'avm_versions.json')
+    with open(file) as f:
+        data = json.load(f)
+        if data.get(name, None) != None and data[name].get('Latest', None) != None:
+            latest = data[name]['Latest']
+
+    return latest

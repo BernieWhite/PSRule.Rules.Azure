@@ -14413,13 +14413,21 @@ Additionally consider naming resources with a standard naming convention.</p>
 </span></code></pre></div>
 <div class="admonition example">
 <p class="admonition-title">Configure with <a href="https://github.com/Azure/bicep-registry-modules/tree/main/avm/res/app/container-app">Azure Verified Modules</a></p>
-<p>A pre-built module is available on the Azure Bicep public registry.
+<p>A pre-validated module supported by Microsoft is available from the Azure Bicep public registry.
 To reference the module, please use the following syntax:</p>
 <div class="language-text highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>br/public:avm/res/app/container-app:&lt;version&gt;
 </span></code></pre></div>
 <p>For example:</p>
 <div class="language-text highlight"><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>br/public:avm/res/app/container-app:0.11.0
 </span></code></pre></div>
+<p>To use the latest version:</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a>br/public:avm/res/app/container-app:0.9.0
+</span></code></pre></div>
+<hr />
+<ul>
+<li><a href="https://aka.ms/avm">What is Azure Verified Modules?</a></li>
+<li><a href="https://github.com/Azure/bicep-registry-modules/tree/main/avm/res/app/container-app">Usage and parameters for this module</a></li>
+</ul>
 </div>
 <h2 id="notes">Notes<a class="headerlink" href="#notes" title="Permanent link">#</a></h2>
 <p>This rule does not check if container app names are unique.</p>

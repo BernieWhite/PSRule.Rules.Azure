@@ -14353,10 +14353,18 @@ When deploying VPN gateways, Azure deploys two instances for high-availability (
 </span></code></pre></div>
 <div class="admonition example">
 <p class="admonition-title">Configure with <a href="https://github.com/Azure/bicep-registry-modules/tree/main/avm/res/network/virtual-network-gateway">Azure Verified Modules</a></p>
-<p>A pre-built module is available on the Azure Bicep public registry.
+<p>A pre-validated module supported by Microsoft is available from the Azure Bicep public registry.
 To reference the module, please use the following syntax:</p>
 <div class="language-text highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>br/public:avm/res/network/virtual-network-gateway:&lt;version&gt;
 </span></code></pre></div>
+<p>To use the latest version:</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>br/public:avm/res/network/virtual-network-gateway:0.4.1
+</span></code></pre></div>
+<hr />
+<ul>
+<li><a href="https://aka.ms/avm">What is Azure Verified Modules?</a></li>
+<li><a href="https://github.com/Azure/bicep-registry-modules/tree/main/avm/res/network/virtual-network-gateway">Usage and parameters for this module</a></li>
+</ul>
 </div>
 <h2 id="notes">Notes<a class="headerlink" href="#notes" title="Permanent link">#</a></h2>
 <p>Azure provisions a single instance for Basic (legacy) VPN gateways.

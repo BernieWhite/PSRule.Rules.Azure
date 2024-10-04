@@ -14659,15 +14659,6 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#se05-identity-and-access" class="md-nav__link">
-    <span class="md-ellipsis">
-      SE:05 Identity and access
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
   <a href="#se05-identity-and-access-management" class="md-nav__link">
     <span class="md-ellipsis">
       SE:05 Identity and access management
@@ -14716,15 +14707,6 @@
   <a href="#se10-monitoring-and-threat-detection" class="md-nav__link">
     <span class="md-ellipsis">
       SE:10 Monitoring and threat detection
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#secrets" class="md-nav__link">
-    <span class="md-ellipsis">
-      Secrets
     </span>
   </a>
   
@@ -16855,33 +16837,9 @@
 </thead>
 <tbody>
 <tr>
-<td><a href="Azure.AKS.HttpAppRouting.md">Azure.AKS.HttpAppRouting</a></td>
-<td>Disable HTTP application routing add-on in AKS clusters.</td>
-<td>Important</td>
-<td>Error</td>
-</tr>
-<tr>
-<td><a href="Azure.AppGw.UseWAF.md">Azure.AppGw.UseWAF</a></td>
-<td>Internet accessible Application Gateways should use protect endpoints with WAF.</td>
-<td>Critical</td>
-<td>Error</td>
-</tr>
-<tr>
 <td><a href="Azure.FrontDoor.UseWAF.md">Azure.FrontDoor.UseWAF</a></td>
 <td>Enable Web Application Firewall (WAF) policies on each Front Door endpoint.</td>
 <td>Critical</td>
-<td>Error</td>
-</tr>
-<tr>
-<td><a href="Azure.FrontDoor.WAF.Enabled.md">Azure.FrontDoor.WAF.Enabled</a></td>
-<td>Front Door Web Application Firewall (WAF) policy must be enabled to protect back end resources.</td>
-<td>Critical</td>
-<td>Error</td>
-</tr>
-<tr>
-<td><a href="Azure.Storage.Firewall.md">Azure.Storage.Firewall</a></td>
-<td>Storage Accounts should only accept explicitly allowed traffic.</td>
-<td>Important</td>
 <td>Error</td>
 </tr>
 </tbody>
@@ -17346,12 +17304,6 @@
 <td>Error</td>
 </tr>
 <tr>
-<td><a href="Azure.AppGw.WAFEnabled.md">Azure.AppGw.WAFEnabled</a></td>
-<td>Application Gateway Web Application Firewall (WAF) must be enabled to protect backend resources.</td>
-<td>Critical</td>
-<td>Error</td>
-</tr>
-<tr>
 <td><a href="Azure.AppGw.WAFRules.md">Azure.AppGw.WAFRules</a></td>
 <td>Application Gateway Web Application Firewall (WAF) should have all rules enabled.</td>
 <td>Important</td>
@@ -17522,6 +17474,18 @@
 <td>Critical</td>
 <td>Error</td>
 </tr>
+<tr>
+<td><a href="Azure.VM.ScriptExtensions.md">Azure.VM.ScriptExtensions</a></td>
+<td>Custom Script Extensions scripts that reference secret values must use the protectedSettings.</td>
+<td>Important</td>
+<td>Error</td>
+</tr>
+<tr>
+<td><a href="Azure.VMSS.ScriptExtensions.md">Azure.VMSS.ScriptExtensions</a></td>
+<td>Custom Script Extensions scripts that reference secret values must use the protectedSettings.</td>
+<td>Important</td>
+<td>Error</td>
+</tr>
 </tbody>
 </table>
 <h3 id="se04-segmentation">SE:04 Segmentation<a class="headerlink" href="#se04-segmentation" title="Permanent link">#</a></h3>
@@ -17545,25 +17509,6 @@
 <td><a href="Azure.NSG.LateralTraversal.md">Azure.NSG.LateralTraversal</a></td>
 <td>Deny outbound management connections from non-management hosts.</td>
 <td>Important</td>
-<td>Error</td>
-</tr>
-</tbody>
-</table>
-<h3 id="se05-identity-and-access">SE:05 Identity and access<a class="headerlink" href="#se05-identity-and-access" title="Permanent link">#</a></h3>
-<table>
-<thead>
-<tr>
-<th>Name</th>
-<th>Synopsis</th>
-<th>Severity</th>
-<th>Level</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><a href="Azure.Cosmos.DisableLocalAuth.md">Azure.Cosmos.DisableLocalAuth</a></td>
-<td>Azure Cosmos DB should have local authentication disabled.</td>
-<td>Critical</td>
 <td>Error</td>
 </tr>
 </tbody>
@@ -17667,6 +17612,12 @@
 <td><a href="Azure.ContainerApp.ManagedIdentity.md">Azure.ContainerApp.ManagedIdentity</a></td>
 <td>Ensure managed identity is used for authentication.</td>
 <td>Important</td>
+<td>Error</td>
+</tr>
+<tr>
+<td><a href="Azure.Cosmos.DisableLocalAuth.md">Azure.Cosmos.DisableLocalAuth</a></td>
+<td>Azure Cosmos DB should have local authentication disabled.</td>
+<td>Critical</td>
 <td>Error</td>
 </tr>
 <tr>
@@ -17815,6 +17766,24 @@
 <td>Error</td>
 </tr>
 <tr>
+<td><a href="Azure.AKS.HttpAppRouting.md">Azure.AKS.HttpAppRouting</a></td>
+<td>Disable HTTP application routing add-on in AKS clusters.</td>
+<td>Important</td>
+<td>Error</td>
+</tr>
+<tr>
+<td><a href="Azure.AppGw.UseWAF.md">Azure.AppGw.UseWAF</a></td>
+<td>Internet accessible Application Gateways should use protect endpoints with WAF.</td>
+<td>Critical</td>
+<td>Error</td>
+</tr>
+<tr>
+<td><a href="Azure.AppGw.WAFEnabled.md">Azure.AppGw.WAFEnabled</a></td>
+<td>Application Gateway Web Application Firewall (WAF) must be enabled to protect backend resources.</td>
+<td>Critical</td>
+<td>Error</td>
+</tr>
+<tr>
 <td><a href="Azure.ContainerApp.ExternalIngress.md">Azure.ContainerApp.ExternalIngress</a></td>
 <td>Limit inbound communication for Container Apps is limited to callers within the Container Apps Environment.</td>
 <td>Important</td>
@@ -17859,6 +17828,12 @@
 <tr>
 <td><a href="Azure.EventHub.Firewall.md">Azure.EventHub.Firewall</a></td>
 <td>Access to the namespace endpoints should be restricted to only allowed sources.</td>
+<td>Critical</td>
+<td>Error</td>
+</tr>
+<tr>
+<td><a href="Azure.FrontDoor.WAF.Enabled.md">Azure.FrontDoor.WAF.Enabled</a></td>
+<td>Front Door Web Application Firewall (WAF) policy must be enabled to protect back end resources.</td>
 <td>Critical</td>
 <td>Error</td>
 </tr>
@@ -17938,6 +17913,12 @@
 <td><a href="Azure.SQL.FirewallRuleCount.md">Azure.SQL.FirewallRuleCount</a></td>
 <td>Determine if there is an excessive number of firewall rules.</td>
 <td>Awareness</td>
+<td>Error</td>
+</tr>
+<tr>
+<td><a href="Azure.Storage.Firewall.md">Azure.Storage.Firewall</a></td>
+<td>Storage Accounts should only accept explicitly allowed traffic.</td>
+<td>Important</td>
 <td>Error</td>
 </tr>
 <tr>
@@ -18290,31 +18271,6 @@
 <td><a href="Azure.Storage.DefenderCloud.md">Azure.Storage.DefenderCloud</a></td>
 <td>Enable Microsoft Defender for Storage for storage accounts.</td>
 <td>Critical</td>
-<td>Error</td>
-</tr>
-</tbody>
-</table>
-<h3 id="secrets">Secrets<a class="headerlink" href="#secrets" title="Permanent link">#</a></h3>
-<table>
-<thead>
-<tr>
-<th>Name</th>
-<th>Synopsis</th>
-<th>Severity</th>
-<th>Level</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><a href="Azure.VM.ScriptExtensions.md">Azure.VM.ScriptExtensions</a></td>
-<td>Custom Script Extensions scripts that reference secret values must use the protectedSettings.</td>
-<td>Important</td>
-<td>Error</td>
-</tr>
-<tr>
-<td><a href="Azure.VMSS.ScriptExtensions.md">Azure.VMSS.ScriptExtensions</a></td>
-<td>Custom Script Extensions scripts that reference secret values must use the protectedSettings.</td>
-<td>Important</td>
 <td>Error</td>
 </tr>
 </tbody>

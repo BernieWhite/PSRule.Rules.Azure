@@ -1,6 +1,57 @@
 {
+  "avm/res/api-management/service": {
+    "Latest": "0.6.0"
+  },
+  "avm/res/container-registry/registry": {
+    "Latest": "0.5.1"
+  },
+  "avm/res/app/container-app": {
+    "Latest": "0.9.0"
+  },
+  "avm/res/cache/redis": {
+    "Latest": "0.7.1"
+  },
+  "avm/res/network/load-balancer": {
+    "Latest": "0.4.0"
+  },
   "avm/res/insights/component": {
     "Latest": "0.4.1"
+  },
+  "avm/res/app/managed-environment": {
+    "Latest": "0.8.0"
+  },
+  "avm/res/container-service/managed-cluster": {
+    "Latest": "0.3.0"
+  },
+  "avm/res/desktop-virtualization/host-pool": {
+    "Latest": "0.5.0"
+  },
+  "avm/res/network/virtual-network-gateway": {
+    "Latest": "0.4.1"
+  },
+  "avm/res/network/firewall-policy": {
+    "Latest": "0.1.3"
+  },
+  "avm/res/compute/virtual-machine-scale-set": {
+    "Latest": "0.4.0"
+  },
+  "avm/res/event-hub/namespace": {
+    "Latest": "0.7.0"
+  },
+  "avm/res/web/site": {
+    "Latest": "0.9.0"
+  },
+  "avm/res/sql/server": {
+    "Latest": "0.8.0"
+  },
+  "avm/res/db-for-my-sql/flexible-server": {
+    "Latest": "0.4.1"
+  },
+  "avm/res/db-for-postgre-sql/flexible-server": {
+    "Latest": "0.3.1"
+  },
+  "avm/res/app-configuration/configuration-store": {
+    "Latest": "0.5.0"
   },
   "avm/res/storage/storage-account": {
     "Latest": "0.9.1"
@@ -11,67 +62,16 @@
   "avm/res/search/search-service": {
     "Latest": "0.7.1"
   },
-  "avm/res/app/container-app": {
-    "Latest": "0.9.0"
-  },
-  "avm/res/network/firewall-policy": {
-    "Latest": "0.1.3"
-  },
-  "avm/res/app/managed-environment": {
-    "Latest": "0.8.0"
-  },
-  "avm/res/db-for-postgre-sql/flexible-server": {
-    "Latest": "0.3.1"
-  },
   "avm/res/cognitive-services/account": {
     "Latest": "0.7.1"
   },
   "avm/res/web/serverfarm": {
     "Latest": "0.2.4"
   },
-  "avm/res/api-management/service": {
-    "Latest": "0.6.0"
-  },
-  "avm/res/cache/redis": {
-    "Latest": "0.7.1"
-  },
-  "avm/res/compute/virtual-machine-scale-set": {
-    "Latest": "0.4.0"
-  },
-  "avm/res/web/site": {
-    "Latest": "0.9.0"
-  },
-  "avm/res/event-hub/namespace": {
-    "Latest": "0.7.0"
-  },
-  "avm/res/app-configuration/configuration-store": {
-    "Latest": "0.5.0"
-  },
   "avm/res/key-vault/vault": {
     "Latest": "0.9.0"
   },
-  "avm/res/network/load-balancer": {
-    "Latest": "0.4.0"
-  },
-  "avm/res/sql/server": {
-    "Latest": "0.8.0"
-  },
-  "avm/res/container-service/managed-cluster": {
-    "Latest": "0.3.0"
-  },
-  "avm/res/container-registry/registry": {
-    "Latest": "0.5.1"
-  },
-  "avm/res/db-for-my-sql/flexible-server": {
-    "Latest": "0.4.0"
-  },
-  "avm/res/network/virtual-network-gateway": {
-    "Latest": "0.4.1"
-  },
   "avm/res/event-grid/topic": {
     "Latest": "0.6.0"
-  },
-  "avm/res/desktop-virtualization/host-pool": {
-    "Latest": "0.5.0"
   }
 }

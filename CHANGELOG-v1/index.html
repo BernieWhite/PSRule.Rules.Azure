@@ -22,7 +22,7 @@
       
       
       <link rel="icon" href="../assets/ms_icon.png">
-      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.5.39">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.5.40">
     
     
       
@@ -1567,6 +1567,15 @@
   <a href="#unreleased" class="md-nav__link">
     <span class="md-ellipsis">
       Unreleased
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#v1390" class="md-nav__link">
+    <span class="md-ellipsis">
+      v1.39.0
     </span>
   </a>
   
@@ -16496,6 +16505,15 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#v1390" class="md-nav__link">
+    <span class="md-ellipsis">
+      v1.39.0
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#v1390-b0249-pre-release" class="md-nav__link">
     <span class="md-ellipsis">
       v1.39.0-B0249 (pre-release)
@@ -18955,6 +18973,156 @@
   See <a href="../upgrade-notes/">upgrade notes</a> for more information.</li>
 </ul>
 <h2 id="unreleased">Unreleased<a class="headerlink" href="#unreleased" title="Permanent link">#</a></h2>
+<h2 id="v1390">v1.39.0<a class="headerlink" href="#v1390" title="Permanent link">#</a></h2>
+<p>What's changed since pre-release v1.38.0:</p>
+<ul>
+<li>New features:<ul>
+<li>Added September 2024 baselines <code>Azure.GA_2024_09</code> and <code>Azure.Preview_2024_09</code> by <a href="https://github.com/BernieWhite">@BernieWhite</a>.
+  <a href="https://github.com/Azure/PSRule.Rules.Azure/issues/3048">#3048</a><ul>
+<li>Includes rules released before or during September 2024.</li>
+<li>Marked <code>Azure.GA_2024_06</code> and <code>Azure.Preview_2024_06</code> baselines as obsolete.</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>New rules:<ul>
+<li>Azure Kubernetes Service:<ul>
+<li>Verify that clusters have kube-audit logging disabled when not required by <a href="https://github.com/BenjaminEngeset">@BenjaminEngeset</a>.
+  <a href="https://github.com/Azure/PSRule.Rules.Azure/issues/2450">#2450</a></li>
+<li>Verify that clusters have the customer-controlled maintenance windows <code>aksManagedAutoUpgradeSchedule</code> and <code>aksManagedNodeOSUpgradeSchedule</code> configured by <a href="https://github.com/BenjaminEngeset">@BenjaminEngeset</a>.
+  <a href="https://github.com/Azure/PSRule.Rules.Azure/issues/2444">#2444</a></li>
+</ul>
+</li>
+<li>App Service:<ul>
+<li>Verify that app service plans have availability zones configured by <a href="https://github.com/BenjaminEngeset">@BenjaminEngeset</a>.
+  <a href="https://github.com/Azure/PSRule.Rules.Azure/issues/2964">#2964</a></li>
+</ul>
+</li>
+<li>App Service Environment:<ul>
+<li>Verify that app service environments have availability zones configured by <a href="https://github.com/BenjaminEngeset">@BenjaminEngeset</a>.
+  <a href="https://github.com/Azure/PSRule.Rules.Azure/issues/2964">#2964</a></li>
+</ul>
+</li>
+<li>Azure SQL Database:<ul>
+<li>Verify that Azure SQL databases have a customer-controlled maintenance window configured by <a href="https://github.com/BenjaminEngeset">@BenjaminEngeset</a>.
+  <a href="https://github.com/Azure/PSRule.Rules.Azure/issues/2956">#2956</a></li>
+</ul>
+</li>
+<li>Azure SQL Managed Instance:<ul>
+<li>Verify that Azure SQL Managed Instances have a customer-controlled maintenance window configured by <a href="https://github.com/BenjaminEngeset">@BenjaminEngeset</a>.
+  <a href="https://github.com/Azure/PSRule.Rules.Azure/issues/2979">#2979</a></li>
+</ul>
+</li>
+<li>Service Bus:<ul>
+<li>Verify that service bus namespaces have geo-replication configured by <a href="https://github.com/BenjaminEngeset">@BenjaminEngeset</a>.
+  <a href="https://github.com/Azure/PSRule.Rules.Azure/issues/2988">#2988</a></li>
+</ul>
+</li>
+<li>Virtual Machine:<ul>
+<li>Verify that virtual machines does not have public IPs attached by <a href="https://github.com/BenjaminEngeset">@BenjaminEngeset</a>.
+  <a href="https://github.com/Azure/PSRule.Rules.Azure/issues/11">#11</a></li>
+<li>Verify that multi-tenant Hosting Rights are used for Windows client VMs by <a href="https://github.com/BenjaminEngeset">@BenjaminEngeset</a>.
+  <a href="https://github.com/Azure/PSRule.Rules.Azure/issues/432">#432</a></li>
+<li>Verify that availability set members are in a backend pool by <a href="https://github.com/BenjaminEngeset">@BenjaminEngeset</a>.
+  <a href="https://github.com/Azure/PSRule.Rules.Azure/issues/67">#67</a></li>
+</ul>
+</li>
+<li>Virtual Machine Scale Sets:<ul>
+<li>Verify that virtual machine scale set instances does not have public IPs attached by <a href="https://github.com/BenjaminEngeset">@BenjaminEngeset</a>.
+  <a href="https://github.com/Azure/PSRule.Rules.Azure/issues/3014">#3014</a></li>
+</ul>
+</li>
+<li>Virtual Network:<ul>
+<li>Verify that zonal-deployed Azure firewalls uses Azure NAT Gateway for outbound access by <a href="https://github.com/BenjaminEngeset">@BenjaminEngeset</a>.
+  <a href="https://github.com/Azure/PSRule.Rules.Azure/issues/#3005">##3005</a></li>
+<li>Verify that subnets have disabled default outbound access for virtual machines by <a href="https://github.com/BenjaminEngeset">@BenjaminEngeset</a>.
+  <a href="https://github.com/Azure/PSRule.Rules.Azure/issues/3001">#3001</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li>Updated rules:<ul>
+<li>Azure Kubernetes Service:<ul>
+<li>Updated <code>Azure.AKS.AuditLogs</code> documentation to call out important specific of the <code>kube-audit</code> log by <a href="https://github.com/BernieWhite">@BernieWhite</a>.
+  <a href="https://github.com/Azure/PSRule.Rules.Azure/issues/2449">#2449</a></li>
+<li>Updated <code>Azure.AKS.Version</code> to use <code>1.29.7</code> as the minimum version by <a href="https://github.com/BernieWhite">@BernieWhite</a>.
+  <a href="https://github.com/Azure/PSRule.Rules.Azure/issues/3042">#3042</a></li>
+</ul>
+</li>
+<li>Container Apps:<ul>
+<li>Updated <code>Azure.ContainerApp.AvailabilityZone</code> to check for infrastructure subnet by <a href="https://github.com/BernieWhite">@BernieWhite</a>.
+  <a href="https://github.com/Azure/PSRule.Rules.Azure/issues/3068">#3068</a><ul>
+<li>Configuring an infrastructure subnet is a requirement for enabling zone redundancy.
+  Both rule and documentation have been updated to clearly call this out.</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>Virtual Network:<ul>
+<li>Updated <code>Azure.VNET.UseNSGs</code> to correctly handle cases for special purpose and customer-excluded subnets by <a href="https://github.com/BenjaminEngeset">@BenjaminEngeset</a>.
+  <a href="https://github.com/Azure/PSRule.Rules.Azure/issues/3007">#3007</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li>General improvements:<ul>
+<li><strong>Important change:</strong> Replaced the <code>Azure_AKSNodeMinimumMaxPods</code> option with <code>AZURE_AKS_POOL_MINIMUM_MAXPODS</code> by <a href="https://github.com/BernieWhite">@BernieWhite</a>.
+  <a href="https://github.com/Azure/PSRule.Rules.Azure/issues/941">#941</a><ul>
+<li>For compatibility, if <code>Azure_AKSNodeMinimumMaxPods</code> is set it will be used instead of <code>AZURE_AKS_POOL_MINIMUM_MAXPODS</code>.</li>
+<li>If only <code>AZURE_AKS_POOL_MINIMUM_MAXPODS</code> is set, this value will be used.</li>
+<li>The default will be used neither options are configured.</li>
+<li>If <code>Azure_AKSNodeMinimumMaxPods</code> is set a warning will be generated until the configuration is removed.</li>
+<li>Support for <code>Azure_AKSNodeMinimumMaxPods</code> is deprecated and will be removed in v2.</li>
+<li>See <a href="../upgrade-notes/">upgrade notes</a> for details.</li>
+</ul>
+</li>
+<li><strong>Important change:</strong> Replaced the <code>Azure_MinimumCertificateLifetime</code> option with <code>AZURE_APIM_MINIMUM_CERTIFICATE_LIFETIME</code> by <a href="https://github.com/BernieWhite">@BernieWhite</a>.
+  <a href="https://github.com/Azure/PSRule.Rules.Azure/issues/941">#941</a><ul>
+<li>For compatibility, if <code>Azure_MinimumCertificateLifetime</code> is set it will be used instead of <code>AZURE_APIM_MINIMUM_CERTIFICATE_LIFETIME</code>.</li>
+<li>If only <code>AZURE_APIM_MINIMUM_CERTIFICATE_LIFETIME</code> is set, this value will be used.</li>
+<li>The default will be used neither options are configured.</li>
+<li>If <code>Azure_MinimumCertificateLifetime</code> is set a warning will be generated until the configuration is removed.</li>
+<li>Support for <code>Azure_MinimumCertificateLifetime</code> is deprecated and will be removed in v2.</li>
+<li>See <a href="../upgrade-notes/">upgrade notes</a> for details.</li>
+</ul>
+</li>
+<li>Add binding configuration to policy as rules docs by <a href="https://github.com/BernieWhite">@BernieWhite</a>.
+  <a href="https://github.com/Azure/PSRule.Rules.Azure/issues/2995">#2995</a></li>
+<li>Updated resource providers and policy aliases.
+  <a href="https://github.com/Azure/PSRule.Rules.Azure/pull/3074">#3074</a></li>
+</ul>
+</li>
+<li>Engineering:<ul>
+<li>Bump development tools to .NET 8.0 SDK by <a href="https://github.com/BernieWhite">@BernieWhite</a>.
+  <a href="https://github.com/Azure/PSRule.Rules.Azure/issues/3017">#3017</a></li>
+<li>Quality updates to rule documentation by <a href="https://github.com/BernieWhite">@BernieWhite</a>.
+  <a href="https://github.com/Azure/PSRule.Rules.Azure/issues/2570">#2570</a></li>
+<li>Bump xunit to v2.9.0.
+  <a href="https://github.com/Azure/PSRule.Rules.Azure/pull/2982">#2982</a></li>
+<li>Bump xunit.runner.visualstudio to v2.8.2.
+  <a href="https://github.com/Azure/PSRule.Rules.Azure/pull/2982">#2982</a></li>
+</ul>
+</li>
+<li>Bug fixed:<ul>
+<li>Fixed expansion with deployments by resource ID at management group by <a href="https://github.com/BernieWhite">@BernieWhite</a>
+  <a href="https://github.com/Azure/PSRule.Rules.Azure/issues/3013">#3013</a></li>
+<li>Fixed subscription aliases don't support tags by <a href="https://github.com/BernieWhite">@BernieWhite</a>.
+  <a href="https://github.com/Azure/PSRule.Rules.Azure/issues/3021">#3021</a></li>
+<li>Fixed <code>Azure.AppService.AvailabilityZone</code> only detects premium by tier property <a href="https://github.com/BenjaminEngeset">@BenjaminEngeset</a>.
+  <a href="https://github.com/Azure/PSRule.Rules.Azure/issues/3034">#3034</a></li>
+<li>Fixed loading of expansion options from non-default options file <a href="https://github.com/BernieWhite">@BernieWhite</a>.
+  <a href="https://github.com/Azure/PSRule.Rules.Azure/issues/3033">#3033</a></li>
+<li>Fixed TLS defaults for <code>Azure.Redis.MinTLS</code> and <code>Azure.RedisEnterprise.MinTLS</code> by <a href="https://github.com/BernieWhite">@BernieWhite</a>.
+  <a href="https://github.com/Azure/PSRule.Rules.Azure/issues/3066">#3066</a></li>
+<li>Fixed symbolic expand for existing with conditional cases by <a href="https://github.com/BernieWhite">@BernieWhite</a>.
+  <a href="https://github.com/Azure/PSRule.Rules.Azure/issues/2917">#2917</a></li>
+</ul>
+</li>
+</ul>
+<p>What's changed since pre-release v1.39.0-B0249:</p>
+<ul>
+<li>No additional changes.</li>
+</ul>
 <h2 id="v1390-b0249-pre-release">v1.39.0-B0249 (pre-release)<a class="headerlink" href="#v1390-b0249-pre-release" title="Permanent link">#</a></h2>
 <p>What's changed since pre-release v1.39.0-B0182:</p>
 <ul>

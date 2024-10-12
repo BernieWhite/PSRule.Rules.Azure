@@ -14338,15 +14338,6 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#availability" class="md-nav__link">
-    <span class="md-ellipsis">
-      Availability
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
   <a href="#best-practices" class="md-nav__link">
     <span class="md-ellipsis">
       Best practices
@@ -14358,7 +14349,7 @@
           <li class="md-nav__item">
   <a href="#data-management" class="md-nav__link">
     <span class="md-ellipsis">
-      Data Management
+      Data management
     </span>
   </a>
   
@@ -14513,15 +14504,6 @@
   
     <nav class="md-nav" aria-label="Security">
       <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#application-endpoints" class="md-nav__link">
-    <span class="md-ellipsis">
-      Application endpoints
-    </span>
-  </a>
-  
-</li>
         
           <li class="md-nav__item">
   <a href="#authentication" class="md-nav__link">
@@ -14725,15 +14707,6 @@
   <a href="#security-operations" class="md-nav__link">
     <span class="md-ellipsis">
       Security operations
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#virtual-machine" class="md-nav__link">
-    <span class="md-ellipsis">
-      Virtual Machine
     </span>
   </a>
   
@@ -15025,33 +14998,15 @@
 </thead>
 <tbody>
 <tr>
-<td><a href="Azure.APIM.CertificateExpiry.md">Azure.APIM.CertificateExpiry</a></td>
-<td>Renew certificates used for custom domain bindings.</td>
-<td>Important</td>
-<td>Error</td>
-</tr>
-<tr>
 <td><a href="Azure.AppGw.MinSku.md">Azure.AppGw.MinSku</a></td>
 <td>Application Gateway should use a minimum instance size of Medium.</td>
 <td>Important</td>
 <td>Error</td>
 </tr>
 <tr>
-<td><a href="Azure.DataFactory.Version.md">Azure.DataFactory.Version</a></td>
-<td>Consider migrating to DataFactory v2.</td>
-<td>Awareness</td>
-<td>Error</td>
-</tr>
-<tr>
 <td><a href="Azure.NIC.UniqueDns.md">Azure.NIC.UniqueDns</a></td>
 <td>Network interfaces (NICs) should inherit DNS from virtual networks.</td>
 <td>Awareness</td>
-<td>Error</td>
-</tr>
-<tr>
-<td><a href="Azure.VM.BasicSku.md">Azure.VM.BasicSku</a></td>
-<td>Virtual machines (VMs) should not use Basic sizes.</td>
-<td>Important</td>
 <td>Error</td>
 </tr>
 </tbody>
@@ -16050,25 +16005,6 @@
 </tr>
 </tbody>
 </table>
-<h3 id="availability">Availability<a class="headerlink" href="#availability" title="Permanent link">#</a></h3>
-<table>
-<thead>
-<tr>
-<th>Name</th>
-<th>Synopsis</th>
-<th>Severity</th>
-<th>Level</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><a href="Azure.VM.ASAlignment.md">Azure.VM.ASAlignment</a></td>
-<td>Use availability sets aligned with managed disks fault domains.</td>
-<td>Important</td>
-<td>Error</td>
-</tr>
-</tbody>
-</table>
 <h3 id="best-practices">Best practices<a class="headerlink" href="#best-practices" title="Permanent link">#</a></h3>
 <table>
 <thead>
@@ -16088,7 +16024,7 @@
 </tr>
 </tbody>
 </table>
-<h3 id="data-management">Data Management<a class="headerlink" href="#data-management" title="Permanent link">#</a></h3>
+<h3 id="data-management">Data management<a class="headerlink" href="#data-management" title="Permanent link">#</a></h3>
 <table>
 <thead>
 <tr>
@@ -16139,12 +16075,6 @@
 <tr>
 <td><a href="Azure.AKS.PoolVersion.md">Azure.AKS.PoolVersion</a></td>
 <td>AKS node pools should match Kubernetes control plane version.</td>
-<td>Important</td>
-<td>Error</td>
-</tr>
-<tr>
-<td><a href="Azure.RedisEnterprise.Zones.md">Azure.RedisEnterprise.Zones</a></td>
-<td>Enterprise Redis cache should be zone-redundant for high availability.</td>
 <td>Important</td>
 <td>Error</td>
 </tr>
@@ -16213,12 +16143,6 @@
 <tr>
 <td><a href="Azure.AppGw.MinInstance.md">Azure.AppGw.MinInstance</a></td>
 <td>Application Gateways should use a minimum of two instances.</td>
-<td>Important</td>
-<td>Error</td>
-</tr>
-<tr>
-<td><a href="Azure.VM.ASMinMembers.md">Azure.VM.ASMinMembers</a></td>
-<td>Availability sets should be deployed with at least two virtual machines (VMs).</td>
 <td>Important</td>
 <td>Error</td>
 </tr>
@@ -16291,6 +16215,12 @@
 <td>Error</td>
 </tr>
 <tr>
+<td><a href="Azure.APIM.CertificateExpiry.md">Azure.APIM.CertificateExpiry</a></td>
+<td>Renew certificates used for custom domain bindings.</td>
+<td>Important</td>
+<td>Error</td>
+</tr>
+<tr>
 <td><a href="Azure.AppConfig.SKU.md">Azure.AppConfig.SKU</a></td>
 <td>App Configuration should use a minimum size of Standard.</td>
 <td>Important</td>
@@ -16327,6 +16257,12 @@
 <td>Error</td>
 </tr>
 <tr>
+<td><a href="Azure.DataFactory.Version.md">Azure.DataFactory.Version</a></td>
+<td>Consider migrating to DataFactory v2.</td>
+<td>Awareness</td>
+<td>Error</td>
+</tr>
+<tr>
 <td><a href="Azure.Grafana.Version.md">Azure.Grafana.Version</a></td>
 <td>Grafana workspaces should be on Grafana version 10.</td>
 <td>Important</td>
@@ -16351,6 +16287,12 @@
 <td>Error</td>
 </tr>
 <tr>
+<td><a href="Azure.Redis.Version.md">Azure.Redis.Version</a></td>
+<td>Azure Cache for Redis should use the latest supported version of Redis.</td>
+<td>Important</td>
+<td>Error</td>
+</tr>
+<tr>
 <td><a href="Azure.SignalR.SLA.md">Azure.SignalR.SLA</a></td>
 <td>Use SKUs that include an SLA when configuring SignalR Services.</td>
 <td>Important</td>
@@ -16365,6 +16307,18 @@
 <tr>
 <td><a href="Azure.SQLMI.MaintenanceWindow.md">Azure.SQLMI.MaintenanceWindow</a></td>
 <td>Configure a customer-controlled maintenance window for Azure SQL Managed Instances.</td>
+<td>Important</td>
+<td>Error</td>
+</tr>
+<tr>
+<td><a href="Azure.VM.ASAlignment.md">Azure.VM.ASAlignment</a></td>
+<td>Use availability sets aligned with managed disks fault domains.</td>
+<td>Important</td>
+<td>Error</td>
+</tr>
+<tr>
+<td><a href="Azure.VM.BasicSku.md">Azure.VM.BasicSku</a></td>
+<td>Virtual machines (VMs) should not use Basic sizes.</td>
 <td>Important</td>
 <td>Error</td>
 </tr>
@@ -16497,6 +16451,12 @@
 <td>Error</td>
 </tr>
 <tr>
+<td><a href="Azure.VM.ASMinMembers.md">Azure.VM.ASMinMembers</a></td>
+<td>Availability sets should be deployed with at least two virtual machines (VMs).</td>
+<td>Important</td>
+<td>Error</td>
+</tr>
+<tr>
 <td><a href="Azure.VNET.FirewallSubnetNAT.md">Azure.VNET.FirewallSubnetNAT</a></td>
 <td>Zonal-deployed Azure Firewalls should consider using an Azure NAT Gateway for outbound access.</td>
 <td>Awareness</td>
@@ -16612,6 +16572,12 @@
 <td>Error</td>
 </tr>
 <tr>
+<td><a href="Azure.RedisEnterprise.Zones.md">Azure.RedisEnterprise.Zones</a></td>
+<td>Enterprise Redis cache should be zone-redundant for high availability.</td>
+<td>Important</td>
+<td>Error</td>
+</tr>
+<tr>
 <td><a href="Azure.VMSS.AvailabilityZone.md">Azure.VMSS.AvailabilityZone</a></td>
 <td>Deploy virtual machine scale set instances using availability zones in supported regions to ensure high availability and resilience.</td>
 <td>Important</td>
@@ -16701,12 +16667,6 @@
 <tr>
 <td><a href="Azure.PublicIP.StandardSKU.md">Azure.PublicIP.StandardSKU</a></td>
 <td>Public IP addresses should be deployed with Standard SKU for production workloads.</td>
-<td>Important</td>
-<td>Error</td>
-</tr>
-<tr>
-<td><a href="Azure.Redis.Version.md">Azure.Redis.Version</a></td>
-<td>Azure Cache for Redis should use the latest supported version of Redis.</td>
 <td>Important</td>
 <td>Error</td>
 </tr>
@@ -16825,25 +16785,6 @@
 </tbody>
 </table>
 <h2 id="security">Security<a class="headerlink" href="#security" title="Permanent link">#</a></h2>
-<h3 id="application-endpoints">Application endpoints<a class="headerlink" href="#application-endpoints" title="Permanent link">#</a></h3>
-<table>
-<thead>
-<tr>
-<th>Name</th>
-<th>Synopsis</th>
-<th>Severity</th>
-<th>Level</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><a href="Azure.FrontDoor.UseWAF.md">Azure.FrontDoor.UseWAF</a></td>
-<td>Enable Web Application Firewall (WAF) policies on each Front Door endpoint.</td>
-<td>Critical</td>
-<td>Error</td>
-</tr>
-</tbody>
-</table>
 <h3 id="authentication">Authentication<a class="headerlink" href="#authentication" title="Permanent link">#</a></h3>
 <table>
 <thead>
@@ -16922,12 +16863,6 @@
 <td>Important</td>
 <td>Error</td>
 </tr>
-<tr>
-<td><a href="Azure.Defender.Containers.md">Azure.Defender.Containers</a></td>
-<td>Enable Microsoft Defender for Containers.</td>
-<td>Critical</td>
-<td>Error</td>
-</tr>
 </tbody>
 </table>
 <h3 id="connectivity">Connectivity<a class="headerlink" href="#connectivity" title="Permanent link">#</a></h3>
@@ -16950,24 +16885,6 @@
 <tr>
 <td><a href="Azure.ML.PublicAccess.md">Azure.ML.PublicAccess</a></td>
 <td>Disable public network access from a Azure Machine Learning workspace.</td>
-<td>Critical</td>
-<td>Error</td>
-</tr>
-<tr>
-<td><a href="Azure.Redis.FirewallIPRange.md">Azure.Redis.FirewallIPRange</a></td>
-<td>Determine if there is an excessive number of permitted IP addresses for the Redis cache.</td>
-<td>Critical</td>
-<td>Error</td>
-</tr>
-<tr>
-<td><a href="Azure.Redis.FirewallRuleCount.md">Azure.Redis.FirewallRuleCount</a></td>
-<td>Determine if there is an excessive number of firewall rules for the Redis cache.</td>
-<td>Awareness</td>
-<td>Error</td>
-</tr>
-<tr>
-<td><a href="Azure.Redis.PublicNetworkAccess.md">Azure.Redis.PublicNetworkAccess</a></td>
-<td>Redis cache should disable public network access.</td>
 <td>Critical</td>
 <td>Error</td>
 </tr>
@@ -17006,12 +16923,6 @@
 <td><a href="Azure.CDN.HTTP.md">Azure.CDN.HTTP</a></td>
 <td>Enforce HTTPS for client connections.</td>
 <td>Important</td>
-<td>Error</td>
-</tr>
-<tr>
-<td><a href="Azure.Defender.AppServices.md">Azure.Defender.AppServices</a></td>
-<td>Enable Microsoft Defender for App Service.</td>
-<td>Critical</td>
 <td>Error</td>
 </tr>
 <tr>
@@ -17089,20 +17000,8 @@
 <td>Error</td>
 </tr>
 <tr>
-<td><a href="Azure.FrontDoor.MinTLS.md">Azure.FrontDoor.MinTLS</a></td>
-<td>Front Door Classic instances should reject TLS versions older than 1.2.</td>
-<td>Critical</td>
-<td>Error</td>
-</tr>
-<tr>
 <td><a href="Azure.IoTHub.MinTLS.md">Azure.IoTHub.MinTLS</a></td>
 <td>IoT Hubs should reject TLS versions older than 1.2.</td>
-<td>Critical</td>
-<td>Error</td>
-</tr>
-<tr>
-<td><a href="Azure.Redis.NonSslPort.md">Azure.Redis.NonSslPort</a></td>
-<td>Azure Cache for Redis should only accept secure connections.</td>
 <td>Critical</td>
 <td>Error</td>
 </tr>
@@ -17330,36 +17229,6 @@
 <tr>
 <td><a href="Azure.AppGwWAF.RuleGroups.md">Azure.AppGwWAF.RuleGroups</a></td>
 <td>Use recommended rule groups in Application Gateway Web Application Firewall (WAF) policies to protect back end resources.</td>
-<td>Critical</td>
-<td>Error</td>
-</tr>
-<tr>
-<td><a href="Azure.FrontDoor.WAF.Mode.md">Azure.FrontDoor.WAF.Mode</a></td>
-<td>Use protection mode in Front Door Web Application Firewall (WAF) policies to protect back end resources.</td>
-<td>Critical</td>
-<td>Error</td>
-</tr>
-<tr>
-<td><a href="Azure.FrontDoorWAF.Enabled.md">Azure.FrontDoorWAF.Enabled</a></td>
-<td>Front Door Web Application Firewall (WAF) policy must be enabled to protect back end resources.</td>
-<td>Critical</td>
-<td>Error</td>
-</tr>
-<tr>
-<td><a href="Azure.FrontDoorWAF.Exclusions.md">Azure.FrontDoorWAF.Exclusions</a></td>
-<td>Use recommended rule groups in Front Door Web Application Firewall (WAF) policies to protect back end resources. Avoid configuring rule exclusions.</td>
-<td>Critical</td>
-<td>Error</td>
-</tr>
-<tr>
-<td><a href="Azure.FrontDoorWAF.PreventionMode.md">Azure.FrontDoorWAF.PreventionMode</a></td>
-<td>Use protection mode in Front Door Web Application Firewall (WAF) policies to protect back end resources.</td>
-<td>Critical</td>
-<td>Error</td>
-</tr>
-<tr>
-<td><a href="Azure.FrontDoorWAF.RuleGroups.md">Azure.FrontDoorWAF.RuleGroups</a></td>
-<td>Use recommended rule groups in Front Door Web Application Firewall (WAF) policies to protect back end resources.</td>
 <td>Critical</td>
 <td>Error</td>
 </tr>
@@ -17832,8 +17701,44 @@
 <td>Error</td>
 </tr>
 <tr>
+<td><a href="Azure.FrontDoor.UseWAF.md">Azure.FrontDoor.UseWAF</a></td>
+<td>Enable Web Application Firewall (WAF) policies on each Front Door endpoint.</td>
+<td>Critical</td>
+<td>Error</td>
+</tr>
+<tr>
 <td><a href="Azure.FrontDoor.WAF.Enabled.md">Azure.FrontDoor.WAF.Enabled</a></td>
 <td>Front Door Web Application Firewall (WAF) policy must be enabled to protect back end resources.</td>
+<td>Critical</td>
+<td>Error</td>
+</tr>
+<tr>
+<td><a href="Azure.FrontDoor.WAF.Mode.md">Azure.FrontDoor.WAF.Mode</a></td>
+<td>Use protection mode in Front Door Web Application Firewall (WAF) policies to protect back end resources.</td>
+<td>Critical</td>
+<td>Error</td>
+</tr>
+<tr>
+<td><a href="Azure.FrontDoorWAF.Enabled.md">Azure.FrontDoorWAF.Enabled</a></td>
+<td>Front Door Web Application Firewall (WAF) policy must be enabled to protect back end resources.</td>
+<td>Critical</td>
+<td>Error</td>
+</tr>
+<tr>
+<td><a href="Azure.FrontDoorWAF.Exclusions.md">Azure.FrontDoorWAF.Exclusions</a></td>
+<td>Use recommended rule groups in Front Door Web Application Firewall (WAF) policies to protect back end resources. Avoid configuring rule exclusions.</td>
+<td>Critical</td>
+<td>Error</td>
+</tr>
+<tr>
+<td><a href="Azure.FrontDoorWAF.PreventionMode.md">Azure.FrontDoorWAF.PreventionMode</a></td>
+<td>Use protection mode in Front Door Web Application Firewall (WAF) policies to protect back end resources.</td>
+<td>Critical</td>
+<td>Error</td>
+</tr>
+<tr>
+<td><a href="Azure.FrontDoorWAF.RuleGroups.md">Azure.FrontDoorWAF.RuleGroups</a></td>
+<td>Use recommended rule groups in Front Door Web Application Firewall (WAF) policies to protect back end resources.</td>
 <td>Critical</td>
 <td>Error</td>
 </tr>
@@ -17895,6 +17800,12 @@
 <td><a href="Azure.PostgreSQL.FirewallRuleCount.md">Azure.PostgreSQL.FirewallRuleCount</a></td>
 <td>Determine if there is an excessive number of firewall rules.</td>
 <td>Awareness</td>
+<td>Error</td>
+</tr>
+<tr>
+<td><a href="Azure.Redis.PublicNetworkAccess.md">Azure.Redis.PublicNetworkAccess</a></td>
+<td>Redis cache should disable public network access.</td>
+<td>Critical</td>
 <td>Error</td>
 </tr>
 <tr>
@@ -18031,6 +17942,12 @@
 <td>Error</td>
 </tr>
 <tr>
+<td><a href="Azure.FrontDoor.MinTLS.md">Azure.FrontDoor.MinTLS</a></td>
+<td>Front Door Classic instances should reject TLS versions older than 1.2.</td>
+<td>Critical</td>
+<td>Error</td>
+</tr>
+<tr>
 <td><a href="Azure.MariaDB.MinTLS.md">Azure.MariaDB.MinTLS</a></td>
 <td>Azure Database for MariaDB servers should reject TLS versions older than 1.2.</td>
 <td>Critical</td>
@@ -18063,6 +17980,12 @@
 <tr>
 <td><a href="Azure.Redis.MinTLS.md">Azure.Redis.MinTLS</a></td>
 <td>Redis Cache should reject TLS versions older than 1.2.</td>
+<td>Critical</td>
+<td>Error</td>
+</tr>
+<tr>
+<td><a href="Azure.Redis.NonSslPort.md">Azure.Redis.NonSslPort</a></td>
+<td>Azure Cache for Redis should only accept secure connections.</td>
 <td>Critical</td>
 <td>Error</td>
 </tr>
@@ -18131,6 +18054,18 @@
 <td><a href="Azure.AppService.RemoteDebug.md">Azure.AppService.RemoteDebug</a></td>
 <td>Disable remote debugging on App Service apps when not in use.</td>
 <td>Important</td>
+<td>Error</td>
+</tr>
+<tr>
+<td><a href="Azure.Redis.FirewallIPRange.md">Azure.Redis.FirewallIPRange</a></td>
+<td>Determine if there is an excessive number of permitted IP addresses for the Redis cache.</td>
+<td>Critical</td>
+<td>Error</td>
+</tr>
+<tr>
+<td><a href="Azure.Redis.FirewallRuleCount.md">Azure.Redis.FirewallRuleCount</a></td>
+<td>Determine if there is an excessive number of firewall rules for the Redis cache.</td>
+<td>Awareness</td>
 <td>Error</td>
 </tr>
 <tr>
@@ -18204,6 +18139,72 @@
 <tr>
 <td><a href="Azure.Defender.Api.md">Azure.Defender.Api</a></td>
 <td>Enable Microsoft Defender for APIs.</td>
+<td>Critical</td>
+<td>Error</td>
+</tr>
+<tr>
+<td><a href="Azure.Defender.AppServices.md">Azure.Defender.AppServices</a></td>
+<td>Enable Microsoft Defender for App Service.</td>
+<td>Critical</td>
+<td>Error</td>
+</tr>
+<tr>
+<td><a href="Azure.Defender.Arm.md">Azure.Defender.Arm</a></td>
+<td>Enable Microsoft Defender for Azure Resource Manager (ARM).</td>
+<td>Critical</td>
+<td>Error</td>
+</tr>
+<tr>
+<td><a href="Azure.Defender.Containers.md">Azure.Defender.Containers</a></td>
+<td>Enable Microsoft Defender for Containers.</td>
+<td>Critical</td>
+<td>Error</td>
+</tr>
+<tr>
+<td><a href="Azure.Defender.CosmosDb.md">Azure.Defender.CosmosDb</a></td>
+<td>Enable Microsoft Defender for Azure Cosmos DB.</td>
+<td>Critical</td>
+<td>Error</td>
+</tr>
+<tr>
+<td><a href="Azure.Defender.Cspm.md">Azure.Defender.Cspm</a></td>
+<td>Enable Microsoft Defender Cloud Security Posture Management Standard plan.</td>
+<td>Critical</td>
+<td>Error</td>
+</tr>
+<tr>
+<td><a href="Azure.Defender.Dns.md">Azure.Defender.Dns</a></td>
+<td>Enable Microsoft Defender for DNS.</td>
+<td>Critical</td>
+<td>Error</td>
+</tr>
+<tr>
+<td><a href="Azure.Defender.KeyVault.md">Azure.Defender.KeyVault</a></td>
+<td>Enable Microsoft Defender for Key Vault.</td>
+<td>Critical</td>
+<td>Error</td>
+</tr>
+<tr>
+<td><a href="Azure.Defender.OssRdb.md">Azure.Defender.OssRdb</a></td>
+<td>Enable Microsoft Defender for open-source relational databases.</td>
+<td>Critical</td>
+<td>Error</td>
+</tr>
+<tr>
+<td><a href="Azure.Defender.Servers.md">Azure.Defender.Servers</a></td>
+<td>Enable Microsoft Defender for Servers.</td>
+<td>Critical</td>
+<td>Error</td>
+</tr>
+<tr>
+<td><a href="Azure.Defender.SQL.md">Azure.Defender.SQL</a></td>
+<td>Enable Microsoft Defender for SQL servers.</td>
+<td>Critical</td>
+<td>Error</td>
+</tr>
+<tr>
+<td><a href="Azure.Defender.SQLOnVM.md">Azure.Defender.SQLOnVM</a></td>
+<td>Enable Microsoft Defender for SQL servers on machines.</td>
 <td>Critical</td>
 <td>Error</td>
 </tr>
@@ -18318,54 +18319,6 @@
 <td>Error</td>
 </tr>
 <tr>
-<td><a href="Azure.Defender.Arm.md">Azure.Defender.Arm</a></td>
-<td>Enable Microsoft Defender for Azure Resource Manager (ARM).</td>
-<td>Critical</td>
-<td>Error</td>
-</tr>
-<tr>
-<td><a href="Azure.Defender.CosmosDb.md">Azure.Defender.CosmosDb</a></td>
-<td>Enable Microsoft Defender for Azure Cosmos DB.</td>
-<td>Critical</td>
-<td>Error</td>
-</tr>
-<tr>
-<td><a href="Azure.Defender.Cspm.md">Azure.Defender.Cspm</a></td>
-<td>Enable Microsoft Defender Cloud Security Posture Management Standard plan.</td>
-<td>Critical</td>
-<td>Error</td>
-</tr>
-<tr>
-<td><a href="Azure.Defender.Dns.md">Azure.Defender.Dns</a></td>
-<td>Enable Microsoft Defender for DNS.</td>
-<td>Critical</td>
-<td>Error</td>
-</tr>
-<tr>
-<td><a href="Azure.Defender.KeyVault.md">Azure.Defender.KeyVault</a></td>
-<td>Enable Microsoft Defender for Key Vault.</td>
-<td>Critical</td>
-<td>Error</td>
-</tr>
-<tr>
-<td><a href="Azure.Defender.OssRdb.md">Azure.Defender.OssRdb</a></td>
-<td>Enable Microsoft Defender for open-source relational databases.</td>
-<td>Critical</td>
-<td>Error</td>
-</tr>
-<tr>
-<td><a href="Azure.Defender.SQL.md">Azure.Defender.SQL</a></td>
-<td>Enable Microsoft Defender for SQL servers.</td>
-<td>Critical</td>
-<td>Error</td>
-</tr>
-<tr>
-<td><a href="Azure.Defender.SQLOnVM.md">Azure.Defender.SQLOnVM</a></td>
-<td>Enable Microsoft Defender for SQL servers on machines.</td>
-<td>Critical</td>
-<td>Error</td>
-</tr>
-<tr>
 <td><a href="Azure.DefenderCloud.Contact.md">Azure.DefenderCloud.Contact</a></td>
 <td>Microsoft Defender for Cloud email and phone contact details should be set.</td>
 <td>Important</td>
@@ -18399,25 +18352,6 @@
 <td><a href="Azure.SQL.DefenderCloud.md">Azure.SQL.DefenderCloud</a></td>
 <td>Enable Microsoft Defender for Azure SQL logical server.</td>
 <td>Important</td>
-<td>Error</td>
-</tr>
-</tbody>
-</table>
-<h3 id="virtual-machine">Virtual Machine<a class="headerlink" href="#virtual-machine" title="Permanent link">#</a></h3>
-<table>
-<thead>
-<tr>
-<th>Name</th>
-<th>Synopsis</th>
-<th>Severity</th>
-<th>Level</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><a href="Azure.Defender.Servers.md">Azure.Defender.Servers</a></td>
-<td>Enable Microsoft Defender for Servers.</td>
-<td>Critical</td>
 <td>Error</td>
 </tr>
 </tbody>

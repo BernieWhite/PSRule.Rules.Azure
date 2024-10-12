@@ -14,14 +14,14 @@ resource cache 'Microsoft.Cache/redis@2024-03-01' = {
   name: name
   location: location
   properties: {
-    minimumTlsVersion: '1.2'
-    redisVersion: 'latest'
+    redisVersion: '6'
     sku: {
       name: 'Premium'
       family: 'P'
       capacity: 1
     }
     redisConfiguration: {
+      'aad-enabled': 'True'
       'maxmemory-reserved': '615'
     }
     enableNonSslPort: false

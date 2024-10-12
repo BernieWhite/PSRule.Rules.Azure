@@ -5,7 +5,7 @@
     "_generator": {
       "name": "bicep",
       "version": "0.30.23.60470",
-      "templateHash": "16114660589456584580"
+      "templateHash": "15203537549290183068"
     }
   },
   "parameters": {
@@ -30,7 +30,6 @@
       "name": "[parameters('name')]",
       "location": "[parameters('location')]",
       "properties": {
-        "minimumTlsVersion": "1.2",
         "redisVersion": "latest",
         "sku": {
           "name": "Premium",
@@ -38,6 +37,7 @@
           "capacity": 1
         },
         "redisConfiguration": {
+          "aad-enabled": "True",
           "maxmemory-reserved": "615"
         },
         "enableNonSslPort": false,

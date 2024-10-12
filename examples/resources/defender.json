@@ -4,8 +4,8 @@
   "metadata": {
     "_generator": {
       "name": "bicep",
-      "version": "0.25.53.49325",
-      "templateHash": "16203270925454783024"
+      "version": "0.30.23.60470",
+      "templateHash": "2395927344385178299"
     }
   },
   "resources": [
@@ -29,7 +29,7 @@
     },
     {
       "type": "Microsoft.Security/pricings",
-      "apiVersion": "2023-01-01",
+      "apiVersion": "2024-01-01",
       "name": "Containers",
       "properties": {
         "pricingTier": "Standard"
@@ -37,7 +37,7 @@
     },
     {
       "type": "Microsoft.Security/pricings",
-      "apiVersion": "2023-01-01",
+      "apiVersion": "2024-01-01",
       "name": "VirtualMachines",
       "properties": {
         "pricingTier": "Standard",
@@ -46,7 +46,7 @@
     },
     {
       "type": "Microsoft.Security/pricings",
-      "apiVersion": "2023-01-01",
+      "apiVersion": "2024-01-01",
       "name": "SqlServers",
       "properties": {
         "pricingTier": "Standard"
@@ -54,7 +54,7 @@
     },
     {
       "type": "Microsoft.Security/pricings",
-      "apiVersion": "2023-01-01",
+      "apiVersion": "2024-01-01",
       "name": "AppServices",
       "properties": {
         "pricingTier": "Standard"
@@ -84,7 +84,7 @@
     },
     {
       "type": "Microsoft.Security/pricings",
-      "apiVersion": "2023-01-01",
+      "apiVersion": "2024-01-01",
       "name": "SqlServerVirtualMachines",
       "properties": {
         "pricingTier": "Standard"
@@ -92,7 +92,7 @@
     },
     {
       "type": "Microsoft.Security/pricings",
-      "apiVersion": "2023-01-01",
+      "apiVersion": "2024-01-01",
       "name": "KeyVaults",
       "properties": {
         "pricingTier": "Standard"
@@ -100,7 +100,7 @@
     },
     {
       "type": "Microsoft.Security/pricings",
-      "apiVersion": "2023-01-01",
+      "apiVersion": "2024-01-01",
       "name": "Dns",
       "properties": {
         "pricingTier": "Standard"
@@ -108,7 +108,7 @@
     },
     {
       "type": "Microsoft.Security/pricings",
-      "apiVersion": "2023-01-01",
+      "apiVersion": "2024-01-01",
       "name": "Arm",
       "properties": {
         "pricingTier": "Standard"
@@ -116,7 +116,7 @@
     },
     {
       "type": "Microsoft.Security/pricings",
-      "apiVersion": "2023-01-01",
+      "apiVersion": "2024-01-01",
       "name": "OpenSourceRelationalDatabases",
       "properties": {
         "pricingTier": "Standard"
@@ -124,7 +124,7 @@
     },
     {
       "type": "Microsoft.Security/pricings",
-      "apiVersion": "2023-01-01",
+      "apiVersion": "2024-01-01",
       "name": "CosmosDbs",
       "properties": {
         "pricingTier": "Standard"
@@ -132,7 +132,7 @@
     },
     {
       "type": "Microsoft.Security/pricings",
-      "apiVersion": "2023-01-01",
+      "apiVersion": "2024-01-01",
       "name": "CloudPosture",
       "properties": {
         "pricingTier": "Standard"
@@ -140,7 +140,7 @@
     },
     {
       "type": "Microsoft.Security/pricings",
-      "apiVersion": "2023-01-01",
+      "apiVersion": "2024-01-01",
       "name": "Api",
       "properties": {
         "subPlan": "P1",

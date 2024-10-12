@@ -24,7 +24,7 @@ resource securityContact 'Microsoft.Security/securityContacts@2020-01-01-preview
 }
 
 // Configures Microsoft Defender for Containers.
-resource defenderForContainers 'Microsoft.Security/pricings@2023-01-01' = {
+resource defenderForContainers 'Microsoft.Security/pricings@2024-01-01' = {
   name: 'Containers'
   properties: {
     pricingTier: 'Standard'
@@ -32,7 +32,7 @@ resource defenderForContainers 'Microsoft.Security/pricings@2023-01-01' = {
 }
 
 // Configures Microsoft Defender for Virtual Machines.
-resource defenderForVirtualMachines 'Microsoft.Security/pricings@2023-01-01' = {
+resource defenderForVirtualMachines 'Microsoft.Security/pricings@2024-01-01' = {
   name: 'VirtualMachines'
   properties: {
     pricingTier: 'Standard'
@@ -41,7 +41,7 @@ resource defenderForVirtualMachines 'Microsoft.Security/pricings@2023-01-01' = {
 }
 
 // Configures Microsoft Defender for Sql Servers.
-resource defenderForSqlServers 'Microsoft.Security/pricings@2023-01-01' = {
+resource defenderForSqlServers 'Microsoft.Security/pricings@2024-01-01' = {
   name: 'SqlServers'
   properties: {
     pricingTier: 'Standard'
@@ -49,7 +49,7 @@ resource defenderForSqlServers 'Microsoft.Security/pricings@2023-01-01' = {
 }
 
 // Configures Microsoft Defender for App Services.
-resource defenderForAppServices 'Microsoft.Security/pricings@2023-01-01' = {
+resource defenderForAppServices 'Microsoft.Security/pricings@2024-01-01' = {
   name: 'AppServices'
   properties: {
     pricingTier: 'Standard'
@@ -79,7 +79,7 @@ resource defenderForStorage 'Microsoft.Security/pricings@2024-01-01' = {
 }
 
 // Configures Azure Defender for Sql Server Virtual Machines.
-resource defenderForSqlServerVirtualMachines 'Microsoft.Security/pricings@2023-01-01' = {
+resource defenderForSqlServerVirtualMachines 'Microsoft.Security/pricings@2024-01-01' = {
   name: 'SqlServerVirtualMachines'
   properties: {
     pricingTier: 'Standard'
@@ -87,7 +87,7 @@ resource defenderForSqlServerVirtualMachines 'Microsoft.Security/pricings@2023-0
 }
 
 // Configures Microsoft Defender for Key Vaults.
-resource defenderForKeyVaults 'Microsoft.Security/pricings@2023-01-01' = {
+resource defenderForKeyVaults 'Microsoft.Security/pricings@2024-01-01' = {
   name: 'KeyVaults'
   properties: {
     pricingTier: 'Standard'
@@ -95,7 +95,7 @@ resource defenderForKeyVaults 'Microsoft.Security/pricings@2023-01-01' = {
 }
 
 // Configures Microsoft Defender for Dns.
-resource defenderForDns 'Microsoft.Security/pricings@2023-01-01' = {
+resource defenderForDns 'Microsoft.Security/pricings@2024-01-01' = {
   name: 'Dns'
   properties: {
     pricingTier: 'Standard'
@@ -103,7 +103,7 @@ resource defenderForDns 'Microsoft.Security/pricings@2023-01-01' = {
 }
 
 // Configures Microsoft Defender for Arm.
-resource defenderForArm 'Microsoft.Security/pricings@2023-01-01' = {
+resource defenderForArm 'Microsoft.Security/pricings@2024-01-01' = {
   name: 'Arm'
   properties: {
     pricingTier: 'Standard'
@@ -111,7 +111,7 @@ resource defenderForArm 'Microsoft.Security/pricings@2023-01-01' = {
 }
 
 // Configures Microsoft Defender for Open Source Relational Databases.
-resource defenderForOpenSourceRelationalDatabases 'Microsoft.Security/pricings@2023-01-01' = {
+resource defenderForOpenSourceRelationalDatabases 'Microsoft.Security/pricings@2024-01-01' = {
   name: 'OpenSourceRelationalDatabases'
   properties: {
     pricingTier: 'Standard'
@@ -119,7 +119,7 @@ resource defenderForOpenSourceRelationalDatabases 'Microsoft.Security/pricings@2
 }
 
 // Configures Microsoft Defender for Cosmos Dbs.
-resource defenderForCosmosDbs 'Microsoft.Security/pricings@2023-01-01' = {
+resource defenderForCosmosDbs 'Microsoft.Security/pricings@2024-01-01' = {
   name: 'CosmosDbs'
   properties: {
     pricingTier: 'Standard'
@@ -127,7 +127,7 @@ resource defenderForCosmosDbs 'Microsoft.Security/pricings@2023-01-01' = {
 }
 
 // Configures Microsoft Defender for CSPM.
-resource defenderForCloudPosture 'Microsoft.Security/pricings@2023-01-01' = {
+resource defenderForCloudPosture 'Microsoft.Security/pricings@2024-01-01' = {
   name: 'CloudPosture'
   properties: {
     pricingTier: 'Standard'
@@ -135,7 +135,7 @@ resource defenderForCloudPosture 'Microsoft.Security/pricings@2023-01-01' = {
 }
 
 // Configure Microsoft Defender for APIs
-resource defenderForApi 'Microsoft.Security/pricings@2023-01-01' = {
+resource defenderForApi 'Microsoft.Security/pricings@2024-01-01' = {
   name: 'Api'
   properties: {
     subPlan: 'P1'

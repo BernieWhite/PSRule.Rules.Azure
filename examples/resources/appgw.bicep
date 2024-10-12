@@ -7,7 +7,8 @@ param name string
 @description('The location resources will be deployed.')
 param location string = resourceGroup().location
 
-resource app_gw 'Microsoft.Network/applicationGateways@2023-09-01' = {
+// An example of an Application Gateway with a WAF_v2 SKU.
+resource appgw 'Microsoft.Network/applicationGateways@2024-01-01' = {
   name: name
   location: location
   zones: [
@@ -15,7 +16,6 @@ resource app_gw 'Microsoft.Network/applicationGateways@2023-09-01' = {
     '2'
     '3'
   ]
-  tags: {}
   properties: {
     sku: {
       name: 'WAF_v2'
@@ -31,30 +31,18 @@ resource app_gw 'Microsoft.Network/applicationGateways@2023-09-01' = {
         'TLS_ECDHE_RSA_WITH_AES_128_GCM_SHA256'
       ]
     }
-    gatewayIPConfigurations: []
-    frontendIPConfigurations: []
-    frontendPorts: []
-    backendAddressPools: []
-    backendHttpSettingsCollection: []
-    httpListeners: []
-    requestRoutingRules: []
-    enableHttp2: false
-    sslCertificates: []
-    probes: []
     autoscaleConfiguration: {
       minCapacity: 2
       maxCapacity: 3
     }
-    webApplicationFirewallConfiguration: {
-      enabled: true
-      firewallMode: 'Detection'
-      ruleSetType: 'OWASP'
-      ruleSetVersion: '3.0'
+    firewallPolicy: {
+      id: waf.id
     }
   }
 }
 
-resource waf 'Microsoft.Network/ApplicationGatewayWebApplicationFirewallPolicies@2023-09-01' = {
+// An example of an Web Application Firewall policy configure with OWASP and Microsoft_BotManagerRuleSet rule sets.
+resource waf 'Microsoft.Network/ApplicationGatewayWebApplicationFirewallPolicies@2024-01-01' = {
   name: 'agwwaf'
   location: location
   properties: {

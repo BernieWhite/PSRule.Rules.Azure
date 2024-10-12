@@ -1919,6 +1919,15 @@
 </li>
         
           <li class="md-nav__item">
+  <a href="#azure_appgw_additional_region_availability_zone_list" class="md-nav__link">
+    <span class="md-ellipsis">
+      AZURE_APPGW_ADDITIONAL_REGION_AVAILABILITY_ZONE_LIST
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#azure_containerapps_restrict_ingress" class="md-nav__link">
     <span class="md-ellipsis">
       AZURE_CONTAINERAPPS_RESTRICT_INGRESS
@@ -14413,6 +14422,15 @@
 </li>
         
           <li class="md-nav__item">
+  <a href="#azure_appgw_additional_region_availability_zone_list" class="md-nav__link">
+    <span class="md-ellipsis">
+      AZURE_APPGW_ADDITIONAL_REGION_AVAILABILITY_ZONE_LIST
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#azure_containerapps_restrict_ingress" class="md-nav__link">
     <span class="md-ellipsis">
       AZURE_CONTAINERAPPS_RESTRICT_INGRESS
@@ -14654,7 +14672,7 @@ Rules that check the Kubernetes version fail when the version is older than the 
 </span><span id="__span-8-3"><a id="__codelineno-8-3" name="__codelineno-8-3" href="#__codelineno-8-3"></a><span class="w">  </span><span class="nt">AZURE_AKS_CNI_MINIMUM_CLUSTER_SUBNET_SIZE</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">26</span>
 </span></code></pre></div>
 <h3 id="azure_aks_additional_region_availability_zone_list">AZURE_AKS_ADDITIONAL_REGION_AVAILABILITY_ZONE_LIST<a class="headerlink" href="#azure_aks_additional_region_availability_zone_list" title="Permanent link">#</a></h3>
-<p>This configuration option adds availability zones that are not included in the existing <a href="https://github.com/Azure/PSRule.Rules.Azure/blob/main/data/providers/">providers</a>.
+<p>This configuration option adds availability zones that are not included in the existing <a href="https://github.com/Azure/PSRule.Rules.Azure/tree/main/data/providers/">providers</a>.
 You can use this option to add availability zones that are not included in the default list.</p>
 <p>The following providers are supported:</p>
 <ul>
@@ -14837,38 +14855,79 @@ Configure this option to change the minimum API version, which defaults to <code
 </span><span id="__span-29-2"><a id="__codelineno-29-2" name="__codelineno-29-2" href="#__codelineno-29-2"></a><span class="nt">configuration</span><span class="p">:</span>
 </span><span id="__span-29-3"><a id="__codelineno-29-3" name="__codelineno-29-3" href="#__codelineno-29-3"></a><span class="w">  </span><span class="nt">AZURE_APIM_MIN_API_VERSION</span><span class="p">:</span><span class="w"> </span><span class="s">&#39;2021-12-01-preview&#39;</span>
 </span></code></pre></div>
+<h3 id="azure_appgw_additional_region_availability_zone_list">AZURE_APPGW_ADDITIONAL_REGION_AVAILABILITY_ZONE_LIST<a class="headerlink" href="#azure_appgw_additional_region_availability_zone_list" title="Permanent link">#</a></h3>
+<p><span class="badge"><span class="badge__icon"><a href="../../CHANGELOG-v1/#v180" title="Minimum version"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M11.75 1a.75.75 0 0 1 .75.75V4h6.532c.42 0 .826.15 1.143.425l3.187 2.75a1.75 1.75 0 0 1 0 2.65l-3.187 2.75a1.75 1.75 0 0 1-1.143.425H12.5v9.25a.75.75 0 0 1-1.5 0V13H3.75A1.75 1.75 0 0 1 2 11.25v-5.5C2 4.783 2.784 4 3.75 4H11V1.75a.75.75 0 0 1 .75-.75m7.282 4.5H3.75a.25.25 0 0 0-.25.25v5.5c0 .138.112.25.25.25h15.282c.06 0 .118-.021.163-.06l3.188-2.75a.248.248 0 0 0 0-.38l-3.188-2.75a.25.25 0 0 0-.163-.06"/></svg></span></a></span><span class="badge__text"><a href="../../CHANGELOG-v1/#v180">v1.8.0</a></span></span>
+<span class="badge"><span class="badge__icon"><a href="../../en/rules/Azure.AppGw.AvailabilityZone/" title="Applies to rule"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M14.78 3.653a3.936 3.936 0 1 1 5.567 5.567l-3.627 3.627a3.936 3.936 0 0 1-5.88-.353.75.75 0 0 0-1.18.928 5.436 5.436 0 0 0 8.12.486l3.628-3.628a5.436 5.436 0 1 0-7.688-7.688l-3 3a.75.75 0 0 0 1.06 1.061z"/><path d="M7.28 11.153a3.936 3.936 0 0 1 5.88.353.75.75 0 0 0 1.18-.928 5.436 5.436 0 0 0-8.12-.486L2.592 13.72a5.436 5.436 0 1 0 7.688 7.688l3-3a.75.75 0 1 0-1.06-1.06l-3 3a3.936 3.936 0 0 1-5.567-5.568z"/></svg></span></a></span><span class="badge__text"><a href="../../en/rules/Azure.AppGw.AvailabilityZone/">Azure.AppGw.AvailabilityZone</a></span></span></p>
+<p>This configuration option adds availability zones that are not included in the existing <a href="https://github.com/Azure/PSRule.Rules.Azure/tree/main/data/providers/">providers</a>.
+You can use this option to add availability zones that are not included in the default list.</p>
+<p>Syntax:</p>
+<div class="language-yaml highlight"><span class="filename">ps-rule.yaml</span><pre><span></span><code><span id="__span-30-1"><a id="__codelineno-30-1" name="__codelineno-30-1" href="#__codelineno-30-1"></a><span class="nt">configuration</span><span class="p">:</span>
+</span><span id="__span-30-2"><a id="__codelineno-30-2" name="__codelineno-30-2" href="#__codelineno-30-2"></a><span class="w">  </span><span class="nt">AZURE_APPGW_ADDITIONAL_REGION_AVAILABILITY_ZONE_LIST</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">array</span>
+</span></code></pre></div>
+<p>Default:</p>
+<div class="language-yaml highlight"><span class="filename">ps-rule.yaml</span><pre><span></span><code><span id="__span-31-1"><a id="__codelineno-31-1" name="__codelineno-31-1" href="#__codelineno-31-1"></a><span class="c1"># YAML: The default AZURE_APPGW_ADDITIONAL_REGION_AVAILABILITY_ZONE_LIST configuration option</span>
+</span><span id="__span-31-2"><a id="__codelineno-31-2" name="__codelineno-31-2" href="#__codelineno-31-2"></a><span class="nt">configuration</span><span class="p">:</span>
+</span><span id="__span-31-3"><a id="__codelineno-31-3" name="__codelineno-31-3" href="#__codelineno-31-3"></a><span class="w">  </span><span class="nt">AZURE_APPGW_ADDITIONAL_REGION_AVAILABILITY_ZONE_LIST</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">[]</span>
+</span></code></pre></div>
+<p>Example:</p>
+<div class="language-yaml highlight"><span class="filename">ps-rule.yaml</span><pre><span></span><code><span id="__span-32-1"><a id="__codelineno-32-1" name="__codelineno-32-1" href="#__codelineno-32-1"></a><span class="c1"># YAML: Set the AZURE_APPGW_ADDITIONAL_REGION_AVAILABILITY_ZONE_LIST configuration option to Antarctica North and Antarctica South, with zones 1, 2, 3.</span>
+</span><span id="__span-32-2"><a id="__codelineno-32-2" name="__codelineno-32-2" href="#__codelineno-32-2"></a><span class="nt">configuration</span><span class="p">:</span>
+</span><span id="__span-32-3"><a id="__codelineno-32-3" name="__codelineno-32-3" href="#__codelineno-32-3"></a><span class="w">  </span><span class="nt">AZURE_APPGW_ADDITIONAL_REGION_AVAILABILITY_ZONE_LIST</span><span class="p">:</span>
+</span><span id="__span-32-4"><a id="__codelineno-32-4" name="__codelineno-32-4" href="#__codelineno-32-4"></a><span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">location</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Antarctica North</span>
+</span><span id="__span-32-5"><a id="__codelineno-32-5" name="__codelineno-32-5" href="#__codelineno-32-5"></a><span class="w">    </span><span class="nt">zones</span><span class="p">:</span>
+</span><span id="__span-32-6"><a id="__codelineno-32-6" name="__codelineno-32-6" href="#__codelineno-32-6"></a><span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="s">&#39;1&#39;</span>
+</span><span id="__span-32-7"><a id="__codelineno-32-7" name="__codelineno-32-7" href="#__codelineno-32-7"></a><span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="s">&#39;2&#39;</span>
+</span><span id="__span-32-8"><a id="__codelineno-32-8" name="__codelineno-32-8" href="#__codelineno-32-8"></a><span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="s">&#39;3&#39;</span>
+</span><span id="__span-32-9"><a id="__codelineno-32-9" name="__codelineno-32-9" href="#__codelineno-32-9"></a><span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">location</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Antarctica South</span>
+</span><span id="__span-32-10"><a id="__codelineno-32-10" name="__codelineno-32-10" href="#__codelineno-32-10"></a><span class="w">    </span><span class="nt">zones</span><span class="p">:</span>
+</span><span id="__span-32-11"><a id="__codelineno-32-11" name="__codelineno-32-11" href="#__codelineno-32-11"></a><span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="s">&#39;1&#39;</span>
+</span><span id="__span-32-12"><a id="__codelineno-32-12" name="__codelineno-32-12" href="#__codelineno-32-12"></a><span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="s">&#39;2&#39;</span>
+</span><span id="__span-32-13"><a id="__codelineno-32-13" name="__codelineno-32-13" href="#__codelineno-32-13"></a><span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="s">&#39;3&#39;</span>
+</span></code></pre></div>
+<p>The above example, both these forms of location are accepted:</p>
+<ul>
+<li><code>Antarctica North</code> or <code>antarcticanorth</code></li>
+<li><code>Antarctica South</code> or <code>antarcticasouth</code></li>
+</ul>
+<p>The rules normalize these location formats so either is accepted in the configuration.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>The above are examples for illustration purpose only.
+At the time of writing, <code>Antarctica North</code> and <code>Antarctica South</code> are fictional locations.
+If they do in the future exist, use this option add them prior to PSRule for Azure support.</p>
+</div>
 <h3 id="azure_containerapps_restrict_ingress">AZURE_CONTAINERAPPS_RESTRICT_INGRESS<a class="headerlink" href="#azure_containerapps_restrict_ingress" title="Permanent link">#</a></h3>
 <p>This configuration specifies whether if external ingress should be enabled or disabled.</p>
 <p>Syntax:</p>
-<div class="language-yaml highlight"><span class="filename">ps-rule.yaml</span><pre><span></span><code><span id="__span-30-1"><a id="__codelineno-30-1" name="__codelineno-30-1" href="#__codelineno-30-1"></a><span class="nt">configuration</span><span class="p">:</span>
-</span><span id="__span-30-2"><a id="__codelineno-30-2" name="__codelineno-30-2" href="#__codelineno-30-2"></a><span class="w">  </span><span class="nt">AZURE_CONTAINERAPPS_RESTRICT_INGRESS</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">boolean</span>
+<div class="language-yaml highlight"><span class="filename">ps-rule.yaml</span><pre><span></span><code><span id="__span-33-1"><a id="__codelineno-33-1" name="__codelineno-33-1" href="#__codelineno-33-1"></a><span class="nt">configuration</span><span class="p">:</span>
+</span><span id="__span-33-2"><a id="__codelineno-33-2" name="__codelineno-33-2" href="#__codelineno-33-2"></a><span class="w">  </span><span class="nt">AZURE_CONTAINERAPPS_RESTRICT_INGRESS</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">boolean</span>
 </span></code></pre></div>
 <p>Default:</p>
-<div class="language-yaml highlight"><span class="filename">ps-rule.yaml</span><pre><span></span><code><span id="__span-31-1"><a id="__codelineno-31-1" name="__codelineno-31-1" href="#__codelineno-31-1"></a><span class="c1"># YAML: The default AZURE_CONTAINERAPPS_RESTRICT_INGRESS configuration option</span>
-</span><span id="__span-31-2"><a id="__codelineno-31-2" name="__codelineno-31-2" href="#__codelineno-31-2"></a><span class="nt">configuration</span><span class="p">:</span>
-</span><span id="__span-31-3"><a id="__codelineno-31-3" name="__codelineno-31-3" href="#__codelineno-31-3"></a><span class="w">  </span><span class="nt">AZURE_CONTAINERAPPS_RESTRICT_INGRESS</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">false</span>
+<div class="language-yaml highlight"><span class="filename">ps-rule.yaml</span><pre><span></span><code><span id="__span-34-1"><a id="__codelineno-34-1" name="__codelineno-34-1" href="#__codelineno-34-1"></a><span class="c1"># YAML: The default AZURE_CONTAINERAPPS_RESTRICT_INGRESS configuration option</span>
+</span><span id="__span-34-2"><a id="__codelineno-34-2" name="__codelineno-34-2" href="#__codelineno-34-2"></a><span class="nt">configuration</span><span class="p">:</span>
+</span><span id="__span-34-3"><a id="__codelineno-34-3" name="__codelineno-34-3" href="#__codelineno-34-3"></a><span class="w">  </span><span class="nt">AZURE_CONTAINERAPPS_RESTRICT_INGRESS</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">false</span>
 </span></code></pre></div>
 <p>Example:</p>
-<div class="language-yaml highlight"><span class="filename">ps-rule.yaml</span><pre><span></span><code><span id="__span-32-1"><a id="__codelineno-32-1" name="__codelineno-32-1" href="#__codelineno-32-1"></a><span class="c1"># YAML: Set the AZURE_CONTAINERAPPS_RESTRICT_INGRESS configuration option to enabled</span>
-</span><span id="__span-32-2"><a id="__codelineno-32-2" name="__codelineno-32-2" href="#__codelineno-32-2"></a><span class="nt">configuration</span><span class="p">:</span>
-</span><span id="__span-32-3"><a id="__codelineno-32-3" name="__codelineno-32-3" href="#__codelineno-32-3"></a><span class="w">  </span><span class="nt">AZURE_CONTAINERAPPS_RESTRICT_INGRESS</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
+<div class="language-yaml highlight"><span class="filename">ps-rule.yaml</span><pre><span></span><code><span id="__span-35-1"><a id="__codelineno-35-1" name="__codelineno-35-1" href="#__codelineno-35-1"></a><span class="c1"># YAML: Set the AZURE_CONTAINERAPPS_RESTRICT_INGRESS configuration option to enabled</span>
+</span><span id="__span-35-2"><a id="__codelineno-35-2" name="__codelineno-35-2" href="#__codelineno-35-2"></a><span class="nt">configuration</span><span class="p">:</span>
+</span><span id="__span-35-3"><a id="__codelineno-35-3" name="__codelineno-35-3" href="#__codelineno-35-3"></a><span class="w">  </span><span class="nt">AZURE_CONTAINERAPPS_RESTRICT_INGRESS</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
 </span></code></pre></div>
 <h3 id="azure_cosmos_defender_per_account">AZURE_COSMOS_DEFENDER_PER_ACCOUNT<a class="headerlink" href="#azure_cosmos_defender_per_account" title="Permanent link">#</a></h3>
 <p>This configuration option enables validation for that each Cosmos DB account is associated with a Microsoft Defender for Cosmos DB resource level plan.
 Configure this option to enable the per account validation, which defaults to <code>false</code>.</p>
 <p>Syntax:</p>
-<div class="language-yaml highlight"><span class="filename">ps-rule.yaml</span><pre><span></span><code><span id="__span-33-1"><a id="__codelineno-33-1" name="__codelineno-33-1" href="#__codelineno-33-1"></a><span class="nt">configuration</span><span class="p">:</span>
-</span><span id="__span-33-2"><a id="__codelineno-33-2" name="__codelineno-33-2" href="#__codelineno-33-2"></a><span class="w">  </span><span class="nt">AZURE_COSMOS_DEFENDER_PER_ACCOUNT</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">boolean</span>
+<div class="language-yaml highlight"><span class="filename">ps-rule.yaml</span><pre><span></span><code><span id="__span-36-1"><a id="__codelineno-36-1" name="__codelineno-36-1" href="#__codelineno-36-1"></a><span class="nt">configuration</span><span class="p">:</span>
+</span><span id="__span-36-2"><a id="__codelineno-36-2" name="__codelineno-36-2" href="#__codelineno-36-2"></a><span class="w">  </span><span class="nt">AZURE_COSMOS_DEFENDER_PER_ACCOUNT</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">boolean</span>
 </span></code></pre></div>
 <p>Default:</p>
-<div class="language-yaml highlight"><span class="filename">ps-rule.yaml</span><pre><span></span><code><span id="__span-34-1"><a id="__codelineno-34-1" name="__codelineno-34-1" href="#__codelineno-34-1"></a><span class="c1"># YAML: The default AZURE_COSMOS_DEFENDER_PER_ACCOUNT configuration option</span>
-</span><span id="__span-34-2"><a id="__codelineno-34-2" name="__codelineno-34-2" href="#__codelineno-34-2"></a><span class="nt">configuration</span><span class="p">:</span>
-</span><span id="__span-34-3"><a id="__codelineno-34-3" name="__codelineno-34-3" href="#__codelineno-34-3"></a><span class="w">  </span><span class="nt">AZURE_COSMOS_DEFENDER_PER_ACCOUNT</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">false</span>
+<div class="language-yaml highlight"><span class="filename">ps-rule.yaml</span><pre><span></span><code><span id="__span-37-1"><a id="__codelineno-37-1" name="__codelineno-37-1" href="#__codelineno-37-1"></a><span class="c1"># YAML: The default AZURE_COSMOS_DEFENDER_PER_ACCOUNT configuration option</span>
+</span><span id="__span-37-2"><a id="__codelineno-37-2" name="__codelineno-37-2" href="#__codelineno-37-2"></a><span class="nt">configuration</span><span class="p">:</span>
+</span><span id="__span-37-3"><a id="__codelineno-37-3" name="__codelineno-37-3" href="#__codelineno-37-3"></a><span class="w">  </span><span class="nt">AZURE_COSMOS_DEFENDER_PER_ACCOUNT</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">false</span>
 </span></code></pre></div>
 <p>Example:</p>
-<div class="language-yaml highlight"><span class="filename">ps-rule.yaml</span><pre><span></span><code><span id="__span-35-1"><a id="__codelineno-35-1" name="__codelineno-35-1" href="#__codelineno-35-1"></a><span class="c1"># YAML: Set the AZURE_COSMOS_DEFENDER_PER_ACCOUNT configuration option to true</span>
-</span><span id="__span-35-2"><a id="__codelineno-35-2" name="__codelineno-35-2" href="#__codelineno-35-2"></a><span class="nt">configuration</span><span class="p">:</span>
-</span><span id="__span-35-3"><a id="__codelineno-35-3" name="__codelineno-35-3" href="#__codelineno-35-3"></a><span class="w">  </span><span class="nt">AZURE_COSMOS_DEFENDER_PER_ACCOUNT</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
+<div class="language-yaml highlight"><span class="filename">ps-rule.yaml</span><pre><span></span><code><span id="__span-38-1"><a id="__codelineno-38-1" name="__codelineno-38-1" href="#__codelineno-38-1"></a><span class="c1"># YAML: Set the AZURE_COSMOS_DEFENDER_PER_ACCOUNT configuration option to true</span>
+</span><span id="__span-38-2"><a id="__codelineno-38-2" name="__codelineno-38-2" href="#__codelineno-38-2"></a><span class="nt">configuration</span><span class="p">:</span>
+</span><span id="__span-38-3"><a id="__codelineno-38-3" name="__codelineno-38-3" href="#__codelineno-38-3"></a><span class="w">  </span><span class="nt">AZURE_COSMOS_DEFENDER_PER_ACCOUNT</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
 </span></code></pre></div>
 <h3 id="azure_deployment_nonsensitive_parameter_names">AZURE_DEPLOYMENT_NONSENSITIVE_PARAMETER_NAMES<a class="headerlink" href="#azure_deployment_nonsensitive_parameter_names" title="Permanent link">#</a></h3>
 <p><span class="badge"><span class="badge__icon"><a href="../../CHANGELOG-v1/#v1311" title="Minimum version"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M11.75 1a.75.75 0 0 1 .75.75V4h6.532c.42 0 .826.15 1.143.425l3.187 2.75a1.75 1.75 0 0 1 0 2.65l-3.187 2.75a1.75 1.75 0 0 1-1.143.425H12.5v9.25a.75.75 0 0 1-1.5 0V13H3.75A1.75 1.75 0 0 1 2 11.25v-5.5C2 4.783 2.784 4 3.75 4H11V1.75a.75.75 0 0 1 .75-.75m7.282 4.5H3.75a.25.25 0 0 0-.25.25v5.5c0 .138.112.25.25.25h15.282c.06 0 .118-.021.163-.06l3.188-2.75a.248.248 0 0 0 0-.38l-3.188-2.75a.25.25 0 0 0-.163-.06"/></svg></span></a></span><span class="badge__text"><a href="../../CHANGELOG-v1/#v1311">v1.31.1</a></span></span>
@@ -14877,19 +14936,19 @@ Configure this option to enable the per account validation, which defaults to <c
 By setting this configuration option, any parameters names specified are not considered sensitive.</p>
 <p>By default, <code>AZURE_DEPLOYMENT_NONSENSITIVE_PARAMETER_NAMES</code> is not configured.</p>
 <p>Syntax:</p>
-<div class="language-yaml highlight"><span class="filename">ps-rule.yaml</span><pre><span></span><code><span id="__span-36-1"><a id="__codelineno-36-1" name="__codelineno-36-1" href="#__codelineno-36-1"></a><span class="nt">configuration</span><span class="p">:</span>
-</span><span id="__span-36-2"><a id="__codelineno-36-2" name="__codelineno-36-2" href="#__codelineno-36-2"></a><span class="w">  </span><span class="nt">AZURE_DEPLOYMENT_NONSENSITIVE_PARAMETER_NAMES</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">array</span>
+<div class="language-yaml highlight"><span class="filename">ps-rule.yaml</span><pre><span></span><code><span id="__span-39-1"><a id="__codelineno-39-1" name="__codelineno-39-1" href="#__codelineno-39-1"></a><span class="nt">configuration</span><span class="p">:</span>
+</span><span id="__span-39-2"><a id="__codelineno-39-2" name="__codelineno-39-2" href="#__codelineno-39-2"></a><span class="w">  </span><span class="nt">AZURE_DEPLOYMENT_NONSENSITIVE_PARAMETER_NAMES</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">array</span>
 </span></code></pre></div>
 <p>Default:</p>
-<div class="language-yaml highlight"><span class="filename">ps-rule.yaml</span><pre><span></span><code><span id="__span-37-1"><a id="__codelineno-37-1" name="__codelineno-37-1" href="#__codelineno-37-1"></a><span class="c1"># YAML: The default AZURE_DEPLOYMENT_NONSENSITIVE_PARAMETER_NAMES configuration option</span>
-</span><span id="__span-37-2"><a id="__codelineno-37-2" name="__codelineno-37-2" href="#__codelineno-37-2"></a><span class="nt">configuration</span><span class="p">:</span>
-</span><span id="__span-37-3"><a id="__codelineno-37-3" name="__codelineno-37-3" href="#__codelineno-37-3"></a><span class="w">  </span><span class="nt">AZURE_DEPLOYMENT_NONSENSITIVE_PARAMETER_NAMES</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">[]</span>
+<div class="language-yaml highlight"><span class="filename">ps-rule.yaml</span><pre><span></span><code><span id="__span-40-1"><a id="__codelineno-40-1" name="__codelineno-40-1" href="#__codelineno-40-1"></a><span class="c1"># YAML: The default AZURE_DEPLOYMENT_NONSENSITIVE_PARAMETER_NAMES configuration option</span>
+</span><span id="__span-40-2"><a id="__codelineno-40-2" name="__codelineno-40-2" href="#__codelineno-40-2"></a><span class="nt">configuration</span><span class="p">:</span>
+</span><span id="__span-40-3"><a id="__codelineno-40-3" name="__codelineno-40-3" href="#__codelineno-40-3"></a><span class="w">  </span><span class="nt">AZURE_DEPLOYMENT_NONSENSITIVE_PARAMETER_NAMES</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">[]</span>
 </span></code></pre></div>
 <p>Example:</p>
-<div class="language-yaml highlight"><span class="filename">ps-rule.yaml</span><pre><span></span><code><span id="__span-38-1"><a id="__codelineno-38-1" name="__codelineno-38-1" href="#__codelineno-38-1"></a><span class="c1"># YAML: Set the AZURE_DEPLOYMENT_NONSENSITIVE_PARAMETER_NAMES configuration option to enabled</span>
-</span><span id="__span-38-2"><a id="__codelineno-38-2" name="__codelineno-38-2" href="#__codelineno-38-2"></a><span class="nt">configuration</span><span class="p">:</span>
-</span><span id="__span-38-3"><a id="__codelineno-38-3" name="__codelineno-38-3" href="#__codelineno-38-3"></a><span class="w">  </span><span class="nt">AZURE_DEPLOYMENT_NONSENSITIVE_PARAMETER_NAMES</span><span class="p">:</span>
-</span><span id="__span-38-4"><a id="__codelineno-38-4" name="__codelineno-38-4" href="#__codelineno-38-4"></a><span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">notSecret</span>
+<div class="language-yaml highlight"><span class="filename">ps-rule.yaml</span><pre><span></span><code><span id="__span-41-1"><a id="__codelineno-41-1" name="__codelineno-41-1" href="#__codelineno-41-1"></a><span class="c1"># YAML: Set the AZURE_DEPLOYMENT_NONSENSITIVE_PARAMETER_NAMES configuration option to enabled</span>
+</span><span id="__span-41-2"><a id="__codelineno-41-2" name="__codelineno-41-2" href="#__codelineno-41-2"></a><span class="nt">configuration</span><span class="p">:</span>
+</span><span id="__span-41-3"><a id="__codelineno-41-3" name="__codelineno-41-3" href="#__codelineno-41-3"></a><span class="w">  </span><span class="nt">AZURE_DEPLOYMENT_NONSENSITIVE_PARAMETER_NAMES</span><span class="p">:</span>
+</span><span id="__span-41-4"><a id="__codelineno-41-4" name="__codelineno-41-4" href="#__codelineno-41-4"></a><span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">notSecret</span>
 </span></code></pre></div>
 <h3 id="azure_deployment_sensitive_property_names">AZURE_DEPLOYMENT_SENSITIVE_PROPERTY_NAMES<a class="headerlink" href="#azure_deployment_sensitive_property_names" title="Permanent link">#</a></h3>
 <p><span class="badge"><span class="badge__icon"><a href="../../CHANGELOG-v1/#v1200" title="Minimum version"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M11.75 1a.75.75 0 0 1 .75.75V4h6.532c.42 0 .826.15 1.143.425l3.187 2.75a1.75 1.75 0 0 1 0 2.65l-3.187 2.75a1.75 1.75 0 0 1-1.143.425H12.5v9.25a.75.75 0 0 1-1.5 0V13H3.75A1.75 1.75 0 0 1 2 11.25v-5.5C2 4.783 2.784 4 3.75 4H11V1.75a.75.75 0 0 1 .75-.75m7.282 4.5H3.75a.25.25 0 0 0-.25.25v5.5c0 .138.112.25.25.25h15.282c.06 0 .118-.021.163-.06l3.188-2.75a.248.248 0 0 0 0-.38l-3.188-2.75a.25.25 0 0 0-.163-.06"/></svg></span></a></span><span class="badge__text"><a href="../../CHANGELOG-v1/#v1200">v1.20.0</a></span></span>
@@ -14897,25 +14956,25 @@ By setting this configuration option, any parameters names specified are not con
 <p>This configuration identifies potentially sensitive properties that should not use hardcoded values.
 By setting this configuration option, properties with the specified names will generate a failure when a hardcoded value is detected.</p>
 <p>Syntax:</p>
-<div class="language-yaml highlight"><span class="filename">ps-rule.yaml</span><pre><span></span><code><span id="__span-39-1"><a id="__codelineno-39-1" name="__codelineno-39-1" href="#__codelineno-39-1"></a><span class="nt">configuration</span><span class="p">:</span>
-</span><span id="__span-39-2"><a id="__codelineno-39-2" name="__codelineno-39-2" href="#__codelineno-39-2"></a><span class="w">  </span><span class="nt">AZURE_DEPLOYMENT_SENSITIVE_PROPERTY_NAMES</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">array</span>
+<div class="language-yaml highlight"><span class="filename">ps-rule.yaml</span><pre><span></span><code><span id="__span-42-1"><a id="__codelineno-42-1" name="__codelineno-42-1" href="#__codelineno-42-1"></a><span class="nt">configuration</span><span class="p">:</span>
+</span><span id="__span-42-2"><a id="__codelineno-42-2" name="__codelineno-42-2" href="#__codelineno-42-2"></a><span class="w">  </span><span class="nt">AZURE_DEPLOYMENT_SENSITIVE_PROPERTY_NAMES</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">array</span>
 </span></code></pre></div>
 <p>Default:</p>
-<div class="language-yaml highlight"><span class="filename">ps-rule.yaml</span><pre><span></span><code><span id="__span-40-1"><a id="__codelineno-40-1" name="__codelineno-40-1" href="#__codelineno-40-1"></a><span class="c1"># YAML: The default AZURE_DEPLOYMENT_SENSITIVE_PROPERTY_NAMES configuration option</span>
-</span><span id="__span-40-2"><a id="__codelineno-40-2" name="__codelineno-40-2" href="#__codelineno-40-2"></a><span class="nt">configuration</span><span class="p">:</span>
-</span><span id="__span-40-3"><a id="__codelineno-40-3" name="__codelineno-40-3" href="#__codelineno-40-3"></a><span class="w">  </span><span class="nt">AZURE_DEPLOYMENT_SENSITIVE_PROPERTY_NAMES</span><span class="p">:</span>
-</span><span id="__span-40-4"><a id="__codelineno-40-4" name="__codelineno-40-4" href="#__codelineno-40-4"></a><span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">adminUsername</span>
-</span><span id="__span-40-5"><a id="__codelineno-40-5" name="__codelineno-40-5" href="#__codelineno-40-5"></a><span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">administratorLogin</span>
-</span><span id="__span-40-6"><a id="__codelineno-40-6" name="__codelineno-40-6" href="#__codelineno-40-6"></a><span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">administratorLoginPassword</span>
+<div class="language-yaml highlight"><span class="filename">ps-rule.yaml</span><pre><span></span><code><span id="__span-43-1"><a id="__codelineno-43-1" name="__codelineno-43-1" href="#__codelineno-43-1"></a><span class="c1"># YAML: The default AZURE_DEPLOYMENT_SENSITIVE_PROPERTY_NAMES configuration option</span>
+</span><span id="__span-43-2"><a id="__codelineno-43-2" name="__codelineno-43-2" href="#__codelineno-43-2"></a><span class="nt">configuration</span><span class="p">:</span>
+</span><span id="__span-43-3"><a id="__codelineno-43-3" name="__codelineno-43-3" href="#__codelineno-43-3"></a><span class="w">  </span><span class="nt">AZURE_DEPLOYMENT_SENSITIVE_PROPERTY_NAMES</span><span class="p">:</span>
+</span><span id="__span-43-4"><a id="__codelineno-43-4" name="__codelineno-43-4" href="#__codelineno-43-4"></a><span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">adminUsername</span>
+</span><span id="__span-43-5"><a id="__codelineno-43-5" name="__codelineno-43-5" href="#__codelineno-43-5"></a><span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">administratorLogin</span>
+</span><span id="__span-43-6"><a id="__codelineno-43-6" name="__codelineno-43-6" href="#__codelineno-43-6"></a><span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">administratorLoginPassword</span>
 </span></code></pre></div>
 <p>Example:</p>
-<div class="language-yaml highlight"><span class="filename">ps-rule.yaml</span><pre><span></span><code><span id="__span-41-1"><a id="__codelineno-41-1" name="__codelineno-41-1" href="#__codelineno-41-1"></a><span class="c1"># YAML: Set the AZURE_DEPLOYMENT_SENSITIVE_PROPERTY_NAMES configuration option to enabled</span>
-</span><span id="__span-41-2"><a id="__codelineno-41-2" name="__codelineno-41-2" href="#__codelineno-41-2"></a><span class="nt">configuration</span><span class="p">:</span>
-</span><span id="__span-41-3"><a id="__codelineno-41-3" name="__codelineno-41-3" href="#__codelineno-41-3"></a><span class="w">  </span><span class="nt">AZURE_DEPLOYMENT_SENSITIVE_PROPERTY_NAMES</span><span class="p">:</span>
-</span><span id="__span-41-4"><a id="__codelineno-41-4" name="__codelineno-41-4" href="#__codelineno-41-4"></a><span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">adminUsername</span>
-</span><span id="__span-41-5"><a id="__codelineno-41-5" name="__codelineno-41-5" href="#__codelineno-41-5"></a><span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">administratorLogin</span>
-</span><span id="__span-41-6"><a id="__codelineno-41-6" name="__codelineno-41-6" href="#__codelineno-41-6"></a><span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">administratorLoginPassword</span>
-</span><span id="__span-41-7"><a id="__codelineno-41-7" name="__codelineno-41-7" href="#__codelineno-41-7"></a><span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">loginName</span>
+<div class="language-yaml highlight"><span class="filename">ps-rule.yaml</span><pre><span></span><code><span id="__span-44-1"><a id="__codelineno-44-1" name="__codelineno-44-1" href="#__codelineno-44-1"></a><span class="c1"># YAML: Set the AZURE_DEPLOYMENT_SENSITIVE_PROPERTY_NAMES configuration option to enabled</span>
+</span><span id="__span-44-2"><a id="__codelineno-44-2" name="__codelineno-44-2" href="#__codelineno-44-2"></a><span class="nt">configuration</span><span class="p">:</span>
+</span><span id="__span-44-3"><a id="__codelineno-44-3" name="__codelineno-44-3" href="#__codelineno-44-3"></a><span class="w">  </span><span class="nt">AZURE_DEPLOYMENT_SENSITIVE_PROPERTY_NAMES</span><span class="p">:</span>
+</span><span id="__span-44-4"><a id="__codelineno-44-4" name="__codelineno-44-4" href="#__codelineno-44-4"></a><span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">adminUsername</span>
+</span><span id="__span-44-5"><a id="__codelineno-44-5" name="__codelineno-44-5" href="#__codelineno-44-5"></a><span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">administratorLogin</span>
+</span><span id="__span-44-6"><a id="__codelineno-44-6" name="__codelineno-44-6" href="#__codelineno-44-6"></a><span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">administratorLoginPassword</span>
+</span><span id="__span-44-7"><a id="__codelineno-44-7" name="__codelineno-44-7" href="#__codelineno-44-7"></a><span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">loginName</span>
 </span></code></pre></div>
 <h3 id="azure_firewall_is_zonal">AZURE_FIREWALL_IS_ZONAL<a class="headerlink" href="#azure_firewall_is_zonal" title="Permanent link">#</a></h3>
 <p><span class="badge"><span class="badge__icon"><a href="../../CHANGELOG-v1/#v1390" title="Minimum version"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M11.75 1a.75.75 0 0 1 .75.75V4h6.532c.42 0 .826.15 1.143.425l3.187 2.75a1.75 1.75 0 0 1 0 2.65l-3.187 2.75a1.75 1.75 0 0 1-1.143.425H12.5v9.25a.75.75 0 0 1-1.5 0V13H3.75A1.75 1.75 0 0 1 2 11.25v-5.5C2 4.783 2.784 4 3.75 4H11V1.75a.75.75 0 0 1 .75-.75m7.282 4.5H3.75a.25.25 0 0 0-.25.25v5.5c0 .138.112.25.25.25h15.282c.06 0 .118-.021.163-.06l3.188-2.75a.248.248 0 0 0 0-.38l-3.188-2.75a.25.25 0 0 0-.163-.06"/></svg></span></a></span><span class="badge__text"><a href="../../CHANGELOG-v1/#v1390">v1.39.0</a></span></span>
@@ -14925,18 +14984,18 @@ Some specific configurations may require Azure Firewall deployed zonal.
 If you environment requires a zonal configuration set this to <code>true</code> which will toggle rules that apply to this configuration.
 By default, <code>AZURE_FIREWALL_IS_ZONAL</code> is set to <code>false</code>.</p>
 <p>Syntax:</p>
-<div class="language-yaml highlight"><span class="filename">ps-rule.yaml</span><pre><span></span><code><span id="__span-42-1"><a id="__codelineno-42-1" name="__codelineno-42-1" href="#__codelineno-42-1"></a><span class="nt">configuration</span><span class="p">:</span>
-</span><span id="__span-42-2"><a id="__codelineno-42-2" name="__codelineno-42-2" href="#__codelineno-42-2"></a><span class="w">  </span><span class="nt">AZURE_FIREWALL_IS_ZONAL</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">boolean</span>
+<div class="language-yaml highlight"><span class="filename">ps-rule.yaml</span><pre><span></span><code><span id="__span-45-1"><a id="__codelineno-45-1" name="__codelineno-45-1" href="#__codelineno-45-1"></a><span class="nt">configuration</span><span class="p">:</span>
+</span><span id="__span-45-2"><a id="__codelineno-45-2" name="__codelineno-45-2" href="#__codelineno-45-2"></a><span class="w">  </span><span class="nt">AZURE_FIREWALL_IS_ZONAL</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">boolean</span>
 </span></code></pre></div>
 <p>Default:</p>
-<div class="language-yaml highlight"><span class="filename">ps-rule.yaml</span><pre><span></span><code><span id="__span-43-1"><a id="__codelineno-43-1" name="__codelineno-43-1" href="#__codelineno-43-1"></a><span class="c1"># YAML: The default AZURE_FIREWALL_IS_ZONAL configuration option</span>
-</span><span id="__span-43-2"><a id="__codelineno-43-2" name="__codelineno-43-2" href="#__codelineno-43-2"></a><span class="nt">configuration</span><span class="p">:</span>
-</span><span id="__span-43-3"><a id="__codelineno-43-3" name="__codelineno-43-3" href="#__codelineno-43-3"></a><span class="w">  </span><span class="nt">AZURE_FIREWALL_IS_ZONAL</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">false</span>
+<div class="language-yaml highlight"><span class="filename">ps-rule.yaml</span><pre><span></span><code><span id="__span-46-1"><a id="__codelineno-46-1" name="__codelineno-46-1" href="#__codelineno-46-1"></a><span class="c1"># YAML: The default AZURE_FIREWALL_IS_ZONAL configuration option</span>
+</span><span id="__span-46-2"><a id="__codelineno-46-2" name="__codelineno-46-2" href="#__codelineno-46-2"></a><span class="nt">configuration</span><span class="p">:</span>
+</span><span id="__span-46-3"><a id="__codelineno-46-3" name="__codelineno-46-3" href="#__codelineno-46-3"></a><span class="w">  </span><span class="nt">AZURE_FIREWALL_IS_ZONAL</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">false</span>
 </span></code></pre></div>
 <p>Example:</p>
-<div class="language-yaml highlight"><span class="filename">ps-rule.yaml</span><pre><span></span><code><span id="__span-44-1"><a id="__codelineno-44-1" name="__codelineno-44-1" href="#__codelineno-44-1"></a><span class="c1"># YAML: Set the AZURE_FIREWALL_IS_ZONAL configuration option to true</span>
-</span><span id="__span-44-2"><a id="__codelineno-44-2" name="__codelineno-44-2" href="#__codelineno-44-2"></a><span class="nt">configuration</span><span class="p">:</span>
-</span><span id="__span-44-3"><a id="__codelineno-44-3" name="__codelineno-44-3" href="#__codelineno-44-3"></a><span class="w">  </span><span class="nt">AZURE_FIREWALL_IS_ZONAL</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
+<div class="language-yaml highlight"><span class="filename">ps-rule.yaml</span><pre><span></span><code><span id="__span-47-1"><a id="__codelineno-47-1" name="__codelineno-47-1" href="#__codelineno-47-1"></a><span class="c1"># YAML: Set the AZURE_FIREWALL_IS_ZONAL configuration option to true</span>
+</span><span id="__span-47-2"><a id="__codelineno-47-2" name="__codelineno-47-2" href="#__codelineno-47-2"></a><span class="nt">configuration</span><span class="p">:</span>
+</span><span id="__span-47-3"><a id="__codelineno-47-3" name="__codelineno-47-3" href="#__codelineno-47-3"></a><span class="w">  </span><span class="nt">AZURE_FIREWALL_IS_ZONAL</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
 </span></code></pre></div>
 <h3 id="azure_resource_allowed_locations">AZURE_RESOURCE_ALLOWED_LOCATIONS<a class="headerlink" href="#azure_resource_allowed_locations" title="Permanent link">#</a></h3>
 <p><span class="badge"><span class="badge__icon"><a href="../../CHANGELOG-v1/#v1300" title="Minimum version"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M11.75 1a.75.75 0 0 1 .75.75V4h6.532c.42 0 .826.15 1.143.425l3.187 2.75a1.75 1.75 0 0 1 0 2.65l-3.187 2.75a1.75 1.75 0 0 1-1.143.425H12.5v9.25a.75.75 0 0 1-1.5 0V13H3.75A1.75 1.75 0 0 1 2 11.25v-5.5C2 4.783 2.784 4 3.75 4H11V1.75a.75.75 0 0 1 .75-.75m7.282 4.5H3.75a.25.25 0 0 0-.25.25v5.5c0 .138.112.25.25.25h15.282c.06 0 .118-.021.163-.06l3.188-2.75a.248.248 0 0 0 0-.38l-3.188-2.75a.25.25 0 0 0-.163-.06"/></svg></span></a></span><span class="badge__text"><a href="../../CHANGELOG-v1/#v1300">v1.30.0</a></span></span>
@@ -14945,27 +15004,27 @@ By default, <code>AZURE_FIREWALL_IS_ZONAL</code> is set to <code>false</code>.</
 Rules that check the location of Azure resources fail when a resource or resource group is created in a different region.</p>
 <p>By default, <code>AZURE_RESOURCE_ALLOWED_LOCATIONS</code> is not configured.</p>
 <p>Syntax:</p>
-<div class="language-yaml highlight"><span class="filename">ps-rule.yaml</span><pre><span></span><code><span id="__span-45-1"><a id="__codelineno-45-1" name="__codelineno-45-1" href="#__codelineno-45-1"></a><span class="nt">configuration</span><span class="p">:</span>
-</span><span id="__span-45-2"><a id="__codelineno-45-2" name="__codelineno-45-2" href="#__codelineno-45-2"></a><span class="w">  </span><span class="nt">AZURE_RESOURCE_ALLOWED_LOCATIONS</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">array</span><span class="w"> </span><span class="c1"># An array of regions</span>
+<div class="language-yaml highlight"><span class="filename">ps-rule.yaml</span><pre><span></span><code><span id="__span-48-1"><a id="__codelineno-48-1" name="__codelineno-48-1" href="#__codelineno-48-1"></a><span class="nt">configuration</span><span class="p">:</span>
+</span><span id="__span-48-2"><a id="__codelineno-48-2" name="__codelineno-48-2" href="#__codelineno-48-2"></a><span class="w">  </span><span class="nt">AZURE_RESOURCE_ALLOWED_LOCATIONS</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">array</span><span class="w"> </span><span class="c1"># An array of regions</span>
 </span></code></pre></div>
 <p>Default:</p>
-<div class="language-yaml highlight"><pre><span></span><code><span id="__span-46-1"><a id="__codelineno-46-1" name="__codelineno-46-1" href="#__codelineno-46-1"></a><span class="c1"># YAML: The default Azure_AllowedRegions configuration option</span>
-</span><span id="__span-46-2"><a id="__codelineno-46-2" name="__codelineno-46-2" href="#__codelineno-46-2"></a><span class="nt">configuration</span><span class="p">:</span>
-</span><span id="__span-46-3"><a id="__codelineno-46-3" name="__codelineno-46-3" href="#__codelineno-46-3"></a><span class="w">  </span><span class="nt">AZURE_RESOURCE_ALLOWED_LOCATIONS</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">[]</span>
+<div class="language-yaml highlight"><pre><span></span><code><span id="__span-49-1"><a id="__codelineno-49-1" name="__codelineno-49-1" href="#__codelineno-49-1"></a><span class="c1"># YAML: The default Azure_AllowedRegions configuration option</span>
+</span><span id="__span-49-2"><a id="__codelineno-49-2" name="__codelineno-49-2" href="#__codelineno-49-2"></a><span class="nt">configuration</span><span class="p">:</span>
+</span><span id="__span-49-3"><a id="__codelineno-49-3" name="__codelineno-49-3" href="#__codelineno-49-3"></a><span class="w">  </span><span class="nt">AZURE_RESOURCE_ALLOWED_LOCATIONS</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">[]</span>
 </span></code></pre></div>
 <p>Example:</p>
-<div class="language-yaml highlight"><span class="filename">ps-rule.yaml</span><pre><span></span><code><span id="__span-47-1"><a id="__codelineno-47-1" name="__codelineno-47-1" href="#__codelineno-47-1"></a><span class="c1"># YAML: Set the AZURE_RESOURCE_ALLOWED_LOCATIONS configuration option to Australia East, Australia South East</span>
-</span><span id="__span-47-2"><a id="__codelineno-47-2" name="__codelineno-47-2" href="#__codelineno-47-2"></a><span class="nt">configuration</span><span class="p">:</span>
-</span><span id="__span-47-3"><a id="__codelineno-47-3" name="__codelineno-47-3" href="#__codelineno-47-3"></a><span class="w">  </span><span class="nt">AZURE_RESOURCE_ALLOWED_LOCATIONS</span><span class="p">:</span>
-</span><span id="__span-47-4"><a id="__codelineno-47-4" name="__codelineno-47-4" href="#__codelineno-47-4"></a><span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">australiaeast</span>
-</span><span id="__span-47-5"><a id="__codelineno-47-5" name="__codelineno-47-5" href="#__codelineno-47-5"></a><span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">australiasoutheast</span>
+<div class="language-yaml highlight"><span class="filename">ps-rule.yaml</span><pre><span></span><code><span id="__span-50-1"><a id="__codelineno-50-1" name="__codelineno-50-1" href="#__codelineno-50-1"></a><span class="c1"># YAML: Set the AZURE_RESOURCE_ALLOWED_LOCATIONS configuration option to Australia East, Australia South East</span>
+</span><span id="__span-50-2"><a id="__codelineno-50-2" name="__codelineno-50-2" href="#__codelineno-50-2"></a><span class="nt">configuration</span><span class="p">:</span>
+</span><span id="__span-50-3"><a id="__codelineno-50-3" name="__codelineno-50-3" href="#__codelineno-50-3"></a><span class="w">  </span><span class="nt">AZURE_RESOURCE_ALLOWED_LOCATIONS</span><span class="p">:</span>
+</span><span id="__span-50-4"><a id="__codelineno-50-4" name="__codelineno-50-4" href="#__codelineno-50-4"></a><span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">australiaeast</span>
+</span><span id="__span-50-5"><a id="__codelineno-50-5" name="__codelineno-50-5" href="#__codelineno-50-5"></a><span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">australiasoutheast</span>
 </span></code></pre></div>
 <p>If you configure the <code>AZURE_RESOURCE_ALLOWED_LOCATIONS</code> configuration value,
 also consider setting <code>AZURE_RESOURCE_GROUP</code> the configuration value to when resources use the location of the resource group.</p>
 <p>For example:</p>
-<div class="language-yaml highlight"><span class="filename">ps-rule.yaml</span><pre><span></span><code><span id="__span-48-1"><a id="__codelineno-48-1" name="__codelineno-48-1" href="#__codelineno-48-1"></a><span class="nt">configuration</span><span class="p">:</span>
-</span><span id="__span-48-2"><a id="__codelineno-48-2" name="__codelineno-48-2" href="#__codelineno-48-2"></a><span class="w">  </span><span class="nt">AZURE_RESOURCE_GROUP</span><span class="p">:</span>
-</span><span id="__span-48-3"><a id="__codelineno-48-3" name="__codelineno-48-3" href="#__codelineno-48-3"></a><span class="w">    </span><span class="nt">location</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">australiaeast</span>
+<div class="language-yaml highlight"><span class="filename">ps-rule.yaml</span><pre><span></span><code><span id="__span-51-1"><a id="__codelineno-51-1" name="__codelineno-51-1" href="#__codelineno-51-1"></a><span class="nt">configuration</span><span class="p">:</span>
+</span><span id="__span-51-2"><a id="__codelineno-51-2" name="__codelineno-51-2" href="#__codelineno-51-2"></a><span class="w">  </span><span class="nt">AZURE_RESOURCE_GROUP</span><span class="p">:</span>
+</span><span id="__span-51-3"><a id="__codelineno-51-3" name="__codelineno-51-3" href="#__codelineno-51-3"></a><span class="w">    </span><span class="nt">location</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">australiaeast</span>
 </span></code></pre></div>
 <h3 id="azure_apim_minimum_certificate_lifetime">AZURE_APIM_MINIMUM_CERTIFICATE_LIFETIME<a class="headerlink" href="#azure_apim_minimum_certificate_lifetime" title="Permanent link">#</a></h3>
 <p><span class="badge"><span class="badge__icon"><a href="../../CHANGELOG-v1/#v1390" title="Minimum version"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M11.75 1a.75.75 0 0 1 .75.75V4h6.532c.42 0 .826.15 1.143.425l3.187 2.75a1.75 1.75 0 0 1 0 2.65l-3.187 2.75a1.75 1.75 0 0 1-1.143.425H12.5v9.25a.75.75 0 0 1-1.5 0V13H3.75A1.75 1.75 0 0 1 2 11.25v-5.5C2 4.783 2.784 4 3.75 4H11V1.75a.75.75 0 0 1 .75-.75m7.282 4.5H3.75a.25.25 0 0 0-.25.25v5.5c0 .138.112.25.25.25h15.282c.06 0 .118-.021.163-.06l3.188-2.75a.248.248 0 0 0 0-.38l-3.188-2.75a.25.25 0 0 0-.163-.06"/></svg></span></a></span><span class="badge__text"><a href="../../CHANGELOG-v1/#v1390">v1.39.0</a></span></span>
@@ -14973,18 +15032,18 @@ also consider setting <code>AZURE_RESOURCE_GROUP</code> the configuration value 
 <p>This configuration option determines the minimum number of days allowed before certificate expiry.
 Rules that check certificate lifetime fail when the days remaining before expiry drop below this number.</p>
 <p>Syntax:</p>
-<div class="language-yaml highlight"><span class="filename">ps-rule.yaml</span><pre><span></span><code><span id="__span-49-1"><a id="__codelineno-49-1" name="__codelineno-49-1" href="#__codelineno-49-1"></a><span class="nt">configuration</span><span class="p">:</span>
-</span><span id="__span-49-2"><a id="__codelineno-49-2" name="__codelineno-49-2" href="#__codelineno-49-2"></a><span class="w">  </span><span class="nt">AZURE_APIM_MINIMUM_CERTIFICATE_LIFETIME</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">integer</span>
+<div class="language-yaml highlight"><span class="filename">ps-rule.yaml</span><pre><span></span><code><span id="__span-52-1"><a id="__codelineno-52-1" name="__codelineno-52-1" href="#__codelineno-52-1"></a><span class="nt">configuration</span><span class="p">:</span>
+</span><span id="__span-52-2"><a id="__codelineno-52-2" name="__codelineno-52-2" href="#__codelineno-52-2"></a><span class="w">  </span><span class="nt">AZURE_APIM_MINIMUM_CERTIFICATE_LIFETIME</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">integer</span>
 </span></code></pre></div>
 <p>Default:</p>
-<div class="language-yaml highlight"><pre><span></span><code><span id="__span-50-1"><a id="__codelineno-50-1" name="__codelineno-50-1" href="#__codelineno-50-1"></a><span class="c1"># YAML: The default AZURE_APIM_MINIMUM_CERTIFICATE_LIFETIME configuration option</span>
-</span><span id="__span-50-2"><a id="__codelineno-50-2" name="__codelineno-50-2" href="#__codelineno-50-2"></a><span class="nt">configuration</span><span class="p">:</span>
-</span><span id="__span-50-3"><a id="__codelineno-50-3" name="__codelineno-50-3" href="#__codelineno-50-3"></a><span class="w">  </span><span class="nt">AZURE_APIM_MINIMUM_CERTIFICATE_LIFETIME</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">30</span>
+<div class="language-yaml highlight"><pre><span></span><code><span id="__span-53-1"><a id="__codelineno-53-1" name="__codelineno-53-1" href="#__codelineno-53-1"></a><span class="c1"># YAML: The default AZURE_APIM_MINIMUM_CERTIFICATE_LIFETIME configuration option</span>
+</span><span id="__span-53-2"><a id="__codelineno-53-2" name="__codelineno-53-2" href="#__codelineno-53-2"></a><span class="nt">configuration</span><span class="p">:</span>
+</span><span id="__span-53-3"><a id="__codelineno-53-3" name="__codelineno-53-3" href="#__codelineno-53-3"></a><span class="w">  </span><span class="nt">AZURE_APIM_MINIMUM_CERTIFICATE_LIFETIME</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">30</span>
 </span></code></pre></div>
 <p>Example:</p>
-<div class="language-yaml highlight"><span class="filename">ps-rule.yaml</span><pre><span></span><code><span id="__span-51-1"><a id="__codelineno-51-1" name="__codelineno-51-1" href="#__codelineno-51-1"></a><span class="c1"># YAML: Set the AZURE_APIM_MINIMUM_CERTIFICATE_LIFETIME configuration option to 90</span>
-</span><span id="__span-51-2"><a id="__codelineno-51-2" name="__codelineno-51-2" href="#__codelineno-51-2"></a><span class="nt">configuration</span><span class="p">:</span>
-</span><span id="__span-51-3"><a id="__codelineno-51-3" name="__codelineno-51-3" href="#__codelineno-51-3"></a><span class="w">  </span><span class="nt">AZURE_APIM_MINIMUM_CERTIFICATE_LIFETIME</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">90</span>
+<div class="language-yaml highlight"><span class="filename">ps-rule.yaml</span><pre><span></span><code><span id="__span-54-1"><a id="__codelineno-54-1" name="__codelineno-54-1" href="#__codelineno-54-1"></a><span class="c1"># YAML: Set the AZURE_APIM_MINIMUM_CERTIFICATE_LIFETIME configuration option to 90</span>
+</span><span id="__span-54-2"><a id="__codelineno-54-2" name="__codelineno-54-2" href="#__codelineno-54-2"></a><span class="nt">configuration</span><span class="p">:</span>
+</span><span id="__span-54-3"><a id="__codelineno-54-3" name="__codelineno-54-3" href="#__codelineno-54-3"></a><span class="w">  </span><span class="nt">AZURE_APIM_MINIMUM_CERTIFICATE_LIFETIME</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">90</span>
 </span></code></pre></div>
 <h3 id="azure_linux_os_offers">AZURE_LINUX_OS_OFFERS<a class="headerlink" href="#azure_linux_os_offers" title="Permanent link">#</a></h3>
 <p><span class="badge"><span class="badge__icon"><a href="../../CHANGELOG-v1/#v1200" title="Minimum version"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M11.75 1a.75.75 0 0 1 .75.75V4h6.532c.42 0 .826.15 1.143.425l3.187 2.75a1.75 1.75 0 0 1 0 2.65l-3.187 2.75a1.75 1.75 0 0 1-1.143.425H12.5v9.25a.75.75 0 0 1-1.5 0V13H3.75A1.75 1.75 0 0 1 2 11.25v-5.5C2 4.783 2.784 4 3.75 4H11V1.75a.75.75 0 0 1 .75-.75m7.282 4.5H3.75a.25.25 0 0 0-.25.25v5.5c0 .138.112.25.25.25h15.282c.06 0 .118-.021.163-.06l3.188-2.75a.248.248 0 0 0 0-.38l-3.188-2.75a.25.25 0 0 0-.163-.06"/></svg></span></a></span><span class="badge__text"><a href="../../CHANGELOG-v1/#v1200">v1.20.0</a></span></span></p>
@@ -14992,38 +15051,38 @@ Rules that check certificate lifetime fail when the days remaining before expiry
 It's mostly intended to be used when analyzing templates that use private Linux offerings.
 Rules that check if a VM or VMSS has Linux OS also validate against the values set by this configuration.</p>
 <p>Syntax:</p>
-<div class="language-yaml highlight"><span class="filename">ps-rule.yaml</span><pre><span></span><code><span id="__span-52-1"><a id="__codelineno-52-1" name="__codelineno-52-1" href="#__codelineno-52-1"></a><span class="nt">configuration</span><span class="p">:</span>
-</span><span id="__span-52-2"><a id="__codelineno-52-2" name="__codelineno-52-2" href="#__codelineno-52-2"></a><span class="w">  </span><span class="nt">AZURE_LINUX_OS_OFFERS</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">array</span><span class="w"> </span><span class="c1"># An array of offer names</span>
+<div class="language-yaml highlight"><span class="filename">ps-rule.yaml</span><pre><span></span><code><span id="__span-55-1"><a id="__codelineno-55-1" name="__codelineno-55-1" href="#__codelineno-55-1"></a><span class="nt">configuration</span><span class="p">:</span>
+</span><span id="__span-55-2"><a id="__codelineno-55-2" name="__codelineno-55-2" href="#__codelineno-55-2"></a><span class="w">  </span><span class="nt">AZURE_LINUX_OS_OFFERS</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">array</span><span class="w"> </span><span class="c1"># An array of offer names</span>
 </span></code></pre></div>
 <p>Default:</p>
-<div class="language-yaml highlight"><pre><span></span><code><span id="__span-53-1"><a id="__codelineno-53-1" name="__codelineno-53-1" href="#__codelineno-53-1"></a><span class="c1"># YAML: The default AZURE_LINUX_OS_OFFERS configuration option</span>
-</span><span id="__span-53-2"><a id="__codelineno-53-2" name="__codelineno-53-2" href="#__codelineno-53-2"></a><span class="nt">configuration</span><span class="p">:</span>
-</span><span id="__span-53-3"><a id="__codelineno-53-3" name="__codelineno-53-3" href="#__codelineno-53-3"></a><span class="w">  </span><span class="nt">AZURE_LINUX_OS_OFFERS</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">[]</span>
+<div class="language-yaml highlight"><pre><span></span><code><span id="__span-56-1"><a id="__codelineno-56-1" name="__codelineno-56-1" href="#__codelineno-56-1"></a><span class="c1"># YAML: The default AZURE_LINUX_OS_OFFERS configuration option</span>
+</span><span id="__span-56-2"><a id="__codelineno-56-2" name="__codelineno-56-2" href="#__codelineno-56-2"></a><span class="nt">configuration</span><span class="p">:</span>
+</span><span id="__span-56-3"><a id="__codelineno-56-3" name="__codelineno-56-3" href="#__codelineno-56-3"></a><span class="w">  </span><span class="nt">AZURE_LINUX_OS_OFFERS</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">[]</span>
 </span></code></pre></div>
 <p>Example:</p>
-<div class="language-yaml highlight"><span class="filename">ps-rule.yaml</span><pre><span></span><code><span id="__span-54-1"><a id="__codelineno-54-1" name="__codelineno-54-1" href="#__codelineno-54-1"></a><span class="c1"># YAML: Set the AZURE_LINUX_OS_OFFERS configuration option to aLinuxOffer, anotherLinuxOffer</span>
-</span><span id="__span-54-2"><a id="__codelineno-54-2" name="__codelineno-54-2" href="#__codelineno-54-2"></a><span class="nt">configuration</span><span class="p">:</span>
-</span><span id="__span-54-3"><a id="__codelineno-54-3" name="__codelineno-54-3" href="#__codelineno-54-3"></a><span class="w">  </span><span class="nt">AZURE_LINUX_OS_OFFERS</span><span class="p">:</span>
-</span><span id="__span-54-4"><a id="__codelineno-54-4" name="__codelineno-54-4" href="#__codelineno-54-4"></a><span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="s">&#39;aLinuxOffer&#39;</span>
-</span><span id="__span-54-5"><a id="__codelineno-54-5" name="__codelineno-54-5" href="#__codelineno-54-5"></a><span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="s">&#39;anotherLinuxOffer&#39;</span>
+<div class="language-yaml highlight"><span class="filename">ps-rule.yaml</span><pre><span></span><code><span id="__span-57-1"><a id="__codelineno-57-1" name="__codelineno-57-1" href="#__codelineno-57-1"></a><span class="c1"># YAML: Set the AZURE_LINUX_OS_OFFERS configuration option to aLinuxOffer, anotherLinuxOffer</span>
+</span><span id="__span-57-2"><a id="__codelineno-57-2" name="__codelineno-57-2" href="#__codelineno-57-2"></a><span class="nt">configuration</span><span class="p">:</span>
+</span><span id="__span-57-3"><a id="__codelineno-57-3" name="__codelineno-57-3" href="#__codelineno-57-3"></a><span class="w">  </span><span class="nt">AZURE_LINUX_OS_OFFERS</span><span class="p">:</span>
+</span><span id="__span-57-4"><a id="__codelineno-57-4" name="__codelineno-57-4" href="#__codelineno-57-4"></a><span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="s">&#39;aLinuxOffer&#39;</span>
+</span><span id="__span-57-5"><a id="__codelineno-57-5" name="__codelineno-57-5" href="#__codelineno-57-5"></a><span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="s">&#39;anotherLinuxOffer&#39;</span>
 </span></code></pre></div>
 <h3 id="azure_policy_waiver_max_expiry">AZURE_POLICY_WAIVER_MAX_EXPIRY<a class="headerlink" href="#azure_policy_waiver_max_expiry" title="Permanent link">#</a></h3>
 <p><span class="badge"><span class="badge__icon"><a href="../../CHANGELOG-v1/#v130" title="Minimum version"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M11.75 1a.75.75 0 0 1 .75.75V4h6.532c.42 0 .826.15 1.143.425l3.187 2.75a1.75 1.75 0 0 1 0 2.65l-3.187 2.75a1.75 1.75 0 0 1-1.143.425H12.5v9.25a.75.75 0 0 1-1.5 0V13H3.75A1.75 1.75 0 0 1 2 11.25v-5.5C2 4.783 2.784 4 3.75 4H11V1.75a.75.75 0 0 1 .75-.75m7.282 4.5H3.75a.25.25 0 0 0-.25.25v5.5c0 .138.112.25.25.25h15.282c.06 0 .118-.021.163-.06l3.188-2.75a.248.248 0 0 0 0-.38l-3.188-2.75a.25.25 0 0 0-.163-.06"/></svg></span></a></span><span class="badge__text"><a href="../../CHANGELOG-v1/#v130">v1.3.0</a></span></span>
 <span class="badge"><span class="badge__icon"><a href="../../en/rules/Azure.Policy.WaiverExpiry/" title="Applies to rule"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M14.78 3.653a3.936 3.936 0 1 1 5.567 5.567l-3.627 3.627a3.936 3.936 0 0 1-5.88-.353.75.75 0 0 0-1.18.928 5.436 5.436 0 0 0 8.12.486l3.628-3.628a5.436 5.436 0 1 0-7.688-7.688l-3 3a.75.75 0 0 0 1.06 1.061z"/><path d="M7.28 11.153a3.936 3.936 0 0 1 5.88.353.75.75 0 0 0 1.18-.928 5.436 5.436 0 0 0-8.12-.486L2.592 13.72a5.436 5.436 0 1 0 7.688 7.688l3-3a.75.75 0 1 0-1.06-1.06l-3 3a3.936 3.936 0 0 1-5.567-5.568z"/></svg></span></a></span><span class="badge__text"><a href="../../en/rules/Azure.Policy.WaiverExpiry/">Azure.Policy.WaiverExpiry</a></span></span></p>
 <p>This configuration option determines the maximum number of days in the future for a waiver policy exemption.</p>
 <p>Syntax:</p>
-<div class="language-yaml highlight"><span class="filename">ps-rule.yaml</span><pre><span></span><code><span id="__span-55-1"><a id="__codelineno-55-1" name="__codelineno-55-1" href="#__codelineno-55-1"></a><span class="nt">configuration</span><span class="p">:</span>
-</span><span id="__span-55-2"><a id="__codelineno-55-2" name="__codelineno-55-2" href="#__codelineno-55-2"></a><span class="w">  </span><span class="nt">AZURE_POLICY_WAIVER_MAX_EXPIRY</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">integer</span>
+<div class="language-yaml highlight"><span class="filename">ps-rule.yaml</span><pre><span></span><code><span id="__span-58-1"><a id="__codelineno-58-1" name="__codelineno-58-1" href="#__codelineno-58-1"></a><span class="nt">configuration</span><span class="p">:</span>
+</span><span id="__span-58-2"><a id="__codelineno-58-2" name="__codelineno-58-2" href="#__codelineno-58-2"></a><span class="w">  </span><span class="nt">AZURE_POLICY_WAIVER_MAX_EXPIRY</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">integer</span>
 </span></code></pre></div>
 <p>Default:</p>
-<div class="language-yaml highlight"><span class="filename">ps-rule.yaml</span><pre><span></span><code><span id="__span-56-1"><a id="__codelineno-56-1" name="__codelineno-56-1" href="#__codelineno-56-1"></a><span class="c1"># YAML: The default AZURE_POLICY_WAIVER_MAX_EXPIRY configuration option</span>
-</span><span id="__span-56-2"><a id="__codelineno-56-2" name="__codelineno-56-2" href="#__codelineno-56-2"></a><span class="nt">configuration</span><span class="p">:</span>
-</span><span id="__span-56-3"><a id="__codelineno-56-3" name="__codelineno-56-3" href="#__codelineno-56-3"></a><span class="w">  </span><span class="nt">AZURE_POLICY_WAIVER_MAX_EXPIRY</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">366</span>
+<div class="language-yaml highlight"><span class="filename">ps-rule.yaml</span><pre><span></span><code><span id="__span-59-1"><a id="__codelineno-59-1" name="__codelineno-59-1" href="#__codelineno-59-1"></a><span class="c1"># YAML: The default AZURE_POLICY_WAIVER_MAX_EXPIRY configuration option</span>
+</span><span id="__span-59-2"><a id="__codelineno-59-2" name="__codelineno-59-2" href="#__codelineno-59-2"></a><span class="nt">configuration</span><span class="p">:</span>
+</span><span id="__span-59-3"><a id="__codelineno-59-3" name="__codelineno-59-3" href="#__codelineno-59-3"></a><span class="w">  </span><span class="nt">AZURE_POLICY_WAIVER_MAX_EXPIRY</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">366</span>
 </span></code></pre></div>
 <p>Example:</p>
-<div class="language-yaml highlight"><span class="filename">ps-rule.yaml</span><pre><span></span><code><span id="__span-57-1"><a id="__codelineno-57-1" name="__codelineno-57-1" href="#__codelineno-57-1"></a><span class="c1"># YAML: Set the AZURE_POLICY_WAIVER_MAX_EXPIRY configuration option to 90</span>
-</span><span id="__span-57-2"><a id="__codelineno-57-2" name="__codelineno-57-2" href="#__codelineno-57-2"></a><span class="nt">configuration</span><span class="p">:</span>
-</span><span id="__span-57-3"><a id="__codelineno-57-3" name="__codelineno-57-3" href="#__codelineno-57-3"></a><span class="w">  </span><span class="nt">AZURE_POLICY_WAIVER_MAX_EXPIRY</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">90</span>
+<div class="language-yaml highlight"><span class="filename">ps-rule.yaml</span><pre><span></span><code><span id="__span-60-1"><a id="__codelineno-60-1" name="__codelineno-60-1" href="#__codelineno-60-1"></a><span class="c1"># YAML: Set the AZURE_POLICY_WAIVER_MAX_EXPIRY configuration option to 90</span>
+</span><span id="__span-60-2"><a id="__codelineno-60-2" name="__codelineno-60-2" href="#__codelineno-60-2"></a><span class="nt">configuration</span><span class="p">:</span>
+</span><span id="__span-60-3"><a id="__codelineno-60-3" name="__codelineno-60-3" href="#__codelineno-60-3"></a><span class="w">  </span><span class="nt">AZURE_POLICY_WAIVER_MAX_EXPIRY</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">90</span>
 </span></code></pre></div>
 <h3 id="azure_storage_defender_per_account">AZURE_STORAGE_DEFENDER_PER_ACCOUNT<a class="headerlink" href="#azure_storage_defender_per_account" title="Permanent link">#</a></h3>
 <p><span class="badge"><span class="badge__icon"><a href="../../CHANGELOG-v1/#v1270" title="Minimum version"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M11.75 1a.75.75 0 0 1 .75.75V4h6.532c.42 0 .826.15 1.143.425l3.187 2.75a1.75 1.75 0 0 1 0 2.65l-3.187 2.75a1.75 1.75 0 0 1-1.143.425H12.5v9.25a.75.75 0 0 1-1.5 0V13H3.75A1.75 1.75 0 0 1 2 11.25v-5.5C2 4.783 2.784 4 3.75 4H11V1.75a.75.75 0 0 1 .75-.75m7.282 4.5H3.75a.25.25 0 0 0-.25.25v5.5c0 .138.112.25.25.25h15.282c.06 0 .118-.021.163-.06l3.188-2.75a.248.248 0 0 0 0-.38l-3.188-2.75a.25.25 0 0 0-.163-.06"/></svg></span></a></span><span class="badge__text"><a href="../../CHANGELOG-v1/#v1270">v1.27.0</a></span></span>
@@ -15032,18 +15091,18 @@ Rules that check if a VM or VMSS has Linux OS also validate against the values s
 By default, this option is set to <code>false</code> because configuration at the subscription level is recommended.
 Configure this option to enable the per account validation, which defaults to <code>false</code>.</p>
 <p>Syntax:</p>
-<div class="language-yaml highlight"><span class="filename">ps-rule.yaml</span><pre><span></span><code><span id="__span-58-1"><a id="__codelineno-58-1" name="__codelineno-58-1" href="#__codelineno-58-1"></a><span class="nt">configuration</span><span class="p">:</span>
-</span><span id="__span-58-2"><a id="__codelineno-58-2" name="__codelineno-58-2" href="#__codelineno-58-2"></a><span class="w">  </span><span class="nt">AZURE_STORAGE_DEFENDER_PER_ACCOUNT</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">boolean</span>
+<div class="language-yaml highlight"><span class="filename">ps-rule.yaml</span><pre><span></span><code><span id="__span-61-1"><a id="__codelineno-61-1" name="__codelineno-61-1" href="#__codelineno-61-1"></a><span class="nt">configuration</span><span class="p">:</span>
+</span><span id="__span-61-2"><a id="__codelineno-61-2" name="__codelineno-61-2" href="#__codelineno-61-2"></a><span class="w">  </span><span class="nt">AZURE_STORAGE_DEFENDER_PER_ACCOUNT</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">boolean</span>
 </span></code></pre></div>
 <p>Default:</p>
-<div class="language-yaml highlight"><pre><span></span><code><span id="__span-59-1"><a id="__codelineno-59-1" name="__codelineno-59-1" href="#__codelineno-59-1"></a><span class="c1"># YAML: The default AZURE_STORAGE_DEFENDER_PER_ACCOUNT configuration option</span>
-</span><span id="__span-59-2"><a id="__codelineno-59-2" name="__codelineno-59-2" href="#__codelineno-59-2"></a><span class="nt">configuration</span><span class="p">:</span>
-</span><span id="__span-59-3"><a id="__codelineno-59-3" name="__codelineno-59-3" href="#__codelineno-59-3"></a><span class="w">  </span><span class="nt">AZURE_STORAGE_DEFENDER_PER_ACCOUNT</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">false</span>
+<div class="language-yaml highlight"><pre><span></span><code><span id="__span-62-1"><a id="__codelineno-62-1" name="__codelineno-62-1" href="#__codelineno-62-1"></a><span class="c1"># YAML: The default AZURE_STORAGE_DEFENDER_PER_ACCOUNT configuration option</span>
+</span><span id="__span-62-2"><a id="__codelineno-62-2" name="__codelineno-62-2" href="#__codelineno-62-2"></a><span class="nt">configuration</span><span class="p">:</span>
+</span><span id="__span-62-3"><a id="__codelineno-62-3" name="__codelineno-62-3" href="#__codelineno-62-3"></a><span class="w">  </span><span class="nt">AZURE_STORAGE_DEFENDER_PER_ACCOUNT</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">false</span>
 </span></code></pre></div>
 <p>Example:</p>
-<div class="language-yaml highlight"><span class="filename">ps-rule.yaml</span><pre><span></span><code><span id="__span-60-1"><a id="__codelineno-60-1" name="__codelineno-60-1" href="#__codelineno-60-1"></a><span class="c1"># YAML: Set the AZURE_STORAGE_DEFENDER_PER_ACCOUNT configuration option to true</span>
-</span><span id="__span-60-2"><a id="__codelineno-60-2" name="__codelineno-60-2" href="#__codelineno-60-2"></a><span class="nt">configuration</span><span class="p">:</span>
-</span><span id="__span-60-3"><a id="__codelineno-60-3" name="__codelineno-60-3" href="#__codelineno-60-3"></a><span class="w">  </span><span class="nt">AZURE_STORAGE_DEFENDER_PER_ACCOUNT</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
+<div class="language-yaml highlight"><span class="filename">ps-rule.yaml</span><pre><span></span><code><span id="__span-63-1"><a id="__codelineno-63-1" name="__codelineno-63-1" href="#__codelineno-63-1"></a><span class="c1"># YAML: Set the AZURE_STORAGE_DEFENDER_PER_ACCOUNT configuration option to true</span>
+</span><span id="__span-63-2"><a id="__codelineno-63-2" name="__codelineno-63-2" href="#__codelineno-63-2"></a><span class="nt">configuration</span><span class="p">:</span>
+</span><span id="__span-63-3"><a id="__codelineno-63-3" name="__codelineno-63-3" href="#__codelineno-63-3"></a><span class="w">  </span><span class="nt">AZURE_STORAGE_DEFENDER_PER_ACCOUNT</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
 </span></code></pre></div>
 <h3 id="azure_vm_use_azure_hybrid_benefit">AZURE_VM_USE_AZURE_HYBRID_BENEFIT<a class="headerlink" href="#azure_vm_use_azure_hybrid_benefit" title="Permanent link">#</a></h3>
 <p><span class="badge"><span class="badge__icon"><a href="../../CHANGELOG-v1/#v1330" title="Minimum version"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M11.75 1a.75.75 0 0 1 .75.75V4h6.532c.42 0 .826.15 1.143.425l3.187 2.75a1.75 1.75 0 0 1 0 2.65l-3.187 2.75a1.75 1.75 0 0 1-1.143.425H12.5v9.25a.75.75 0 0 1-1.5 0V13H3.75A1.75 1.75 0 0 1 2 11.25v-5.5C2 4.783 2.784 4 3.75 4H11V1.75a.75.75 0 0 1 .75-.75m7.282 4.5H3.75a.25.25 0 0 0-.25.25v5.5c0 .138.112.25.25.25h15.282c.06 0 .118-.021.163-.06l3.188-2.75a.248.248 0 0 0 0-.38l-3.188-2.75a.25.25 0 0 0-.163-.06"/></svg></span></a></span><span class="badge__text"><a href="../../CHANGELOG-v1/#v1330">v1.33.0</a></span></span>
@@ -15053,17 +15112,17 @@ When enabled, rules that check for AHB fail when the VM is not configured to use
 <p>To use AHB, you must separately have eligible licenses, such as Windows Server or SQL Server.</p>
 <p>By default, this configuration option is set to <code>false</code>.</p>
 <p>Syntax:</p>
-<div class="language-yaml highlight"><span class="filename">ps-rule.yaml</span><pre><span></span><code><span id="__span-61-1"><a id="__codelineno-61-1" name="__codelineno-61-1" href="#__codelineno-61-1"></a><span class="nt">configuration</span><span class="p">:</span>
-</span><span id="__span-61-2"><a id="__codelineno-61-2" name="__codelineno-61-2" href="#__codelineno-61-2"></a><span class="w">  </span><span class="nt">AZURE_VM_USE_AZURE_HYBRID_BENEFIT</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">boolean</span>
+<div class="language-yaml highlight"><span class="filename">ps-rule.yaml</span><pre><span></span><code><span id="__span-64-1"><a id="__codelineno-64-1" name="__codelineno-64-1" href="#__codelineno-64-1"></a><span class="nt">configuration</span><span class="p">:</span>
+</span><span id="__span-64-2"><a id="__codelineno-64-2" name="__codelineno-64-2" href="#__codelineno-64-2"></a><span class="w">  </span><span class="nt">AZURE_VM_USE_AZURE_HYBRID_BENEFIT</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">boolean</span>
 </span></code></pre></div>
 <p>Default:</p>
-<div class="language-yaml highlight"><span class="filename">ps-rule.yaml</span><pre><span></span><code><span id="__span-62-1"><a id="__codelineno-62-1" name="__codelineno-62-1" href="#__codelineno-62-1"></a><span class="nt">configuration</span><span class="p">:</span>
-</span><span id="__span-62-2"><a id="__codelineno-62-2" name="__codelineno-62-2" href="#__codelineno-62-2"></a><span class="w">  </span><span class="nt">AZURE_VM_USE_AZURE_HYBRID_BENEFIT</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">false</span>
+<div class="language-yaml highlight"><span class="filename">ps-rule.yaml</span><pre><span></span><code><span id="__span-65-1"><a id="__codelineno-65-1" name="__codelineno-65-1" href="#__codelineno-65-1"></a><span class="nt">configuration</span><span class="p">:</span>
+</span><span id="__span-65-2"><a id="__codelineno-65-2" name="__codelineno-65-2" href="#__codelineno-65-2"></a><span class="w">  </span><span class="nt">AZURE_VM_USE_AZURE_HYBRID_BENEFIT</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">false</span>
 </span></code></pre></div>
 <p>Example:</p>
-<div class="language-yaml highlight"><span class="filename">ps-rule.yaml</span><pre><span></span><code><span id="__span-63-1"><a id="__codelineno-63-1" name="__codelineno-63-1" href="#__codelineno-63-1"></a><span class="c1"># Set the configuration option to enabled.</span>
-</span><span id="__span-63-2"><a id="__codelineno-63-2" name="__codelineno-63-2" href="#__codelineno-63-2"></a><span class="nt">configuration</span><span class="p">:</span>
-</span><span id="__span-63-3"><a id="__codelineno-63-3" name="__codelineno-63-3" href="#__codelineno-63-3"></a><span class="w">  </span><span class="nt">AZURE_VM_USE_AZURE_HYBRID_BENEFIT</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
+<div class="language-yaml highlight"><span class="filename">ps-rule.yaml</span><pre><span></span><code><span id="__span-66-1"><a id="__codelineno-66-1" name="__codelineno-66-1" href="#__codelineno-66-1"></a><span class="c1"># Set the configuration option to enabled.</span>
+</span><span id="__span-66-2"><a id="__codelineno-66-2" name="__codelineno-66-2" href="#__codelineno-66-2"></a><span class="nt">configuration</span><span class="p">:</span>
+</span><span id="__span-66-3"><a id="__codelineno-66-3" name="__codelineno-66-3" href="#__codelineno-66-3"></a><span class="w">  </span><span class="nt">AZURE_VM_USE_AZURE_HYBRID_BENEFIT</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
 </span></code></pre></div>
 <h3 id="azure_vm_use_multi_tenant_hosting_rights">AZURE_VM_USE_MULTI_TENANT_HOSTING_RIGHTS<a class="headerlink" href="#azure_vm_use_multi_tenant_hosting_rights" title="Permanent link">#</a></h3>
 <p><span class="badge"><span class="badge__icon"><a href="../../CHANGELOG-v1/#v1390" title="Minimum version"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M11.75 1a.75.75 0 0 1 .75.75V4h6.532c.42 0 .826.15 1.143.425l3.187 2.75a1.75 1.75 0 0 1 0 2.65l-3.187 2.75a1.75 1.75 0 0 1-1.143.425H12.5v9.25a.75.75 0 0 1-1.5 0V13H3.75A1.75 1.75 0 0 1 2 11.25v-5.5C2 4.783 2.784 4 3.75 4H11V1.75a.75.75 0 0 1 .75-.75m7.282 4.5H3.75a.25.25 0 0 0-.25.25v5.5c0 .138.112.25.25.25h15.282c.06 0 .118-.021.163-.06l3.188-2.75a.248.248 0 0 0 0-.38l-3.188-2.75a.25.25 0 0 0-.163-.06"/></svg></span></a></span><span class="badge__text"><a href="../../CHANGELOG-v1/#v1390">v1.39.0</a></span></span>
@@ -15072,17 +15131,17 @@ When enabled, rules that check for AHB fail when the VM is not configured to use
 When enabled, rules that check for MHR fail when a client VM is not configured to use MHR.</p>
 <p>By default, this configuration option is set to <code>false</code>.</p>
 <p>Syntax:</p>
-<div class="language-yaml highlight"><span class="filename">ps-rule.yaml</span><pre><span></span><code><span id="__span-64-1"><a id="__codelineno-64-1" name="__codelineno-64-1" href="#__codelineno-64-1"></a><span class="nt">configuration</span><span class="p">:</span>
-</span><span id="__span-64-2"><a id="__codelineno-64-2" name="__codelineno-64-2" href="#__codelineno-64-2"></a><span class="w">  </span><span class="nt">AZURE_VM_USE_MULTI_TENANT_HOSTING_RIGHTS</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">boolean</span>
+<div class="language-yaml highlight"><span class="filename">ps-rule.yaml</span><pre><span></span><code><span id="__span-67-1"><a id="__codelineno-67-1" name="__codelineno-67-1" href="#__codelineno-67-1"></a><span class="nt">configuration</span><span class="p">:</span>
+</span><span id="__span-67-2"><a id="__codelineno-67-2" name="__codelineno-67-2" href="#__codelineno-67-2"></a><span class="w">  </span><span class="nt">AZURE_VM_USE_MULTI_TENANT_HOSTING_RIGHTS</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">boolean</span>
 </span></code></pre></div>
 <p>Default:</p>
-<div class="language-yaml highlight"><span class="filename">ps-rule.yaml</span><pre><span></span><code><span id="__span-65-1"><a id="__codelineno-65-1" name="__codelineno-65-1" href="#__codelineno-65-1"></a><span class="nt">configuration</span><span class="p">:</span>
-</span><span id="__span-65-2"><a id="__codelineno-65-2" name="__codelineno-65-2" href="#__codelineno-65-2"></a><span class="w">  </span><span class="nt">AZURE_VM_USE_MULTI_TENANT_HOSTING_RIGHTS</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">false</span>
+<div class="language-yaml highlight"><span class="filename">ps-rule.yaml</span><pre><span></span><code><span id="__span-68-1"><a id="__codelineno-68-1" name="__codelineno-68-1" href="#__codelineno-68-1"></a><span class="nt">configuration</span><span class="p">:</span>
+</span><span id="__span-68-2"><a id="__codelineno-68-2" name="__codelineno-68-2" href="#__codelineno-68-2"></a><span class="w">  </span><span class="nt">AZURE_VM_USE_MULTI_TENANT_HOSTING_RIGHTS</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">false</span>
 </span></code></pre></div>
 <p>Example:</p>
-<div class="language-yaml highlight"><span class="filename">ps-rule.yaml</span><pre><span></span><code><span id="__span-66-1"><a id="__codelineno-66-1" name="__codelineno-66-1" href="#__codelineno-66-1"></a><span class="c1"># Set the configuration option to enabled.</span>
-</span><span id="__span-66-2"><a id="__codelineno-66-2" name="__codelineno-66-2" href="#__codelineno-66-2"></a><span class="nt">configuration</span><span class="p">:</span>
-</span><span id="__span-66-3"><a id="__codelineno-66-3" name="__codelineno-66-3" href="#__codelineno-66-3"></a><span class="w">  </span><span class="nt">AZURE_VM_USE_MULTI_TENANT_HOSTING_RIGHTS</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
+<div class="language-yaml highlight"><span class="filename">ps-rule.yaml</span><pre><span></span><code><span id="__span-69-1"><a id="__codelineno-69-1" name="__codelineno-69-1" href="#__codelineno-69-1"></a><span class="c1"># Set the configuration option to enabled.</span>
+</span><span id="__span-69-2"><a id="__codelineno-69-2" name="__codelineno-69-2" href="#__codelineno-69-2"></a><span class="nt">configuration</span><span class="p">:</span>
+</span><span id="__span-69-3"><a id="__codelineno-69-3" name="__codelineno-69-3" href="#__codelineno-69-3"></a><span class="w">  </span><span class="nt">AZURE_VM_USE_MULTI_TENANT_HOSTING_RIGHTS</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
 </span></code></pre></div>
 <h3 id="azure_vnet_dns_with_identity">AZURE_VNET_DNS_WITH_IDENTITY<a class="headerlink" href="#azure_vnet_dns_with_identity" title="Permanent link">#</a></h3>
 <p><span class="badge"><span class="badge__icon"><a href="../../CHANGELOG-v1/#v1300" title="Minimum version"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M11.75 1a.75.75 0 0 1 .75.75V4h6.532c.42 0 .826.15 1.143.425l3.187 2.75a1.75 1.75 0 0 1 0 2.65l-3.187 2.75a1.75 1.75 0 0 1-1.143.425H12.5v9.25a.75.75 0 0 1-1.5 0V13H3.75A1.75 1.75 0 0 1 2 11.25v-5.5C2 4.783 2.784 4 3.75 4H11V1.75a.75.75 0 0 1 .75-.75m7.282 4.5H3.75a.25.25 0 0 0-.25.25v5.5c0 .138.112.25.25.25h15.282c.06 0 .118-.021.163-.06l3.188-2.75a.248.248 0 0 0 0-.38l-3.188-2.75a.25.25 0 0 0-.163-.06"/></svg></span></a></span><span class="badge__text"><a href="../../CHANGELOG-v1/#v1300">v1.30.0</a></span></span>
@@ -15096,17 +15155,17 @@ When enabled, rules that check for MHR fail when a client VM is not configured t
 <p>If you are using this configuration, we recommend you set the configuration option <code>AZURE_VNET_DNS_WITH_IDENTITY</code> to <code>true</code>.
 By default, this configuration option is set to <code>false</code>.</p>
 <p>Syntax:</p>
-<div class="language-yaml highlight"><span class="filename">ps-rule.yaml</span><pre><span></span><code><span id="__span-67-1"><a id="__codelineno-67-1" name="__codelineno-67-1" href="#__codelineno-67-1"></a><span class="nt">configuration</span><span class="p">:</span>
-</span><span id="__span-67-2"><a id="__codelineno-67-2" name="__codelineno-67-2" href="#__codelineno-67-2"></a><span class="w">  </span><span class="nt">AZURE_VNET_DNS_WITH_IDENTITY</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">boolean</span>
+<div class="language-yaml highlight"><span class="filename">ps-rule.yaml</span><pre><span></span><code><span id="__span-70-1"><a id="__codelineno-70-1" name="__codelineno-70-1" href="#__codelineno-70-1"></a><span class="nt">configuration</span><span class="p">:</span>
+</span><span id="__span-70-2"><a id="__codelineno-70-2" name="__codelineno-70-2" href="#__codelineno-70-2"></a><span class="w">  </span><span class="nt">AZURE_VNET_DNS_WITH_IDENTITY</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">boolean</span>
 </span></code></pre></div>
 <p>Default:</p>
-<div class="language-yaml highlight"><span class="filename">ps-rule.yaml</span><pre><span></span><code><span id="__span-68-1"><a id="__codelineno-68-1" name="__codelineno-68-1" href="#__codelineno-68-1"></a><span class="nt">configuration</span><span class="p">:</span>
-</span><span id="__span-68-2"><a id="__codelineno-68-2" name="__codelineno-68-2" href="#__codelineno-68-2"></a><span class="w">  </span><span class="nt">AZURE_VNET_DNS_WITH_IDENTITY</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">false</span>
+<div class="language-yaml highlight"><span class="filename">ps-rule.yaml</span><pre><span></span><code><span id="__span-71-1"><a id="__codelineno-71-1" name="__codelineno-71-1" href="#__codelineno-71-1"></a><span class="nt">configuration</span><span class="p">:</span>
+</span><span id="__span-71-2"><a id="__codelineno-71-2" name="__codelineno-71-2" href="#__codelineno-71-2"></a><span class="w">  </span><span class="nt">AZURE_VNET_DNS_WITH_IDENTITY</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">false</span>
 </span></code></pre></div>
 <p>Example:</p>
-<div class="language-yaml highlight"><span class="filename">ps-rule.yaml</span><pre><span></span><code><span id="__span-69-1"><a id="__codelineno-69-1" name="__codelineno-69-1" href="#__codelineno-69-1"></a><span class="c1"># Set the configuration option to enabled.</span>
-</span><span id="__span-69-2"><a id="__codelineno-69-2" name="__codelineno-69-2" href="#__codelineno-69-2"></a><span class="nt">configuration</span><span class="p">:</span>
-</span><span id="__span-69-3"><a id="__codelineno-69-3" name="__codelineno-69-3" href="#__codelineno-69-3"></a><span class="w">  </span><span class="nt">AZURE_VNET_DNS_WITH_IDENTITY</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
+<div class="language-yaml highlight"><span class="filename">ps-rule.yaml</span><pre><span></span><code><span id="__span-72-1"><a id="__codelineno-72-1" name="__codelineno-72-1" href="#__codelineno-72-1"></a><span class="c1"># Set the configuration option to enabled.</span>
+</span><span id="__span-72-2"><a id="__codelineno-72-2" name="__codelineno-72-2" href="#__codelineno-72-2"></a><span class="nt">configuration</span><span class="p">:</span>
+</span><span id="__span-72-3"><a id="__codelineno-72-3" name="__codelineno-72-3" href="#__codelineno-72-3"></a><span class="w">  </span><span class="nt">AZURE_VNET_DNS_WITH_IDENTITY</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
 </span></code></pre></div>
 <h3 id="azure_vnet_subnet_excluded_from_nsg">AZURE_VNET_SUBNET_EXCLUDED_FROM_NSG<a class="headerlink" href="#azure_vnet_subnet_excluded_from_nsg" title="Permanent link">#</a></h3>
 <p><span class="badge"><span class="badge__icon"><a href="../../CHANGELOG-v1/#v1330" title="Minimum version"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M11.75 1a.75.75 0 0 1 .75.75V4h6.532c.42 0 .826.15 1.143.425l3.187 2.75a1.75 1.75 0 0 1 0 2.65l-3.187 2.75a1.75 1.75 0 0 1-1.143.425H12.5v9.25a.75.75 0 0 1-1.5 0V13H3.75A1.75 1.75 0 0 1 2 11.25v-5.5C2 4.783 2.784 4 3.75 4H11V1.75a.75.75 0 0 1 .75-.75m7.282 4.5H3.75a.25.25 0 0 0-.25.25v5.5c0 .138.112.25.25.25h15.282c.06 0 .118-.021.163-.06l3.188-2.75a.248.248 0 0 0 0-.38l-3.188-2.75a.25.25 0 0 0-.163-.06"/></svg></span></a></span><span class="badge__text"><a href="../../CHANGELOG-v1/#v1330">v1.33.0</a></span></span>
@@ -15115,19 +15174,19 @@ By default, this configuration option is set to <code>false</code>.</p>
 You can use this configuration option to exclude subnets that are specific to your environment.
 To configure this option, specify a list of subnet names to exclude.</p>
 <p>Syntax:</p>
-<div class="language-yaml highlight"><span class="filename">ps-rule.yaml</span><pre><span></span><code><span id="__span-70-1"><a id="__codelineno-70-1" name="__codelineno-70-1" href="#__codelineno-70-1"></a><span class="nt">configuration</span><span class="p">:</span>
-</span><span id="__span-70-2"><a id="__codelineno-70-2" name="__codelineno-70-2" href="#__codelineno-70-2"></a><span class="w">  </span><span class="nt">AZURE_VNET_SUBNET_EXCLUDED_FROM_NSG</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">array</span>
+<div class="language-yaml highlight"><span class="filename">ps-rule.yaml</span><pre><span></span><code><span id="__span-73-1"><a id="__codelineno-73-1" name="__codelineno-73-1" href="#__codelineno-73-1"></a><span class="nt">configuration</span><span class="p">:</span>
+</span><span id="__span-73-2"><a id="__codelineno-73-2" name="__codelineno-73-2" href="#__codelineno-73-2"></a><span class="w">  </span><span class="nt">AZURE_VNET_SUBNET_EXCLUDED_FROM_NSG</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">array</span>
 </span></code></pre></div>
 <p>Default:</p>
-<div class="language-yaml highlight"><span class="filename">ps-rule.yaml</span><pre><span></span><code><span id="__span-71-1"><a id="__codelineno-71-1" name="__codelineno-71-1" href="#__codelineno-71-1"></a><span class="nt">configuration</span><span class="p">:</span>
-</span><span id="__span-71-2"><a id="__codelineno-71-2" name="__codelineno-71-2" href="#__codelineno-71-2"></a><span class="w">  </span><span class="nt">AZURE_VNET_SUBNET_EXCLUDED_FROM_NSG</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">[]</span>
+<div class="language-yaml highlight"><span class="filename">ps-rule.yaml</span><pre><span></span><code><span id="__span-74-1"><a id="__codelineno-74-1" name="__codelineno-74-1" href="#__codelineno-74-1"></a><span class="nt">configuration</span><span class="p">:</span>
+</span><span id="__span-74-2"><a id="__codelineno-74-2" name="__codelineno-74-2" href="#__codelineno-74-2"></a><span class="w">  </span><span class="nt">AZURE_VNET_SUBNET_EXCLUDED_FROM_NSG</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">[]</span>
 </span></code></pre></div>
 <p>Example:</p>
-<div class="language-yaml highlight"><span class="filename">ps-rule.yaml</span><pre><span></span><code><span id="__span-72-1"><a id="__codelineno-72-1" name="__codelineno-72-1" href="#__codelineno-72-1"></a><span class="c1"># Configure two customs subnets to be excluded from NSG checks.</span>
-</span><span id="__span-72-2"><a id="__codelineno-72-2" name="__codelineno-72-2" href="#__codelineno-72-2"></a><span class="nt">configuration</span><span class="p">:</span>
-</span><span id="__span-72-3"><a id="__codelineno-72-3" name="__codelineno-72-3" href="#__codelineno-72-3"></a><span class="w">  </span><span class="nt">AZURE_VNET_SUBNET_EXCLUDED_FROM_NSG</span><span class="p">:</span>
-</span><span id="__span-72-4"><a id="__codelineno-72-4" name="__codelineno-72-4" href="#__codelineno-72-4"></a><span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">subnet-1</span>
-</span><span id="__span-72-5"><a id="__codelineno-72-5" name="__codelineno-72-5" href="#__codelineno-72-5"></a><span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">subnet-2</span>
+<div class="language-yaml highlight"><span class="filename">ps-rule.yaml</span><pre><span></span><code><span id="__span-75-1"><a id="__codelineno-75-1" name="__codelineno-75-1" href="#__codelineno-75-1"></a><span class="c1"># Configure two customs subnets to be excluded from NSG checks.</span>
+</span><span id="__span-75-2"><a id="__codelineno-75-2" name="__codelineno-75-2" href="#__codelineno-75-2"></a><span class="nt">configuration</span><span class="p">:</span>
+</span><span id="__span-75-3"><a id="__codelineno-75-3" name="__codelineno-75-3" href="#__codelineno-75-3"></a><span class="w">  </span><span class="nt">AZURE_VNET_SUBNET_EXCLUDED_FROM_NSG</span><span class="p">:</span>
+</span><span id="__span-75-4"><a id="__codelineno-75-4" name="__codelineno-75-4" href="#__codelineno-75-4"></a><span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">subnet-1</span>
+</span><span id="__span-75-5"><a id="__codelineno-75-5" name="__codelineno-75-5" href="#__codelineno-75-5"></a><span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">subnet-2</span>
 </span></code></pre></div>
 
 
@@ -15151,7 +15210,7 @@ To configure this option, specify a list of subnet names to exclude.</p>
     <span class="md-icon" title="Last update">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">September 16, 2024</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">October 11, 2024</span>
   </span>
 
     

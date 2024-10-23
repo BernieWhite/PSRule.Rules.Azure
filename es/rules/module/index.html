@@ -18,7 +18,7 @@
       
       
       <link rel="icon" href="../../../assets/ms_icon.png">
-      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.5.41">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.5.42">
     
     
       
@@ -14446,15 +14446,6 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#requirements" class="md-nav__link">
-    <span class="md-ellipsis">
-      Requirements
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
   <a href="#resiliency-and-dependencies" class="md-nav__link">
     <span class="md-ellipsis">
       Resiliency and dependencies
@@ -14616,7 +14607,7 @@
           <li class="md-nav__item">
   <a href="#se01-security-baseline" class="md-nav__link">
     <span class="md-ellipsis">
-      SE:01 Security baseline
+      SE:01 Security Baseline
     </span>
   </a>
   
@@ -16050,24 +16041,6 @@
 <td>Important</td>
 <td>Error</td>
 </tr>
-<tr>
-<td><a href="Azure.Storage.ContainerSoftDelete.md">Azure.Storage.ContainerSoftDelete</a></td>
-<td>Enable container soft delete on Storage Accounts.</td>
-<td>Important</td>
-<td>Error</td>
-</tr>
-<tr>
-<td><a href="Azure.Storage.FileShareSoftDelete.md">Azure.Storage.FileShareSoftDelete</a></td>
-<td>Enable soft delete on Storage Accounts file shares.</td>
-<td>Important</td>
-<td>Error</td>
-</tr>
-<tr>
-<td><a href="Azure.Storage.SoftDelete.md">Azure.Storage.SoftDelete</a></td>
-<td>Enable blob soft delete on Storage Accounts.</td>
-<td>Important</td>
-<td>Error</td>
-</tr>
 </tbody>
 </table>
 <h3 id="design">Design<a class="headerlink" href="#design" title="Permanent link">#</a></h3>
@@ -16296,6 +16269,12 @@
 <td>Error</td>
 </tr>
 <tr>
+<td><a href="Azure.PublicIP.StandardSKU.md">Azure.PublicIP.StandardSKU</a></td>
+<td>The basic SKU is being retired on 30 September 2025, and does not include several reliability and security features.</td>
+<td>Important</td>
+<td>Error</td>
+</tr>
+<tr>
 <td><a href="Azure.Redis.Version.md">Azure.Redis.Version</a></td>
 <td>Azure Cache for Redis should use the latest supported version of Redis.</td>
 <td>Important</td>
@@ -16316,6 +16295,24 @@
 <tr>
 <td><a href="Azure.SQLMI.MaintenanceWindow.md">Azure.SQLMI.MaintenanceWindow</a></td>
 <td>Configure a customer-controlled maintenance window for Azure SQL Managed Instances.</td>
+<td>Important</td>
+<td>Error</td>
+</tr>
+<tr>
+<td><a href="Azure.Storage.ContainerSoftDelete.md">Azure.Storage.ContainerSoftDelete</a></td>
+<td>Enable container soft delete on Storage Accounts.</td>
+<td>Important</td>
+<td>Error</td>
+</tr>
+<tr>
+<td><a href="Azure.Storage.FileShareSoftDelete.md">Azure.Storage.FileShareSoftDelete</a></td>
+<td>Enable soft delete on Storage Accounts file shares.</td>
+<td>Important</td>
+<td>Error</td>
+</tr>
+<tr>
+<td><a href="Azure.Storage.SoftDelete.md">Azure.Storage.SoftDelete</a></td>
+<td>Enable blob soft delete on Storage Accounts.</td>
 <td>Important</td>
 <td>Error</td>
 </tr>
@@ -16587,6 +16584,12 @@
 <td>Error</td>
 </tr>
 <tr>
+<td><a href="Azure.Storage.UseReplication.md">Azure.Storage.UseReplication</a></td>
+<td>Storage Accounts using the LRS SKU are only replicated within a single zone.</td>
+<td>Important</td>
+<td>Error</td>
+</tr>
+<tr>
 <td><a href="Azure.VMSS.AvailabilityZone.md">Azure.VMSS.AvailabilityZone</a></td>
 <td>Deploy virtual machine scale set instances using availability zones in supported regions to ensure high availability and resilience.</td>
 <td>Important</td>
@@ -16657,31 +16660,6 @@
 <tr>
 <td><a href="Azure.VMSS.ZoneBalance.md">Azure.VMSS.ZoneBalance</a></td>
 <td>Deploy virtual machine scale set instances using the best-effort zone balance in supported regions.</td>
-<td>Important</td>
-<td>Error</td>
-</tr>
-</tbody>
-</table>
-<h3 id="requirements">Requirements<a class="headerlink" href="#requirements" title="Permanent link">#</a></h3>
-<table>
-<thead>
-<tr>
-<th>Name</th>
-<th>Synopsis</th>
-<th>Severity</th>
-<th>Level</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><a href="Azure.PublicIP.StandardSKU.md">Azure.PublicIP.StandardSKU</a></td>
-<td>Public IP addresses should be deployed with Standard SKU for production workloads.</td>
-<td>Important</td>
-<td>Error</td>
-</tr>
-<tr>
-<td><a href="Azure.Storage.UseReplication.md">Azure.Storage.UseReplication</a></td>
-<td>Storage Accounts not using geo-replicated storage (GRS) or zone-redundant (ZRS) may be at risk.</td>
 <td>Important</td>
 <td>Error</td>
 </tr>
@@ -17268,7 +17246,7 @@
 </tr>
 </tbody>
 </table>
-<h3 id="se01-security-baseline">SE:01 Security baseline<a class="headerlink" href="#se01-security-baseline" title="Permanent link">#</a></h3>
+<h3 id="se01-security-baseline">SE:01 Security Baseline<a class="headerlink" href="#se01-security-baseline" title="Permanent link">#</a></h3>
 <table>
 <thead>
 <tr>

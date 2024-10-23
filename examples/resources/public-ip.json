@@ -4,8 +4,8 @@
   "metadata": {
     "_generator": {
       "name": "bicep",
-      "version": "0.23.1.45101",
-      "templateHash": "12243310267082646460"
+      "version": "0.30.23.60470",
+      "templateHash": "14966441605848938223"
     }
   },
   "parameters": {
@@ -28,7 +28,7 @@
   "resources": [
     {
       "type": "Microsoft.Network/publicIPAddresses",
-      "apiVersion": "2023-05-01",
+      "apiVersion": "2024-01-01",
       "name": "[parameters('name')]",
       "location": "[parameters('location')]",
       "sku": {

@@ -4,8 +4,8 @@
   "metadata": {
     "_generator": {
       "name": "bicep",
-      "version": "0.25.53.49325",
-      "templateHash": "6095867228458030395"
+      "version": "0.30.23.60470",
+      "templateHash": "12565367391351048463"
     }
   },
   "parameters": {
@@ -30,7 +30,7 @@
   "resources": [
     {
       "type": "Microsoft.Storage/storageAccounts",
-      "apiVersion": "2023-01-01",
+      "apiVersion": "2023-05-01",
       "name": "[parameters('name')]",
       "location": "[parameters('location')]",
       "sku": {
@@ -50,7 +50,7 @@
     },
     {
       "type": "Microsoft.Storage/storageAccounts/blobServices",
-      "apiVersion": "2023-01-01",
+      "apiVersion": "2023-05-01",
       "name": "[format('{0}/{1}', parameters('name'), 'default')]",
       "properties": {
         "deleteRetentionPolicy": {
@@ -68,7 +68,7 @@
     },
     {
       "type": "Microsoft.Storage/storageAccounts/blobServices/containers",
-      "apiVersion": "2023-01-01",
+      "apiVersion": "2023-05-01",
       "name": "[format('{0}/{1}/{2}', parameters('name'), 'default', variables('containerName'))]",
       "properties": {
         "publicAccess": "None"
@@ -79,7 +79,7 @@
     },
     {
       "type": "Microsoft.Storage/storageAccounts/fileServices",
-      "apiVersion": "2023-01-01",
+      "apiVersion": "2023-05-01",
       "name": "[format('{0}/{1}', parameters('name'), 'default')]",
       "properties": {
         "shareDeleteRetentionPolicy": {
@@ -93,7 +93,7 @@
     },
     {
       "type": "Microsoft.Storage/storageAccounts/fileServices/shares",
-      "apiVersion": "2023-01-01",
+      "apiVersion": "2023-05-01",
       "name": "[format('{0}/{1}/{2}', parameters('name'), 'default', variables('shareName'))]",
       "properties": {
         "accessTier": "TransactionOptimized"

@@ -14342,17 +14342,17 @@ Additionally, consider disabling MySQL authentication.</p>
 <li>Set the <code>properties.tenantId</code> to the tenant ID of the Entra ID administrator user, group, or application.</li>
 </ul>
 <p>For example:</p>
-<div class="language-text highlight"><span class="filename">Azure Bicep snippet</span><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>resource aadAdmin &#39;Microsoft.DBforMySQL/flexibleServers/administrators@2021-12-01-preview&#39; = {
-</span><span id="__span-2-2"><a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a>  name: &#39;activeDirectory&#39;
-</span><span id="__span-2-3"><a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a>  parent: mySqlFlexibleServer
-</span><span id="__span-2-4"><a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a>  properties: {
-</span><span id="__span-2-5"><a id="__codelineno-2-5" name="__codelineno-2-5" href="#__codelineno-2-5"></a>    administratorType: &#39;ActiveDirectory&#39;
-</span><span id="__span-2-6"><a id="__codelineno-2-6" name="__codelineno-2-6" href="#__codelineno-2-6"></a>    identityResourceId: identityResourceId
-</span><span id="__span-2-7"><a id="__codelineno-2-7" name="__codelineno-2-7" href="#__codelineno-2-7"></a>    login: login
-</span><span id="__span-2-8"><a id="__codelineno-2-8" name="__codelineno-2-8" href="#__codelineno-2-8"></a>    sid: sid
-</span><span id="__span-2-9"><a id="__codelineno-2-9" name="__codelineno-2-9" href="#__codelineno-2-9"></a>    tenantId: tenantId
-</span><span id="__span-2-10"><a id="__codelineno-2-10" name="__codelineno-2-10" href="#__codelineno-2-10"></a>  }
-</span><span id="__span-2-11"><a id="__codelineno-2-11" name="__codelineno-2-11" href="#__codelineno-2-11"></a>}
+<div class="language-bicep highlight"><span class="filename">Azure Bicep snippet</span><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="kd">resource</span><span class="w"> </span><span class="n n-Symbol">aadAdmin</span><span class="err"> </span><span class="s">&#39;Microsoft.DBforMySQL/flexibleServers/administrators@2021-12-01-preview&#39;</span><span class="err"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-2-2"><a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a><span class="w">  </span><span class="py">name</span><span class="p">:</span><span class="w"> </span><span class="s">&#39;activeDirectory&#39;</span>
+</span><span id="__span-2-3"><a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a><span class="w">  </span><span class="py">parent</span><span class="p">:</span><span class="w"> </span><span class="err">mySqlFlexibleServer</span>
+</span><span id="__span-2-4"><a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a><span class="w">  </span><span class="py">properties</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-2-5"><a id="__codelineno-2-5" name="__codelineno-2-5" href="#__codelineno-2-5"></a><span class="w">    </span><span class="py">administratorType</span><span class="p">:</span><span class="w"> </span><span class="s">&#39;ActiveDirectory&#39;</span>
+</span><span id="__span-2-6"><a id="__codelineno-2-6" name="__codelineno-2-6" href="#__codelineno-2-6"></a><span class="w">    </span><span class="py">identityResourceId</span><span class="p">:</span><span class="w"> </span><span class="err">identityResourceId</span>
+</span><span id="__span-2-7"><a id="__codelineno-2-7" name="__codelineno-2-7" href="#__codelineno-2-7"></a><span class="w">    </span><span class="py">login</span><span class="p">:</span><span class="w"> </span><span class="err">login</span>
+</span><span id="__span-2-8"><a id="__codelineno-2-8" name="__codelineno-2-8" href="#__codelineno-2-8"></a><span class="w">    </span><span class="py">sid</span><span class="p">:</span><span class="w"> </span><span class="err">sid</span>
+</span><span id="__span-2-9"><a id="__codelineno-2-9" name="__codelineno-2-9" href="#__codelineno-2-9"></a><span class="w">    </span><span class="py">tenantId</span><span class="p">:</span><span class="w"> </span><span class="err">tenantId</span>
+</span><span id="__span-2-10"><a id="__codelineno-2-10" name="__codelineno-2-10" href="#__codelineno-2-10"></a><span class="w">  </span><span class="p">}</span>
+</span><span id="__span-2-11"><a id="__codelineno-2-11" name="__codelineno-2-11" href="#__codelineno-2-11"></a><span class="p">}</span>
 </span></code></pre></div>
 <p>To deploy Azure Database for MySQL single servers that pass this rule:</p>
 <ul>
@@ -14363,16 +14363,16 @@ Additionally, consider disabling MySQL authentication.</p>
 <li>Set the <code>properties.tenantId</code> to the tenant ID of the Entra ID administrator user, group, or application.</li>
 </ul>
 <p>For example:</p>
-<div class="language-text highlight"><span class="filename">Azure Bicep snippet</span><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>resource aadAdmin &#39;Microsoft.DBforMySQL/servers/administrators@2017-12-01&#39; = {
-</span><span id="__span-3-2"><a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a>  name: &#39;activeDirectory&#39;
-</span><span id="__span-3-3"><a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a>  parent: mySqlSingleServer
-</span><span id="__span-3-4"><a id="__codelineno-3-4" name="__codelineno-3-4" href="#__codelineno-3-4"></a>  properties: {
-</span><span id="__span-3-5"><a id="__codelineno-3-5" name="__codelineno-3-5" href="#__codelineno-3-5"></a>    administratorType: &#39;ActiveDirectory&#39;
-</span><span id="__span-3-6"><a id="__codelineno-3-6" name="__codelineno-3-6" href="#__codelineno-3-6"></a>    login: login
-</span><span id="__span-3-7"><a id="__codelineno-3-7" name="__codelineno-3-7" href="#__codelineno-3-7"></a>    sid: sid
-</span><span id="__span-3-8"><a id="__codelineno-3-8" name="__codelineno-3-8" href="#__codelineno-3-8"></a>    tenantId: tenantId
-</span><span id="__span-3-9"><a id="__codelineno-3-9" name="__codelineno-3-9" href="#__codelineno-3-9"></a>  }
-</span><span id="__span-3-10"><a id="__codelineno-3-10" name="__codelineno-3-10" href="#__codelineno-3-10"></a>}
+<div class="language-bicep highlight"><span class="filename">Azure Bicep snippet</span><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="kd">resource</span><span class="w"> </span><span class="n n-Symbol">aadAdmin</span><span class="err"> </span><span class="s">&#39;Microsoft.DBforMySQL/servers/administrators@2017-12-01&#39;</span><span class="err"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-3-2"><a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a><span class="w">  </span><span class="py">name</span><span class="p">:</span><span class="w"> </span><span class="s">&#39;activeDirectory&#39;</span>
+</span><span id="__span-3-3"><a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a><span class="w">  </span><span class="py">parent</span><span class="p">:</span><span class="w"> </span><span class="err">mySqlSingleServer</span>
+</span><span id="__span-3-4"><a id="__codelineno-3-4" name="__codelineno-3-4" href="#__codelineno-3-4"></a><span class="w">  </span><span class="py">properties</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-3-5"><a id="__codelineno-3-5" name="__codelineno-3-5" href="#__codelineno-3-5"></a><span class="w">    </span><span class="py">administratorType</span><span class="p">:</span><span class="w"> </span><span class="s">&#39;ActiveDirectory&#39;</span>
+</span><span id="__span-3-6"><a id="__codelineno-3-6" name="__codelineno-3-6" href="#__codelineno-3-6"></a><span class="w">    </span><span class="py">login</span><span class="p">:</span><span class="w"> </span><span class="err">login</span>
+</span><span id="__span-3-7"><a id="__codelineno-3-7" name="__codelineno-3-7" href="#__codelineno-3-7"></a><span class="w">    </span><span class="py">sid</span><span class="p">:</span><span class="w"> </span><span class="err">sid</span>
+</span><span id="__span-3-8"><a id="__codelineno-3-8" name="__codelineno-3-8" href="#__codelineno-3-8"></a><span class="w">    </span><span class="py">tenantId</span><span class="p">:</span><span class="w"> </span><span class="err">tenantId</span>
+</span><span id="__span-3-9"><a id="__codelineno-3-9" name="__codelineno-3-9" href="#__codelineno-3-9"></a><span class="w">  </span><span class="p">}</span>
+</span><span id="__span-3-10"><a id="__codelineno-3-10" name="__codelineno-3-10" href="#__codelineno-3-10"></a><span class="p">}</span>
 </span></code></pre></div>
 <h2 id="notes">Notes<a class="headerlink" href="#notes" title="Permanent link">#</a></h2>
 <p>For the flexible server deployment model a user-assigned identity is required in order to use Entra ID authentication.

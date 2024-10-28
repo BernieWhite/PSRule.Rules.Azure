@@ -14358,59 +14358,59 @@ Zone redundancy improves resiliency and high availability of the service by depl
 <li>Set <code>sku.name</code> and/or <code>properties.additionalLocations[*].sku.name</code> to <code>Premium</code>.</li>
 </ul>
 <p>For example:</p>
-<div class="language-text highlight"><span class="filename">Azure Bicep snippet</span><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>resource service_api_mgmt_test2_name_resource &#39;Microsoft.ApiManagement/service@2021-01-01-preview&#39; = {
-</span><span id="__span-1-2"><a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a>  name: service_api_mgmt_test2_name
-</span><span id="__span-1-3"><a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a>  location: &#39;Australia East&#39;
-</span><span id="__span-1-4"><a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a>  sku: {
-</span><span id="__span-1-5"><a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a>    name: &#39;Premium&#39;
-</span><span id="__span-1-6"><a id="__codelineno-1-6" name="__codelineno-1-6" href="#__codelineno-1-6"></a>    capacity: 3
-</span><span id="__span-1-7"><a id="__codelineno-1-7" name="__codelineno-1-7" href="#__codelineno-1-7"></a>  }
-</span><span id="__span-1-8"><a id="__codelineno-1-8" name="__codelineno-1-8" href="#__codelineno-1-8"></a>  zones: [
-</span><span id="__span-1-9"><a id="__codelineno-1-9" name="__codelineno-1-9" href="#__codelineno-1-9"></a>    &#39;1&#39;,
-</span><span id="__span-1-10"><a id="__codelineno-1-10" name="__codelineno-1-10" href="#__codelineno-1-10"></a>    &#39;2&#39;,
-</span><span id="__span-1-11"><a id="__codelineno-1-11" name="__codelineno-1-11" href="#__codelineno-1-11"></a>    &#39;3&#39;
-</span><span id="__span-1-12"><a id="__codelineno-1-12" name="__codelineno-1-12" href="#__codelineno-1-12"></a>  ]
-</span><span id="__span-1-13"><a id="__codelineno-1-13" name="__codelineno-1-13" href="#__codelineno-1-13"></a>  properties: {
-</span><span id="__span-1-14"><a id="__codelineno-1-14" name="__codelineno-1-14" href="#__codelineno-1-14"></a>    publisherEmail: &#39;john.doe@contoso.com&#39;
-</span><span id="__span-1-15"><a id="__codelineno-1-15" name="__codelineno-1-15" href="#__codelineno-1-15"></a>    publisherName: &#39;contoso&#39;
-</span><span id="__span-1-16"><a id="__codelineno-1-16" name="__codelineno-1-16" href="#__codelineno-1-16"></a>    notificationSenderEmail: &#39;apimgmt-noreply@mail.windowsazure.com&#39;
-</span><span id="__span-1-17"><a id="__codelineno-1-17" name="__codelineno-1-17" href="#__codelineno-1-17"></a>    hostnameConfigurations: [
-</span><span id="__span-1-18"><a id="__codelineno-1-18" name="__codelineno-1-18" href="#__codelineno-1-18"></a>      {
-</span><span id="__span-1-19"><a id="__codelineno-1-19" name="__codelineno-1-19" href="#__codelineno-1-19"></a>        type: &#39;Proxy&#39;
-</span><span id="__span-1-20"><a id="__codelineno-1-20" name="__codelineno-1-20" href="#__codelineno-1-20"></a>        hostName: &#39;${service_api_mgmt_test2_name}.azure-api.net&#39;
-</span><span id="__span-1-21"><a id="__codelineno-1-21" name="__codelineno-1-21" href="#__codelineno-1-21"></a>        negotiateClientCertificate: false
-</span><span id="__span-1-22"><a id="__codelineno-1-22" name="__codelineno-1-22" href="#__codelineno-1-22"></a>        defaultSslBinding: true
-</span><span id="__span-1-23"><a id="__codelineno-1-23" name="__codelineno-1-23" href="#__codelineno-1-23"></a>        certificateSource: &#39;BuiltIn&#39;
-</span><span id="__span-1-24"><a id="__codelineno-1-24" name="__codelineno-1-24" href="#__codelineno-1-24"></a>      }
-</span><span id="__span-1-25"><a id="__codelineno-1-25" name="__codelineno-1-25" href="#__codelineno-1-25"></a>    ]
-</span><span id="__span-1-26"><a id="__codelineno-1-26" name="__codelineno-1-26" href="#__codelineno-1-26"></a>    additionalLocations: [
-</span><span id="__span-1-27"><a id="__codelineno-1-27" name="__codelineno-1-27" href="#__codelineno-1-27"></a>      {
-</span><span id="__span-1-28"><a id="__codelineno-1-28" name="__codelineno-1-28" href="#__codelineno-1-28"></a>        location: &#39;East US&#39;
-</span><span id="__span-1-29"><a id="__codelineno-1-29" name="__codelineno-1-29" href="#__codelineno-1-29"></a>        sku: {
-</span><span id="__span-1-30"><a id="__codelineno-1-30" name="__codelineno-1-30" href="#__codelineno-1-30"></a>          name: &#39;Premium&#39;
-</span><span id="__span-1-31"><a id="__codelineno-1-31" name="__codelineno-1-31" href="#__codelineno-1-31"></a>          capacity: 1
-</span><span id="__span-1-32"><a id="__codelineno-1-32" name="__codelineno-1-32" href="#__codelineno-1-32"></a>        }
-</span><span id="__span-1-33"><a id="__codelineno-1-33" name="__codelineno-1-33" href="#__codelineno-1-33"></a>        zones: [
-</span><span id="__span-1-34"><a id="__codelineno-1-34" name="__codelineno-1-34" href="#__codelineno-1-34"></a>          &#39;1&#39;
-</span><span id="__span-1-35"><a id="__codelineno-1-35" name="__codelineno-1-35" href="#__codelineno-1-35"></a>        ]
-</span><span id="__span-1-36"><a id="__codelineno-1-36" name="__codelineno-1-36" href="#__codelineno-1-36"></a>        disableGateway: false
-</span><span id="__span-1-37"><a id="__codelineno-1-37" name="__codelineno-1-37" href="#__codelineno-1-37"></a>      }
-</span><span id="__span-1-38"><a id="__codelineno-1-38" name="__codelineno-1-38" href="#__codelineno-1-38"></a>    ]
-</span><span id="__span-1-39"><a id="__codelineno-1-39" name="__codelineno-1-39" href="#__codelineno-1-39"></a>    customProperties: {
-</span><span id="__span-1-40"><a id="__codelineno-1-40" name="__codelineno-1-40" href="#__codelineno-1-40"></a>      &#39;Microsoft.WindowsAzure.ApiManagement.Gateway.Security.Ciphers.TripleDes168&#39;: &#39;false&#39;
-</span><span id="__span-1-41"><a id="__codelineno-1-41" name="__codelineno-1-41" href="#__codelineno-1-41"></a>      &#39;Microsoft.WindowsAzure.ApiManagement.Gateway.Security.Protocols.Tls11&#39;: &#39;false&#39;
-</span><span id="__span-1-42"><a id="__codelineno-1-42" name="__codelineno-1-42" href="#__codelineno-1-42"></a>      &#39;Microsoft.WindowsAzure.ApiManagement.Gateway.Security.Protocols.Tls10&#39;: &#39;false&#39;
-</span><span id="__span-1-43"><a id="__codelineno-1-43" name="__codelineno-1-43" href="#__codelineno-1-43"></a>      &#39;Microsoft.WindowsAzure.ApiManagement.Gateway.Security.Protocols.Ssl30&#39;: &#39;false&#39;
-</span><span id="__span-1-44"><a id="__codelineno-1-44" name="__codelineno-1-44" href="#__codelineno-1-44"></a>      &#39;Microsoft.WindowsAzure.ApiManagement.Gateway.Security.Backend.Protocols.Tls11&#39;: &#39;false&#39;
-</span><span id="__span-1-45"><a id="__codelineno-1-45" name="__codelineno-1-45" href="#__codelineno-1-45"></a>      &#39;Microsoft.WindowsAzure.ApiManagement.Gateway.Security.Backend.Protocols.Tls10&#39;: &#39;false&#39;
-</span><span id="__span-1-46"><a id="__codelineno-1-46" name="__codelineno-1-46" href="#__codelineno-1-46"></a>      &#39;Microsoft.WindowsAzure.ApiManagement.Gateway.Security.Backend.Protocols.Ssl30&#39;: &#39;false&#39;
-</span><span id="__span-1-47"><a id="__codelineno-1-47" name="__codelineno-1-47" href="#__codelineno-1-47"></a>      &#39;Microsoft.WindowsAzure.ApiManagement.Gateway.Protocols.Server.Http2&#39;: &#39;false&#39;
-</span><span id="__span-1-48"><a id="__codelineno-1-48" name="__codelineno-1-48" href="#__codelineno-1-48"></a>    }
-</span><span id="__span-1-49"><a id="__codelineno-1-49" name="__codelineno-1-49" href="#__codelineno-1-49"></a>    virtualNetworkType: &#39;None&#39;
-</span><span id="__span-1-50"><a id="__codelineno-1-50" name="__codelineno-1-50" href="#__codelineno-1-50"></a>    disableGateway: false
-</span><span id="__span-1-51"><a id="__codelineno-1-51" name="__codelineno-1-51" href="#__codelineno-1-51"></a>    apiVersionConstraint: {}
-</span><span id="__span-1-52"><a id="__codelineno-1-52" name="__codelineno-1-52" href="#__codelineno-1-52"></a>  }
-</span><span id="__span-1-53"><a id="__codelineno-1-53" name="__codelineno-1-53" href="#__codelineno-1-53"></a>}
+<div class="language-bicep highlight"><span class="filename">Azure Bicep snippet</span><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="kd">resource</span><span class="w"> </span><span class="n n-Symbol">service_api_mgmt_test2_name_resource</span><span class="err"> </span><span class="s">&#39;Microsoft.ApiManagement/service@2021-01-01-preview&#39;</span><span class="err"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-1-2"><a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a><span class="w">  </span><span class="py">name</span><span class="p">:</span><span class="w"> </span><span class="err">service_api_mgmt_test</span><span class="mi">2</span><span class="err">_name</span>
+</span><span id="__span-1-3"><a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a><span class="w">  </span><span class="py">location</span><span class="p">:</span><span class="w"> </span><span class="s">&#39;Australia East&#39;</span>
+</span><span id="__span-1-4"><a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a><span class="w">  </span><span class="py">sku</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-1-5"><a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a><span class="w">    </span><span class="py">name</span><span class="p">:</span><span class="w"> </span><span class="s">&#39;Premium&#39;</span>
+</span><span id="__span-1-6"><a id="__codelineno-1-6" name="__codelineno-1-6" href="#__codelineno-1-6"></a><span class="w">    </span><span class="py">capacity</span><span class="p">:</span><span class="w"> </span><span class="mi">3</span>
+</span><span id="__span-1-7"><a id="__codelineno-1-7" name="__codelineno-1-7" href="#__codelineno-1-7"></a><span class="w">  </span><span class="p">}</span>
+</span><span id="__span-1-8"><a id="__codelineno-1-8" name="__codelineno-1-8" href="#__codelineno-1-8"></a><span class="w">  </span><span class="py">zones</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
+</span><span id="__span-1-9"><a id="__codelineno-1-9" name="__codelineno-1-9" href="#__codelineno-1-9"></a><span class="w">    </span><span class="s">&#39;1&#39;</span><span class="p">,</span>
+</span><span id="__span-1-10"><a id="__codelineno-1-10" name="__codelineno-1-10" href="#__codelineno-1-10"></a><span class="w">    </span><span class="s">&#39;2&#39;</span><span class="p">,</span>
+</span><span id="__span-1-11"><a id="__codelineno-1-11" name="__codelineno-1-11" href="#__codelineno-1-11"></a><span class="w">    </span><span class="s">&#39;3&#39;</span>
+</span><span id="__span-1-12"><a id="__codelineno-1-12" name="__codelineno-1-12" href="#__codelineno-1-12"></a><span class="w">  </span><span class="p">]</span>
+</span><span id="__span-1-13"><a id="__codelineno-1-13" name="__codelineno-1-13" href="#__codelineno-1-13"></a><span class="w">  </span><span class="py">properties</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-1-14"><a id="__codelineno-1-14" name="__codelineno-1-14" href="#__codelineno-1-14"></a><span class="w">    </span><span class="py">publisherEmail</span><span class="p">:</span><span class="w"> </span><span class="s">&#39;john.doe@contoso.com&#39;</span>
+</span><span id="__span-1-15"><a id="__codelineno-1-15" name="__codelineno-1-15" href="#__codelineno-1-15"></a><span class="w">    </span><span class="py">publisherName</span><span class="p">:</span><span class="w"> </span><span class="s">&#39;contoso&#39;</span>
+</span><span id="__span-1-16"><a id="__codelineno-1-16" name="__codelineno-1-16" href="#__codelineno-1-16"></a><span class="w">    </span><span class="py">notificationSenderEmail</span><span class="p">:</span><span class="w"> </span><span class="s">&#39;apimgmt-noreply@mail.windowsazure.com&#39;</span>
+</span><span id="__span-1-17"><a id="__codelineno-1-17" name="__codelineno-1-17" href="#__codelineno-1-17"></a><span class="w">    </span><span class="py">hostnameConfigurations</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
+</span><span id="__span-1-18"><a id="__codelineno-1-18" name="__codelineno-1-18" href="#__codelineno-1-18"></a><span class="w">      </span><span class="p">{</span>
+</span><span id="__span-1-19"><a id="__codelineno-1-19" name="__codelineno-1-19" href="#__codelineno-1-19"></a><span class="w">        </span><span class="py">type</span><span class="p">:</span><span class="w"> </span><span class="s">&#39;Proxy&#39;</span>
+</span><span id="__span-1-20"><a id="__codelineno-1-20" name="__codelineno-1-20" href="#__codelineno-1-20"></a><span class="w">        </span><span class="py">hostName</span><span class="p">:</span><span class="w"> </span><span class="s">&#39;${service_api_mgmt_test2_name}.azure-api.net&#39;</span>
+</span><span id="__span-1-21"><a id="__codelineno-1-21" name="__codelineno-1-21" href="#__codelineno-1-21"></a><span class="w">        </span><span class="py">negotiateClientCertificate</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span>
+</span><span id="__span-1-22"><a id="__codelineno-1-22" name="__codelineno-1-22" href="#__codelineno-1-22"></a><span class="w">        </span><span class="py">defaultSslBinding</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span>
+</span><span id="__span-1-23"><a id="__codelineno-1-23" name="__codelineno-1-23" href="#__codelineno-1-23"></a><span class="w">        </span><span class="py">certificateSource</span><span class="p">:</span><span class="w"> </span><span class="s">&#39;BuiltIn&#39;</span>
+</span><span id="__span-1-24"><a id="__codelineno-1-24" name="__codelineno-1-24" href="#__codelineno-1-24"></a><span class="w">      </span><span class="p">}</span>
+</span><span id="__span-1-25"><a id="__codelineno-1-25" name="__codelineno-1-25" href="#__codelineno-1-25"></a><span class="w">    </span><span class="p">]</span>
+</span><span id="__span-1-26"><a id="__codelineno-1-26" name="__codelineno-1-26" href="#__codelineno-1-26"></a><span class="w">    </span><span class="py">additionalLocations</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
+</span><span id="__span-1-27"><a id="__codelineno-1-27" name="__codelineno-1-27" href="#__codelineno-1-27"></a><span class="w">      </span><span class="p">{</span>
+</span><span id="__span-1-28"><a id="__codelineno-1-28" name="__codelineno-1-28" href="#__codelineno-1-28"></a><span class="w">        </span><span class="py">location</span><span class="p">:</span><span class="w"> </span><span class="s">&#39;East US&#39;</span>
+</span><span id="__span-1-29"><a id="__codelineno-1-29" name="__codelineno-1-29" href="#__codelineno-1-29"></a><span class="w">        </span><span class="py">sku</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-1-30"><a id="__codelineno-1-30" name="__codelineno-1-30" href="#__codelineno-1-30"></a><span class="w">          </span><span class="py">name</span><span class="p">:</span><span class="w"> </span><span class="s">&#39;Premium&#39;</span>
+</span><span id="__span-1-31"><a id="__codelineno-1-31" name="__codelineno-1-31" href="#__codelineno-1-31"></a><span class="w">          </span><span class="py">capacity</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span>
+</span><span id="__span-1-32"><a id="__codelineno-1-32" name="__codelineno-1-32" href="#__codelineno-1-32"></a><span class="w">        </span><span class="p">}</span>
+</span><span id="__span-1-33"><a id="__codelineno-1-33" name="__codelineno-1-33" href="#__codelineno-1-33"></a><span class="w">        </span><span class="py">zones</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
+</span><span id="__span-1-34"><a id="__codelineno-1-34" name="__codelineno-1-34" href="#__codelineno-1-34"></a><span class="w">          </span><span class="s">&#39;1&#39;</span>
+</span><span id="__span-1-35"><a id="__codelineno-1-35" name="__codelineno-1-35" href="#__codelineno-1-35"></a><span class="w">        </span><span class="p">]</span>
+</span><span id="__span-1-36"><a id="__codelineno-1-36" name="__codelineno-1-36" href="#__codelineno-1-36"></a><span class="w">        </span><span class="py">disableGateway</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span>
+</span><span id="__span-1-37"><a id="__codelineno-1-37" name="__codelineno-1-37" href="#__codelineno-1-37"></a><span class="w">      </span><span class="p">}</span>
+</span><span id="__span-1-38"><a id="__codelineno-1-38" name="__codelineno-1-38" href="#__codelineno-1-38"></a><span class="w">    </span><span class="p">]</span>
+</span><span id="__span-1-39"><a id="__codelineno-1-39" name="__codelineno-1-39" href="#__codelineno-1-39"></a><span class="w">    </span><span class="py">customProperties</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-1-40"><a id="__codelineno-1-40" name="__codelineno-1-40" href="#__codelineno-1-40"></a><span class="w">      </span><span class="s">&#39;Microsoft.WindowsAzure.ApiManagement.Gateway.Security.Ciphers.TripleDes168&#39;</span><span class="err">:</span><span class="w"> </span><span class="s">&#39;false&#39;</span>
+</span><span id="__span-1-41"><a id="__codelineno-1-41" name="__codelineno-1-41" href="#__codelineno-1-41"></a><span class="w">      </span><span class="s">&#39;Microsoft.WindowsAzure.ApiManagement.Gateway.Security.Protocols.Tls11&#39;</span><span class="err">:</span><span class="w"> </span><span class="s">&#39;false&#39;</span>
+</span><span id="__span-1-42"><a id="__codelineno-1-42" name="__codelineno-1-42" href="#__codelineno-1-42"></a><span class="w">      </span><span class="s">&#39;Microsoft.WindowsAzure.ApiManagement.Gateway.Security.Protocols.Tls10&#39;</span><span class="err">:</span><span class="w"> </span><span class="s">&#39;false&#39;</span>
+</span><span id="__span-1-43"><a id="__codelineno-1-43" name="__codelineno-1-43" href="#__codelineno-1-43"></a><span class="w">      </span><span class="s">&#39;Microsoft.WindowsAzure.ApiManagement.Gateway.Security.Protocols.Ssl30&#39;</span><span class="err">:</span><span class="w"> </span><span class="s">&#39;false&#39;</span>
+</span><span id="__span-1-44"><a id="__codelineno-1-44" name="__codelineno-1-44" href="#__codelineno-1-44"></a><span class="w">      </span><span class="s">&#39;Microsoft.WindowsAzure.ApiManagement.Gateway.Security.Backend.Protocols.Tls11&#39;</span><span class="err">:</span><span class="w"> </span><span class="s">&#39;false&#39;</span>
+</span><span id="__span-1-45"><a id="__codelineno-1-45" name="__codelineno-1-45" href="#__codelineno-1-45"></a><span class="w">      </span><span class="s">&#39;Microsoft.WindowsAzure.ApiManagement.Gateway.Security.Backend.Protocols.Tls10&#39;</span><span class="err">:</span><span class="w"> </span><span class="s">&#39;false&#39;</span>
+</span><span id="__span-1-46"><a id="__codelineno-1-46" name="__codelineno-1-46" href="#__codelineno-1-46"></a><span class="w">      </span><span class="s">&#39;Microsoft.WindowsAzure.ApiManagement.Gateway.Security.Backend.Protocols.Ssl30&#39;</span><span class="err">:</span><span class="w"> </span><span class="s">&#39;false&#39;</span>
+</span><span id="__span-1-47"><a id="__codelineno-1-47" name="__codelineno-1-47" href="#__codelineno-1-47"></a><span class="w">      </span><span class="s">&#39;Microsoft.WindowsAzure.ApiManagement.Gateway.Protocols.Server.Http2&#39;</span><span class="err">:</span><span class="w"> </span><span class="s">&#39;false&#39;</span>
+</span><span id="__span-1-48"><a id="__codelineno-1-48" name="__codelineno-1-48" href="#__codelineno-1-48"></a><span class="w">    </span><span class="p">}</span>
+</span><span id="__span-1-49"><a id="__codelineno-1-49" name="__codelineno-1-49" href="#__codelineno-1-49"></a><span class="w">    </span><span class="py">virtualNetworkType</span><span class="p">:</span><span class="w"> </span><span class="s">&#39;None&#39;</span>
+</span><span id="__span-1-50"><a id="__codelineno-1-50" name="__codelineno-1-50" href="#__codelineno-1-50"></a><span class="w">    </span><span class="py">disableGateway</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span>
+</span><span id="__span-1-51"><a id="__codelineno-1-51" name="__codelineno-1-51" href="#__codelineno-1-51"></a><span class="w">    </span><span class="py">apiVersionConstraint</span><span class="p">:</span><span class="w"> </span><span class="p">{}</span>
+</span><span id="__span-1-52"><a id="__codelineno-1-52" name="__codelineno-1-52" href="#__codelineno-1-52"></a><span class="w">  </span><span class="p">}</span>
+</span><span id="__span-1-53"><a id="__codelineno-1-53" name="__codelineno-1-53" href="#__codelineno-1-53"></a><span class="p">}</span>
 </span></code></pre></div>
 <div class="admonition example">
 <p class="admonition-title">Configure with <a href="https://github.com/Azure/bicep-registry-modules/tree/main/avm/res/api-management/service">Azure Verified Modules</a></p>

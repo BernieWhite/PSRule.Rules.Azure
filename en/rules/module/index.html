@@ -2569,15 +2569,6 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#infrastructure-provisioning_1" class="md-nav__link">
-    <span class="md-ellipsis">
-      Infrastructure provisioning
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
   <a href="#key-and-secret-management" class="md-nav__link">
     <span class="md-ellipsis">
       Key and secret management
@@ -15330,15 +15321,6 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#infrastructure-provisioning_1" class="md-nav__link">
-    <span class="md-ellipsis">
-      Infrastructure provisioning
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
   <a href="#key-and-secret-management" class="md-nav__link">
     <span class="md-ellipsis">
       Key and secret management
@@ -17665,20 +17647,8 @@
 <td>Error</td>
 </tr>
 <tr>
-<td><a href="../Azure.APIM.HTTPEndpoint/">Azure.APIM.HTTPEndpoint</a></td>
-<td>Enforce HTTPS for communication to API clients.</td>
-<td>Important</td>
-<td>Error</td>
-</tr>
-<tr>
 <td><a href="../Azure.Automation.EncryptVariables/">Azure.Automation.EncryptVariables</a></td>
 <td>Azure Automation variables should be encrypted.</td>
-<td>Important</td>
-<td>Error</td>
-</tr>
-<tr>
-<td><a href="../Azure.CDN.HTTP/">Azure.CDN.HTTP</a></td>
-<td>Enforce HTTPS for client connections.</td>
 <td>Important</td>
 <td>Error</td>
 </tr>
@@ -17739,21 +17709,9 @@
 <td>Error</td>
 </tr>
 <tr>
-<td><a href="../Azure.APIM.HTTPBackend/">Azure.APIM.HTTPBackend</a></td>
-<td>Use HTTPS for communication to backend services.</td>
-<td>Critical</td>
-<td>Error</td>
-</tr>
-<tr>
 <td><a href="../Azure.APIM.Protocols/">Azure.APIM.Protocols</a></td>
 <td>API Management should only accept a minimum of TLS 1.2 for client and backend communication.</td>
 <td>Critical</td>
-<td>Error</td>
-</tr>
-<tr>
-<td><a href="../Azure.CDN.MinTLS/">Azure.CDN.MinTLS</a></td>
-<td>Azure CDN endpoints should reject TLS versions older than 1.2.</td>
-<td>Important</td>
 <td>Error</td>
 </tr>
 <tr>
@@ -17845,37 +17803,6 @@
 <td><a href="../Azure.VMSS.PublicKey/">Azure.VMSS.PublicKey</a></td>
 <td>Use SSH keys instead of common credentials to secure virtual machine scale sets against malicious activities.</td>
 <td>Important</td>
-<td>Error</td>
-</tr>
-</tbody>
-</table>
-<h3 id="infrastructure-provisioning_1">Infrastructure provisioning<a class="headerlink" href="#infrastructure-provisioning_1" title="Permanent link">#</a></h3>
-<table>
-<thead>
-<tr>
-<th>Name</th>
-<th>Synopsis</th>
-<th>Severity</th>
-<th>Level</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><a href="../Azure.Deployment.AdminUsername/">Azure.Deployment.AdminUsername</a></td>
-<td>Use secure parameters for sensitive resource properties.</td>
-<td>Awareness</td>
-<td>Error</td>
-</tr>
-<tr>
-<td><a href="../Azure.Deployment.OuterSecret/">Azure.Deployment.OuterSecret</a></td>
-<td>Do not use Outer deployments when references SecureString or SecureObject parameters.</td>
-<td>Critical</td>
-<td>Error</td>
-</tr>
-<tr>
-<td><a href="../Azure.Deployment.OutputSecretValue/">Azure.Deployment.OutputSecretValue</a></td>
-<td>Avoid outputting sensitive deployment values.</td>
-<td>Critical</td>
 <td>Error</td>
 </tr>
 </tbody>
@@ -18089,8 +18016,26 @@
 <td>Error</td>
 </tr>
 <tr>
+<td><a href="../Azure.Deployment.AdminUsername/">Azure.Deployment.AdminUsername</a></td>
+<td>A sensitive property set from deterministic or hardcoded values is not secure.</td>
+<td>Awareness</td>
+<td>Error</td>
+</tr>
+<tr>
+<td><a href="../Azure.Deployment.OuterSecret/">Azure.Deployment.OuterSecret</a></td>
+<td>Outer evaluation deployments may leak secrets exposed as secure parameters into logs and nested deployments.</td>
+<td>Critical</td>
+<td>Error</td>
+</tr>
+<tr>
+<td><a href="../Azure.Deployment.OutputSecretValue/">Azure.Deployment.OutputSecretValue</a></td>
+<td>Outputting a sensitive value from deployment may leak secrets into deployment history or logs.</td>
+<td>Critical</td>
+<td>Error</td>
+</tr>
+<tr>
 <td><a href="../Azure.Deployment.SecureParameter/">Azure.Deployment.SecureParameter</a></td>
-<td>Use secure parameters for any parameter that contains sensitive information.</td>
+<td>Sensitive parameters that have been not been marked as secure may leak the secret into deployment history or logs.</td>
 <td>Critical</td>
 <td>Error</td>
 </tr>
@@ -18633,6 +18578,18 @@
 <td>Error</td>
 </tr>
 <tr>
+<td><a href="../Azure.APIM.HTTPBackend/">Azure.APIM.HTTPBackend</a></td>
+<td>Unencrypted communication could allow disclosure of information to an untrusted party.</td>
+<td>Critical</td>
+<td>Error</td>
+</tr>
+<tr>
+<td><a href="../Azure.APIM.HTTPEndpoint/">Azure.APIM.HTTPEndpoint</a></td>
+<td>Unencrypted communication could allow disclosure of information to an untrusted party.</td>
+<td>Important</td>
+<td>Error</td>
+</tr>
+<tr>
 <td><a href="../Azure.AppGw.SSLPolicy/">Azure.AppGw.SSLPolicy</a></td>
 <td>Application Gateway should only accept a minimum of TLS 1.2.</td>
 <td>Critical</td>
@@ -18652,13 +18609,25 @@
 </tr>
 <tr>
 <td><a href="../Azure.AppService.UseHTTPS/">Azure.AppService.UseHTTPS</a></td>
-<td>Azure App Service apps should only accept encrypted connections.</td>
+<td>Unencrypted communication could allow disclosure of information to an untrusted party.</td>
 <td>Important</td>
 <td>Error</td>
 </tr>
 <tr>
 <td><a href="../Azure.AppService.WebSecureFtp/">Azure.AppService.WebSecureFtp</a></td>
 <td>Web apps should disable insecure FTP and configure SFTP when required.</td>
+<td>Important</td>
+<td>Error</td>
+</tr>
+<tr>
+<td><a href="../Azure.CDN.HTTP/">Azure.CDN.HTTP</a></td>
+<td>Unencrypted communication could allow disclosure of information to an untrusted party.</td>
+<td>Important</td>
+<td>Error</td>
+</tr>
+<tr>
+<td><a href="../Azure.CDN.MinTLS/">Azure.CDN.MinTLS</a></td>
+<td>Azure CDN endpoints should reject TLS versions older than 1.2.</td>
 <td>Important</td>
 <td>Error</td>
 </tr>

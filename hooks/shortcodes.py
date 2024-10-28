@@ -8,6 +8,7 @@ import logging
 import os
 import re
 import json
+import io
 
 from mkdocs.config.defaults import MkDocsConfig
 from mkdocs.structure.files import File, Files
@@ -22,7 +23,7 @@ log = logging.getLogger(f"mkdocs")
 def on_page_markdown(markdown: str, *, page: Page, config: MkDocsConfig, files: Files) -> str:
     '''Hook on_page_markdown event.'''
 
-    return external(module(markdown, page, config, files), page, config, files)
+    return security_note(external(module(markdown, page, config, files), page, config, files), page, config, files)
 
 #
 # Supporting functions
@@ -65,6 +66,24 @@ def external(markdown: str, page: Page, config: MkDocsConfig, files: Files) -> s
     # Replace external shortcodes.
     return re.sub(
         r"<!-- external:(\w+)(.*?) -->",
+        replace, markdown, flags = re.I | re.M
+    )
+
+def security_note(markdown: str, page: Page, config: MkDocsConfig, files: Files) -> str:
+    '''Replace security notes shortcodes in markdown.'''
+
+    # Callback for regular expression replacement.
+    def replace(match: re.Match) -> str:
+        type, args = match.groups()
+        args = args.strip()
+        if type == "note":
+            return _security_note_block(args, page, config)
+
+        raise RuntimeError(f"Unknown shortcode security:{type}")
+
+    # Replace security note shortcodes.
+    return re.sub(
+        r"<!-- security:(\w+)(.*?) -->",
         replace, markdown, flags = re.I | re.M
     )
 
@@ -210,3 +229,46 @@ def _avm_module_latest_tag(page: Page, name: str) -> str:
             latest = data[name]['Latest']
 
     return latest
+
+def _find_include_for_culture(config: MkDocsConfig, culture: str, path: str) -> str:
+    '''Find the markdown include file for a specific culture.'''
+    defaultCulture = config.theme.locale
+    culture = culture.lower()
+
+    # Get the repo root path.
+    repo_root_dir = os.path.join(config.docs_dir, "..")
+
+    # Find the include file for the culture.
+    includeFile = f"{repo_root_dir}/includes/{culture}/{path}"
+    fallbackFile = f"{repo_root_dir}/includes/{defaultCulture}/{path}"
+
+    # If the path exists load the contents from disk.
+    if os.path.exists(includeFile) and os.path.isfile(includeFile):
+        return io.open(includeFile, 'r', encoding='utf-8').read()
+
+    # If the path does not exist, try the default culture.
+    if os.path.exists(fallbackFile) and os.path.isfile(fallbackFile):
+        return io.open(fallbackFile, 'r', encoding='utf-8').read()
+
+    raise RuntimeError(f"Unknown include '{path}' not found at '{includeFile}' or '{fallbackFile}'.")
+
+def _get_culture_from_page(page: Page, config: MkDocsConfig) -> str:
+    '''Get the culture from the page file path.'''
+
+    culture = config.theme.locale
+    if page.file.src_path.startswith('en'):
+        culture = 'en'
+
+    elif page.file.src_path.startswith('es'):
+        culture = 'es'
+
+    return culture
+
+
+def _security_note_block(text: str, page: Page, config: MkDocsConfig) -> str:
+    '''Create a security note block.'''
+
+    culture = _get_culture_from_page(page, config)
+    name = text.split(' ')[0]
+
+    return _find_include_for_culture(config, culture, f"security-notes/{name}.md")

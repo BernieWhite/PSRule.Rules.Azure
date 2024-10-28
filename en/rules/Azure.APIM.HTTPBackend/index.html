@@ -6,7 +6,7 @@
       <meta charset="utf-8">
       <meta name="viewport" content="width=device-width,initial-scale=1">
       
-        <meta name="description" content="Use HTTPS for communication to backend services.">
+        <meta name="description" content="Unencrypted communication could allow disclosure of information to an untrusted party.">
       
       
         <meta name="author" content="Microsoft">
@@ -82,19 +82,19 @@
   <meta property="og:site_name" content="PSRule for Azure" />
   <meta property="og:type" content="website" />
   <meta property="og:title" content="PSRule for Azure - Azure.APIM.HTTPBackend" />
-  <meta property="og:description" content="Use HTTPS for communication to backend services." />
+  <meta property="og:description" content="Unencrypted communication could allow disclosure of information to an untrusted party." />
   <meta property="og:url" content="https://azure.github.io/PSRule.Rules.Azure/en/rules/Azure.APIM.HTTPBackend/" />
   <meta property="og:image" content="https://repository-images.githubusercontent.com/184154668/58818c00-d496-11eb-9b77-016145022654" />
   <meta property="og:image:type" content="image/png" />
   <meta property="og:image:width" content="1280" />
   <meta property="og:image:height" content="640" />
-  <meta property="og:image:alt" content="Use HTTPS for communication to backend services." />
+  <meta property="og:image:alt" content="Unencrypted communication could allow disclosure of information to an untrusted party." />
 
   <!-- Twitter meta tags -->
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:site" content="@github" />
   <meta name="twitter:title" content="PSRule for Azure - Azure.APIM.HTTPBackend" />
-  <meta name="twitter:description" content="Use HTTPS for communication to backend services." />
+  <meta name="twitter:description" content="Unencrypted communication could allow disclosure of information to an untrusted party." />
   <meta name="twitter:image" content="https://repository-images.githubusercontent.com/184154668/58818c00-d496-11eb-9b77-016145022654" />
 
 
@@ -115,7 +115,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#use-https-backend-connections" class="md-skip">
+        <a href="#api-management-allows-unencrypted-traffic-to-backends" class="md-skip">
           Skip to content
         </a>
       
@@ -14241,14 +14241,14 @@
   
 
 
-<h1 id="use-https-backend-connections">Use HTTPS backend connections<a class="headerlink" href="#use-https-backend-connections" title="Permanent link">#</a></h1>
+<h1 id="api-management-allows-unencrypted-traffic-to-backends">API Management allows unencrypted traffic to backends<a class="headerlink" href="#api-management-allows-unencrypted-traffic-to-backends" title="Permanent link">#</a></h1>
 <nav class="md-tags"><span class="md-tag">Azure.APIM.HTTPBackend</span><span class="md-tag">AZR-000044</span><span class="md-tag">Error</span></nav>
 <p><a href="../module/#security"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M1.527 13.237a1.75 1.75 0 0 1 0-2.474l9.272-9.273a1.75 1.75 0 0 1 2.475 0l9.272 9.273a1.75 1.75 0 0 1 0 2.474l-9.272 9.272a1.75 1.75 0 0 1-2.475 0Zm1.06-1.414a.25.25 0 0 0 0 .354l9.273 9.272a.25.25 0 0 0 .353 0l9.272-9.272a.25.25 0 0 0 0-.354l-9.272-9.272a.25.25 0 0 0-.353 0Z"/></svg></span> Security</a>
  · <a href="../resource/#api-management"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13.152.682a2.25 2.25 0 0 1 2.269 0l.007.004 6.957 4.276a2.28 2.28 0 0 1 1.126 1.964v7.516c0 .81-.432 1.56-1.133 1.968l-.002.001-11.964 7.037-.004.003c-.706.41-1.578.41-2.284 0l-.026-.015-6.503-4.502a2.27 2.27 0 0 1-1.096-1.943V9.438c0-.392.1-.77.284-1.1l.003-.006.014-.026c.197-.342.48-.627.82-.827h.002L13.152.681Zm.757 1.295h-.001L2.648 8.616l6.248 4.247a.78.78 0 0 0 .758-.01h.001l11.633-6.804-6.629-4.074a.75.75 0 0 0-.75.003ZM8.517 14.33a2.3 2.3 0 0 1-.393-.18l-.023-.014-6.102-4.147v7.003c0 .275.145.528.379.664l.025.014 6.114 4.232zM18 9.709l-3.25 1.9v7.548L18 17.245Zm-7.59 4.438-.002.002a2.3 2.3 0 0 1-.391.18v7.612l3.233-1.902v-7.552Zm9.09-5.316v7.532l2.124-1.25a.78.78 0 0 0 .387-.671V7.363Z"/></svg></span> API Management</a>
  · <a href="https://github.com/Azure/PSRule.Rules.Azure/blob/main/src/PSRule.Rules.Azure/rules/Azure.APIM.Rule.ps1"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 3a2 2 0 0 1 2-2h9.982a2 2 0 0 1 1.414.586l4.018 4.018A2 2 0 0 1 21 7.018V21a2 2 0 0 1-2 2H4.75a.75.75 0 0 1 0-1.5H19a.5.5 0 0 0 .5-.5V8.5h-4a2 2 0 0 1-2-2v-4H5a.5.5 0 0 0-.5.5v6.25a.75.75 0 0 1-1.5 0Zm12-.5v4a.5.5 0 0 0 .5.5h4a.5.5 0 0 0-.146-.336l-4.018-4.018A.5.5 0 0 0 15 2.5"/><path d="M4.53 12.24a.75.75 0 0 1-.039 1.06l-2.639 2.45 2.64 2.45a.75.75 0 1 1-1.022 1.1l-3.23-3a.75.75 0 0 1 0-1.1l3.23-3a.75.75 0 0 1 1.06.04m3.979 1.06a.75.75 0 1 1 1.02-1.1l3.231 3a.75.75 0 0 1 0 1.1l-3.23 3a.75.75 0 1 1-1.021-1.1l2.639-2.45-2.64-2.45Z"/></svg></span> Rule</a>
  · <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M7.75 6.5a1.25 1.25 0 1 0 0 2.5 1.25 1.25 0 0 0 0-2.5"/><path d="M2.5 1h8.44a1.5 1.5 0 0 1 1.06.44l10.25 10.25a1.5 1.5 0 0 1 0 2.12l-8.44 8.44a1.5 1.5 0 0 1-2.12 0L1.44 12A1.5 1.5 0 0 1 1 10.94V2.5A1.5 1.5 0 0 1 2.5 1m0 1.5v8.44l10.25 10.25 8.44-8.44L10.94 2.5Z"/></svg></span> 2020_06
  · <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 1c3.681 0 7 2.565 7 6v4.539c0 .642.189 1.269.545 1.803l2.2 3.298A1.517 1.517 0 0 1 20.482 19H15.5a3.5 3.5 0 1 1-7 0H3.519a1.518 1.518 0 0 1-1.265-2.359l2.2-3.299A3.25 3.25 0 0 0 5 11.539V7c0-3.435 3.318-6 7-6M6.5 7v4.539a4.75 4.75 0 0 1-.797 2.635l-2.2 3.298-.003.01.001.007.004.006.006.004.007.001h16.964l.007-.001.006-.004.004-.006.001-.006-.003-.01-2.199-3.299a4.75 4.75 0 0 1-.798-2.635V7c0-2.364-2.383-4.5-5.5-4.5S6.5 4.636 6.5 7M14 19h-4a2 2 0 1 0 4 0"/></svg></span> Critical</p>
-<p>Use HTTPS for communication to backend services.</p>
+<p>Unencrypted communication could allow disclosure of information to an untrusted party.</p>
 <h2 id="description">Description<a class="headerlink" href="#description" title="Permanent link">#</a></h2>
 <p>When API Management connects to the backend API it can use HTTP or HTTPS.
 When using HTTP, sensitive information may be exposed to an untrusted party.</p>
@@ -14314,42 +14314,72 @@ When using HTTP, sensitive information may be exposed to an untrusted party.</p>
 <li>Set the <code>properties.serviceUrl</code> property to a URL that starts with <code>https://</code>.</li>
 </ul>
 <p>For example:</p>
-<div class="language-text highlight"><span class="filename">Azure Bicep snippet</span><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>resource api &#39;Microsoft.ApiManagement/service/apis@2021-08-01&#39; = {
-</span><span id="__span-2-2"><a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a>  parent: service
-</span><span id="__span-2-3"><a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a>  name: &#39;echo-v1&#39;
-</span><span id="__span-2-4"><a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a>  properties: {
-</span><span id="__span-2-5"><a id="__codelineno-2-5" name="__codelineno-2-5" href="#__codelineno-2-5"></a>    displayName: &#39;Echo API&#39;
-</span><span id="__span-2-6"><a id="__codelineno-2-6" name="__codelineno-2-6" href="#__codelineno-2-6"></a>    description: &#39;An echo API service.&#39;
-</span><span id="__span-2-7"><a id="__codelineno-2-7" name="__codelineno-2-7" href="#__codelineno-2-7"></a>    path: &#39;echo&#39;
-</span><span id="__span-2-8"><a id="__codelineno-2-8" name="__codelineno-2-8" href="#__codelineno-2-8"></a>    serviceUrl: &#39;https://echo.contoso.com&#39;
-</span><span id="__span-2-9"><a id="__codelineno-2-9" name="__codelineno-2-9" href="#__codelineno-2-9"></a>    protocols: [
-</span><span id="__span-2-10"><a id="__codelineno-2-10" name="__codelineno-2-10" href="#__codelineno-2-10"></a>      &#39;https&#39;
-</span><span id="__span-2-11"><a id="__codelineno-2-11" name="__codelineno-2-11" href="#__codelineno-2-11"></a>    ]
-</span><span id="__span-2-12"><a id="__codelineno-2-12" name="__codelineno-2-12" href="#__codelineno-2-12"></a>    apiVersion: &#39;v1&#39;
-</span><span id="__span-2-13"><a id="__codelineno-2-13" name="__codelineno-2-13" href="#__codelineno-2-13"></a>    apiVersionSetId: version.id
-</span><span id="__span-2-14"><a id="__codelineno-2-14" name="__codelineno-2-14" href="#__codelineno-2-14"></a>    subscriptionRequired: true
-</span><span id="__span-2-15"><a id="__codelineno-2-15" name="__codelineno-2-15" href="#__codelineno-2-15"></a>  }
-</span><span id="__span-2-16"><a id="__codelineno-2-16" name="__codelineno-2-16" href="#__codelineno-2-16"></a>}
+<div class="language-bicep highlight"><span class="filename">Azure Bicep snippet</span><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="kd">resource</span><span class="w"> </span><span class="n n-Symbol">api</span><span class="err"> </span><span class="s">&#39;Microsoft.ApiManagement/service/apis@2021-08-01&#39;</span><span class="err"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-2-2"><a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a><span class="w">  </span><span class="py">parent</span><span class="p">:</span><span class="w"> </span><span class="err">service</span>
+</span><span id="__span-2-3"><a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a><span class="w">  </span><span class="py">name</span><span class="p">:</span><span class="w"> </span><span class="s">&#39;echo-v1&#39;</span>
+</span><span id="__span-2-4"><a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a><span class="w">  </span><span class="py">properties</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-2-5"><a id="__codelineno-2-5" name="__codelineno-2-5" href="#__codelineno-2-5"></a><span class="w">    </span><span class="py">displayName</span><span class="p">:</span><span class="w"> </span><span class="s">&#39;Echo API&#39;</span>
+</span><span id="__span-2-6"><a id="__codelineno-2-6" name="__codelineno-2-6" href="#__codelineno-2-6"></a><span class="w">    </span><span class="py">description</span><span class="p">:</span><span class="w"> </span><span class="s">&#39;An echo API service.&#39;</span>
+</span><span id="__span-2-7"><a id="__codelineno-2-7" name="__codelineno-2-7" href="#__codelineno-2-7"></a><span class="w">    </span><span class="py">path</span><span class="p">:</span><span class="w"> </span><span class="s">&#39;echo&#39;</span>
+</span><span id="__span-2-8"><a id="__codelineno-2-8" name="__codelineno-2-8" href="#__codelineno-2-8"></a><span class="w">    </span><span class="py">serviceUrl</span><span class="p">:</span><span class="w"> </span><span class="s">&#39;https://echo.contoso.com&#39;</span>
+</span><span id="__span-2-9"><a id="__codelineno-2-9" name="__codelineno-2-9" href="#__codelineno-2-9"></a><span class="w">    </span><span class="py">protocols</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
+</span><span id="__span-2-10"><a id="__codelineno-2-10" name="__codelineno-2-10" href="#__codelineno-2-10"></a><span class="w">      </span><span class="s">&#39;https&#39;</span>
+</span><span id="__span-2-11"><a id="__codelineno-2-11" name="__codelineno-2-11" href="#__codelineno-2-11"></a><span class="w">    </span><span class="p">]</span>
+</span><span id="__span-2-12"><a id="__codelineno-2-12" name="__codelineno-2-12" href="#__codelineno-2-12"></a><span class="w">    </span><span class="py">apiVersion</span><span class="p">:</span><span class="w"> </span><span class="s">&#39;v1&#39;</span>
+</span><span id="__span-2-13"><a id="__codelineno-2-13" name="__codelineno-2-13" href="#__codelineno-2-13"></a><span class="w">    </span><span class="py">apiVersionSetId</span><span class="p">:</span><span class="w"> </span><span class="err">version.id</span>
+</span><span id="__span-2-14"><a id="__codelineno-2-14" name="__codelineno-2-14" href="#__codelineno-2-14"></a><span class="w">    </span><span class="py">subscriptionRequired</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span>
+</span><span id="__span-2-15"><a id="__codelineno-2-15" name="__codelineno-2-15" href="#__codelineno-2-15"></a><span class="w">  </span><span class="p">}</span>
+</span><span id="__span-2-16"><a id="__codelineno-2-16" name="__codelineno-2-16" href="#__codelineno-2-16"></a><span class="p">}</span>
 </span></code></pre></div>
+<div class="admonition example">
+<p class="admonition-title">Configure with <a href="https://github.com/Azure/bicep-registry-modules/tree/main/avm/res/api-management/service">Azure Verified Modules</a></p>
+<p>A pre-validated module supported by Microsoft is available from the Azure Bicep public registry.
+To reference the module, please use the following syntax:</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>br/public:avm/res/api-management/service:&lt;version&gt;
+</span></code></pre></div>
+<p>To use the latest version:</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a>br/public:avm/res/api-management/service:0.6.0
+</span></code></pre></div>
+<hr />
+<ul>
+<li><a href="https://aka.ms/avm">What is Azure Verified Modules?</a></li>
+<li><a href="https://github.com/Azure/bicep-registry-modules/tree/main/avm/res/api-management/service">Usage and parameters for this module</a></li>
+</ul>
+</div>
 <p>To deploy API backends that pass this rule:</p>
 <ul>
 <li>Set the <code>properties.url</code> property to a URL that starts with <code>https://</code>.</li>
 </ul>
 <p>For example:</p>
-<div class="language-text highlight"><span class="filename">Azure Bicep snippet</span><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>resource backend &#39;Microsoft.ApiManagement/service/backends@2021-08-01&#39; = {
-</span><span id="__span-3-2"><a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a>  parent: service
-</span><span id="__span-3-3"><a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a>  name: &#39;echo&#39;
-</span><span id="__span-3-4"><a id="__codelineno-3-4" name="__codelineno-3-4" href="#__codelineno-3-4"></a>  properties: {
-</span><span id="__span-3-5"><a id="__codelineno-3-5" name="__codelineno-3-5" href="#__codelineno-3-5"></a>    title: &#39;echo&#39;
-</span><span id="__span-3-6"><a id="__codelineno-3-6" name="__codelineno-3-6" href="#__codelineno-3-6"></a>    description: &#39;A backend service for the Each API.&#39;
-</span><span id="__span-3-7"><a id="__codelineno-3-7" name="__codelineno-3-7" href="#__codelineno-3-7"></a>    protocol: &#39;http&#39;
-</span><span id="__span-3-8"><a id="__codelineno-3-8" name="__codelineno-3-8" href="#__codelineno-3-8"></a>    url: &#39;https://echo.contoso.com&#39;
-</span><span id="__span-3-9"><a id="__codelineno-3-9" name="__codelineno-3-9" href="#__codelineno-3-9"></a>  }
-</span><span id="__span-3-10"><a id="__codelineno-3-10" name="__codelineno-3-10" href="#__codelineno-3-10"></a>}
+<div class="language-bicep highlight"><span class="filename">Azure Bicep snippet</span><pre><span></span><code><span id="__span-5-1"><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a><span class="kd">resource</span><span class="w"> </span><span class="n n-Symbol">backend</span><span class="err"> </span><span class="s">&#39;Microsoft.ApiManagement/service/backends@2021-08-01&#39;</span><span class="err"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-5-2"><a id="__codelineno-5-2" name="__codelineno-5-2" href="#__codelineno-5-2"></a><span class="w">  </span><span class="py">parent</span><span class="p">:</span><span class="w"> </span><span class="err">service</span>
+</span><span id="__span-5-3"><a id="__codelineno-5-3" name="__codelineno-5-3" href="#__codelineno-5-3"></a><span class="w">  </span><span class="py">name</span><span class="p">:</span><span class="w"> </span><span class="s">&#39;echo&#39;</span>
+</span><span id="__span-5-4"><a id="__codelineno-5-4" name="__codelineno-5-4" href="#__codelineno-5-4"></a><span class="w">  </span><span class="py">properties</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-5-5"><a id="__codelineno-5-5" name="__codelineno-5-5" href="#__codelineno-5-5"></a><span class="w">    </span><span class="py">title</span><span class="p">:</span><span class="w"> </span><span class="s">&#39;echo&#39;</span>
+</span><span id="__span-5-6"><a id="__codelineno-5-6" name="__codelineno-5-6" href="#__codelineno-5-6"></a><span class="w">    </span><span class="py">description</span><span class="p">:</span><span class="w"> </span><span class="s">&#39;A backend service for the Each API.&#39;</span>
+</span><span id="__span-5-7"><a id="__codelineno-5-7" name="__codelineno-5-7" href="#__codelineno-5-7"></a><span class="w">    </span><span class="py">protocol</span><span class="p">:</span><span class="w"> </span><span class="s">&#39;http&#39;</span>
+</span><span id="__span-5-8"><a id="__codelineno-5-8" name="__codelineno-5-8" href="#__codelineno-5-8"></a><span class="w">    </span><span class="py">url</span><span class="p">:</span><span class="w"> </span><span class="s">&#39;https://echo.contoso.com&#39;</span>
+</span><span id="__span-5-9"><a id="__codelineno-5-9" name="__codelineno-5-9" href="#__codelineno-5-9"></a><span class="w">  </span><span class="p">}</span>
+</span><span id="__span-5-10"><a id="__codelineno-5-10" name="__codelineno-5-10" href="#__codelineno-5-10"></a><span class="p">}</span>
 </span></code></pre></div>
+<div class="admonition example">
+<p class="admonition-title">Configure with <a href="https://github.com/Azure/bicep-registry-modules/tree/main/avm/res/api-management/service">Azure Verified Modules</a></p>
+<p>A pre-validated module supported by Microsoft is available from the Azure Bicep public registry.
+To reference the module, please use the following syntax:</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-6-1"><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a>br/public:avm/res/api-management/service:&lt;version&gt;
+</span></code></pre></div>
+<p>To use the latest version:</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-7-1"><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a>br/public:avm/res/api-management/service:0.6.0
+</span></code></pre></div>
+<hr />
+<ul>
+<li><a href="https://aka.ms/avm">What is Azure Verified Modules?</a></li>
+<li><a href="https://github.com/Azure/bicep-registry-modules/tree/main/avm/res/api-management/service">Usage and parameters for this module</a></li>
+</ul>
+</div>
 <h2 id="links">Links<a class="headerlink" href="#links" title="Permanent link">#</a></h2>
 <ul>
-<li><a href="https://learn.microsoft.com/azure/architecture/framework/security/design-storage-encryption#data-in-transit">Data encryption in Azure</a></li>
+<li><a href="https://learn.microsoft.com/azure/well-architected/security/encryption#encrypt-data-in-transit">SE:07 Encryption</a></li>
 <li><a href="https://learn.microsoft.com/azure/api-management/api-management-howto-manage-protocols-ciphers">Manage protocols and ciphers in Azure API Management</a></li>
 <li><a href="https://learn.microsoft.com/azure/api-management/api-management-howto-mutual-certificates">Secure backend services using client certificate authentication in Azure API Management</a></li>
 <li><a href="https://learn.microsoft.com/azure/templates/microsoft.apimanagement/service/apis">Azure deployment reference for APIs</a></li>
@@ -14377,7 +14407,7 @@ When using HTTP, sensitive information may be exposed to an untrusted party.</p>
     <span class="md-icon" title="Last update">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">March 29, 2024</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">October 26, 2024</span>
   </span>
 
     
@@ -14405,9 +14435,9 @@ When using HTTP, sensitive information may be exposed to an untrusted party.</p>
     
     <nav>
       
-        <a href="https://github.com/lukemurraynz" class="md-author" title="@lukemurraynz">
+        <a href="https://github.com/BernieWhite" class="md-author" title="@BernieWhite">
           
-          <img src="https://avatars.githubusercontent.com/u/24467442?v=4&size=72" alt="lukemurraynz">
+          <img src="https://avatars.githubusercontent.com/u/13513058?v=4&size=72" alt="BernieWhite">
         </a>
       
         <a href="https://github.com/web-flow" class="md-author" title="@web-flow">
@@ -14415,9 +14445,9 @@ When using HTTP, sensitive information may be exposed to an untrusted party.</p>
           <img src="https://avatars.githubusercontent.com/u/19864447?v=4&size=72" alt="web-flow">
         </a>
       
-        <a href="https://github.com/BernieWhite" class="md-author" title="@BernieWhite">
+        <a href="https://github.com/lukemurraynz" class="md-author" title="@lukemurraynz">
           
-          <img src="https://avatars.githubusercontent.com/u/13513058?v=4&size=72" alt="BernieWhite">
+          <img src="https://avatars.githubusercontent.com/u/24467442?v=4&size=72" alt="lukemurraynz">
         </a>
       
       

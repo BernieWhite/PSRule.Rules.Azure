@@ -14301,7 +14301,7 @@ To include rules for preview features see <a href="../../working-with-baselines/
 <tr>
 <td>AZR-000042</td>
 <td><a href="Azure.APIM.HTTPEndpoint.md">Azure.APIM.HTTPEndpoint</a></td>
-<td>Enforce HTTPS for communication to API clients.</td>
+<td>Unencrypted communication could allow disclosure of information to an untrusted party.</td>
 <td><abbr title="Generally Available &mdash; Rules related to a generally available Azure features.">GA</abbr></td>
 </tr>
 <tr>
@@ -14313,7 +14313,7 @@ To include rules for preview features see <a href="../../working-with-baselines/
 <tr>
 <td>AZR-000044</td>
 <td><a href="Azure.APIM.HTTPBackend.md">Azure.APIM.HTTPBackend</a></td>
-<td>Use HTTPS for communication to backend services.</td>
+<td>Unencrypted communication could allow disclosure of information to an untrusted party.</td>
 <td><abbr title="Generally Available &mdash; Rules related to a generally available Azure features.">GA</abbr></td>
 </tr>
 <tr>
@@ -14553,7 +14553,7 @@ To include rules for preview features see <a href="../../working-with-baselines/
 <tr>
 <td>AZR-000084</td>
 <td><a href="Azure.AppService.UseHTTPS.md">Azure.AppService.UseHTTPS</a></td>
-<td>Azure App Service apps should only accept encrypted connections.</td>
+<td>Unencrypted communication could allow disclosure of information to an untrusted party.</td>
 <td><abbr title="Generally Available &mdash; Rules related to a generally available Azure features.">GA</abbr></td>
 </tr>
 <tr>
@@ -14607,7 +14607,7 @@ To include rules for preview features see <a href="../../working-with-baselines/
 <tr>
 <td>AZR-000093</td>
 <td><a href="Azure.CDN.HTTP.md">Azure.CDN.HTTP</a></td>
-<td>Enforce HTTPS for client connections.</td>
+<td>Unencrypted communication could allow disclosure of information to an untrusted party.</td>
 <td><abbr title="Generally Available &mdash; Rules related to a generally available Azure features.">GA</abbr></td>
 </tr>
 <tr>
@@ -15723,7 +15723,7 @@ To include rules for preview features see <a href="../../working-with-baselines/
 <tr>
 <td>AZR-000279</td>
 <td><a href="Azure.Deployment.OutputSecretValue.md">Azure.Deployment.OutputSecretValue</a></td>
-<td>Avoid outputting sensitive deployment values.</td>
+<td>Outputting a sensitive value from deployment may leak secrets into deployment history or logs.</td>
 <td><abbr title="Generally Available &mdash; Rules related to a generally available Azure features.">GA</abbr></td>
 </tr>
 <tr>
@@ -15753,7 +15753,7 @@ To include rules for preview features see <a href="../../working-with-baselines/
 <tr>
 <td>AZR-000284</td>
 <td><a href="Azure.Deployment.AdminUsername.md">Azure.Deployment.AdminUsername</a></td>
-<td>Use secure parameters for sensitive resource properties.</td>
+<td>A sensitive property set from deterministic or hardcoded values is not secure.</td>
 <td><abbr title="Generally Available &mdash; Rules related to a generally available Azure features.">GA</abbr></td>
 </tr>
 <tr>
@@ -16035,7 +16035,7 @@ To include rules for preview features see <a href="../../working-with-baselines/
 <tr>
 <td>AZR-000331</td>
 <td><a href="Azure.Deployment.OuterSecret.md">Azure.Deployment.OuterSecret</a></td>
-<td>Do not use Outer deployments when references SecureString or SecureObject parameters.</td>
+<td>Outer evaluation deployments may leak secrets exposed as secure parameters into logs and nested deployments.</td>
 <td><abbr title="Generally Available &mdash; Rules related to a generally available Azure features.">GA</abbr></td>
 </tr>
 <tr>
@@ -16497,7 +16497,7 @@ To include rules for preview features see <a href="../../working-with-baselines/
 <tr>
 <td>AZR-000408</td>
 <td><a href="Azure.Deployment.SecureParameter.md">Azure.Deployment.SecureParameter</a></td>
-<td>Use secure parameters for any parameter that contains sensitive information.</td>
+<td>Sensitive parameters that have been not been marked as secure may leak the secret into deployment history or logs.</td>
 <td><abbr title="Generally Available &mdash; Rules related to a generally available Azure features.">GA</abbr></td>
 </tr>
 <tr>

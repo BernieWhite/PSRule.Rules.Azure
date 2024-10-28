@@ -14402,12 +14402,12 @@ Consider switching to a newer baseline.</p>
 </tr>
 <tr>
 <td><a href="../../rules/Azure.APIM.HTTPBackend/">Azure.APIM.HTTPBackend</a></td>
-<td>Use HTTPS for communication to backend services.</td>
+<td>Unencrypted communication could allow disclosure of information to an untrusted party.</td>
 <td>Critical</td>
 </tr>
 <tr>
 <td><a href="../../rules/Azure.APIM.HTTPEndpoint/">Azure.APIM.HTTPEndpoint</a></td>
-<td>Enforce HTTPS for communication to API clients.</td>
+<td>Unencrypted communication could allow disclosure of information to an untrusted party.</td>
 <td>Important</td>
 </tr>
 <tr>
@@ -14622,7 +14622,7 @@ Consider switching to a newer baseline.</p>
 </tr>
 <tr>
 <td><a href="../../rules/Azure.AppService.UseHTTPS/">Azure.AppService.UseHTTPS</a></td>
-<td>Azure App Service apps should only accept encrypted connections.</td>
+<td>Unencrypted communication could allow disclosure of information to an untrusted party.</td>
 <td>Important</td>
 </tr>
 <tr>
@@ -14692,7 +14692,7 @@ Consider switching to a newer baseline.</p>
 </tr>
 <tr>
 <td><a href="../../rules/Azure.CDN.HTTP/">Azure.CDN.HTTP</a></td>
-<td>Enforce HTTPS for client connections.</td>
+<td>Unencrypted communication could allow disclosure of information to an untrusted party.</td>
 <td>Important</td>
 </tr>
 <tr>
@@ -14852,7 +14852,7 @@ Consider switching to a newer baseline.</p>
 </tr>
 <tr>
 <td><a href="../../rules/Azure.Deployment.AdminUsername/">Azure.Deployment.AdminUsername</a></td>
-<td>Use secure parameters for sensitive resource properties.</td>
+<td>A sensitive property set from deterministic or hardcoded values is not secure.</td>
 <td>Awareness</td>
 </tr>
 <tr>
@@ -14862,17 +14862,17 @@ Consider switching to a newer baseline.</p>
 </tr>
 <tr>
 <td><a href="../../rules/Azure.Deployment.OuterSecret/">Azure.Deployment.OuterSecret</a></td>
-<td>Do not use Outer deployments when references SecureString or SecureObject parameters.</td>
+<td>Outer evaluation deployments may leak secrets exposed as secure parameters into logs and nested deployments.</td>
 <td>Critical</td>
 </tr>
 <tr>
 <td><a href="../../rules/Azure.Deployment.OutputSecretValue/">Azure.Deployment.OutputSecretValue</a></td>
-<td>Avoid outputting sensitive deployment values.</td>
+<td>Outputting a sensitive value from deployment may leak secrets into deployment history or logs.</td>
 <td>Critical</td>
 </tr>
 <tr>
 <td><a href="../../rules/Azure.Deployment.SecureParameter/">Azure.Deployment.SecureParameter</a></td>
-<td>Use secure parameters for any parameter that contains sensitive information.</td>
+<td>Sensitive parameters that have been not been marked as secure may leak the secret into deployment history or logs.</td>
 <td>Critical</td>
 </tr>
 <tr>

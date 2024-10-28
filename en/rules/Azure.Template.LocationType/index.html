@@ -14312,8 +14312,8 @@ This approach minimizes the number of times users are asked to provide location 
 <li>If the <code>location</code> parameter is specified, it should be set to a <code>string</code> type.</li>
 </ul>
 <p>For example:</p>
-<div class="language-text highlight"><span class="filename">Azure Bicep snippet</span><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>@description(&#39;The location resources will be deployed.&#39;)
-</span><span id="__span-1-2"><a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a>param location string = resourceGroup().location
+<div class="language-bicep highlight"><span class="filename">Azure Bicep snippet</span><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="k k-Decorator">@description</span><span class="p">(</span><span class="s">&#39;The location resources will be deployed.&#39;</span><span class="p">)</span>
+</span><span id="__span-1-2"><a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a><span class="kd">param</span><span class="w"> </span><span class="n n-Symbol">location</span><span class="w"> </span><span class="n n-Type">string</span><span class="err"> </span><span class="o">=</span><span class="w"> </span><span class="err">resourceGroup().location</span>
 </span></code></pre></div>
 <h2 id="links">Links<a class="headerlink" href="#links" title="Permanent link">#</a></h2>
 <ul>

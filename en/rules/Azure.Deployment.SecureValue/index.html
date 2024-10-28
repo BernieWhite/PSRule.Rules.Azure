@@ -14270,16 +14270,24 @@
 <h2 id="description">Description<a class="headerlink" href="#description" title="Permanent link">#</a></h2>
 <p>Azure Bicep and Azure Resource Manager (ARM) templates can be used to deploy resources to Azure.
 When deploying Azure resources, sensitive values such as passwords, certificates, and keys should be passed as secure parameters.
-Secure parameters use the <code>secureString</code> or <code>secureObject</code> type.</p>
-<p>Parameters that do not use secure types are recorded in logs and deployment history.
-These values can be retrieved by anyone with access to the deployment history.</p>
+Secure parameters use the <code>@secure</code> decorator in Bicep or the <code>secureString</code> / <code>secureObject</code> type.</p>
+<p>Parameters that do not use secure types are recorded in deployment history and logs.
+These values can be retrieved by anyone with read access to the deployment history and logs.
+Logs are often exposed at multiple levels including CI pipeline logs, Azure Activity Logs, and <abbr title="Security information and event management">SIEM</abbr> systems.</p>
+<div class="admonition security">
+<p class="admonition-title">Secret rotation &mdash; <a href="https://learn.microsoft.com/azure/well-architected/security/application-secrets#secret-rotation">SE:09 Application secrets</a></p>
+<p>If a secret has already been exposed by a previous insecure deployment,
+rotate it immediately to prevent unauthorized access to your resources.</p>
+<p>Rotating a secret involves changing or regenerating the secret value and updating all dependent resources with the new value.
+This process should be done in a secure manner to prevent the new secret from being exposed.</p>
+</div>
 <h2 id="recommendation">Recommendation<a class="headerlink" href="#recommendation" title="Permanent link">#</a></h2>
-<p>Consider using secure parameters for sensitive resource properties.</p>
+<p>Consider using secure parameters for setting the value of any sensitive resource properties.</p>
 <h2 id="examples">Examples<a class="headerlink" href="#examples" title="Permanent link">#</a></h2>
 <h3 id="configure-with-azure-template">Configure with Azure template<a class="headerlink" href="#configure-with-azure-template" title="Permanent link">#</a></h3>
 <p>To configure deployments that pass this rule:</p>
 <ul>
-<li>Set the type of parameters used set sensitive resource properties to <code>secureString</code> or <code>secureObject</code>.</li>
+<li>Set the <code>type</code> of parameters used set sensitive resource properties to <code>secureString</code> or <code>secureObject</code>.</li>
 </ul>
 <p>For example:</p>
 <div class="language-json highlight"><span class="filename">Azure Template snippet</span><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="p">{</span>
@@ -14305,27 +14313,26 @@ These values can be retrieved by anyone with access to the deployment history.</
 <h3 id="configure-with-bicep">Configure with Bicep<a class="headerlink" href="#configure-with-bicep" title="Permanent link">#</a></h3>
 <p>To configure deployments that pass this rule:</p>
 <ul>
-<li>Add the <code>@secure()</code> attribute on parameters used to set sensitive resource properties.</li>
+<li>Add the <code>@secure()</code> decorators on parameters used to set sensitive resource properties.</li>
 </ul>
 <p>For example:</p>
-<div class="language-text highlight"><span class="filename">Azure Bicep snippet</span><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>@secure()
-</span><span id="__span-1-2"><a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a>param secret string
+<div class="language-bicep highlight"><span class="filename">Azure Bicep snippet</span><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="k k-Decorator">@secure</span><span class="p">()</span>
+</span><span id="__span-1-2"><a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a><span class="kd">param</span><span class="w"> </span><span class="n n-Symbol">secret</span><span class="w"> </span><span class="n n-Type">string</span>
 </span><span id="__span-1-3"><a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a>
-</span><span id="__span-1-4"><a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a>resource goodSecret &#39;Microsoft.KeyVault/vaults/secrets@2022-07-01&#39; = {
-</span><span id="__span-1-5"><a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a>  name: &#39;keyvault/good&#39;
-</span><span id="__span-1-6"><a id="__codelineno-1-6" name="__codelineno-1-6" href="#__codelineno-1-6"></a>  properties: {
-</span><span id="__span-1-7"><a id="__codelineno-1-7" name="__codelineno-1-7" href="#__codelineno-1-7"></a>    value: secret
-</span><span id="__span-1-8"><a id="__codelineno-1-8" name="__codelineno-1-8" href="#__codelineno-1-8"></a>  }
-</span><span id="__span-1-9"><a id="__codelineno-1-9" name="__codelineno-1-9" href="#__codelineno-1-9"></a>}
+</span><span id="__span-1-4"><a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a><span class="kd">resource</span><span class="w"> </span><span class="n n-Symbol">goodSecret</span><span class="err"> </span><span class="s">&#39;Microsoft.KeyVault/vaults/secrets@2022-07-01&#39;</span><span class="err"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-1-5"><a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a><span class="w">  </span><span class="py">name</span><span class="p">:</span><span class="w"> </span><span class="s">&#39;keyvault/good&#39;</span>
+</span><span id="__span-1-6"><a id="__codelineno-1-6" name="__codelineno-1-6" href="#__codelineno-1-6"></a><span class="w">  </span><span class="py">properties</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-1-7"><a id="__codelineno-1-7" name="__codelineno-1-7" href="#__codelineno-1-7"></a><span class="w">    </span><span class="py">value</span><span class="p">:</span><span class="w"> </span><span class="err">secret</span>
+</span><span id="__span-1-8"><a id="__codelineno-1-8" name="__codelineno-1-8" href="#__codelineno-1-8"></a><span class="w">  </span><span class="p">}</span>
+</span><span id="__span-1-9"><a id="__codelineno-1-9" name="__codelineno-1-9" href="#__codelineno-1-9"></a><span class="p">}</span>
 </span></code></pre></div>
 <h2 id="notes">Notes<a class="headerlink" href="#notes" title="Permanent link">#</a></h2>
-<p>For a list of resource types and properties that are checked by this rule see:</p>
-<ul>
-<li>https://github.com/Azure/PSRule.Rules.Azure/blob/main/data/secret-property.json</li>
-</ul>
+<p>For a list of resource types and properties that are checked by this rule see <a href="https://github.com/Azure/PSRule.Rules.Azure/blob/main/data/secret-property.json">secret properties</a>.
+If you find properties that are missing, please let us know by logging an issue on GitHub.</p>
 <h2 id="links">Links<a class="headerlink" href="#links" title="Permanent link">#</a></h2>
 <ul>
 <li><a href="https://learn.microsoft.com/azure/well-architected/security/secure-development-lifecycle">SE:02 Secured development lifecycle</a></li>
+<li><a href="https://learn.microsoft.com/azure/azure-resource-manager/bicep/parameters#secure-parameters">Secure parameters</a></li>
 <li><a href="https://learn.microsoft.com/azure/azure-resource-manager/bicep/key-vault-parameter">Use Azure Key Vault to pass secure parameter value during Bicep deployment</a></li>
 <li><a href="https://learn.microsoft.com/azure/azure-resource-manager/templates/template-tutorial-use-key-vault#edit-the-parameters-file">Integrate Azure Key Vault in your ARM template deployment</a></li>
 </ul>
@@ -14351,7 +14358,7 @@ These values can be retrieved by anyone with access to the deployment history.</
     <span class="md-icon" title="Last update">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">October 21, 2024</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">October 26, 2024</span>
   </span>
 
     

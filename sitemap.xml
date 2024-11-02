@@ -993,6 +993,10 @@
          <lastmod>2024-11-02</lastmod>
     </url>
     <url>
+         <loc>https://azure.github.io/PSRule.Rules.Azure/en/rules/Azure.Defender.SecurityContact/</loc>
+         <lastmod>2024-11-02</lastmod>
+    </url>
+    <url>
          <loc>https://azure.github.io/PSRule.Rules.Azure/en/rules/Azure.Defender.Servers/</loc>
          <lastmod>2024-11-02</lastmod>
     </url>
@@ -1006,10 +1010,6 @@
     </url>
     <url>
          <loc>https://azure.github.io/PSRule.Rules.Azure/en/rules/Azure.Defender.Storage/</loc>
-         <lastmod>2024-11-02</lastmod>
-    </url>
-    <url>
-         <loc>https://azure.github.io/PSRule.Rules.Azure/en/rules/Azure.DefenderCloud.Contact/</loc>
          <lastmod>2024-11-02</lastmod>
     </url>
     <url>

@@ -2305,15 +2305,6 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#performance" class="md-nav__link">
-    <span class="md-ellipsis">
-      Performance
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
   <a href="#performance-efficiency-checklist" class="md-nav__link">
     <span class="md-ellipsis">
       Performance efficiency checklist
@@ -2607,7 +2598,7 @@
           <li class="md-nav__item">
   <a href="#se01-security-baseline" class="md-nav__link">
     <span class="md-ellipsis">
-      SE:01 Security Baseline
+      SE:01 Security baseline
     </span>
   </a>
   
@@ -15057,15 +15048,6 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#performance" class="md-nav__link">
-    <span class="md-ellipsis">
-      Performance
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
   <a href="#performance-efficiency-checklist" class="md-nav__link">
     <span class="md-ellipsis">
       Performance efficiency checklist
@@ -15359,7 +15341,7 @@
           <li class="md-nav__item">
   <a href="#se01-security-baseline" class="md-nav__link">
     <span class="md-ellipsis">
-      SE:01 Security Baseline
+      SE:01 Security baseline
     </span>
   </a>
   
@@ -15728,12 +15710,6 @@
 <td><a href="../Azure.APIM.SampleProducts/">Azure.APIM.SampleProducts</a></td>
 <td>Remove starter and unlimited sample products.</td>
 <td>Awareness</td>
-<td>Error</td>
-</tr>
-<tr>
-<td><a href="../Azure.NSG.DenyAllInbound/">Azure.NSG.DenyAllInbound</a></td>
-<td>Avoid denying all inbound traffic.</td>
-<td>Important</td>
 <td>Error</td>
 </tr>
 </tbody>
@@ -16666,6 +16642,18 @@
 <td>Awareness</td>
 <td>Error</td>
 </tr>
+<tr>
+<td><a href="../Azure.VM.AcceleratedNetworking/">Azure.VM.AcceleratedNetworking</a></td>
+<td>Use accelerated networking for supported operating systems and VM types.</td>
+<td>Important</td>
+<td>Error</td>
+</tr>
+<tr>
+<td><a href="../Azure.VM.DiskCaching/">Azure.VM.DiskCaching</a></td>
+<td>Check disk caching is configured correctly for the workload.</td>
+<td>Important</td>
+<td>Error</td>
+</tr>
 </tbody>
 </table>
 <h3 id="pe08-data-performance">PE:08 Data performance<a class="headerlink" href="#pe08-data-performance" title="Permanent link">#</a></h3>
@@ -16682,31 +16670,6 @@
 <tr>
 <td><a href="../Azure.FrontDoor.UseCaching/">Azure.FrontDoor.UseCaching</a></td>
 <td>Use caching to reduce retrieving contents from origins.</td>
-<td>Important</td>
-<td>Error</td>
-</tr>
-</tbody>
-</table>
-<h3 id="performance">Performance<a class="headerlink" href="#performance" title="Permanent link">#</a></h3>
-<table>
-<thead>
-<tr>
-<th>Name</th>
-<th>Synopsis</th>
-<th>Severity</th>
-<th>Level</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><a href="../Azure.VM.AcceleratedNetworking/">Azure.VM.AcceleratedNetworking</a></td>
-<td>Use accelerated networking for supported operating systems and VM types.</td>
-<td>Important</td>
-<td>Error</td>
-</tr>
-<tr>
-<td><a href="../Azure.VM.DiskCaching/">Azure.VM.DiskCaching</a></td>
-<td>Check disk caching is configured correctly for the workload.</td>
 <td>Important</td>
 <td>Error</td>
 </tr>
@@ -16893,6 +16856,12 @@
 </tr>
 </thead>
 <tbody>
+<tr>
+<td><a href="../Azure.NSG.DenyAllInbound/">Azure.NSG.DenyAllInbound</a></td>
+<td>When all inbound traffic is denied, some functions that affect the reliability of your service may not work as expected.</td>
+<td>Important</td>
+<td>Error</td>
+</tr>
 <tr>
 <td><a href="../Azure.VM.UseManagedDisks/">Azure.VM.UseManagedDisks</a></td>
 <td>Virtual machines (VMs) should use managed disks.</td>
@@ -17943,7 +17912,7 @@
 </tr>
 </tbody>
 </table>
-<h3 id="se01-security-baseline">SE:01 Security Baseline<a class="headerlink" href="#se01-security-baseline" title="Permanent link">#</a></h3>
+<h3 id="se01-security-baseline">SE:01 Security baseline<a class="headerlink" href="#se01-security-baseline" title="Permanent link">#</a></h3>
 <table>
 <thead>
 <tr>
@@ -18518,7 +18487,7 @@
 </tr>
 <tr>
 <td><a href="../Azure.SQL.FirewallIPRange/">Azure.SQL.FirewallIPRange</a></td>
-<td>Determine if there is an excessive number of permitted IP addresses set in the allowed IP list (CIDR range).</td>
+<td>Each IP address in the permitted IP list is allowed network access to any databases hosted on the same logical server.</td>
 <td>Important</td>
 <td>Error</td>
 </tr>
@@ -18983,6 +18952,12 @@
 <td>Error</td>
 </tr>
 <tr>
+<td><a href="../Azure.SQL.DefenderCloud/">Azure.SQL.DefenderCloud</a></td>
+<td>Enable Microsoft Defender for Azure SQL logical server.</td>
+<td>Important</td>
+<td>Error</td>
+</tr>
+<tr>
 <td><a href="../Azure.Storage.Defender.DataScan/">Azure.Storage.Defender.DataScan</a></td>
 <td>Enable sensitive data threat detection in Microsoft Defender for Storage.</td>
 <td>Critical</td>
@@ -19084,12 +19059,6 @@
 <tr>
 <td><a href="../Azure.PostgreSQL.DefenderCloud/">Azure.PostgreSQL.DefenderCloud</a></td>
 <td>Enable Microsoft Defender for Cloud for Azure Database for PostgreSQL.</td>
-<td>Important</td>
-<td>Error</td>
-</tr>
-<tr>
-<td><a href="../Azure.SQL.DefenderCloud/">Azure.SQL.DefenderCloud</a></td>
-<td>Enable Microsoft Defender for Azure SQL logical server.</td>
 <td>Important</td>
 <td>Error</td>
 </tr>

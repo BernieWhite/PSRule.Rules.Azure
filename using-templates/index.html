@@ -14212,10 +14212,10 @@
 <h1 id="using-templates">Using templates<a class="headerlink" href="#using-templates" title="Permanent link">#</a></h1>
 <p>PSRule for Azure discovers and analyzes Azure resources contained within template and parameter files.
 To enable this feature, you need to:</p>
-<ul>
+<ol>
 <li>Enable expansion.</li>
 <li>Link parameter files to templates.</li>
-</ul>
+</ol>
 <div class="admonition abstract">
 <p class="admonition-title">Abstract</p>
 <p>This topic covers how you can validate Azure resources within template <code>.json</code> files.
@@ -14227,6 +14227,17 @@ To learn more about why this is important see <a href="../expanding-source-files
 </span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="nt">configuration</span><span class="p">:</span>
 </span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a><span class="w">  </span><span class="nt">AZURE_PARAMETER_FILE_EXPANSION</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
 </span></code></pre></div>
+<p>After enabling expansion, PSRule for Azure will start to discover <abbr title="Azure Resource Manager">ARM</abbr> templates and Bicep module from parameter files.
+Supported parameter files must:</p>
+<ul>
+<li>The use <code>.parameters.json</code> or <code>.parameters.jsonc</code> suffix. i.e. <code>deploy.parameters.jsonc</code>.</li>
+<li>The use either of the following schemas:<ul>
+<li><code>https://schema.management.azure.com/schemas/2015-01-01/deploymentParameters.json#</code> OR</li>
+<li><code>https://schema.management.azure.com/schemas/2019-04-01/deploymentParameters.json#</code></li>
+</ul>
+</li>
+<li>Must be linked to a template or Bicep module using one of the methods described below.</li>
+</ul>
 <h2 id="linking-templates">Linking templates<a class="headerlink" href="#linking-templates" title="Permanent link">#</a></h2>
 <p>PSRule for Azure automatically detects parameter files and uses the following logic to link templates or Bicep modules.</p>
 <ul>
@@ -14240,7 +14251,7 @@ For details on both options continue reading.</p>
 </div>
 <div class="admonition tip">
 <p class="admonition-title">Tip</p>
-<p>Linking templates also applies to Bicep modules when you are using <code>.json</code> parameter files.</p>
+<p>Linking templates also applies to Bicep modules when you are using JSON parameter files.</p>
 </div>
 <h3 id="by-metadata">By metadata<a class="headerlink" href="#by-metadata" title="Permanent link">#</a></h3>
 <p>A parameter file can be linked to an associated template or Bicep module by setting metadata.
@@ -14325,13 +14336,20 @@ If you like a detailed description continue reading <a href="../troubleshooting/
 </div>
 <p>PSRule for Azure supports linking by naming convention when:</p>
 <ul>
-<li>Parameter files end with <code>.parameters.json</code> linking to <abbr title="Azure Resource Manager">ARM</abbr> templates or Bicep modules.</li>
+<li>Parameter files end with <code>.parameters.json</code> or <code>.parameters.jsonc</code> linking to <abbr title="Azure Resource Manager">ARM</abbr> templates or Bicep modules.</li>
 <li>The parameter file prefix matches the file name of the template or Bicep module.
-  For example, <code>azuredeploy.parameters.json</code> links to <code>azuredeploy.json</code> or <code>azuredeploy.bicep</code>.</li>
-<li>If both an <abbr title="Azure Resource Manager">ARM</abbr> template and Bicep module exist, the template (<code>.json</code>) is preferred.
-  For example, <code>azuredeploy.parameters.json</code> chooses <code>azuredeploy.json</code> over <code>azuredeploy.bicep</code> if both exist.</li>
+  For example, <code>azuredeploy.parameters.json</code> links to <code>azuredeploy.json</code>, <code>azuredeploy.jsonc</code>, or <code>azuredeploy.bicep</code>.</li>
 <li>Both parameter file and template or Bicep module must be in the same directory.</li>
+<li>The following search order is used to determine the file that will be used if multiple template or Bicep files exist:<ol>
+<li><abbr title="Azure Resource Manager">ARM</abbr> template file with the <code>.json</code> extension.</li>
+<li><abbr title="Azure Resource Manager">ARM</abbr> template file with the <code>.jsonc</code> extension.</li>
+<li>Bicep module file with the <code>.bicep</code> extension.</li>
+</ol>
+</li>
 </ul>
+<p>For example, <code>azuredeploy.parameters.json</code> links to <code>azuredeploy.json</code> over <code>azuredeploy.jsonc</code> or <code>azuredeploy.bicep</code>.
+When <code>azuredeploy.json</code> does not exist, <code>azuredeploy.jsonc</code> is chosen.
+Finally <code>azuredeploy.parameters.json</code> will link to <code>azuredeploy.bicep</code> if neither of the other files exist.</p>
 <p>The following is not currently supported:</p>
 <ul>
 <li>Using a different naming convention for parameter files such as <code>&lt;templateName&gt;.param.json</code>.</li>
@@ -14359,7 +14377,7 @@ If you like a detailed description continue reading <a href="../troubleshooting/
     <span class="md-icon" title="Last update">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">October 3, 2023</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">November 7, 2024</span>
   </span>
 
     

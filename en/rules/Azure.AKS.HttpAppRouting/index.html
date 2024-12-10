@@ -14281,11 +14281,16 @@ This may be helpful in some limited scenarios, but should not be used in product
 <li>Encryption in transit over TLS.</li>
 <li>Multiple replicas.</li>
 </ul>
-<p>Azure provides a production ready ingress controller <em>Application Gateway Ingress Controller</em> (AGIC).</p>
+<p>Azure Kubernetes Service provides several ingress controller options including:</p>
+<ul>
+<li><strong>Application routing add-on</strong> &mdash; an NGINX-based managed ingress controller add-on.</li>
+<li><strong>Application Gateway Ingress Controller (AGIC)</strong> &mdash; an ingress controller which integrates with Application Gateway.</li>
+<li><strong>Application Gateway for Containers</strong> &mdash; is the successor to AGIC that additional features and scale.</li>
+</ul>
 <p>HTTP application routing add-on (preview) for Azure Kubernetes Service (AKS) will be retired on 03 March 2025.</p>
 <h2 id="recommendation">Recommendation<a class="headerlink" href="#recommendation" title="Permanent link">#</a></h2>
 <p>Consider disabling the HTTP application routing add-on in your AKS cluster.
-Also consider using Application Gateway Ingress Controller (AGIC) instead to protect application endpoints.</p>
+Also consider migrating to an alternative ingress controller.</p>
 <h2 id="examples">Examples<a class="headerlink" href="#examples" title="Permanent link">#</a></h2>
 <h3 id="configure-with-azure-template">Configure with Azure template<a class="headerlink" href="#configure-with-azure-template" title="Permanent link">#</a></h3>
 <p>To deploy AKS clusters that pass this rule:</p>
@@ -14430,8 +14435,10 @@ Also consider using Application Gateway Ingress Controller (AGIC) instead to pro
 <ul>
 <li><a href="https://learn.microsoft.com/azure/well-architected/security/networking">SE:06 Network controls</a></li>
 <li><a href="https://learn.microsoft.com/azure/aks/http-application-routing">HTTP application routing</a></li>
+<li><a href="https://learn.microsoft.com/azure/aks/app-routing-migration">Migrate from HTTP application routing to the application routing add-on</a></li>
+<li><a href="https://learn.microsoft.com/azure/application-gateway/for-containers/overview">What is Application Gateway for Containers?</a></li>
 <li><a href="https://learn.microsoft.com/azure/application-gateway/tutorial-ingress-controller-add-on-existing">Enable Application Gateway Ingress Controller add-on for an existing AKS cluster</a></li>
-<li><a href="https://learn.microsoft.com/azure/templates/microsoft.containerservice/managedclusters#ManagedClusterAutoUpgradeProfile">Azure deployment reference</a></li>
+<li><a href="https://learn.microsoft.com/azure/templates/microsoft.containerservice/managedclusters">Azure deployment reference</a></li>
 </ul>
 
 
@@ -14455,7 +14462,7 @@ Also consider using Application Gateway Ingress Controller (AGIC) instead to pro
     <span class="md-icon" title="Last update">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">October 4, 2024</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">December 10, 2024</span>
   </span>
 
     

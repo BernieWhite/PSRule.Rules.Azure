@@ -14194,7 +14194,7 @@
 <p>Microsoft Azure Well-Architected Framework - Security pillar specific baseline.</p>
 <h2 id="rules">Rules<a class="headerlink" href="#rules" title="Permanent link">#</a></h2>
 <p>The following rules are included within the <code>Azure.Pillar.Security</code> baseline.</p>
-<p>This baseline includes a total of 210 rules.</p>
+<p>This baseline includes a total of 211 rules.</p>
 <table>
 <thead>
 <tr>
@@ -14393,6 +14393,11 @@
 <td><a href="../../rules/Azure.APIM.Protocols/">Azure.APIM.Protocols</a></td>
 <td>API Management should only accept a minimum of TLS 1.2 for client and backend communication.</td>
 <td>Critical</td>
+</tr>
+<tr>
+<td><a href="../../rules/Azure.APIM.SampleProducts/">Azure.APIM.SampleProducts</a></td>
+<td>API Management Services with default products configured may expose more APIs than intended.</td>
+<td>Awareness</td>
 </tr>
 <tr>
 <td><a href="../../rules/Azure.AppConfig.AuditLogs/">Azure.AppConfig.AuditLogs</a></td>
@@ -14836,7 +14841,7 @@
 </tr>
 <tr>
 <td><a href="../../rules/Azure.LogicApp.LimitHTTPTrigger/">Azure.LogicApp.LimitHTTPTrigger</a></td>
-<td>Limit HTTP request trigger access to trusted IP addresses.</td>
+<td>Logic Apps using HTTP triggers without restrictions can be accessed from any network location including the Internet.</td>
 <td>Critical</td>
 </tr>
 <tr>

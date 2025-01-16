@@ -14260,6 +14260,15 @@
 </li>
         
           <li class="md-nav__item">
+  <a href="#oe10-automation-design" class="md-nav__link">
+    <span class="md-ellipsis">
+      OE:10 Automation design
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#release-engineering" class="md-nav__link">
     <span class="md-ellipsis">
       Release engineering
@@ -14443,6 +14452,15 @@
 </li>
         
           <li class="md-nav__item">
+  <a href="#pe05-scaling-and-partitioning_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      PE:05 Scaling and partitioning
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#re01-simplicity-and-efficiency" class="md-nav__link">
     <span class="md-ellipsis">
       RE:01 Simplicity and efficiency
@@ -14533,15 +14551,6 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#scalability" class="md-nav__link">
-    <span class="md-ellipsis">
-      Scalability
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
   <a href="#target-and-non-functional-requirements" class="md-nav__link">
     <span class="md-ellipsis">
       Target and non-functional requirements
@@ -14622,7 +14631,7 @@
           <li class="md-nav__item">
   <a href="#identity-and-access-management" class="md-nav__link">
     <span class="md-ellipsis">
-      Identity and access management
+      Identity and Access Management
     </span>
   </a>
   
@@ -14667,7 +14676,7 @@
           <li class="md-nav__item">
   <a href="#se01-security-baseline" class="md-nav__link">
     <span class="md-ellipsis">
-      SE:01 Security baseline
+      SE:01 Security Baseline
     </span>
   </a>
   
@@ -15032,12 +15041,6 @@
 <td>Important</td>
 <td>Error</td>
 </tr>
-<tr>
-<td><a href="Azure.APIM.SampleProducts.md">Azure.APIM.SampleProducts</a></td>
-<td>Remove starter and unlimited sample products.</td>
-<td>Awareness</td>
-<td>Error</td>
-</tr>
 </tbody>
 </table>
 <h3 id="deployment">Deployment<a class="headerlink" href="#deployment" title="Permanent link">#</a></h3>
@@ -15116,12 +15119,6 @@
 <tr>
 <td><a href="Azure.Automation.PlatformLogs.md">Azure.Automation.PlatformLogs</a></td>
 <td>Ensure automation account platform diagnostic logs are enabled.</td>
-<td>Important</td>
-<td>Error</td>
-</tr>
-<tr>
-<td><a href="Azure.VM.Agent.md">Azure.VM.Agent</a></td>
-<td>Ensure the VM agent is provisioned automatically.</td>
 <td>Important</td>
 <td>Error</td>
 </tr>
@@ -15415,6 +15412,25 @@
 <tr>
 <td><a href="Azure.AKS.AutoUpgrade.md">Azure.AKS.AutoUpgrade</a></td>
 <td>Configure AKS to automatically upgrade to newer supported AKS versions as they are made available.</td>
+<td>Important</td>
+<td>Error</td>
+</tr>
+</tbody>
+</table>
+<h3 id="oe10-automation-design">OE:10 Automation design<a class="headerlink" href="#oe10-automation-design" title="Permanent link">#</a></h3>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Synopsis</th>
+<th>Severity</th>
+<th>Level</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="Azure.VM.Agent.md">Azure.VM.Agent</a></td>
+<td>Virtual Machines (VMs) without an agent provisioned are unable to use monitoring, management, and security extensions.</td>
 <td>Important</td>
 <td>Error</td>
 </tr>
@@ -16159,6 +16175,25 @@
 </tr>
 </tbody>
 </table>
+<h3 id="pe05-scaling-and-partitioning_1">PE:05 Scaling and partitioning<a class="headerlink" href="#pe05-scaling-and-partitioning_1" title="Permanent link">#</a></h3>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Synopsis</th>
+<th>Severity</th>
+<th>Level</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="Azure.AKS.CNISubnetSize.md">Azure.AKS.CNISubnetSize</a></td>
+<td>AKS clusters using Azure CNI should use large subnets to reduce IP exhaustion issues.</td>
+<td>Important</td>
+<td>Error</td>
+</tr>
+</tbody>
+</table>
 <h3 id="re01-simplicity-and-efficiency">RE:01 Simplicity and efficiency<a class="headerlink" href="#re01-simplicity-and-efficiency" title="Permanent link">#</a></h3>
 <table>
 <thead>
@@ -16781,25 +16816,6 @@
 </tr>
 </tbody>
 </table>
-<h3 id="scalability">Scalability<a class="headerlink" href="#scalability" title="Permanent link">#</a></h3>
-<table>
-<thead>
-<tr>
-<th>Name</th>
-<th>Synopsis</th>
-<th>Severity</th>
-<th>Level</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><a href="Azure.AKS.CNISubnetSize.md">Azure.AKS.CNISubnetSize</a></td>
-<td>AKS clusters using Azure CNI should use large subnets to reduce IP exhaustion issues.</td>
-<td>Important</td>
-<td>Error</td>
-</tr>
-</tbody>
-</table>
 <h3 id="target-and-non-functional-requirements">Target and non-functional requirements<a class="headerlink" href="#target-and-non-functional-requirements" title="Permanent link">#</a></h3>
 <table>
 <thead>
@@ -17030,7 +17046,7 @@
 </tr>
 </tbody>
 </table>
-<h3 id="identity-and-access-management">Identity and access management<a class="headerlink" href="#identity-and-access-management" title="Permanent link">#</a></h3>
+<h3 id="identity-and-access-management">Identity and Access Management<a class="headerlink" href="#identity-and-access-management" title="Permanent link">#</a></h3>
 <table>
 <thead>
 <tr>
@@ -17207,12 +17223,6 @@
 <td>Error</td>
 </tr>
 <tr>
-<td><a href="Azure.LogicApp.LimitHTTPTrigger.md">Azure.LogicApp.LimitHTTPTrigger</a></td>
-<td>Limit HTTP request trigger access to trusted IP addresses.</td>
-<td>Critical</td>
-<td>Error</td>
-</tr>
-<tr>
 <td><a href="Azure.MariaDB.AllowAzureAccess.md">Azure.MariaDB.AllowAzureAccess</a></td>
 <td>Determine if access from Azure services is required.</td>
 <td>Important</td>
@@ -17239,7 +17249,7 @@
 </tr>
 </tbody>
 </table>
-<h3 id="se01-security-baseline">SE:01 Security baseline<a class="headerlink" href="#se01-security-baseline" title="Permanent link">#</a></h3>
+<h3 id="se01-security-baseline">SE:01 Security Baseline<a class="headerlink" href="#se01-security-baseline" title="Permanent link">#</a></h3>
 <table>
 <thead>
 <tr>
@@ -17747,6 +17757,12 @@
 <td>Error</td>
 </tr>
 <tr>
+<td><a href="Azure.LogicApp.LimitHTTPTrigger.md">Azure.LogicApp.LimitHTTPTrigger</a></td>
+<td>Logic Apps using HTTP triggers without restrictions can be accessed from any network location including the Internet.</td>
+<td>Critical</td>
+<td>Error</td>
+</tr>
+<tr>
 <td><a href="Azure.MariaDB.FirewallIPRange.md">Azure.MariaDB.FirewallIPRange</a></td>
 <td>Determine if there is an excessive number of permitted IP addresses.</td>
 <td>Important</td>
@@ -18070,6 +18086,12 @@
 <td><a href="Azure.AKS.AzurePolicyAddOn.md">Azure.AKS.AzurePolicyAddOn</a></td>
 <td>Configure Azure Kubernetes Service (AKS) clusters to use Azure Policy Add-on for Kubernetes.</td>
 <td>Important</td>
+<td>Error</td>
+</tr>
+<tr>
+<td><a href="Azure.APIM.SampleProducts.md">Azure.APIM.SampleProducts</a></td>
+<td>API Management Services with default products configured may expose more APIs than intended.</td>
+<td>Awareness</td>
 <td>Error</td>
 </tr>
 <tr>

@@ -44,9 +44,9 @@ metadata:
   alias:
   - Azure.VM.UniqueDns
   tags:
-    release: 'GA'
-    ruleSet: '2020_06'
-    Azure.WAF/pillar: Operational Excellence
+    release: GA
+    ruleSet: 2020_06
+    Azure.WAF/pillar: Reliability
 spec:
   type:
   - Microsoft.Network/networkInterfaces

@@ -3078,6 +3078,8 @@
       
         
       
+        
+      
     
     
       
@@ -6444,6 +6446,28 @@
   
   <span class="md-ellipsis">
     Azure.Cosmos.SLA
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../rules/Azure.DNS.DNSSEC/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Azure.DNS.DNSSEC
     
   </span>
   
@@ -14886,7 +14910,7 @@
 <p>Microsoft Azure Well-Architected Framework - Security pillar specific baseline.</p>
 <h2 id="rules">Rules<a class="headerlink" href="#rules" title="Permanent link">#</a></h2>
 <p>The following rules are included within the <code>Azure.Pillar.Security</code> baseline.</p>
-<p>This baseline includes a total of 214 rules.</p>
+<p>This baseline includes a total of 215 rules.</p>
 <table>
 <thead>
 <tr>
@@ -14968,7 +14992,7 @@
 </tr>
 <tr>
 <td><a href="../../rules/Azure.AKS.AutoUpgrade/">Azure.AKS.AutoUpgrade</a></td>
-<td>Configure AKS to automatically upgrade to newer supported AKS versions as they are made available.</td>
+<td>New versions of Kubernetes are released regularly. Upgrading each release manually can add operational overhead without realizing equivalent value.</td>
 <td>Important</td>
 </tr>
 <tr>
@@ -15013,7 +15037,7 @@
 </tr>
 <tr>
 <td><a href="../../rules/Azure.AKS.NodeAutoUpgrade/">Azure.AKS.NodeAutoUpgrade</a></td>
-<td>Deploy AKS Clusters with Node Auto-Upgrade enabled</td>
+<td>Operating system (OS) security updates should be applied to AKS nodes and rebooted as required to address security vulnerabilities.</td>
 <td>Important</td>
 </tr>
 <tr>
@@ -15395,6 +15419,11 @@
 <td><a href="../../rules/Azure.Deployment.SecureValue/">Azure.Deployment.SecureValue</a></td>
 <td>A secret property set from a non-secure value may leak the secret into deployment history or logs.</td>
 <td>Critical</td>
+</tr>
+<tr>
+<td><a href="../../rules/Azure.DNS.DNSSEC/">Azure.DNS.DNSSEC</a></td>
+<td>DNS may be vulnerable to several attacks when the DNS clients are not able to verify the authenticity of the DNS responses.</td>
+<td>Important</td>
 </tr>
 <tr>
 <td><a href="../../rules/Azure.EntraDS.NTLM/">Azure.EntraDS.NTLM</a></td>

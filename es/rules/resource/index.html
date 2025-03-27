@@ -3069,6 +3069,8 @@
       
         
       
+        
+      
     
     
       
@@ -6435,6 +6437,28 @@
   
   <span class="md-ellipsis">
     Azure.Cosmos.SLA
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../en/rules/Azure.DNS.DNSSEC/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Azure.DNS.DNSSEC
     
   </span>
   
@@ -14935,6 +14959,15 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#azure-dns" class="md-nav__link">
+    <span class="md-ellipsis">
+      Azure DNS
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#azure-kubernetes-service" class="md-nav__link">
     <span class="md-ellipsis">
       Azure Kubernetes Service
@@ -16582,6 +16615,25 @@
 </tr>
 </tbody>
 </table>
+<h2 id="azure-dns">Azure DNS<a class="headerlink" href="#azure-dns" title="Permanent link">#</a></h2>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Synopsis</th>
+<th>Severity</th>
+<th>Level</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="Azure.DNS.DNSSEC.md">Azure.DNS.DNSSEC</a></td>
+<td>DNS may be vulnerable to several attacks when the DNS clients are not able to verify the authenticity of the DNS responses.</td>
+<td>Important</td>
+<td>Error</td>
+</tr>
+</tbody>
+</table>
 <h2 id="azure-kubernetes-service">Azure Kubernetes Service<a class="headerlink" href="#azure-kubernetes-service" title="Permanent link">#</a></h2>
 <table>
 <thead>
@@ -16619,7 +16671,7 @@
 </tr>
 <tr>
 <td><a href="Azure.AKS.AutoUpgrade.md">Azure.AKS.AutoUpgrade</a></td>
-<td>Configure AKS to automatically upgrade to newer supported AKS versions as they are made available.</td>
+<td>New versions of Kubernetes are released regularly. Upgrading each release manually can add operational overhead without realizing equivalent value.</td>
 <td>Important</td>
 <td>Error</td>
 </tr>
@@ -16727,7 +16779,7 @@
 </tr>
 <tr>
 <td><a href="Azure.AKS.NodeAutoUpgrade.md">Azure.AKS.NodeAutoUpgrade</a></td>
-<td>Deploy AKS Clusters with Node Auto-Upgrade enabled</td>
+<td>Operating system (OS) security updates should be applied to AKS nodes and rebooted as required to address security vulnerabilities.</td>
 <td>Important</td>
 <td>Error</td>
 </tr>
@@ -16787,7 +16839,7 @@
 </tr>
 <tr>
 <td><a href="Azure.AKS.Version.md">Azure.AKS.Version</a></td>
-<td>AKS control plane and nodes pools should use a current stable release.</td>
+<td>Older versions of Kubernetes may have known bugs or security vulnerabilities, and may have limited support.</td>
 <td>Important</td>
 <td>Error</td>
 </tr>

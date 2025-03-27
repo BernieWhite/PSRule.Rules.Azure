@@ -3078,6 +3078,8 @@
       
         
       
+        
+      
     
     
       
@@ -6444,6 +6446,28 @@
   
   <span class="md-ellipsis">
     Azure.Cosmos.SLA
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../rules/Azure.DNS.DNSSEC/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Azure.DNS.DNSSEC
     
   </span>
   
@@ -14885,7 +14909,7 @@
 <p>Includes the latest rules for Azure GA and preview features that is updated each release.</p>
 <h2 id="rules">Rules<a class="headerlink" href="#rules" title="Permanent link">#</a></h2>
 <p>The following rules are included within the <code>Azure.Preview</code> baseline.</p>
-<p>This baseline includes a total of 449 rules.</p>
+<p>This baseline includes a total of 450 rules.</p>
 <table>
 <thead>
 <tr>
@@ -15022,7 +15046,7 @@
 </tr>
 <tr>
 <td><a href="../../rules/Azure.AKS.AutoUpgrade/">Azure.AKS.AutoUpgrade</a></td>
-<td>Configure AKS to automatically upgrade to newer supported AKS versions as they are made available.</td>
+<td>New versions of Kubernetes are released regularly. Upgrading each release manually can add operational overhead without realizing equivalent value.</td>
 <td>Important</td>
 </tr>
 <tr>
@@ -15112,7 +15136,7 @@
 </tr>
 <tr>
 <td><a href="../../rules/Azure.AKS.NodeAutoUpgrade/">Azure.AKS.NodeAutoUpgrade</a></td>
-<td>Deploy AKS Clusters with Node Auto-Upgrade enabled</td>
+<td>Operating system (OS) security updates should be applied to AKS nodes and rebooted as required to address security vulnerabilities.</td>
 <td>Important</td>
 </tr>
 <tr>
@@ -15162,7 +15186,7 @@
 </tr>
 <tr>
 <td><a href="../../rules/Azure.AKS.Version/">Azure.AKS.Version</a></td>
-<td>AKS control plane and nodes pools should use a current stable release.</td>
+<td>Older versions of Kubernetes may have known bugs or security vulnerabilities, and may have limited support.</td>
 <td>Important</td>
 </tr>
 <tr>
@@ -15788,6 +15812,11 @@
 <tr>
 <td><a href="../../rules/Azure.DevBox.ProjectLimit/">Azure.DevBox.ProjectLimit</a></td>
 <td>Limit the number of Dev Boxes a single user can create for a project.</td>
+<td>Important</td>
+</tr>
+<tr>
+<td><a href="../../rules/Azure.DNS.DNSSEC/">Azure.DNS.DNSSEC</a></td>
+<td>DNS may be vulnerable to several attacks when the DNS clients are not able to verify the authenticity of the DNS responses.</td>
 <td>Important</td>
 </tr>
 <tr>

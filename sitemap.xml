@@ -245,6 +245,10 @@
          <lastmod>2025-03-27</lastmod>
     </url>
     <url>
+         <loc>https://azure.github.io/PSRule.Rules.Azure/en/baselines/Azure.GA_2025_03/</loc>
+         <lastmod>2025-03-27</lastmod>
+    </url>
+    <url>
          <loc>https://azure.github.io/PSRule.Rules.Azure/en/baselines/Azure.MCSB.v1/</loc>
          <lastmod>2025-03-27</lastmod>
     </url>
@@ -326,6 +330,10 @@
     </url>
     <url>
          <loc>https://azure.github.io/PSRule.Rules.Azure/en/baselines/Azure.Preview_2024_12/</loc>
+         <lastmod>2025-03-27</lastmod>
+    </url>
+    <url>
+         <loc>https://azure.github.io/PSRule.Rules.Azure/en/baselines/Azure.Preview_2025_03/</loc>
          <lastmod>2025-03-27</lastmod>
     </url>
     <url>

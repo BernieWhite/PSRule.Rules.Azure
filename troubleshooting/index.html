@@ -1454,6 +1454,15 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#pfa0001-unable-to-process-the-deployment" class="md-nav__link">
+    <span class="md-ellipsis">
+      PFA0001: Unable to process the deployment
+    </span>
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -15170,6 +15179,15 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#pfa0001-unable-to-process-the-deployment" class="md-nav__link">
+    <span class="md-ellipsis">
+      PFA0001: Unable to process the deployment
+    </span>
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -15406,6 +15424,14 @@ The PSRule for Azure <strong>&lt;1.3.1</strong> uses an older version of this li
 <div class="language-yaml highlight"><span class="filename">GitHub Actions</span><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Run PSRule analysis</span>
 </span><span id="__span-4-2"><a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a><span class="w">  </span><span class="nt">uses</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">microsoft/ps-rule@v2.9.0</span>
 </span></code></pre></div>
+<h2 id="pfa0001-unable-to-process-the-deployment">PFA0001: Unable to process the deployment<a class="headerlink" href="#pfa0001-unable-to-process-the-deployment" title="Permanent link">#</a></h2>
+<div class="admonition message">
+<p class="admonition-title">Message</p>
+<p>PFA0001: Unable to process the deployment because the template requested a failure. See https://aka.ms/ps-rule-azure/troubleshooting.</p>
+</div>
+<p>This error is returned when the template or Bicep module called the <code>fail()</code> function.
+A template or Bicep module author may call the <code>fail()</code> function to cause a validation error.</p>
+<p>If you got this message, continue reading to the end of the message to see the details of the validation error set by author.</p>
 
 
 
@@ -15428,7 +15454,7 @@ The PSRule for Azure <strong>&lt;1.3.1</strong> uses an older version of this li
     <span class="md-icon" title="Last update">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="March 18, 2025 14:12:31">March 18, 2025</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="March 28, 2025 17:57:32">March 28, 2025</span>
   </span>
 
     

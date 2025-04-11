@@ -3872,6 +3872,8 @@
       
         
       
+        
+      
     
     
     
@@ -7990,6 +7992,29 @@
   
   <span class="md-ellipsis">
     Azure.Deployment.OutputSecretValue
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Azure.Deployment.SecretLeak/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Azure.Deployment.SecretLeak
     
   </span>
   
@@ -18741,6 +18766,12 @@
 <tr>
 <td><a href="../Azure.Deployment.OutputSecretValue/">Azure.Deployment.OutputSecretValue</a></td>
 <td>Outputting a sensitive value from deployment may leak secrets into deployment history or logs.</td>
+<td>Critical</td>
+<td>Error</td>
+</tr>
+<tr>
+<td><a href="../Azure.Deployment.SecretLeak/">Azure.Deployment.SecretLeak</a></td>
+<td>Sensitive parameters that have been not been marked as secure may leak the secret into deployment history or logs.</td>
 <td>Critical</td>
 <td>Error</td>
 </tr>

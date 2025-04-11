@@ -3166,6 +3166,8 @@
       
         
       
+        
+      
     
     
     
@@ -7284,6 +7286,29 @@
   
   <span class="md-ellipsis">
     Azure.Deployment.OutputSecretValue
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../rules/Azure.Deployment.SecretLeak/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Azure.Deployment.SecretLeak
     
   </span>
   
@@ -15616,7 +15641,7 @@
 <p>Includes the latest rules for Azure GA and preview features that is updated each release.</p>
 <h2 id="rules">Rules<a class="headerlink" href="#rules" title="Permanent link">#</a></h2>
 <p>The following rules are included within the <code>Azure.Preview</code> baseline.</p>
-<p>This baseline includes a total of 452 rules.</p>
+<p>This baseline includes a total of 453 rules.</p>
 <table>
 <thead>
 <tr>
@@ -16504,6 +16529,11 @@
 <tr>
 <td><a href="../../rules/Azure.Deployment.OutputSecretValue/">Azure.Deployment.OutputSecretValue</a></td>
 <td>Outputting a sensitive value from deployment may leak secrets into deployment history or logs.</td>
+<td>Critical</td>
+</tr>
+<tr>
+<td><a href="../../rules/Azure.Deployment.SecretLeak/">Azure.Deployment.SecretLeak</a></td>
+<td>Sensitive parameters that have been not been marked as secure may leak the secret into deployment history or logs.</td>
 <td>Critical</td>
 </tr>
 <tr>

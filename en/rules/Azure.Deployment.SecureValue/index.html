@@ -3168,6 +3168,8 @@
       
         
       
+        
+      
     
     
     
@@ -7286,6 +7288,29 @@
   
   <span class="md-ellipsis">
     Azure.Deployment.OutputSecretValue
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Azure.Deployment.SecretLeak/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Azure.Deployment.SecretLeak
     
   </span>
   
@@ -15761,6 +15786,9 @@
  · <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 1c3.681 0 7 2.565 7 6v4.539c0 .642.189 1.269.545 1.803l2.2 3.298A1.517 1.517 0 0 1 20.482 19H15.5a3.5 3.5 0 1 1-7 0H3.519a1.518 1.518 0 0 1-1.265-2.359l2.2-3.299A3.25 3.25 0 0 0 5 11.539V7c0-3.435 3.318-6 7-6M6.5 7v4.539a4.75 4.75 0 0 1-.797 2.635l-2.2 3.298-.003.01.001.007.004.006.006.004.007.001h16.964l.007-.001.006-.004.004-.006.001-.006-.003-.01-2.199-3.299a4.75 4.75 0 0 1-.798-2.635V7c0-2.364-2.383-4.5-5.5-4.5S6.5 4.636 6.5 7M14 19h-4a2 2 0 1 0 4 0"/></svg></span> Critical</p>
 <p>A secret property set from a non-secure value may leak the secret into deployment history or logs.</p>
 <h2 id="description">Description<a class="headerlink" href="#description" title="Permanent link">#</a></h2>
+<p>This rule checks for cases when a non-secure value is assigned to a resource property that contains sensitive information.
+For example, a regular parameter or hard coded variable is used to set the <code>value</code> property of an Azure Key Vault secret.
+This property is used to store the secret value in the Key Vault, however the value has been leaked.</p>
 <p>Azure Bicep and Azure Resource Manager (ARM) templates can be used to deploy resources to Azure.
 When deploying Azure resources, sensitive values such as passwords, certificates, and keys should be passed as secure parameters.
 Secure parameters use the <code>@secure</code> decorator in Bicep or the <code>secureString</code> / <code>secureObject</code> type.</p>
@@ -15773,6 +15801,16 @@ Logs are often exposed at multiple levels including CI pipeline logs, Azure Acti
 rotate it immediately to prevent unauthorized access to your resources.</p>
 <p>Rotating a secret involves changing or regenerating the secret value and updating all dependent resources with the new value.
 This process should be done in a secure manner to prevent the new secret from being exposed.</p>
+</div>
+<div class="admonition security">
+<p class="admonition-title">Don't treat non-secrets like secrets &mdash; <a href="https://learn.microsoft.com/azure/well-architected/security/application-secrets">SE:09 Application secrets</a></p>
+<p>Secrets require operational rigor that's unnecessary for non-secrets.
+This might result in additional resource management overhead and operational costs, such as:</p>
+<ul>
+<li>Increased Key Vault transaction costs.</li>
+<li>Security Information and Event Management (<abbr title="Security information and event management">SIEM</abbr>) integration and regular auditing and monitoring of secret usage.</li>
+<li>Management overhead additional complexity to regularly rotate secrets.</li>
+</ul>
 </div>
 <h2 id="recommendation">Recommendation<a class="headerlink" href="#recommendation" title="Permanent link">#</a></h2>
 <p>Consider using secure parameters for setting the value of any sensitive resource properties.</p>
@@ -15851,7 +15889,7 @@ If you find properties that are missing, please let us know by logging an issue 
     <span class="md-icon" title="Last update">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="March 21, 2025 14:25:55">March 21, 2025</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="April 11, 2025 09:57:59">April 11, 2025</span>
   </span>
 
     

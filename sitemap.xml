@@ -417,6 +417,10 @@
          <lastmod>2025-04-11</lastmod>
     </url>
     <url>
+         <loc>https://azure.github.io/PSRule.Rules.Azure/en/rules/Azure.AI.Naming/</loc>
+         <lastmod>2025-04-11</lastmod>
+    </url>
+    <url>
          <loc>https://azure.github.io/PSRule.Rules.Azure/en/rules/Azure.AI.PrivateEndpoints/</loc>
          <lastmod>2025-04-11</lastmod>
     </url>
@@ -1085,11 +1089,23 @@
          <lastmod>2025-04-11</lastmod>
     </url>
     <url>
+         <loc>https://azure.github.io/PSRule.Rules.Azure/en/rules/Azure.EventGrid.DomainNaming/</loc>
+         <lastmod>2025-04-11</lastmod>
+    </url>
+    <url>
          <loc>https://azure.github.io/PSRule.Rules.Azure/en/rules/Azure.EventGrid.DomainTLS/</loc>
          <lastmod>2025-04-11</lastmod>
     </url>
     <url>
          <loc>https://azure.github.io/PSRule.Rules.Azure/en/rules/Azure.EventGrid.ManagedIdentity/</loc>
+         <lastmod>2025-04-11</lastmod>
+    </url>
+    <url>
+         <loc>https://azure.github.io/PSRule.Rules.Azure/en/rules/Azure.EventGrid.SystemTopicNaming/</loc>
+         <lastmod>2025-04-11</lastmod>
+    </url>
+    <url>
+         <loc>https://azure.github.io/PSRule.Rules.Azure/en/rules/Azure.EventGrid.TopicNaming/</loc>
          <lastmod>2025-04-11</lastmod>
     </url>
     <url>
@@ -1209,6 +1225,14 @@
          <lastmod>2025-04-11</lastmod>
     </url>
     <url>
+         <loc>https://azure.github.io/PSRule.Rules.Azure/en/rules/Azure.Group.Name/</loc>
+         <lastmod>2025-04-11</lastmod>
+    </url>
+    <url>
+         <loc>https://azure.github.io/PSRule.Rules.Azure/en/rules/Azure.Group.Naming/</loc>
+         <lastmod>2025-04-11</lastmod>
+    </url>
+    <url>
          <loc>https://azure.github.io/PSRule.Rules.Azure/en/rules/Azure.Identity.UserAssignedName/</loc>
          <lastmod>2025-04-11</lastmod>
     </url>
@@ -1270,6 +1294,10 @@
     </url>
     <url>
          <loc>https://azure.github.io/PSRule.Rules.Azure/en/rules/Azure.LB.Name/</loc>
+         <lastmod>2025-04-11</lastmod>
+    </url>
+    <url>
+         <loc>https://azure.github.io/PSRule.Rules.Azure/en/rules/Azure.LB.Naming/</loc>
          <lastmod>2025-04-11</lastmod>
     </url>
     <url>
@@ -1634,10 +1662,6 @@
     </url>
     <url>
          <loc>https://azure.github.io/PSRule.Rules.Azure/en/rules/Azure.Resource.UseTags/</loc>
-         <lastmod>2025-04-11</lastmod>
-    </url>
-    <url>
-         <loc>https://azure.github.io/PSRule.Rules.Azure/en/rules/Azure.ResourceGroup.Name/</loc>
          <lastmod>2025-04-11</lastmod>
     </url>
     <url>

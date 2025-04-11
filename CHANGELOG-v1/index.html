@@ -5806,6 +5806,18 @@
       
         
       
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
     
     
     
@@ -6267,6 +6279,29 @@
   
   <span class="md-ellipsis">
     Azure.AI.ManagedIdentity
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../en/rules/Azure.AI.Naming/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Azure.AI.Naming
     
   </span>
   
@@ -10125,6 +10160,29 @@
   
   
     <li class="md-nav__item">
+      <a href="../en/rules/Azure.EventGrid.DomainNaming/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Azure.EventGrid.DomainNaming
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
       <a href="../en/rules/Azure.EventGrid.DomainTLS/" class="md-nav__link">
         
   
@@ -10154,6 +10212,52 @@
   
   <span class="md-ellipsis">
     Azure.EventGrid.ManagedIdentity
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../en/rules/Azure.EventGrid.SystemTopicNaming/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Azure.EventGrid.SystemTopicNaming
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../en/rules/Azure.EventGrid.TopicNaming/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Azure.EventGrid.TopicNaming
     
   </span>
   
@@ -10838,6 +10942,52 @@
   
   
     <li class="md-nav__item">
+      <a href="../en/rules/Azure.Group.Name/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Azure.Group.Name
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../en/rules/Azure.Group.Naming/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Azure.Group.Naming
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
       <a href="../en/rules/Azure.Identity.UserAssignedName/" class="md-nav__link">
         
   
@@ -11189,6 +11339,29 @@
   
   <span class="md-ellipsis">
     Azure.LB.Name
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../en/rules/Azure.LB.Naming/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Azure.LB.Naming
     
   </span>
   
@@ -13282,29 +13455,6 @@
   
   <span class="md-ellipsis">
     Azure.Resource.UseTags
-    
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../en/rules/Azure.ResourceGroup.Name/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    Azure.ResourceGroup.Name
     
   </span>
   
@@ -20818,9 +20968,43 @@
 <p>What's changed since v1.42.0:</p>
 <ul>
 <li>New rules:<ul>
+<li>AI Service:<ul>
+<li>Check if resource name matches the configured name format by <a href="https://github.com/BernieWhite">@BernieWhite</a>.
+  <a href="https://github.com/Azure/PSRule.Rules.Azure/issues/3325">#3325</a><ul>
+<li>The name format can be configured by the <code>AZURE_AI_SERVICES_NAME_FORMAT</code> configuration option.</li>
+</ul>
+</li>
+</ul>
+</li>
 <li>Deployment:<ul>
 <li>Check if sensitive values have been passed to non-secure parameters that might leak the value <a href="https://github.com/BernieWhite">@BernieWhite</a>.
   <a href="https://github.com/Azure/PSRule.Rules.Azure/issues/3319">#3319</a></li>
+</ul>
+</li>
+<li>Event Grid:<ul>
+<li>Check if resource names for topics and domains matches the configured name format by <a href="https://github.com/BernieWhite">@BernieWhite</a>.
+  <a href="https://github.com/Azure/PSRule.Rules.Azure/issues/3325">#3325</a><ul>
+<li>The name format for domains can be configured by the <code>AZURE_EVENTGRID_DOMAIN_NAME_FORMAT</code> configuration option.</li>
+<li>The name format for topics can be configured by the <code>AZURE_EVENTGRID_CUSTOM_TOPIC_NAME_FORMAT</code> configuration option.</li>
+<li>The name format for system topics can be configured by the <code>AZURE_EVENTGRID_SYSTEM_TOPIC_NAME_FORMAT</code> configuration option.</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>Load Balancer:<ul>
+<li>Check if resource name matches the configured name format by <a href="https://github.com/BernieWhite">@BernieWhite</a>.
+  <a href="https://github.com/Azure/PSRule.Rules.Azure/issues/3325">#3325</a><ul>
+<li>The name format can be configured by the <code>AZURE_LOAD_BALANCER_NAME_FORMAT</code> configuration option.</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>Resource Group:<ul>
+<li>Check if the resource group name matches the configured name format by <a href="https://github.com/BernieWhite">@BernieWhite</a>.
+  <a href="https://github.com/Azure/PSRule.Rules.Azure/issues/3325">#3325</a><ul>
+<li>The name format can be configured by the <code>AZURE_RESOURCE_GROUP_NAME_FORMAT</code> configuration option.</li>
+</ul>
+</li>
 </ul>
 </li>
 </ul>
@@ -20847,6 +21031,14 @@
 <li><code>Microsoft.ContainerInstance/containerGroups</code></li>
 </ul>
 </li>
+</ul>
+</li>
+</ul>
+</li>
+<li>Resource Group:<ul>
+<li><strong>Important change</strong>: Renamed the rule <code>Azure.ResourceGroup.Name</code> to <code>Azure.Group.Name</code> by <a href="https://github.com/BernieWhite">@BernieWhite</a>.
+  <a href="https://github.com/Azure/PSRule.Rules.Azure/issues/3319">#3319</a><ul>
+<li>The rule was renamed to better align with upcoming related rules.</li>
 </ul>
 </li>
 </ul>
@@ -29349,7 +29541,7 @@ What's changed since v1.24.0:</p>
     <span class="md-icon" title="Last update">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="April 11, 2025 09:57:59">April 11, 2025</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="April 11, 2025 15:23:50">April 11, 2025</span>
   </span>
 
     

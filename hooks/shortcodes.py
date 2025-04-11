@@ -87,6 +87,24 @@ def security_note(markdown: str, page: Page, config: MkDocsConfig, files: Files)
         replace, markdown, flags = re.I | re.M
     )
 
+def caf_note(markdown: str, page: Page, config: MkDocsConfig, files: Files) -> str:
+    '''Replace CAF notes shortcodes in markdown.'''
+
+    # Callback for regular expression replacement.
+    def replace(match: re.Match) -> str:
+        type, args = match.groups()
+        args = args.strip()
+        if type == "note":
+            return _caf_note_block(args, page, config)
+
+        raise RuntimeError(f"Unknown shortcode caf:{type}")
+
+    # Replace CAF note shortcodes.
+    return re.sub(
+        r"<!-- caf:(\w+)(.*?) -->",
+        replace, markdown, flags = re.I | re.M
+    )
+
 def _relative_uri(path: str, page: Page, files: Files) -> str:
     '''Get relative URI for a file including anchor.'''
 
@@ -272,3 +290,12 @@ def _security_note_block(text: str, page: Page, config: MkDocsConfig) -> str:
     name = text.split(' ')[0]
 
     return _find_include_for_culture(config, culture, f"security-notes/{name}.md")
+
+
+def _caf_note_block(text: str, page: Page, config: MkDocsConfig) -> str:
+    '''Create a CAF note block.'''
+
+    culture = _get_culture_from_page(page, config)
+    name = text.split(' ')[0]
+
+    return _find_include_for_culture(config, culture, f"caf-notes/{name}.md")

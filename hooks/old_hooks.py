@@ -5,17 +5,18 @@ import logging
 import os
 import re
 
-from mkdocs.config import Config
 from mkdocs.config.defaults import MkDocsConfig
 from mkdocs.structure.files import File, Files
 from mkdocs.structure.pages import Page
 from mkdocs.structure.nav import Section, Navigation, _add_parent_links
 
-log = logging.getLogger(f"mkdocs.plugins.{__name__}")
+log = logging.getLogger(f"mkdocs")
 rulesItem: Section = Section("Rules", [])
 
 # Dynamically build reference nav
-def on_nav(nav: Navigation, config: Config, files: Files) -> Navigation:
+def on_nav(nav: Navigation, config: MkDocsConfig, files: Files) -> Navigation:
+    log.info("Adding rules to nav.")
+
     build_rule_nav(nav, config, files)
     build_baseline_nav(nav, config, files)
     build_selector_nav(nav, config, files)
@@ -38,7 +39,7 @@ def on_page_markdown(markdown: str, page: Page, config: MkDocsConfig, files: Fil
         # Conceptual topics
         markdown = markdown.replace("## SHORT DESCRIPTION", "")
         markdown = markdown.replace("## LONG DESCRIPTION", "## Description")
-        markdown = re.sub("(\#\#\s+(NOTE|KEYWORDS)\s+(.|\s{1,2}(?!\#))+)", "", markdown)
+        markdown = re.sub("(## +(NOTE|KEYWORDS) +(.| {1,2}(?!#))+)", "", markdown)
 
     if page.meta.get('link_users', 'false') != 'false':
         markdown = re.sub(r"\@([\w-]*)", r"[@\g<1>](https://github.com/\g<1>)", markdown)
@@ -149,7 +150,7 @@ def read_metadata(page: Page):
 
 
 # Build Rules list
-def build_rule_nav(nav: Navigation, config: Config, files: Files):
+def build_rule_nav(nav: Navigation, config: MkDocsConfig, files: Files):
     children = []
     item: Section = Section("Rules", children)
 
@@ -168,7 +169,7 @@ def build_rule_nav(nav: Navigation, config: Config, files: Files):
     _add_parent_links(nav)
 
 # Build Baselines list
-def build_baseline_nav(nav: Navigation, config: Config, files: Files):
+def build_baseline_nav(nav: Navigation, config: MkDocsConfig, files: Files):
     children = []
     item: Section = Section("Baselines", children)
 
@@ -184,7 +185,7 @@ def build_baseline_nav(nav: Navigation, config: Config, files: Files):
     _add_parent_links(nav)
 
 # Build Selectors list
-def build_selector_nav(nav: Navigation, config: Config, files: Files):
+def build_selector_nav(nav: Navigation, config: MkDocsConfig, files: Files):
     children = []
     item: Section = Section("Selectors", children)
 
@@ -217,7 +218,7 @@ def _badge_for_version(text: str, page: Page, files: Files) -> str:
     version = text
     major = version.split('.')[0]
     anchor = version.replace('.', '')
-    path = f"CHANGELOG-{major}.md#{anchor}"
+    path = f"changelog.md#{anchor}"
 
     icon = "octicons-milestone-24"
     href = _relative_uri(path, page, files)

@@ -136,7 +136,7 @@ def _badge_for_version(text: str, page: Page, files: Files) -> str:
     version = text
     major = version.split('.')[0]
     anchor = version.replace('.', '')
-    path = f"CHANGELOG-{major}.md#{anchor}"
+    path = f"changelog.md#{anchor}"
 
     icon = "octicons-milestone-24"
     href = _relative_uri(path, page, files)

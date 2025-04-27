@@ -42,6 +42,8 @@ def module(markdown: str, page: Page, config: MkDocsConfig, files: Files) -> str
             return _badge_for_applies_to_rule(args, page, files)
         elif type == "config":
             return _badge_for_configuration(args, page, files)
+        elif type == "resource":
+            return ''
 
         raise RuntimeError(f"Unknown shortcode module:{type}")
 

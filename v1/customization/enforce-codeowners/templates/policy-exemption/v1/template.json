@@ -1,0 +1,127 @@
+{
+    "$schema": "https://schema.management.azure.com/schemas/2019-08-01/subscriptionDeploymentTemplate.json#",
+    "contentVersion": "1.0.0.0",
+    "metadata": {
+        "name": "Policy Exemption",
+        "description": "Create or update an Azure Policy exemption for a Resource Group."
+    },
+    "parameters": {
+        "exemptionNameSuffix": {
+            "type": "string",
+            "metadata": {
+                "description": "This value will be added as a suffix to the exemption name.",
+                "example": ""
+            }
+        },
+        "assignmentId": {
+            "type": "string",
+            "metadata": {
+                "description": "The resource identifier to the policy assignment that will be exempt."
+            }
+        },
+        "resourceGroup": {
+            "type": "string",
+            "defaultValue": "",
+            "metadata": {
+                "description": "The name of the Resource Group where the exemption will be scoped.",
+                "example": "<resource_group_name>"
+            }
+        },
+        "exemptionCategory": {
+            "type": "string",
+            "defaultValue": "Waiver",
+            "allowedValues": [
+                "Waiver",
+                "Mitigated"
+            ],
+            "metadata": {
+                "description": "The type of exemption."
+            }
+        },
+        "description": {
+            "type": "string",
+            "metadata": {
+                "description": "A description for the policy exemption.",
+                "example": "<description>"
+            }
+        },
+        "displayName": {
+            "type": "string",
+            "metadata": {
+                "description": "The display name of the policy exemption.",
+                "example": "<display_name>"
+            }
+        },
+        "requestedBy": {
+            "type": "string",
+            "metadata": {
+                "description": "The team that own the resource that the exemption is being created for.",
+                "example": "<requested_team>"
+            }
+        },
+        "approvedBy": {
+            "type": "string",
+            "metadata": {
+                "description": "The team that approved the exemption.",
+                "example": "<approval_team>"
+            }
+        },
+        "expiresOnDate": {
+            "type": "string",
+            "metadata": {
+                "description": "The expiration date and time (in UTC ISO 8601 format yyyy-MM-ddTHH:mm:ssZ) of the policy exemption.",
+                "example": "2021-04-28T00:00:00+10:00"
+            }
+        },
+        "policyDefinitionReferenceIds": {
+            "type": "array",
+            "metadata": {
+                "description": "An array of definition references that this resource is exempt from."
+            }
+        }
+    },
+    "variables": {
+        "exemptionName": "[concat(subscription().subscriptionId, '-', parameters('exemptionNameSuffix'))]"
+    },
+    "resources": [
+        {
+            "comments": "Create or update an Azure Policy exemption for a Resource Group.",
+            "name": "[variables('exemptionName')]",
+            "type": "Microsoft.Resources/deployments",
+            "apiVersion": "2019-10-01",
+            "subscriptionId": "[subscription().subscriptionId]",
+            "resourceGroup": "[parameters('resourceGroup')]",
+            "location": "[if(empty(parameters('resourceGroup')), deployment().location, '')]",
+            "properties": {
+                "expressionEvaluationOptions": {
+                    "scope": "outer"
+                },
+                "mode": "Incremental",
+                "template": {
+                    "$schema": "https://schema.management.azure.com/schemas/2019-04-01/deploymentTemplate.json#",
+                    "contentVersion": "1.0.0.0",
+                    "resources": [
+                        {
+                            "name": "[variables('exemptionName')]",
+                            "type": "Microsoft.Authorization/policyExemptions",
+                            "apiVersion": "2020-07-01-preview",
+                            "properties": {
+                                "policyAssignmentId": "[parameters('assignmentId')]",
+                                "policyDefinitionReferenceIds": "[parameters('policyDefinitionReferenceIds')]",
+                                "exemptionCategory": "[parameters('exemptionCategory')]",
+                                "expiresOn": "[parameters('expiresOnDate')]",
+                                "displayName": "[parameters('displayName')]",
+                                "description": "[parameters('description')]",
+                                "metadata": {
+                                    "requestedBy": "[parameters('requestedBy')]",
+                                    "approvedBy": "[parameters('approvedBy')]",
+                                    "createdBy": "DevOps deployment"
+                                }
+                            }
+                        }
+                    ]
+                }
+            }
+        }
+    ]
+}

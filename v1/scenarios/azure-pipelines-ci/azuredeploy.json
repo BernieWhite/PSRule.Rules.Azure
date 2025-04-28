@@ -1,0 +1,203 @@
+{
+    "$schema": "https://schema.management.azure.com/schemas/2019-04-01/deploymentTemplate.json#",
+    "contentVersion": "1.0.0.0",
+    "metadata": {
+        "name": "vnet-hub",
+        "description": "Creates or updates a hub virtual network."
+    },
+    "parameters": {
+        "vnetName": {
+            "type": "string",
+            "metadata": {
+                "description": "The name of the virtual network."
+            }
+        },
+        "addressPrefix": {
+            "type": "array",
+            "minLength": 1,
+            "metadata": {
+                "description": "The Hub VNET address prefix."
+            }
+        },
+        "subnets": {
+            "type": "array",
+            "metadata": {
+                "description": "One or more subnets to create."
+            }
+        },
+        "aciSubnet": {
+            "type": "string",
+            "metadata": {
+                "description": "The name of the ACI subnet."
+            }
+        },
+        "clusterSubnet": {
+            "type": "string",
+            "metadata": {
+                "description": "The name of tje AKS cluster subnet."
+            }
+        },
+        "clusterObjectId": {
+            "type": "string",
+            "metadata": {
+                "description": "The Service Principal object id to used for the AKS cluster."
+            }
+        },
+        "delegate": {
+            "type": "bool",
+            "defaultValue": true,
+            "metadata": {
+                "description": "Determined if delegation should automatically be done."
+            }
+        }
+    },
+    "variables": {
+        "gatewaySubnet": [
+            {
+                "name": "GatewaySubnet",
+                "properties": {
+                    "addressPrefix": "[concat(split(parameters('addressPrefix')[0], '/')[0], '/27')]"
+                }
+            }
+        ],
+        "definedSubnets": {
+            "copy": [
+                {
+                    "name": "subnets",
+                    "count": "[length(parameters('subnets'))]",
+                    "input": {
+                        "name": "[parameters('subnets')[copyIndex('subnets')].name]",
+                        "properties": {
+                            "addressPrefix": "[parameters('subnets')[copyIndex('subnets')].addressPrefix]",
+                            "networkSecurityGroup": {
+                                "id": "[resourceId('Microsoft.Network/networkSecurityGroups', concat('nsg-', parameters('subnets')[copyIndex('subnets')].name))]"
+                            },
+                            "routeTable": {
+                                "id": "[resourceId('Microsoft.Network/routeTables', concat('route-', parameters('subnets')[copyIndex('subnets')].name))]"
+                            }
+                        }
+                    }
+                }
+            ]
+        },
+        "allSubnets": "[union(variables('gatewaySubnet'), variables('definedSubnets').subnets)]",
+        "networkOperatorRoleId": "[concat('/subscriptions/', subscription().subscriptionId, '/providers/Microsoft.Authorization/roleDefinitions/00000000-0000-0000-0000-000000000000')]",
+        "vnetId": "[resourceId('Microsoft.Network/virtualNetworks', parameters('vnetName'))]",
+        "clusterSubnetId": "[concat(variables('vnetId'), '/subnets/', parameters('clusterSubnet'))]",
+        "aciSubnetId": "[concat(variables('vnetId'), '/subnets/', parameters('aciSubnet'))]"
+    },
+    "resources": [
+        {
+            "comments": "Hub virtual network",
+            "type": "Microsoft.Network/virtualNetworks",
+            "name": "[parameters('vnetName')]",
+            "apiVersion": "2019-04-01",
+            "location": "region-A",
+            "dependsOn": [
+                "routeIndex",
+                "nsgIndex"
+            ],
+            "properties": {
+                "addressSpace": {
+                    "addressPrefixes": "[parameters('addressPrefix')]"
+                },
+                "subnets": "[variables('allSubnets')]"
+            },
+            "tags": {
+                "role": "Networking"
+            }
+        },
+        {
+            "condition": "[parameters('delegate')]",
+            "comments": "VNET delegation for AKS cluster",
+            "apiVersion": "2017-05-10",
+            "type": "Microsoft.Resources/deployments",
+            "name": "vnetDelegation",
+            "resourceGroup": "[resourceGroup().name]",
+            "subscriptionId": "[subscription().subscriptionId]",
+            "properties": {
+                "mode": "Incremental",
+                "parameters": {
+                },
+                "template": {
+                    "$schema": "http://schema.management.azure.com/schemas/2015-01-01/deploymentTemplate.json#",
+                    "contentVersion": "1.0.0.0",
+                    "parameters": {
+                    },
+                    "resources": [
+                        {
+                            "apiVersion": "2019-04-01",
+                            "name": "[concat(parameters('vnetName'), '/', parameters('aciSubnet'))]",
+                            "type": "Microsoft.Network/virtualNetworks/subnets",
+                            "properties": {
+                                "addressPrefix": "[reference(variables('aciSubnetId'), '2019-07-01').addressPrefix]",
+                                "serviceEndpoints": [
+                                ],
+                                "delegations": [
+                                    {
+                                        "name": "[deployment().name]",
+                                        "properties": {
+                                            "serviceName": "Microsoft.ContainerInstance/containerGroups",
+                                            "actions": [
+                                                "Microsoft.Network/virtualNetworks/subnets/action"
+                                            ]
+                                        }
+                                    }
+                                ]
+                            }
+                        },
+                        {
+                            "type": "Microsoft.Network/virtualNetworks/subnets/providers/roleAssignments",
+                            "apiVersion": "2017-05-01",
+                            "name": "[concat(parameters('vnetName'), '/', parameters('clusterSubnet'), '/Microsoft.Authorization/', guid(parameters('clusterSubnet')))]",
+                            "properties": {
+                                "roleDefinitionId": "[variables('networkOperatorRoleId')]",
+                                "principalId": "[parameters('clusterObjectId')]",
+                                "scope": "[variables('clusterSubnetId')]"
+                            }
+                        },
+                        {
+                            "type": "Microsoft.Network/virtualNetworks/subnets/providers/roleAssignments",
+                            "apiVersion": "2017-05-01",
+                            "name": "[concat(parameters('vnetName'), '/', parameters('aciSubnet'), '/Microsoft.Authorization/', guid(parameters('aciSubnet')))]",
+                            "properties": {
+                                "roleDefinitionId": "[variables('networkOperatorRoleId')]",
+                                "principalId": "[parameters('clusterObjectId')]",
+                                "scope": "[variables('aciSubnetId')]"
+                            }
+                        }
+                    ]
+                }
+            }
+        },
+        {
+            "comments": "A subnet Route Table",
+            "type": "Microsoft.Network/routeTables",
+            "name": "[concat('route-', parameters('subnets')[copyIndex('routeIndex')].name)]",
+            "apiVersion": "2019-04-01",
+            "location": "[resourceGroup().location]",
+            "copy": {
+                "name": "routeIndex",
+                "count": "[length(parameters('subnets'))]"
+            },
+            "properties": {
+                "disableBgpRoutePropagation": false
+            }
+        },
+        {
+            "comments": "A subnet Network Security Group",
+            "type": "Microsoft.Network/networkSecurityGroups",
+            "name": "[concat('nsg-', parameters('subnets')[copyIndex()].name)]",
+            "apiVersion": "2019-04-01",
+            "location": "[resourceGroup().location]",
+            "copy": {
+                "name": "nsgIndex",
+                "count": "[length(parameters('subnets'))]"
+            },
+            "properties": {
+                "securityRules": "[parameters('subnets')[copyIndex()].securityRules]"
+            },
+            "dependsOn": []
+        }
+    ]
+}

@@ -282,11 +282,13 @@
   
   
   
+    
+  
   
     
     
-      <li class="md-tabs__item">
-        <a href="../../changelog/" class="md-tabs__link">
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="./" class="md-tabs__link">
           
   
   
@@ -1608,8 +1610,10 @@
       
   
   
+    
   
   
+  
     
     
       
@@ -1621,21 +1625,26 @@
       
         
       
-    
-    
-    
-      
+        
       
     
     
-    <li class="md-nav__item md-nav__item--nested">
+    
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" checked>
         
           
-          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="">
             
   
   
@@ -1648,12 +1657,118 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_3">
             <span class="md-nav__icon md-icon"></span>
             Updates
           </label>
           <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    April 2025
+    
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    April 2025
+    
+  </span>
+  
+
+      </a>
+      
+        <!-- Determine title -->
+
+
+
+
+
+<!-- Table of contents -->
+<nav class="md-nav md-nav--secondary" aria-label="In this article">
+  
+
+  <!--
+    Check whether the content starts with a level 1 headline. If it does, the
+    top-level anchor must be skipped, since it would be redundant to the link
+    to the current page that is located just above the anchor. Therefore we
+    directly continue with the children of the anchor.
+  -->
+  
+  
+    
+  
+
+  <!-- Table of contents title and list -->
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      In this article
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#unified-with-caf" class="md-nav__link">
+    <span class="md-ellipsis">
+      Unified with CAF
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#improved-secret-leak-detection" class="md-nav__link">
+    <span class="md-ellipsis">
+      Improved secret leak detection
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#thank-you" class="md-nav__link">
+    <span class="md-ellipsis">
+      Thank you
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
             
               
                 
@@ -16029,6 +16144,24 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#improved-secret-leak-detection" class="md-nav__link">
+    <span class="md-ellipsis">
+      Improved secret leak detection
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#thank-you" class="md-nav__link">
+    <span class="md-ellipsis">
+      Thank you
+    </span>
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -16077,11 +16210,42 @@
 <h1 id="april-2025-version-143">April 2025 (version 1.43)<a class="headerlink" href="#april-2025-version-143" title="Permanent link">#</a></h1>
 <p>Install with: <a href="../../install/#with-github-actions">GitHub Actions</a> | <a href="../../install/#with-azure-pipelines">Azure Pipelines</a> | <a href="../../install/#with-powershell">PowerShell</a></p>
 <hr />
-<p>Stuff in the version 1.43 release. TBA.</p>
+<p>Welcome to the April 2025 release of PSRule for Azure.
+This release includes new features and improvements to existing rules.</p>
 <h2 id="unified-with-caf">Unified with <abbr title="Cloud Adoption Framework">CAF</abbr><a class="headerlink" href="#unified-with-caf" title="Permanent link">#</a></h2>
-<p>Previously we had two separate modules PSRule for Azure and PSRule for <abbr title="Cloud Adoption Framework">CAF</abbr>.
+<p>Previously we maintained a dedicated rules module for the Cloud Adoption Framework (<abbr title="Cloud Adoption Framework">CAF</abbr>) called PSRule for <abbr title="Cloud Adoption Framework">CAF</abbr>.
+The module focussed on providing configurable rules to enforce naming and tagging conventions for Azure resources.
 There was a number of challenges with this approach that created confusion and complexity for users.</p>
-<p>As a result, we have consolidated the features from PSRule for <abbr title="Cloud Adoption Framework">CAF</abbr> into PSRule for Azure.</p>
+<p><a href="https://learn.microsoft.com/azure/well-architected/operational-excellence/tools-processes">OE:04 Tools and processes</a> of the Well-Architected Framework (WAF),
+calls out the importance of implementing standards for naming and tagging resources.</p>
+<p>As a result, we have consolidated the features from PSRule for <abbr title="Cloud Adoption Framework">CAF</abbr> into PSRule for Azure,
+and are deprecating the PSRule for <abbr title="Cloud Adoption Framework">CAF</abbr> module.</p>
+<p>Along with this consolidation, we have made the following improvements:</p>
+<ul>
+<li>Uplifted the rules to meet the quality your can expect from PSRule for Azure.
+  All rules now have improved documentation with examples and references.</li>
+<li>The recommendations for naming prefixes that were out of date have been updated to the latest guidance from Microsoft.
+  New baselines have been created to reflect the latest guidance.
+  Additionally, the old naming conventions are available as a separate baseline for those that need to maintain them.</li>
+<li>Naming convention and tag value formats are implemented as regular expressions to allow matching of more complex patterns,
+  instead of just simple prefixes.</li>
+</ul>
+<p>If you are currently using PSRule for <abbr title="Cloud Adoption Framework">CAF</abbr> and want to migrate to PSRule for Azure,
+you can do so by following the <a href="../../setup/setup-naming-and-tagging/#migrating-from-psrule-for-caf">migration details here</a>.</p>
+<p>We also renamed the <code>Azure.ResourceGroup.Name</code> rule to <code>Azure.Group.Name</code> to better aligned to related rules.</p>
+<h2 id="improved-secret-leak-detection">Improved secret leak detection<a class="headerlink" href="#improved-secret-leak-detection" title="Permanent link">#</a></h2>
+<p>Checking for cases where sensitive values are passed insecurely is a key part of the secure development lifecycle.
+This release improves the detection of sensitive values in ARM templates and Bicep files.</p>
+<p>One new rule <span class="badge"><span class="badge__icon"><a href="../../en/rules/Azure.Deployment.SecretLeak/" title="Applies to rule"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M14.78 3.653a3.936 3.936 0 1 1 5.567 5.567l-3.627 3.627a3.936 3.936 0 0 1-5.88-.353.75.75 0 0 0-1.18.928 5.436 5.436 0 0 0 8.12.486l3.628-3.628a5.436 5.436 0 1 0-7.688-7.688l-3 3a.75.75 0 0 0 1.06 1.061z"/><path d="M7.28 11.153a3.936 3.936 0 0 1 5.88.353.75.75 0 0 0 1.18-.928 5.436 5.436 0 0 0-8.12-.486L2.592 13.72a5.436 5.436 0 1 0 7.688 7.688l3-3a.75.75 0 1 0-1.06-1.06l-3 3a3.936 3.936 0 0 1-5.567-5.568z"/></svg></span></a></span><span class="badge__text"><a href="../../en/rules/Azure.Deployment.SecretLeak/">Azure.Deployment.SecretLeak</a></span></span> has been added to detect cases when a sensitive value is passed to a
+parameter that is not marked as secure.</p>
+<p>Additionally, the existing rule <span class="badge"><span class="badge__icon"><a href="../../en/rules/Azure.Deployment.SecureValue/" title="Applies to rule"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M14.78 3.653a3.936 3.936 0 1 1 5.567 5.567l-3.627 3.627a3.936 3.936 0 0 1-5.88-.353.75.75 0 0 0-1.18.928 5.436 5.436 0 0 0 8.12.486l3.628-3.628a5.436 5.436 0 1 0-7.688-7.688l-3 3a.75.75 0 0 0 1.06 1.061z"/><path d="M7.28 11.153a3.936 3.936 0 0 1 5.88.353.75.75 0 0 0 1.18-.928 5.436 5.436 0 0 0-8.12-.486L2.592 13.72a5.436 5.436 0 1 0 7.688 7.688l3-3a.75.75 0 1 0-1.06-1.06l-3 3a3.936 3.936 0 0 1-5.567-5.568z"/></svg></span></a></span><span class="badge__text"><a href="../../en/rules/Azure.Deployment.SecureValue/">Azure.Deployment.SecureValue</a></span></span> has been updated to support new resource types and properties.
+This rule checks for cases when a non-secure value is assigned to a resource property that contains sensitive information.</p>
+<h2 id="thank-you">Thank you<a class="headerlink" href="#thank-you" title="Permanent link">#</a></h2>
+<p>Thanks for your continued support and feedback.
+We are always looking for ways to improve the experience of using PSRule for Azure.</p>
+<p>If you have any feedback or suggestions, please reach out to us on <a href="https://github.com/Azure/PSRule.Rules.Azure/discussions">GitHub Discussions</a> or <a href="https://github.com/Azure/PSRule.Rules.Azure/issues">GitHub Issues</a>.</p>
+<p>If you'd like to contribute to the project, please check out our <a href="../../license-contributing/get-started-contributing/">contributing guide</a>.
+We welcome contributions of all kinds, from rules, code, documentation, and samples.</p>
 
 
 
@@ -16104,7 +16268,7 @@ There was a number of challenges with this approach that created confusion and c
     <span class="md-icon" title="Last update">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="April 27, 2025 14:50:45">April 27, 2025</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="April 27, 2025 15:46:29">April 27, 2025</span>
   </span>
 
     

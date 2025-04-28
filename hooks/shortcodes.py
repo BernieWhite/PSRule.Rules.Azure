@@ -48,6 +48,11 @@ def module(markdown: str, page: Page, config: MkDocsConfig, files: Files) -> str
         raise RuntimeError(f"Unknown shortcode module:{type}")
 
     # Replace module shortcodes.
+    markdown = re.sub(
+        r"{{ module:(\w+)(.*?) }}",
+        replace, markdown, flags = re.I | re.M
+    )
+    
     return re.sub(
         r"<!-- module:(\w+)(.*?) -->",
         replace, markdown, flags = re.I | re.M

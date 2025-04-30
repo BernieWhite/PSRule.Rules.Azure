@@ -95,7 +95,7 @@ def add_update_version_to_title(markdown: str, page: Page) -> str:
     page.title = title
 
     if not page.meta.get('description', None):
-        page.meta['description'] = f"Updates in PSRule for Azure release {version}."
+        page.meta['description'] = f"Learn what is new in PSRule for Azure release {version}."
 
     # Append the version number to the first H1 title of the page
     return markdown.replace(f"# {title}", f"# {title} (version {version})")

@@ -1,116 +1,116 @@
 {
+  "avm/res/resources/resource-group": {
+    "Latest": "0.4.1"
+  },
+  "avm/res/network/firewall-policy": {
+    "Latest": "0.3.1"
+  },
+  "avm/res/event-hub/namespace": {
+    "Latest": "0.9.1"
+  },
+  "avm/res/container-service/managed-cluster": {
+    "Latest": "0.9.0"
+  },
   "avm/res/network/virtual-network/subnet": {
     "Latest": "0.1.1"
+  },
+  "avm/res/app-configuration/configuration-store": {
+    "Latest": "0.6.3"
+  },
+  "avm/res/event-grid/system-topic": {
+    "Latest": "0.6.0"
+  },
+  "avm/res/network/network-security-group": {
+    "Latest": "0.5.1"
+  },
+  "avm/res/network/network-interface": {
+    "Latest": "0.5.2"
+  },
+  "avm/ptn/security/security-center": {
+    "Latest": "0.1.1"
+  },
+  "avm/res/event-grid/domain": {
+    "Latest": "0.8.0"
+  },
+  "avm/res/sql/server": {
+    "Latest": "0.9.1"
+  },
+  "avm/res/api-management/service": {
+    "Latest": "0.9.1"
+  },
+  "avm/res/db-for-my-sql/flexible-server": {
+    "Latest": "0.7.0"
+  },
+  "avm/res/db-for-postgre-sql/flexible-server": {
+    "Latest": "0.9.1"
+  },
+  "avm/res/app/managed-environment": {
+    "Latest": "0.9.1"
+  },
+  "avm/res/network/application-gateway": {
+    "Latest": "0.6.0"
   },
   "avm/res/cognitive-services/account": {
     "Latest": "0.9.2"
   },
+  "avm/res/search/search-service": {
+    "Latest": "0.9.2"
+  },
+  "avm/res/web/serverfarm": {
+    "Latest": "0.4.1"
+  },
+  "avm/res/compute/virtual-machine": {
+    "Latest": "0.9.0"
+  },
   "avm/res/insights/component": {
     "Latest": "0.6.0"
   },
-  "avm/res/db-for-postgre-sql/flexible-server": {
+  "avm/res/network/load-balancer": {
+    "Latest": "0.4.2"
+  },
+  "avm/res/compute/virtual-machine-scale-set": {
+    "Latest": "0.8.1"
+  },
+  "avm/res/container-registry/registry": {
     "Latest": "0.9.1"
   },
   "avm/res/network/virtual-network": {
     "Latest": "0.6.1"
   },
-  "avm/res/storage/storage-account": {
-    "Latest": "0.9.1"
-  },
-  "avm/res/sql/server": {
-    "Latest": "0.9.1"
-  },
-  "avm/res/network/connection": {
-    "Latest": "0.1.4"
-  },
-  "avm/res/app/container-app": {
+  "avm/res/key-vault/vault": {
     "Latest": "0.9.0"
-  },
-  "avm/res/container-service/managed-cluster": {
-    "Latest": "0.9.0"
-  },
-  "avm/res/event-hub/namespace": {
-    "Latest": "0.9.1"
-  },
-  "avm/res/cache/redis": {
-    "Latest": "0.9.0"
-  },
-  "avm/res/network/route-table": {
-    "Latest": "0.4.1"
-  },
-  "avm/res/service-bus/namespace": {
-    "Latest": "0.9.1"
   },
   "avm/res/desktop-virtualization/host-pool": {
     "Latest": "0.6.0"
   },
-  "avm/res/app/managed-environment": {
+  "avm/res/network/public-ip-address": {
+    "Latest": "0.8.0"
+  },
+  "avm/res/network/connection": {
+    "Latest": "0.1.4"
+  },
+  "avm/res/cache/redis": {
+    "Latest": "0.9.0"
+  },
+  "avm/res/app/container-app": {
+    "Latest": "0.9.0"
+  },
+  "avm/res/service-bus/namespace": {
     "Latest": "0.9.1"
   },
   "avm/res/web/site": {
     "Latest": "0.9.0"
   },
-  "avm/res/web/serverfarm": {
-    "Latest": "0.4.1"
-  },
-  "avm/res/resources/resource-group": {
-    "Latest": "0.4.1"
-  },
-  "avm/res/api-management/service": {
-    "Latest": "0.9.1"
+  "avm/res/event-grid/topic": {
+    "Latest": "0.8.0"
   },
   "avm/res/network/virtual-network-gateway": {
     "Latest": "0.6.1"
   },
-  "avm/res/app-configuration/configuration-store": {
-    "Latest": "0.6.3"
-  },
-  "avm/res/event-grid/topic": {
-    "Latest": "0.8.0"
-  },
-  "avm/res/event-grid/system-topic": {
-    "Latest": "0.6.0"
-  },
-  "avm/res/network/firewall-policy": {
-    "Latest": "0.3.1"
-  },
-  "avm/res/network/network-interface": {
-    "Latest": "0.5.2"
-  },
-  "avm/res/compute/virtual-machine-scale-set": {
-    "Latest": "0.8.1"
-  },
-  "avm/res/db-for-my-sql/flexible-server": {
-    "Latest": "0.7.0"
-  },
-  "avm/res/network/load-balancer": {
-    "Latest": "0.4.2"
-  },
-  "avm/res/key-vault/vault": {
-    "Latest": "0.9.0"
-  },
-  "avm/res/search/search-service": {
-    "Latest": "0.9.2"
-  },
-  "avm/res/event-grid/domain": {
-    "Latest": "0.8.0"
-  },
-  "avm/ptn/security/security-center": {
-    "Latest": "0.1.1"
-  },
-  "avm/res/network/application-gateway": {
-    "Latest": "0.6.0"
-  },
-  "avm/res/compute/virtual-machine": {
-    "Latest": "0.9.0"
-  },
-  "avm/res/network/network-security-group": {
-    "Latest": "0.5.1"
-  },
-  "avm/res/container-registry/registry": {
+  "avm/res/storage/storage-account": {
     "Latest": "0.9.1"
   },
-  "avm/res/network/public-ip-address": {
-    "Latest": "0.8.0"
+  "avm/res/network/route-table": {
+    "Latest": "0.4.1"
   }
 }

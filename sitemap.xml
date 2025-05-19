@@ -2,2434 +2,2434 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     <url>
          <loc>https://azure.github.io/PSRule.Rules.Azure/</loc>
-         <lastmod>2025-05-18</lastmod>
+         <lastmod>2025-05-19</lastmod>
     </url>
     <url>
          <loc>https://azure.github.io/PSRule.Rules.Azure/about/</loc>
-         <lastmod>2025-05-18</lastmod>
+         <lastmod>2025-05-19</lastmod>
     </url>
     <url>
          <loc>https://azure.github.io/PSRule.Rules.Azure/analyzing-resources/</loc>
-         <lastmod>2025-05-18</lastmod>
+         <lastmod>2025-05-19</lastmod>
     </url>
     <url>
          <loc>https://azure.github.io/PSRule.Rules.Azure/changelog/</loc>
-         <lastmod>2025-05-18</lastmod>
+         <lastmod>2025-05-19</lastmod>
     </url>
     <url>
          <loc>https://azure.github.io/PSRule.Rules.Azure/creating-your-pipeline/</loc>
-         <lastmod>2025-05-18</lastmod>
+         <lastmod>2025-05-19</lastmod>
     </url>
     <url>
          <loc>https://azure.github.io/PSRule.Rules.Azure/deprecations/</loc>
-         <lastmod>2025-05-18</lastmod>
+         <lastmod>2025-05-19</lastmod>
     </url>
     <url>
          <loc>https://azure.github.io/PSRule.Rules.Azure/expanding-source-files/</loc>
-         <lastmod>2025-05-18</lastmod>
+         <lastmod>2025-05-19</lastmod>
     </url>
     <url>
          <loc>https://azure.github.io/PSRule.Rules.Azure/export-rule-data/</loc>
-         <lastmod>2025-05-18</lastmod>
+         <lastmod>2025-05-19</lastmod>
     </url>
     <url>
          <loc>https://azure.github.io/PSRule.Rules.Azure/faq/</loc>
-         <lastmod>2025-05-18</lastmod>
+         <lastmod>2025-05-19</lastmod>
     </url>
     <url>
          <loc>https://azure.github.io/PSRule.Rules.Azure/features/</loc>
-         <lastmod>2025-05-18</lastmod>
+         <lastmod>2025-05-19</lastmod>
     </url>
     <url>
          <loc>https://azure.github.io/PSRule.Rules.Azure/install/</loc>
-         <lastmod>2025-05-18</lastmod>
+         <lastmod>2025-05-19</lastmod>
     </url>
     <url>
          <loc>https://azure.github.io/PSRule.Rules.Azure/integrations/</loc>
-         <lastmod>2025-05-18</lastmod>
+         <lastmod>2025-05-19</lastmod>
     </url>
     <url>
          <loc>https://azure.github.io/PSRule.Rules.Azure/license-contributing/</loc>
-         <lastmod>2025-05-18</lastmod>
+         <lastmod>2025-05-19</lastmod>
     </url>
     <url>
          <loc>https://azure.github.io/PSRule.Rules.Azure/related-projects/</loc>
-         <lastmod>2025-05-18</lastmod>
+         <lastmod>2025-05-19</lastmod>
     </url>
     <url>
          <loc>https://azure.github.io/PSRule.Rules.Azure/samples/</loc>
-         <lastmod>2025-05-18</lastmod>
+         <lastmod>2025-05-19</lastmod>
     </url>
     <url>
          <loc>https://azure.github.io/PSRule.Rules.Azure/support/</loc>
-         <lastmod>2025-05-18</lastmod>
+         <lastmod>2025-05-19</lastmod>
     </url>
     <url>
          <loc>https://azure.github.io/PSRule.Rules.Azure/troubleshooting/</loc>
-         <lastmod>2025-05-18</lastmod>
+         <lastmod>2025-05-19</lastmod>
     </url>
     <url>
          <loc>https://azure.github.io/PSRule.Rules.Azure/upgrade-notes/</loc>
-         <lastmod>2025-05-18</lastmod>
+         <lastmod>2025-05-19</lastmod>
     </url>
     <url>
          <loc>https://azure.github.io/PSRule.Rules.Azure/using-bicep/</loc>
-         <lastmod>2025-05-18</lastmod>
+         <lastmod>2025-05-19</lastmod>
     </url>
     <url>
          <loc>https://azure.github.io/PSRule.Rules.Azure/using-templates/</loc>
-         <lastmod>2025-05-18</lastmod>
+         <lastmod>2025-05-19</lastmod>
     </url>
     <url>
          <loc>https://azure.github.io/PSRule.Rules.Azure/versioning/</loc>
-         <lastmod>2025-05-18</lastmod>
+         <lastmod>2025-05-19</lastmod>
     </url>
     <url>
          <loc>https://azure.github.io/PSRule.Rules.Azure/working-with-baselines/</loc>
-         <lastmod>2025-05-18</lastmod>
+         <lastmod>2025-05-19</lastmod>
     </url>
     <url>
          <loc>https://azure.github.io/PSRule.Rules.Azure/commands/Export-AzPolicyAssignmentData/</loc>
-         <lastmod>2025-05-18</lastmod>
+         <lastmod>2025-05-19</lastmod>
     </url>
     <url>
          <loc>https://azure.github.io/PSRule.Rules.Azure/commands/Export-AzPolicyAssignmentRuleData/</loc>
-         <lastmod>2025-05-18</lastmod>
+         <lastmod>2025-05-19</lastmod>
     </url>
     <url>
          <loc>https://azure.github.io/PSRule.Rules.Azure/commands/Export-AzRuleData/</loc>
-         <lastmod>2025-05-18</lastmod>
+         <lastmod>2025-05-19</lastmod>
     </url>
     <url>
          <loc>https://azure.github.io/PSRule.Rules.Azure/commands/Export-AzRuleTemplateData/</loc>
-         <lastmod>2025-05-18</lastmod>
+         <lastmod>2025-05-19</lastmod>
     </url>
     <url>
          <loc>https://azure.github.io/PSRule.Rules.Azure/commands/Get-AzPolicyAssignmentDataSource/</loc>
-         <lastmod>2025-05-18</lastmod>
+         <lastmod>2025-05-19</lastmod>
     </url>
     <url>
          <loc>https://azure.github.io/PSRule.Rules.Azure/commands/Get-AzRuleTemplateLink/</loc>
-         <lastmod>2025-05-18</lastmod>
+         <lastmod>2025-05-19</lastmod>
     </url>
     <url>
          <loc>https://azure.github.io/PSRule.Rules.Azure/commands/PSRule.Rules.Azure/</loc>
-         <lastmod>2025-05-18</lastmod>
+         <lastmod>2025-05-19</lastmod>
     </url>
     <url>
          <loc>https://azure.github.io/PSRule.Rules.Azure/concepts/about_PSRule_Azure_Configuration/</loc>
-         <lastmod>2025-05-18</lastmod>
+         <lastmod>2025-05-19</lastmod>
     </url>
     <url>
          <loc>https://azure.github.io/PSRule.Rules.Azure/concepts/about_PSRule_Azure_Metadata_Link/</loc>
-         <lastmod>2025-05-18</lastmod>
+         <lastmod>2025-05-19</lastmod>
     </url>
     <url>
          <loc>https://azure.github.io/PSRule.Rules.Azure/concepts/policy-as-rules/</loc>
-         <lastmod>2025-05-18</lastmod>
+         <lastmod>2025-05-19</lastmod>
     </url>
     <url>
          <loc>https://azure.github.io/PSRule.Rules.Azure/concepts/suppression/</loc>
-         <lastmod>2025-05-18</lastmod>
+         <lastmod>2025-05-19</lastmod>
     </url>
     <url>
          <loc>https://azure.github.io/PSRule.Rules.Azure/customization/enforce-codeowners/</loc>
-         <lastmod>2025-05-18</lastmod>
+         <lastmod>2025-05-19</lastmod>
     </url>
     <url>
          <loc>https://azure.github.io/PSRule.Rules.Azure/customization/enforce-custom-tags/</loc>
-         <lastmod>2025-05-18</lastmod>
+         <lastmod>2025-05-19</lastmod>
     </url>
     <url>
          <loc>https://azure.github.io/PSRule.Rules.Azure/customization/permit-outbound-management/</loc>
-         <lastmod>2025-05-18</lastmod>
+         <lastmod>2025-05-19</lastmod>
     </url>
     <url>
          <loc>https://azure.github.io/PSRule.Rules.Azure/customization/using-custom-rules/</loc>
-         <lastmod>2025-05-18</lastmod>
+         <lastmod>2025-05-19</lastmod>
     </url>
     <url>
          <loc>https://azure.github.io/PSRule.Rules.Azure/en/mcsb-v1/</loc>
-         <lastmod>2025-05-18</lastmod>
+         <lastmod>2025-05-19</lastmod>
     </url>
     <url>
          <loc>https://azure.github.io/PSRule.Rules.Azure/en/baselines/</loc>
-         <lastmod>2025-05-18</lastmod>
+         <lastmod>2025-05-19</lastmod>
     </url>
     <url>
          <loc>https://azure.github.io/PSRule.Rules.Azure/en/baselines/Azure.All/</loc>
-         <lastmod>2025-05-18</lastmod>
+         <lastmod>2025-05-19</lastmod>
     </url>
     <url>
          <loc>https://azure.github.io/PSRule.Rules.Azure/en/baselines/Azure.CAF_2025_03/</loc>
-         <lastmod>2025-05-18</lastmod>
+         <lastmod>2025-05-19</lastmod>
     </url>
     <url>
          <loc>https://azure.github.io/PSRule.Rules.Azure/en/baselines/Azure.CAF_Compatibility/</loc>
-         <lastmod>2025-05-18</lastmod>
+         <lastmod>2025-05-19</lastmod>
     </url>
     <url>
          <loc>https://azure.github.io/PSRule.Rules.Azure/en/baselines/Azure.Default/</loc>
-         <lastmod>2025-05-18</lastmod>
+         <lastmod>2025-05-19</lastmod>
     </url>
     <url>
          <loc>https://azure.github.io/PSRule.Rules.Azure/en/baselines/Azure.GA_2020_06/</loc>
-         <lastmod>2025-05-18</lastmod>
+         <lastmod>2025-05-19</lastmod>
     </url>
     <url>
          <loc>https://azure.github.io/PSRule.Rules.Azure/en/baselines/Azure.GA_2020_09/</loc>
-         <lastmod>2025-05-18</lastmod>
+         <lastmod>2025-05-19</lastmod>
     </url>
     <url>
          <loc>https://azure.github.io/PSRule.Rules.Azure/en/baselines/Azure.GA_2020_12/</loc>
-         <lastmod>2025-05-18</lastmod>
+         <lastmod>2025-05-19</lastmod>
     </url>
     <url>
          <loc>https://azure.github.io/PSRule.Rules.Azure/en/baselines/Azure.GA_2021_03/</loc>
-         <lastmod>2025-05-18</lastmod>
+         <lastmod>2025-05-19</lastmod>
     </url>
     <url>
          <loc>https://azure.github.io/PSRule.Rules.Azure/en/baselines/Azure.GA_2021_06/</loc>
-         <lastmod>2025-05-18</lastmod>
+         <lastmod>2025-05-19</lastmod>
     </url>
     <url>
          <loc>https://azure.github.io/PSRule.Rules.Azure/en/baselines/Azure.GA_2021_09/</loc>
-         <lastmod>2025-05-18</lastmod>
+         <lastmod>2025-05-19</lastmod>
     </url>
     <url>
          <loc>https://azure.github.io/PSRule.Rules.Azure/en/baselines/Azure.GA_2021_12/</loc>
-         <lastmod>2025-05-18</lastmod>
+         <lastmod>2025-05-19</lastmod>
     </url>
     <url>
          <loc>https://azure.github.io/PSRule.Rules.Azure/en/baselines/Azure.GA_2022_03/</loc>
-         <lastmod>2025-05-18</lastmod>
+         <lastmod>2025-05-19</lastmod>
     </url>
     <url>
          <loc>https://azure.github.io/PSRule.Rules.Azure/en/baselines/Azure.GA_2022_06/</loc>
-         <lastmod>2025-05-18</lastmod>
+         <lastmod>2025-05-19</lastmod>
     </url>
     <url>
          <loc>https://azure.github.io/PSRule.Rules.Azure/en/baselines/Azure.GA_2022_09/</loc>
-         <lastmod>2025-05-18</lastmod>
+         <lastmod>2025-05-19</lastmod>
     </url>
     <url>
          <loc>https://azure.github.io/PSRule.Rules.Azure/en/baselines/Azure.GA_2022_12/</loc>
-         <lastmod>2025-05-18</lastmod>
+         <lastmod>2025-05-19</lastmod>
     </url>
     <url>
          <loc>https://azure.github.io/PSRule.Rules.Azure/en/baselines/Azure.GA_2023_03/</loc>
-         <lastmod>2025-05-18</lastmod>
+         <lastmod>2025-05-19</lastmod>
     </url>
     <url>
          <loc>https://azure.github.io/PSRule.Rules.Azure/en/baselines/Azure.GA_2023_06/</loc>
-         <lastmod>2025-05-18</lastmod>
+         <lastmod>2025-05-19</lastmod>
     </url>
     <url>
          <loc>https://azure.github.io/PSRule.Rules.Azure/en/baselines/Azure.GA_2023_09/</loc>
-         <lastmod>2025-05-18</lastmod>
+         <lastmod>2025-05-19</lastmod>
     </url>
     <url>
          <loc>https://azure.github.io/PSRule.Rules.Azure/en/baselines/Azure.GA_2023_12/</loc>
-         <lastmod>2025-05-18</lastmod>
+         <lastmod>2025-05-19</lastmod>
     </url>
     <url>
          <loc>https://azure.github.io/PSRule.Rules.Azure/en/baselines/Azure.GA_2024_03/</loc>
-         <lastmod>2025-05-18</lastmod>
+         <lastmod>2025-05-19</lastmod>
     </url>
     <url>
          <loc>https://azure.github.io/PSRule.Rules.Azure/en/baselines/Azure.GA_2024_06/</loc>
-         <lastmod>2025-05-18</lastmod>
+         <lastmod>2025-05-19</lastmod>
     </url>
     <url>
          <loc>https://azure.github.io/PSRule.Rules.Azure/en/baselines/Azure.GA_2024_09/</loc>
-         <lastmod>2025-05-18</lastmod>
+         <lastmod>2025-05-19</lastmod>
     </url>
     <url>
          <loc>https://azure.github.io/PSRule.Rules.Azure/en/baselines/Azure.GA_2024_12/</loc>
-         <lastmod>2025-05-18</lastmod>
+         <lastmod>2025-05-19</lastmod>
     </url>
     <url>
          <loc>https://azure.github.io/PSRule.Rules.Azure/en/baselines/Azure.GA_2025_03/</loc>
-         <lastmod>2025-05-18</lastmod>
+         <lastmod>2025-05-19</lastmod>
     </url>
     <url>
          <loc>https://azure.github.io/PSRule.Rules.Azure/en/baselines/Azure.MCSB.v1/</loc>
-         <lastmod>2025-05-18</lastmod>
+         <lastmod>2025-05-19</lastmod>
     </url>
     <url>
          <loc>https://azure.github.io/PSRule.Rules.Azure/en/baselines/Azure.Pillar.CostOptimization/</loc>
-         <lastmod>2025-05-18</lastmod>
+         <lastmod>2025-05-19</lastmod>
     </url>
     <url>
          <loc>https://azure.github.io/PSRule.Rules.Azure/en/baselines/Azure.Pillar.OperationalExcellence/</loc>
-         <lastmod>2025-05-18</lastmod>
+         <lastmod>2025-05-19</lastmod>
     </url>
     <url>
          <loc>https://azure.github.io/PSRule.Rules.Azure/en/baselines/Azure.Pillar.PerformanceEfficiency/</loc>
-         <lastmod>2025-05-18</lastmod>
+         <lastmod>2025-05-19</lastmod>
     </url>
     <url>
          <loc>https://azure.github.io/PSRule.Rules.Azure/en/baselines/Azure.Pillar.Reliability/</loc>
-         <lastmod>2025-05-18</lastmod>
+         <lastmod>2025-05-19</lastmod>
     </url>
     <url>
          <loc>https://azure.github.io/PSRule.Rules.Azure/en/baselines/Azure.Pillar.Security/</loc>
-         <lastmod>2025-05-18</lastmod>
+         <lastmod>2025-05-19</lastmod>
     </url>
     <url>
          <loc>https://azure.github.io/PSRule.Rules.Azure/en/baselines/Azure.Preview/</loc>
-         <lastmod>2025-05-18</lastmod>
+         <lastmod>2025-05-19</lastmod>
     </url>
     <url>
          <loc>https://azure.github.io/PSRule.Rules.Azure/en/baselines/Azure.Preview_2021_09/</loc>
-         <lastmod>2025-05-18</lastmod>
+         <lastmod>2025-05-19</lastmod>
     </url>
     <url>
          <loc>https://azure.github.io/PSRule.Rules.Azure/en/baselines/Azure.Preview_2021_12/</loc>
-         <lastmod>2025-05-18</lastmod>
+         <lastmod>2025-05-19</lastmod>
     </url>
     <url>
          <loc>https://azure.github.io/PSRule.Rules.Azure/en/baselines/Azure.Preview_2022_03/</loc>
-         <lastmod>2025-05-18</lastmod>
+         <lastmod>2025-05-19</lastmod>
     </url>
     <url>
          <loc>https://azure.github.io/PSRule.Rules.Azure/en/baselines/Azure.Preview_2022_06/</loc>
-         <lastmod>2025-05-18</lastmod>
+         <lastmod>2025-05-19</lastmod>
     </url>
     <url>
          <loc>https://azure.github.io/PSRule.Rules.Azure/en/baselines/Azure.Preview_2022_09/</loc>
-         <lastmod>2025-05-18</lastmod>
+         <lastmod>2025-05-19</lastmod>
     </url>
     <url>
          <loc>https://azure.github.io/PSRule.Rules.Azure/en/baselines/Azure.Preview_2022_12/</loc>
-         <lastmod>2025-05-18</lastmod>
+         <lastmod>2025-05-19</lastmod>
     </url>
     <url>
          <loc>https://azure.github.io/PSRule.Rules.Azure/en/baselines/Azure.Preview_2023_03/</loc>
-         <lastmod>2025-05-18</lastmod>
+         <lastmod>2025-05-19</lastmod>
     </url>
     <url>
          <loc>https://azure.github.io/PSRule.Rules.Azure/en/baselines/Azure.Preview_2023_06/</loc>
-         <lastmod>2025-05-18</lastmod>
+         <lastmod>2025-05-19</lastmod>
     </url>
     <url>
          <loc>https://azure.github.io/PSRule.Rules.Azure/en/baselines/Azure.Preview_2023_09/</loc>
-         <lastmod>2025-05-18</lastmod>
+         <lastmod>2025-05-19</lastmod>
     </url>
     <url>
          <loc>https://azure.github.io/PSRule.Rules.Azure/en/baselines/Azure.Preview_2023_12/</loc>
-         <lastmod>2025-05-18</lastmod>
+         <lastmod>2025-05-19</lastmod>
     </url>
     <url>
          <loc>https://azure.github.io/PSRule.Rules.Azure/en/baselines/Azure.Preview_2024_03/</loc>
-         <lastmod>2025-05-18</lastmod>
+         <lastmod>2025-05-19</lastmod>
     </url>
     <url>
          <loc>https://azure.github.io/PSRule.Rules.Azure/en/baselines/Azure.Preview_2024_06/</loc>
-         <lastmod>2025-05-18</lastmod>
+         <lastmod>2025-05-19</lastmod>
     </url>
     <url>
          <loc>https://azure.github.io/PSRule.Rules.Azure/en/baselines/Azure.Preview_2024_09/</loc>
-         <lastmod>2025-05-18</lastmod>
+         <lastmod>2025-05-19</lastmod>
     </url>
     <url>
          <loc>https://azure.github.io/PSRule.Rules.Azure/en/baselines/Azure.Preview_2024_12/</loc>
-         <lastmod>2025-05-18</lastmod>
+         <lastmod>2025-05-19</lastmod>
     </url>
     <url>
          <loc>https://azure.github.io/PSRule.Rules.Azure/en/baselines/Azure.Preview_2025_03/</loc>
-         <lastmod>2025-05-18</lastmod>
+         <lastmod>2025-05-19</lastmod>
     </url>
     <url>
          <loc>https://azure.github.io/PSRule.Rules.Azure/en/rules/</loc>
-         <lastmod>2025-05-18</lastmod>
+         <lastmod>2025-05-19</lastmod>
     </url>
     <url>
          <loc>https://azure.github.io/PSRule.Rules.Azure/en/rules/Azure.ACR.AdminUser/</loc>
-         <lastmod>2025-05-18</lastmod>
+         <lastmod>2025-05-19</lastmod>
     </url>
     <url>
          <loc>https://azure.github.io/PSRule.Rules.Azure/en/rules/Azure.ACR.AnonymousAccess/</loc>
-         <lastmod>2025-05-18</lastmod>
+         <lastmod>2025-05-19</lastmod>
     </url>
     <url>
          <loc>https://azure.github.io/PSRule.Rules.Azure/en/rules/Azure.ACR.ContainerScan/</loc>
-         <lastmod>2025-05-18</lastmod>
+         <lastmod>2025-05-19</lastmod>
     </url>
     <url>
          <loc>https://azure.github.io/PSRule.Rules.Azure/en/rules/Azure.ACR.ContentTrust/</loc>
-         <lastmod>2025-05-18</lastmod>
+         <lastmod>2025-05-19</lastmod>
     </url>
     <url>
          <loc>https://azure.github.io/PSRule.Rules.Azure/en/rules/Azure.ACR.Firewall/</loc>
-         <lastmod>2025-05-18</lastmod>
+         <lastmod>2025-05-19</lastmod>
     </url>
     <url>
          <loc>https://azure.github.io/PSRule.Rules.Azure/en/rules/Azure.ACR.GeoReplica/</loc>
-         <lastmod>2025-05-18</lastmod>
+         <lastmod>2025-05-19</lastmod>
     </url>
     <url>
          <loc>https://azure.github.io/PSRule.Rules.Azure/en/rules/Azure.ACR.ImageHealth/</loc>
-         <lastmod>2025-05-18</lastmod>
+         <lastmod>2025-05-19</lastmod>
     </url>
     <url>
          <loc>https://azure.github.io/PSRule.Rules.Azure/en/rules/Azure.ACR.MinSku/</loc>
-         <lastmod>2025-05-18</lastmod>
+         <lastmod>2025-05-19</lastmod>
     </url>
     <url>
          <loc>https://azure.github.io/PSRule.Rules.Azure/en/rules/Azure.ACR.Name/</loc>
-         <lastmod>2025-05-18</lastmod>
+         <lastmod>2025-05-19</lastmod>
     </url>
     <url>
          <loc>https://azure.github.io/PSRule.Rules.Azure/en/rules/Azure.ACR.Quarantine/</loc>
-         <lastmod>2025-05-18</lastmod>
+         <lastmod>2025-05-19</lastmod>
     </url>
     <url>
          <loc>https://azure.github.io/PSRule.Rules.Azure/en/rules/Azure.ACR.Retention/</loc>
-         <lastmod>2025-05-18</lastmod>
+         <lastmod>2025-05-19</lastmod>
     </url>
     <url>
          <loc>https://azure.github.io/PSRule.Rules.Azure/en/rules/Azure.ACR.SoftDelete/</loc>
-         <lastmod>2025-05-18</lastmod>
+         <lastmod>2025-05-19</lastmod>
     </url>
     <url>
          <loc>https://azure.github.io/PSRule.Rules.Azure/en/rules/Azure.ACR.Usage/</loc>
-         <lastmod>2025-05-18</lastmod>
+         <lastmod>2025-05-19</lastmod>
     </url>
     <url>
          <loc>https://azure.github.io/PSRule.Rules.Azure/en/rules/Azure.ADX.DiskEncryption/</loc>
-         <lastmod>2025-05-18</lastmod>
+         <lastmod>2025-05-19</lastmod>
     </url>
     <url>
          <loc>https://azure.github.io/PSRule.Rules.Azure/en/rules/Azure.ADX.ManagedIdentity/</loc>
-         <lastmod>2025-05-18</lastmod>
+         <lastmod>2025-05-19</lastmod>
     </url>
     <url>
          <loc>https://azure.github.io/PSRule.Rules.Azure/en/rules/Azure.ADX.SLA/</loc>
-         <lastmod>2025-05-18</lastmod>
+         <lastmod>2025-05-19</lastmod>
     </url>
     <url>
          <loc>https://azure.github.io/PSRule.Rules.Azure/en/rules/Azure.ADX.Usage/</loc>
-         <lastmod>2025-05-18</lastmod>
+         <lastmod>2025-05-19</lastmod>
     </url>
     <url>
          <loc>https://azure.github.io/PSRule.Rules.Azure/en/rules/Azure.AI.DisableLocalAuth/</loc>
-         <lastmod>2025-05-18</lastmod>
+         <lastmod>2025-05-19</lastmod>
     </url>
     <url>
          <loc>https://azure.github.io/PSRule.Rules.Azure/en/rules/Azure.AI.ManagedIdentity/</loc>
-         <lastmod>2025-05-18</lastmod>
+         <lastmod>2025-05-19</lastmod>
     </url>
     <url>
          <loc>https://azure.github.io/PSRule.Rules.Azure/en/rules/Azure.AI.Naming/</loc>
-         <lastmod>2025-05-18</lastmod>
+         <lastmod>2025-05-19</lastmod>
     </url>
     <url>
          <loc>https://azure.github.io/PSRule.Rules.Azure/en/rules/Azure.AI.PrivateEndpoints/</loc>
-         <lastmod>2025-05-18</lastmod>
+         <lastmod>2025-05-19</lastmod>
     </url>
     <url>
          <loc>https://azure.github.io/PSRule.Rules.Azure/en/rules/Azure.AI.PublicAccess/</loc>
-         <lastmod>2025-05-18</lastmod>
+         <lastmod>2025-05-19</lastmod>
     </url>
     <url>
          <loc>https://azure.github.io/PSRule.Rules.Azure/en/rules/Azure.AKS.AuditAdmin/</loc>
-         <lastmod>2025-05-18</lastmod>
+         <lastmod>2025-05-19</lastmod>
     </url>
     <url>
          <loc>https://azure.github.io/PSRule.Rules.Azure/en/rules/Azure.AKS.AuditLogs/</loc>
-         <lastmod>2025-05-18</lastmod>
+         <lastmod>2025-05-19</lastmod>
     </url>
     <url>
          <loc>https://azure.github.io/PSRule.Rules.Azure/en/rules/Azure.AKS.AuthorizedIPs/</loc>
-         <lastmod>2025-05-18</lastmod>
+         <lastmod>2025-05-19</lastmod>
     </url>
     <url>
          <loc>https://azure.github.io/PSRule.Rules.Azure/en/rules/Azure.AKS.AutoScaling/</loc>
-         <lastmod>2025-05-18</lastmod>
+         <lastmod>2025-05-19</lastmod>
     </url>
     <url>
          <loc>https://azure.github.io/PSRule.Rules.Azure/en/rules/Azure.AKS.AutoUpgrade/</loc>
-         <lastmod>2025-05-18</lastmod>
+         <lastmod>2025-05-19</lastmod>
     </url>
     <url>
          <loc>https://azure.github.io/PSRule.Rules.Azure/en/rules/Azure.AKS.AvailabilityZone/</loc>
-         <lastmod>2025-05-18</lastmod>
+         <lastmod>2025-05-19</lastmod>
     </url>
     <url>
          <loc>https://azure.github.io/PSRule.Rules.Azure/en/rules/Azure.AKS.AzurePolicyAddOn/</loc>
-         <lastmod>2025-05-18</lastmod>
+         <lastmod>2025-05-19</lastmod>
     </url>
     <url>
          <loc>https://azure.github.io/PSRule.Rules.Azure/en/rules/Azure.AKS.AzureRBAC/</loc>
-         <lastmod>2025-05-18</lastmod>
+         <lastmod>2025-05-19</lastmod>
     </url>
     <url>
          <loc>https://azure.github.io/PSRule.Rules.Azure/en/rules/Azure.AKS.CNISubnetSize/</loc>
-         <lastmod>2025-05-18</lastmod>
+         <lastmod>2025-05-19</lastmod>
     </url>
     <url>
          <loc>https://azure.github.io/PSRule.Rules.Azure/en/rules/Azure.AKS.ContainerInsights/</loc>
-         <lastmod>2025-05-18</lastmod>
+         <lastmod>2025-05-19</lastmod>
     </url>
     <url>
          <loc>https://azure.github.io/PSRule.Rules.Azure/en/rules/Azure.AKS.DNSPrefix/</loc>
-         <lastmod>2025-05-18</lastmod>
+         <lastmod>2025-05-19</lastmod>
     </url>
     <url>
          <loc>https://azure.github.io/PSRule.Rules.Azure/en/rules/Azure.AKS.DefenderProfile/</loc>
-         <lastmod>2025-05-18</lastmod>
+         <lastmod>2025-05-19</lastmod>
     </url>
     <url>
          <loc>https://azure.github.io/PSRule.Rules.Azure/en/rules/Azure.AKS.EphemeralOSDisk/</loc>
-         <lastmod>2025-05-18</lastmod>
+         <lastmod>2025-05-19</lastmod>
     </url>
     <url>
          <loc>https://azure.github.io/PSRule.Rules.Azure/en/rules/Azure.AKS.HttpAppRouting/</loc>
-         <lastmod>2025-05-18</lastmod>
+         <lastmod>2025-05-19</lastmod>
     </url>
     <url>
          <loc>https://azure.github.io/PSRule.Rules.Azure/en/rules/Azure.AKS.LocalAccounts/</loc>
-         <lastmod>2025-05-18</lastmod>
+         <lastmod>2025-05-19</lastmod>
     </url>
     <url>
          <loc>https://azure.github.io/PSRule.Rules.Azure/en/rules/Azure.AKS.MaintenanceWindow/</loc>
-         <lastmod>2025-05-18</lastmod>
+         <lastmod>2025-05-19</lastmod>
     </url>
     <url>
          <loc>https://azure.github.io/PSRule.Rules.Azure/en/rules/Azure.AKS.ManagedAAD/</loc>
-         <lastmod>2025-05-18</lastmod>
+         <lastmod>2025-05-19</lastmod>
     </url>
     <url>
          <loc>https://azure.github.io/PSRule.Rules.Azure/en/rules/Azure.AKS.ManagedIdentity/</loc>
-         <lastmod>2025-05-18</lastmod>
+         <lastmod>2025-05-19</lastmod>
     </url>
     <url>
          <loc>https://azure.github.io/PSRule.Rules.Azure/en/rules/Azure.AKS.MinNodeCount/</loc>
-         <lastmod>2025-05-18</lastmod>
+         <lastmod>2025-05-19</lastmod>
     </url>
     <url>
          <loc>https://azure.github.io/PSRule.Rules.Azure/en/rules/Azure.AKS.MinUserPoolNodes/</loc>
-         <lastmod>2025-05-18</lastmod>
+         <lastmod>2025-05-19</lastmod>
     </url>
     <url>
          <loc>https://azure.github.io/PSRule.Rules.Azure/en/rules/Azure.AKS.Name/</loc>
-         <lastmod>2025-05-18</lastmod>
+         <lastmod>2025-05-19</lastmod>
     </url>
     <url>
          <loc>https://azure.github.io/PSRule.Rules.Azure/en/rules/Azure.AKS.NetworkPolicy/</loc>
-         <lastmod>2025-05-18</lastmod>
+         <lastmod>2025-05-19</lastmod>
     </url>
     <url>
          <loc>https://azure.github.io/PSRule.Rules.Azure/en/rules/Azure.AKS.NodeAutoUpgrade/</loc>
-         <lastmod>2025-05-18</lastmod>
+         <lastmod>2025-05-19</lastmod>
     </url>
     <url>
          <loc>https://azure.github.io/PSRule.Rules.Azure/en/rules/Azure.AKS.NodeMinPods/</loc>
-         <lastmod>2025-05-18</lastmod>
+         <lastmod>2025-05-19</lastmod>
     </url>
     <url>
          <loc>https://azure.github.io/PSRule.Rules.Azure/en/rules/Azure.AKS.PlatformLogs/</loc>
-         <lastmod>2025-05-18</lastmod>
+         <lastmod>2025-05-19</lastmod>
     </url>
     <url>
          <loc>https://azure.github.io/PSRule.Rules.Azure/en/rules/Azure.AKS.PoolScaleSet/</loc>
-         <lastmod>2025-05-18</lastmod>
+         <lastmod>2025-05-19</lastmod>
     </url>
     <url>
          <loc>https://azure.github.io/PSRule.Rules.Azure/en/rules/Azure.AKS.PoolVersion/</loc>
-         <lastmod>2025-05-18</lastmod>
+         <lastmod>2025-05-19</lastmod>
     </url>
     <url>
          <loc>https://azure.github.io/PSRule.Rules.Azure/en/rules/Azure.AKS.SecretStore/</loc>
-         <lastmod>2025-05-18</lastmod>
+         <lastmod>2025-05-19</lastmod>
     </url>
     <url>
          <loc>https://azure.github.io/PSRule.Rules.Azure/en/rules/Azure.AKS.SecretStoreRotation/</loc>
-         <lastmod>2025-05-18</lastmod>
+         <lastmod>2025-05-19</lastmod>
     </url>
     <url>
          <loc>https://azure.github.io/PSRule.Rules.Azure/en/rules/Azure.AKS.StandardLB/</loc>
-         <lastmod>2025-05-18</lastmod>
+         <lastmod>2025-05-19</lastmod>
     </url>
     <url>
          <loc>https://azure.github.io/PSRule.Rules.Azure/en/rules/Azure.AKS.UptimeSLA/</loc>
-         <lastmod>2025-05-18</lastmod>
+         <lastmod>2025-05-19</lastmod>
     </url>
     <url>
          <loc>https://azure.github.io/PSRule.Rules.Azure/en/rules/Azure.AKS.UseRBAC/</loc>
-         <lastmod>2025-05-18</lastmod>
+         <lastmod>2025-05-19</lastmod>
     </url>
     <url>
          <loc>https://azure.github.io/PSRule.Rules.Azure/en/rules/Azure.AKS.Version/</loc>
-         <lastmod>2025-05-18</lastmod>
+         <lastmod>2025-05-19</lastmod>
     </url>
     <url>
          <loc>https://azure.github.io/PSRule.Rules.Azure/en/rules/Azure.APIM.APIDescriptors/</loc>
-         <lastmod>2025-05-18</lastmod>
+         <lastmod>2025-05-19</lastmod>
     </url>
     <url>
          <loc>https://azure.github.io/PSRule.Rules.Azure/en/rules/Azure.APIM.AvailabilityZone/</loc>
-         <lastmod>2025-05-18</lastmod>
+         <lastmod>2025-05-19</lastmod>
     </url>
     <url>
          <loc>https://azure.github.io/PSRule.Rules.Azure/en/rules/Azure.APIM.CORSPolicy/</loc>
-         <lastmod>2025-05-18</lastmod>
+         <lastmod>2025-05-19</lastmod>
     </url>
     <url>
          <loc>https://azure.github.io/PSRule.Rules.Azure/en/rules/Azure.APIM.CertificateExpiry/</loc>
-         <lastmod>2025-05-18</lastmod>
+         <lastmod>2025-05-19</lastmod>
     </url>
     <url>
          <loc>https://azure.github.io/PSRule.Rules.Azure/en/rules/Azure.APIM.Ciphers/</loc>
-         <lastmod>2025-05-18</lastmod>
+         <lastmod>2025-05-19</lastmod>
     </url>
     <url>
          <loc>https://azure.github.io/PSRule.Rules.Azure/en/rules/Azure.APIM.DefenderCloud/</loc>
-         <lastmod>2025-05-18</lastmod>
+         <lastmod>2025-05-19</lastmod>
     </url>
     <url>
          <loc>https://azure.github.io/PSRule.Rules.Azure/en/rules/Azure.APIM.EncryptValues/</loc>
-         <lastmod>2025-05-18</lastmod>
+         <lastmod>2025-05-19</lastmod>
     </url>
     <url>
          <loc>https://azure.github.io/PSRule.Rules.Azure/en/rules/Azure.APIM.HTTPBackend/</loc>
-         <lastmod>2025-05-18</lastmod>
+         <lastmod>2025-05-19</lastmod>
     </url>
     <url>
          <loc>https://azure.github.io/PSRule.Rules.Azure/en/rules/Azure.APIM.HTTPEndpoint/</loc>
-         <lastmod>2025-05-18</lastmod>
+         <lastmod>2025-05-19</lastmod>
     </url>
     <url>
          <loc>https://azure.github.io/PSRule.Rules.Azure/en/rules/Azure.APIM.ManagedIdentity/</loc>
-         <lastmod>2025-05-18</lastmod>
+         <lastmod>2025-05-19</lastmod>
     </url>
     <url>
          <loc>https://azure.github.io/PSRule.Rules.Azure/en/rules/Azure.APIM.MinAPIVersion/</loc>
-         <lastmod>2025-05-18</lastmod>
+         <lastmod>2025-05-19</lastmod>
     </url>
     <url>
          <loc>https://azure.github.io/PSRule.Rules.Azure/en/rules/Azure.APIM.MultiRegion/</loc>
-         <lastmod>2025-05-18</lastmod>
+         <lastmod>2025-05-19</lastmod>
     </url>
     <url>
          <loc>https://azure.github.io/PSRule.Rules.Azure/en/rules/Azure.APIM.MultiRegionGateway/</loc>
-         <lastmod>2025-05-18</lastmod>
+         <lastmod>2025-05-19</lastmod>
     </url>
     <url>
          <loc>https://azure.github.io/PSRule.Rules.Azure/en/rules/Azure.APIM.Name/</loc>
-         <lastmod>2025-05-18</lastmod>
+         <lastmod>2025-05-19</lastmod>
     </url>
     <url>
          <loc>https://azure.github.io/PSRule.Rules.Azure/en/rules/Azure.APIM.PolicyBase/</loc>
-         <lastmod>2025-05-18</lastmod>
+         <lastmod>2025-05-19</lastmod>
     </url>
     <url>
          <loc>https://azure.github.io/PSRule.Rules.Azure/en/rules/Azure.APIM.ProductApproval/</loc>
-         <lastmod>2025-05-18</lastmod>
+         <lastmod>2025-05-19</lastmod>
     </url>
     <url>
          <loc>https://azure.github.io/PSRule.Rules.Azure/en/rules/Azure.APIM.ProductDescriptors/</loc>
-         <lastmod>2025-05-18</lastmod>
+         <lastmod>2025-05-19</lastmod>
     </url>
     <url>
          <loc>https://azure.github.io/PSRule.Rules.Azure/en/rules/Azure.APIM.ProductSubscription/</loc>
-         <lastmod>2025-05-18</lastmod>
+         <lastmod>2025-05-19</lastmod>
     </url>
     <url>
          <loc>https://azure.github.io/PSRule.Rules.Azure/en/rules/Azure.APIM.ProductTerms/</loc>
-         <lastmod>2025-05-18</lastmod>
+         <lastmod>2025-05-19</lastmod>
     </url>
     <url>
          <loc>https://azure.github.io/PSRule.Rules.Azure/en/rules/Azure.APIM.Protocols/</loc>
-         <lastmod>2025-05-18</lastmod>
+         <lastmod>2025-05-19</lastmod>
     </url>
     <url>
          <loc>https://azure.github.io/PSRule.Rules.Azure/en/rules/Azure.APIM.SampleProducts/</loc>
-         <lastmod>2025-05-18</lastmod>
+         <lastmod>2025-05-19</lastmod>
     </url>
     <url>
          <loc>https://azure.github.io/PSRule.Rules.Azure/en/rules/Azure.ASE.AvailabilityZone/</loc>
-         <lastmod>2025-05-18</lastmod>
+         <lastmod>2025-05-19</lastmod>
     </url>
     <url>
          <loc>https://azure.github.io/PSRule.Rules.Azure/en/rules/Azure.ASE.MigrateV3/</loc>
-         <lastmod>2025-05-18</lastmod>
+         <lastmod>2025-05-19</lastmod>
     </url>
     <url>
          <loc>https://azure.github.io/PSRule.Rules.Azure/en/rules/Azure.ASG.Name/</loc>
-         <lastmod>2025-05-18</lastmod>
+         <lastmod>2025-05-19</lastmod>
     </url>
     <url>
          <loc>https://azure.github.io/PSRule.Rules.Azure/en/rules/Azure.AVD.ScheduleAgentUpdate/</loc>
-         <lastmod>2025-05-18</lastmod>
+         <lastmod>2025-05-19</lastmod>
     </url>
     <url>
          <loc>https://azure.github.io/PSRule.Rules.Azure/en/rules/Azure.AppConfig.AuditLogs/</loc>
-         <lastmod>2025-05-18</lastmod>
+         <lastmod>2025-05-19</lastmod>
     </url>
     <url>
          <loc>https://azure.github.io/PSRule.Rules.Azure/en/rules/Azure.AppConfig.DisableLocalAuth/</loc>
-         <lastmod>2025-05-18</lastmod>
+         <lastmod>2025-05-19</lastmod>
     </url>
     <url>
          <loc>https://azure.github.io/PSRule.Rules.Azure/en/rules/Azure.AppConfig.GeoReplica/</loc>
-         <lastmod>2025-05-18</lastmod>
+         <lastmod>2025-05-19</lastmod>
     </url>
     <url>
          <loc>https://azure.github.io/PSRule.Rules.Azure/en/rules/Azure.AppConfig.Name/</loc>
-         <lastmod>2025-05-18</lastmod>
+         <lastmod>2025-05-19</lastmod>
     </url>
     <url>
          <loc>https://azure.github.io/PSRule.Rules.Azure/en/rules/Azure.AppConfig.PurgeProtect/</loc>
-         <lastmod>2025-05-18</lastmod>
+         <lastmod>2025-05-19</lastmod>
     </url>
     <url>
          <loc>https://azure.github.io/PSRule.Rules.Azure/en/rules/Azure.AppConfig.SKU/</loc>
-         <lastmod>2025-05-18</lastmod>
+         <lastmod>2025-05-19</lastmod>
     </url>
     <url>
          <loc>https://azure.github.io/PSRule.Rules.Azure/en/rules/Azure.AppGw.AvailabilityZone/</loc>
-         <lastmod>2025-05-18</lastmod>
+         <lastmod>2025-05-19</lastmod>
     </url>
     <url>
          <loc>https://azure.github.io/PSRule.Rules.Azure/en/rules/Azure.AppGw.MigrateV2/</loc>
-         <lastmod>2025-05-18</lastmod>
+         <lastmod>2025-05-19</lastmod>
     </url>
     <url>
          <loc>https://azure.github.io/PSRule.Rules.Azure/en/rules/Azure.AppGw.MigrateWAFPolicy/</loc>
-         <lastmod>2025-05-18</lastmod>
+         <lastmod>2025-05-19</lastmod>
     </url>
     <url>
          <loc>https://azure.github.io/PSRule.Rules.Azure/en/rules/Azure.AppGw.MinInstance/</loc>
-         <lastmod>2025-05-18</lastmod>
+         <lastmod>2025-05-19</lastmod>
     </url>
     <url>
          <loc>https://azure.github.io/PSRule.Rules.Azure/en/rules/Azure.AppGw.MinSku/</loc>
-         <lastmod>2025-05-18</lastmod>
+         <lastmod>2025-05-19</lastmod>
     </url>
     <url>
          <loc>https://azure.github.io/PSRule.Rules.Azure/en/rules/Azure.AppGw.Name/</loc>
-         <lastmod>2025-05-18</lastmod>
+         <lastmod>2025-05-19</lastmod>
     </url>
     <url>
          <loc>https://azure.github.io/PSRule.Rules.Azure/en/rules/Azure.AppGw.OWASP/</loc>
-         <lastmod>2025-05-18</lastmod>
+         <lastmod>2025-05-19</lastmod>
     </url>
     <url>
          <loc>https://azure.github.io/PSRule.Rules.Azure/en/rules/Azure.AppGw.Prevention/</loc>
-         <lastmod>2025-05-18</lastmod>
+         <lastmod>2025-05-19</lastmod>
     </url>
     <url>
          <loc>https://azure.github.io/PSRule.Rules.Azure/en/rules/Azure.AppGw.SSLPolicy/</loc>
-         <lastmod>2025-05-18</lastmod>
+         <lastmod>2025-05-19</lastmod>
     </url>
     <url>
          <loc>https://azure.github.io/PSRule.Rules.Azure/en/rules/Azure.AppGw.UseHTTPS/</loc>
-         <lastmod>2025-05-18</lastmod>
+         <lastmod>2025-05-19</lastmod>
     </url>
     <url>
          <loc>https://azure.github.io/PSRule.Rules.Azure/en/rules/Azure.AppGw.UseWAF/</loc>
-         <lastmod>2025-05-18</lastmod>
+         <lastmod>2025-05-19</lastmod>
     </url>
     <url>
          <loc>https://azure.github.io/PSRule.Rules.Azure/en/rules/Azure.AppGw.WAFEnabled/</loc>
-         <lastmod>2025-05-18</lastmod>
+         <lastmod>2025-05-19</lastmod>
     </url>
     <url>
          <loc>https://azure.github.io/PSRule.Rules.Azure/en/rules/Azure.AppGw.WAFRules/</loc>
-         <lastmod>2025-05-18</lastmod>
+         <lastmod>2025-05-19</lastmod>
     </url>
     <url>
          <loc>https://azure.github.io/PSRule.Rules.Azure/en/rules/Azure.AppGwWAF.Enabled/</loc>
-         <lastmod>2025-05-18</lastmod>
+         <lastmod>2025-05-19</lastmod>
     </url>
     <url>
          <loc>https://azure.github.io/PSRule.Rules.Azure/en/rules/Azure.AppGwWAF.Exclusions/</loc>
-         <lastmod>2025-05-18</lastmod>
+         <lastmod>2025-05-19</lastmod>
     </url>
     <url>
          <loc>https://azure.github.io/PSRule.Rules.Azure/en/rules/Azure.AppGwWAF.PreventionMode/</loc>
-         <lastmod>2025-05-18</lastmod>
+         <lastmod>2025-05-19</lastmod>
     </url>
     <url>
          <loc>https://azure.github.io/PSRule.Rules.Azure/en/rules/Azure.AppGwWAF.RuleGroups/</loc>
-         <lastmod>2025-05-18</lastmod>
+         <lastmod>2025-05-19</lastmod>
     </url>
     <url>
          <loc>https://azure.github.io/PSRule.Rules.Azure/en/rules/Azure.AppInsights.Name/</loc>
-         <lastmod>2025-05-18</lastmod>
+         <lastmod>2025-05-19</lastmod>
     </url>
     <url>
          <loc>https://azure.github.io/PSRule.Rules.Azure/en/rules/Azure.AppInsights.Workspace/</loc>
-         <lastmod>2025-05-18</lastmod>
+         <lastmod>2025-05-19</lastmod>
     </url>
     <url>
          <loc>https://azure.github.io/PSRule.Rules.Azure/en/rules/Azure.AppService.ARRAffinity/</loc>
-         <lastmod>2025-05-18</lastmod>
+         <lastmod>2025-05-19</lastmod>
     </url>
     <url>
          <loc>https://azure.github.io/PSRule.Rules.Azure/en/rules/Azure.AppService.AlwaysOn/</loc>
-         <lastmod>2025-05-18</lastmod>
+         <lastmod>2025-05-19</lastmod>
     </url>
     <url>
          <loc>https://azure.github.io/PSRule.Rules.Azure/en/rules/Azure.AppService.AvailabilityZone/</loc>
-         <lastmod>2025-05-18</lastmod>
+         <lastmod>2025-05-19</lastmod>
     </url>
     <url>
          <loc>https://azure.github.io/PSRule.Rules.Azure/en/rules/Azure.AppService.HTTP2/</loc>
-         <lastmod>2025-05-18</lastmod>
+         <lastmod>2025-05-19</lastmod>
     </url>
     <url>
          <loc>https://azure.github.io/PSRule.Rules.Azure/en/rules/Azure.AppService.ManagedIdentity/</loc>
-         <lastmod>2025-05-18</lastmod>
+         <lastmod>2025-05-19</lastmod>
     </url>
     <url>
          <loc>https://azure.github.io/PSRule.Rules.Azure/en/rules/Azure.AppService.MinPlan/</loc>
-         <lastmod>2025-05-18</lastmod>
+         <lastmod>2025-05-19</lastmod>
     </url>
     <url>
          <loc>https://azure.github.io/PSRule.Rules.Azure/en/rules/Azure.AppService.MinTLS/</loc>
-         <lastmod>2025-05-18</lastmod>
+         <lastmod>2025-05-19</lastmod>
     </url>
     <url>
          <loc>https://azure.github.io/PSRule.Rules.Azure/en/rules/Azure.AppService.NETVersion/</loc>
-         <lastmod>2025-05-18</lastmod>
+         <lastmod>2025-05-19</lastmod>
     </url>
     <url>
          <loc>https://azure.github.io/PSRule.Rules.Azure/en/rules/Azure.AppService.NodeJsVersion/</loc>
-         <lastmod>2025-05-18</lastmod>
+         <lastmod>2025-05-19</lastmod>
     </url>
     <url>
          <loc>https://azure.github.io/PSRule.Rules.Azure/en/rules/Azure.AppService.PHPVersion/</loc>
-         <lastmod>2025-05-18</lastmod>
+         <lastmod>2025-05-19</lastmod>
     </url>
     <url>
          <loc>https://azure.github.io/PSRule.Rules.Azure/en/rules/Azure.AppService.PlanInstanceCount/</loc>
-         <lastmod>2025-05-18</lastmod>
+         <lastmod>2025-05-19</lastmod>
     </url>
     <url>
          <loc>https://azure.github.io/PSRule.Rules.Azure/en/rules/Azure.AppService.RemoteDebug/</loc>
-         <lastmod>2025-05-18</lastmod>
+         <lastmod>2025-05-19</lastmod>
     </url>
     <url>
          <loc>https://azure.github.io/PSRule.Rules.Azure/en/rules/Azure.AppService.UseHTTPS/</loc>
-         <lastmod>2025-05-18</lastmod>
+         <lastmod>2025-05-19</lastmod>
     </url>
     <url>
          <loc>https://azure.github.io/PSRule.Rules.Azure/en/rules/Azure.AppService.WebProbe/</loc>
-         <lastmod>2025-05-18</lastmod>
+         <lastmod>2025-05-19</lastmod>
     </url>
     <url>
          <loc>https://azure.github.io/PSRule.Rules.Azure/en/rules/Azure.AppService.WebProbePath/</loc>
-         <lastmod>2025-05-18</lastmod>
+         <lastmod>2025-05-19</lastmod>
     </url>
     <url>
          <loc>https://azure.github.io/PSRule.Rules.Azure/en/rules/Azure.AppService.WebSecureFtp/</loc>
-         <lastmod>2025-05-18</lastmod>
+         <lastmod>2025-05-19</lastmod>
     </url>
     <url>
          <loc>https://azure.github.io/PSRule.Rules.Azure/en/rules/Azure.Arc.Kubernetes.Defender/</loc>
-         <lastmod>2025-05-18</lastmod>
+         <lastmod>2025-05-19</lastmod>
     </url>
     <url>
          <loc>https://azure.github.io/PSRule.Rules.Azure/en/rules/Azure.Arc.Server.MaintenanceConfig/</loc>
-         <lastmod>2025-05-18</lastmod>
+         <lastmod>2025-05-19</lastmod>
     </url>
     <url>
          <loc>https://azure.github.io/PSRule.Rules.Azure/en/rules/Azure.Automation.AuditLogs/</loc>
-         <lastmod>2025-05-18</lastmod>
+         <lastmod>2025-05-19</lastmod>
     </url>
     <url>
          <loc>https://azure.github.io/PSRule.Rules.Azure/en/rules/Azure.Automation.EncryptVariables/</loc>
-         <lastmod>2025-05-18</lastmod>
+         <lastmod>2025-05-19</lastmod>
     </url>
     <url>
          <loc>https://azure.github.io/PSRule.Rules.Azure/en/rules/Azure.Automation.ManagedIdentity/</loc>
-         <lastmod>2025-05-18</lastmod>
+         <lastmod>2025-05-19</lastmod>
     </url>
     <url>
          <loc>https://azure.github.io/PSRule.Rules.Azure/en/rules/Azure.Automation.PlatformLogs/</loc>
-         <lastmod>2025-05-18</lastmod>
+         <lastmod>2025-05-19</lastmod>
     </url>
     <url>
          <loc>https://azure.github.io/PSRule.Rules.Azure/en/rules/Azure.Automation.WebHookExpiry/</loc>
-         <lastmod>2025-05-18</lastmod>
+         <lastmod>2025-05-19</lastmod>
     </url>
     <url>
          <loc>https://azure.github.io/PSRule.Rules.Azure/en/rules/Azure.BV.Immutable/</loc>
-         <lastmod>2025-05-18</lastmod>
+         <lastmod>2025-05-19</lastmod>
     </url>
     <url>
          <loc>https://azure.github.io/PSRule.Rules.Azure/en/rules/Azure.Bastion.Name/</loc>
-         <lastmod>2025-05-18</lastmod>
+         <lastmod>2025-05-19</lastmod>
     </url>
     <url>
          <loc>https://azure.github.io/PSRule.Rules.Azure/en/rules/Azure.CDN.EndpointName/</loc>
-         <lastmod>2025-05-18</lastmod>
+         <lastmod>2025-05-19</lastmod>
     </url>
     <url>
          <loc>https://azure.github.io/PSRule.Rules.Azure/en/rules/Azure.CDN.HTTP/</loc>
-         <lastmod>2025-05-18</lastmod>
+         <lastmod>2025-05-19</lastmod>
     </url>
     <url>
          <loc>https://azure.github.io/PSRule.Rules.Azure/en/rules/Azure.CDN.MinTLS/</loc>
-         <lastmod>2025-05-18</lastmod>
+         <lastmod>2025-05-19</lastmod>
     </url>
     <url>
          <loc>https://azure.github.io/PSRule.Rules.Azure/en/rules/Azure.CDN.UseFrontDoor/</loc>
-         <lastmod>2025-05-18</lastmod>
+         <lastmod>2025-05-19</lastmod>
     </url>
     <url>
          <loc>https://azure.github.io/PSRule.Rules.Azure/en/rules/Azure.ContainerApp.APIVersion/</loc>
-         <lastmod>2025-05-18</lastmod>
+         <lastmod>2025-05-19</lastmod>
     </url>
     <url>
          <loc>https://azure.github.io/PSRule.Rules.Azure/en/rules/Azure.ContainerApp.AvailabilityZone/</loc>
-         <lastmod>2025-05-18</lastmod>
+         <lastmod>2025-05-19</lastmod>
     </url>
     <url>
          <loc>https://azure.github.io/PSRule.Rules.Azure/en/rules/Azure.ContainerApp.DisableAffinity/</loc>
-         <lastmod>2025-05-18</lastmod>
+         <lastmod>2025-05-19</lastmod>
     </url>
     <url>
          <loc>https://azure.github.io/PSRule.Rules.Azure/en/rules/Azure.ContainerApp.ExternalIngress/</loc>
-         <lastmod>2025-05-18</lastmod>
+         <lastmod>2025-05-19</lastmod>
     </url>
     <url>
          <loc>https://azure.github.io/PSRule.Rules.Azure/en/rules/Azure.ContainerApp.Insecure/</loc>
-         <lastmod>2025-05-18</lastmod>
+         <lastmod>2025-05-19</lastmod>
     </url>
     <url>
          <loc>https://azure.github.io/PSRule.Rules.Azure/en/rules/Azure.ContainerApp.ManagedIdentity/</loc>
-         <lastmod>2025-05-18</lastmod>
+         <lastmod>2025-05-19</lastmod>
     </url>
     <url>
          <loc>https://azure.github.io/PSRule.Rules.Azure/en/rules/Azure.ContainerApp.MinReplicas/</loc>
-         <lastmod>2025-05-18</lastmod>
+         <lastmod>2025-05-19</lastmod>
     </url>
     <url>
          <loc>https://azure.github.io/PSRule.Rules.Azure/en/rules/Azure.ContainerApp.Name/</loc>
-         <lastmod>2025-05-18</lastmod>
+         <lastmod>2025-05-19</lastmod>
     </url>
     <url>
          <loc>https://azure.github.io/PSRule.Rules.Azure/en/rules/Azure.ContainerApp.PublicAccess/</loc>
-         <lastmod>2025-05-18</lastmod>
+         <lastmod>2025-05-19</lastmod>
     </url>
     <url>
          <loc>https://azure.github.io/PSRule.Rules.Azure/en/rules/Azure.ContainerApp.RestrictIngress/</loc>
-         <lastmod>2025-05-18</lastmod>
+         <lastmod>2025-05-19</lastmod>
     </url>
     <url>
          <loc>https://azure.github.io/PSRule.Rules.Azure/en/rules/Azure.ContainerApp.Storage/</loc>
-         <lastmod>2025-05-18</lastmod>
+         <lastmod>2025-05-19</lastmod>
     </url>
     <url>
          <loc>https://azure.github.io/PSRule.Rules.Azure/en/rules/Azure.Cosmos.AccountName/</loc>
-         <lastmod>2025-05-18</lastmod>
+         <lastmod>2025-05-19</lastmod>
     </url>
     <url>
          <loc>https://azure.github.io/PSRule.Rules.Azure/en/rules/Azure.Cosmos.ContinuousBackup/</loc>
-         <lastmod>2025-05-18</lastmod>
+         <lastmod>2025-05-19</lastmod>
     </url>
     <url>
          <loc>https://azure.github.io/PSRule.Rules.Azure/en/rules/Azure.Cosmos.DefenderCloud/</loc>
-         <lastmod>2025-05-18</lastmod>
+         <lastmod>2025-05-19</lastmod>
     </url>
     <url>
          <loc>https://azure.github.io/PSRule.Rules.Azure/en/rules/Azure.Cosmos.DisableLocalAuth/</loc>
-         <lastmod>2025-05-18</lastmod>
+         <lastmod>2025-05-19</lastmod>
     </url>
     <url>
          <loc>https://azure.github.io/PSRule.Rules.Azure/en/rules/Azure.Cosmos.DisableMetadataWrite/</loc>
-         <lastmod>2025-05-18</lastmod>
+         <lastmod>2025-05-19</lastmod>
     </url>
     <url>
          <loc>https://azure.github.io/PSRule.Rules.Azure/en/rules/Azure.Cosmos.MinTLS/</loc>
-         <lastmod>2025-05-18</lastmod>
+         <lastmod>2025-05-19</lastmod>
     </url>
     <url>
          <loc>https://azure.github.io/PSRule.Rules.Azure/en/rules/Azure.Cosmos.PublicAccess/</loc>
-         <lastmod>2025-05-18</lastmod>
+         <lastmod>2025-05-19</lastmod>
     </url>
     <url>
          <loc>https://azure.github.io/PSRule.Rules.Azure/en/rules/Azure.Cosmos.SLA/</loc>
-         <lastmod>2025-05-18</lastmod>
+         <lastmod>2025-05-19</lastmod>
     </url>
     <url>
          <loc>https://azure.github.io/PSRule.Rules.Azure/en/rules/Azure.DNS.DNSSEC/</loc>
-         <lastmod>2025-05-18</lastmod>
+         <lastmod>2025-05-19</lastmod>
     </url>
     <url>
          <loc>https://azure.github.io/PSRule.Rules.Azure/en/rules/Azure.DataFactory.Version/</loc>
-         <lastmod>2025-05-18</lastmod>
+         <lastmod>2025-05-19</lastmod>
     </url>
     <url>
          <loc>https://azure.github.io/PSRule.Rules.Azure/en/rules/Azure.Databricks.PublicAccess/</loc>
-         <lastmod>2025-05-18</lastmod>
+         <lastmod>2025-05-19</lastmod>
     </url>
     <url>
          <loc>https://azure.github.io/PSRule.Rules.Azure/en/rules/Azure.Databricks.SKU/</loc>
-         <lastmod>2025-05-18</lastmod>
+         <lastmod>2025-05-19</lastmod>
     </url>
     <url>
          <loc>https://azure.github.io/PSRule.Rules.Azure/en/rules/Azure.Databricks.SecureConnectivity/</loc>
-         <lastmod>2025-05-18</lastmod>
+         <lastmod>2025-05-19</lastmod>
     </url>
     <url>
          <loc>https://azure.github.io/PSRule.Rules.Azure/en/rules/Azure.Defender.Api/</loc>
-         <lastmod>2025-05-18</lastmod>
+         <lastmod>2025-05-19</lastmod>
     </url>
     <url>
          <loc>https://azure.github.io/PSRule.Rules.Azure/en/rules/Azure.Defender.AppServices/</loc>
-         <lastmod>2025-05-18</lastmod>
+         <lastmod>2025-05-19</lastmod>
     </url>
     <url>
          <loc>https://azure.github.io/PSRule.Rules.Azure/en/rules/Azure.Defender.Arm/</loc>
-         <lastmod>2025-05-18</lastmod>
+         <lastmod>2025-05-19</lastmod>
     </url>
     <url>
          <loc>https://azure.github.io/PSRule.Rules.Azure/en/rules/Azure.Defender.Containers/</loc>
-         <lastmod>2025-05-18</lastmod>
+         <lastmod>2025-05-19</lastmod>
     </url>
     <url>
          <loc>https://azure.github.io/PSRule.Rules.Azure/en/rules/Azure.Defender.CosmosDb/</loc>
-         <lastmod>2025-05-18</lastmod>
+         <lastmod>2025-05-19</lastmod>
     </url>
     <url>
          <loc>https://azure.github.io/PSRule.Rules.Azure/en/rules/Azure.Defender.Cspm/</loc>
-         <lastmod>2025-05-18</lastmod>
+         <lastmod>2025-05-19</lastmod>
     </url>
     <url>
          <loc>https://azure.github.io/PSRule.Rules.Azure/en/rules/Azure.Defender.Dns/</loc>
-         <lastmod>2025-05-18</lastmod>
+         <lastmod>2025-05-19</lastmod>
     </url>
     <url>
          <loc>https://azure.github.io/PSRule.Rules.Azure/en/rules/Azure.Defender.KeyVault/</loc>
-         <lastmod>2025-05-18</lastmod>
+         <lastmod>2025-05-19</lastmod>
     </url>
     <url>
          <loc>https://azure.github.io/PSRule.Rules.Azure/en/rules/Azure.Defender.OssRdb/</loc>
-         <lastmod>2025-05-18</lastmod>
+         <lastmod>2025-05-19</lastmod>
     </url>
     <url>
          <loc>https://azure.github.io/PSRule.Rules.Azure/en/rules/Azure.Defender.SQL/</loc>
-         <lastmod>2025-05-18</lastmod>
+         <lastmod>2025-05-19</lastmod>
     </url>
     <url>
          <loc>https://azure.github.io/PSRule.Rules.Azure/en/rules/Azure.Defender.SQLOnVM/</loc>
-         <lastmod>2025-05-18</lastmod>
+         <lastmod>2025-05-19</lastmod>
     </url>
     <url>
          <loc>https://azure.github.io/PSRule.Rules.Azure/en/rules/Azure.Defender.SecurityContact/</loc>
-         <lastmod>2025-05-18</lastmod>
+         <lastmod>2025-05-19</lastmod>
     </url>
     <url>
          <loc>https://azure.github.io/PSRule.Rules.Azure/en/rules/Azure.Defender.Servers/</loc>
-         <lastmod>2025-05-18</lastmod>
+         <lastmod>2025-05-19</lastmod>
     </url>
     <url>
          <loc>https://azure.github.io/PSRule.Rules.Azure/en/rules/Azure.Defender.Storage.DataScan/</loc>
-         <lastmod>2025-05-18</lastmod>
+         <lastmod>2025-05-19</lastmod>
     </url>
     <url>
          <loc>https://azure.github.io/PSRule.Rules.Azure/en/rules/Azure.Defender.Storage.MalwareScan/</loc>
-         <lastmod>2025-05-18</lastmod>
+         <lastmod>2025-05-19</lastmod>
     </url>
     <url>
          <loc>https://azure.github.io/PSRule.Rules.Azure/en/rules/Azure.Defender.Storage/</loc>
-         <lastmod>2025-05-18</lastmod>
+         <lastmod>2025-05-19</lastmod>
     </url>
     <url>
          <loc>https://azure.github.io/PSRule.Rules.Azure/en/rules/Azure.DefenderCloud.Provisioning/</loc>
-         <lastmod>2025-05-18</lastmod>
+         <lastmod>2025-05-19</lastmod>
     </url>
     <url>
          <loc>https://azure.github.io/PSRule.Rules.Azure/en/rules/Azure.Deployment.AdminUsername/</loc>
-         <lastmod>2025-05-18</lastmod>
+         <lastmod>2025-05-19</lastmod>
     </url>
     <url>
          <loc>https://azure.github.io/PSRule.Rules.Azure/en/rules/Azure.Deployment.Name/</loc>
-         <lastmod>2025-05-18</lastmod>
+         <lastmod>2025-05-19</lastmod>
     </url>
     <url>
          <loc>https://azure.github.io/PSRule.Rules.Azure/en/rules/Azure.Deployment.OuterSecret/</loc>
-         <lastmod>2025-05-18</lastmod>
+         <lastmod>2025-05-19</lastmod>
     </url>
     <url>
          <loc>https://azure.github.io/PSRule.Rules.Azure/en/rules/Azure.Deployment.OutputSecretValue/</loc>
-         <lastmod>2025-05-18</lastmod>
+         <lastmod>2025-05-19</lastmod>
     </url>
     <url>
          <loc>https://azure.github.io/PSRule.Rules.Azure/en/rules/Azure.Deployment.SecretLeak/</loc>
-         <lastmod>2025-05-18</lastmod>
+         <lastmod>2025-05-19</lastmod>
     </url>
     <url>
          <loc>https://azure.github.io/PSRule.Rules.Azure/en/rules/Azure.Deployment.SecureParameter/</loc>
-         <lastmod>2025-05-18</lastmod>
+         <lastmod>2025-05-19</lastmod>
     </url>
     <url>
          <loc>https://azure.github.io/PSRule.Rules.Azure/en/rules/Azure.Deployment.SecureValue/</loc>
-         <lastmod>2025-05-18</lastmod>
+         <lastmod>2025-05-19</lastmod>
     </url>
     <url>
          <loc>https://azure.github.io/PSRule.Rules.Azure/en/rules/Azure.DevBox.ProjectLimit/</loc>
-         <lastmod>2025-05-18</lastmod>
+         <lastmod>2025-05-19</lastmod>
     </url>
     <url>
          <loc>https://azure.github.io/PSRule.Rules.Azure/en/rules/Azure.EntraDS.NTLM/</loc>
-         <lastmod>2025-05-18</lastmod>
+         <lastmod>2025-05-19</lastmod>
     </url>
     <url>
          <loc>https://azure.github.io/PSRule.Rules.Azure/en/rules/Azure.EntraDS.RC4/</loc>
-         <lastmod>2025-05-18</lastmod>
+         <lastmod>2025-05-19</lastmod>
     </url>
     <url>
          <loc>https://azure.github.io/PSRule.Rules.Azure/en/rules/Azure.EntraDS.TLS/</loc>
-         <lastmod>2025-05-18</lastmod>
+         <lastmod>2025-05-19</lastmod>
     </url>
     <url>
          <loc>https://azure.github.io/PSRule.Rules.Azure/en/rules/Azure.EventGrid.DisableLocalAuth/</loc>
-         <lastmod>2025-05-18</lastmod>
+         <lastmod>2025-05-19</lastmod>
     </url>
     <url>
          <loc>https://azure.github.io/PSRule.Rules.Azure/en/rules/Azure.EventGrid.DomainNaming/</loc>
-         <lastmod>2025-05-18</lastmod>
+         <lastmod>2025-05-19</lastmod>
     </url>
     <url>
          <loc>https://azure.github.io/PSRule.Rules.Azure/en/rules/Azure.EventGrid.DomainTLS/</loc>
-         <lastmod>2025-05-18</lastmod>
+         <lastmod>2025-05-19</lastmod>
     </url>
     <url>
          <loc>https://azure.github.io/PSRule.Rules.Azure/en/rules/Azure.EventGrid.ManagedIdentity/</loc>
-         <lastmod>2025-05-18</lastmod>
+         <lastmod>2025-05-19</lastmod>
     </url>
     <url>
          <loc>https://azure.github.io/PSRule.Rules.Azure/en/rules/Azure.EventGrid.SystemTopicNaming/</loc>
-         <lastmod>2025-05-18</lastmod>
+         <lastmod>2025-05-19</lastmod>
     </url>
     <url>
          <loc>https://azure.github.io/PSRule.Rules.Azure/en/rules/Azure.EventGrid.TopicNaming/</loc>
-         <lastmod>2025-05-18</lastmod>
+         <lastmod>2025-05-19</lastmod>
     </url>
     <url>
          <loc>https://azure.github.io/PSRule.Rules.Azure/en/rules/Azure.EventGrid.TopicPublicAccess/</loc>
-         <lastmod>2025-05-18</lastmod>
+         <lastmod>2025-05-19</lastmod>
     </url>
     <url>
          <loc>https://azure.github.io/PSRule.Rules.Azure/en/rules/Azure.EventGrid.TopicTLS/</loc>
-         <lastmod>2025-05-18</lastmod>
+         <lastmod>2025-05-19</lastmod>
     </url>
     <url>
          <loc>https://azure.github.io/PSRule.Rules.Azure/en/rules/Azure.EventHub.DisableLocalAuth/</loc>
-         <lastmod>2025-05-18</lastmod>
+         <lastmod>2025-05-19</lastmod>
     </url>
     <url>
          <loc>https://azure.github.io/PSRule.Rules.Azure/en/rules/Azure.EventHub.Firewall/</loc>
-         <lastmod>2025-05-18</lastmod>
+         <lastmod>2025-05-19</lastmod>
     </url>
     <url>
          <loc>https://azure.github.io/PSRule.Rules.Azure/en/rules/Azure.EventHub.MinTLS/</loc>
-         <lastmod>2025-05-18</lastmod>
+         <lastmod>2025-05-19</lastmod>
     </url>
     <url>
          <loc>https://azure.github.io/PSRule.Rules.Azure/en/rules/Azure.EventHub.Usage/</loc>
-         <lastmod>2025-05-18</lastmod>
+         <lastmod>2025-05-19</lastmod>
     </url>
     <url>
          <loc>https://azure.github.io/PSRule.Rules.Azure/en/rules/Azure.Firewall.AvailabilityZone/</loc>
-         <lastmod>2025-05-18</lastmod>
+         <lastmod>2025-05-19</lastmod>
     </url>
     <url>
          <loc>https://azure.github.io/PSRule.Rules.Azure/en/rules/Azure.Firewall.Mode/</loc>
-         <lastmod>2025-05-18</lastmod>
+         <lastmod>2025-05-19</lastmod>
     </url>
     <url>
          <loc>https://azure.github.io/PSRule.Rules.Azure/en/rules/Azure.Firewall.Name/</loc>
-         <lastmod>2025-05-18</lastmod>
+         <lastmod>2025-05-19</lastmod>
     </url>
     <url>
          <loc>https://azure.github.io/PSRule.Rules.Azure/en/rules/Azure.Firewall.PolicyMode/</loc>
-         <lastmod>2025-05-18</lastmod>
+         <lastmod>2025-05-19</lastmod>
     </url>
     <url>
          <loc>https://azure.github.io/PSRule.Rules.Azure/en/rules/Azure.Firewall.PolicyName/</loc>
-         <lastmod>2025-05-18</lastmod>
+         <lastmod>2025-05-19</lastmod>
     </url>
     <url>
          <loc>https://azure.github.io/PSRule.Rules.Azure/en/rules/Azure.FrontDoor.Logs/</loc>
-         <lastmod>2025-05-18</lastmod>
+         <lastmod>2025-05-19</lastmod>
     </url>
     <url>
          <loc>https://azure.github.io/PSRule.Rules.Azure/en/rules/Azure.FrontDoor.ManagedIdentity/</loc>
-         <lastmod>2025-05-18</lastmod>
+         <lastmod>2025-05-19</lastmod>
     </url>
     <url>
          <loc>https://azure.github.io/PSRule.Rules.Azure/en/rules/Azure.FrontDoor.MinTLS/</loc>
-         <lastmod>2025-05-18</lastmod>
+         <lastmod>2025-05-19</lastmod>
     </url>
     <url>
          <loc>https://azure.github.io/PSRule.Rules.Azure/en/rules/Azure.FrontDoor.Name/</loc>
-         <lastmod>2025-05-18</lastmod>
+         <lastmod>2025-05-19</lastmod>
     </url>
     <url>
          <loc>https://azure.github.io/PSRule.Rules.Azure/en/rules/Azure.FrontDoor.Probe/</loc>
-         <lastmod>2025-05-18</lastmod>
+         <lastmod>2025-05-19</lastmod>
     </url>
     <url>
          <loc>https://azure.github.io/PSRule.Rules.Azure/en/rules/Azure.FrontDoor.ProbeMethod/</loc>
-         <lastmod>2025-05-18</lastmod>
+         <lastmod>2025-05-19</lastmod>
     </url>
     <url>
          <loc>https://azure.github.io/PSRule.Rules.Azure/en/rules/Azure.FrontDoor.ProbePath/</loc>
-         <lastmod>2025-05-18</lastmod>
+         <lastmod>2025-05-19</lastmod>
     </url>
     <url>
          <loc>https://azure.github.io/PSRule.Rules.Azure/en/rules/Azure.FrontDoor.State/</loc>
-         <lastmod>2025-05-18</lastmod>
+         <lastmod>2025-05-19</lastmod>
     </url>
     <url>
          <loc>https://azure.github.io/PSRule.Rules.Azure/en/rules/Azure.FrontDoor.UseCaching/</loc>
-         <lastmod>2025-05-18</lastmod>
+         <lastmod>2025-05-19</lastmod>
     </url>
     <url>
          <loc>https://azure.github.io/PSRule.Rules.Azure/en/rules/Azure.FrontDoor.UseWAF/</loc>
-         <lastmod>2025-05-18</lastmod>
+         <lastmod>2025-05-19</lastmod>
     </url>
     <url>
          <loc>https://azure.github.io/PSRule.Rules.Azure/en/rules/Azure.FrontDoor.WAF.Enabled/</loc>
-         <lastmod>2025-05-18</lastmod>
+         <lastmod>2025-05-19</lastmod>
     </url>
     <url>
          <loc>https://azure.github.io/PSRule.Rules.Azure/en/rules/Azure.FrontDoor.WAF.Mode/</loc>
-         <lastmod>2025-05-18</lastmod>
+         <lastmod>2025-05-19</lastmod>
     </url>
     <url>
          <loc>https://azure.github.io/PSRule.Rules.Azure/en/rules/Azure.FrontDoor.WAF.Name/</loc>
-         <lastmod>2025-05-18</lastmod>
+         <lastmod>2025-05-19</lastmod>
     </url>
     <url>
          <loc>https://azure.github.io/PSRule.Rules.Azure/en/rules/Azure.FrontDoorWAF.Enabled/</loc>
-         <lastmod>2025-05-18</lastmod>
+         <lastmod>2025-05-19</lastmod>
     </url>
     <url>
          <loc>https://azure.github.io/PSRule.Rules.Azure/en/rules/Azure.FrontDoorWAF.Exclusions/</loc>
-         <lastmod>2025-05-18</lastmod>
+         <lastmod>2025-05-19</lastmod>
     </url>
     <url>
          <loc>https://azure.github.io/PSRule.Rules.Azure/en/rules/Azure.FrontDoorWAF.PreventionMode/</loc>
-         <lastmod>2025-05-18</lastmod>
+         <lastmod>2025-05-19</lastmod>
     </url>
     <url>
          <loc>https://azure.github.io/PSRule.Rules.Azure/en/rules/Azure.FrontDoorWAF.RuleGroups/</loc>
-         <lastmod>2025-05-18</lastmod>
+         <lastmod>2025-05-19</lastmod>
     </url>
     <url>
          <loc>https://azure.github.io/PSRule.Rules.Azure/en/rules/Azure.Grafana.Version/</loc>
-         <lastmod>2025-05-18</lastmod>
+         <lastmod>2025-05-19</lastmod>
     </url>
     <url>
          <loc>https://azure.github.io/PSRule.Rules.Azure/en/rules/Azure.Group.Name/</loc>
-         <lastmod>2025-05-18</lastmod>
+         <lastmod>2025-05-19</lastmod>
     </url>
     <url>
          <loc>https://azure.github.io/PSRule.Rules.Azure/en/rules/Azure.Group.Naming/</loc>
-         <lastmod>2025-05-18</lastmod>
+         <lastmod>2025-05-19</lastmod>
     </url>
     <url>
          <loc>https://azure.github.io/PSRule.Rules.Azure/en/rules/Azure.Group.RequiredTags/</loc>
-         <lastmod>2025-05-18</lastmod>
+         <lastmod>2025-05-19</lastmod>
     </url>
     <url>
          <loc>https://azure.github.io/PSRule.Rules.Azure/en/rules/Azure.Identity.UserAssignedName/</loc>
-         <lastmod>2025-05-18</lastmod>
+         <lastmod>2025-05-19</lastmod>
     </url>
     <url>
          <loc>https://azure.github.io/PSRule.Rules.Azure/en/rules/Azure.ImageBuilder.CustomizeHash/</loc>
-         <lastmod>2025-05-18</lastmod>
+         <lastmod>2025-05-19</lastmod>
     </url>
     <url>
          <loc>https://azure.github.io/PSRule.Rules.Azure/en/rules/Azure.ImageBuilder.ValidateHash/</loc>
-         <lastmod>2025-05-18</lastmod>
+         <lastmod>2025-05-19</lastmod>
     </url>
     <url>
          <loc>https://azure.github.io/PSRule.Rules.Azure/en/rules/Azure.IoTHub.MinTLS/</loc>
-         <lastmod>2025-05-18</lastmod>
+         <lastmod>2025-05-19</lastmod>
     </url>
     <url>
          <loc>https://azure.github.io/PSRule.Rules.Azure/en/rules/Azure.KeyVault.AccessPolicy/</loc>
-         <lastmod>2025-05-18</lastmod>
+         <lastmod>2025-05-19</lastmod>
     </url>
     <url>
          <loc>https://azure.github.io/PSRule.Rules.Azure/en/rules/Azure.KeyVault.AutoRotationPolicy/</loc>
-         <lastmod>2025-05-18</lastmod>
+         <lastmod>2025-05-19</lastmod>
     </url>
     <url>
          <loc>https://azure.github.io/PSRule.Rules.Azure/en/rules/Azure.KeyVault.Firewall/</loc>
-         <lastmod>2025-05-18</lastmod>
+         <lastmod>2025-05-19</lastmod>
     </url>
     <url>
          <loc>https://azure.github.io/PSRule.Rules.Azure/en/rules/Azure.KeyVault.KeyName/</loc>
-         <lastmod>2025-05-18</lastmod>
+         <lastmod>2025-05-19</lastmod>
     </url>
     <url>
          <loc>https://azure.github.io/PSRule.Rules.Azure/en/rules/Azure.KeyVault.Logs/</loc>
-         <lastmod>2025-05-18</lastmod>
+         <lastmod>2025-05-19</lastmod>
     </url>
     <url>
          <loc>https://azure.github.io/PSRule.Rules.Azure/en/rules/Azure.KeyVault.Name/</loc>
-         <lastmod>2025-05-18</lastmod>
+         <lastmod>2025-05-19</lastmod>
     </url>
     <url>
          <loc>https://azure.github.io/PSRule.Rules.Azure/en/rules/Azure.KeyVault.PurgeProtect/</loc>
-         <lastmod>2025-05-18</lastmod>
+         <lastmod>2025-05-19</lastmod>
     </url>
     <url>
          <loc>https://azure.github.io/PSRule.Rules.Azure/en/rules/Azure.KeyVault.RBAC/</loc>
-         <lastmod>2025-05-18</lastmod>
+         <lastmod>2025-05-19</lastmod>
     </url>
     <url>
          <loc>https://azure.github.io/PSRule.Rules.Azure/en/rules/Azure.KeyVault.SecretName/</loc>
-         <lastmod>2025-05-18</lastmod>
+         <lastmod>2025-05-19</lastmod>
     </url>
     <url>
          <loc>https://azure.github.io/PSRule.Rules.Azure/en/rules/Azure.KeyVault.SoftDelete/</loc>
-         <lastmod>2025-05-18</lastmod>
+         <lastmod>2025-05-19</lastmod>
     </url>
     <url>
          <loc>https://azure.github.io/PSRule.Rules.Azure/en/rules/Azure.LB.AvailabilityZone/</loc>
-         <lastmod>2025-05-18</lastmod>
+         <lastmod>2025-05-19</lastmod>
     </url>
     <url>
          <loc>https://azure.github.io/PSRule.Rules.Azure/en/rules/Azure.LB.Name/</loc>
-         <lastmod>2025-05-18</lastmod>
+         <lastmod>2025-05-19</lastmod>
     </url>
     <url>
          <loc>https://azure.github.io/PSRule.Rules.Azure/en/rules/Azure.LB.Naming/</loc>
-         <lastmod>2025-05-18</lastmod>
+         <lastmod>2025-05-19</lastmod>
     </url>
     <url>
          <loc>https://azure.github.io/PSRule.Rules.Azure/en/rules/Azure.LB.Probe/</loc>
-         <lastmod>2025-05-18</lastmod>
+         <lastmod>2025-05-19</lastmod>
     </url>
     <url>
          <loc>https://azure.github.io/PSRule.Rules.Azure/en/rules/Azure.LB.StandardSKU/</loc>
-         <lastmod>2025-05-18</lastmod>
+         <lastmod>2025-05-19</lastmod>
     </url>
     <url>
          <loc>https://azure.github.io/PSRule.Rules.Azure/en/rules/Azure.LogAnalytics.Replication/</loc>
-         <lastmod>2025-05-18</lastmod>
+         <lastmod>2025-05-19</lastmod>
     </url>
     <url>
          <loc>https://azure.github.io/PSRule.Rules.Azure/en/rules/Azure.LogicApp.LimitHTTPTrigger/</loc>
-         <lastmod>2025-05-18</lastmod>
+         <lastmod>2025-05-19</lastmod>
     </url>
     <url>
          <loc>https://azure.github.io/PSRule.Rules.Azure/en/rules/Azure.ML.ComputeIdleShutdown/</loc>
-         <lastmod>2025-05-18</lastmod>
+         <lastmod>2025-05-19</lastmod>
     </url>
     <url>
          <loc>https://azure.github.io/PSRule.Rules.Azure/en/rules/Azure.ML.ComputeVnet/</loc>
-         <lastmod>2025-05-18</lastmod>
+         <lastmod>2025-05-19</lastmod>
     </url>
     <url>
          <loc>https://azure.github.io/PSRule.Rules.Azure/en/rules/Azure.ML.DisableLocalAuth/</loc>
-         <lastmod>2025-05-18</lastmod>
+         <lastmod>2025-05-19</lastmod>
     </url>
     <url>
          <loc>https://azure.github.io/PSRule.Rules.Azure/en/rules/Azure.ML.PublicAccess/</loc>
-         <lastmod>2025-05-18</lastmod>
+         <lastmod>2025-05-19</lastmod>
     </url>
     <url>
          <loc>https://azure.github.io/PSRule.Rules.Azure/en/rules/Azure.ML.UserManagedIdentity/</loc>
-         <lastmod>2025-05-18</lastmod>
+         <lastmod>2025-05-19</lastmod>
     </url>
     <url>
          <loc>https://azure.github.io/PSRule.Rules.Azure/en/rules/Azure.MariaDB.AllowAzureAccess/</loc>
-         <lastmod>2025-05-18</lastmod>
+         <lastmod>2025-05-19</lastmod>
     </url>
     <url>
          <loc>https://azure.github.io/PSRule.Rules.Azure/en/rules/Azure.MariaDB.DatabaseName/</loc>
-         <lastmod>2025-05-18</lastmod>
+         <lastmod>2025-05-19</lastmod>
     </url>
     <url>
          <loc>https://azure.github.io/PSRule.Rules.Azure/en/rules/Azure.MariaDB.DefenderCloud/</loc>
-         <lastmod>2025-05-18</lastmod>
+         <lastmod>2025-05-19</lastmod>
     </url>
     <url>
          <loc>https://azure.github.io/PSRule.Rules.Azure/en/rules/Azure.MariaDB.FirewallIPRange/</loc>
-         <lastmod>2025-05-18</lastmod>
+         <lastmod>2025-05-19</lastmod>
     </url>
     <url>
          <loc>https://azure.github.io/PSRule.Rules.Azure/en/rules/Azure.MariaDB.FirewallRuleCount/</loc>
-         <lastmod>2025-05-18</lastmod>
+         <lastmod>2025-05-19</lastmod>
     </url>
     <url>
          <loc>https://azure.github.io/PSRule.Rules.Azure/en/rules/Azure.MariaDB.FirewallRuleName/</loc>
-         <lastmod>2025-05-18</lastmod>
+         <lastmod>2025-05-19</lastmod>
     </url>
     <url>
          <loc>https://azure.github.io/PSRule.Rules.Azure/en/rules/Azure.MariaDB.GeoRedundantBackup/</loc>
-         <lastmod>2025-05-18</lastmod>
+         <lastmod>2025-05-19</lastmod>
     </url>
     <url>
          <loc>https://azure.github.io/PSRule.Rules.Azure/en/rules/Azure.MariaDB.MinTLS/</loc>
-         <lastmod>2025-05-18</lastmod>
+         <lastmod>2025-05-19</lastmod>
     </url>
     <url>
          <loc>https://azure.github.io/PSRule.Rules.Azure/en/rules/Azure.MariaDB.ServerName/</loc>
-         <lastmod>2025-05-18</lastmod>
+         <lastmod>2025-05-19</lastmod>
     </url>
     <url>
          <loc>https://azure.github.io/PSRule.Rules.Azure/en/rules/Azure.MariaDB.UseSSL/</loc>
-         <lastmod>2025-05-18</lastmod>
+         <lastmod>2025-05-19</lastmod>
     </url>
     <url>
          <loc>https://azure.github.io/PSRule.Rules.Azure/en/rules/Azure.MariaDB.VNETRuleName/</loc>
-         <lastmod>2025-05-18</lastmod>
+         <lastmod>2025-05-19</lastmod>
     </url>
     <url>
          <loc>https://azure.github.io/PSRule.Rules.Azure/en/rules/Azure.Monitor.ServiceHealth/</loc>
-         <lastmod>2025-05-18</lastmod>
+         <lastmod>2025-05-19</lastmod>
     </url>
     <url>
          <loc>https://azure.github.io/PSRule.Rules.Azure/en/rules/Azure.MySQL.AAD/</loc>
-         <lastmod>2025-05-18</lastmod>
+         <lastmod>2025-05-19</lastmod>
     </url>
     <url>
          <loc>https://azure.github.io/PSRule.Rules.Azure/en/rules/Azure.MySQL.AADOnly/</loc>
-         <lastmod>2025-05-18</lastmod>
+         <lastmod>2025-05-19</lastmod>
     </url>
     <url>
          <loc>https://azure.github.io/PSRule.Rules.Azure/en/rules/Azure.MySQL.AllowAzureAccess/</loc>
-         <lastmod>2025-05-18</lastmod>
+         <lastmod>2025-05-19</lastmod>
     </url>
     <url>
          <loc>https://azure.github.io/PSRule.Rules.Azure/en/rules/Azure.MySQL.DefenderCloud/</loc>
-         <lastmod>2025-05-18</lastmod>
+         <lastmod>2025-05-19</lastmod>
     </url>
     <url>
          <loc>https://azure.github.io/PSRule.Rules.Azure/en/rules/Azure.MySQL.FirewallIPRange/</loc>
-         <lastmod>2025-05-18</lastmod>
+         <lastmod>2025-05-19</lastmod>
     </url>
     <url>
          <loc>https://azure.github.io/PSRule.Rules.Azure/en/rules/Azure.MySQL.FirewallRuleCount/</loc>
-         <lastmod>2025-05-18</lastmod>
+         <lastmod>2025-05-19</lastmod>
     </url>
     <url>
          <loc>https://azure.github.io/PSRule.Rules.Azure/en/rules/Azure.MySQL.GeoRedundantBackup/</loc>
-         <lastmod>2025-05-18</lastmod>
+         <lastmod>2025-05-19</lastmod>
     </url>
     <url>
          <loc>https://azure.github.io/PSRule.Rules.Azure/en/rules/Azure.MySQL.MaintenanceWindow/</loc>
-         <lastmod>2025-05-18</lastmod>
+         <lastmod>2025-05-19</lastmod>
     </url>
     <url>
          <loc>https://azure.github.io/PSRule.Rules.Azure/en/rules/Azure.MySQL.MinTLS/</loc>
-         <lastmod>2025-05-18</lastmod>
+         <lastmod>2025-05-19</lastmod>
     </url>
     <url>
          <loc>https://azure.github.io/PSRule.Rules.Azure/en/rules/Azure.MySQL.ServerName/</loc>
-         <lastmod>2025-05-18</lastmod>
+         <lastmod>2025-05-19</lastmod>
     </url>
     <url>
          <loc>https://azure.github.io/PSRule.Rules.Azure/en/rules/Azure.MySQL.UseFlexible/</loc>
-         <lastmod>2025-05-18</lastmod>
+         <lastmod>2025-05-19</lastmod>
     </url>
     <url>
          <loc>https://azure.github.io/PSRule.Rules.Azure/en/rules/Azure.MySQL.UseSSL/</loc>
-         <lastmod>2025-05-18</lastmod>
+         <lastmod>2025-05-19</lastmod>
     </url>
     <url>
          <loc>https://azure.github.io/PSRule.Rules.Azure/en/rules/Azure.MySQL.ZoneRedundantHA/</loc>
-         <lastmod>2025-05-18</lastmod>
+         <lastmod>2025-05-19</lastmod>
     </url>
     <url>
          <loc>https://azure.github.io/PSRule.Rules.Azure/en/rules/Azure.NIC.Attached/</loc>
-         <lastmod>2025-05-18</lastmod>
+         <lastmod>2025-05-19</lastmod>
     </url>
     <url>
          <loc>https://azure.github.io/PSRule.Rules.Azure/en/rules/Azure.NIC.Name/</loc>
-         <lastmod>2025-05-18</lastmod>
+         <lastmod>2025-05-19</lastmod>
     </url>
     <url>
          <loc>https://azure.github.io/PSRule.Rules.Azure/en/rules/Azure.NIC.UniqueDns/</loc>
-         <lastmod>2025-05-18</lastmod>
+         <lastmod>2025-05-19</lastmod>
     </url>
     <url>
          <loc>https://azure.github.io/PSRule.Rules.Azure/en/rules/Azure.NSG.AKSRules/</loc>
-         <lastmod>2025-05-18</lastmod>
+         <lastmod>2025-05-19</lastmod>
     </url>
     <url>
          <loc>https://azure.github.io/PSRule.Rules.Azure/en/rules/Azure.NSG.AnyInboundSource/</loc>
-         <lastmod>2025-05-18</lastmod>
+         <lastmod>2025-05-19</lastmod>
     </url>
     <url>
          <loc>https://azure.github.io/PSRule.Rules.Azure/en/rules/Azure.NSG.Associated/</loc>
-         <lastmod>2025-05-18</lastmod>
+         <lastmod>2025-05-19</lastmod>
     </url>
     <url>
          <loc>https://azure.github.io/PSRule.Rules.Azure/en/rules/Azure.NSG.DenyAllInbound/</loc>
-         <lastmod>2025-05-18</lastmod>
+         <lastmod>2025-05-19</lastmod>
     </url>
     <url>
          <loc>https://azure.github.io/PSRule.Rules.Azure/en/rules/Azure.NSG.LateralTraversal/</loc>
-         <lastmod>2025-05-18</lastmod>
+         <lastmod>2025-05-19</lastmod>
     </url>
     <url>
          <loc>https://azure.github.io/PSRule.Rules.Azure/en/rules/Azure.NSG.Name/</loc>
-         <lastmod>2025-05-18</lastmod>
+         <lastmod>2025-05-19</lastmod>
     </url>
     <url>
          <loc>https://azure.github.io/PSRule.Rules.Azure/en/rules/Azure.NSG.Naming/</loc>
-         <lastmod>2025-05-18</lastmod>
+         <lastmod>2025-05-19</lastmod>
     </url>
     <url>
          <loc>https://azure.github.io/PSRule.Rules.Azure/en/rules/Azure.Policy.AssignmentAssignedBy/</loc>
-         <lastmod>2025-05-18</lastmod>
+         <lastmod>2025-05-19</lastmod>
     </url>
     <url>
          <loc>https://azure.github.io/PSRule.Rules.Azure/en/rules/Azure.Policy.AssignmentDescriptors/</loc>
-         <lastmod>2025-05-18</lastmod>
+         <lastmod>2025-05-19</lastmod>
     </url>
     <url>
          <loc>https://azure.github.io/PSRule.Rules.Azure/en/rules/Azure.Policy.Descriptors/</loc>
-         <lastmod>2025-05-18</lastmod>
+         <lastmod>2025-05-19</lastmod>
     </url>
     <url>
          <loc>https://azure.github.io/PSRule.Rules.Azure/en/rules/Azure.Policy.ExemptionDescriptors/</loc>
-         <lastmod>2025-05-18</lastmod>
+         <lastmod>2025-05-19</lastmod>
     </url>
     <url>
          <loc>https://azure.github.io/PSRule.Rules.Azure/en/rules/Azure.Policy.WaiverExpiry/</loc>
-         <lastmod>2025-05-18</lastmod>
+         <lastmod>2025-05-19</lastmod>
     </url>
     <url>
          <loc>https://azure.github.io/PSRule.Rules.Azure/en/rules/Azure.PostgreSQL.AAD/</loc>
-         <lastmod>2025-05-18</lastmod>
+         <lastmod>2025-05-19</lastmod>
     </url>
     <url>
          <loc>https://azure.github.io/PSRule.Rules.Azure/en/rules/Azure.PostgreSQL.AADOnly/</loc>
-         <lastmod>2025-05-18</lastmod>
+         <lastmod>2025-05-19</lastmod>
     </url>
     <url>
          <loc>https://azure.github.io/PSRule.Rules.Azure/en/rules/Azure.PostgreSQL.AllowAzureAccess/</loc>
-         <lastmod>2025-05-18</lastmod>
+         <lastmod>2025-05-19</lastmod>
     </url>
     <url>
          <loc>https://azure.github.io/PSRule.Rules.Azure/en/rules/Azure.PostgreSQL.DefenderCloud/</loc>
-         <lastmod>2025-05-18</lastmod>
+         <lastmod>2025-05-19</lastmod>
     </url>
     <url>
          <loc>https://azure.github.io/PSRule.Rules.Azure/en/rules/Azure.PostgreSQL.FirewallIPRange/</loc>
-         <lastmod>2025-05-18</lastmod>
+         <lastmod>2025-05-19</lastmod>
     </url>
     <url>
          <loc>https://azure.github.io/PSRule.Rules.Azure/en/rules/Azure.PostgreSQL.FirewallRuleCount/</loc>
-         <lastmod>2025-05-18</lastmod>
+         <lastmod>2025-05-19</lastmod>
     </url>
     <url>
          <loc>https://azure.github.io/PSRule.Rules.Azure/en/rules/Azure.PostgreSQL.GeoRedundantBackup/</loc>
-         <lastmod>2025-05-18</lastmod>
+         <lastmod>2025-05-19</lastmod>
     </url>
     <url>
          <loc>https://azure.github.io/PSRule.Rules.Azure/en/rules/Azure.PostgreSQL.MaintenanceWindow/</loc>
-         <lastmod>2025-05-18</lastmod>
+         <lastmod>2025-05-19</lastmod>
     </url>
     <url>
          <loc>https://azure.github.io/PSRule.Rules.Azure/en/rules/Azure.PostgreSQL.MinTLS/</loc>
-         <lastmod>2025-05-18</lastmod>
+         <lastmod>2025-05-19</lastmod>
     </url>
     <url>
          <loc>https://azure.github.io/PSRule.Rules.Azure/en/rules/Azure.PostgreSQL.ServerName/</loc>
-         <lastmod>2025-05-18</lastmod>
+         <lastmod>2025-05-19</lastmod>
     </url>
     <url>
          <loc>https://azure.github.io/PSRule.Rules.Azure/en/rules/Azure.PostgreSQL.UseSSL/</loc>
-         <lastmod>2025-05-18</lastmod>
+         <lastmod>2025-05-19</lastmod>
     </url>
     <url>
          <loc>https://azure.github.io/PSRule.Rules.Azure/en/rules/Azure.PostgreSQL.ZoneRedundantHA/</loc>
-         <lastmod>2025-05-18</lastmod>
+         <lastmod>2025-05-19</lastmod>
     </url>
     <url>
          <loc>https://azure.github.io/PSRule.Rules.Azure/en/rules/Azure.PrivateEndpoint.Name/</loc>
-         <lastmod>2025-05-18</lastmod>
+         <lastmod>2025-05-19</lastmod>
     </url>
     <url>
          <loc>https://azure.github.io/PSRule.Rules.Azure/en/rules/Azure.PublicIP.AvailabilityZone/</loc>
-         <lastmod>2025-05-18</lastmod>
+         <lastmod>2025-05-19</lastmod>
     </url>
     <url>
          <loc>https://azure.github.io/PSRule.Rules.Azure/en/rules/Azure.PublicIP.DNSLabel/</loc>
-         <lastmod>2025-05-18</lastmod>
+         <lastmod>2025-05-19</lastmod>
     </url>
     <url>
          <loc>https://azure.github.io/PSRule.Rules.Azure/en/rules/Azure.PublicIP.IsAttached/</loc>
-         <lastmod>2025-05-18</lastmod>
+         <lastmod>2025-05-19</lastmod>
     </url>
     <url>
          <loc>https://azure.github.io/PSRule.Rules.Azure/en/rules/Azure.PublicIP.MigrateStandard/</loc>
-         <lastmod>2025-05-18</lastmod>
+         <lastmod>2025-05-19</lastmod>
     </url>
     <url>
          <loc>https://azure.github.io/PSRule.Rules.Azure/en/rules/Azure.PublicIP.Name/</loc>
-         <lastmod>2025-05-18</lastmod>
+         <lastmod>2025-05-19</lastmod>
     </url>
     <url>
          <loc>https://azure.github.io/PSRule.Rules.Azure/en/rules/Azure.PublicIP.Naming/</loc>
-         <lastmod>2025-05-18</lastmod>
+         <lastmod>2025-05-19</lastmod>
     </url>
     <url>
          <loc>https://azure.github.io/PSRule.Rules.Azure/en/rules/Azure.PublicIP.StandardSKU/</loc>
-         <lastmod>2025-05-18</lastmod>
+         <lastmod>2025-05-19</lastmod>
     </url>
     <url>
          <loc>https://azure.github.io/PSRule.Rules.Azure/en/rules/Azure.RBAC.CoAdministrator/</loc>
-         <lastmod>2025-05-18</lastmod>
+         <lastmod>2025-05-19</lastmod>
     </url>
     <url>
          <loc>https://azure.github.io/PSRule.Rules.Azure/en/rules/Azure.RBAC.LimitMGDelegation/</loc>
-         <lastmod>2025-05-18</lastmod>
+         <lastmod>2025-05-19</lastmod>
     </url>
     <url>
          <loc>https://azure.github.io/PSRule.Rules.Azure/en/rules/Azure.RBAC.LimitOwner/</loc>
-         <lastmod>2025-05-18</lastmod>
+         <lastmod>2025-05-19</lastmod>
     </url>
     <url>
          <loc>https://azure.github.io/PSRule.Rules.Azure/en/rules/Azure.RBAC.PIM/</loc>
-         <lastmod>2025-05-18</lastmod>
+         <lastmod>2025-05-19</lastmod>
     </url>
     <url>
          <loc>https://azure.github.io/PSRule.Rules.Azure/en/rules/Azure.RBAC.UseGroups/</loc>
-         <lastmod>2025-05-18</lastmod>
+         <lastmod>2025-05-19</lastmod>
     </url>
     <url>
          <loc>https://azure.github.io/PSRule.Rules.Azure/en/rules/Azure.RBAC.UseRGDelegation/</loc>
-         <lastmod>2025-05-18</lastmod>
+         <lastmod>2025-05-19</lastmod>
     </url>
     <url>
          <loc>https://azure.github.io/PSRule.Rules.Azure/en/rules/Azure.RSV.Immutable/</loc>
-         <lastmod>2025-05-18</lastmod>
+         <lastmod>2025-05-19</lastmod>
     </url>
     <url>
          <loc>https://azure.github.io/PSRule.Rules.Azure/en/rules/Azure.RSV.Name/</loc>
-         <lastmod>2025-05-18</lastmod>
+         <lastmod>2025-05-19</lastmod>
     </url>
     <url>
          <loc>https://azure.github.io/PSRule.Rules.Azure/en/rules/Azure.RSV.ReplicationAlert/</loc>
-         <lastmod>2025-05-18</lastmod>
+         <lastmod>2025-05-19</lastmod>
     </url>
     <url>
          <loc>https://azure.github.io/PSRule.Rules.Azure/en/rules/Azure.RSV.StorageType/</loc>
-         <lastmod>2025-05-18</lastmod>
+         <lastmod>2025-05-19</lastmod>
     </url>
     <url>
          <loc>https://azure.github.io/PSRule.Rules.Azure/en/rules/Azure.Redis.AvailabilityZone/</loc>
-         <lastmod>2025-05-18</lastmod>
+         <lastmod>2025-05-19</lastmod>
     </url>
     <url>
          <loc>https://azure.github.io/PSRule.Rules.Azure/en/rules/Azure.Redis.EntraID/</loc>
-         <lastmod>2025-05-18</lastmod>
+         <lastmod>2025-05-19</lastmod>
     </url>
     <url>
          <loc>https://azure.github.io/PSRule.Rules.Azure/en/rules/Azure.Redis.FirewallIPRange/</loc>
-         <lastmod>2025-05-18</lastmod>
+         <lastmod>2025-05-19</lastmod>
     </url>
     <url>
          <loc>https://azure.github.io/PSRule.Rules.Azure/en/rules/Azure.Redis.FirewallRuleCount/</loc>
-         <lastmod>2025-05-18</lastmod>
+         <lastmod>2025-05-19</lastmod>
     </url>
     <url>
          <loc>https://azure.github.io/PSRule.Rules.Azure/en/rules/Azure.Redis.MaxMemoryReserved/</loc>
-         <lastmod>2025-05-18</lastmod>
+         <lastmod>2025-05-19</lastmod>
     </url>
     <url>
          <loc>https://azure.github.io/PSRule.Rules.Azure/en/rules/Azure.Redis.MinSKU/</loc>
-         <lastmod>2025-05-18</lastmod>
+         <lastmod>2025-05-19</lastmod>
     </url>
     <url>
          <loc>https://azure.github.io/PSRule.Rules.Azure/en/rules/Azure.Redis.MinTLS/</loc>
-         <lastmod>2025-05-18</lastmod>
+         <lastmod>2025-05-19</lastmod>
     </url>
     <url>
          <loc>https://azure.github.io/PSRule.Rules.Azure/en/rules/Azure.Redis.NonSslPort/</loc>
-         <lastmod>2025-05-18</lastmod>
+         <lastmod>2025-05-19</lastmod>
     </url>
     <url>
          <loc>https://azure.github.io/PSRule.Rules.Azure/en/rules/Azure.Redis.PublicNetworkAccess/</loc>
-         <lastmod>2025-05-18</lastmod>
+         <lastmod>2025-05-19</lastmod>
     </url>
     <url>
          <loc>https://azure.github.io/PSRule.Rules.Azure/en/rules/Azure.Redis.Version/</loc>
-         <lastmod>2025-05-18</lastmod>
+         <lastmod>2025-05-19</lastmod>
     </url>
     <url>
          <loc>https://azure.github.io/PSRule.Rules.Azure/en/rules/Azure.RedisEnterprise.MinTLS/</loc>
-         <lastmod>2025-05-18</lastmod>
+         <lastmod>2025-05-19</lastmod>
     </url>
     <url>
          <loc>https://azure.github.io/PSRule.Rules.Azure/en/rules/Azure.RedisEnterprise.Zones/</loc>
-         <lastmod>2025-05-18</lastmod>
+         <lastmod>2025-05-19</lastmod>
     </url>
     <url>
          <loc>https://azure.github.io/PSRule.Rules.Azure/en/rules/Azure.Resource.AllowedRegions/</loc>
-         <lastmod>2025-05-18</lastmod>
+         <lastmod>2025-05-19</lastmod>
     </url>
     <url>
          <loc>https://azure.github.io/PSRule.Rules.Azure/en/rules/Azure.Resource.RequiredTags/</loc>
-         <lastmod>2025-05-18</lastmod>
+         <lastmod>2025-05-19</lastmod>
     </url>
     <url>
          <loc>https://azure.github.io/PSRule.Rules.Azure/en/rules/Azure.Resource.UseTags/</loc>
-         <lastmod>2025-05-18</lastmod>
+         <lastmod>2025-05-19</lastmod>
     </url>
     <url>
          <loc>https://azure.github.io/PSRule.Rules.Azure/en/rules/Azure.Route.Name/</loc>
-         <lastmod>2025-05-18</lastmod>
+         <lastmod>2025-05-19</lastmod>
     </url>
     <url>
          <loc>https://azure.github.io/PSRule.Rules.Azure/en/rules/Azure.Route.Naming/</loc>
-         <lastmod>2025-05-18</lastmod>
+         <lastmod>2025-05-19</lastmod>
     </url>
     <url>
          <loc>https://azure.github.io/PSRule.Rules.Azure/en/rules/Azure.SQL.AAD/</loc>
-         <lastmod>2025-05-18</lastmod>
+         <lastmod>2025-05-19</lastmod>
     </url>
     <url>
          <loc>https://azure.github.io/PSRule.Rules.Azure/en/rules/Azure.SQL.AADOnly/</loc>
-         <lastmod>2025-05-18</lastmod>
+         <lastmod>2025-05-19</lastmod>
     </url>
     <url>
          <loc>https://azure.github.io/PSRule.Rules.Azure/en/rules/Azure.SQL.AllowAzureAccess/</loc>
-         <lastmod>2025-05-18</lastmod>
+         <lastmod>2025-05-19</lastmod>
     </url>
     <url>
          <loc>https://azure.github.io/PSRule.Rules.Azure/en/rules/Azure.SQL.Auditing/</loc>
-         <lastmod>2025-05-18</lastmod>
+         <lastmod>2025-05-19</lastmod>
     </url>
     <url>
          <loc>https://azure.github.io/PSRule.Rules.Azure/en/rules/Azure.SQL.DBName/</loc>
-         <lastmod>2025-05-18</lastmod>
+         <lastmod>2025-05-19</lastmod>
     </url>
     <url>
          <loc>https://azure.github.io/PSRule.Rules.Azure/en/rules/Azure.SQL.DefenderCloud/</loc>
-         <lastmod>2025-05-18</lastmod>
+         <lastmod>2025-05-19</lastmod>
     </url>
     <url>
          <loc>https://azure.github.io/PSRule.Rules.Azure/en/rules/Azure.SQL.FGName/</loc>
-         <lastmod>2025-05-18</lastmod>
+         <lastmod>2025-05-19</lastmod>
     </url>
     <url>
          <loc>https://azure.github.io/PSRule.Rules.Azure/en/rules/Azure.SQL.FirewallIPRange/</loc>
-         <lastmod>2025-05-18</lastmod>
+         <lastmod>2025-05-19</lastmod>
     </url>
     <url>
          <loc>https://azure.github.io/PSRule.Rules.Azure/en/rules/Azure.SQL.FirewallRuleCount/</loc>
-         <lastmod>2025-05-18</lastmod>
+         <lastmod>2025-05-19</lastmod>
     </url>
     <url>
          <loc>https://azure.github.io/PSRule.Rules.Azure/en/rules/Azure.SQL.MaintenanceWindow/</loc>
-         <lastmod>2025-05-18</lastmod>
+         <lastmod>2025-05-19</lastmod>
     </url>
     <url>
          <loc>https://azure.github.io/PSRule.Rules.Azure/en/rules/Azure.SQL.MinTLS/</loc>
-         <lastmod>2025-05-18</lastmod>
+         <lastmod>2025-05-19</lastmod>
     </url>
     <url>
          <loc>https://azure.github.io/PSRule.Rules.Azure/en/rules/Azure.SQL.ServerName/</loc>
-         <lastmod>2025-05-18</lastmod>
+         <lastmod>2025-05-19</lastmod>
     </url>
     <url>
          <loc>https://azure.github.io/PSRule.Rules.Azure/en/rules/Azure.SQL.TDE/</loc>
-         <lastmod>2025-05-18</lastmod>
+         <lastmod>2025-05-19</lastmod>
     </url>
     <url>
          <loc>https://azure.github.io/PSRule.Rules.Azure/en/rules/Azure.SQL.VAScan/</loc>
-         <lastmod>2025-05-18</lastmod>
+         <lastmod>2025-05-19</lastmod>
     </url>
     <url>
          <loc>https://azure.github.io/PSRule.Rules.Azure/en/rules/Azure.SQLMI.AAD/</loc>
-         <lastmod>2025-05-18</lastmod>
+         <lastmod>2025-05-19</lastmod>
     </url>
     <url>
          <loc>https://azure.github.io/PSRule.Rules.Azure/en/rules/Azure.SQLMI.AADOnly/</loc>
-         <lastmod>2025-05-18</lastmod>
+         <lastmod>2025-05-19</lastmod>
     </url>
     <url>
          <loc>https://azure.github.io/PSRule.Rules.Azure/en/rules/Azure.SQLMI.MaintenanceWindow/</loc>
-         <lastmod>2025-05-18</lastmod>
+         <lastmod>2025-05-19</lastmod>
     </url>
     <url>
          <loc>https://azure.github.io/PSRule.Rules.Azure/en/rules/Azure.SQLMI.ManagedIdentity/</loc>
-         <lastmod>2025-05-18</lastmod>
+         <lastmod>2025-05-19</lastmod>
     </url>
     <url>
          <loc>https://azure.github.io/PSRule.Rules.Azure/en/rules/Azure.SQLMI.Name/</loc>
-         <lastmod>2025-05-18</lastmod>
+         <lastmod>2025-05-19</lastmod>
     </url>
     <url>
          <loc>https://azure.github.io/PSRule.Rules.Azure/en/rules/Azure.Search.IndexSLA/</loc>
-         <lastmod>2025-05-18</lastmod>
+         <lastmod>2025-05-19</lastmod>
     </url>
     <url>
          <loc>https://azure.github.io/PSRule.Rules.Azure/en/rules/Azure.Search.ManagedIdentity/</loc>
-         <lastmod>2025-05-18</lastmod>
+         <lastmod>2025-05-19</lastmod>
     </url>
     <url>
          <loc>https://azure.github.io/PSRule.Rules.Azure/en/rules/Azure.Search.Name/</loc>
-         <lastmod>2025-05-18</lastmod>
+         <lastmod>2025-05-19</lastmod>
     </url>
     <url>
          <loc>https://azure.github.io/PSRule.Rules.Azure/en/rules/Azure.Search.Naming/</loc>
-         <lastmod>2025-05-18</lastmod>
+         <lastmod>2025-05-19</lastmod>
     </url>
     <url>
          <loc>https://azure.github.io/PSRule.Rules.Azure/en/rules/Azure.Search.QuerySLA/</loc>
-         <lastmod>2025-05-18</lastmod>
+         <lastmod>2025-05-19</lastmod>
     </url>
     <url>
          <loc>https://azure.github.io/PSRule.Rules.Azure/en/rules/Azure.Search.SKU/</loc>
-         <lastmod>2025-05-18</lastmod>
+         <lastmod>2025-05-19</lastmod>
     </url>
     <url>
          <loc>https://azure.github.io/PSRule.Rules.Azure/en/rules/Azure.ServiceBus.AuditLogs/</loc>
-         <lastmod>2025-05-18</lastmod>
+         <lastmod>2025-05-19</lastmod>
     </url>
     <url>
          <loc>https://azure.github.io/PSRule.Rules.Azure/en/rules/Azure.ServiceBus.DisableLocalAuth/</loc>
-         <lastmod>2025-05-18</lastmod>
+         <lastmod>2025-05-19</lastmod>
     </url>
     <url>
          <loc>https://azure.github.io/PSRule.Rules.Azure/en/rules/Azure.ServiceBus.GeoReplica/</loc>
-         <lastmod>2025-05-18</lastmod>
+         <lastmod>2025-05-19</lastmod>
     </url>
     <url>
          <loc>https://azure.github.io/PSRule.Rules.Azure/en/rules/Azure.ServiceBus.MinTLS/</loc>
-         <lastmod>2025-05-18</lastmod>
+         <lastmod>2025-05-19</lastmod>
     </url>
     <url>
          <loc>https://azure.github.io/PSRule.Rules.Azure/en/rules/Azure.ServiceBus.Usage/</loc>
-         <lastmod>2025-05-18</lastmod>
+         <lastmod>2025-05-19</lastmod>
     </url>
     <url>
          <loc>https://azure.github.io/PSRule.Rules.Azure/en/rules/Azure.ServiceFabric.AAD/</loc>
-         <lastmod>2025-05-18</lastmod>
+         <lastmod>2025-05-19</lastmod>
     </url>
     <url>
          <loc>https://azure.github.io/PSRule.Rules.Azure/en/rules/Azure.SignalR.ManagedIdentity/</loc>
-         <lastmod>2025-05-18</lastmod>
+         <lastmod>2025-05-19</lastmod>
     </url>
     <url>
          <loc>https://azure.github.io/PSRule.Rules.Azure/en/rules/Azure.SignalR.Name/</loc>
-         <lastmod>2025-05-18</lastmod>
+         <lastmod>2025-05-19</lastmod>
     </url>
     <url>
          <loc>https://azure.github.io/PSRule.Rules.Azure/en/rules/Azure.SignalR.SLA/</loc>
-         <lastmod>2025-05-18</lastmod>
+         <lastmod>2025-05-19</lastmod>
     </url>
     <url>
          <loc>https://azure.github.io/PSRule.Rules.Azure/en/rules/Azure.Storage.BlobAccessType/</loc>
-         <lastmod>2025-05-18</lastmod>
+         <lastmod>2025-05-19</lastmod>
     </url>
     <url>
          <loc>https://azure.github.io/PSRule.Rules.Azure/en/rules/Azure.Storage.BlobPublicAccess/</loc>
-         <lastmod>2025-05-18</lastmod>
+         <lastmod>2025-05-19</lastmod>
     </url>
     <url>
          <loc>https://azure.github.io/PSRule.Rules.Azure/en/rules/Azure.Storage.ContainerSoftDelete/</loc>
-         <lastmod>2025-05-18</lastmod>
+         <lastmod>2025-05-19</lastmod>
     </url>
     <url>
          <loc>https://azure.github.io/PSRule.Rules.Azure/en/rules/Azure.Storage.Defender.DataScan/</loc>
-         <lastmod>2025-05-18</lastmod>
+         <lastmod>2025-05-19</lastmod>
     </url>
     <url>
          <loc>https://azure.github.io/PSRule.Rules.Azure/en/rules/Azure.Storage.Defender.MalwareScan/</loc>
-         <lastmod>2025-05-18</lastmod>
+         <lastmod>2025-05-19</lastmod>
     </url>
     <url>
          <loc>https://azure.github.io/PSRule.Rules.Azure/en/rules/Azure.Storage.DefenderCloud/</loc>
-         <lastmod>2025-05-18</lastmod>
+         <lastmod>2025-05-19</lastmod>
     </url>
     <url>
          <loc>https://azure.github.io/PSRule.Rules.Azure/en/rules/Azure.Storage.FileShareSoftDelete/</loc>
-         <lastmod>2025-05-18</lastmod>
+         <lastmod>2025-05-19</lastmod>
     </url>
     <url>
          <loc>https://azure.github.io/PSRule.Rules.Azure/en/rules/Azure.Storage.Firewall/</loc>
-         <lastmod>2025-05-18</lastmod>
+         <lastmod>2025-05-19</lastmod>
     </url>
     <url>
          <loc>https://azure.github.io/PSRule.Rules.Azure/en/rules/Azure.Storage.MinTLS/</loc>
-         <lastmod>2025-05-18</lastmod>
+         <lastmod>2025-05-19</lastmod>
     </url>
     <url>
          <loc>https://azure.github.io/PSRule.Rules.Azure/en/rules/Azure.Storage.Name/</loc>
-         <lastmod>2025-05-18</lastmod>
+         <lastmod>2025-05-19</lastmod>
     </url>
     <url>
          <loc>https://azure.github.io/PSRule.Rules.Azure/en/rules/Azure.Storage.Naming/</loc>
-         <lastmod>2025-05-18</lastmod>
+         <lastmod>2025-05-19</lastmod>
     </url>
     <url>
          <loc>https://azure.github.io/PSRule.Rules.Azure/en/rules/Azure.Storage.SecureTransfer/</loc>
-         <lastmod>2025-05-18</lastmod>
+         <lastmod>2025-05-19</lastmod>
     </url>
     <url>
          <loc>https://azure.github.io/PSRule.Rules.Azure/en/rules/Azure.Storage.SoftDelete/</loc>
-         <lastmod>2025-05-18</lastmod>
+         <lastmod>2025-05-19</lastmod>
     </url>
     <url>
          <loc>https://azure.github.io/PSRule.Rules.Azure/en/rules/Azure.Storage.UseReplication/</loc>
-         <lastmod>2025-05-18</lastmod>
+         <lastmod>2025-05-19</lastmod>
     </url>
     <url>
          <loc>https://azure.github.io/PSRule.Rules.Azure/en/rules/Azure.Subscription.RequiredTags/</loc>
-         <lastmod>2025-05-18</lastmod>
+         <lastmod>2025-05-19</lastmod>
     </url>
     <url>
          <loc>https://azure.github.io/PSRule.Rules.Azure/en/rules/Azure.Template.DebugDeployment/</loc>
-         <lastmod>2025-05-18</lastmod>
+         <lastmod>2025-05-19</lastmod>
     </url>
     <url>
          <loc>https://azure.github.io/PSRule.Rules.Azure/en/rules/Azure.Template.DefineParameters/</loc>
-         <lastmod>2025-05-18</lastmod>
+         <lastmod>2025-05-19</lastmod>
     </url>
     <url>
          <loc>https://azure.github.io/PSRule.Rules.Azure/en/rules/Azure.Template.ExpressionLength/</loc>
-         <lastmod>2025-05-18</lastmod>
+         <lastmod>2025-05-19</lastmod>
     </url>
     <url>
          <loc>https://azure.github.io/PSRule.Rules.Azure/en/rules/Azure.Template.LocationDefault/</loc>
-         <lastmod>2025-05-18</lastmod>
+         <lastmod>2025-05-19</lastmod>
     </url>
     <url>
          <loc>https://azure.github.io/PSRule.Rules.Azure/en/rules/Azure.Template.LocationType/</loc>
-         <lastmod>2025-05-18</lastmod>
+         <lastmod>2025-05-19</lastmod>
     </url>
     <url>
          <loc>https://azure.github.io/PSRule.Rules.Azure/en/rules/Azure.Template.MetadataLink/</loc>
-         <lastmod>2025-05-18</lastmod>
+         <lastmod>2025-05-19</lastmod>
     </url>
     <url>
          <loc>https://azure.github.io/PSRule.Rules.Azure/en/rules/Azure.Template.ParameterDataTypes/</loc>
-         <lastmod>2025-05-18</lastmod>
+         <lastmod>2025-05-19</lastmod>
     </url>
     <url>
          <loc>https://azure.github.io/PSRule.Rules.Azure/en/rules/Azure.Template.ParameterFile/</loc>
-         <lastmod>2025-05-18</lastmod>
+         <lastmod>2025-05-19</lastmod>
     </url>
     <url>
          <loc>https://azure.github.io/PSRule.Rules.Azure/en/rules/Azure.Template.ParameterMetadata/</loc>
-         <lastmod>2025-05-18</lastmod>
+         <lastmod>2025-05-19</lastmod>
     </url>
     <url>
          <loc>https://azure.github.io/PSRule.Rules.Azure/en/rules/Azure.Template.ParameterMinMaxValue/</loc>
-         <lastmod>2025-05-18</lastmod>
+         <lastmod>2025-05-19</lastmod>
     </url>
     <url>
          <loc>https://azure.github.io/PSRule.Rules.Azure/en/rules/Azure.Template.ParameterScheme/</loc>
-         <lastmod>2025-05-18</lastmod>
+         <lastmod>2025-05-19</lastmod>
     </url>
     <url>
          <loc>https://azure.github.io/PSRule.Rules.Azure/en/rules/Azure.Template.ParameterStrongType/</loc>
-         <lastmod>2025-05-18</lastmod>
+         <lastmod>2025-05-19</lastmod>
     </url>
     <url>
          <loc>https://azure.github.io/PSRule.Rules.Azure/en/rules/Azure.Template.ParameterValue/</loc>
-         <lastmod>2025-05-18</lastmod>
+         <lastmod>2025-05-19</lastmod>
     </url>
     <url>
          <loc>https://azure.github.io/PSRule.Rules.Azure/en/rules/Azure.Template.ResourceLocation/</loc>
-         <lastmod>2025-05-18</lastmod>
+         <lastmod>2025-05-19</lastmod>
     </url>
     <url>
          <loc>https://azure.github.io/PSRule.Rules.Azure/en/rules/Azure.Template.Resources/</loc>
-         <lastmod>2025-05-18</lastmod>
+         <lastmod>2025-05-19</lastmod>
     </url>
     <url>
          <loc>https://azure.github.io/PSRule.Rules.Azure/en/rules/Azure.Template.TemplateFile/</loc>
-         <lastmod>2025-05-18</lastmod>
+         <lastmod>2025-05-19</lastmod>
     </url>
     <url>
          <loc>https://azure.github.io/PSRule.Rules.Azure/en/rules/Azure.Template.TemplateSchema/</loc>
-         <lastmod>2025-05-18</lastmod>
+         <lastmod>2025-05-19</lastmod>
     </url>
     <url>
          <loc>https://azure.github.io/PSRule.Rules.Azure/en/rules/Azure.Template.TemplateScheme/</loc>
-         <lastmod>2025-05-18</lastmod>
+         <lastmod>2025-05-19</lastmod>
     </url>
     <url>
          <loc>https://azure.github.io/PSRule.Rules.Azure/en/rules/Azure.Template.UseComments/</loc>
-         <lastmod>2025-05-18</lastmod>
+         <lastmod>2025-05-19</lastmod>
     </url>
     <url>
          <loc>https://azure.github.io/PSRule.Rules.Azure/en/rules/Azure.Template.UseDescriptions/</loc>
-         <lastmod>2025-05-18</lastmod>
+         <lastmod>2025-05-19</lastmod>
     </url>
     <url>
          <loc>https://azure.github.io/PSRule.Rules.Azure/en/rules/Azure.Template.UseLocationParameter/</loc>
-         <lastmod>2025-05-18</lastmod>
+         <lastmod>2025-05-19</lastmod>
     </url>
     <url>
          <loc>https://azure.github.io/PSRule.Rules.Azure/en/rules/Azure.Template.UseParameters/</loc>
-         <lastmod>2025-05-18</lastmod>
+         <lastmod>2025-05-19</lastmod>
     </url>
     <url>
          <loc>https://azure.github.io/PSRule.Rules.Azure/en/rules/Azure.Template.UseVariables/</loc>
-         <lastmod>2025-05-18</lastmod>
+         <lastmod>2025-05-19</lastmod>
     </url>
     <url>
          <loc>https://azure.github.io/PSRule.Rules.Azure/en/rules/Azure.Template.ValidSecretRef/</loc>
-         <lastmod>2025-05-18</lastmod>
+         <lastmod>2025-05-19</lastmod>
     </url>
     <url>
          <loc>https://azure.github.io/PSRule.Rules.Azure/en/rules/Azure.TrafficManager.Endpoints/</loc>
-         <lastmod>2025-05-18</lastmod>
+         <lastmod>2025-05-19</lastmod>
     </url>
     <url>
          <loc>https://azure.github.io/PSRule.Rules.Azure/en/rules/Azure.TrafficManager.Protocol/</loc>
-         <lastmod>2025-05-18</lastmod>
+         <lastmod>2025-05-19</lastmod>
     </url>
     <url>
          <loc>https://azure.github.io/PSRule.Rules.Azure/en/rules/Azure.VM.ADE/</loc>
-         <lastmod>2025-05-18</lastmod>
+         <lastmod>2025-05-19</lastmod>
     </url>
     <url>
          <loc>https://azure.github.io/PSRule.Rules.Azure/en/rules/Azure.VM.AMA/</loc>
-         <lastmod>2025-05-18</lastmod>
+         <lastmod>2025-05-19</lastmod>
     </url>
     <url>
          <loc>https://azure.github.io/PSRule.Rules.Azure/en/rules/Azure.VM.ASAlignment/</loc>
-         <lastmod>2025-05-18</lastmod>
+         <lastmod>2025-05-19</lastmod>
     </url>
     <url>
          <loc>https://azure.github.io/PSRule.Rules.Azure/en/rules/Azure.VM.ASDistributeTraffic/</loc>
-         <lastmod>2025-05-18</lastmod>
+         <lastmod>2025-05-19</lastmod>
     </url>
     <url>
          <loc>https://azure.github.io/PSRule.Rules.Azure/en/rules/Azure.VM.ASMinMembers/</loc>
-         <lastmod>2025-05-18</lastmod>
+         <lastmod>2025-05-19</lastmod>
     </url>
     <url>
          <loc>https://azure.github.io/PSRule.Rules.Azure/en/rules/Azure.VM.ASName/</loc>
-         <lastmod>2025-05-18</lastmod>
+         <lastmod>2025-05-19</lastmod>
     </url>
     <url>
          <loc>https://azure.github.io/PSRule.Rules.Azure/en/rules/Azure.VM.AcceleratedNetworking/</loc>
-         <lastmod>2025-05-18</lastmod>
+         <lastmod>2025-05-19</lastmod>
     </url>
     <url>
          <loc>https://azure.github.io/PSRule.Rules.Azure/en/rules/Azure.VM.Agent/</loc>
-         <lastmod>2025-05-18</lastmod>
+         <lastmod>2025-05-19</lastmod>
     </url>
     <url>
          <loc>https://azure.github.io/PSRule.Rules.Azure/en/rules/Azure.VM.BasicSku/</loc>
-         <lastmod>2025-05-18</lastmod>
+         <lastmod>2025-05-19</lastmod>
     </url>
     <url>
          <loc>https://azure.github.io/PSRule.Rules.Azure/en/rules/Azure.VM.ComputerName/</loc>
-         <lastmod>2025-05-18</lastmod>
+         <lastmod>2025-05-19</lastmod>
     </url>
     <url>
          <loc>https://azure.github.io/PSRule.Rules.Azure/en/rules/Azure.VM.DiskAttached/</loc>
-         <lastmod>2025-05-18</lastmod>
+         <lastmod>2025-05-19</lastmod>
     </url>
     <url>
          <loc>https://azure.github.io/PSRule.Rules.Azure/en/rules/Azure.VM.DiskCaching/</loc>
-         <lastmod>2025-05-18</lastmod>
+         <lastmod>2025-05-19</lastmod>
     </url>
     <url>
          <loc>https://azure.github.io/PSRule.Rules.Azure/en/rules/Azure.VM.DiskName/</loc>
-         <lastmod>2025-05-18</lastmod>
+         <lastmod>2025-05-19</lastmod>
     </url>
     <url>
          <loc>https://azure.github.io/PSRule.Rules.Azure/en/rules/Azure.VM.DiskSizeAlignment/</loc>
-         <lastmod>2025-05-18</lastmod>
+         <lastmod>2025-05-19</lastmod>
     </url>
     <url>
          <loc>https://azure.github.io/PSRule.Rules.Azure/en/rules/Azure.VM.MaintenanceConfig/</loc>
-         <lastmod>2025-05-18</lastmod>
+         <lastmod>2025-05-19</lastmod>
     </url>
     <url>
          <loc>https://azure.github.io/PSRule.Rules.Azure/en/rules/Azure.VM.MigrateAMA/</loc>
-         <lastmod>2025-05-18</lastmod>
+         <lastmod>2025-05-19</lastmod>
     </url>
     <url>
          <loc>https://azure.github.io/PSRule.Rules.Azure/en/rules/Azure.VM.MultiTenantHosting/</loc>
-         <lastmod>2025-05-18</lastmod>
+         <lastmod>2025-05-19</lastmod>
     </url>
     <url>
          <loc>https://azure.github.io/PSRule.Rules.Azure/en/rules/Azure.VM.Name/</loc>
-         <lastmod>2025-05-18</lastmod>
+         <lastmod>2025-05-19</lastmod>
     </url>
     <url>
          <loc>https://azure.github.io/PSRule.Rules.Azure/en/rules/Azure.VM.Naming/</loc>
-         <lastmod>2025-05-18</lastmod>
+         <lastmod>2025-05-19</lastmod>
     </url>
     <url>
          <loc>https://azure.github.io/PSRule.Rules.Azure/en/rules/Azure.VM.PPGName/</loc>
-         <lastmod>2025-05-18</lastmod>
+         <lastmod>2025-05-19</lastmod>
     </url>
     <url>
          <loc>https://azure.github.io/PSRule.Rules.Azure/en/rules/Azure.VM.PromoSku/</loc>
-         <lastmod>2025-05-18</lastmod>
+         <lastmod>2025-05-19</lastmod>
     </url>
     <url>
          <loc>https://azure.github.io/PSRule.Rules.Azure/en/rules/Azure.VM.PublicIPAttached/</loc>
-         <lastmod>2025-05-18</lastmod>
+         <lastmod>2025-05-19</lastmod>
     </url>
     <url>
          <loc>https://azure.github.io/PSRule.Rules.Azure/en/rules/Azure.VM.PublicKey/</loc>
-         <lastmod>2025-05-18</lastmod>
+         <lastmod>2025-05-19</lastmod>
     </url>
     <url>
          <loc>https://azure.github.io/PSRule.Rules.Azure/en/rules/Azure.VM.SQLServerDisk/</loc>
-         <lastmod>2025-05-18</lastmod>
+         <lastmod>2025-05-19</lastmod>
     </url>
     <url>
          <loc>https://azure.github.io/PSRule.Rules.Azure/en/rules/Azure.VM.ScriptExtensions/</loc>
-         <lastmod>2025-05-18</lastmod>
+         <lastmod>2025-05-19</lastmod>
     </url>
     <url>
          <loc>https://azure.github.io/PSRule.Rules.Azure/en/rules/Azure.VM.ShouldNotBeStopped/</loc>
-         <lastmod>2025-05-18</lastmod>
+         <lastmod>2025-05-19</lastmod>
     </url>
     <url>
          <loc>https://azure.github.io/PSRule.Rules.Azure/en/rules/Azure.VM.Standalone/</loc>
-         <lastmod>2025-05-18</lastmod>
+         <lastmod>2025-05-19</lastmod>
     </url>
     <url>
          <loc>https://azure.github.io/PSRule.Rules.Azure/en/rules/Azure.VM.Updates/</loc>
-         <lastmod>2025-05-18</lastmod>
+         <lastmod>2025-05-19</lastmod>
     </url>
     <url>
          <loc>https://azure.github.io/PSRule.Rules.Azure/en/rules/Azure.VM.UseHybridUseBenefit/</loc>
-         <lastmod>2025-05-18</lastmod>
+         <lastmod>2025-05-19</lastmod>
     </url>
     <url>
          <loc>https://azure.github.io/PSRule.Rules.Azure/en/rules/Azure.VM.UseManagedDisks/</loc>
-         <lastmod>2025-05-18</lastmod>
+         <lastmod>2025-05-19</lastmod>
     </url>
     <url>
          <loc>https://azure.github.io/PSRule.Rules.Azure/en/rules/Azure.VMSS.AMA/</loc>
-         <lastmod>2025-05-18</lastmod>
+         <lastmod>2025-05-19</lastmod>
     </url>
     <url>
          <loc>https://azure.github.io/PSRule.Rules.Azure/en/rules/Azure.VMSS.AutoInstanceRepairs/</loc>
-         <lastmod>2025-05-18</lastmod>
+         <lastmod>2025-05-19</lastmod>
     </url>
     <url>
          <loc>https://azure.github.io/PSRule.Rules.Azure/en/rules/Azure.VMSS.AvailabilityZone/</loc>
-         <lastmod>2025-05-18</lastmod>
+         <lastmod>2025-05-19</lastmod>
     </url>
     <url>
          <loc>https://azure.github.io/PSRule.Rules.Azure/en/rules/Azure.VMSS.ComputerName/</loc>
-         <lastmod>2025-05-18</lastmod>
+         <lastmod>2025-05-19</lastmod>
     </url>
     <url>
          <loc>https://azure.github.io/PSRule.Rules.Azure/en/rules/Azure.VMSS.MigrateAMA/</loc>
-         <lastmod>2025-05-18</lastmod>
+         <lastmod>2025-05-19</lastmod>
     </url>
     <url>
          <loc>https://azure.github.io/PSRule.Rules.Azure/en/rules/Azure.VMSS.Name/</loc>
-         <lastmod>2025-05-18</lastmod>
+         <lastmod>2025-05-19</lastmod>
     </url>
     <url>
          <loc>https://azure.github.io/PSRule.Rules.Azure/en/rules/Azure.VMSS.PublicIPAttached/</loc>
-         <lastmod>2025-05-18</lastmod>
+         <lastmod>2025-05-19</lastmod>
     </url>
     <url>
          <loc>https://azure.github.io/PSRule.Rules.Azure/en/rules/Azure.VMSS.PublicKey/</loc>
-         <lastmod>2025-05-18</lastmod>
+         <lastmod>2025-05-19</lastmod>
     </url>
     <url>
          <loc>https://azure.github.io/PSRule.Rules.Azure/en/rules/Azure.VMSS.ScriptExtensions/</loc>
-         <lastmod>2025-05-18</lastmod>
+         <lastmod>2025-05-19</lastmod>
     </url>
     <url>
          <loc>https://azure.github.io/PSRule.Rules.Azure/en/rules/Azure.VMSS.ZoneBalance/</loc>
-         <lastmod>2025-05-18</lastmod>
+         <lastmod>2025-05-19</lastmod>
     </url>
     <url>
          <loc>https://azure.github.io/PSRule.Rules.Azure/en/rules/Azure.VNET.BastionSubnet/</loc>
-         <lastmod>2025-05-18</lastmod>
+         <lastmod>2025-05-19</lastmod>
     </url>
     <url>
          <loc>https://azure.github.io/PSRule.Rules.Azure/en/rules/Azure.VNET.FirewallSubnet/</loc>
-         <lastmod>2025-05-18</lastmod>
+         <lastmod>2025-05-19</lastmod>
     </url>
     <url>
          <loc>https://azure.github.io/PSRule.Rules.Azure/en/rules/Azure.VNET.FirewallSubnetNAT/</loc>
-         <lastmod>2025-05-18</lastmod>
+         <lastmod>2025-05-19</lastmod>
     </url>
     <url>
          <loc>https://azure.github.io/PSRule.Rules.Azure/en/rules/Azure.VNET.LocalDNS/</loc>
-         <lastmod>2025-05-18</lastmod>
+         <lastmod>2025-05-19</lastmod>
     </url>
     <url>
          <loc>https://azure.github.io/PSRule.Rules.Azure/en/rules/Azure.VNET.Name/</loc>
-         <lastmod>2025-05-18</lastmod>
+         <lastmod>2025-05-19</lastmod>
     </url>
     <url>
          <loc>https://azure.github.io/PSRule.Rules.Azure/en/rules/Azure.VNET.Naming/</loc>
-         <lastmod>2025-05-18</lastmod>
+         <lastmod>2025-05-19</lastmod>
     </url>
     <url>
          <loc>https://azure.github.io/PSRule.Rules.Azure/en/rules/Azure.VNET.PeerState/</loc>
-         <lastmod>2025-05-18</lastmod>
+         <lastmod>2025-05-19</lastmod>
     </url>
     <url>
          <loc>https://azure.github.io/PSRule.Rules.Azure/en/rules/Azure.VNET.PrivateSubnet/</loc>
-         <lastmod>2025-05-18</lastmod>
+         <lastmod>2025-05-19</lastmod>
     </url>
     <url>
          <loc>https://azure.github.io/PSRule.Rules.Azure/en/rules/Azure.VNET.SingleDNS/</loc>
-         <lastmod>2025-05-18</lastmod>
+         <lastmod>2025-05-19</lastmod>
     </url>
     <url>
          <loc>https://azure.github.io/PSRule.Rules.Azure/en/rules/Azure.VNET.SubnetName/</loc>
-         <lastmod>2025-05-18</lastmod>
+         <lastmod>2025-05-19</lastmod>
     </url>
     <url>
          <loc>https://azure.github.io/PSRule.Rules.Azure/en/rules/Azure.VNET.SubnetNaming/</loc>
-         <lastmod>2025-05-18</lastmod>
+         <lastmod>2025-05-19</lastmod>
     </url>
     <url>
          <loc>https://azure.github.io/PSRule.Rules.Azure/en/rules/Azure.VNET.UseNSGs/</loc>
-         <lastmod>2025-05-18</lastmod>
+         <lastmod>2025-05-19</lastmod>
     </url>
     <url>
          <loc>https://azure.github.io/PSRule.Rules.Azure/en/rules/Azure.VNG.ConnectionName/</loc>
-         <lastmod>2025-05-18</lastmod>
+         <lastmod>2025-05-19</lastmod>
     </url>
     <url>
          <loc>https://azure.github.io/PSRule.Rules.Azure/en/rules/Azure.VNG.ConnectionNaming/</loc>
-         <lastmod>2025-05-18</lastmod>
+         <lastmod>2025-05-19</lastmod>
     </url>
     <url>
          <loc>https://azure.github.io/PSRule.Rules.Azure/en/rules/Azure.VNG.ERAvailabilityZoneSKU/</loc>
-         <lastmod>2025-05-18</lastmod>
+         <lastmod>2025-05-19</lastmod>
     </url>
     <url>
          <loc>https://azure.github.io/PSRule.Rules.Azure/en/rules/Azure.VNG.ERLegacySKU/</loc>
-         <lastmod>2025-05-18</lastmod>
+         <lastmod>2025-05-19</lastmod>
     </url>
     <url>
          <loc>https://azure.github.io/PSRule.Rules.Azure/en/rules/Azure.VNG.MaintenanceConfig/</loc>
-         <lastmod>2025-05-18</lastmod>
+         <lastmod>2025-05-19</lastmod>
     </url>
     <url>
          <loc>https://azure.github.io/PSRule.Rules.Azure/en/rules/Azure.VNG.Name/</loc>
-         <lastmod>2025-05-18</lastmod>
+         <lastmod>2025-05-19</lastmod>
     </url>
     <url>
          <loc>https://azure.github.io/PSRule.Rules.Azure/en/rules/Azure.VNG.Naming/</loc>
-         <lastmod>2025-05-18</lastmod>
+         <lastmod>2025-05-19</lastmod>
     </url>
     <url>
          <loc>https://azure.github.io/PSRule.Rules.Azure/en/rules/Azure.VNG.VPNActiveActive/</loc>
-         <lastmod>2025-05-18</lastmod>
+         <lastmod>2025-05-19</lastmod>
     </url>
     <url>
          <loc>https://azure.github.io/PSRule.Rules.Azure/en/rules/Azure.VNG.VPNAvailabilityZoneSKU/</loc>
-         <lastmod>2025-05-18</lastmod>
+         <lastmod>2025-05-19</lastmod>
     </url>
     <url>
          <loc>https://azure.github.io/PSRule.Rules.Azure/en/rules/Azure.VNG.VPNLegacySKU/</loc>
-         <lastmod>2025-05-18</lastmod>
+         <lastmod>2025-05-19</lastmod>
     </url>
     <url>
          <loc>https://azure.github.io/PSRule.Rules.Azure/en/rules/Azure.WebPubSub.ManagedIdentity/</loc>
-         <lastmod>2025-05-18</lastmod>
+         <lastmod>2025-05-19</lastmod>
     </url>
     <url>
          <loc>https://azure.github.io/PSRule.Rules.Azure/en/rules/Azure.WebPubSub.SLA/</loc>
-         <lastmod>2025-05-18</lastmod>
+         <lastmod>2025-05-19</lastmod>
     </url>
     <url>
          <loc>https://azure.github.io/PSRule.Rules.Azure/en/rules/Azure.vWAN.Name/</loc>
-         <lastmod>2025-05-18</lastmod>
+         <lastmod>2025-05-19</lastmod>
     </url>
     <url>
          <loc>https://azure.github.io/PSRule.Rules.Azure/en/rules/module/</loc>
-         <lastmod>2025-05-18</lastmod>
+         <lastmod>2025-05-19</lastmod>
     </url>
     <url>
          <loc>https://azure.github.io/PSRule.Rules.Azure/en/rules/resource/</loc>
-         <lastmod>2025-05-18</lastmod>
+         <lastmod>2025-05-19</lastmod>
     </url>
     <url>
          <loc>https://azure.github.io/PSRule.Rules.Azure/en/selectors/Azure.AppService.IsAPIApp/</loc>
-         <lastmod>2025-05-18</lastmod>
+         <lastmod>2025-05-19</lastmod>
     </url>
     <url>
          <loc>https://azure.github.io/PSRule.Rules.Azure/en/selectors/Azure.AppService.IsFunctionApp/</loc>
-         <lastmod>2025-05-18</lastmod>
+         <lastmod>2025-05-19</lastmod>
     </url>
     <url>
          <loc>https://azure.github.io/PSRule.Rules.Azure/en/selectors/Azure.AppService.IsLogicApp/</loc>
-         <lastmod>2025-05-18</lastmod>
+         <lastmod>2025-05-19</lastmod>
     </url>
     <url>
          <loc>https://azure.github.io/PSRule.Rules.Azure/en/selectors/Azure.AppService.IsWebApp/</loc>
-         <lastmod>2025-05-18</lastmod>
+         <lastmod>2025-05-19</lastmod>
     </url>
     <url>
          <loc>https://azure.github.io/PSRule.Rules.Azure/en/selectors/Azure.FrontDoor.IsClassic/</loc>
-         <lastmod>2025-05-18</lastmod>
+         <lastmod>2025-05-19</lastmod>
     </url>
     <url>
          <loc>https://azure.github.io/PSRule.Rules.Azure/en/selectors/Azure.FrontDoor.IsStandardOrPremium/</loc>
-         <lastmod>2025-05-18</lastmod>
+         <lastmod>2025-05-19</lastmod>
     </url>
     <url>
          <loc>https://azure.github.io/PSRule.Rules.Azure/en/selectors/Azure.Resource.SupportsTags/</loc>
-         <lastmod>2025-05-18</lastmod>
+         <lastmod>2025-05-19</lastmod>
     </url>
     <url>
          <loc>https://azure.github.io/PSRule.Rules.Azure/en/selectors/Azure.ServiceBus.IsPremium/</loc>
-         <lastmod>2025-05-18</lastmod>
+         <lastmod>2025-05-19</lastmod>
     </url>
     <url>
          <loc>https://azure.github.io/PSRule.Rules.Azure/es/asb-v3/</loc>
-         <lastmod>2025-05-18</lastmod>
+         <lastmod>2025-05-19</lastmod>
     </url>
     <url>
          <loc>https://azure.github.io/PSRule.Rules.Azure/es/rules/</loc>
-         <lastmod>2025-05-18</lastmod>
+         <lastmod>2025-05-19</lastmod>
     </url>
     <url>
          <loc>https://azure.github.io/PSRule.Rules.Azure/es/rules/Azure.ACR.AdminUser/</loc>
-         <lastmod>2025-05-18</lastmod>
+         <lastmod>2025-05-19</lastmod>
     </url>
     <url>
          <loc>https://azure.github.io/PSRule.Rules.Azure/es/rules/Azure.ACR.ContainerScan/</loc>
-         <lastmod>2025-05-18</lastmod>
+         <lastmod>2025-05-19</lastmod>
     </url>
     <url>
          <loc>https://azure.github.io/PSRule.Rules.Azure/es/rules/Azure.ACR.ContentTrust/</loc>
-         <lastmod>2025-05-18</lastmod>
+         <lastmod>2025-05-19</lastmod>
     </url>
     <url>
          <loc>https://azure.github.io/PSRule.Rules.Azure/es/rules/Azure.ACR.GeoReplica/</loc>
-         <lastmod>2025-05-18</lastmod>
+         <lastmod>2025-05-19</lastmod>
     </url>
     <url>
          <loc>https://azure.github.io/PSRule.Rules.Azure/es/rules/Azure.ACR.ImageHealth/</loc>
-         <lastmod>2025-05-18</lastmod>
+         <lastmod>2025-05-19</lastmod>
     </url>
     <url>
          <loc>https://azure.github.io/PSRule.Rules.Azure/es/rules/Azure.ACR.MinSku/</loc>
-         <lastmod>2025-05-18</lastmod>
+         <lastmod>2025-05-19</lastmod>
     </url>
     <url>
          <loc>https://azure.github.io/PSRule.Rules.Azure/es/rules/Azure.ACR.Name/</loc>
-         <lastmod>2025-05-18</lastmod>
+         <lastmod>2025-05-19</lastmod>
     </url>
     <url>
          <loc>https://azure.github.io/PSRule.Rules.Azure/es/rules/Azure.ACR.Quarantine/</loc>
-         <lastmod>2025-05-18</lastmod>
+         <lastmod>2025-05-19</lastmod>
     </url>
     <url>
          <loc>https://azure.github.io/PSRule.Rules.Azure/es/rules/Azure.ACR.Retention/</loc>
-         <lastmod>2025-05-18</lastmod>
+         <lastmod>2025-05-19</lastmod>
     </url>
     <url>
          <loc>https://azure.github.io/PSRule.Rules.Azure/es/rules/Azure.ACR.Usage/</loc>
-         <lastmod>2025-05-18</lastmod>
+         <lastmod>2025-05-19</lastmod>
     </url>
     <url>
          <loc>https://azure.github.io/PSRule.Rules.Azure/es/rules/module/</loc>
-         <lastmod>2025-05-18</lastmod>
+         <lastmod>2025-05-19</lastmod>
     </url>
     <url>
          <loc>https://azure.github.io/PSRule.Rules.Azure/es/rules/resource/</loc>
-         <lastmod>2025-05-18</lastmod>
+         <lastmod>2025-05-19</lastmod>
     </url>
     <url>
          <loc>https://azure.github.io/PSRule.Rules.Azure/learn/learn-video-series/</loc>
-         <lastmod>2025-05-18</lastmod>
+         <lastmod>2025-05-19</lastmod>
     </url>
     <url>
          <loc>https://azure.github.io/PSRule.Rules.Azure/learn/official/</loc>
-         <lastmod>2025-05-18</lastmod>
+         <lastmod>2025-05-19</lastmod>
     </url>
     <url>
          <loc>https://azure.github.io/PSRule.Rules.Azure/license-contributing/</loc>
-         <lastmod>2025-05-18</lastmod>
+         <lastmod>2025-05-19</lastmod>
     </url>
     <url>
          <loc>https://azure.github.io/PSRule.Rules.Azure/license-contributing/expansion-internals/</loc>
-         <lastmod>2025-05-18</lastmod>
+         <lastmod>2025-05-19</lastmod>
     </url>
     <url>
          <loc>https://azure.github.io/PSRule.Rules.Azure/license-contributing/get-started-contributing/</loc>
-         <lastmod>2025-05-18</lastmod>
+         <lastmod>2025-05-19</lastmod>
     </url>
     <url>
          <loc>https://azure.github.io/PSRule.Rules.Azure/license-contributing/getting-started-with-documentation/</loc>
-         <lastmod>2025-05-18</lastmod>
+         <lastmod>2025-05-19</lastmod>
     </url>
     <url>
          <loc>https://azure.github.io/PSRule.Rules.Azure/license-contributing/hackathons/</loc>
-         <lastmod>2025-05-18</lastmod>
+         <lastmod>2025-05-19</lastmod>
     </url>
     <url>
          <loc>https://azure.github.io/PSRule.Rules.Azure/license-contributing/writing-documentation/</loc>
-         <lastmod>2025-05-18</lastmod>
+         <lastmod>2025-05-19</lastmod>
     </url>
     <url>
          <loc>https://azure.github.io/PSRule.Rules.Azure/quickstarts/test-bicep-with-azure-pipelines/</loc>
-         <lastmod>2025-05-18</lastmod>
+         <lastmod>2025-05-19</lastmod>
     </url>
     <url>
          <loc>https://azure.github.io/PSRule.Rules.Azure/quickstarts/test-bicep-with-github/</loc>
-         <lastmod>2025-05-18</lastmod>
+         <lastmod>2025-05-19</lastmod>
     </url>
     <url>
          <loc>https://azure.github.io/PSRule.Rules.Azure/scenarios/azure-pipelines-ci/azure-pipelines-ci/</loc>
-         <lastmod>2025-05-18</lastmod>
+         <lastmod>2025-05-19</lastmod>
     </url>
     <url>
          <loc>https://azure.github.io/PSRule.Rules.Azure/scenarios/azure-template-ci/azure-template-ci/</loc>
-         <lastmod>2025-05-18</lastmod>
+         <lastmod>2025-05-19</lastmod>
     </url>
     <url>
          <loc>https://azure.github.io/PSRule.Rules.Azure/setup/</loc>
-         <lastmod>2025-05-18</lastmod>
+         <lastmod>2025-05-19</lastmod>
     </url>
     <url>
          <loc>https://azure.github.io/PSRule.Rules.Azure/setup/configuring-expansion/</loc>
-         <lastmod>2025-05-18</lastmod>
+         <lastmod>2025-05-19</lastmod>
     </url>
     <url>
          <loc>https://azure.github.io/PSRule.Rules.Azure/setup/configuring-exports/</loc>
-         <lastmod>2025-05-18</lastmod>
+         <lastmod>2025-05-19</lastmod>
     </url>
     <url>
          <loc>https://azure.github.io/PSRule.Rules.Azure/setup/configuring-rules/</loc>
-         <lastmod>2025-05-18</lastmod>
+         <lastmod>2025-05-19</lastmod>
     </url>
     <url>
          <loc>https://azure.github.io/PSRule.Rules.Azure/setup/setup-azure-monitor-logs/</loc>
-         <lastmod>2025-05-18</lastmod>
+         <lastmod>2025-05-19</lastmod>
     </url>
     <url>
          <loc>https://azure.github.io/PSRule.Rules.Azure/setup/setup-bicep/</loc>
-         <lastmod>2025-05-18</lastmod>
+         <lastmod>2025-05-19</lastmod>
     </url>
     <url>
          <loc>https://azure.github.io/PSRule.Rules.Azure/setup/setup-naming-and-tagging/</loc>
-         <lastmod>2025-05-18</lastmod>
+         <lastmod>2025-05-19</lastmod>
     </url>
     <url>
          <loc>https://azure.github.io/PSRule.Rules.Azure/updates/v1.43/</loc>
-         <lastmod>2025-05-18</lastmod>
+         <lastmod>2025-05-19</lastmod>
     </url>
     <url>
          <loc>https://azure.github.io/PSRule.Rules.Azure/updates/v1.44/</loc>
-         <lastmod>2025-05-18</lastmod>
+         <lastmod>2025-05-19</lastmod>
     </url>
 </urlset>

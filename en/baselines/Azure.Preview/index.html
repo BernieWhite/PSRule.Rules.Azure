@@ -3222,6 +3222,12 @@
       
         
       
+        
+      
+        
+      
+        
+      
     
     
     
@@ -7472,6 +7478,29 @@
   
   
     <li class="md-nav__item">
+      <a href="../../rules/Azure.EntraDS.MinReplicas/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Azure.EntraDS.MinReplicas
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
       <a href="../../rules/Azure.EntraDS.NTLM/" class="md-nav__link">
         
   
@@ -7501,6 +7530,52 @@
   
   <span class="md-ellipsis">
     Azure.EntraDS.RC4
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../rules/Azure.EntraDS.ReplicaLocation/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Azure.EntraDS.ReplicaLocation
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../rules/Azure.EntraDS.SKU/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Azure.EntraDS.SKU
     
   </span>
   
@@ -16182,7 +16257,7 @@
 <p>Includes the latest rules for Azure GA and preview features that is updated each release.</p>
 <h2 id="rules">Rules<a class="headerlink" href="#rules" title="Permanent link">#</a></h2>
 <p>The following rules are included within the <code>Azure.Preview</code> baseline.</p>
-<p>This baseline includes a total of 472 rules.</p>
+<p>This baseline includes a total of 475 rules.</p>
 <table>
 <thead>
 <tr>
@@ -17103,6 +17178,11 @@
 <td>Important</td>
 </tr>
 <tr>
+<td><a href="../../rules/Azure.EntraDS.MinReplicas/">Azure.EntraDS.MinReplicas</a></td>
+<td>Applications or infrastructure relying on a managed domain may fail if the domain is not available.</td>
+<td>Important</td>
+</tr>
+<tr>
 <td><a href="../../rules/Azure.EntraDS.NTLM/">Azure.EntraDS.NTLM</a></td>
 <td>Disable NTLM v1 for Microsoft Entra Domain Services.</td>
 <td>Critical</td>
@@ -17111,6 +17191,16 @@
 <td><a href="../../rules/Azure.EntraDS.RC4/">Azure.EntraDS.RC4</a></td>
 <td>Disable RC4 encryption for Microsoft Entra Domain Services.</td>
 <td>Critical</td>
+</tr>
+<tr>
+<td><a href="../../rules/Azure.EntraDS.ReplicaLocation/">Azure.EntraDS.ReplicaLocation</a></td>
+<td>The location of a replica set determines the country or region where the data is stored and processed.</td>
+<td>Important</td>
+</tr>
+<tr>
+<td><a href="../../rules/Azure.EntraDS.SKU/">Azure.EntraDS.SKU</a></td>
+<td>The default SKU for Microsoft Entra Domain Services supports resiliency in a single region.</td>
+<td>Important</td>
 </tr>
 <tr>
 <td><a href="../../rules/Azure.EntraDS.TLS/">Azure.EntraDS.TLS</a></td>
@@ -17829,7 +17919,7 @@
 </tr>
 <tr>
 <td><a href="../../rules/Azure.Resource.AllowedRegions/">Azure.Resource.AllowedRegions</a></td>
-<td>Resources should be deployed to allowed regions.</td>
+<td>The deployment location of a resource determines the country or region where metadata and data is stored and processed.</td>
 <td>Important</td>
 </tr>
 <tr>

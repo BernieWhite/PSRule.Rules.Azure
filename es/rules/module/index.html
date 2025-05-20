@@ -3215,6 +3215,12 @@
       
         
       
+        
+      
+        
+      
+        
+      
     
     
     
@@ -7465,6 +7471,29 @@
   
   
     <li class="md-nav__item">
+      <a href="../../../en/rules/Azure.EntraDS.MinReplicas/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Azure.EntraDS.MinReplicas
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
       <a href="../../../en/rules/Azure.EntraDS.NTLM/" class="md-nav__link">
         
   
@@ -7494,6 +7523,52 @@
   
   <span class="md-ellipsis">
     Azure.EntraDS.RC4
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../en/rules/Azure.EntraDS.ReplicaLocation/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Azure.EntraDS.ReplicaLocation
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../en/rules/Azure.EntraDS.SKU/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Azure.EntraDS.SKU
     
   </span>
   
@@ -16665,7 +16740,7 @@
           <li class="md-nav__item">
   <a href="#se01-security-baseline" class="md-nav__link">
     <span class="md-ellipsis">
-      SE:01 Security Baseline
+      SE:01 Security baseline
     </span>
   </a>
   
@@ -18563,6 +18638,18 @@
 <td>Important</td>
 <td>Error</td>
 </tr>
+<tr>
+<td><a href="Azure.EntraDS.MinReplicas.md">Azure.EntraDS.MinReplicas</a></td>
+<td>Applications or infrastructure relying on a managed domain may fail if the domain is not available.</td>
+<td>Important</td>
+<td>Error</td>
+</tr>
+<tr>
+<td><a href="Azure.EntraDS.SKU.md">Azure.EntraDS.SKU</a></td>
+<td>The default SKU for Microsoft Entra Domain Services supports resiliency in a single region.</td>
+<td>Important</td>
+<td>Error</td>
+</tr>
 </tbody>
 </table>
 <h3 id="re05-redundancy">RE:05 Redundancy<a class="headerlink" href="#re05-redundancy" title="Permanent link">#</a></h3>
@@ -19353,7 +19440,7 @@
 </tr>
 </tbody>
 </table>
-<h3 id="se01-security-baseline">SE:01 Security Baseline<a class="headerlink" href="#se01-security-baseline" title="Permanent link">#</a></h3>
+<h3 id="se01-security-baseline">SE:01 Security baseline<a class="headerlink" href="#se01-security-baseline" title="Permanent link">#</a></h3>
 <table>
 <thead>
 <tr>
@@ -19371,6 +19458,12 @@
 <td>Error</td>
 </tr>
 <tr>
+<td><a href="Azure.EntraDS.ReplicaLocation.md">Azure.EntraDS.ReplicaLocation</a></td>
+<td>The location of a replica set determines the country or region where the data is stored and processed.</td>
+<td>Important</td>
+<td>Error</td>
+</tr>
+<tr>
 <td><a href="Azure.Policy.WaiverExpiry.md">Azure.Policy.WaiverExpiry</a></td>
 <td>Configure policy waiver exemptions to expire.</td>
 <td>Awareness</td>
@@ -19378,7 +19471,7 @@
 </tr>
 <tr>
 <td><a href="Azure.Resource.AllowedRegions.md">Azure.Resource.AllowedRegions</a></td>
-<td>Resources should be deployed to allowed regions.</td>
+<td>The deployment location of a resource determines the country or region where metadata and data is stored and processed.</td>
 <td>Important</td>
 <td>Error</td>
 </tr>

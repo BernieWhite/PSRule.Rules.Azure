@@ -3221,6 +3221,16 @@
       
         
       
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
     
     
     
@@ -5631,12 +5641,58 @@
   
   
     <li class="md-nav__item">
+      <a href="../../../en/rules/Azure.AppInsights.LocalAuth/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Azure.AppInsights.LocalAuth
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
       <a href="../../../en/rules/Azure.AppInsights.Name/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     Azure.AppInsights.Name
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../en/rules/Azure.AppInsights.Naming/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Azure.AppInsights.Naming
     
   </span>
   
@@ -8920,12 +8976,81 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../en/rules/Azure.LogAnalytics.Replication/" class="md-nav__link">
+      <a href="../../../en/rules/Azure.Log.Name/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
-    Azure.LogAnalytics.Replication
+    Azure.Log.Name
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../en/rules/Azure.Log.Naming/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Azure.Log.Naming
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../en/rules/Azure.Log.ReplicaLocation/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Azure.Log.ReplicaLocation
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../en/rules/Azure.Log.Replication/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Azure.Log.Replication
     
   </span>
   
@@ -17244,7 +17369,7 @@
 </tr>
 <tr>
 <td><a href="Azure.AppInsights.Name.md">Azure.AppInsights.Name</a></td>
-<td>Azure Application Insights resources names should meet naming requirements.</td>
+<td>Azure Resource Manager (ARM) has requirements for Application Insights resource names.</td>
 <td>Awareness</td>
 <td>Error</td>
 </tr>
@@ -17275,6 +17400,12 @@
 <tr>
 <td><a href="Azure.LB.Name.md">Azure.LB.Name</a></td>
 <td>Load Balancer names should meet naming requirements.</td>
+<td>Awareness</td>
+<td>Error</td>
+</tr>
+<tr>
+<td><a href="Azure.Log.Name.md">Azure.Log.Name</a></td>
+<td>Azure Resource Manager (ARM) has requirements for Azure Monitor Log workspace names.</td>
 <td>Awareness</td>
 <td>Error</td>
 </tr>
@@ -17394,6 +17525,12 @@
 <td>Warning</td>
 </tr>
 <tr>
+<td><a href="Azure.AppInsights.Naming.md">Azure.AppInsights.Naming</a></td>
+<td>Application Insights resources without a standard naming convention may be difficult to identify and manage.</td>
+<td>Awareness</td>
+<td>Error</td>
+</tr>
+<tr>
 <td><a href="Azure.ContainerApp.APIVersion.md">Azure.ContainerApp.APIVersion</a></td>
 <td>Migrate from retired API version to a supported version.</td>
 <td>Important</td>
@@ -17432,6 +17569,12 @@
 <tr>
 <td><a href="Azure.LB.Naming.md">Azure.LB.Naming</a></td>
 <td>Load balancer names should use a standard prefix.</td>
+<td>Awareness</td>
+<td>Error</td>
+</tr>
+<tr>
+<td><a href="Azure.Log.Naming.md">Azure.Log.Naming</a></td>
+<td>Azure Monitor Log workspaces without a standard naming convention may be difficult to identify and manage.</td>
 <td>Awareness</td>
 <td>Error</td>
 </tr>
@@ -18815,7 +18958,7 @@
 <td>Error</td>
 </tr>
 <tr>
-<td><a href="Azure.LogAnalytics.Replication.md">Azure.LogAnalytics.Replication</a></td>
+<td><a href="Azure.Log.Replication.md">Azure.Log.Replication</a></td>
 <td>Log Analytics workspaces should have workspace replication enabled to improve service availability.</td>
 <td>Important</td>
 <td>Error</td>
@@ -19464,6 +19607,12 @@
 <td>Error</td>
 </tr>
 <tr>
+<td><a href="Azure.Log.ReplicaLocation.md">Azure.Log.ReplicaLocation</a></td>
+<td>The replication location determines the country or region where the data is stored and processed.</td>
+<td>Important</td>
+<td>Error</td>
+</tr>
+<tr>
 <td><a href="Azure.Policy.WaiverExpiry.md">Azure.Policy.WaiverExpiry</a></td>
 <td>Configure policy waiver exemptions to expire.</td>
 <td>Awareness</td>
@@ -19692,6 +19841,12 @@
 <td><a href="Azure.AppConfig.DisableLocalAuth.md">Azure.AppConfig.DisableLocalAuth</a></td>
 <td>Access keys allow depersonalized access to App Configuration using a shared secret.</td>
 <td>Important</td>
+<td>Error</td>
+</tr>
+<tr>
+<td><a href="Azure.AppInsights.LocalAuth.md">Azure.AppInsights.LocalAuth</a></td>
+<td>Local authentication allows depersonalized access to store telemetry in Application Insights using a shared identifier.</td>
+<td>Critical</td>
 <td>Error</td>
 </tr>
 <tr>

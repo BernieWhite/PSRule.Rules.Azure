@@ -1849,6 +1849,10 @@
          <lastmod>2025-06-01</lastmod>
     </url>
     <url>
+         <loc>https://azure.github.io/PSRule.Rules.Azure/en/rules/Azure.ServiceFabric.ProtectionLevel/</loc>
+         <lastmod>2025-06-01</lastmod>
+    </url>
+    <url>
          <loc>https://azure.github.io/PSRule.Rules.Azure/en/rules/Azure.SignalR.ManagedIdentity/</loc>
          <lastmod>2025-06-01</lastmod>
     </url>

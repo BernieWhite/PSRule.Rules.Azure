@@ -16382,7 +16382,7 @@
 <p>Default baseline for that includes the latest rules for Azure GA features that is updated each release.</p>
 <h2 id="rules">Rules<a class="headerlink" href="#rules" title="Permanent link">#</a></h2>
 <p>The following rules are included within the <code>Azure.Default</code> baseline.</p>
-<p>This baseline includes a total of 469 rules.</p>
+<p>This baseline includes a total of 471 rules.</p>
 <table>
 <thead>
 <tr>
@@ -18583,6 +18583,11 @@
 <td>Important</td>
 </tr>
 <tr>
+<td><a href="../../rules/Azure.VMSS.AutoInstanceRepairs/">Azure.VMSS.AutoInstanceRepairs</a></td>
+<td>Applications or infrastructure relying on a virtual machine scale sets may fail if VM instances are unhealthy.</td>
+<td>Important</td>
+</tr>
+<tr>
 <td><a href="../../rules/Azure.VMSS.AvailabilityZone/">Azure.VMSS.AvailabilityZone</a></td>
 <td>Deploy virtual machine scale set instances using availability zones in supported regions to ensure high availability and resilience.</td>
 <td>Important</td>
@@ -18656,6 +18661,11 @@
 <td><a href="../../rules/Azure.VNET.PeerState/">Azure.VNET.PeerState</a></td>
 <td>VNET peering connections must be connected.</td>
 <td>Important</td>
+</tr>
+<tr>
+<td><a href="../../rules/Azure.VNET.PrivateSubnet/">Azure.VNET.PrivateSubnet</a></td>
+<td>Subnets that allow direct outbound access to the Internet may expose virtual machines to increased security risks.</td>
+<td>Critical</td>
 </tr>
 <tr>
 <td><a href="../../rules/Azure.VNET.SingleDNS/">Azure.VNET.SingleDNS</a></td>

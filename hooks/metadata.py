@@ -32,13 +32,20 @@ def on_pre_page(page: Page, config: MkDocsConfig, files: Files) -> Page:
 def load_metadata(page: Page) -> Page:
     '''Load built metadata for a page from JSON.'''
 
-    if page.canonical_url.__contains__('/rules/'):
+    if is_rule_page(page):
         name = page.canonical_url.split("/")[-2]
         if name != None:
           return read_metadata(page, name)
 
     return page
 
+def is_rule_page(page: Page) -> bool:
+    '''Check if the page is a rule page.'''
+
+    if page.canonical_url.__contains__('/rules/') and not page.canonical_url.__contains__('/contribute/'):
+        return True
+
+    return False
 
 def read_metadata(page: Page, name: str) -> Page:
     '''Read the metadata for a rule.'''

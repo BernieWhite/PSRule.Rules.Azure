@@ -27,7 +27,7 @@ def on_page_markdown(markdown: str, page: Page, config: MkDocsConfig, files: Fil
     markdown = markdown.replace("## about_PSRule_Azure_Configuration", "")
     markdown = markdown.replace("# PSRule_Azure_Configuration", "# Configuration options")
 
-    if page.canonical_url.__contains__("/rules/") or page.canonical_url.__contains__("/baselines/") or page.canonical_url.__contains__("/concepts/") or page.canonical_url.__contains__("/commands/") or page.canonical_url.__contains__("/selectors/"):
+    if is_rule_page(page) or page.canonical_url.__contains__("/baselines/") or page.canonical_url.__contains__("/concepts/") or page.canonical_url.__contains__("/commands/") or page.canonical_url.__contains__("/selectors/"):
         # Rules
         markdown = markdown.replace("## SYNOPSIS", "")
         markdown = markdown.replace("## DESCRIPTION", "## Description")
@@ -65,7 +65,7 @@ def on_page_markdown(markdown: str, page: Page, config: MkDocsConfig, files: Fil
         if page.meta.get('moduleVersion', 'None') != 'None':
             markdown = markdown.replace("<!-- TAGS -->", f"{_badge_for_version(page.meta['moduleVersion'], page, files)}<!-- TAGS -->")
 
-    if page.canonical_url.__contains__("/rules/") and page.meta.get("pillar", "None") != "None":
+    if is_rule_page(page) and page.meta.get("pillar", "None") != "None":
         page.meta['rule'] = page.canonical_url.split("/")[-2]
         read_metadata(page)
 
@@ -84,7 +84,7 @@ def on_page_markdown(markdown: str, page: Page, config: MkDocsConfig, files: Fil
         markdown = markdown.replace("```bash\r", "```bash title=\"Azure CLI snippet\"\r")
         markdown = markdown.replace("```xml\r", "```xml title=\"API Management policy\"\r")
 
-    if page.canonical_url.__contains__("/rules/") and page.meta.get("pillar", "None") != "None":
+    if is_rule_page(page) and page.meta.get("pillar", "None") != "None":
         markdown = markdown.replace("<!-- TAGS -->", "[:octicons-diamond-24: " + page.meta['pillar'] + "](module.md#" + page.meta['pillar'].lower().replace(" ", "-") + ")\r<!-- TAGS -->")
 
     if page.meta.get("resource", "None") != "None":
@@ -103,6 +103,22 @@ def on_page_markdown(markdown: str, page: Page, config: MkDocsConfig, files: Fil
         markdown = markdown.replace("<!-- TAGS -->", " · :octicons-bell-24: " + page.meta['severity'] + "\r<!-- TAGS -->")
 
     return markdown.replace("<!-- TAGS -->", "")
+
+def is_rule_page(page: Page) -> bool:
+    '''Check if the page is a rule page.'''
+
+    if page.canonical_url.__contains__('/rules/') and not page.canonical_url.__contains__('/contribute/'):
+        return True
+
+    return False
+
+def is_rule_dest_path(dest_path: str) -> bool:
+    '''Check if the destination path is a rule page.'''
+
+    if dest_path.__contains__('/rules/') and not dest_path.__contains__('/contribute/'):
+        return True
+
+    return False
 
 def add_tags(markdown: str) -> str:
     lines = markdown.splitlines()
@@ -161,7 +177,7 @@ def build_rule_nav(nav: Navigation, config: MkDocsConfig, files: Files):
         if not f._get_stem().startswith("Azure."):
             continue
 
-        if f._get_dest_path(False).__contains__("/rules/"):
+        if is_rule_dest_path(f._get_dest_path(False)):
             children.append(Page(f._get_stem(), f, config))
 
     referenceItem: Section = next(x for x in nav if x.title == "Reference")

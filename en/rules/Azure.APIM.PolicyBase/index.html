@@ -4881,18 +4881,18 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#configure-with-azure-template" class="md-nav__link">
+  <a href="#configure-with-bicep" class="md-nav__link">
     <span class="md-ellipsis">
-      Configure with Azure template
+      Configure with Bicep
     </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#configure-with-bicep" class="md-nav__link">
+  <a href="#configure-with-azure-template" class="md-nav__link">
     <span class="md-ellipsis">
-      Configure with Bicep
+      Configure with Azure template
     </span>
   </a>
   
@@ -16931,18 +16931,18 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#configure-with-azure-template" class="md-nav__link">
+  <a href="#configure-with-bicep" class="md-nav__link">
     <span class="md-ellipsis">
-      Configure with Azure template
+      Configure with Bicep
     </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#configure-with-bicep" class="md-nav__link">
+  <a href="#configure-with-azure-template" class="md-nav__link">
     <span class="md-ellipsis">
-      Configure with Bicep
+      Configure with Azure template
     </span>
   </a>
   
@@ -17035,47 +17035,80 @@ For most cases, unless otherwise specified in the policy reference (such as <cod
 <p>A specific exception is at the <em>Global</em> scope.
 The <em>Global</em> scope does not need the <em>base</em> element because this is the peak scope from which all others inherit.</p>
 <h2 id="recommendation">Recommendation<a class="headerlink" href="#recommendation" title="Permanent link">#</a></h2>
-<p>Consider configuring the base element for any policy element in a section.</p>
+<p>Consider configuring the base element for each policy section.</p>
 <h2 id="examples">Examples<a class="headerlink" href="#examples" title="Permanent link">#</a></h2>
-<h3 id="configure-with-azure-template">Configure with Azure template<a class="headerlink" href="#configure-with-azure-template" title="Permanent link">#</a></h3>
-<p>To deploy API Management policies that pass this rule:</p>
-<ul>
-<li>Configure an policy sub-resource.</li>
-<li>Configure the base element before or after any policy element in a section in <code>properties.value</code> property.</li>
-</ul>
-<p>For example an API policy:</p>
-<div class="language-json highlight"><span class="filename">Azure Template snippet</span><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="p">{</span>
-</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="w">  </span><span class="nt">&quot;type&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Microsoft.ApiManagement/service/apis/policies&quot;</span><span class="p">,</span>
-</span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a><span class="w">  </span><span class="nt">&quot;apiVersion&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;2021-08-01&quot;</span><span class="p">,</span>
-</span><span id="__span-0-4"><a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a><span class="w">  </span><span class="nt">&quot;name&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;[format(&#39;{0}/{1}&#39;, parameters(&#39;name&#39;), &#39;policy&#39;)]&quot;</span><span class="p">,</span>
-</span><span id="__span-0-5"><a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a><span class="w">  </span><span class="nt">&quot;properties&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
-</span><span id="__span-0-6"><a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a><span class="w">    </span><span class="nt">&quot;value&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;&lt;policies&gt;&lt;inbound&gt;&lt;base /&gt;&lt;ip-filter action=\&quot;allow\&quot;&gt;&lt;address-range from=\&quot;10.1.0.1\&quot; to=\&quot;10.1.0.255\&quot; /&gt;&lt;/ip-filter&gt;&lt;/inbound&gt;&lt;backend&gt;&lt;base /&gt;&lt;/backend&gt;&lt;outbound&gt;&lt;base /&gt;&lt;/outbound&gt;&lt;on-error&gt;&lt;base /&gt;&lt;/on-error&gt;&lt;/policies&gt;&quot;</span><span class="p">,</span>
-</span><span id="__span-0-7"><a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a><span class="w">    </span><span class="nt">&quot;format&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;xml&quot;</span>
-</span><span id="__span-0-8"><a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a><span class="w">  </span><span class="p">},</span>
-</span><span id="__span-0-9"><a id="__codelineno-0-9" name="__codelineno-0-9" href="#__codelineno-0-9"></a><span class="w">  </span><span class="nt">&quot;dependsOn&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
-</span><span id="__span-0-10"><a id="__codelineno-0-10" name="__codelineno-0-10" href="#__codelineno-0-10"></a><span class="w">    </span><span class="s2">&quot;[resourceId(&#39;Microsoft.ApiManagement/service/apis&#39;, parameters(&#39;name&#39;))]&quot;</span>
-</span><span id="__span-0-11"><a id="__codelineno-0-11" name="__codelineno-0-11" href="#__codelineno-0-11"></a><span class="w">  </span><span class="p">],</span>
-</span><span id="__span-0-12"><a id="__codelineno-0-12" name="__codelineno-0-12" href="#__codelineno-0-12"></a><span class="p">}</span>
-</span></code></pre></div>
 <h3 id="configure-with-bicep">Configure with Bicep<a class="headerlink" href="#configure-with-bicep" title="Permanent link">#</a></h3>
 <p>To deploy API Management policies that pass this rule:</p>
 <ul>
 <li>Configure an policy sub-resource.</li>
+<li>Define each of the policy sections in the policy XML: <code>inbound</code>, <code>backend</code>, <code>outbound</code>, and <code>on-error</code>.</li>
 <li>Configure the base element before or after any policy element in a section in <code>properties.value</code> property.</li>
 </ul>
 <p>For example an API policy:</p>
+<div class="language-bicep highlight"><span class="filename">Azure Bicep snippet</span><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="kd">resource</span><span class="w"> </span><span class="n n-Symbol">apiName_policy</span><span class="err"> </span><span class="s">&#39;Microsoft.ApiManagement/service/apis/policies@2021-08-01&#39;</span><span class="err"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="w">  </span><span class="py">parent</span><span class="p">:</span><span class="w"> </span><span class="err">api</span>
+</span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a><span class="w">  </span><span class="py">name</span><span class="p">:</span><span class="w"> </span><span class="s">&#39;policy&#39;</span>
+</span><span id="__span-0-4"><a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a><span class="w">  </span><span class="py">properties</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-0-5"><a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a><span class="w">    </span><span class="py">value</span><span class="p">:</span><span class="w"> </span><span class="s">&#39;&lt;policies&gt;&lt;inbound&gt;&lt;base /&gt;&lt;ip-filter action=</span><span class="se">\&quot;</span><span class="s">allow</span><span class="se">\&quot;</span><span class="s">&gt;&lt;address-range from=</span><span class="se">\&quot;</span><span class="s">10.1.0.1</span><span class="se">\&quot;</span><span class="s"> to=</span><span class="se">\&quot;</span><span class="s">10.1.0.255</span><span class="se">\&quot;</span><span class="s"> /&gt;&lt;/ip-filter&gt;&lt;/inbound&gt;&lt;backend&gt;&lt;base /&gt;&lt;/backend&gt;&lt;outbound&gt;&lt;base /&gt;&lt;/outbound&gt;&lt;on-error&gt;&lt;base /&gt;&lt;/on-error&gt;&lt;/policies&gt;&#39;</span>
+</span><span id="__span-0-6"><a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a><span class="w">    </span><span class="py">format</span><span class="p">:</span><span class="w"> </span><span class="s">&#39;xml&#39;</span>
+</span><span id="__span-0-7"><a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a><span class="w">  </span><span class="p">}</span>
+</span><span id="__span-0-8"><a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a><span class="p">}</span>
+</span></code></pre></div>
+<p>Additionally you can import this from a file using the <code>loadTextContent</code> Bicep function:</p>
 <div class="language-bicep highlight"><span class="filename">Azure Bicep snippet</span><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="kd">resource</span><span class="w"> </span><span class="n n-Symbol">apiName_policy</span><span class="err"> </span><span class="s">&#39;Microsoft.ApiManagement/service/apis/policies@2021-08-01&#39;</span><span class="err"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span>
 </span><span id="__span-1-2"><a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a><span class="w">  </span><span class="py">parent</span><span class="p">:</span><span class="w"> </span><span class="err">api</span>
 </span><span id="__span-1-3"><a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a><span class="w">  </span><span class="py">name</span><span class="p">:</span><span class="w"> </span><span class="s">&#39;policy&#39;</span>
 </span><span id="__span-1-4"><a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a><span class="w">  </span><span class="py">properties</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
-</span><span id="__span-1-5"><a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a><span class="w">    </span><span class="py">value</span><span class="p">:</span><span class="w"> </span><span class="s">&#39;&lt;policies&gt;&lt;inbound&gt;&lt;base /&gt;&lt;ip-filter action=</span><span class="se">\&quot;</span><span class="s">allow</span><span class="se">\&quot;</span><span class="s">&gt;&lt;address-range from=</span><span class="se">\&quot;</span><span class="s">10.1.0.1</span><span class="se">\&quot;</span><span class="s"> to=</span><span class="se">\&quot;</span><span class="s">10.1.0.255</span><span class="se">\&quot;</span><span class="s"> /&gt;&lt;/ip-filter&gt;&lt;/inbound&gt;&lt;backend&gt;&lt;base /&gt;&lt;/backend&gt;&lt;outbound&gt;&lt;base /&gt;&lt;/outbound&gt;&lt;on-error&gt;&lt;base /&gt;&lt;/on-error&gt;&lt;/policies&gt;&#39;</span>
+</span><span id="__span-1-5"><a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a><span class="w">    </span><span class="py">value</span><span class="p">:</span><span class="w"> </span><span class="err">loadTextContent(</span><span class="s">&#39;./policy.xml&#39;</span><span class="err">)</span>
 </span><span id="__span-1-6"><a id="__codelineno-1-6" name="__codelineno-1-6" href="#__codelineno-1-6"></a><span class="w">    </span><span class="py">format</span><span class="p">:</span><span class="w"> </span><span class="s">&#39;xml&#39;</span>
 </span><span id="__span-1-7"><a id="__codelineno-1-7" name="__codelineno-1-7" href="#__codelineno-1-7"></a><span class="w">  </span><span class="p">}</span>
 </span><span id="__span-1-8"><a id="__codelineno-1-8" name="__codelineno-1-8" href="#__codelineno-1-8"></a><span class="p">}</span>
 </span></code></pre></div>
+<p>Where <code>policy.xml</code> contains the policy XML:</p>
+<div class="language-xml highlight"><span class="filename">API Management policy</span><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="nt">&lt;policies&gt;</span>
+</span><span id="__span-2-2"><a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a><span class="w">  </span><span class="nt">&lt;inbound&gt;</span>
+</span><span id="__span-2-3"><a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a><span class="w">    </span><span class="nt">&lt;base</span><span class="w"> </span><span class="nt">/&gt;</span>
+</span><span id="__span-2-4"><a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a><span class="w">    </span><span class="nt">&lt;ip-filter</span><span class="w"> </span><span class="na">action=</span><span class="s">&quot;allow&quot;</span><span class="nt">&gt;</span>
+</span><span id="__span-2-5"><a id="__codelineno-2-5" name="__codelineno-2-5" href="#__codelineno-2-5"></a><span class="w">      </span><span class="nt">&lt;address-range</span><span class="w"> </span><span class="na">from=</span><span class="s">&quot;10.1.0.1&quot;</span><span class="w"> </span><span class="na">to=</span><span class="s">&quot;10.1.0.255&quot;</span><span class="w"> </span><span class="nt">/&gt;</span>
+</span><span id="__span-2-6"><a id="__codelineno-2-6" name="__codelineno-2-6" href="#__codelineno-2-6"></a><span class="w">    </span><span class="nt">&lt;/ip-filter&gt;</span>
+</span><span id="__span-2-7"><a id="__codelineno-2-7" name="__codelineno-2-7" href="#__codelineno-2-7"></a><span class="w">  </span><span class="nt">&lt;/inbound&gt;</span>
+</span><span id="__span-2-8"><a id="__codelineno-2-8" name="__codelineno-2-8" href="#__codelineno-2-8"></a><span class="w">  </span><span class="nt">&lt;backend&gt;</span>
+</span><span id="__span-2-9"><a id="__codelineno-2-9" name="__codelineno-2-9" href="#__codelineno-2-9"></a><span class="w">    </span><span class="nt">&lt;base</span><span class="w"> </span><span class="nt">/&gt;</span>
+</span><span id="__span-2-10"><a id="__codelineno-2-10" name="__codelineno-2-10" href="#__codelineno-2-10"></a><span class="w">  </span><span class="nt">&lt;/backend&gt;</span>
+</span><span id="__span-2-11"><a id="__codelineno-2-11" name="__codelineno-2-11" href="#__codelineno-2-11"></a><span class="w">  </span><span class="nt">&lt;outbound&gt;</span>
+</span><span id="__span-2-12"><a id="__codelineno-2-12" name="__codelineno-2-12" href="#__codelineno-2-12"></a><span class="w">    </span><span class="nt">&lt;base</span><span class="w"> </span><span class="nt">/&gt;</span>
+</span><span id="__span-2-13"><a id="__codelineno-2-13" name="__codelineno-2-13" href="#__codelineno-2-13"></a><span class="w">  </span><span class="nt">&lt;/outbound&gt;</span>
+</span><span id="__span-2-14"><a id="__codelineno-2-14" name="__codelineno-2-14" href="#__codelineno-2-14"></a><span class="w">  </span><span class="nt">&lt;on-error&gt;</span>
+</span><span id="__span-2-15"><a id="__codelineno-2-15" name="__codelineno-2-15" href="#__codelineno-2-15"></a><span class="w">    </span><span class="nt">&lt;base</span><span class="w"> </span><span class="nt">/&gt;</span>
+</span><span id="__span-2-16"><a id="__codelineno-2-16" name="__codelineno-2-16" href="#__codelineno-2-16"></a><span class="w">  </span><span class="nt">&lt;/on-error&gt;</span>
+</span><span id="__span-2-17"><a id="__codelineno-2-17" name="__codelineno-2-17" href="#__codelineno-2-17"></a><span class="nt">&lt;/policies&gt;</span>
+</span></code></pre></div>
+<h3 id="configure-with-azure-template">Configure with Azure template<a class="headerlink" href="#configure-with-azure-template" title="Permanent link">#</a></h3>
+<p>To deploy API Management policies that pass this rule:</p>
+<ul>
+<li>Configure an policy sub-resource.</li>
+<li>Define each of the policy sections in the policy XML: <code>inbound</code>, <code>backend</code>, <code>outbound</code>, and <code>on-error</code>.</li>
+<li>Configure the base element before or after any policy element in a section in <code>properties.value</code> property.</li>
+</ul>
+<p>For example an API policy:</p>
+<div class="language-json highlight"><span class="filename">Azure Template snippet</span><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="p">{</span>
+</span><span id="__span-3-2"><a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a><span class="w">  </span><span class="nt">&quot;type&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Microsoft.ApiManagement/service/apis/policies&quot;</span><span class="p">,</span>
+</span><span id="__span-3-3"><a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a><span class="w">  </span><span class="nt">&quot;apiVersion&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;2021-08-01&quot;</span><span class="p">,</span>
+</span><span id="__span-3-4"><a id="__codelineno-3-4" name="__codelineno-3-4" href="#__codelineno-3-4"></a><span class="w">  </span><span class="nt">&quot;name&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;[format(&#39;{0}/{1}&#39;, parameters(&#39;name&#39;), &#39;policy&#39;)]&quot;</span><span class="p">,</span>
+</span><span id="__span-3-5"><a id="__codelineno-3-5" name="__codelineno-3-5" href="#__codelineno-3-5"></a><span class="w">  </span><span class="nt">&quot;properties&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-3-6"><a id="__codelineno-3-6" name="__codelineno-3-6" href="#__codelineno-3-6"></a><span class="w">    </span><span class="nt">&quot;value&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;&lt;policies&gt;&lt;inbound&gt;&lt;base /&gt;&lt;ip-filter action=\&quot;allow\&quot;&gt;&lt;address-range from=\&quot;10.1.0.1\&quot; to=\&quot;10.1.0.255\&quot; /&gt;&lt;/ip-filter&gt;&lt;/inbound&gt;&lt;backend&gt;&lt;base /&gt;&lt;/backend&gt;&lt;outbound&gt;&lt;base /&gt;&lt;/outbound&gt;&lt;on-error&gt;&lt;base /&gt;&lt;/on-error&gt;&lt;/policies&gt;&quot;</span><span class="p">,</span>
+</span><span id="__span-3-7"><a id="__codelineno-3-7" name="__codelineno-3-7" href="#__codelineno-3-7"></a><span class="w">    </span><span class="nt">&quot;format&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;xml&quot;</span>
+</span><span id="__span-3-8"><a id="__codelineno-3-8" name="__codelineno-3-8" href="#__codelineno-3-8"></a><span class="w">  </span><span class="p">},</span>
+</span><span id="__span-3-9"><a id="__codelineno-3-9" name="__codelineno-3-9" href="#__codelineno-3-9"></a><span class="w">  </span><span class="nt">&quot;dependsOn&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
+</span><span id="__span-3-10"><a id="__codelineno-3-10" name="__codelineno-3-10" href="#__codelineno-3-10"></a><span class="w">    </span><span class="s2">&quot;[resourceId(&#39;Microsoft.ApiManagement/service/apis&#39;, parameters(&#39;name&#39;))]&quot;</span>
+</span><span id="__span-3-11"><a id="__codelineno-3-11" name="__codelineno-3-11" href="#__codelineno-3-11"></a><span class="w">  </span><span class="p">],</span>
+</span><span id="__span-3-12"><a id="__codelineno-3-12" name="__codelineno-3-12" href="#__codelineno-3-12"></a><span class="p">}</span>
+</span></code></pre></div>
 <h2 id="notes">Notes<a class="headerlink" href="#notes" title="Permanent link">#</a></h2>
 <p>The rule only checks against <code>rawxml</code> and <code>xml</code> policy formatted content.
 Global policies are excluded since they don't benefit from the base element.</p>
+<p>This rule will fail if the policy XML does not contain all sections.
+Check that <code>inbound</code>, <code>backend</code>, <code>outbound</code>, and <code>on-error</code> are all present.</p>
 <h2 id="links">Links<a class="headerlink" href="#links" title="Permanent link">#</a></h2>
 <ul>
 <li><a href="https://learn.microsoft.com/azure/well-architected/security/design-app-dependencies">Secure application configuration and dependencies</a></li>
@@ -17109,7 +17142,7 @@ Global policies are excluded since they don't benefit from the base element.</p>
     <span class="md-icon" title="Last update">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="March 21, 2025 14:25:55 UTC">March 21, 2025</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="June 18, 2025 18:56:59 UTC">June 18, 2025</span>
   </span>
 
     

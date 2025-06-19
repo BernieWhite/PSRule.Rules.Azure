@@ -31,9 +31,10 @@ def on_nav(nav: Navigation, config: MkDocsConfig, files: Files) -> Navigation:
 
 def on_page_markdown(markdown: str, page: Page, config: MkDocsConfig, files: Files) -> str:
     '''Hook on_page_markdown event.'''
-    markdown = add_update_version_to_title(markdown, page)
+    if not is_update_page(page.canonical_url):
+        return markdown
 
-    return markdown
+    return update_shortcodes(add_update_version_to_title(markdown, page), page)
 
 #
 # Supporting functions
@@ -92,7 +93,7 @@ def add_update_version_to_title(markdown: str, page: Page) -> str:
         return markdown
 
     title = re.search(r"^# (.+)$", markdown, flags=re.M).group(1)
-    page.title = title
+    page.title = F"{title} (version {version})"
 
     if not page.meta.get('description', None):
         page.meta['description'] = f"Learn what is new in PSRule for Azure release {version}."
@@ -101,5 +102,35 @@ def add_update_version_to_title(markdown: str, page: Page) -> str:
     return markdown.replace(f"# {title}", f"# {title} (version {version})")
 
 
+def update_shortcodes(markdown: str, page: Page) -> str:
+    '''Update shortcodes in the markdown for update pages.'''
+
+    if not is_update_page(page.canonical_url):
+        return markdown
+
+    # Callback for regular expression replacement.
+    def replace(match: re.Match) -> str:
+        type, args = match.groups()
+        args = args.strip()
+        if type == "fix":
+            return _note_for_fix(args, page)
+
+        raise RuntimeError(f"Unknown shortcode update:{type}")
+
+    # Replace update shortcodes.
+    return re.sub(
+        r"<!-- update:(\w+)(.*?) -->",
+        replace, markdown, flags = re.I | re.M
+    )
+
 def is_update_page(path: str) -> bool:
     return path.__contains__("updates/v")
+
+
+def _note_for_fix(version: str, page: Page) -> str:
+    '''Generate a note for a fix.'''
+
+    if not version:
+        return ""
+
+    return f"[:octicons-diff-modified-24: Update **{version}** addresses these issues.](https://github.com/Azure/PSRule.Rules.Azure/issues?q=milestone%3Av{version}%20is%3Aissue)"

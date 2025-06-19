@@ -22,7 +22,7 @@
     
     
       
-        <title>May 2025 - PSRule for Azure</title>
+        <title>May 2025 (version 1.44) - PSRule for Azure</title>
       
     
     
@@ -81,7 +81,7 @@
   <!-- Open graph meta tags -->
   <meta property="og:site_name" content="PSRule for Azure" />
   <meta property="og:type" content="website" />
-  <meta property="og:title" content="PSRule for Azure - May 2025" />
+  <meta property="og:title" content="PSRule for Azure - May 2025 (version 1.44)" />
   <meta property="og:description" content="Learn what is new in PSRule for Azure release 1.44." />
   <meta property="og:url" content="https://azure.github.io/PSRule.Rules.Azure/updates/v1.44/" />
   <meta property="og:image" content="https://repository-images.githubusercontent.com/184154668/58818c00-d496-11eb-9b77-016145022654" />
@@ -93,7 +93,7 @@
   <!-- Twitter meta tags -->
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:site" content="@github" />
-  <meta name="twitter:title" content="PSRule for Azure - May 2025" />
+  <meta name="twitter:title" content="PSRule for Azure - May 2025 (version 1.44)" />
   <meta name="twitter:description" content="Learn what is new in PSRule for Azure release 1.44." />
   <meta name="twitter:image" content="https://repository-images.githubusercontent.com/184154668/58818c00-d496-11eb-9b77-016145022654" />
 
@@ -148,7 +148,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              May 2025
+              May 2025 (version 1.44)
             
           </span>
         </div>
@@ -1604,7 +1604,7 @@
   
   
   <span class="md-ellipsis">
-    May 2025
+    May 2025 (version 1.44)
     
   </span>
   
@@ -1617,7 +1617,7 @@
   
   
   <span class="md-ellipsis">
-    May 2025
+    May 2025 (version 1.44)
     
   </span>
   
@@ -1681,6 +1681,15 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#existing-preview-rules-moved-to-ga-status" class="md-nav__link">
+    <span class="md-ellipsis">
+      Existing preview rules moved to GA status
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#thank-you" class="md-nav__link">
     <span class="md-ellipsis">
       Thank you
@@ -1710,7 +1719,7 @@
   
   
   <span class="md-ellipsis">
-    April 2025
+    April 2025 (version 1.43)
     
   </span>
   
@@ -16895,6 +16904,15 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#existing-preview-rules-moved-to-ga-status" class="md-nav__link">
+    <span class="md-ellipsis">
+      Existing preview rules moved to GA status
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#thank-you" class="md-nav__link">
     <span class="md-ellipsis">
       Thank you
@@ -16949,10 +16967,11 @@
 
 
 <h1 id="may-2025-version-144">May 2025 (version 1.44)<a class="headerlink" href="#may-2025-version-144" title="Permanent link">#</a></h1>
+<p><a href="https://github.com/Azure/PSRule.Rules.Azure/issues?q=milestone%3Av1.44.1%20is%3Aissue"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M2 3.75C2 2.784 2.784 2 3.75 2h16.5c.966 0 1.75.784 1.75 1.75v16.5A1.75 1.75 0 0 1 20.25 22H3.75A1.75 1.75 0 0 1 2 20.25zm1.75-.25a.25.25 0 0 0-.25.25v16.5c0 .138.112.25.25.25h16.5a.25.25 0 0 0 .25-.25V3.75a.25.25 0 0 0-.25-.25z"/><path d="M14.5 12a2.5 2.5 0 1 1-5 0 2.5 2.5 0 0 1 5 0"/></svg></span> Update <strong>1.44.1</strong> addresses these issues.</a></p>
 <p>Install with: <a href="../../install/#with-github-actions">GitHub Actions</a> | <a href="../../install/#with-azure-pipelines">Azure Pipelines</a> | <a href="../../install/#with-powershell">PowerShell</a></p>
 <hr />
 <p>Welcome to the May 2025 release of PSRule for Azure.
-This release includes new features and improvements to existing rules.</p>
+This release includes new language features for Bicep, new rules and improvements to existing rules.</p>
 <p>See the <a href="../../changelog/#v1440">change log</a> or <a href="https://github.com/Azure/PSRule.Rules.Azure/compare/v1.43.0...v1.44.0">GitHub history</a> for a complete list of changes.</p>
 <h2 id="support-new-bicep-language-features">Support new Bicep language features<a class="headerlink" href="#support-new-bicep-language-features" title="Permanent link">#</a></h2>
 <p>When new language features are released in Bicep, it may be necessary to update the PSRule for Azure to support them.
@@ -16991,6 +17010,14 @@ New rules for improving security and operational excellence of Application Insig
 <li>Using a standard naming convention for Log workspaces.</li>
 <li>Configuring replication to an alternate region.</li>
 </ul>
+<h2 id="existing-preview-rules-moved-to-ga-status">Existing preview rules moved to GA status<a class="headerlink" href="#existing-preview-rules-moved-to-ga-status" title="Permanent link">#</a></h2>
+<p>Finally, we have marked several rules that were previously in preview to GA baselines, including:</p>
+<ul>
+<li><code>Azure.Log.Replication</code></li>
+<li><code>Azure.VNET.PrivateSubnet</code></li>
+<li><code>Azure.VMSS.AutoInstanceRepairs</code></li>
+</ul>
+<p>These will appear in the next quarterly baseline in June (<code>Azure.GA_2025_06</code>).</p>
 <h2 id="thank-you">Thank you<a class="headerlink" href="#thank-you" title="Permanent link">#</a></h2>
 <p>Thanks for your continued support and feedback.
 We are always looking for ways to improve the experience of using PSRule for Azure.</p>
@@ -17019,7 +17046,7 @@ We welcome contributions of all kinds, from rules, code, documentation, and samp
     <span class="md-icon" title="Last update">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="June 9, 2025 14:06:38 UTC">June 9, 2025</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="June 19, 2025 10:04:04 UTC">June 19, 2025</span>
   </span>
 
     

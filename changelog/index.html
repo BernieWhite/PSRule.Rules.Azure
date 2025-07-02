@@ -22,7 +22,7 @@
       
       
       <link rel="icon" href="../assets/ms_icon.png">
-      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.14">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.15">
     
     
       
@@ -5880,20 +5880,6 @@
       
         
       
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
     
     
     
@@ -5987,29 +5973,6 @@
   
   <span class="md-ellipsis">
     Azure.ACR.ContainerScan
-    
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../en/rules/Azure.ACR.ContentTrust/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    Azure.ACR.ContentTrust
     
   </span>
   
@@ -7597,29 +7560,6 @@
   
   <span class="md-ellipsis">
     Azure.APIM.ProductSubscription
-    
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../en/rules/Azure.APIM.ProductTerms/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    Azure.APIM.ProductTerms
     
   </span>
   
@@ -15089,29 +15029,6 @@
   
   
     <li class="md-nav__item">
-      <a href="../en/rules/Azure.Template.DefineParameters/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    Azure.Template.DefineParameters
-    
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
       <a href="../en/rules/Azure.Template.ExpressionLength/" class="md-nav__link">
         
   
@@ -15532,75 +15449,6 @@
   
   <span class="md-ellipsis">
     Azure.Template.UseLocationParameter
-    
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../en/rules/Azure.Template.UseParameters/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    Azure.Template.UseParameters
-    
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../en/rules/Azure.Template.UseVariables/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    Azure.Template.UseVariables
-    
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../en/rules/Azure.Template.ValidSecretRef/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    Azure.Template.ValidSecretRef
     
   </span>
   
@@ -17188,29 +17036,6 @@
   
   <span class="md-ellipsis">
     Azure.ACR.ContainerScan
-    
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../es/rules/Azure.ACR.ContentTrust/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    Azure.ACR.ContentTrust
     
   </span>
   
@@ -22281,6 +22106,23 @@
   <a href="https://github.com/Azure/PSRule.Rules.Azure/issues/3439">#3439</a></li>
 </ul>
 </li>
+</ul>
+</li>
+<li>Updated rules:<ul>
+<li>Container Registry:<ul>
+<li>Deprecated <code>Azure.ACR.ContentTrust</code> rule by <a href="https://github.com/BernieWhite">@BernieWhite</a>.
+  <a href="https://github.com/Azure/PSRule.Rules.Azure/issues/3443">#3443</a><ul>
+<li>The Docker content trust feature will retire in March 2028.</li>
+<li>Content trust is replaced by OCI artifact signing, which is supported by Azure Container Registry.</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>Bug fixes:<ul>
+<li>Fixed parent is missing on mocked token when expanding PE AVM module by <a href="https://github.com/BernieWhite">@BernieWhite</a>.
+  <a href="https://github.com/Azure/PSRule.Rules.Azure/issues/3446">#3446</a></li>
 </ul>
 </li>
 </ul>
@@ -31462,7 +31304,7 @@ What's changed since v1.24.0:</p>
     <span class="md-icon" title="Last update">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="June 29, 2025 15:37:37 UTC">June 29, 2025</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="July 2, 2025 16:08:19 UTC">July 2, 2025</span>
   </span>
 
     
@@ -31609,7 +31451,7 @@ What's changed since v1.24.0:</p>
       <script id="__config" type="application/json">{"base": "..", "features": ["navigation.instant", "navigation.indexes", {"navigation.sections": {"level": 1}}, "navigation.tabs", "navigation.footer", "content.code.annotate", "content.tabs.link", "content.code.copy", "content.action.edit", "content.action.view"], "search": "../assets/javascripts/workers/search.d50fe291.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
     
     
-      <script src="../assets/javascripts/bundle.13a4f30d.min.js"></script>
+      <script src="../assets/javascripts/bundle.56ea9cef.min.js"></script>
       
     
   </body>

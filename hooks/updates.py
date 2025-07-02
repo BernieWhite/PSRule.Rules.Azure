@@ -133,4 +133,4 @@ def _note_for_fix(version: str, page: Page) -> str:
     if not version:
         return ""
 
-    return f"[:octicons-diff-modified-24: Update **{version}** addresses these issues.](https://github.com/Azure/PSRule.Rules.Azure/issues?q=milestone%3Av{version}%20is%3Aissue)"
+    return f"[:octicons-diff-modified-24: Update **{version}** addresses these issues.](https://github.com/Azure/PSRule.Rules.Azure/issues?q=milestone%3Av{version}%20is%3Aissue)\n\n"

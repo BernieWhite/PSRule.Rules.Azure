@@ -23,7 +23,7 @@ log = logging.getLogger(f"mkdocs")
 def on_page_markdown(markdown: str, *, page: Page, config: MkDocsConfig, files: Files) -> str:
     '''Hook on_page_markdown event.'''
 
-    return security_note(external(module(markdown, page, config, files), page, config, files), page, config, files)
+    return deprecation_note(security_note(external(module(markdown, page, config, files), page, config, files), page, config, files), page, config, files)
 
 #
 # Supporting functions
@@ -92,6 +92,24 @@ def security_note(markdown: str, page: Page, config: MkDocsConfig, files: Files)
     return re.sub(
         r"<!-- security:(\w+)(.*?) -->",
         replace, markdown, flags = re.I | re.M
+    )
+
+def deprecation_note(markdown: str, page: Page, config: MkDocsConfig, files: Files) -> str:
+    '''Replace deprecation notes shortcodes in markdown.'''
+
+    # Callback for regular expression replacement.
+    def replace(match: re.Match) -> str:
+        type, args = match.groups()
+        args = args.strip()
+        if type == "note":
+            return _deprecation_note_block(args, page, config)
+
+        raise RuntimeError(f"Unknown shortcode deprecation:{type}")
+
+    # Replace deprecation note shortcodes.
+    return re.sub(
+        r"<!-- deprecation:(\w+)(.*?)-->",
+        replace, markdown, flags = re.I | re.M | re.S
     )
 
 def caf_note(markdown: str, page: Page, config: MkDocsConfig, files: Files) -> str:
@@ -306,3 +324,8 @@ def _caf_note_block(text: str, page: Page, config: MkDocsConfig) -> str:
     name = text.split(' ')[0]
 
     return _find_include_for_culture(config, culture, f"caf-notes/{name}.md")
+
+def _deprecation_note_block(text: str, page: Page, config: MkDocsConfig) -> str:
+    '''Create a deprecation note block.'''
+
+    return _reference_block("Info", "Deprecation", text)

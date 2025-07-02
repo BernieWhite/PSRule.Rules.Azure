@@ -9,6 +9,7 @@ from mkdocs.config.defaults import MkDocsConfig
 from mkdocs.structure.files import File, Files
 from mkdocs.structure.pages import Page
 from mkdocs.structure.nav import Section, Navigation, _add_parent_links
+from mkdocs.utils import meta
 
 log = logging.getLogger(f"mkdocs")
 rulesItem: Section = Section("Rules", [])
@@ -35,6 +36,7 @@ def on_page_markdown(markdown: str, page: Page, config: MkDocsConfig, files: Fil
         markdown = markdown.replace("## NOTES", "## Notes")
         markdown = markdown.replace("## EXAMPLES", "## Examples")
         markdown = markdown.replace("## LINKS", "## Links")
+        markdown = markdown.replace("## DEPRECATION\n\n", "")
 
         # Conceptual topics
         markdown = markdown.replace("## SHORT DESCRIPTION", "")
@@ -112,6 +114,14 @@ def is_rule_page(page: Page) -> bool:
 
     return False
 
+def is_deprecated_page(page: Page) -> bool:
+    '''Check if the page is deprecated.'''
+
+    if page.meta.get('deprecated', 'false') != 'false':
+        return True
+
+    return False
+
 def is_rule_dest_path(dest_path: str) -> bool:
     '''Check if the destination path is a rule page.'''
 
@@ -175,6 +185,11 @@ def build_rule_nav(nav: Navigation, config: MkDocsConfig, files: Files):
             continue
 
         if not f._get_stem().startswith("Azure."):
+            continue
+
+        # Deprecated rules are not included in the nav.
+        meta = _load_meta(f)
+        if meta.get('deprecated', 'false') != 'false':
             continue
 
         if is_rule_dest_path(f._get_dest_path(False)):
@@ -255,3 +270,18 @@ def _relative_path(file: File, page: Page) -> str:
 
     path = os.path.relpath(file.src_uri, page.file.src_uri)
     return os.path.sep.join(path.split(os.path.sep)[1:])
+
+def _load_meta(file) -> dict[str, any]:
+    '''Read load metadata from frontmatter in a file.'''
+
+    try:
+        with open(file.abs_src_path, encoding="utf-8-sig", errors="strict") as f:
+            source = f.read()
+        _, file_meta = meta.get_data(source)
+        return file_meta
+    except OSError:
+        log.error(f"File not found: {file.src_path}")
+        raise
+    except ValueError:
+        log.error(f"Encoding error reading file: {file.src_path}")
+        raise

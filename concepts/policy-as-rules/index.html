@@ -16960,34 +16960,26 @@ You can log a bug on GitHub or <a href="https://github.com/Azure/PSRule.Rules.Az
 <p>Key points:</p>
 <ul>
 <li>Before running this command, connect to an Azure subscription by installing the <code>Az</code> PowerShell module and using <code>Connect-AzAccount</code>.</li>
-<li>This command has no required parameters, and by default will export all assignments from you current Azure subscription.
+<li>This command has no required parameters, and by default will export all assignments from your current Azure subscription.
   You can change the current Azure subscription by using <code>Set-AzContext</code>.</li>
 </ul>
-<div class="admonition bug">
-<p class="admonition-title">Bug</p>
-<p>Currently a known incompatibility exists with 7.x of <code>Az.Resources</code> which introduced a breaking change.
-Please use <code>Az.Resources</code> &gt;= v6.7.0 and &lt; v7.0.0.
-For more information see <a href="../../troubleshooting/#issues-with-azresources">Issues with Az.Resources</a></p>
-</div>
 <p>For example:</p>
 <div class="language-powershell highlight"><span class="filename">PowerShell</span><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="c"># Install and import required modules.</span>
-</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="nb">Install-Module</span> <span class="n">Az</span><span class="p">.</span><span class="n">Resources</span> <span class="n">-RequiredVersion</span> <span class="s1">&#39;6.7.0&#39;</span> <span class="n">-Force</span> <span class="n">-Scope</span> <span class="n">CurrentUser</span>
-</span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a><span class="nb">Import-Module</span> <span class="n">Az</span><span class="p">.</span><span class="n">Resources</span> <span class="n">-RequiredVersion</span> <span class="s1">&#39;6.7.0&#39;</span>
-</span><span id="__span-0-4"><a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a><span class="nb">Import-Module</span> <span class="n">PSRule</span><span class="p">.</span><span class="n">Rules</span><span class="p">.</span><span class="n">Azure</span>
-</span><span id="__span-0-5"><a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a>
-</span><span id="__span-0-6"><a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a><span class="c"># Connect to Azure</span>
-</span><span id="__span-0-7"><a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a><span class="nb">Connect-AzAccount</span>
-</span><span id="__span-0-8"><a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a><span class="nb">Set-AzContext</span> <span class="n">-Subscription</span> <span class="s1">&#39;&lt;subscriptionId&gt;&#39;</span>
-</span><span id="__span-0-9"><a id="__codelineno-0-9" name="__codelineno-0-9" href="#__codelineno-0-9"></a>
-</span><span id="__span-0-10"><a id="__codelineno-0-10" name="__codelineno-0-10" href="#__codelineno-0-10"></a><span class="c"># Export assignments</span>
-</span><span id="__span-0-11"><a id="__codelineno-0-11" name="__codelineno-0-11" href="#__codelineno-0-11"></a><span class="nb">Export-AzPolicyAssignmentData</span>
+</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="nb">Import-Module</span> <span class="n">PSRule</span><span class="p">.</span><span class="n">Rules</span><span class="p">.</span><span class="n">Azure</span>
+</span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>
+</span><span id="__span-0-4"><a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a><span class="c"># Connect to Azure</span>
+</span><span id="__span-0-5"><a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a><span class="nb">Connect-AzAccount</span>
+</span><span id="__span-0-6"><a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a><span class="nb">Set-AzContext</span> <span class="n">-Subscription</span> <span class="s1">&#39;&lt;subscriptionId&gt;&#39;</span>
+</span><span id="__span-0-7"><a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a>
+</span><span id="__span-0-8"><a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a><span class="c"># Export assignments</span>
+</span><span id="__span-0-9"><a id="__codelineno-0-9" name="__codelineno-0-9" href="#__codelineno-0-9"></a><span class="nb">Export-AzPolicyAssignmentData</span>
 </span></code></pre></div>
 <h3 id="convert-assignments-to-rules">Convert assignments to rules<a class="headerlink" href="#convert-assignments-to-rules" title="Permanent link">#</a></h3>
 <p>Run <code>Export-AzPolicyAssignmentRuleData</code> to convert assignments to rules.
 To run this command an <code>-AssignmentFile</code> parameter with the path to the assignment JSON file generated in the previous step.</p>
 <p>After the command completes a new file <code>*.Rule.jsonc</code> should be generated containing generated rules.</p>
 <p>For example:</p>
-<div class="language-powershell highlight"><span class="filename">PowerShell</span><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="nb">Export-AzPolicyAssignmentRuleData</span> <span class="n">-AssignmentFile</span> <span class="s1">&#39;.\&lt;subscriptionId&gt;.assignment.json&#39;</span>
+<div class="language-powershell highlight"><span class="filename">PowerShell</span><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="nb">Export-AzPolicyAssignmentRuleData</span> <span class="n">-AssignmentFile</span> <span class="s1">&#39;.\nnnn.assignment.json&#39;</span>
 </span></code></pre></div>
 <h2 id="running-policy-rules">Running policy rules<a class="headerlink" href="#running-policy-rules" title="Permanent link">#</a></h2>
 <p>Rules and an initial baseline are generated in a file ending in <code>.Rule.jsonc</code>.
@@ -17073,7 +17065,7 @@ If you believe a policy is missing from this list, please <a href="https://githu
     <span class="md-icon" title="Last update">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="July 20, 2024 07:53:53 UTC">July 20, 2024</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="July 3, 2025 18:56:59 UTC">July 3, 2025</span>
   </span>
 
     

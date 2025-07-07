@@ -3140,6 +3140,10 @@
       
         
       
+        
+      
+        
+      
     
     
     
@@ -4958,6 +4962,52 @@
   
   <span class="md-ellipsis">
     Azure.AVD.ScheduleAgentUpdate
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../en/rules/Azure.Alert.HighFrequencyQuery/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Azure.Alert.HighFrequencyQuery
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../en/rules/Azure.Alert.MetricAutoMitigate/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Azure.Alert.MetricAutoMitigate
     
   </span>
   
@@ -16628,6 +16678,15 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#expanded-detection-for-azure-monitor" class="md-nav__link">
+    <span class="md-ellipsis">
+      Expanded detection for Azure Monitor
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#thank-you" class="md-nav__link">
     <span class="md-ellipsis">
       Thank you
@@ -16711,6 +16770,13 @@ dependency on the <code>Az.Resources</code> PowerShell module. This provides:</p
 </ul>
 <p>These optimizations result in more efficient, readable, and maintainable policy as rules
 implementations while reducing the complexity of the generated rule conditions.</p>
+<h2 id="expanded-detection-for-azure-monitor">Expanded detection for Azure Monitor<a class="headerlink" href="#expanded-detection-for-azure-monitor" title="Permanent link">#</a></h2>
+<p>This release adds new rules to detect opportunities for improving cost optimization of Azure Monitor resources.
+New rules check for:</p>
+<ul>
+<li>Azure Monitor metric alerts that are configured to automatically mitigate issues.</li>
+<li>Azure Monitor scheduled query alerts that are configured for lower frequency.</li>
+</ul>
 <h2 id="thank-you">Thank you<a class="headerlink" href="#thank-you" title="Permanent link">#</a></h2>
 <p>Thanks for your continued support and feedback.
 We are always looking for ways to improve the experience of using PSRule for Azure.</p>
@@ -16739,7 +16805,7 @@ We welcome contributions of all kinds, from rules, code, documentation, and samp
     <span class="md-icon" title="Last update">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="July 3, 2025 18:56:59 UTC">July 3, 2025</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="July 4, 2025 14:13:38 UTC">July 4, 2025</span>
   </span>
 
     

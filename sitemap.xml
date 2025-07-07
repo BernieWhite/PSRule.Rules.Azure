@@ -1181,6 +1181,10 @@
          <lastmod>2025-07-07</lastmod>
     </url>
     <url>
+         <loc>https://azure.github.io/PSRule.Rules.Azure/en/rules/Azure.EventGrid.NamespaceTLS/</loc>
+         <lastmod>2025-07-07</lastmod>
+    </url>
+    <url>
          <loc>https://azure.github.io/PSRule.Rules.Azure/en/rules/Azure.EventGrid.SystemTopicNaming/</loc>
          <lastmod>2025-07-07</lastmod>
     </url>

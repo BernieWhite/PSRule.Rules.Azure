@@ -17254,7 +17254,7 @@ See <a href="../setup/configuring-expansion/#bicep-compilation-timeout">Bicep co
 The reason for the warning is that the <code>metadata</code> property has not been added to the parameter file JSON schema.
 However, the top level <code>metadata</code> property is ignored by Azure Resource Manager when deploying a template.</p>
 <h2 id="issues-with-azresources">Issues with Az.Resources<a class="headerlink" href="#issues-with-azresources" title="Permanent link">#</a></h2>
-<p>The PowerShell module <code>Az.Resources</code> and <code>Az.Accounts</code> is currently used when exporting data from Azure.
+<p>The PowerShell module <code>Az.Accounts</code> is currently used when exporting data from Azure.
 These modules are use when:</p>
 <ul>
 <li>Exporting resources for in-flight analysis.</li>
@@ -17262,6 +17262,9 @@ These modules are use when:</p>
 </ul>
 <p>These modules are not required if you only want to execute rules.</p>
 <h3 id="suppression-of-azresources-warning">Suppression of Az.Resources warning<a class="headerlink" href="#suppression-of-azresources-warning" title="Permanent link">#</a></h3>
+<blockquote>
+<p>Applies to PSRule for Azure before v1.45.0.</p>
+</blockquote>
 <p>If you only intend to execute rules you can suppress the following warning message.</p>
 <div class="admonition message">
 <p class="admonition-title">Message</p>
@@ -17271,6 +17274,9 @@ These modules are use when:</p>
 To suppress the warning configure the <code>PSRULE_AZURE_RESOURCE_MODULE_NOWARN</code> environment variable to <code>true</code>.
 For more details see <a href="../setup/configuring-exports/#psrule_azure_resource_module_nowarn">Configuring exports</a>.</p>
 <h3 id="installing-azresources">Installing Az.Resources<a class="headerlink" href="#installing-azresources" title="Permanent link">#</a></h3>
+<blockquote>
+<p>Applies to PSRule for Azure before v1.45.0.</p>
+</blockquote>
 <p>If you plan on exporting data from Azure, you must install the <code>Az.Resources</code> module.</p>
 <p>Some versions of <code>Az.Resources</code> are known to be incompatible with PSRule for Azure.
 As a result, we recommend installing and importing v6.7.0 to address these issues.
@@ -17331,7 +17337,7 @@ A template or Bicep module author may call the <code>fail()</code> function to c
     <span class="md-icon" title="Last update">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="April 28, 2025 13:17:52 UTC">April 28, 2025</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="July 10, 2025 18:06:12 UTC">July 10, 2025</span>
   </span>
 
     

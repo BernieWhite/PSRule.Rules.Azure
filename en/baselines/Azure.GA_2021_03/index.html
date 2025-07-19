@@ -3178,6 +3178,8 @@
       
         
       
+        
+      
     
     
     
@@ -3409,6 +3411,29 @@
   
   <span class="md-ellipsis">
     Azure.ACR.Quarantine
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../rules/Azure.ACR.ReplicaLocation/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Azure.ACR.ReplicaLocation
     
   </span>
   
@@ -16910,7 +16935,7 @@ Consider switching to a newer baseline.</p>
 <p>Include rules released March 2021 or prior for Azure GA features.</p>
 <h2 id="rules">Rules<a class="headerlink" href="#rules" title="Permanent link">#</a></h2>
 <p>The following rules are included within the <code>Azure.GA_2021_03</code> baseline.</p>
-<p>This baseline includes a total of 183 rules.</p>
+<p>This baseline includes a total of 182 rules.</p>
 <table>
 <thead>
 <tr>
@@ -16931,18 +16956,13 @@ Consider switching to a newer baseline.</p>
 <td>Critical</td>
 </tr>
 <tr>
-<td><a href="../../rules/Azure.ACR.GeoReplica/">Azure.ACR.GeoReplica</a></td>
-<td>Applications or infrastructure relying on a container image may fail if the registry is not available at the time they start.</td>
-<td>Important</td>
-</tr>
-<tr>
 <td><a href="../../rules/Azure.ACR.ImageHealth/">Azure.ACR.ImageHealth</a></td>
 <td>Remove container images with known vulnerabilities.</td>
 <td>Critical</td>
 </tr>
 <tr>
 <td><a href="../../rules/Azure.ACR.MinSku/">Azure.ACR.MinSku</a></td>
-<td>ACR should use the Premium or Standard SKU for production deployments.</td>
+<td>The Basic SKU provides limited performance and features for production container registry workloads.</td>
 <td>Important</td>
 </tr>
 <tr>

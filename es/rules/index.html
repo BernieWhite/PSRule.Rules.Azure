@@ -3169,6 +3169,8 @@
       
         
       
+        
+      
     
     
     
@@ -3400,6 +3402,29 @@
   
   <span class="md-ellipsis">
     Azure.ACR.Quarantine
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../en/rules/Azure.ACR.ReplicaLocation/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Azure.ACR.ReplicaLocation
     
   </span>
   
@@ -16871,7 +16896,7 @@ To include rules for preview features see <a href="../../working-with-baselines/
 <tr>
 <td>AZR-000006</td>
 <td><a href="Azure.ACR.MinSku/">Azure.ACR.MinSku</a></td>
-<td>ACR should use the Premium or Standard SKU for production deployments.</td>
+<td>The Basic SKU provides limited performance and features for production container registry workloads.</td>
 <td><abbr title="Generally Available &mdash; Rules related to a generally available Azure features.">GA</abbr></td>
 </tr>
 <tr>
@@ -18689,7 +18714,7 @@ To include rules for preview features see <a href="../../working-with-baselines/
 <tr>
 <td>AZR-000310</td>
 <td><a href="Azure.ACR.SoftDelete.md">Azure.ACR.SoftDelete</a></td>
-<td>Azure Container Registries should have soft delete policy enabled.</td>
+<td>Container registry artifacts are permanently lost when accidentally deleted without soft delete protection.</td>
 <td>Preview</td>
 </tr>
 <tr>
@@ -19782,6 +19807,12 @@ To include rules for preview features see <a href="../../working-with-baselines/
 <td>AZR-000493</td>
 <td><a href="Azure.EventGrid.NamespaceTLS.md">Azure.EventGrid.NamespaceTLS</a></td>
 <td>Weak or deprecated transport protocols for client-server communication introduce security vulnerabilities.</td>
+<td><abbr title="Generally Available &mdash; Rules related to a generally available Azure features.">GA</abbr></td>
+</tr>
+<tr>
+<td>AZR-000494</td>
+<td><a href="Azure.ACR.ReplicaLocation.md">Azure.ACR.ReplicaLocation</a></td>
+<td>The replication location determines the country or region where container images and metadata are stored and processed.</td>
 <td><abbr title="Generally Available &mdash; Rules related to a generally available Azure features.">GA</abbr></td>
 </tr>
 </tbody>

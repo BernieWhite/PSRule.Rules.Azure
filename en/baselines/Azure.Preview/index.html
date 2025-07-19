@@ -3178,6 +3178,8 @@
       
         
       
+        
+      
     
     
     
@@ -3409,6 +3411,29 @@
   
   <span class="md-ellipsis">
     Azure.ACR.Quarantine
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../rules/Azure.ACR.ReplicaLocation/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Azure.ACR.ReplicaLocation
     
   </span>
   
@@ -16905,7 +16930,7 @@
 <p>Includes the latest rules for Azure GA and preview features that is updated each release.</p>
 <h2 id="rules">Rules<a class="headerlink" href="#rules" title="Permanent link">#</a></h2>
 <p>The following rules are included within the <code>Azure.Preview</code> baseline.</p>
-<p>This baseline includes a total of 485 rules.</p>
+<p>This baseline includes a total of 486 rules.</p>
 <table>
 <thead>
 <tr>
@@ -16947,7 +16972,7 @@
 </tr>
 <tr>
 <td><a href="../../rules/Azure.ACR.MinSku/">Azure.ACR.MinSku</a></td>
-<td>ACR should use the Premium or Standard SKU for production deployments.</td>
+<td>The Basic SKU provides limited performance and features for production container registry workloads.</td>
 <td>Important</td>
 </tr>
 <tr>
@@ -16961,13 +16986,18 @@
 <td>Important</td>
 </tr>
 <tr>
+<td><a href="../../rules/Azure.ACR.ReplicaLocation/">Azure.ACR.ReplicaLocation</a></td>
+<td>The replication location determines the country or region where container images and metadata are stored and processed.</td>
+<td>Important</td>
+</tr>
+<tr>
 <td><a href="../../rules/Azure.ACR.Retention/">Azure.ACR.Retention</a></td>
 <td>Use a retention policy to cleanup untagged manifests.</td>
 <td>Important</td>
 </tr>
 <tr>
 <td><a href="../../rules/Azure.ACR.SoftDelete/">Azure.ACR.SoftDelete</a></td>
-<td>Azure Container Registries should have soft delete policy enabled.</td>
+<td>Container registry artifacts are permanently lost when accidentally deleted without soft delete protection.</td>
 <td>Important</td>
 </tr>
 <tr>

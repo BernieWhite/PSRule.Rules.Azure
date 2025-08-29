@@ -16952,7 +16952,7 @@
 
   <!-- Page content -->
   <h1 id="azurepillarsecurity">Azure.Pillar.Security<a class="headerlink" href="#azurepillarsecurity" title="Permanent link">#</a></h1>
-<p><span class="badge"><span class="badge__icon"><a href="../../../changelog/#v1350" title="Minimum version"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M11.75 1a.75.75 0 0 1 .75.75V4h6.532c.42 0 .826.15 1.143.425l3.187 2.75a1.75 1.75 0 0 1 0 2.65l-3.187 2.75a1.75 1.75 0 0 1-1.143.425H12.5v9.25a.75.75 0 0 1-1.5 0V13H3.75A1.75 1.75 0 0 1 2 11.25v-5.5C2 4.783 2.784 4 3.75 4H11V1.75a.75.75 0 0 1 .75-.75m7.282 4.5H3.75a.25.25 0 0 0-.25.25v5.5c0 .138.112.25.25.25h15.282c.06 0 .118-.021.163-.06l3.188-2.75a.248.248 0 0 0 0-.38l-3.188-2.75a.25.25 0 0 0-.163-.06"/></svg></span></a></span><span class="badge__text"><a href="../../../changelog/#v1350">v1.35.0</a></span></span></p>
+<p><span class="badge"><span class="badge__icon"><a href="../../../changelog/#v1350" title="Minimum version"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M11.75 1a.75.75 0 0 1 .75.75V4h6.532c.42 0 .826.15 1.143.425l3.187 2.75a1.75 1.75 0 0 1 0 2.65l-3.187 2.75a1.75 1.75 0 0 1-1.143.425H12.5v9.25a.75.75 0 0 1-1.5 0V13H3.75A1.75 1.75 0 0 1 2 11.25v-5.5C2 4.783 2.784 4 3.75 4H11V1.75a.75.75 0 0 1 .75-.75m7.282 4.5H3.75a.25.25 0 0 0-.25.25v5.5c0 .138.112.25.25.25h15.282c.06 0 .118-.021.163-.06l3.188-2.75a.248.248 0 0 0 0-.38l-3.188-2.75a.25.25 0 0 0-.163-.06"/></svg></span></a></span><span class="badge__text"><a href="../../../changelog/#v1350">v1.35.0</a></span></span><span class="badge"><span class="badge__icon"><a href="../Azure.Pillar.Security.csv" title="CSV"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M11.25 9.331V.75a.75.75 0 0 1 1.5 0v8.58l1.949-2.11A.75.75 0 1 1 15.8 8.237l-3.25 3.52a.75.75 0 0 1-1.102 0l-3.25-3.52A.75.75 0 1 1 9.3 7.22z"/><path d="M2.5 3.75v11.5c0 .138.112.25.25.25h18.5a.25.25 0 0 0 .25-.25V3.75a.25.25 0 0 0-.25-.25h-5.5a.75.75 0 0 1 0-1.5h5.5c.966 0 1.75.784 1.75 1.75v11.5A1.75 1.75 0 0 1 21.25 17h-6.204c.171 1.375.805 2.652 1.769 3.757A.752.752 0 0 1 16.25 22h-8.5a.75.75 0 0 1-.566-1.243c.965-1.105 1.599-2.382 1.77-3.757H2.75A1.75 1.75 0 0 1 1 15.25V3.75C1 2.784 1.784 2 2.75 2h5.5a.75.75 0 0 1 0 1.5h-5.5a.25.25 0 0 0-.25.25M10.463 17c-.126 1.266-.564 2.445-1.223 3.5h5.52c-.66-1.055-1.098-2.234-1.223-3.5Z"/></svg></span></a></span><span class="badge__text"><a href="../Azure.Pillar.Security.csv">Download CSV</a></span></span></p>
 <p>Microsoft Azure Well-Architected Framework - Security pillar specific baseline.</p>
 <h2 id="rules">Rules<a class="headerlink" href="#rules" title="Permanent link">#</a></h2>
 <p>The following rules are included within the <code>Azure.Pillar.Security</code> baseline.</p>
@@ -16963,6 +16963,7 @@
 <th>Name</th>
 <th>Synopsis</th>
 <th>Severity</th>
+<th>Maturity</th>
 </tr>
 </thead>
 <tbody>
@@ -16970,1131 +16971,1357 @@
 <td><a href="../../rules/Azure.ACR.AdminUser/">Azure.ACR.AdminUser</a></td>
 <td>The local admin account allows depersonalized access to a container registry using a shared secret.</td>
 <td>Critical</td>
+<td>L1</td>
 </tr>
 <tr>
 <td><a href="../../rules/Azure.ACR.AnonymousAccess/">Azure.ACR.AnonymousAccess</a></td>
 <td>Anonymous pull access allows unidentified downloading of images and metadata from a container registry.</td>
 <td>Important</td>
+<td>-</td>
 </tr>
 <tr>
 <td><a href="../../rules/Azure.ACR.ContainerScan/">Azure.ACR.ContainerScan</a></td>
 <td>Container images or their base images may have vulnerabilities discovered after they are built.</td>
 <td>Critical</td>
+<td>-</td>
 </tr>
 <tr>
 <td><a href="../../rules/Azure.ACR.Firewall/">Azure.ACR.Firewall</a></td>
 <td>Container Registry without restrictions can be accessed from any network location including the Internet.</td>
 <td>Important</td>
+<td>-</td>
 </tr>
 <tr>
 <td><a href="../../rules/Azure.ACR.ImageHealth/">Azure.ACR.ImageHealth</a></td>
 <td>Remove container images with known vulnerabilities.</td>
 <td>Critical</td>
+<td>L2</td>
 </tr>
 <tr>
 <td><a href="../../rules/Azure.ACR.ReplicaLocation/">Azure.ACR.ReplicaLocation</a></td>
 <td>The replication location determines the country or region where container images and metadata are stored and processed.</td>
 <td>Important</td>
+<td>-</td>
 </tr>
 <tr>
 <td><a href="../../rules/Azure.ADX.DiskEncryption/">Azure.ADX.DiskEncryption</a></td>
 <td>Use disk encryption for Azure Data Explorer (ADX) clusters.</td>
 <td>Important</td>
+<td>L1</td>
 </tr>
 <tr>
 <td><a href="../../rules/Azure.ADX.ManagedIdentity/">Azure.ADX.ManagedIdentity</a></td>
 <td>Configure Data Explorer clusters to use managed identities to access Azure resources securely.</td>
 <td>Important</td>
+<td>-</td>
 </tr>
 <tr>
 <td><a href="../../rules/Azure.AI.DisableLocalAuth/">Azure.AI.DisableLocalAuth</a></td>
 <td>Access keys allow depersonalized access to Azure AI using a shared secret.</td>
 <td>Important</td>
+<td>L1</td>
 </tr>
 <tr>
 <td><a href="../../rules/Azure.AI.ManagedIdentity/">Azure.AI.ManagedIdentity</a></td>
 <td>Configure managed identities to access Azure resources.</td>
 <td>Important</td>
+<td>L1</td>
 </tr>
 <tr>
 <td><a href="../../rules/Azure.AI.PrivateEndpoints/">Azure.AI.PrivateEndpoints</a></td>
 <td>Use Private Endpoints to access Azure AI services accounts.</td>
 <td>Important</td>
+<td>-</td>
 </tr>
 <tr>
 <td><a href="../../rules/Azure.AI.PublicAccess/">Azure.AI.PublicAccess</a></td>
 <td>Restrict access of Azure AI services to authorized virtual networks.</td>
 <td>Important</td>
+<td>-</td>
 </tr>
 <tr>
 <td><a href="../../rules/Azure.AKS.AuditLogs/">Azure.AKS.AuditLogs</a></td>
 <td>AKS clusters should collect security-based audit logs to assess and monitor the compliance status of workloads.</td>
 <td>Important</td>
+<td>L1</td>
 </tr>
 <tr>
 <td><a href="../../rules/Azure.AKS.AuthorizedIPs/">Azure.AKS.AuthorizedIPs</a></td>
 <td>Restrict access to API server endpoints to authorized IP addresses.</td>
 <td>Important</td>
+<td>-</td>
 </tr>
 <tr>
 <td><a href="../../rules/Azure.AKS.AutoUpgrade/">Azure.AKS.AutoUpgrade</a></td>
 <td>New versions of Kubernetes are released regularly. Upgrading each release manually can add operational overhead without realizing equivalent value.</td>
 <td>Important</td>
+<td>-</td>
 </tr>
 <tr>
 <td><a href="../../rules/Azure.AKS.AzurePolicyAddOn/">Azure.AKS.AzurePolicyAddOn</a></td>
 <td>Configure Azure Kubernetes Service (AKS) clusters to use Azure Policy Add-on for Kubernetes.</td>
 <td>Important</td>
+<td>-</td>
 </tr>
 <tr>
 <td><a href="../../rules/Azure.AKS.AzureRBAC/">Azure.AKS.AzureRBAC</a></td>
 <td>Use Azure RBAC for Kubernetes Authorization with AKS clusters.</td>
 <td>Important</td>
+<td>-</td>
 </tr>
 <tr>
 <td><a href="../../rules/Azure.AKS.DefenderProfile/">Azure.AKS.DefenderProfile</a></td>
 <td>Enable the Defender profile with Azure Kubernetes Service (AKS) cluster.</td>
 <td>Important</td>
+<td>-</td>
 </tr>
 <tr>
 <td><a href="../../rules/Azure.AKS.HttpAppRouting/">Azure.AKS.HttpAppRouting</a></td>
 <td>Disable HTTP application routing add-on in AKS clusters.</td>
 <td>Important</td>
+<td>-</td>
 </tr>
 <tr>
 <td><a href="../../rules/Azure.AKS.LocalAccounts/">Azure.AKS.LocalAccounts</a></td>
 <td>Enforce named user accounts with RBAC assigned permissions.</td>
 <td>Important</td>
+<td>L1</td>
 </tr>
 <tr>
 <td><a href="../../rules/Azure.AKS.ManagedAAD/">Azure.AKS.ManagedAAD</a></td>
 <td>Use AKS-managed Azure AD to simplify authorization and improve security.</td>
 <td>Important</td>
+<td>L1</td>
 </tr>
 <tr>
 <td><a href="../../rules/Azure.AKS.ManagedIdentity/">Azure.AKS.ManagedIdentity</a></td>
 <td>Configure AKS clusters to use managed identities for managing cluster infrastructure.</td>
 <td>Important</td>
+<td>L1</td>
 </tr>
 <tr>
 <td><a href="../../rules/Azure.AKS.NetworkPolicy/">Azure.AKS.NetworkPolicy</a></td>
 <td>AKS clusters without inter-pod network restrictions may be permit unauthorized lateral movement.</td>
 <td>Important</td>
+<td>-</td>
 </tr>
 <tr>
 <td><a href="../../rules/Azure.AKS.NodeAutoUpgrade/">Azure.AKS.NodeAutoUpgrade</a></td>
 <td>Operating system (OS) security updates should be applied to AKS nodes and rebooted as required to address security vulnerabilities.</td>
 <td>Important</td>
+<td>-</td>
 </tr>
 <tr>
 <td><a href="../../rules/Azure.AKS.SecretStore/">Azure.AKS.SecretStore</a></td>
 <td>Deploy AKS clusters with Secrets Store CSI Driver and store Secrets in Key Vault.</td>
 <td>Important</td>
+<td>-</td>
 </tr>
 <tr>
 <td><a href="../../rules/Azure.AKS.SecretStoreRotation/">Azure.AKS.SecretStoreRotation</a></td>
 <td>Enable autorotation of Secrets Store CSI Driver secrets for AKS clusters.</td>
 <td>Important</td>
+<td>-</td>
 </tr>
 <tr>
 <td><a href="../../rules/Azure.AKS.UseRBAC/">Azure.AKS.UseRBAC</a></td>
 <td>Deploy AKS cluster with role-based access control (RBAC) enabled.</td>
 <td>Important</td>
+<td>-</td>
 </tr>
 <tr>
 <td><a href="../../rules/Azure.APIM.Ciphers/">Azure.APIM.Ciphers</a></td>
 <td>API Management should not accept weak or deprecated ciphers for client or backend communication.</td>
 <td>Critical</td>
+<td>L1</td>
 </tr>
 <tr>
 <td><a href="../../rules/Azure.APIM.CORSPolicy/">Azure.APIM.CORSPolicy</a></td>
 <td>Avoid using wildcard for any configuration option in CORS policies.</td>
 <td>Important</td>
+<td>-</td>
 </tr>
 <tr>
 <td><a href="../../rules/Azure.APIM.DefenderCloud/">Azure.APIM.DefenderCloud</a></td>
 <td>APIs published in Azure API Management should be onboarded to Microsoft Defender for APIs.</td>
 <td>Critical</td>
+<td>-</td>
 </tr>
 <tr>
 <td><a href="../../rules/Azure.APIM.EncryptValues/">Azure.APIM.EncryptValues</a></td>
 <td>Encrypt all API Management named values with Key Vault secrets.</td>
 <td>Important</td>
+<td>-</td>
 </tr>
 <tr>
 <td><a href="../../rules/Azure.APIM.HTTPBackend/">Azure.APIM.HTTPBackend</a></td>
 <td>Unencrypted communication could allow disclosure of information to an untrusted party.</td>
 <td>Critical</td>
+<td>L1</td>
 </tr>
 <tr>
 <td><a href="../../rules/Azure.APIM.HTTPEndpoint/">Azure.APIM.HTTPEndpoint</a></td>
 <td>Unencrypted communication could allow disclosure of information to an untrusted party.</td>
 <td>Important</td>
+<td>L1</td>
 </tr>
 <tr>
 <td><a href="../../rules/Azure.APIM.ManagedIdentity/">Azure.APIM.ManagedIdentity</a></td>
 <td>Configure managed identities to access Azure resources.</td>
 <td>Important</td>
+<td>L1</td>
 </tr>
 <tr>
 <td><a href="../../rules/Azure.APIM.PolicyBase/">Azure.APIM.PolicyBase</a></td>
 <td>Base element for any policy element in a section should be configured.</td>
 <td>Important</td>
+<td>-</td>
 </tr>
 <tr>
 <td><a href="../../rules/Azure.APIM.ProductApproval/">Azure.APIM.ProductApproval</a></td>
 <td>Configure products to require approval.</td>
 <td>Important</td>
+<td>-</td>
 </tr>
 <tr>
 <td><a href="../../rules/Azure.APIM.ProductSubscription/">Azure.APIM.ProductSubscription</a></td>
 <td>Configure products to require a subscription.</td>
 <td>Important</td>
+<td>-</td>
 </tr>
 <tr>
 <td><a href="../../rules/Azure.APIM.Protocols/">Azure.APIM.Protocols</a></td>
 <td>API Management should only accept a minimum of TLS 1.2 for client and backend communication.</td>
 <td>Critical</td>
+<td>L1</td>
 </tr>
 <tr>
 <td><a href="../../rules/Azure.APIM.SampleProducts/">Azure.APIM.SampleProducts</a></td>
 <td>API Management Services with default products configured may expose more APIs than intended.</td>
 <td>Awareness</td>
+<td>-</td>
 </tr>
 <tr>
 <td><a href="../../rules/Azure.AppConfig.AuditLogs/">Azure.AppConfig.AuditLogs</a></td>
 <td>Ensure app configuration store audit diagnostic logs are enabled.</td>
 <td>Important</td>
+<td>-</td>
 </tr>
 <tr>
 <td><a href="../../rules/Azure.AppConfig.DisableLocalAuth/">Azure.AppConfig.DisableLocalAuth</a></td>
 <td>Access keys allow depersonalized access to App Configuration using a shared secret.</td>
 <td>Important</td>
+<td>L1</td>
 </tr>
 <tr>
 <td><a href="../../rules/Azure.AppConfig.SecretLeak/">Azure.AppConfig.SecretLeak</a></td>
 <td>Secrets stored as key values in an App Configuration Store may be leaked to unauthorized users.</td>
 <td>Critical</td>
+<td>-</td>
 </tr>
 <tr>
 <td><a href="../../rules/Azure.AppGw.OWASP/">Azure.AppGw.OWASP</a></td>
 <td>Application Gateway Web Application Firewall (WAF) should use OWASP 3.x rules.</td>
 <td>Important</td>
+<td>-</td>
 </tr>
 <tr>
 <td><a href="../../rules/Azure.AppGw.Prevention/">Azure.AppGw.Prevention</a></td>
 <td>Internet exposed Application Gateways should use prevention mode to protect backend resources.</td>
 <td>Critical</td>
+<td>-</td>
 </tr>
 <tr>
 <td><a href="../../rules/Azure.AppGw.SSLPolicy/">Azure.AppGw.SSLPolicy</a></td>
 <td>Application Gateway should only accept a minimum of TLS 1.2.</td>
 <td>Critical</td>
+<td>L1</td>
 </tr>
 <tr>
 <td><a href="../../rules/Azure.AppGw.UseHTTPS/">Azure.AppGw.UseHTTPS</a></td>
 <td>Application Gateways should only expose frontend HTTP endpoints over HTTPS.</td>
 <td>Critical</td>
+<td>L1</td>
 </tr>
 <tr>
 <td><a href="../../rules/Azure.AppGw.UseWAF/">Azure.AppGw.UseWAF</a></td>
 <td>Internet accessible Application Gateways should use protect endpoints with WAF.</td>
 <td>Critical</td>
+<td>-</td>
 </tr>
 <tr>
 <td><a href="../../rules/Azure.AppGw.WAFEnabled/">Azure.AppGw.WAFEnabled</a></td>
 <td>Application Gateway Web Application Firewall (WAF) must be enabled to protect backend resources.</td>
 <td>Critical</td>
+<td>-</td>
 </tr>
 <tr>
 <td><a href="../../rules/Azure.AppGw.WAFRules/">Azure.AppGw.WAFRules</a></td>
 <td>Application Gateway Web Application Firewall (WAF) should have all rules enabled.</td>
 <td>Important</td>
+<td>-</td>
 </tr>
 <tr>
 <td><a href="../../rules/Azure.AppGwWAF.Enabled/">Azure.AppGwWAF.Enabled</a></td>
 <td>Application Gateway Web Application Firewall (WAF) must be enabled to protect backend resources.</td>
 <td>Critical</td>
+<td>-</td>
 </tr>
 <tr>
 <td><a href="../../rules/Azure.AppGwWAF.Exclusions/">Azure.AppGwWAF.Exclusions</a></td>
 <td>Application Gateway Web Application Firewall (WAF) should have all rules enabled.</td>
 <td>Critical</td>
+<td>-</td>
 </tr>
 <tr>
 <td><a href="../../rules/Azure.AppGwWAF.PreventionMode/">Azure.AppGwWAF.PreventionMode</a></td>
 <td>Use protection mode in Application Gateway Web Application Firewall (WAF) policies to protect back end resources.</td>
 <td>Critical</td>
+<td>-</td>
 </tr>
 <tr>
 <td><a href="../../rules/Azure.AppGwWAF.RuleGroups/">Azure.AppGwWAF.RuleGroups</a></td>
 <td>Use recommended rule groups in Application Gateway Web Application Firewall (WAF) policies to protect back end resources.</td>
 <td>Critical</td>
+<td>-</td>
 </tr>
 <tr>
 <td><a href="../../rules/Azure.AppInsights.LocalAuth/">Azure.AppInsights.LocalAuth</a></td>
 <td>Local authentication allows depersonalized access to store telemetry in Application Insights using a shared identifier.</td>
 <td>Critical</td>
+<td>L1</td>
 </tr>
 <tr>
 <td><a href="../../rules/Azure.AppService.ManagedIdentity/">Azure.AppService.ManagedIdentity</a></td>
 <td>Configure managed identities to access Azure resources.</td>
 <td>Important</td>
+<td>L1</td>
 </tr>
 <tr>
 <td><a href="../../rules/Azure.AppService.MinTLS/">Azure.AppService.MinTLS</a></td>
 <td>App Service should not accept weak or deprecated transport protocols for client-server communication.</td>
 <td>Critical</td>
+<td>L1</td>
 </tr>
 <tr>
 <td><a href="../../rules/Azure.AppService.NETVersion/">Azure.AppService.NETVersion</a></td>
 <td>Configure applications to use newer .NET versions.</td>
 <td>Important</td>
+<td>-</td>
 </tr>
 <tr>
 <td><a href="../../rules/Azure.AppService.NodeJsVersion/">Azure.AppService.NodeJsVersion</a></td>
 <td>Configure applications to use supported Node.js runtime versions.</td>
 <td>Important</td>
+<td>-</td>
 </tr>
 <tr>
 <td><a href="../../rules/Azure.AppService.PHPVersion/">Azure.AppService.PHPVersion</a></td>
 <td>Configure applications to use newer PHP runtime versions.</td>
 <td>Important</td>
+<td>-</td>
 </tr>
 <tr>
 <td><a href="../../rules/Azure.AppService.RemoteDebug/">Azure.AppService.RemoteDebug</a></td>
 <td>Disable remote debugging on App Service apps when not in use.</td>
 <td>Important</td>
+<td>-</td>
 </tr>
 <tr>
 <td><a href="../../rules/Azure.AppService.UseHTTPS/">Azure.AppService.UseHTTPS</a></td>
 <td>Unencrypted communication could allow disclosure of information to an untrusted party.</td>
 <td>Important</td>
+<td>-</td>
 </tr>
 <tr>
 <td><a href="../../rules/Azure.AppService.WebSecureFtp/">Azure.AppService.WebSecureFtp</a></td>
 <td>Web apps should disable insecure FTP and configure SFTP when required.</td>
 <td>Important</td>
+<td>-</td>
 </tr>
 <tr>
 <td><a href="../../rules/Azure.Automation.AuditLogs/">Azure.Automation.AuditLogs</a></td>
 <td>Ensure automation account audit diagnostic logs are enabled.</td>
 <td>Important</td>
+<td>-</td>
 </tr>
 <tr>
 <td><a href="../../rules/Azure.Automation.EncryptVariables/">Azure.Automation.EncryptVariables</a></td>
 <td>Azure Automation variables should be encrypted.</td>
 <td>Important</td>
+<td>-</td>
 </tr>
 <tr>
 <td><a href="../../rules/Azure.Automation.ManagedIdentity/">Azure.Automation.ManagedIdentity</a></td>
 <td>Ensure Managed Identity is used for authentication.</td>
 <td>Important</td>
+<td>L1</td>
 </tr>
 <tr>
 <td><a href="../../rules/Azure.Automation.WebHookExpiry/">Azure.Automation.WebHookExpiry</a></td>
 <td>Do not create webhooks with an expiry time greater than 1 year (default).</td>
 <td>Awareness</td>
+<td>-</td>
 </tr>
 <tr>
 <td><a href="../../rules/Azure.BV.Immutable/">Azure.BV.Immutable</a></td>
 <td>Ensure immutability is configured to protect backup data.</td>
 <td>Important</td>
+<td>-</td>
 </tr>
 <tr>
 <td><a href="../../rules/Azure.CDN.HTTP/">Azure.CDN.HTTP</a></td>
 <td>Unencrypted communication could allow disclosure of information to an untrusted party.</td>
 <td>Important</td>
+<td>-</td>
 </tr>
 <tr>
 <td><a href="../../rules/Azure.CDN.MinTLS/">Azure.CDN.MinTLS</a></td>
 <td>Azure CDN endpoints should reject TLS versions older than 1.2.</td>
 <td>Important</td>
+<td>L1</td>
 </tr>
 <tr>
 <td><a href="../../rules/Azure.ContainerApp.ExternalIngress/">Azure.ContainerApp.ExternalIngress</a></td>
 <td>Limit inbound communication for Container Apps is limited to callers within the Container Apps Environment.</td>
 <td>Important</td>
+<td>-</td>
 </tr>
 <tr>
 <td><a href="../../rules/Azure.ContainerApp.Insecure/">Azure.ContainerApp.Insecure</a></td>
 <td>Ensure insecure inbound traffic is not permitted to the container app.</td>
 <td>Important</td>
+<td>-</td>
 </tr>
 <tr>
 <td><a href="../../rules/Azure.ContainerApp.ManagedIdentity/">Azure.ContainerApp.ManagedIdentity</a></td>
 <td>Ensure managed identity is used for authentication.</td>
 <td>Important</td>
+<td>-</td>
 </tr>
 <tr>
 <td><a href="../../rules/Azure.ContainerApp.PublicAccess/">Azure.ContainerApp.PublicAccess</a></td>
 <td>Ensure public network access for Container Apps environment is disabled.</td>
 <td>Important</td>
+<td>-</td>
 </tr>
 <tr>
 <td><a href="../../rules/Azure.ContainerApp.RestrictIngress/">Azure.ContainerApp.RestrictIngress</a></td>
 <td>IP ingress restrictions mode should be set to allow action for all rules defined.</td>
 <td>Important</td>
+<td>-</td>
 </tr>
 <tr>
 <td><a href="../../rules/Azure.Cosmos.DefenderCloud/">Azure.Cosmos.DefenderCloud</a></td>
 <td>Enable Microsoft Defender for Azure Cosmos DB.</td>
 <td>Critical</td>
+<td>-</td>
 </tr>
 <tr>
 <td><a href="../../rules/Azure.Cosmos.DisableLocalAuth/">Azure.Cosmos.DisableLocalAuth</a></td>
 <td>Access keys allow depersonalized access to Cosmos DB accounts using a shared secret.</td>
 <td>Critical</td>
+<td>-</td>
 </tr>
 <tr>
 <td><a href="../../rules/Azure.Cosmos.DisableMetadataWrite/">Azure.Cosmos.DisableMetadataWrite</a></td>
 <td>Use Entra ID identities for management place operations in Azure Cosmos DB.</td>
 <td>Important</td>
+<td>-</td>
 </tr>
 <tr>
 <td><a href="../../rules/Azure.Cosmos.MinTLS/">Azure.Cosmos.MinTLS</a></td>
 <td>Cosmos DB accounts should reject TLS versions older than 1.2.</td>
 <td>Critical</td>
+<td>-</td>
 </tr>
 <tr>
 <td><a href="../../rules/Azure.Cosmos.PublicAccess/">Azure.Cosmos.PublicAccess</a></td>
 <td>Azure Cosmos DB should have public network access disabled.</td>
 <td>Critical</td>
+<td>-</td>
 </tr>
 <tr>
 <td><a href="../../rules/Azure.Databricks.PublicAccess/">Azure.Databricks.PublicAccess</a></td>
 <td>Azure Databricks workspaces should disable public network access.</td>
 <td>Critical</td>
+<td>-</td>
 </tr>
 <tr>
 <td><a href="../../rules/Azure.Databricks.SecureConnectivity/">Azure.Databricks.SecureConnectivity</a></td>
 <td>Use Databricks workspaces configured for secure cluster connectivity.</td>
 <td>Critical</td>
+<td>-</td>
 </tr>
 <tr>
 <td><a href="../../rules/Azure.Defender.Api/">Azure.Defender.Api</a></td>
 <td>Enable Microsoft Defender for APIs.</td>
 <td>Critical</td>
+<td>-</td>
 </tr>
 <tr>
 <td><a href="../../rules/Azure.Defender.AppServices/">Azure.Defender.AppServices</a></td>
 <td>Enable Microsoft Defender for App Service.</td>
 <td>Critical</td>
+<td>-</td>
 </tr>
 <tr>
 <td><a href="../../rules/Azure.Defender.Arm/">Azure.Defender.Arm</a></td>
 <td>Enable Microsoft Defender for Azure Resource Manager (ARM).</td>
 <td>Critical</td>
+<td>-</td>
 </tr>
 <tr>
 <td><a href="../../rules/Azure.Defender.Containers/">Azure.Defender.Containers</a></td>
 <td>Enable Microsoft Defender for Containers.</td>
 <td>Critical</td>
+<td>-</td>
 </tr>
 <tr>
 <td><a href="../../rules/Azure.Defender.CosmosDb/">Azure.Defender.CosmosDb</a></td>
 <td>Enable Microsoft Defender for Azure Cosmos DB.</td>
 <td>Critical</td>
+<td>-</td>
 </tr>
 <tr>
 <td><a href="../../rules/Azure.Defender.Cspm/">Azure.Defender.Cspm</a></td>
 <td>Enable Microsoft Defender Cloud Security Posture Management Standard plan.</td>
 <td>Critical</td>
+<td>-</td>
 </tr>
 <tr>
 <td><a href="../../rules/Azure.Defender.Dns/">Azure.Defender.Dns</a></td>
 <td>Enable Microsoft Defender for DNS.</td>
 <td>Critical</td>
+<td>-</td>
 </tr>
 <tr>
 <td><a href="../../rules/Azure.Defender.KeyVault/">Azure.Defender.KeyVault</a></td>
 <td>Enable Microsoft Defender for Key Vault.</td>
 <td>Critical</td>
+<td>-</td>
 </tr>
 <tr>
 <td><a href="../../rules/Azure.Defender.OssRdb/">Azure.Defender.OssRdb</a></td>
 <td>Enable Microsoft Defender for open-source relational databases.</td>
 <td>Critical</td>
+<td>-</td>
 </tr>
 <tr>
 <td><a href="../../rules/Azure.Defender.SecurityContact/">Azure.Defender.SecurityContact</a></td>
 <td>Important security notifications may be lost or not processed in a timely manner when a clear security contact is not identified.</td>
 <td>Important</td>
+<td>-</td>
 </tr>
 <tr>
 <td><a href="../../rules/Azure.Defender.Servers/">Azure.Defender.Servers</a></td>
 <td>Enable Microsoft Defender for Servers.</td>
 <td>Critical</td>
+<td>-</td>
 </tr>
 <tr>
 <td><a href="../../rules/Azure.Defender.SQL/">Azure.Defender.SQL</a></td>
 <td>Enable Microsoft Defender for SQL servers.</td>
 <td>Critical</td>
+<td>-</td>
 </tr>
 <tr>
 <td><a href="../../rules/Azure.Defender.SQLOnVM/">Azure.Defender.SQLOnVM</a></td>
 <td>Enable Microsoft Defender for SQL servers on machines.</td>
 <td>Critical</td>
+<td>-</td>
 </tr>
 <tr>
 <td><a href="../../rules/Azure.Defender.Storage/">Azure.Defender.Storage</a></td>
 <td>Enable Microsoft Defender for Storage.</td>
 <td>Critical</td>
+<td>-</td>
 </tr>
 <tr>
 <td><a href="../../rules/Azure.Defender.Storage.MalwareScan/">Azure.Defender.Storage.MalwareScan</a></td>
 <td>Enable Malware Scanning in Microsoft Defender for Storage.</td>
 <td>Critical</td>
+<td>-</td>
 </tr>
 <tr>
 <td><a href="../../rules/Azure.DefenderCloud.ActiveAlerts/">Azure.DefenderCloud.ActiveAlerts</a></td>
 <td>Alerts that have not received a response may indicate a security issue that requires attention.</td>
 <td>Important</td>
+<td>-</td>
 </tr>
 <tr>
 <td><a href="../../rules/Azure.DefenderCloud.Provisioning/">Azure.DefenderCloud.Provisioning</a></td>
 <td>Enable auto-provisioning on to improve Microsoft Defender for Cloud insights.</td>
 <td>Important</td>
+<td>-</td>
 </tr>
 <tr>
 <td><a href="../../rules/Azure.Deployment.AdminUsername/">Azure.Deployment.AdminUsername</a></td>
 <td>A sensitive property set from deterministic or hardcoded values is not secure.</td>
 <td>Awareness</td>
+<td>-</td>
 </tr>
 <tr>
 <td><a href="../../rules/Azure.Deployment.OuterSecret/">Azure.Deployment.OuterSecret</a></td>
 <td>Outer evaluation deployments may leak secrets exposed as secure parameters into logs and nested deployments.</td>
 <td>Critical</td>
+<td>-</td>
 </tr>
 <tr>
 <td><a href="../../rules/Azure.Deployment.OutputSecretValue/">Azure.Deployment.OutputSecretValue</a></td>
 <td>Outputting a sensitive value from deployment may leak secrets into deployment history or logs.</td>
 <td>Critical</td>
+<td>-</td>
 </tr>
 <tr>
 <td><a href="../../rules/Azure.Deployment.SecretLeak/">Azure.Deployment.SecretLeak</a></td>
 <td>Sensitive parameters that have been not been marked as secure may leak the secret into deployment history or logs.</td>
 <td>Critical</td>
+<td>-</td>
 </tr>
 <tr>
 <td><a href="../../rules/Azure.Deployment.SecureParameter/">Azure.Deployment.SecureParameter</a></td>
 <td>Sensitive parameters that have been not been marked as secure may leak the secret into deployment history or logs.</td>
 <td>Critical</td>
+<td>-</td>
 </tr>
 <tr>
 <td><a href="../../rules/Azure.Deployment.SecureValue/">Azure.Deployment.SecureValue</a></td>
 <td>A secret property set from a non-secure value may leak the secret into deployment history or logs.</td>
 <td>Critical</td>
+<td>-</td>
 </tr>
 <tr>
 <td><a href="../../rules/Azure.DNS.DNSSEC/">Azure.DNS.DNSSEC</a></td>
 <td>DNS may be vulnerable to several attacks when the DNS clients are not able to verify the authenticity of the DNS responses.</td>
 <td>Important</td>
+<td>-</td>
 </tr>
 <tr>
 <td><a href="../../rules/Azure.EntraDS.NTLM/">Azure.EntraDS.NTLM</a></td>
 <td>Disable NTLM v1 for Microsoft Entra Domain Services.</td>
 <td>Critical</td>
+<td>-</td>
 </tr>
 <tr>
 <td><a href="../../rules/Azure.EntraDS.RC4/">Azure.EntraDS.RC4</a></td>
 <td>Disable RC4 encryption for Microsoft Entra Domain Services.</td>
 <td>Critical</td>
+<td>-</td>
 </tr>
 <tr>
 <td><a href="../../rules/Azure.EntraDS.ReplicaLocation/">Azure.EntraDS.ReplicaLocation</a></td>
 <td>The location of a replica set determines the country or region where the data is stored and processed.</td>
 <td>Important</td>
+<td>-</td>
 </tr>
 <tr>
 <td><a href="../../rules/Azure.EntraDS.TLS/">Azure.EntraDS.TLS</a></td>
 <td>Disable TLS v1 for Microsoft Entra Domain Services.</td>
 <td>Critical</td>
+<td>-</td>
 </tr>
 <tr>
 <td><a href="../../rules/Azure.EventGrid.DisableLocalAuth/">Azure.EventGrid.DisableLocalAuth</a></td>
 <td>Authenticate publishing clients with Azure AD identities.</td>
 <td>Important</td>
+<td>-</td>
 </tr>
 <tr>
 <td><a href="../../rules/Azure.EventGrid.DomainTLS/">Azure.EventGrid.DomainTLS</a></td>
 <td>Weak or deprecated transport protocols for client-server communication introduce security vulnerabilities.</td>
 <td>Critical</td>
+<td>-</td>
 </tr>
 <tr>
 <td><a href="../../rules/Azure.EventGrid.ManagedIdentity/">Azure.EventGrid.ManagedIdentity</a></td>
 <td>Use managed identities to deliver Event Grid Topic events.</td>
 <td>Important</td>
+<td>-</td>
 </tr>
 <tr>
 <td><a href="../../rules/Azure.EventGrid.NamespaceTLS/">Azure.EventGrid.NamespaceTLS</a></td>
 <td>Weak or deprecated transport protocols for client-server communication introduce security vulnerabilities.</td>
 <td>Critical</td>
+<td>-</td>
 </tr>
 <tr>
 <td><a href="../../rules/Azure.EventGrid.TopicPublicAccess/">Azure.EventGrid.TopicPublicAccess</a></td>
 <td>Use Private Endpoints to access Event Grid topics and domains.</td>
 <td>Important</td>
+<td>-</td>
 </tr>
 <tr>
 <td><a href="../../rules/Azure.EventGrid.TopicTLS/">Azure.EventGrid.TopicTLS</a></td>
 <td>Weak or deprecated transport protocols for client-server communication introduce security vulnerabilities.</td>
 <td>Critical</td>
+<td>-</td>
 </tr>
 <tr>
 <td><a href="../../rules/Azure.EventHub.DisableLocalAuth/">Azure.EventHub.DisableLocalAuth</a></td>
 <td>Authenticate Event Hub publishers and consumers with Entra ID identities.</td>
 <td>Important</td>
+<td>-</td>
 </tr>
 <tr>
 <td><a href="../../rules/Azure.EventHub.Firewall/">Azure.EventHub.Firewall</a></td>
 <td>Access to the namespace endpoints should be restricted to only allowed sources.</td>
 <td>Critical</td>
+<td>-</td>
 </tr>
 <tr>
 <td><a href="../../rules/Azure.EventHub.MinTLS/">Azure.EventHub.MinTLS</a></td>
 <td>Weak or deprecated transport protocols for client-server communication introduce security vulnerabilities.</td>
 <td>Critical</td>
+<td>-</td>
 </tr>
 <tr>
 <td><a href="../../rules/Azure.Firewall.Mode/">Azure.Firewall.Mode</a></td>
 <td>Deny high confidence malicious IP addresses and domains on classic managed Azure Firewalls.</td>
 <td>Critical</td>
+<td>-</td>
 </tr>
 <tr>
 <td><a href="../../rules/Azure.Firewall.PolicyMode/">Azure.Firewall.PolicyMode</a></td>
 <td>Deny high confidence malicious IP addresses, domains and URLs.</td>
 <td>Critical</td>
+<td>-</td>
 </tr>
 <tr>
 <td><a href="../../rules/Azure.FrontDoor.Logs/">Azure.FrontDoor.Logs</a></td>
 <td>Audit and monitor access through Azure Front Door profiles.</td>
 <td>Important</td>
+<td>-</td>
 </tr>
 <tr>
 <td><a href="../../rules/Azure.FrontDoor.ManagedIdentity/">Azure.FrontDoor.ManagedIdentity</a></td>
 <td>Ensure Front Door uses a managed identity to authorize access to Azure resources.</td>
 <td>Important</td>
+<td>-</td>
 </tr>
 <tr>
 <td><a href="../../rules/Azure.FrontDoor.MinTLS/">Azure.FrontDoor.MinTLS</a></td>
 <td>Front Door Classic instances should reject TLS versions older than 1.2.</td>
 <td>Critical</td>
+<td>L1</td>
 </tr>
 <tr>
 <td><a href="../../rules/Azure.FrontDoor.UseWAF/">Azure.FrontDoor.UseWAF</a></td>
 <td>Enable Web Application Firewall (WAF) policies on each Front Door endpoint.</td>
 <td>Critical</td>
+<td>-</td>
 </tr>
 <tr>
 <td><a href="../../rules/Azure.FrontDoor.WAF.Enabled/">Azure.FrontDoor.WAF.Enabled</a></td>
 <td>Front Door Web Application Firewall (WAF) policy must be enabled to protect back end resources.</td>
 <td>Critical</td>
+<td>-</td>
 </tr>
 <tr>
 <td><a href="../../rules/Azure.FrontDoor.WAF.Mode/">Azure.FrontDoor.WAF.Mode</a></td>
 <td>Use protection mode in Front Door Web Application Firewall (WAF) policies to protect back end resources.</td>
 <td>Critical</td>
+<td>-</td>
 </tr>
 <tr>
 <td><a href="../../rules/Azure.FrontDoorWAF.Enabled/">Azure.FrontDoorWAF.Enabled</a></td>
 <td>Front Door Web Application Firewall (WAF) policy must be enabled to protect back end resources.</td>
 <td>Critical</td>
+<td>-</td>
 </tr>
 <tr>
 <td><a href="../../rules/Azure.FrontDoorWAF.Exclusions/">Azure.FrontDoorWAF.Exclusions</a></td>
 <td>Use recommended rule groups in Front Door Web Application Firewall (WAF) policies to protect back end resources. Avoid configuring rule exclusions.</td>
 <td>Critical</td>
+<td>-</td>
 </tr>
 <tr>
 <td><a href="../../rules/Azure.FrontDoorWAF.PreventionMode/">Azure.FrontDoorWAF.PreventionMode</a></td>
 <td>Use protection mode in Front Door Web Application Firewall (WAF) policies to protect back end resources.</td>
 <td>Critical</td>
+<td>-</td>
 </tr>
 <tr>
 <td><a href="../../rules/Azure.FrontDoorWAF.RuleGroups/">Azure.FrontDoorWAF.RuleGroups</a></td>
 <td>Use recommended rule groups in Front Door Web Application Firewall (WAF) policies to protect back end resources.</td>
 <td>Critical</td>
+<td>-</td>
 </tr>
 <tr>
 <td><a href="../../rules/Azure.ImageBuilder.CustomizeHash/">Azure.ImageBuilder.CustomizeHash</a></td>
 <td>External scripts that are not pinned may be modified to execute privileged actions by an unauthorized user.</td>
 <td>Important</td>
+<td>-</td>
 </tr>
 <tr>
 <td><a href="../../rules/Azure.ImageBuilder.ValidateHash/">Azure.ImageBuilder.ValidateHash</a></td>
 <td>External scripts that are not pinned may be modified to execute privileged actions by an unauthorized user.</td>
 <td>Important</td>
+<td>-</td>
 </tr>
 <tr>
 <td><a href="../../rules/Azure.IoTHub.MinTLS/">Azure.IoTHub.MinTLS</a></td>
 <td>IoT Hubs should reject TLS versions older than 1.2.</td>
 <td>Critical</td>
+<td>L1</td>
 </tr>
 <tr>
 <td><a href="../../rules/Azure.KeyVault.AccessPolicy/">Azure.KeyVault.AccessPolicy</a></td>
 <td>Use the principal of least privilege when assigning access to Key Vault.</td>
 <td>Important</td>
+<td>L1</td>
 </tr>
 <tr>
 <td><a href="../../rules/Azure.KeyVault.AutoRotationPolicy/">Azure.KeyVault.AutoRotationPolicy</a></td>
 <td>Keys that become compromised may be used to spoof, decrypt, or gain access to sensitive data.</td>
 <td>Important</td>
+<td>-</td>
 </tr>
 <tr>
 <td><a href="../../rules/Azure.KeyVault.Firewall/">Azure.KeyVault.Firewall</a></td>
 <td>Key Vault should only accept explicitly allowed traffic.</td>
 <td>Important</td>
+<td>L2</td>
 </tr>
 <tr>
 <td><a href="../../rules/Azure.KeyVault.Logs/">Azure.KeyVault.Logs</a></td>
 <td>Ensure audit diagnostics logs are enabled to audit Key Vault access.</td>
 <td>Important</td>
+<td>L1</td>
 </tr>
 <tr>
 <td><a href="../../rules/Azure.KeyVault.RBAC/">Azure.KeyVault.RBAC</a></td>
 <td>Key Vaults should use Azure RBAC as the authorization system for the data plane.</td>
 <td>Awareness</td>
+<td>L1</td>
 </tr>
 <tr>
 <td><a href="../../rules/Azure.Log.ReplicaLocation/">Azure.Log.ReplicaLocation</a></td>
 <td>The replication location determines the country or region where the data is stored and processed.</td>
 <td>Important</td>
+<td>-</td>
 </tr>
 <tr>
 <td><a href="../../rules/Azure.LogicApp.LimitHTTPTrigger/">Azure.LogicApp.LimitHTTPTrigger</a></td>
 <td>Logic Apps using HTTP triggers without restrictions can be accessed from any network location including the Internet.</td>
 <td>Critical</td>
+<td>-</td>
 </tr>
 <tr>
 <td><a href="../../rules/Azure.MariaDB.AllowAzureAccess/">Azure.MariaDB.AllowAzureAccess</a></td>
 <td>Determine if access from Azure services is required.</td>
 <td>Important</td>
+<td>-</td>
 </tr>
 <tr>
 <td><a href="../../rules/Azure.MariaDB.DefenderCloud/">Azure.MariaDB.DefenderCloud</a></td>
 <td>Enable Microsoft Defender for Cloud for Azure Database for MariaDB.</td>
 <td>Important</td>
+<td>-</td>
 </tr>
 <tr>
 <td><a href="../../rules/Azure.MariaDB.FirewallIPRange/">Azure.MariaDB.FirewallIPRange</a></td>
 <td>Determine if there is an excessive number of permitted IP addresses.</td>
 <td>Important</td>
+<td>-</td>
 </tr>
 <tr>
 <td><a href="../../rules/Azure.MariaDB.FirewallRuleCount/">Azure.MariaDB.FirewallRuleCount</a></td>
 <td>Determine if there is an excessive number of firewall rules.</td>
 <td>Awareness</td>
+<td>-</td>
 </tr>
 <tr>
 <td><a href="../../rules/Azure.MariaDB.MinTLS/">Azure.MariaDB.MinTLS</a></td>
 <td>Azure Database for MariaDB servers should reject TLS versions older than 1.2.</td>
 <td>Critical</td>
+<td>-</td>
 </tr>
 <tr>
 <td><a href="../../rules/Azure.MariaDB.UseSSL/">Azure.MariaDB.UseSSL</a></td>
 <td>Azure Database for MariaDB servers should only accept encrypted connections.</td>
 <td>Critical</td>
+<td>-</td>
 </tr>
 <tr>
 <td><a href="../../rules/Azure.ML.ComputeVnet/">Azure.ML.ComputeVnet</a></td>
 <td>Azure Machine Learning Computes should be hosted in a virtual network (VNet).</td>
 <td>Critical</td>
+<td>-</td>
 </tr>
 <tr>
 <td><a href="../../rules/Azure.ML.DisableLocalAuth/">Azure.ML.DisableLocalAuth</a></td>
 <td>Azure Machine Learning compute resources should have local authentication methods disabled.</td>
 <td>Critical</td>
+<td>-</td>
 </tr>
 <tr>
 <td><a href="../../rules/Azure.ML.PublicAccess/">Azure.ML.PublicAccess</a></td>
 <td>Disable public network access from a Azure Machine Learning workspace.</td>
 <td>Critical</td>
+<td>-</td>
 </tr>
 <tr>
 <td><a href="../../rules/Azure.ML.UserManagedIdentity/">Azure.ML.UserManagedIdentity</a></td>
 <td>ML workspaces should use user-assigned managed identity, rather than the default system-assigned managed identity.</td>
 <td>Important</td>
+<td>-</td>
 </tr>
 <tr>
 <td><a href="../../rules/Azure.MySQL.AAD/">Azure.MySQL.AAD</a></td>
 <td>Use Entra ID authentication with Azure Database for MySQL databases.</td>
 <td>Critical</td>
+<td>L1</td>
 </tr>
 <tr>
 <td><a href="../../rules/Azure.MySQL.AADOnly/">Azure.MySQL.AADOnly</a></td>
 <td>Ensure Entra ID only authentication is enabled with Azure Database for MySQL databases.</td>
 <td>Important</td>
+<td>L1</td>
 </tr>
 <tr>
 <td><a href="../../rules/Azure.MySQL.AllowAzureAccess/">Azure.MySQL.AllowAzureAccess</a></td>
 <td>Determine if access from Azure services is required.</td>
 <td>Important</td>
+<td>-</td>
 </tr>
 <tr>
 <td><a href="../../rules/Azure.MySQL.DefenderCloud/">Azure.MySQL.DefenderCloud</a></td>
 <td>Enable Microsoft Defender for Cloud for Azure Database for MySQL.</td>
 <td>Important</td>
+<td>-</td>
 </tr>
 <tr>
 <td><a href="../../rules/Azure.MySQL.FirewallIPRange/">Azure.MySQL.FirewallIPRange</a></td>
 <td>Determine if there is an excessive number of permitted IP addresses.</td>
 <td>Important</td>
+<td>-</td>
 </tr>
 <tr>
 <td><a href="../../rules/Azure.MySQL.FirewallRuleCount/">Azure.MySQL.FirewallRuleCount</a></td>
 <td>Determine if there is an excessive number of firewall rules.</td>
 <td>Awareness</td>
+<td>-</td>
 </tr>
 <tr>
 <td><a href="../../rules/Azure.MySQL.MinTLS/">Azure.MySQL.MinTLS</a></td>
 <td>MySQL DB servers should reject TLS versions older than 1.2.</td>
 <td>Critical</td>
+<td>-</td>
 </tr>
 <tr>
 <td><a href="../../rules/Azure.MySQL.UseSSL/">Azure.MySQL.UseSSL</a></td>
 <td>Enforce encrypted MySQL connections.</td>
 <td>Critical</td>
+<td>-</td>
 </tr>
 <tr>
 <td><a href="../../rules/Azure.NSG.AnyInboundSource/">Azure.NSG.AnyInboundSource</a></td>
 <td>Network security groups (NSGs) should avoid rules that allow "any" as an inbound source.</td>
 <td>Critical</td>
+<td>-</td>
 </tr>
 <tr>
 <td><a href="../../rules/Azure.NSG.LateralTraversal/">Azure.NSG.LateralTraversal</a></td>
 <td>Deny outbound management connections from non-management hosts.</td>
 <td>Important</td>
+<td>-</td>
 </tr>
 <tr>
 <td><a href="../../rules/Azure.Policy.WaiverExpiry/">Azure.Policy.WaiverExpiry</a></td>
 <td>Configure policy waiver exemptions to expire.</td>
 <td>Awareness</td>
+<td>-</td>
 </tr>
 <tr>
 <td><a href="../../rules/Azure.PostgreSQL.AAD/">Azure.PostgreSQL.AAD</a></td>
 <td>Use Entra ID authentication with Azure Database for PostgreSQL databases.</td>
 <td>Critical</td>
+<td>L1</td>
 </tr>
 <tr>
 <td><a href="../../rules/Azure.PostgreSQL.AADOnly/">Azure.PostgreSQL.AADOnly</a></td>
 <td>Ensure Entra ID only authentication is enabled with Azure Database for PostgreSQL databases.</td>
 <td>Important</td>
+<td>-</td>
 </tr>
 <tr>
 <td><a href="../../rules/Azure.PostgreSQL.AllowAzureAccess/">Azure.PostgreSQL.AllowAzureAccess</a></td>
 <td>Determine if access from Azure services is required.</td>
 <td>Important</td>
+<td>-</td>
 </tr>
 <tr>
 <td><a href="../../rules/Azure.PostgreSQL.DefenderCloud/">Azure.PostgreSQL.DefenderCloud</a></td>
 <td>Enable Microsoft Defender for Cloud for Azure Database for PostgreSQL.</td>
 <td>Important</td>
+<td>-</td>
 </tr>
 <tr>
 <td><a href="../../rules/Azure.PostgreSQL.FirewallIPRange/">Azure.PostgreSQL.FirewallIPRange</a></td>
 <td>Determine if there is an excessive number of permitted IP addresses.</td>
 <td>Important</td>
+<td>-</td>
 </tr>
 <tr>
 <td><a href="../../rules/Azure.PostgreSQL.FirewallRuleCount/">Azure.PostgreSQL.FirewallRuleCount</a></td>
 <td>Determine if there is an excessive number of firewall rules.</td>
 <td>Awareness</td>
+<td>-</td>
 </tr>
 <tr>
 <td><a href="../../rules/Azure.PostgreSQL.MinTLS/">Azure.PostgreSQL.MinTLS</a></td>
 <td>PostgreSQL DB servers should reject TLS versions older than 1.2.</td>
 <td>Critical</td>
+<td>-</td>
 </tr>
 <tr>
 <td><a href="../../rules/Azure.PostgreSQL.UseSSL/">Azure.PostgreSQL.UseSSL</a></td>
 <td>Enforce encrypted PostgreSQL connections.</td>
 <td>Critical</td>
+<td>-</td>
 </tr>
 <tr>
 <td><a href="../../rules/Azure.PublicIP.IsAttached/">Azure.PublicIP.IsAttached</a></td>
 <td>Public IP addresses should be attached or cleaned up if not in use.</td>
 <td>Important</td>
+<td>-</td>
 </tr>
 <tr>
 <td><a href="../../rules/Azure.RBAC.CoAdministrator/">Azure.RBAC.CoAdministrator</a></td>
 <td>Delegate access to manage Azure resources using role-based access control (RBAC).</td>
 <td>Important</td>
+<td>-</td>
 </tr>
 <tr>
 <td><a href="../../rules/Azure.RBAC.LimitMGDelegation/">Azure.RBAC.LimitMGDelegation</a></td>
 <td>Limit Role-Base Access Control (RBAC) inheritance from Management Groups.</td>
 <td>Important</td>
+<td>-</td>
 </tr>
 <tr>
 <td><a href="../../rules/Azure.RBAC.LimitOwner/">Azure.RBAC.LimitOwner</a></td>
 <td>Limit the number of subscription Owners.</td>
 <td>Important</td>
+<td>-</td>
 </tr>
 <tr>
 <td><a href="../../rules/Azure.RBAC.PIM/">Azure.RBAC.PIM</a></td>
 <td>Use just-in-time (JiT) activation of roles instead of persistent role assignment.</td>
 <td>Important</td>
+<td>-</td>
 </tr>
 <tr>
 <td><a href="../../rules/Azure.RBAC.UseGroups/">Azure.RBAC.UseGroups</a></td>
 <td>Use groups for assigning permissions instead of individual user accounts.</td>
 <td>Important</td>
+<td>-</td>
 </tr>
 <tr>
 <td><a href="../../rules/Azure.RBAC.UseRGDelegation/">Azure.RBAC.UseRGDelegation</a></td>
 <td>Use RBAC assignments on resource groups instead of individual resources.</td>
 <td>Important</td>
+<td>-</td>
 </tr>
 <tr>
 <td><a href="../../rules/Azure.Redis.EntraID/">Azure.Redis.EntraID</a></td>
 <td>Use Entra ID authentication with cache instances.</td>
 <td>Critical</td>
+<td>-</td>
 </tr>
 <tr>
 <td><a href="../../rules/Azure.Redis.FirewallIPRange/">Azure.Redis.FirewallIPRange</a></td>
 <td>Determine if there is an excessive number of permitted IP addresses for the Redis cache.</td>
 <td>Critical</td>
+<td>-</td>
 </tr>
 <tr>
 <td><a href="../../rules/Azure.Redis.FirewallRuleCount/">Azure.Redis.FirewallRuleCount</a></td>
 <td>Determine if there is an excessive number of firewall rules for the Redis cache.</td>
 <td>Awareness</td>
+<td>-</td>
 </tr>
 <tr>
 <td><a href="../../rules/Azure.Redis.MinTLS/">Azure.Redis.MinTLS</a></td>
 <td>Redis Cache should reject TLS versions older than 1.2.</td>
 <td>Critical</td>
+<td>-</td>
 </tr>
 <tr>
 <td><a href="../../rules/Azure.Redis.NonSslPort/">Azure.Redis.NonSslPort</a></td>
 <td>Azure Cache for Redis should only accept secure connections.</td>
 <td>Critical</td>
+<td>-</td>
 </tr>
 <tr>
 <td><a href="../../rules/Azure.Redis.PublicNetworkAccess/">Azure.Redis.PublicNetworkAccess</a></td>
 <td>Redis cache should disable public network access.</td>
 <td>Critical</td>
+<td>-</td>
 </tr>
 <tr>
 <td><a href="../../rules/Azure.RedisEnterprise.MinTLS/">Azure.RedisEnterprise.MinTLS</a></td>
 <td>Redis Cache should reject TLS versions older than 1.2.</td>
 <td>Critical</td>
+<td>-</td>
 </tr>
 <tr>
 <td><a href="../../rules/Azure.Resource.AllowedRegions/">Azure.Resource.AllowedRegions</a></td>
 <td>The deployment location of a resource determines the country or region where metadata and data is stored and processed.</td>
 <td>Important</td>
+<td>-</td>
 </tr>
 <tr>
 <td><a href="../../rules/Azure.RSV.Immutable/">Azure.RSV.Immutable</a></td>
 <td>Ensure immutability is configured to protect backup data.</td>
 <td>Important</td>
+<td>-</td>
 </tr>
 <tr>
 <td><a href="../../rules/Azure.Search.ManagedIdentity/">Azure.Search.ManagedIdentity</a></td>
 <td>Configure managed identities to access Azure resources.</td>
 <td>Important</td>
+<td>-</td>
 </tr>
 <tr>
 <td><a href="../../rules/Azure.ServiceBus.AuditLogs/">Azure.ServiceBus.AuditLogs</a></td>
 <td>Ensure namespaces audit diagnostic logs are enabled.</td>
 <td>Important</td>
+<td>-</td>
 </tr>
 <tr>
 <td><a href="../../rules/Azure.ServiceBus.DisableLocalAuth/">Azure.ServiceBus.DisableLocalAuth</a></td>
 <td>Authenticate Service Bus publishers and consumers with Entra ID identities.</td>
 <td>Important</td>
+<td>-</td>
 </tr>
 <tr>
 <td><a href="../../rules/Azure.ServiceBus.MinTLS/">Azure.ServiceBus.MinTLS</a></td>
 <td>Service Bus namespaces should reject TLS versions older than 1.2.</td>
 <td>Important</td>
+<td>-</td>
 </tr>
 <tr>
 <td><a href="../../rules/Azure.ServiceFabric.AAD/">Azure.ServiceFabric.AAD</a></td>
 <td>Use Entra ID client authentication for Service Fabric clusters.</td>
 <td>Critical</td>
+<td>-</td>
 </tr>
 <tr>
 <td><a href="../../rules/Azure.ServiceFabric.ProtectionLevel/">Azure.ServiceFabric.ProtectionLevel</a></td>
 <td>Node to node communication that is not signed and encrypted may be susceptible to man-in-the-middle attacks.</td>
 <td>Important</td>
+<td>-</td>
 </tr>
 <tr>
 <td><a href="../../rules/Azure.SignalR.ManagedIdentity/">Azure.SignalR.ManagedIdentity</a></td>
 <td>Configure SignalR Services to use managed identities to access Azure resources securely.</td>
 <td>Important</td>
+<td>-</td>
 </tr>
 <tr>
 <td><a href="../../rules/Azure.SQL.AAD/">Azure.SQL.AAD</a></td>
 <td>Use Entra ID authentication with Azure SQL databases.</td>
 <td>Critical</td>
+<td>L1</td>
 </tr>
 <tr>
 <td><a href="../../rules/Azure.SQL.AADOnly/">Azure.SQL.AADOnly</a></td>
 <td>Ensure Entra ID only authentication is enabled with Azure SQL Database.</td>
 <td>Important</td>
+<td>L1</td>
 </tr>
 <tr>
 <td><a href="../../rules/Azure.SQL.AllowAzureAccess/">Azure.SQL.AllowAzureAccess</a></td>
 <td>Determine if access from Azure services is required.</td>
 <td>Important</td>
+<td>-</td>
 </tr>
 <tr>
 <td><a href="../../rules/Azure.SQL.Auditing/">Azure.SQL.Auditing</a></td>
 <td>Enable auditing for Azure SQL logical server.</td>
 <td>Important</td>
+<td>-</td>
 </tr>
 <tr>
 <td><a href="../../rules/Azure.SQL.DefenderCloud/">Azure.SQL.DefenderCloud</a></td>
 <td>Enable Microsoft Defender for Azure SQL logical server.</td>
 <td>Important</td>
+<td>-</td>
 </tr>
 <tr>
 <td><a href="../../rules/Azure.SQL.FirewallIPRange/">Azure.SQL.FirewallIPRange</a></td>
 <td>Each IP address in the permitted IP list is allowed network access to any databases hosted on the same logical server.</td>
 <td>Important</td>
+<td>-</td>
 </tr>
 <tr>
 <td><a href="../../rules/Azure.SQL.FirewallRuleCount/">Azure.SQL.FirewallRuleCount</a></td>
 <td>Determine if there is an excessive number of firewall rules.</td>
 <td>Awareness</td>
+<td>-</td>
 </tr>
 <tr>
 <td><a href="../../rules/Azure.SQL.MinTLS/">Azure.SQL.MinTLS</a></td>
 <td>Azure SQL Database servers should reject TLS versions older than 1.2.</td>
 <td>Critical</td>
+<td>-</td>
 </tr>
 <tr>
 <td><a href="../../rules/Azure.SQL.TDE/">Azure.SQL.TDE</a></td>
 <td>Use Transparent Data Encryption (TDE) with Azure SQL Database.</td>
 <td>Critical</td>
+<td>-</td>
 </tr>
 <tr>
 <td><a href="../../rules/Azure.SQL.VAScan/">Azure.SQL.VAScan</a></td>
 <td>SQL Databases may have configuration vulnerabilities discovered after they are deployed.</td>
 <td>Important</td>
+<td>-</td>
 </tr>
 <tr>
 <td><a href="../../rules/Azure.SQLMI.AAD/">Azure.SQLMI.AAD</a></td>
 <td>Use Azure Active Directory (AAD) authentication with Azure SQL Managed Instance.</td>
 <td>Critical</td>
+<td>-</td>
 </tr>
 <tr>
 <td><a href="../../rules/Azure.SQLMI.AADOnly/">Azure.SQLMI.AADOnly</a></td>
 <td>Ensure Azure AD-only authentication is enabled with Azure SQL Managed Instance.</td>
 <td>Important</td>
+<td>-</td>
 </tr>
 <tr>
 <td><a href="../../rules/Azure.SQLMI.ManagedIdentity/">Azure.SQLMI.ManagedIdentity</a></td>
 <td>Ensure managed identity is used to allow support for Azure AD authentication.</td>
 <td>Important</td>
+<td>-</td>
 </tr>
 <tr>
 <td><a href="../../rules/Azure.Storage.BlobAccessType/">Azure.Storage.BlobAccessType</a></td>
 <td>Use containers configured with a private access type that requires authorization.</td>
 <td>Important</td>
+<td>-</td>
 </tr>
 <tr>
 <td><a href="../../rules/Azure.Storage.BlobPublicAccess/">Azure.Storage.BlobPublicAccess</a></td>
 <td>Storage Accounts should only accept authorized requests.</td>
 <td>Important</td>
+<td>-</td>
 </tr>
 <tr>
 <td><a href="../../rules/Azure.Storage.Defender.MalwareScan/">Azure.Storage.Defender.MalwareScan</a></td>
 <td>Enable Malware Scanning in Microsoft Defender for Storage.</td>
 <td>Critical</td>
+<td>-</td>
 </tr>
 <tr>
 <td><a href="../../rules/Azure.Storage.DefenderCloud/">Azure.Storage.DefenderCloud</a></td>
 <td>Enable Microsoft Defender for Storage for storage accounts.</td>
 <td>Critical</td>
+<td>-</td>
 </tr>
 <tr>
 <td><a href="../../rules/Azure.Storage.Firewall/">Azure.Storage.Firewall</a></td>
 <td>Storage Accounts should only accept explicitly allowed traffic.</td>
 <td>Important</td>
+<td>-</td>
 </tr>
 <tr>
 <td><a href="../../rules/Azure.Storage.MinTLS/">Azure.Storage.MinTLS</a></td>
 <td>Storage Accounts should not accept weak or deprecated transport protocols for client-server communication.</td>
 <td>Critical</td>
+<td>L1</td>
 </tr>
 <tr>
 <td><a href="../../rules/Azure.Storage.SecureTransfer/">Azure.Storage.SecureTransfer</a></td>
 <td>Storage accounts should only accept encrypted connections.</td>
 <td>Important</td>
+<td>L1</td>
 </tr>
 <tr>
 <td><a href="../../rules/Azure.TrafficManager.Protocol/">Azure.TrafficManager.Protocol</a></td>
 <td>Monitor Traffic Manager web-based endpoints with HTTPS.</td>
 <td>Important</td>
+<td>-</td>
 </tr>
 <tr>
 <td><a href="../../rules/Azure.VM.ADE/">Azure.VM.ADE</a></td>
 <td>Use Azure Disk Encryption (ADE).</td>
 <td>Important</td>
+<td>-</td>
 </tr>
 <tr>
 <td><a href="../../rules/Azure.VM.PublicIPAttached/">Azure.VM.PublicIPAttached</a></td>
 <td>Avoid attaching public IPs directly to virtual machines.</td>
 <td>Critical</td>
+<td>-</td>
 </tr>
 <tr>
 <td><a href="../../rules/Azure.VM.PublicKey/">Azure.VM.PublicKey</a></td>
 <td>Linux virtual machines should use public keys.</td>
 <td>Important</td>
+<td>-</td>
 </tr>
 <tr>
 <td><a href="../../rules/Azure.VM.ScriptExtensions/">Azure.VM.ScriptExtensions</a></td>
 <td>Custom Script Extensions scripts that reference secret values must use the protectedSettings.</td>
 <td>Important</td>
+<td>-</td>
 </tr>
 <tr>
 <td><a href="../../rules/Azure.VM.Updates/">Azure.VM.Updates</a></td>
 <td>Ensure automatic updates are enabled at deployment.</td>
 <td>Important</td>
+<td>-</td>
 </tr>
 <tr>
 <td><a href="../../rules/Azure.VM.UseManagedDisks/">Azure.VM.UseManagedDisks</a></td>
 <td>Virtual machines (VMs) should use managed disks.</td>
 <td>Important</td>
+<td>-</td>
 </tr>
 <tr>
 <td><a href="../../rules/Azure.VMSS.PublicIPAttached/">Azure.VMSS.PublicIPAttached</a></td>
 <td>Avoid attaching public IPs directly to virtual machine scale set instances.</td>
 <td>Critical</td>
+<td>-</td>
 </tr>
 <tr>
 <td><a href="../../rules/Azure.VMSS.PublicKey/">Azure.VMSS.PublicKey</a></td>
 <td>Use SSH keys instead of common credentials to secure virtual machine scale sets against malicious activities.</td>
 <td>Important</td>
+<td>-</td>
 </tr>
 <tr>
 <td><a href="../../rules/Azure.VMSS.ScriptExtensions/">Azure.VMSS.ScriptExtensions</a></td>
 <td>Custom Script Extensions scripts that reference secret values must use the protectedSettings.</td>
 <td>Important</td>
+<td>-</td>
 </tr>
 <tr>
 <td><a href="../../rules/Azure.VNET.FirewallSubnet/">Azure.VNET.FirewallSubnet</a></td>
 <td>Use Azure Firewall to filter network traffic to and from Azure resources.</td>
 <td>Important</td>
+<td>-</td>
 </tr>
 <tr>
 <td><a href="../../rules/Azure.VNET.PrivateSubnet/">Azure.VNET.PrivateSubnet</a></td>
 <td>Subnets that allow direct outbound access to the Internet may expose virtual machines to increased security risks.</td>
 <td>Critical</td>
+<td>-</td>
 </tr>
 <tr>
 <td><a href="../../rules/Azure.VNET.UseNSGs/">Azure.VNET.UseNSGs</a></td>
 <td>Virtual network (VNET) subnets should have Network Security Groups (NSGs) assigned.</td>
 <td>Critical</td>
+<td>-</td>
 </tr>
 <tr>
 <td><a href="../../rules/Azure.WebPubSub.ManagedIdentity/">Azure.WebPubSub.ManagedIdentity</a></td>
 <td>Configure Web PubSub Services to use managed identities to access Azure resources securely.</td>
 <td>Important</td>
+<td>-</td>
 </tr>
 </tbody>
 </table>
@@ -18122,7 +18349,7 @@
     <span class="md-icon" title="Last update">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="July 10, 2025 01:59:54 UTC">July 10, 2025</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="August 29, 2025 03:40:27 UTC">August 29, 2025</span>
   </span>
 
     
@@ -18150,14 +18377,19 @@
     
     <nav>
       
-        <a href="https://github.com/BernieWhite" class="md-author" title="@BernieWhite">
+        <a href="https://github.com/apps/copilot-swe-agent" class="md-author" title="@Copilot">
           
-          <img src="https://avatars.githubusercontent.com/u/13513058?v=4&size=72" alt="BernieWhite">
+          <img src="https://avatars.githubusercontent.com/in/1143301?v=4&size=72" alt="Copilot">
         </a>
       
         <a href="https://github.com/web-flow" class="md-author" title="@web-flow">
           
           <img src="https://avatars.githubusercontent.com/u/19864447?v=4&size=72" alt="web-flow">
+        </a>
+      
+        <a href="https://github.com/BernieWhite" class="md-author" title="@BernieWhite">
+          
+          <img src="https://avatars.githubusercontent.com/u/13513058?v=4&size=72" alt="BernieWhite">
         </a>
       
       

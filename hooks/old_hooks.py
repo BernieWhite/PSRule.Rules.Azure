@@ -67,6 +67,8 @@ def on_page_markdown(markdown: str, page: Page, config: MkDocsConfig, files: Fil
         if page.meta.get('moduleVersion', 'None') != 'None':
             markdown = markdown.replace("<!-- TAGS -->", f"{_badge_for_version(page.meta['moduleVersion'], page, files)}<!-- TAGS -->")
 
+        markdown = markdown.replace("<!-- TAGS -->", f"{_badge_for_baseline_csv(markdown, page)}<!-- TAGS -->")
+
     if is_rule_page(page) and page.meta.get("pillar", "None") != "None":
         page.meta['rule'] = page.canonical_url.split("/")[-2]
         read_metadata(page)
@@ -256,6 +258,21 @@ def _badge_for_version(text: str, page: Page, files: Files) -> str:
     return _badge(
         icon = f"[:{icon}:]({href} 'Minimum version')",
         text = f"[{text}]({href})"
+    )
+
+def _badge_for_baseline_csv(markdown: str, page: Page) -> str:
+    '''Add CSV download link to baseline markdown.'''
+
+    log.debug(f"Adding CSV download link for baseline page: {page.file.src_path}")
+
+    # Extract baseline name from file path (e.g., en/baselines/Azure.GA_2025_06.md -> Azure.GA_2025_06)
+    baseline_name = os.path.splitext(os.path.basename(page.file.src_path))[0]
+    csv_filename = f"{baseline_name}.csv"
+
+    icon = "octicons-desktop-download-24"
+    return _badge(
+        icon = f"[:{icon}:]({csv_filename} 'CSV')",
+        text = f"[Download CSV]({csv_filename})"
     )
 
 def _relative_uri(path: str, page: Page, files: Files) -> str:

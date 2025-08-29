@@ -1,0 +1,3 @@
+"Name","Synopsis","Severity","Pillar","Maturity"
+"Azure.ACR.Quarantine","Enable container image quarantine, scan, and mark images as verified.","Important","Security","-"
+"Azure.ACR.Retention","Use a retention policy to cleanup untagged manifests.","Important","Cost Optimization","-"

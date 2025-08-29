@@ -1,0 +1,8 @@
+"Name","Synopsis","Severity","Pillar","Maturity"
+"Azure.ACR.Quarantine","Enable container image quarantine, scan, and mark images as verified.","Important","Security","-"
+"Azure.ACR.Retention","Use a retention policy to cleanup untagged manifests.","Important","Cost Optimization","-"
+"Azure.ACR.SoftDelete","Container registry artifacts are permanently lost when accidentally deleted without soft delete protection.","Important","Reliability","-"
+"Azure.Arc.Kubernetes.Defender","Deploy Microsoft Defender for Containers extension for Arc-enabled Kubernetes clusters.","Important","Security","-"
+"Azure.Arc.Server.MaintenanceConfig","Use a maintenance configuration for Arc-enabled servers.","Important","Operational Excellence","-"
+"Azure.Defender.Storage.DataScan","Enable sensitive data threat detection in Microsoft Defender for Storage.","Critical","Security","-"
+"Azure.Storage.Defender.DataScan","Enable sensitive data threat detection in Microsoft Defender for Storage.","Critical","Security","-"

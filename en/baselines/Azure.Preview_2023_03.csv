@@ -1,0 +1,4 @@
+"Name","Synopsis","Severity","Pillar","Maturity"
+"Azure.ACR.Quarantine","Enable container image quarantine, scan, and mark images as verified.","Important","Security","-"
+"Azure.ACR.Retention","Use a retention policy to cleanup untagged manifests.","Important","Cost Optimization","-"
+"Azure.ACR.SoftDelete","Container registry artifacts are permanently lost when accidentally deleted without soft delete protection.","Important","Reliability","-"

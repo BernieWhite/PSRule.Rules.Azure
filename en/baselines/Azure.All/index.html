@@ -3180,6 +3180,10 @@
       
         
       
+        
+      
+        
+      
     
     
     
@@ -3273,6 +3277,29 @@
   
   <span class="md-ellipsis">
     Azure.ACR.ContainerScan
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../rules/Azure.ACR.ExportPolicy/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Azure.ACR.ExportPolicy
     
   </span>
   
@@ -10949,6 +10976,29 @@
   
   
     <li class="md-nav__item">
+      <a href="../../rules/Azure.Redis.LocalAuth/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Azure.Redis.LocalAuth
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
       <a href="../../rules/Azure.Redis.MaxMemoryReserved/" class="md-nav__link">
         
   
@@ -16981,7 +17031,7 @@
 <p>Includes all Azure rules.</p>
 <h2 id="rules">Rules<a class="headerlink" href="#rules" title="Permanent link">#</a></h2>
 <p>The following rules are included within the <code>Azure.All</code> baseline.</p>
-<p>This baseline includes a total of 492 rules.</p>
+<p>This baseline includes a total of 494 rules.</p>
 <table>
 <thead>
 <tr>
@@ -17009,6 +17059,11 @@
 <tr>
 <td><a href="../../rules/Azure.ACR.ContentTrust/">Azure.ACR.ContentTrust</a></td>
 <td>Docker content trust allows images to be signed and verified when pulled from a container registry.</td>
+<td>Important</td>
+</tr>
+<tr>
+<td><a href="../../rules/Azure.ACR.ExportPolicy/">Azure.ACR.ExportPolicy</a></td>
+<td>Export policy on Azure container registry may allow artifact exfiltration.</td>
 <td>Important</td>
 </tr>
 <tr>
@@ -18660,6 +18715,11 @@
 <td><a href="../../rules/Azure.Redis.FirewallRuleCount/">Azure.Redis.FirewallRuleCount</a></td>
 <td>Determine if there is an excessive number of firewall rules for the Redis cache.</td>
 <td>Awareness</td>
+</tr>
+<tr>
+<td><a href="../../rules/Azure.Redis.LocalAuth/">Azure.Redis.LocalAuth</a></td>
+<td>Access keys allow depersonalized access to Azure Cache for Redis using a shared secret.</td>
+<td>Important</td>
 </tr>
 <tr>
 <td><a href="../../rules/Azure.Redis.MaxMemoryReserved/">Azure.Redis.MaxMemoryReserved</a></td>

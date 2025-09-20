@@ -18,7 +18,7 @@
       
       
       <link rel="icon" href="../../../assets/ms_icon.png">
-      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.18">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.19">
     
     
       
@@ -16613,6 +16613,8 @@
       
         
       
+        
+      
     
     
     
@@ -16646,6 +16648,29 @@
             Resources
           </label>
           <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../license-contributing/metadata-reference/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Metadata reference
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
             
               
                 
@@ -16960,7 +16985,7 @@
 <p>Rules for GA Azure features that align to the Microsoft Cloud Security Benchmark v1. This baseline is updated each release.</p>
 <h2 id="controls">Controls<a class="headerlink" href="#controls" title="Permanent link">#</a></h2>
 <p>The following rules are included within the <code>Azure.MCSB.v1</code> baseline.</p>
-<p>This baseline includes a total of 138 rules.</p>
+<p>This baseline includes a total of 140 rules.</p>
 <table>
 <thead>
 <tr>
@@ -17416,6 +17441,11 @@
 <td>Critical</td>
 </tr>
 <tr>
+<td><a href="../../rules/Azure.KeyVault.AutoRotationPolicy/">Azure.KeyVault.AutoRotationPolicy</a></td>
+<td>Keys that become compromised may be used to spoof, decrypt, or gain access to sensitive data.</td>
+<td>Important</td>
+</tr>
+<tr>
 <td><a href="../../rules/Azure.KeyVault.Firewall/">Azure.KeyVault.Firewall</a></td>
 <td>Key Vault should only accept explicitly allowed traffic.</td>
 <td>Important</td>
@@ -17654,6 +17684,11 @@
 <td><a href="../../rules/Azure.VMSS.PublicKey/">Azure.VMSS.PublicKey</a></td>
 <td>Use SSH keys instead of common credentials to secure virtual machine scale sets against malicious activities.</td>
 <td>Important</td>
+</tr>
+<tr>
+<td><a href="../../rules/Azure.VNET.UseNSGs/">Azure.VNET.UseNSGs</a></td>
+<td>Virtual network (VNET) subnets should have Network Security Groups (NSGs) assigned.</td>
+<td>Critical</td>
 </tr>
 <tr>
 <td><a href="../../rules/Azure.WebPubSub.ManagedIdentity/">Azure.WebPubSub.ManagedIdentity</a></td>

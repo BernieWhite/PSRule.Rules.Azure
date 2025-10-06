@@ -133,6 +133,7 @@
 "Azure.Storage.BlobPublicAccess","Storage Accounts should only accept authorized requests.","Important","Security","-"
 "Azure.Storage.Defender.MalwareScan","Enable Malware Scanning in Microsoft Defender for Storage.","Critical","Security","-"
 "Azure.Storage.DefenderCloud","Enable Microsoft Defender for Storage for storage accounts.","Critical","Security","-"
+"Azure.Storage.LocalAuth","Access keys allow depersonalized access to Storage Accounts using a shared secret.","Important","Security","L1"
 "Azure.Storage.MinTLS","Storage Accounts should not accept weak or deprecated transport protocols for client-server communication.","Critical","Security","L1"
 "Azure.Storage.SecureTransfer","Storage accounts should only accept encrypted connections.","Important","Security","L1"
 "Azure.VM.ADE","Use Azure Disk Encryption (ADE).","Important","Security","L1"

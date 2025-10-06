@@ -393,6 +393,7 @@
 "Azure.Storage.DefenderCloud","Enable Microsoft Defender for Storage for storage accounts.","Critical","Security","-"
 "Azure.Storage.FileShareSoftDelete","Enable soft delete on Storage Accounts file shares.","Important","Reliability","-"
 "Azure.Storage.Firewall","Storage Accounts should only accept explicitly allowed traffic.","Important","Security","-"
+"Azure.Storage.LocalAuth","Access keys allow depersonalized access to Storage Accounts using a shared secret.","Important","Security","L1"
 "Azure.Storage.MinTLS","Storage Accounts should not accept weak or deprecated transport protocols for client-server communication.","Critical","Security","L1"
 "Azure.Storage.Name","Azure Resource Manager (ARM) has requirements for Storage Account names.","Awareness","Operational Excellence","-"
 "Azure.Storage.Naming","Storage Accounts without a standard naming convention may be difficult to identify and manage.","Awareness","Operational Excellence","-"

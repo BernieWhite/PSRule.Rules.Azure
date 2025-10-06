@@ -76,6 +76,7 @@
 "Azure.SQLMI.AAD","Use Azure Active Directory (AAD) authentication with Azure SQL Managed Instance.","Critical","Security","L1"
 "Azure.SQLMI.AADOnly","Ensure Azure AD-only authentication is enabled with Azure SQL Managed Instance.","Important","Security","L1"
 "Azure.SQLMI.ManagedIdentity","Ensure managed identity is used to allow support for Azure AD authentication.","Important","Security","L1"
+"Azure.Storage.LocalAuth","Access keys allow depersonalized access to Storage Accounts using a shared secret.","Important","Security","L1"
 "Azure.Storage.MinTLS","Storage Accounts should not accept weak or deprecated transport protocols for client-server communication.","Critical","Security","L1"
 "Azure.Storage.SecureTransfer","Storage accounts should only accept encrypted connections.","Important","Security","L1"
 "Azure.TrafficManager.Protocol","Monitor Traffic Manager web-based endpoints with HTTPS.","Important","Security","L1"

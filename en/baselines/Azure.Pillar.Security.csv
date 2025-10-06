@@ -211,6 +211,7 @@
 "Azure.Storage.Defender.MalwareScan","Enable Malware Scanning in Microsoft Defender for Storage.","Critical","Security","-"
 "Azure.Storage.DefenderCloud","Enable Microsoft Defender for Storage for storage accounts.","Critical","Security","-"
 "Azure.Storage.Firewall","Storage Accounts should only accept explicitly allowed traffic.","Important","Security","-"
+"Azure.Storage.LocalAuth","Access keys allow depersonalized access to Storage Accounts using a shared secret.","Important","Security","L1"
 "Azure.Storage.MinTLS","Storage Accounts should not accept weak or deprecated transport protocols for client-server communication.","Critical","Security","L1"
 "Azure.Storage.SecureTransfer","Storage accounts should only accept encrypted connections.","Important","Security","L1"
 "Azure.TrafficManager.Protocol","Monitor Traffic Manager web-based endpoints with HTTPS.","Important","Security","L1"

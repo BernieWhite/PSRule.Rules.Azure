@@ -79,6 +79,7 @@
 "Azure.AppConfig.GeoReplica","Replicate app configuration store across all points of presence for an application.","Important","Reliability","-"
 "Azure.AppConfig.Name","App Configuration store names should meet naming requirements.","Awareness","Operational Excellence","-"
 "Azure.AppConfig.PurgeProtect","Consider purge protection for app configuration store to ensure store cannot be purged in the retention period.","Important","Reliability","-"
+"Azure.AppConfig.ReplicaLocation","The replication location determines the country or region where configuration data is stored and processed.","Important","Security","L1"
 "Azure.AppConfig.SecretLeak","Secrets stored as key values in an App Configuration Store may be leaked to unauthorized users.","Critical","Security","-"
 "Azure.AppConfig.SKU","App Configuration should use a minimum size of Standard.","Important","Reliability","-"
 "Azure.AppGw.AvailabilityZone","Application Gateway (App Gateway) should use availability zones in supported regions for improved resiliency.","Important","Reliability","-"

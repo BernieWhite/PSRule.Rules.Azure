@@ -15,6 +15,7 @@
 "Azure.APIM.Protocols","API Management should only accept a minimum of TLS 1.2 for client and backend communication.","Critical","Security","L1"
 "Azure.AppConfig.AuditLogs","Ensure app configuration store audit diagnostic logs are enabled.","Important","Security","L1"
 "Azure.AppConfig.DisableLocalAuth","Access keys allow depersonalized access to App Configuration using a shared secret.","Important","Security","L1"
+"Azure.AppConfig.ReplicaLocation","The replication location determines the country or region where configuration data is stored and processed.","Important","Security","L1"
 "Azure.AppGw.SSLPolicy","Application Gateway should only accept a minimum of TLS 1.2.","Critical","Security","L1"
 "Azure.AppGw.UseHTTPS","Application Gateways should only expose frontend HTTP endpoints over HTTPS.","Critical","Security","L1"
 "Azure.AppInsights.LocalAuth","Local authentication allows depersonalized access to store telemetry in Application Insights using a shared identifier.","Critical","Security","L1"

@@ -41,6 +41,7 @@
 "Azure.APIM.SampleProducts","API Management Services with default products configured may expose more APIs than intended.","Awareness","Security","-"
 "Azure.AppConfig.AuditLogs","Ensure app configuration store audit diagnostic logs are enabled.","Important","Security","L1"
 "Azure.AppConfig.DisableLocalAuth","Access keys allow depersonalized access to App Configuration using a shared secret.","Important","Security","L1"
+"Azure.AppConfig.ReplicaLocation","The replication location determines the country or region where configuration data is stored and processed.","Important","Security","L1"
 "Azure.AppConfig.SecretLeak","Secrets stored as key values in an App Configuration Store may be leaked to unauthorized users.","Critical","Security","-"
 "Azure.AppGw.OWASP","Application Gateway Web Application Firewall (WAF) should use OWASP 3.x rules.","Important","Security","-"
 "Azure.AppGw.Prevention","Internet exposed Application Gateways should use prevention mode to protect backend resources.","Critical","Security","-"

@@ -87,7 +87,6 @@
 "Azure.AppGwWAF.Enabled","Application Gateway Web Application Firewall (WAF) must be enabled to protect backend resources.","Critical","Security","-"
 "Azure.AppGwWAF.Exclusions","Application Gateway Web Application Firewall (WAF) should have all rules enabled.","Critical","Security","-"
 "Azure.AppGwWAF.PreventionMode","Use protection mode in Application Gateway Web Application Firewall (WAF) policies to protect back end resources.","Critical","Security","-"
-"Azure.AppGwWAF.RuleGroups","Use recommended rule groups in Application Gateway Web Application Firewall (WAF) policies to protect back end resources.","Critical","Security","-"
 "Azure.AppInsights.Name","Azure Resource Manager (ARM) has requirements for Application Insights resource names.","Awareness","Operational Excellence","-"
 "Azure.AppInsights.Workspace","Configure Application Insights resources to store data in a workspace.","Important","Operational Excellence","-"
 "Azure.AppService.AlwaysOn","Configure Always On for App Service apps.","Important","Reliability","-"

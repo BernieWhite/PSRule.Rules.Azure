@@ -39,6 +39,7 @@
 "Azure.FrontDoor.Probe","Use health probes to check the health of each backend.","Important","Reliability","-"
 "Azure.FrontDoor.ProbeMethod","Configure health probes to use HEAD requests to reduce performance overhead.","Important","Reliability","-"
 "Azure.FrontDoor.ProbePath","Configure a dedicated path for health probe requests.","Important","Reliability","-"
+"Azure.Grafana.AvailabilityZone","Use zone redundant Grafana workspaces in supported regions to improve reliability.","Important","Reliability","L1"
 "Azure.Grafana.Version","Grafana workspaces should be on Grafana version 10.","Important","Reliability","-"
 "Azure.KeyVault.PurgeProtect","Enable Purge Protection on Key Vaults to prevent early purge of vaults and vault items.","Important","Reliability","-"
 "Azure.KeyVault.SoftDelete","Enable Soft Delete on Key Vaults to protect vaults and vault items from accidental deletion.","Important","Reliability","-"

@@ -209,6 +209,10 @@
          <lastmod>2026-01-02</lastmod>
     </url>
     <url>
+         <loc>https://azure.github.io/PSRule.Rules.Azure/en/baselines/Azure.CAF_2025_12/</loc>
+         <lastmod>2026-01-02</lastmod>
+    </url>
+    <url>
          <loc>https://azure.github.io/PSRule.Rules.Azure/en/baselines/Azure.CAF_Compatibility/</loc>
          <lastmod>2026-01-02</lastmod>
     </url>
@@ -302,6 +306,10 @@
     </url>
     <url>
          <loc>https://azure.github.io/PSRule.Rules.Azure/en/baselines/Azure.GA_2025_09/</loc>
+         <lastmod>2026-01-02</lastmod>
+    </url>
+    <url>
+         <loc>https://azure.github.io/PSRule.Rules.Azure/en/baselines/Azure.GA_2025_12/</loc>
          <lastmod>2026-01-02</lastmod>
     </url>
     <url>
@@ -402,6 +410,10 @@
     </url>
     <url>
          <loc>https://azure.github.io/PSRule.Rules.Azure/en/baselines/Azure.Preview_2025_09/</loc>
+         <lastmod>2026-01-02</lastmod>
+    </url>
+    <url>
+         <loc>https://azure.github.io/PSRule.Rules.Azure/en/baselines/Azure.Preview_2025_12/</loc>
          <lastmod>2026-01-02</lastmod>
     </url>
     <url>

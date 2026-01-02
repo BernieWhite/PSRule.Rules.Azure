@@ -368,6 +368,7 @@
 "Azure.Redis.NonSslPort","Azure Cache for Redis should only accept secure connections.","Critical","Security","L1"
 "Azure.Redis.PublicNetworkAccess","Redis cache should disable public network access.","Critical","Security","-"
 "Azure.Redis.Version","Azure Cache for Redis should use the latest supported version of Redis.","Important","Reliability","-"
+"Azure.RedisEnterprise.MigrateAMR","Azure Cache for Redis Enterprise and Enterprise Flash are being retired. Migrate to Azure Managed Redis.","Important","Operational Excellence","-"
 "Azure.RedisEnterprise.MinTLS","Redis Cache should reject TLS versions older than 1.2.","Critical","Security","L1"
 "Azure.RedisEnterprise.Naming","Azure Cache for Redis Enterprise resources without a standard naming convention may be difficult to identify and manage.","Awareness","Operational Excellence","L2"
 "Azure.RedisEnterprise.Zones","Enterprise Redis cache should be zone-redundant for high availability.","Important","Reliability","-"

@@ -81,6 +81,7 @@
 "Azure.PublicIP.Naming","Public IP addresses without a standard naming convention may be difficult to identify and manage.","Awareness","Operational Excellence","-"
 "Azure.Redis.MigrateAMR","Azure Cache for Redis is being retired. Migrate to Azure Managed Redis.","Important","Operational Excellence","-"
 "Azure.Redis.Naming","Azure Cache for Redis resources without a standard naming convention may be difficult to identify and manage.","Awareness","Operational Excellence","L2"
+"Azure.RedisEnterprise.MigrateAMR","Azure Cache for Redis Enterprise and Enterprise Flash are being retired. Migrate to Azure Managed Redis.","Important","Operational Excellence","-"
 "Azure.RedisEnterprise.Naming","Azure Cache for Redis Enterprise resources without a standard naming convention may be difficult to identify and manage.","Awareness","Operational Excellence","L2"
 "Azure.Resource.RequiredTags","Resources without a standard tagging convention may be difficult to identify and manage.","Awareness","Operational Excellence","-"
 "Azure.Route.Name","Azure Resource Manager (ARM) has requirements for Route table names.","Awareness","Operational Excellence","-"

@@ -294,7 +294,7 @@
     
     
       <li class="md-tabs__item md-tabs__item--active">
-        <a href="../updates/v1.46/" class="md-tabs__link">
+        <a href="../updates/v1.47/" class="md-tabs__link">
           
   
   
@@ -1757,6 +1757,8 @@
       
         
       
+        
+      
     
     
     
@@ -1802,6 +1804,34 @@
 
           </label>
           <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../updates/v1.47/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    December 2025 (version 1.47)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
             
               
                 
@@ -2000,6 +2030,17 @@
     <span class="md-ellipsis">
       
         Unreleased
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#v1470" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        v1.47.0
       
     </span>
   </a>
@@ -24910,6 +24951,17 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#v1470" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        v1.47.0
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#v1470-b0060-pre-release" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -28332,6 +28384,223 @@
   See <a href="../upgrade-notes/">upgrade notes</a> for more information.</li>
 </ul>
 <h2 id="unreleased">Unreleased<a class="headerlink" href="#unreleased" title="Permanent link">#</a></h2>
+<h2 id="v1470">v1.47.0<a class="headerlink" href="#v1470" title="Permanent link">#</a></h2>
+<p>What's changed since v1.46.0:</p>
+<ul>
+<li>New features:<ul>
+<li>Added December 2025 baselines <code>Azure.GA_2025_12</code>, <code>Azure.Preview_2025_12</code>, and <code>Azure.CAF_2025_12</code> by <a href="https://github.com/BernieWhite">@BernieWhite</a>.
+  <a href="https://github.com/Azure/PSRule.Rules.Azure/issues/3642">#3642</a><ul>
+<li>Includes rules released before or during December 2025.</li>
+<li>Marked <code>Azure.GA_2025_09</code> and <code>Azure.Preview_2025_09</code> baselines as obsolete.</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>New rules:<ul>
+<li>Added naming format rules for AKS, Container Apps, Service Fabric, Cosmos DB, Redis, and SQL resources.
+  <a href="https://github.com/Azure/PSRule.Rules.Azure/issues/3548">#3548</a></li>
+<li>App Configuration:<ul>
+<li>Check that replica locations are in allowed regions by <a href="https://github.com/BernieWhite">@BernieWhite</a>.
+  <a href="https://github.com/Azure/PSRule.Rules.Azure/issues/3441">#3441</a></li>
+</ul>
+</li>
+<li>Azure Cache for Redis:<ul>
+<li>Check for legacy Azure Cache for Redis instances by <a href="https://github.com/BenjaminEngeset">@BenjaminEngeset</a>.
+  <a href="https://github.com/Azure/PSRule.Rules.Azure/issues/3605">#3605</a></li>
+<li>Check resources naming matches configured name format by <a href="https://github.com/BernieWhite">@BernieWhite</a>.
+  <a href="https://github.com/Azure/PSRule.Rules.Azure/issues/3548">#3548</a><ul>
+<li>The name format can be configured by the following configuration options:<ul>
+<li><code>AZURE_REDIS_CACHE_NAME_FORMAT</code></li>
+<li><code>AZURE_REDIS_ENTERPRISE_NAME_FORMAT</code></li>
+</ul>
+</li>
+</ul>
+</li>
+<li>Added configured name format by <a href="https://github.com/BernieWhite">@BernieWhite</a>.</li>
+</ul>
+</li>
+<li>Azure Cache for Redis Enterprise and Enterprise Flash:<ul>
+<li>Check for deprecated Redis Enterprise and Enterprise Flash SKUs by <a href="https://github.com/BenjaminEngeset">@BenjaminEngeset</a>.
+  <a href="https://github.com/Azure/PSRule.Rules.Azure/issues/3606">#3606</a></li>
+</ul>
+</li>
+<li>Azure Database for MySQL:<ul>
+<li>Check resources naming matches configured name format by <a href="https://github.com/BernieWhite">@BernieWhite</a>.
+  <a href="https://github.com/Azure/PSRule.Rules.Azure/issues/3548">#3548</a><ul>
+<li>The name format can be configured by the following configuration options:<ul>
+<li><code>AZURE_MYSQL_SERVER_NAME_FORMAT</code></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>Azure Database for PostgreSQL:<ul>
+<li>Check resources naming matches configured name format by <a href="https://github.com/BernieWhite">@BernieWhite</a>.
+  <a href="https://github.com/Azure/PSRule.Rules.Azure/issues/3548">#3548</a><ul>
+<li>The name format can be configured by the following configuration options:<ul>
+<li><code>AZURE_POSTGRESQL_SERVER_NAME_FORMAT</code></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>Azure Kubernetes Service:<ul>
+<li>Check resources naming matches configured name format by <a href="https://github.com/BernieWhite">@BernieWhite</a>.
+  <a href="https://github.com/Azure/PSRule.Rules.Azure/issues/3548">#3548</a><ul>
+<li>The name format can be configured by the following configuration options:<ul>
+<li><code>AZURE_AKS_CLUSTER_NAME_FORMAT</code></li>
+<li><code>AZURE_AKS_SYSTEM_POOL_NAME_FORMAT</code></li>
+<li><code>AZURE_AKS_USER_POOL_NAME_FORMAT</code></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>Container Apps:<ul>
+<li>Check resources naming matches configured name format by <a href="https://github.com/BernieWhite">@BernieWhite</a>.
+  <a href="https://github.com/Azure/PSRule.Rules.Azure/issues/3548">#3548</a><ul>
+<li>The name format can be configured by the following configuration options:<ul>
+<li><code>AZURE_CONTAINER_APP_NAME_FORMAT</code></li>
+<li><code>AZURE_CONTAINER_APP_ENVIRONMENT_NAME_FORMAT</code></li>
+<li><code>AZURE_CONTAINER_APP_JOB_NAME_FORMAT</code></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>Container Instance:<ul>
+<li>Check resources naming matches configured name format by <a href="https://github.com/BernieWhite">@BernieWhite</a>.
+  <a href="https://github.com/Azure/PSRule.Rules.Azure/issues/3548">#3548</a><ul>
+<li>The name format can be configured by the following configuration option:<ul>
+<li><code>AZURE_CONTAINER_INSTANCE_NAME_FORMAT</code></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>Container Registry:<ul>
+<li>Check resources naming matches configured name format by <a href="https://github.com/BernieWhite">@BernieWhite</a>.
+  <a href="https://github.com/Azure/PSRule.Rules.Azure/issues/3548">#3548</a><ul>
+<li>The name format can be configured by the following configuration option:<ul>
+<li><code>AZURE_CONTAINER_REGISTRY_NAME_FORMAT</code></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>Cosmos DB:<ul>
+<li>Check that Cosmos DB accounts have availability zones enabled by <a href="https://github.com/BenjaminEngeset">@BenjaminEngeset</a>.
+  <a href="https://github.com/Azure/PSRule.Rules.Azure/issues/3055">#3055</a></li>
+<li>Check that MongoDB vCore clusters use Microsoft Entra ID authentication by <a href="https://github.com/BenjaminEngeset">@BenjaminEngeset</a>.
+  <a href="https://github.com/Azure/PSRule.Rules.Azure/issues/3369">#3369</a></li>
+<li>Check that MongoDB vCore clusters have availability zones enabled by <a href="https://github.com/BenjaminEngeset">@BenjaminEngeset</a>.
+  <a href="https://github.com/Azure/PSRule.Rules.Azure/issues/3586">#3586</a></li>
+<li>Check resources naming matches configured name format by <a href="https://github.com/BernieWhite">@BernieWhite</a>.
+  <a href="https://github.com/Azure/PSRule.Rules.Azure/issues/3548">#3548</a><ul>
+<li>The name format can be configured by the following configuration options:<ul>
+<li><code>AZURE_COSMOS_CASSANDRA_NAME_FORMAT</code></li>
+<li><code>AZURE_COSMOS_DATABASE_NAME_FORMAT</code></li>
+<li><code>AZURE_COSMOS_GREMLIN_NAME_FORMAT</code></li>
+<li><code>AZURE_COSMOS_MONGO_NAME_FORMAT</code></li>
+<li><code>AZURE_COSMOS_NOSQL_NAME_FORMAT</code></li>
+<li><code>AZURE_COSMOS_POSTGRESQL_NAME_FORMAT</code></li>
+<li><code>AZURE_COSMOS_TABLE_NAME_FORMAT</code></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>Data Explorer:<ul>
+<li>Check that public network access is disabled by <a href="https://github.com/BenjaminEngeset">@BenjaminEngeset</a>.
+  <a href="https://github.com/Azure/PSRule.Rules.Azure/issues/3114">#3114</a></li>
+</ul>
+</li>
+<li>Event Hub:<ul>
+<li>Check that zone redundancy is enabled for Event Hub namespaces in supported regions by <a href="https://github.com/BenjaminEngeset">@BenjaminEngeset</a>.
+  <a href="https://github.com/Azure/PSRule.Rules.Azure/issues/3029">#3029</a></li>
+</ul>
+</li>
+<li>Managed Instance for Apache Cassandra:<ul>
+<li>Check that Managed Instance for Apache Cassandra clusters have availability zones enabled by <a href="https://github.com/BenjaminEngeset">@BenjaminEngeset</a>.
+  <a href="https://github.com/Azure/PSRule.Rules.Azure/issues/3592">#3592</a></li>
+</ul>
+</li>
+<li>Managed Grafana:<ul>
+<li>Check that zone redundancy is enabled for Grafana workspaces in supported regions by <a href="https://github.com/BenjaminEngeset">@BenjaminEngeset</a>.
+  <a href="https://github.com/Azure/PSRule.Rules.Azure/issues/3294">#3294</a></li>
+</ul>
+</li>
+<li>Service Fabric:<ul>
+<li>Check resources naming matches configured name format by <a href="https://github.com/BernieWhite">@BernieWhite</a>.
+  <a href="https://github.com/Azure/PSRule.Rules.Azure/issues/3548">#3548</a><ul>
+<li>The name format can be configured by the following configuration option:<ul>
+<li><code>AZURE_SERVICE_FABRIC_CLUSTER_NAME_FORMAT</code></li>
+<li><code>AZURE_SERVICE_FABRIC_MANAGED_CLUSTER_NAME_FORMAT</code></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>SQL Database:<ul>
+<li>Check resources naming matches configured name format by <a href="https://github.com/BernieWhite">@BernieWhite</a>.
+  <a href="https://github.com/Azure/PSRule.Rules.Azure/issues/3548">#3548</a><ul>
+<li>The name format can be configured by the following configuration option:<ul>
+<li><code>AZURE_SQL_DATABASE_NAME_FORMAT</code></li>
+<li><code>AZURE_SQL_SERVER_NAME_FORMAT</code></li>
+<li><code>AZURE_SQL_ELASTIC_POOL_NAME_FORMAT</code></li>
+<li><code>AZURE_SQL_JOB_AGENT_NAME_FORMAT</code></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>SQL Managed Instance:<ul>
+<li>Check resources naming matches configured name format by <a href="https://github.com/BernieWhite">@BernieWhite</a>.
+  <a href="https://github.com/Azure/PSRule.Rules.Azure/issues/3548">#3548</a><ul>
+<li>The name format can be configured by the following configuration option:<ul>
+<li><code>AZURE_SQL_MI_NAME_FORMAT</code></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>Updated rules:<ul>
+<li>Application Gateway Policy:<ul>
+<li>Updated <code>Azure.AppGwWAF.RuleGroups</code> to use Microsoft Default Rule Set instead of legacy OWASP rule set by <a href="https://github.com/BenjaminEngeset">@BenjaminEngeset</a>.
+  <a href="https://github.com/Azure/PSRule.Rules.Azure/issues/3553">#3553</a></li>
+</ul>
+</li>
+<li>Cosmos DB:<ul>
+<li>Renamed <code>Azure.Cosmos.DisableLocalAuth</code> to <code>Azure.Cosmos.NoSQLLocalAuth</code> to reflect it applies only to NoSQL API by <a href="https://github.com/BernieWhite">@BernieWhite</a>.
+  <a href="https://github.com/Azure/PSRule.Rules.Azure/issues/3576">#3576</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li>Engineering:<ul>
+<li>Bump Microsoft.Extensions.Logging.Console from 8.0.0 to 10.0.1
+  <a href="https://github.com/Azure/PSRule.Rules.Azure/issues/3627">#3627</a></li>
+<li>Bump Microsoft.Extensions.Hosting from 9.0.10 to 10.0.1
+  <a href="https://github.com/Azure/PSRule.Rules.Azure/issues/3626">#3626</a></li>
+</ul>
+</li>
+</ul>
+<p>What's changed since pre-release v1.47.0-B0060:</p>
+<ul>
+<li>No additional changes.</li>
+</ul>
 <h2 id="v1470-b0060-pre-release">v1.47.0-B0060 (pre-release)<a class="headerlink" href="#v1470-b0060-pre-release" title="Permanent link">#</a></h2>
 <p>What's changed since v1.46.0:</p>
 <ul>
@@ -38060,7 +38329,7 @@ What's changed since v1.24.0:</p>
     <span class="md-icon" title="Last update">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="January 2, 2026 04:45:45 UTC">January 2, 2026</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="January 8, 2026 02:51:36 UTC">January 8, 2026</span>
   </span>
 
     

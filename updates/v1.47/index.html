@@ -284,11 +284,13 @@
   
   
   
+    
+  
   
     
     
-      <li class="md-tabs__item">
-        <a href="../v1.46/" class="md-tabs__link">
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="./" class="md-tabs__link">
           
   
   
@@ -1728,8 +1730,10 @@
       
   
   
+    
   
   
+  
     
     
       
@@ -1749,21 +1753,26 @@
       
         
       
-    
-    
-    
-      
+        
       
     
     
-    <li class="md-nav__item md-nav__item--nested">
+    
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" checked>
         
           
-          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="">
             
   
   
@@ -1781,7 +1790,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_3">
             <span class="md-nav__icon md-icon"></span>
             
@@ -1791,6 +1800,139 @@
 
           </label>
           <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    December 2025 (version 1.47)
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    December 2025 (version 1.47)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        <!-- Determine title -->
+
+
+
+
+
+<!-- Table of contents -->
+<nav class="md-nav md-nav--secondary" aria-label="In this article">
+  
+
+  <!--
+    Check whether the content starts with a level 1 headline. If it does, the
+    top-level anchor must be skipped, since it would be redundant to the link
+    to the current page that is located just above the anchor. Therefore we
+    directly continue with the children of the anchor.
+  -->
+  
+  
+    
+  
+
+  <!-- Table of contents title and list -->
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      In this article
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#expanded-support-for-caf-naming" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Expanded support for CAF naming
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#new-baselines" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        New baselines
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#contributions" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Contributions
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#thank-you" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Thank you
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
             
               
                 
@@ -21472,6 +21614,17 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#new-baselines" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        New baselines
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#contributions" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -21547,7 +21700,8 @@ This release includes new features, new rules and improvements to existing rules
 <p>See the <a href="../../changelog/#v1460">change log</a> or <a href="https://github.com/Azure/PSRule.Rules.Azure/compare/v1.46.0...v1.47.0">GitHub history</a> for a complete list of changes.</p>
 <h2 id="expanded-support-for-caf-naming">Expanded support for <abbr title="Cloud Adoption Framework">CAF</abbr> naming<a class="headerlink" href="#expanded-support-for-caf-naming" title="Permanent link">#</a></h2>
 <p>Support for <abbr title="Cloud Adoption Framework">CAF</abbr> naming conventions has been expanded with new rules to cover additional resource types.
-New resource types supported for enforcing naming conventions include:</p>
+The new rules help enforce consistent, <abbr title="Cloud Adoption Framework">CAF</abbr>-aligned resource names across environments.</p>
+<p>New resource types supported for enforcing naming conventions include:</p>
 <ul>
 <li><code>Microsoft.ContainerInstance/containerGroups</code></li>
 <li><code>Microsoft.ContainerRegistry/registries</code></li>
@@ -21573,6 +21727,14 @@ New resource types supported for enforcing naming conventions include:</p>
 <li><code>Microsoft.Sql/servers/jobAgents</code></li>
 <li><code>Microsoft.Sql/managedInstances</code></li>
 </ul>
+<h2 id="new-baselines">New baselines<a class="headerlink" href="#new-baselines" title="Permanent link">#</a></h2>
+<p>This release adds three built-in baselines published for December 2025:</p>
+<ul>
+<li><code>Azure.GA_2025_12</code> — General Availability aligned baseline containing rules that match broadly available Azure service behavior and hardening recommendations.</li>
+<li><code>Azure.Preview_2025_12</code> — Preview aligned baseline that includes additional rules for preview features and newer service capabilities.</li>
+<li><code>Azure.CAF_2025_12</code> — Cloud Adoption Framework focused baseline designed to help enforce naming, tagging and recommended conventions for enterprise adoption.</li>
+</ul>
+<p>See examples of using baselines in the <a href="../../working-with-baselines/#using-baselines">Working with baselines</a> documentation.</p>
 <h2 id="contributions">Contributions<a class="headerlink" href="#contributions" title="Permanent link">#</a></h2>
 <p>We would like to thank the following contributors for their contributions to this release:</p>
 <ul>
@@ -21606,7 +21768,7 @@ We welcome contributions of all kinds, from rules, code, documentation, and samp
     <span class="md-icon" title="Last update">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="January 2, 2026 01:48:55 UTC">January 2, 2026</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="January 8, 2026 02:51:36 UTC">January 8, 2026</span>
   </span>
 
     

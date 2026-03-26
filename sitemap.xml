@@ -457,6 +457,10 @@
          <lastmod>2026-03-26</lastmod>
     </url>
     <url>
+         <loc>https://azure.github.io/PSRule.Rules.Azure/en/rules/Azure.ACR.Logs/</loc>
+         <lastmod>2026-03-26</lastmod>
+    </url>
+    <url>
          <loc>https://azure.github.io/PSRule.Rules.Azure/en/rules/Azure.ACR.MinSku/</loc>
          <lastmod>2026-03-26</lastmod>
     </url>

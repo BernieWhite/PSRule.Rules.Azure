@@ -8,6 +8,7 @@
 "Azure.ACR.Firewall","Container Registry without restrictions can be accessed from any network location including the Internet.","Important","Security","-"
 "Azure.ACR.GeoReplica","Applications or infrastructure relying on a container image may fail if the registry is not available at the time they start.","Important","Reliability","-"
 "Azure.ACR.ImageHealth","Remove container images with known vulnerabilities.","Critical","Security","L2"
+"Azure.ACR.Logs","Ensure container registry audit diagnostic logs are enabled.","Important","Security","L1"
 "Azure.ACR.MinSku","The Basic SKU provides limited performance and features for production container registry workloads.","Important","Reliability","-"
 "Azure.ACR.Name","Container registry names should meet naming requirements.","Awareness","Operational Excellence","L2"
 "Azure.ACR.Naming","Container Registry resources without a standard naming convention may be difficult to identify and manage.","Awareness","Operational Excellence","L2"

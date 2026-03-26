@@ -1,5 +1,6 @@
 "Name","Synopsis","Severity","Pillar","Maturity"
 "Azure.ACR.AdminUser","The local admin account allows depersonalized access to a container registry using a shared secret.","Critical","Security","L1"
+"Azure.ACR.Logs","Ensure container registry audit diagnostic logs are enabled.","Important","Security","L1"
 "Azure.ADX.DiskEncryption","Use disk encryption for Azure Data Explorer (ADX) clusters.","Important","Security","L1"
 "Azure.ADX.ManagedIdentity","Configure Data Explorer clusters to use managed identities to access Azure resources securely.","Important","Security","L1"
 "Azure.AI.DisableLocalAuth","Access keys allow depersonalized access to Azure AI using a shared secret.","Important","Security","L1"

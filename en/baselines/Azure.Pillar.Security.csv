@@ -5,6 +5,7 @@
 "Azure.ACR.ExportPolicy","Export policy on Azure container registry may allow artifact exfiltration.","Important","Security","-"
 "Azure.ACR.Firewall","Container Registry without restrictions can be accessed from any network location including the Internet.","Important","Security","-"
 "Azure.ACR.ImageHealth","Remove container images with known vulnerabilities.","Critical","Security","L2"
+"Azure.ACR.Logs","Ensure container registry audit diagnostic logs are enabled.","Important","Security","L1"
 "Azure.ACR.ReplicaLocation","The replication location determines the country or region where container images and metadata are stored and processed.","Important","Security","-"
 "Azure.ADX.DiskEncryption","Use disk encryption for Azure Data Explorer (ADX) clusters.","Important","Security","L1"
 "Azure.ADX.ManagedIdentity","Configure Data Explorer clusters to use managed identities to access Azure resources securely.","Important","Security","L1"

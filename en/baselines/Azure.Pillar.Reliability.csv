@@ -28,6 +28,7 @@
 "Azure.ASE.AvailabilityZone","Deploy app service environments using availability zones in supported regions to ensure high availability and resilience.","Important","Reliability","-"
 "Azure.AVD.ScheduleAgentUpdate","Define a windows for agent updates to minimize disruptions to users.","Important","Reliability","-"
 "Azure.ContainerApp.AvailabilityZone","Use Container Apps environments that are zone redundant to improve reliability.","Important","Reliability","-"
+"Azure.ContainerApp.HealthProbe","Container app ingress that uses HTTP should have HTTP health probes configured for liveness and readiness checks.","Important","Reliability","-"
 "Azure.ContainerApp.MinReplicas","Use multiple replicas to remove a single point of failure.","Important","Reliability","-"
 "Azure.ContainerApp.Storage","Use of Azure Files volume mounts to persistent storage container data.","Awareness","Reliability","-"
 "Azure.Cosmos.AvailabilityZone","Use zone redundant Cosmos DB accounts in supported regions to improve reliability.","Important","Reliability","L1"

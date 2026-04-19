@@ -15,5 +15,5 @@
 "Azure.Redis.MinSKU","Use Azure Cache for Redis instances of at least Standard C1.","Important","Performance Efficiency","-"
 "Azure.Search.SKU","Use the basic and standard tiers for entry level workloads.","Critical","Performance Efficiency","-"
 "Azure.VM.AcceleratedNetworking","Use accelerated networking for supported operating systems and VM types.","Important","Performance Efficiency","-"
-"Azure.VM.DiskCaching","Check disk caching is configured correctly for the workload.","Important","Performance Efficiency","-"
+"Azure.VM.OSDiskCache","Operating system (OS) disk read/ write caching can improve virtual machines (VMs) performance.","Important","Performance Efficiency","L1"
 "Azure.VM.SQLServerDisk","Use Premium SSD disks or greater for data and log files for production SQL Server workloads.","Important","Performance Efficiency","-"

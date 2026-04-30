@@ -930,6 +930,8 @@
       
         
       
+        
+      
     
     
     
@@ -1044,6 +1046,34 @@
     
   
     Using Bicep source
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../using-terraform/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Using Terraform source
   
 
     
@@ -28717,6 +28747,12 @@
 <p>What's changed since v1.47.0:</p>
 <ul>
 <li>New features:<ul>
+<li><strong>Experimental:</strong> Added Terraform plan expansion support for AzAPI provider resources by <a href="https://github.com/polatengin">@polatengin</a>.
+  <a href="https://github.com/Azure/PSRule.Rules.Azure/issues/1193">#1193</a><ul>
+<li>Expands <code>azapi_resource</code> and <code>azapi_update_resource</code> from Terraform plan JSON files into ARM format for rule evaluation.</li>
+<li>Enable with configuration option <code>AZURE_TERRAFORM_PLAN_EXPANSION</code>.</li>
+</ul>
+</li>
 <li>Added March 2026 baselines <code>Azure.GA_2026_03</code>, <code>Azure.Preview_2026_03</code>, and <code>Azure.CAF_2026_03</code> by <a href="https://github.com/BernieWhite">@BernieWhite</a>.
   <a href="https://github.com/Azure/PSRule.Rules.Azure/issues/3709">#3709</a><ul>
 <li>Includes rules released before or during March 2026.</li>
@@ -28727,7 +28763,7 @@
 </li>
 <li>New rules:<ul>
 <li>Automation Account:<ul>
-<li>Added <code>Azure.Automation.RunbookPinned</code> to check runbook external scripts use pinned commit hash URLs to prevent supply chain attacks.
+<li>Added <code>Azure.Automation.RunbookPinned</code> to check runbook external scripts use pinned commit hash by <a href="https://github.com/BernieWhite">@BernieWhite</a>.
   <a href="https://github.com/Azure/PSRule.Rules.Azure/issues/3324">#3324</a></li>
 </ul>
 </li>
@@ -28746,12 +28782,12 @@
 </ul>
 </li>
 <li>Deployment Script:<ul>
-<li>Added <code>Azure.DeploymentScript.Pinned</code> to check deployment script external script URIs use pinned commit hash URLs to prevent supply chain attacks.
+<li>Added <code>Azure.DeploymentScript.Pinned</code> to check deployment script external script to use pinned commit hash by <a href="https://github.com/BernieWhite">@BernieWhite</a>.
   <a href="https://github.com/Azure/PSRule.Rules.Azure/issues/3324">#3324</a></li>
 </ul>
 </li>
 <li>Service Bus:<ul>
-<li>Added <code>Azure.ServiceBus.ReplicaLocation</code> to check that geo-replication replica locations are within allowed regions.
+<li>Added <code>Azure.ServiceBus.ReplicaLocation</code> to check that geo-replication replica locations are within allowed regions by <a href="https://github.com/BernieWhite">@BernieWhite</a>.
   <a href="https://github.com/Azure/PSRule.Rules.Azure/issues/3381">#3381</a></li>
 </ul>
 </li>
@@ -28787,6 +28823,21 @@
 <li>Engineering<ul>
 <li>Improved documentation for expansion internals with a high-level flow diagram and code references by <a href="https://github.com/BernieWhite">@BernieWhite</a>.
   <a href="https://github.com/Azure/PSRule.Rules.Azure/issues/3715">#3715</a></li>
+<li>Bump Azure.Identity to 1.21.0.
+  <a href="https://github.com/Azure/PSRule.Rules.Azure/pull/3751">#3751</a></li>
+<li>Bump Azure.Core to 1.54.0
+  <a href="https://github.com/Azure/PSRule.Rules.Azure/pull/3778">#3778</a></li>
+<li>Bump Azure.Identity.Broker to 1.5.0.
+  <a href="https://github.com/Azure/PSRule.Rules.Azure/pull/3744">#3744</a></li>
+<li>Bump Microsoft.Extensions.Hosting to 10.0.7.
+  <a href="https://github.com/Azure/PSRule.Rules.Azure/pull/3769">#3769</a></li>
+<li>Bump Microsoft.Extensions.Logging.Console to 10.0.7.
+  <a href="https://github.com/Azure/PSRule.Rules.Azure/pull/3777">#3777</a></li>
+</ul>
+</li>
+<li>Bug fixes:<ul>
+<li>Improved Bicep expansion errors to surface captured CLI restore failures during timeout windows by <a href="https://github.com/polatengin">@polatengin</a>.
+  <a href="https://github.com/Azure/PSRule.Rules.Azure/issues/2896">#2896</a></li>
 </ul>
 </li>
 </ul>
@@ -29213,9 +29264,9 @@
 </ul>
 </li>
 <li>Engineering:<ul>
-<li>Bump Microsoft.Extensions.Logging.Console from 8.0.0 to 10.0.1
+<li>Bump Microsoft.Extensions.Logging.Console to 10.0.1.
   <a href="https://github.com/Azure/PSRule.Rules.Azure/issues/3627">#3627</a></li>
-<li>Bump Microsoft.Extensions.Hosting from 9.0.10 to 10.0.1
+<li>Bump Microsoft.Extensions.Hosting to 10.0.1.
   <a href="https://github.com/Azure/PSRule.Rules.Azure/issues/3626">#3626</a></li>
 </ul>
 </li>
@@ -38735,7 +38786,7 @@ What's changed since v1.24.0:</p>
     <span class="md-icon" title="Last update">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="April 11, 2026 06:39:50 UTC">April 11, 2026</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="April 30, 2026 16:51:17 UTC">April 30, 2026</span>
   </span>
 
     
@@ -38763,9 +38814,9 @@ What's changed since v1.24.0:</p>
     
     <nav>
       
-        <a href="https://github.com/coder999999999" class="md-author" title="@coder999999999">
+        <a href="https://github.com/BernieWhite" class="md-author" title="@BernieWhite">
           
-          <img src="https://avatars.githubusercontent.com/u/83845889?v=4&size=72" alt="coder999999999">
+          <img src="https://avatars.githubusercontent.com/u/13513058?v=4&size=72" alt="BernieWhite">
         </a>
       
         <a href="https://github.com/web-flow" class="md-author" title="@web-flow">
@@ -38773,21 +38824,21 @@ What's changed since v1.24.0:</p>
           <img src="https://avatars.githubusercontent.com/u/19864447?v=4&size=72" alt="web-flow">
         </a>
       
-        <a href="https://github.com/apps/copilot-swe-agent" class="md-author" title="@Copilot">
+        <a href="https://github.com/polatengin" class="md-author" title="@polatengin">
           
-          <img src="https://avatars.githubusercontent.com/in/1143301?v=4&size=72" alt="Copilot">
+          <img src="https://avatars.githubusercontent.com/u/118744?v=4&size=72" alt="polatengin">
         </a>
       
-        <a href="https://github.com/BernieWhite" class="md-author" title="@BernieWhite">
+        <a href="https://github.com/coder999999999" class="md-author" title="@coder999999999">
           
-          <img src="https://avatars.githubusercontent.com/u/13513058?v=4&size=72" alt="BernieWhite">
+          <img src="https://avatars.githubusercontent.com/u/83845889?v=4&size=72" alt="coder999999999">
         </a>
       
       
       
         
           <a href="https://github.com/Azure/PSRule.Rules.Azure/blob/main/docs/changelog.md" class="md-author md-author--more">
-            +2
+            +3
           </a>
         
       

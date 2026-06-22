@@ -469,6 +469,7 @@
 "Azure.Template.UseParameters","Each Azure Resource Manager (ARM) template parameter should be used or removed from template files.","Awareness","Operational Excellence","-"
 "Azure.Template.UseVariables","Each Azure Resource Manager (ARM) template variable should be used or removed from template files.","Awareness","Operational Excellence","-"
 "Azure.Template.ValidSecretRef","Use a valid secret reference within parameter files.","Awareness","Operational Excellence","-"
+"Azure.Template.ValueConstraint","Set parameter and output values to satisfy template constraints.","Awareness","Operational Excellence","-"
 "Azure.TrafficManager.Endpoints","Traffic Manager should use at lest two enabled endpoints.","Important","Reliability","-"
 "Azure.TrafficManager.Protocol","Monitor Traffic Manager web-based endpoints with HTTPS.","Important","Security","L1"
 "Azure.VM.AcceleratedNetworking","Use accelerated networking for supported operating systems and VM types.","Important","Performance Efficiency","-"

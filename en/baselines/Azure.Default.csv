@@ -455,6 +455,7 @@
 "Azure.Template.UseComments","Use comments for each resource in ARM template to communicate purpose.","Awareness","Operational Excellence","-"
 "Azure.Template.UseDescriptions","Use descriptions for each resource in generated template(bicep, psarm, AzOps) to communicate purpose.","Awareness","Operational Excellence","-"
 "Azure.Template.UseLocationParameter","Template should reference a location parameter to specify resource location.","Awareness","Operational Excellence","-"
+"Azure.Template.ValueConstraint","Set parameter and output values to satisfy template constraints.","Awareness","Operational Excellence","-"
 "Azure.TrafficManager.Endpoints","Traffic Manager should use at lest two enabled endpoints.","Important","Reliability","-"
 "Azure.TrafficManager.Protocol","Monitor Traffic Manager web-based endpoints with HTTPS.","Important","Security","L1"
 "Azure.VM.AcceleratedNetworking","Use accelerated networking for supported operating systems and VM types.","Important","Performance Efficiency","-"

@@ -123,6 +123,7 @@
 "Azure.Template.UseComments","Use comments for each resource in ARM template to communicate purpose.","Awareness","Operational Excellence","-"
 "Azure.Template.UseDescriptions","Use descriptions for each resource in generated template(bicep, psarm, AzOps) to communicate purpose.","Awareness","Operational Excellence","-"
 "Azure.Template.UseLocationParameter","Template should reference a location parameter to specify resource location.","Awareness","Operational Excellence","-"
+"Azure.Template.ValueConstraint","Set parameter and output values to satisfy template constraints.","Awareness","Operational Excellence","-"
 "Azure.VM.Agent","Virtual Machines (VMs) without an agent provisioned are unable to use monitoring, management, and security extensions.","Important","Operational Excellence","-"
 "Azure.VM.AMA","Use Azure Monitor Agent for collecting monitoring data from VMs.","Important","Operational Excellence","-"
 "Azure.VM.ASName","Availability Set names should meet naming requirements.","Awareness","Operational Excellence","-"

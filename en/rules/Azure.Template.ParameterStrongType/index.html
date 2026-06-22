@@ -3690,6 +3690,8 @@
       
         
       
+        
+      
     
     
     
@@ -16826,6 +16828,34 @@
   
   
     <li class="md-nav__item">
+      <a href="../Azure.Template.ValueConstraint/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Azure.Template.ValueConstraint
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
       <a href="../Azure.TrafficManager.Endpoints/" class="md-nav__link">
         
   
@@ -22042,17 +22072,20 @@
 <p>Set the parameter value to a value that matches the specified strong type.</p>
 <h2 id="description">Description<a class="headerlink" href="#description" title="Permanent link">#</a></h2>
 <p>Template string parameters can optionally specify a strong type.
+Bicep can also emit resource type metadata for string parameters.
 When parameter files are expanded, if the parameter value does not match the type this rule fails.
 Support is provided by PSRule for Azure for the following types:</p>
 <ul>
 <li>Resource type - Specify a resource type.
   For example <code>Microsoft.OperationalInsights/workspaces</code>.
-  If a resource type is specified the parameter value must be a resource id of that type.</li>
+  If a resource type is specified the parameter value must be a resource id of that type.
+  This can be set by using <code>metadata.strongType</code> or Bicep <code>metadata.resourceType</code>.
+  For <code>metadata.resourceType</code>, any API version after <code>@</code> is ignored.</li>
 <li>Location - Specify <code>location</code> as the strong type.
   If <code>location</code> is specified, the parameter value must be a valid Azure location.</li>
 </ul>
 <h2 id="recommendation">Recommendation<a class="headerlink" href="#recommendation" title="Permanent link">#</a></h2>
-<p>Consider updating the parameter value to a value that matches the specifed strong type.</p>
+<p>Consider updating the parameter value to a value that matches the specified strong type.</p>
 <h2 id="links">Links<a class="headerlink" href="#links" title="Permanent link">#</a></h2>
 <ul>
 <li><a href="https://learn.microsoft.com/azure/architecture/framework/devops/release-engineering-cd#automation">Deployment considerations for DevOps</a></li>
@@ -22080,7 +22113,7 @@ Support is provided by PSRule for Azure for the following types:</p>
     <span class="md-icon" title="Last update">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="October 17, 2022 13:16:12 UTC">October 17, 2022</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="May 26, 2026 19:45:38 UTC">May 26, 2026</span>
   </span>
 
     
@@ -22108,14 +22141,19 @@ Support is provided by PSRule for Azure for the following types:</p>
     
     <nav>
       
-        <a href="https://github.com/BernieWhite" class="md-author" title="@BernieWhite">
+        <a href="https://github.com/polatengin" class="md-author" title="@polatengin">
           
-          <img src="https://avatars.githubusercontent.com/u/13513058?v=4&size=72" alt="BernieWhite">
+          <img src="https://avatars.githubusercontent.com/u/118744?v=4&size=72" alt="polatengin">
         </a>
       
         <a href="https://github.com/web-flow" class="md-author" title="@web-flow">
           
           <img src="https://avatars.githubusercontent.com/u/19864447?v=4&size=72" alt="web-flow">
+        </a>
+      
+        <a href="https://github.com/BernieWhite" class="md-author" title="@BernieWhite">
+          
+          <img src="https://avatars.githubusercontent.com/u/13513058?v=4&size=72" alt="BernieWhite">
         </a>
       
         <a href="https://github.com/ArmaanMcleod" class="md-author" title="@ArmaanMcleod">
